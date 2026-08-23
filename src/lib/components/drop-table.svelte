@@ -9,6 +9,9 @@
 
   const sourceTypeLabel: Record<string, { label: string; icon: string; color: string }> = {
     carve: { label: 'Carve', icon: '⚔️', color: 'text-red-400' },
+    capture: { label: 'Capture', icon: '🪤', color: 'text-emerald-400' },
+    drop: { label: 'Shiny Drop', icon: '✨', color: 'text-yellow-400' },
+    break: { label: 'Break Part', icon: '🔨', color: 'text-orange-400' },
     quest_reward: { label: 'Quest Reward', icon: '📜', color: 'text-blue-400' },
     shiny: { label: 'Shiny Pickup', icon: '✨', color: 'text-yellow-400' },
     mining: { label: 'Mining', icon: '⛏️', color: 'text-orange-400' },
@@ -19,7 +22,8 @@
 
   function goToSource(source: ItemSource) {
     if (!game) return;
-    if (source.source_type === 'carve' && source.source_id != null) {
+    const monsterSources = ['carve', 'capture', 'drop', 'break'];
+    if (monsterSources.includes(source.source_type) && source.source_id != null) {
       goto(`/${game.id}/monsters/${source.source_id}`);
     } else if (source.source_type === 'quest_reward' && source.source_id != null) {
       goto(`/${game.id}/quests/${source.source_id}`);
@@ -47,7 +51,7 @@
   {:else}
     {#each sources as source}
       {@const meta = sourceTypeLabel[source.source_type] ?? { label: source.source_type, icon: '❓', color: 'text-gray-400' }}
-      {@const canNavigate = (source.source_type === 'carve' || source.source_type === 'quest_reward') && source.source_id != null}
+      {@const canNavigate = (['carve', 'capture', 'drop', 'break', 'quest_reward'].includes(source.source_type)) && source.source_id != null}
       {#if canNavigate}
         <button
           onclick={() => goToSource(source)}

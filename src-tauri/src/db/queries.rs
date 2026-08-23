@@ -29,7 +29,24 @@ pub struct MonsterDetail {
     pub size: Option<String>,
     pub description: Option<String>,
     pub weaknesses: Vec<MonsterWeakness>,
+    pub drops: Vec<MonsterDrop>,
+    pub armor: Vec<Armor>,
+    pub weapons: Vec<Weapon>,
     pub language: String,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct MonsterDrop {
+    pub id: i32,
+    pub monster_id: i32,
+    pub item_id: i32,
+    pub item_name: String,
+    pub method: String,
+    pub part: Option<String>,
+    pub rank: Option<String>,
+    pub quantity: i32,
+    pub probability: f64,
+    pub condition: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
@@ -57,6 +74,14 @@ pub struct Weapon {
     pub affinity: Option<i32>,
     pub element_type: Option<String>,
     pub element_value: Option<i32>,
+    pub sharpness: Option<String>,
+    pub slots: Option<String>,
+    pub status_type: Option<String>,
+    pub status_value: Option<i32>,
+    pub defense_bonus: Option<i32>,
+    pub crafting_cost: Option<i32>,
+    pub upgrade_path: Option<String>,
+    pub is_forgeable: bool,
     pub language: String,
 }
 
@@ -71,9 +96,19 @@ pub struct WeaponDetail {
     pub affinity: Option<i32>,
     pub element_type: Option<String>,
     pub element_value: Option<i32>,
+    pub sharpness: Option<String>,
+    pub slots: Option<String>,
+    pub skills: Option<String>,
+    pub status_type: Option<String>,
+    pub status_value: Option<i32>,
+    pub defense_bonus: Option<i32>,
     pub crafting_cost: Option<i32>,
+    pub upgrade_path: Option<String>,
     pub description: Option<String>,
     pub materials: Vec<MaterialRef>,
+    pub forge_materials: Vec<MaterialRef>,
+    pub upgrade_materials: Vec<MaterialRef>,
+    pub is_forgeable: bool,
     pub language: String,
 }
 
@@ -99,6 +134,9 @@ pub struct Armor {
     pub resistance_thunder: Option<i32>,
     pub resistance_ice: Option<i32>,
     pub resistance_dragon: Option<i32>,
+    pub slots: Option<String>,
+    pub skills: Option<String>,
+    pub armor_type: Option<String>,
     pub language: String,
 }
 
@@ -117,6 +155,10 @@ pub struct ArmorDetail {
     pub resistance_thunder: Option<i32>,
     pub resistance_ice: Option<i32>,
     pub resistance_dragon: Option<i32>,
+    pub slots: Option<String>,
+    pub skills: Option<String>,
+    pub set_id: Option<i32>,
+    pub armor_type: Option<String>,
     pub crafting_cost: Option<i32>,
     pub description: Option<String>,
     pub materials: Vec<MaterialRef>,
@@ -265,6 +307,9 @@ pub fn get_monster_detail(conn: &Connection, id: i32) -> Result<Option<MonsterDe
     };
 
     let weaknesses = get_monster_weaknesses(conn, id)?;
+    let drops = get_monster_drops(conn, id)?;
+    let armor = get_monster_related_armor(conn, id)?;
+    let weapons = get_monster_related_weapons(conn, id)?;
 
     Ok(Some(MonsterDetail {
         id,
@@ -274,8 +319,121 @@ pub fn get_monster_detail(conn: &Connection, id: i32) -> Result<Option<MonsterDe
         size,
         description,
         weaknesses,
+        drops,
+        armor,
+        weapons,
         language,
     }))
+}
+
+fn get_monster_related_armor(conn: &Connection, monster_id: i32) -> Result<Vec<Armor>> {
+    let mut stmt = conn.prepare(
+        "SELECT a.id, a.game_id, a.name, a.slot_type, a.rank, a.rarity, a.defense_base, a.defense_max,
+                a.resistance_fire, a.resistance_water, a.resistance_thunder, a.resistance_ice, a.resistance_dragon,
+                a.slots, a.skills, a.armor_type, a.language
+         FROM armor a
+         JOIN monster_equipment me ON a.id = me.equipment_id
+         WHERE me.monster_id = ?1 AND me.equipment_kind = 'armor'
+         ORDER BY a.rarity, a.name",
+    )?;
+
+    let armor = stmt
+        .query_map(params![monster_id], |row| {
+            Ok(Armor {
+                id: row.get(0)?,
+                game_id: row.get(1)?,
+                name: row.get(2)?,
+                slot_type: row.get(3)?,
+                rank: row.get(4)?,
+                rarity: row.get(5)?,
+                defense_base: row.get(6)?,
+                defense_max: row.get(7)?,
+                resistance_fire: row.get(8)?,
+                resistance_water: row.get(9)?,
+                resistance_thunder: row.get(10)?,
+                resistance_ice: row.get(11)?,
+                resistance_dragon: row.get(12)?,
+                slots: row.get(13)?,
+                skills: row.get(14)?,
+                armor_type: row.get(15)?,
+                language: row.get(16)?,
+            })
+        })?
+        .filter_map(|r| r.ok())
+        .collect();
+
+    Ok(armor)
+}
+
+fn get_monster_related_weapons(conn: &Connection, monster_id: i32) -> Result<Vec<Weapon>> {
+    let mut stmt = conn.prepare(
+        "SELECT w.id, w.game_id, w.name, w.weapon_type, w.rarity, w.attack, w.affinity, w.element_type, w.element_value,
+                w.sharpness, w.slots, w.status_type, w.status_value, w.defense_bonus, w.crafting_cost, w.upgrade_path,
+                EXISTS(SELECT 1 FROM weapon_craft wc WHERE wc.weapon_id = w.id AND wc.craft_kind = 'forge'), w.language
+         FROM weapons w
+         JOIN monster_equipment me ON w.id = me.equipment_id
+         WHERE me.monster_id = ?1 AND me.equipment_kind = 'weapon'
+         ORDER BY w.weapon_type, w.rarity, w.name",
+    )?;
+
+    let weapons = stmt
+        .query_map(params![monster_id], |row| {
+            Ok(Weapon {
+                id: row.get(0)?,
+                game_id: row.get(1)?,
+                name: row.get(2)?,
+                weapon_type: row.get(3)?,
+                rarity: row.get(4)?,
+                attack: row.get(5)?,
+                affinity: row.get(6)?,
+                element_type: row.get(7)?,
+                element_value: row.get(8)?,
+                sharpness: row.get(9)?,
+                slots: row.get(10)?,
+                status_type: row.get(11)?,
+                status_value: row.get(12)?,
+                defense_bonus: row.get(13)?,
+                crafting_cost: row.get(14)?,
+                upgrade_path: row.get(15)?,
+                is_forgeable: row.get::<_, i64>(16)? != 0,
+                language: row.get(17)?,
+            })
+        })?
+        .filter_map(|r| r.ok())
+        .collect();
+
+    Ok(weapons)
+}
+
+fn get_monster_drops(conn: &Connection, monster_id: i32) -> Result<Vec<MonsterDrop>> {
+    let mut stmt = conn.prepare(
+        "SELECT md.id, md.monster_id, md.item_id, i.name, md.method, md.part, md.rank,
+                md.quantity, md.probability, md.condition
+         FROM monster_drops md
+         JOIN items i ON i.id = md.item_id
+         WHERE md.monster_id = ?1
+         ORDER BY md.rank, md.method, md.part, md.probability DESC",
+    )?;
+
+    let drops = stmt
+        .query_map(params![monster_id], |row| {
+            Ok(MonsterDrop {
+                id: row.get(0)?,
+                monster_id: row.get(1)?,
+                item_id: row.get(2)?,
+                item_name: row.get(3)?,
+                method: row.get(4)?,
+                part: row.get(5)?,
+                rank: row.get(6)?,
+                quantity: row.get(7)?,
+                probability: row.get(8)?,
+                condition: row.get(9)?,
+            })
+        })?
+        .filter_map(|r| r.ok())
+        .collect();
+
+    Ok(drops)
 }
 
 fn get_monster_weaknesses(conn: &Connection, monster_id: i32) -> Result<Vec<MonsterWeakness>> {
@@ -307,7 +465,9 @@ fn get_monster_weaknesses(conn: &Connection, monster_id: i32) -> Result<Vec<Mons
 
 pub fn get_weapons_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Weapon>> {
     let mut stmt = conn.prepare(
-        "SELECT id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value, language
+        "SELECT id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value,
+                sharpness, slots, status_type, status_value, defense_bonus, crafting_cost, upgrade_path,
+                EXISTS(SELECT 1 FROM weapon_craft wc WHERE wc.weapon_id = weapons.id AND wc.craft_kind = 'forge'), language
          FROM weapons WHERE game_id = ?1 ORDER BY weapon_type, name",
     )?;
 
@@ -323,7 +483,15 @@ pub fn get_weapons_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Weapon
                 affinity: row.get(6)?,
                 element_type: row.get(7)?,
                 element_value: row.get(8)?,
-                language: row.get(9)?,
+                sharpness: row.get(9)?,
+                slots: row.get(10)?,
+                status_type: row.get(11)?,
+                status_value: row.get(12)?,
+                defense_bonus: row.get(13)?,
+                crafting_cost: row.get(14)?,
+                upgrade_path: row.get(15)?,
+                is_forgeable: row.get::<_, i64>(16)? != 0,
+                language: row.get(17)?,
             })
         })?
         .filter_map(|r| r.ok())
@@ -343,13 +511,21 @@ pub fn get_weapon_detail(conn: &Connection, id: i32) -> Result<Option<WeaponDeta
         Option<i32>,
         Option<String>,
         Option<i32>,
+        Option<String>,
+        Option<String>,
+        Option<String>,
+        Option<String>,
         Option<i32>,
+        Option<i32>,
+        Option<i32>,
+        Option<String>,
         Option<String>,
         String,
     )> = conn
         .query_row(
             "SELECT id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value,
-                    crafting_cost, description, language
+                    sharpness, slots, skills, status_type, status_value, defense_bonus,
+                    crafting_cost, upgrade_path, description, language
              FROM weapons WHERE id = ?1",
             params![id],
             |row| {
@@ -366,16 +542,26 @@ pub fn get_weapon_detail(conn: &Connection, id: i32) -> Result<Option<WeaponDeta
                     row.get(9)?,
                     row.get(10)?,
                     row.get(11)?,
+                    row.get(12)?,
+                    row.get(13)?,
+                    row.get(14)?,
+                    row.get(15)?,
+                    row.get(16)?,
+                    row.get(17)?,
+                    row.get(18)?,
                 ))
             },
         )
         .optional()?;
 
-    let Some((id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value, crafting_cost, description, language)) = row else {
+    let Some((id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value, sharpness, slots, skills, status_type, status_value, defense_bonus, crafting_cost, upgrade_path, description, language)) = row else {
         return Ok(None);
     };
 
     let materials = get_weapon_materials(conn, id)?;
+    let forge_materials = get_weapon_craft_materials(conn, id, "forge")?;
+    let upgrade_materials = get_weapon_craft_materials(conn, id, "upgrade")?;
+    let is_forgeable = !forge_materials.is_empty();
 
     Ok(Some(WeaponDetail {
         id,
@@ -387,11 +573,44 @@ pub fn get_weapon_detail(conn: &Connection, id: i32) -> Result<Option<WeaponDeta
         affinity,
         element_type,
         element_value,
+        sharpness,
+        slots,
+        skills,
+        status_type,
+        status_value,
+        defense_bonus,
         crafting_cost,
+        upgrade_path,
         description,
         materials,
+        forge_materials,
+        upgrade_materials,
+        is_forgeable,
         language,
     }))
+}
+
+fn get_weapon_craft_materials(conn: &Connection, weapon_id: i32, kind: &str) -> Result<Vec<MaterialRef>> {
+    let mut stmt = conn.prepare(
+        "SELECT wc.item_id, i.name, wc.quantity
+         FROM weapon_craft wc
+         JOIN items i ON i.id = wc.item_id
+         WHERE wc.weapon_id = ?1 AND wc.craft_kind = ?2
+         ORDER BY wc.id",
+    )?;
+
+    let materials = stmt
+        .query_map(params![weapon_id, kind], |row| {
+            Ok(MaterialRef {
+                item_id: row.get(0)?,
+                item_name: row.get(1)?,
+                quantity: row.get(2)?,
+            })
+        })?
+        .filter_map(|r| r.ok())
+        .collect();
+
+    Ok(materials)
 }
 
 fn get_weapon_materials(conn: &Connection, weapon_id: i32) -> Result<Vec<MaterialRef>> {
@@ -420,7 +639,8 @@ fn get_weapon_materials(conn: &Connection, weapon_id: i32) -> Result<Vec<Materia
 pub fn get_armor_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Armor>> {
     let mut stmt = conn.prepare(
         "SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max,
-                resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, language
+                resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon,
+                slots, skills, armor_type, language
          FROM armor WHERE game_id = ?1 ORDER BY rank, slot_type, name",
     )?;
 
@@ -440,7 +660,10 @@ pub fn get_armor_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Armor>> 
                 resistance_thunder: row.get(10)?,
                 resistance_ice: row.get(11)?,
                 resistance_dragon: row.get(12)?,
-                language: row.get(13)?,
+                slots: row.get(13)?,
+                skills: row.get(14)?,
+                armor_type: row.get(15)?,
+                language: row.get(16)?,
             })
         })?
         .filter_map(|r| r.ok())
@@ -449,7 +672,7 @@ pub fn get_armor_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Armor>> 
     Ok(armor)
 }
 
-pub fn get_armor_detail(conn: &Connection, id: i32) -> Result<Option<ArmorDetail>> {
+    pub fn get_armor_detail(conn: &Connection, id: i32) -> Result<Option<ArmorDetail>> {
     let row: Option<(
         i32,
         i32,
@@ -464,6 +687,10 @@ pub fn get_armor_detail(conn: &Connection, id: i32) -> Result<Option<ArmorDetail
         Option<i32>,
         Option<i32>,
         Option<i32>,
+        Option<String>,
+        Option<String>,
+        Option<String>,
+        Option<i32>,
         Option<i32>,
         Option<String>,
         String,
@@ -471,7 +698,7 @@ pub fn get_armor_detail(conn: &Connection, id: i32) -> Result<Option<ArmorDetail
         .query_row(
             "SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max,
                     resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon,
-                    crafting_cost, description, language
+                    slots, skills, armor_type, set_id, crafting_cost, description, language
              FROM armor WHERE id = ?1",
             params![id],
             |row| {
@@ -492,12 +719,16 @@ pub fn get_armor_detail(conn: &Connection, id: i32) -> Result<Option<ArmorDetail
                     row.get(13)?,
                     row.get(14)?,
                     row.get(15)?,
+                    row.get(16)?,
+                    row.get(17)?,
+                    row.get(18)?,
+                    row.get(19)?,
                 ))
             },
         )
         .optional()?;
 
-    let Some((id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, fire, water, thunder, ice, dragon, crafting_cost, description, language)) = row else {
+    let Some((id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, fire, water, thunder, ice, dragon, slots, skills, armor_type, set_id, crafting_cost, description, language)) = row else {
         return Ok(None);
     };
 
@@ -517,6 +748,10 @@ pub fn get_armor_detail(conn: &Connection, id: i32) -> Result<Option<ArmorDetail
         resistance_thunder: thunder,
         resistance_ice: ice,
         resistance_dragon: dragon,
+        slots,
+        skills,
+        set_id,
+        armor_type,
         crafting_cost,
         description,
         materials,
@@ -705,7 +940,7 @@ fn get_item_sources(conn: &Connection, item_id: i32) -> Result<Vec<ItemSource>> 
         "SELECT s.id, s.source_type, s.source_id, s.quantity_min, s.quantity_max, s.probability, s.location,
                 COALESCE(m.name, q.name, 'Unknown')
          FROM item_sources s
-         LEFT JOIN monsters m ON s.source_type = 'carve' AND m.id = s.source_id
+         LEFT JOIN monsters m ON s.source_type IN ('carve', 'capture', 'drop', 'break') AND m.id = s.source_id
          LEFT JOIN quests q ON s.source_type = 'quest_reward' AND q.id = s.source_id
          WHERE s.item_id = ?1
          ORDER BY s.probability DESC",

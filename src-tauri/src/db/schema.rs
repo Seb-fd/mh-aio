@@ -25,6 +25,9 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             sharpness TEXT,
             slots TEXT,
             skills TEXT,
+            status_type TEXT,
+            status_value INTEGER,
+            defense_bonus INTEGER,
             crafting_cost INTEGER,
             upgrade_path TEXT,
             description TEXT,
@@ -49,6 +52,7 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             slots TEXT,
             skills TEXT,
             set_id INTEGER,
+            armor_type TEXT,
             crafting_cost INTEGER,
             materials TEXT,
             description TEXT,
@@ -91,6 +95,29 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             thunder INTEGER,
             ice INTEGER,
             dragon INTEGER
+        );
+
+        -- Monster material drop table
+        CREATE TABLE IF NOT EXISTS monster_drops (
+            id INTEGER PRIMARY KEY,
+            monster_id INTEGER REFERENCES monsters(id),
+            item_id INTEGER REFERENCES items(id),
+            method TEXT NOT NULL,
+            part TEXT,
+            rank TEXT,
+            quantity INTEGER NOT NULL DEFAULT 1,
+            probability REAL NOT NULL,
+            condition TEXT,
+            language TEXT DEFAULT 'en'
+        );
+
+        -- Monster -> associated gear (weapons/armor crafted from its materials)
+        CREATE TABLE IF NOT EXISTS monster_equipment (
+            id INTEGER PRIMARY KEY,
+            game_id INTEGER REFERENCES games(id),
+            monster_id INTEGER REFERENCES monsters(id),
+            equipment_kind TEXT NOT NULL,
+            equipment_id INTEGER NOT NULL
         );
 
         -- Quests table
@@ -177,6 +204,15 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             quantity INTEGER NOT NULL
         );
 
+        -- Weapon FORGE (direct) / UPGRADE recipes
+        CREATE TABLE IF NOT EXISTS weapon_craft (
+            id INTEGER PRIMARY KEY,
+            weapon_id INTEGER REFERENCES weapons(id),
+            craft_kind TEXT NOT NULL,
+            item_id INTEGER REFERENCES items(id),
+            quantity INTEGER NOT NULL
+        );
+
         -- Armor crafting materials junction table
         CREATE TABLE IF NOT EXISTS armor_materials (
             id INTEGER PRIMARY KEY,
@@ -205,12 +241,17 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
         CREATE INDEX IF NOT EXISTS idx_skills_game ON skills(game_id);
         CREATE INDEX IF NOT EXISTS idx_weapon_mats_weapon ON weapon_materials(weapon_id);
         CREATE INDEX IF NOT EXISTS idx_weapon_mats_item ON weapon_materials(item_id);
+        CREATE INDEX IF NOT EXISTS idx_weapon_craft_weapon ON weapon_craft(weapon_id);
+        CREATE INDEX IF NOT EXISTS idx_weapon_craft_item ON weapon_craft(item_id);
         CREATE INDEX IF NOT EXISTS idx_armor_mats_armor ON armor_materials(armor_id);
         CREATE INDEX IF NOT EXISTS idx_armor_mats_item ON armor_materials(item_id);
         CREATE INDEX IF NOT EXISTS idx_item_combine_result ON item_combine(result_item_id);
         CREATE INDEX IF NOT EXISTS idx_item_combine_component ON item_combine(component_item_id);
         CREATE INDEX IF NOT EXISTS idx_item_sources_item ON item_sources(item_id);
         CREATE INDEX IF NOT EXISTS idx_quest_rewards_quest ON quest_rewards(quest_id);
+        CREATE INDEX IF NOT EXISTS idx_monster_drops_monster ON monster_drops(monster_id);
+        CREATE INDEX IF NOT EXISTS idx_monster_drops_item ON monster_drops(item_id);
+        CREATE INDEX IF NOT EXISTS idx_monster_eq_monster ON monster_equipment(monster_id);
     ")?;
 
     apply_migrations(conn)?;
@@ -221,7 +262,11 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
 fn apply_migrations(conn: &Connection) -> Result<()> {
     add_column_if_missing(conn, "monsters", "description", "TEXT")?;
     add_column_if_missing(conn, "weapons", "description", "TEXT")?;
+    add_column_if_missing(conn, "weapons", "status_type", "TEXT")?;
+    add_column_if_missing(conn, "weapons", "status_value", "INTEGER")?;
+    add_column_if_missing(conn, "weapons", "defense_bonus", "INTEGER")?;
     add_column_if_missing(conn, "armor", "description", "TEXT")?;
+    add_column_if_missing(conn, "armor", "armor_type", "TEXT")?;
     add_column_if_missing(conn, "quests", "description", "TEXT")?;
     Ok(())
 }

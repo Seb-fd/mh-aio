@@ -30,6 +30,19 @@ export interface MonsterWeakness {
   dragon: number | null;
 }
 
+export interface MonsterDrop {
+  id: number;
+  monster_id: number;
+  item_id: number;
+  item_name: string;
+  method: string;
+  part: string | null;
+  rank: string | null;
+  quantity: number;
+  probability: number;
+  condition: string | null;
+}
+
 export interface MonsterDetail {
   id: number;
   game_id: number;
@@ -38,6 +51,9 @@ export interface MonsterDetail {
   size: string | null;
   description: string | null;
   weaknesses: MonsterWeakness[];
+  drops: MonsterDrop[];
+  armor: Armor[];
+  weapons: Weapon[];
   language: string;
 }
 
@@ -51,6 +67,14 @@ export interface Weapon {
   affinity: number | null;
   element_type: string | null;
   element_value: number | null;
+  sharpness: string | null;
+  slots: string | null;
+  status_type: string | null;
+  status_value: number | null;
+  defense_bonus: number | null;
+  crafting_cost: number | null;
+  upgrade_path: string | null;
+  is_forgeable: boolean;
   language: string;
 }
 
@@ -70,9 +94,19 @@ export interface WeaponDetail {
   affinity: number | null;
   element_type: string | null;
   element_value: number | null;
+  sharpness: string | null;
+  slots: string | null;
+  skills: string | null;
+  status_type: string | null;
+  status_value: number | null;
+  defense_bonus: number | null;
   crafting_cost: number | null;
+  upgrade_path: string | null;
   description: string | null;
   materials: MaterialRef[];
+  forge_materials: MaterialRef[];
+  upgrade_materials: MaterialRef[];
+  is_forgeable: boolean;
   language: string;
 }
 
@@ -90,6 +124,9 @@ export interface Armor {
   resistance_thunder: number | null;
   resistance_ice: number | null;
   resistance_dragon: number | null;
+  slots: string | null;
+  skills: string | null;
+  armor_type: string | null;
   language: string;
 }
 
@@ -107,6 +144,10 @@ export interface ArmorDetail {
   resistance_thunder: number | null;
   resistance_ice: number | null;
   resistance_dragon: number | null;
+  slots: string | null;
+  skills: string | null;
+  set_id: number | null;
+  armor_type: string | null;
   crafting_cost: number | null;
   description: string | null;
   materials: MaterialRef[];

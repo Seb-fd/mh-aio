@@ -62,6 +62,9 @@
       tags={[
         { label: armor.rank, color: rankColor[armor.rank] ?? 'bg-gray-800 text-gray-300' },
         { label: `Rarity ${armor.rarity ?? 1}`, color: 'bg-[var(--theme-bg-elevated)] text-gray-300 border-[var(--theme-border)]' },
+        ...(armor.armor_type
+          ? [{ label: armor.armor_type === 'gunner' ? 'Gunner' : armor.armor_type === 'blade' ? 'Blademaster' : 'Any', color: 'bg-[var(--theme-bg-elevated)] text-[var(--theme-text-accent)] border-[var(--theme-border-strong)]' }]
+          : []),
       ]}
     />
 
@@ -74,11 +77,28 @@
         <p class="text-[10px] uppercase tracking-wide text-gray-500">Crafting Cost</p>
         <p class="text-xl font-bold mt-1" style="color: var(--theme-accent);">{armor.crafting_cost ?? 0}z</p>
       </div>
-      <div class="rounded-lg border themed-card p-3 text-center col-span-2 sm:col-span-1">
-        <p class="text-[10px] uppercase tracking-wide text-gray-500">Slot</p>
-        <p class="text-xl font-bold text-gray-100 mt-1">{slotLabel[armor.slot_type] ?? armor.slot_type}</p>
+      <div class="rounded-lg border themed-card p-3 text-center">
+        <p class="text-[10px] uppercase tracking-wide text-gray-500">Slots</p>
+        <p class="text-xl font-bold text-gray-100 mt-1">{armor.slots ?? '0'}</p>
       </div>
     </div>
+
+    {#if armor.skills}
+      <section class="mb-8">
+        <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">Skills</h2>
+        <div class="flex flex-wrap gap-2">
+          {#each armor.skills.split(',').map((s) => s.trim()).filter(Boolean) as skill}
+            {@const parts = skill.trim().split(/\s+(?=[+-]\d)/)}
+            <div class="px-3 py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] flex items-center gap-2">
+              <span class="text-sm text-gray-200">{parts[0]}</span>
+              {#if parts[1]}
+                <span class="text-xs font-semibold {Number(parts[1]) >= 0 ? 'text-emerald-300' : 'text-red-300'}">{parts[1]}</span>
+              {/if}
+            </div>
+          {/each}
+        </div>
+      </section>
+    {/if}
 
     <section class="mb-8">
       <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">Elemental Resistances</h2>

@@ -3,7 +3,6 @@
   import { goto } from '$app/navigation';
   import { selectedGame } from '$lib/stores/game';
   import { api, type Weapon } from '$lib/api';
-  import Card from '$lib/components/ui/card.svelte';
 
   const game = $derived($selectedGame);
   const dbId = $derived(game?.dbId);
@@ -18,21 +17,49 @@
     loading = true;
     error = null;
     api.getWeapons(dbId)
-      .then((data) => {
-        weapons = data;
-      })
-      .catch((e) => {
-        error = String(e);
-      })
-      .finally(() => {
-        loading = false;
-      });
+      .then((data) => { weapons = data; })
+      .catch((e) => { error = String(e); })
+      .finally(() => { loading = false; });
   });
 
   const weaponTypes = $derived(['all', ...Array.from(new Set(weapons.map(w => w.weapon_type)))]);
   const filtered = $derived(
     typeFilter === 'all' ? weapons : weapons.filter(w => w.weapon_type === typeFilter)
   );
+
+  interface TreeNode { weapon: Weapon; children: TreeNode[] }
+
+  function buildForest(typeWeapons: Weapon[]): TreeNode[] {
+    const set = new Set(typeWeapons.map(w => w.name));
+    const childrenOf = new Map<string, Weapon[]>();
+    for (const w of typeWeapons) {
+      if (!w.upgrade_path) continue;
+      const arr = childrenOf.get(w.upgrade_path) ?? [];
+      arr.push(w);
+      childrenOf.set(w.upgrade_path, arr);
+    }
+    const roots = typeWeapons.filter(w => !w.upgrade_path || !set.has(w.upgrade_path));
+    const build = (w: Weapon): TreeNode => ({
+      weapon: w,
+      children: (childrenOf.get(w.name) ?? []).sort((a, b) => (b.attack ?? 0) - (a.attack ?? 0)).map(build),
+    });
+    return roots.sort((a, b) => (a.attack ?? 0) - (b.attack ?? 0)).map(build);
+  }
+
+  const tree = $derived.by<{ type: string; forests: TreeNode[] }[]>(() => {
+    const byType = new Map<string, Weapon[]>();
+    for (const w of filtered) {
+      const arr = byType.get(w.weapon_type) ?? [];
+      arr.push(w);
+      byType.set(w.weapon_type, arr);
+    }
+    return [...byType.entries()].map(([type, ws]) => ({ type, forests: buildForest(ws) }));
+  });
+
+  const allCount = $derived(tree.reduce((n, t) => n + countForests(t.forests), 0));
+  function countForests(f: TreeNode[]): number {
+    return f.reduce((n, node) => n + 1 + countForests(node.children), 0);
+  }
 
   function open(id: number) {
     if (!game) return;
@@ -49,14 +76,26 @@
     if (lower === 'dragon') return 'text-purple-400';
     return 'text-gray-400';
   }
+
+  const SHARP_COLORS = ['#e74c3c', '#ff9800', '#f4d03f', '#58d68d', '#5dade2', '#ffffff'];
+  const SHARP_LABELS = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'White'];
+  function sharpnessSegments(raw: string | null | undefined): number[] {
+    if (!raw) return [];
+    try {
+      const a = JSON.parse(raw);
+      return (Array.isArray(a) ? a.map(Number) : []).slice(0, 6);
+    } catch {
+      return [];
+    }
+  }
 </script>
 
 <div class="max-w-6xl mx-auto">
   <div class="mb-6">
-    <h1 class="text-2xl font-bold text-gray-100">Weapons</h1>
+    <h1 class="text-2xl font-bold text-gray-100">Weapon Trees</h1>
     <p class="text-sm text-gray-500 mt-1">
       {#if game}
-        {game.shortName} · {weapons.length} weapons · Stats, elements and upgrade tree
+        {game.shortName} · {weapons.length} weapons · craft + upgrade tree
       {:else}
         Select a game first
       {/if}
@@ -77,7 +116,7 @@
       <p class="text-gray-400">No weapons found for {game?.shortName ?? 'this game'}</p>
     </div>
   {:else}
-    <div class="flex flex-wrap gap-2 mb-4">
+    <div class="flex flex-wrap gap-2 mb-6">
       {#each weaponTypes as type}
         <button
           onclick={() => (typeFilter = type)}
@@ -91,40 +130,52 @@
       {/each}
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-      {#each filtered as weapon}
-        <button onclick={() => open(weapon.id)} class="text-left">
-          <Card class="p-4 border transition-all cursor-pointer hover:scale-[1.02] themed-card">
-            <div class="flex items-start justify-between gap-2 mb-3">
-              <h3 class="font-semibold text-gray-100 truncate">{weapon.name}</h3>
-              <span class="text-[10px] uppercase tracking-wide text-gray-500 bg-[var(--theme-bg-elevated)] px-2 py-0.5 rounded shrink-0 border border-[var(--theme-border)]">
-                R{weapon.rarity ?? 1}
-              </span>
-            </div>
-            <p class="text-xs text-gray-500 mb-3">{weapon.weapon_type}</p>
-            <div class="grid grid-cols-2 gap-2 text-xs">
-              <div>
-                <span class="text-gray-500">ATK</span>
-                <span class="text-gray-100 font-medium ml-1">{weapon.attack ?? 0}</span>
-              </div>
-              <div>
-                <span class="text-gray-500">AFF</span>
-                <span class="text-gray-100 font-medium ml-1">
-                  {weapon.affinity ?? 0}%
-                </span>
-              </div>
-              {#if weapon.element_type && weapon.element_type !== ''}
-                <div class="col-span-2">
-                  <span class="text-gray-500">Element</span>
-                  <span class="{elementColor(weapon.element_type)} font-medium ml-1">
-                    {weapon.element_type} {weapon.element_value ?? 0}
-                  </span>
-                </div>
-              {/if}
-            </div>
-          </Card>
-        </button>
-      {/each}
-    </div>
+    {#each tree as group}
+      <section class="mb-10">
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">{group.type}</h2>
+        {#each group.forests as node}
+          {@render treeNode(node, 0)}
+        {/each}
+      </section>
+    {/each}
   {/if}
 </div>
+
+{#snippet treeNode(node: TreeNode, depth: number)}
+  <div class="mb-1.5" style="margin-left: {depth * 18}px">
+    <div class="flex items-center gap-2">
+      <button
+        onclick={() => open(node.weapon.id)}
+        class="flex-1 text-left px-3 py-2 rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-elevated)] transition-all"
+      >
+        <div class="flex items-center gap-2 min-w-0">
+          {#if node.weapon.is_forgeable}
+            <span class="text-[12px] shrink-0" title="Crafted directly from materials">🛠️</span>
+          {/if}
+          <span class="text-[10px] text-gray-500 shrink-0 w-10 text-center rounded bg-[var(--theme-bg-elevated)] py-0.5 border border-[var(--theme-border)]">R{node.weapon.rarity ?? 1}</span>
+          <span class="text-sm text-gray-100 font-medium truncate">{node.weapon.name}</span>
+          {#if node.weapon.element_type}
+            <span class="text-[11px] {elementColor(node.weapon.element_type)} shrink-0">{node.weapon.element_type} {node.weapon.element_value ?? 0}</span>
+          {/if}
+          <span class="text-[11px] text-gray-500 ml-auto shrink-0">ATK {node.weapon.attack ?? 0}</span>
+        </div>
+        {#if sharpnessSegments(node.weapon.sharpness).length > 0}
+          <div class="flex items-center gap-[1px] mt-1.5 h-1.5">
+            {#each sharpnessSegments(node.weapon.sharpness) as seg, i}
+              {#if seg > 0}
+                <div class="rounded-[1px]" style="height: 6px; width: {seg}px; background: {SHARP_COLORS[i] ?? '#666'};"></div>
+              {/if}
+            {/each}
+          </div>
+        {/if}
+      </button>
+    </div>
+    {#if node.children.length > 0}
+      <div class="border-l border-[var(--theme-border)] ml-4 mt-1.5 pl-2">
+        {#each node.children as child}
+          {@render treeNode(child, 0)}
+        {/each}
+      </div>
+    {/if}
+  </div>
+{/snippet}
