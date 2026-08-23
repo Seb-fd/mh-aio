@@ -5,11 +5,15 @@
   const game = $derived($selectedGame);
 </script>
 
-<header class="h-14 bg-gray-900 border-b border-gray-800 flex items-center px-4 gap-4 shrink-0">
+<header
+  class="h-14 border-b flex items-center px-4 gap-4 shrink-0 backdrop-blur-md"
+  style="background-color: color-mix(in oklab, var(--theme-bg-surface) 85%, transparent); border-color: var(--theme-border);"
+>
   {#if onMenuClick}
     <button
       onclick={onMenuClick}
-      class="lg:hidden text-gray-400 hover:text-gray-200 transition-colors"
+      class="lg:hidden text-gray-400 hover:text-[var(--theme-text-accent)] transition-colors"
+      aria-label="Open menu"
     >
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -18,12 +22,12 @@
   {/if}
 
   <a href="/" class="flex items-center gap-2">
-    <span class="text-xl font-bold text-yellow-500">MH-AIO</span>
+    <span class="text-xl font-bold" style="color: var(--theme-accent);">MH-AIO</span>
   </a>
 
   {#if game}
-    <div class="hidden sm:flex items-center gap-2 ml-4 px-3 py-1 rounded-full bg-gray-800 border border-gray-700">
-      <span class="w-2 h-2 rounded-full bg-yellow-500"></span>
+    <div class="hidden sm:flex items-center gap-2 ml-4 px-3 py-1 rounded-full border" style="background-color: var(--theme-bg-elevated); border-color: var(--theme-border-strong);">
+      <span class="w-2 h-2 rounded-full" style="background-color: var(--theme-accent);"></span>
       <span class="text-sm {game.color} font-medium">{game.shortName}</span>
       <span class="text-xs text-gray-500">·</span>
       <span class="text-xs text-gray-500">{game.year}</span>
@@ -33,6 +37,6 @@
   <div class="flex-1"></div>
 
   {#if game}
-    <span class="text-xs text-gray-600 hidden md:block">{game.platform}</span>
+    <span class="text-xs text-gray-500 hidden md:block">{game.platform}</span>
   {/if}
 </header>

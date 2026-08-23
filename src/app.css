@@ -34,3 +34,90 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .themed-bg {
+    background-color: var(--theme-bg-base);
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, var(--theme-glow), transparent),
+      radial-gradient(ellipse 60% 50% at 100% 100%, color-mix(in oklab, var(--theme-primary) 8%, transparent), transparent),
+      linear-gradient(180deg, var(--theme-bg-base) 0%, color-mix(in oklab, var(--theme-bg-base) 95%, var(--theme-primary-dark)) 100%);
+    background-attachment: fixed;
+  }
+
+  [data-ornament='medieval'] .themed-bg {
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, var(--theme-glow), transparent),
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 80px,
+        color-mix(in oklab, var(--theme-primary) 4%, transparent) 80px,
+        color-mix(in oklab, var(--theme-primary) 4%, transparent) 82px
+      ),
+      linear-gradient(180deg, var(--theme-bg-base) 0%, var(--theme-bg-surface) 100%);
+    background-attachment: fixed;
+  }
+
+  [data-ornament='japanese'] .themed-bg {
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, var(--theme-glow), transparent),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 60px,
+        color-mix(in oklab, var(--theme-accent) 3%, transparent) 60px,
+        color-mix(in oklab, var(--theme-accent) 3%, transparent) 61px
+      ),
+      linear-gradient(180deg, var(--theme-bg-base) 0%, var(--theme-bg-surface) 100%);
+    background-attachment: fixed;
+  }
+
+  [data-ornament='tribal'] .themed-bg {
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, var(--theme-glow), transparent),
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 40px,
+        color-mix(in oklab, var(--theme-primary) 5%, transparent) 40px,
+        color-mix(in oklab, var(--theme-primary) 5%, transparent) 42px
+      ),
+      linear-gradient(180deg, var(--theme-bg-base) 0%, var(--theme-bg-surface) 100%);
+    background-attachment: fixed;
+  }
+
+  [data-ornament='futuristic'] .themed-bg {
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, var(--theme-glow), transparent),
+      linear-gradient(180deg, var(--theme-bg-base) 0%, var(--theme-bg-surface) 50%, var(--theme-bg-base) 100%);
+    background-attachment: fixed;
+  }
+
+  [data-ornament='hunt'] .themed-bg {
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, var(--theme-glow), transparent),
+      linear-gradient(180deg, var(--theme-bg-base) 0%, var(--theme-bg-surface) 100%);
+    background-attachment: fixed;
+  }
+
+  .themed-banner {
+    background-image: linear-gradient(135deg, var(--theme-banner-from), var(--theme-banner-to));
+    border-color: var(--theme-border-strong);
+  }
+
+  .themed-card {
+    background-color: var(--theme-bg-surface);
+    border-color: var(--theme-border);
+  }
+
+  .themed-card:hover {
+    border-color: var(--theme-border-strong);
+    background-color: var(--theme-bg-elevated);
+  }
+
+  .themed-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--theme-border-strong), transparent);
+  }
+}

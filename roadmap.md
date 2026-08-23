@@ -2,30 +2,31 @@
 
 ## Project Vision
 
-Create a comprehensive and offline tool for all Monster Hunter information, covering multiple games with detailed data on weapons, armor, monsters, quests, skills, items, builds, and suggestions.
+A comprehensive, offline-first encyclopedia and toolkit for all Monster Hunter games, covering multiple titles with detailed data on weapons, armor, monsters, quests, skills, items, builds, and suggestions.
 
 ---
 
 ## Tech Stack
 
 ### Frontend
-- **Framework**: Tauri v2 (Rust + WebView)
-- **UI Framework**: Svelte 5 + TypeScript
-- **Styling**: Tailwind CSS v4
-- **Components**: shadcn-svelte (bits-ui)
-- **Build Tool**: Vite
-- **State**: Svelte Stores / Runes
+- **Framework:** Tauri v2 (Rust + WebView)
+- **UI:** Svelte 5 + TypeScript
+- **Styling:** Tailwind CSS v4 (`@theme` block, no config file)
+- **Components:** shadcn-svelte (bits-ui)
+- **Build:** Vite (with `server.watch.ignored: ['src-tauri/**']`)
+- **State:** Svelte Stores / Runes (`$state`, `$derived`, `$effect`)
+- **Routing:** SvelteKit client-side (SSR disabled, adapter-static with `fallback: 'index.html'`)
 
 ### Backend (Rust)
-- **Framework**: Tauri v2 Commands (IPC)
-- **Database**: SQLite (via `rusqlite` or `sqlx`)
-- **Scrapers**: Python scripts for data extraction
-- **Serialization**: Serde + JSON
+- **Framework:** Tauri v2 Commands (IPC)
+- **Database:** SQLite via `rusqlite` (bundled feature, WAL mode)
+- **Serialization:** Serde + JSON
+- **Migrations:** Hand-rolled (`ALTER TABLE ... ADD COLUMN` with `pragma_table_info` check) + `INSERT OR IGNORE` seed
 
-### Platforms (Phase 2+)
-- **Desktop**: Windows, macOS, Linux (Tauri v2)
-- **Mobile**: iOS, Android (Tauri v2 mobile)
-- **Web**: Progressive Web App (PWA) as alternative
+### Future Platforms
+- **Desktop:** Windows / macOS / Linux (Tauri v2) — current
+- **Mobile:** iOS / Android (Tauri v2 mobile) — planned (lib already supports `cdylib` + `staticlib`)
+- **Web:** PWA — not planned (Tauri-focused)
 
 ---
 
@@ -36,80 +37,65 @@ mh-aio/
 ├── src-tauri/                    # Backend Rust
 │   ├── src/
 │   │   ├── main.rs
-│   │   ├── commands/             # Tauri commands
-│   │   │   ├── mod.rs
-│   │   │   ├── monsters.rs
-│   │   │   ├── weapons.rs
-│   │   │   ├── armor.rs
-│   │   │   ├── quests.rs
-│   │   │   ├── items.rs
-│   │   │   ├── skills.rs
-│   │   │   └── builds.rs
-│   │   ├── db/
-│   │   │   ├── mod.rs
-│   │   │   ├── schema.rs
-│   │   │   ├── queries/
-│   │   │   └── migrations/
-│   │   └── models/
-│   │       ├── monster.rs
-│   │       ├── weapon.rs
-│   │       ├── armor.rs
-│   │       ├── quest.rs
-│   │       ├── item.rs
-│   │       ├── skill.rs
-│   │       └── game.rs
-│   ├── Cargo.toml
+│   │   ├── lib.rs                # 14 Tauri commands registered
+│   │   ├── commands/
+│   │   │   └── mod.rs            # List + detail commands
+│   │   └── db/
+│   │       ├── mod.rs            # Database struct (Mutex<Connection>)
+│   │       ├── schema.rs         # 13 tables + ALTER TABLE migrations
+│   │       ├── queries.rs        # List + detail queries with JOINs
+│   │       └── seed.rs           # Idempotent seed (INSERT OR IGNORE)
+│   ├── Cargo.toml                # crate-type = ["lib", "cdylib", "staticlib"]
 │   └── tauri.conf.json
-├── src/                          # Frontend Svelte
+├── src/                          # Frontend Svelte 5
+│   ├── app.html
+│   ├── app.css                   # Tailwind + themed-bg per game ornament
 │   ├── lib/
+│   │   ├── api.ts                # Typed invoke() wrapper (Tauri commands)
 │   │   ├── components/
-│   │   │   ├── ui/               # shadcn-svelte
-│   │   │   ├── monsters/
-│   │   │   ├── weapons/
-│   │   │   ├── armor/
-│   │   │   ├── quests/
-│   │   │   ├── items/
-│   │   │   ├── skills/
-│   │   │   ├── builds/
-│   │   │   └── shared/
+│   │   │   ├── ui/               # shadcn-svelte primitives (card, button)
+│   │   │   ├── game-selector.svelte
+│   │   │   ├── sidebar.svelte    # Themed nav
+│   │   │   ├── header.svelte     # Themed top bar
+│   │   │   ├── back-button.svelte
+│   │   │   ├── detail-header.svelte
+│   │   │   ├── material-list.svelte
+│   │   │   └── drop-table.svelte
 │   │   ├── stores/
-│   │   ├── services/             # IPC wrappers
-│   │   └── utils/
-│   ├── routes/
-│   │   ├── +layout.svelte
-│   │   ├── +page.svelte          # Dashboard/Home
-│   │   ├── monsters/
-│   │   ├── weapons/
-│   │   ├── armor/
-│   │   ├── quests/
-│   │   ├── items/
-│   │   ├── skills/
-│   │   └── builds/
-│   └── app.html
-├── scrapers/                     # Python Scrapers
-│   ├── mhw/
-│   ├── mhrise/
-│   ├── mhwilds/
-│   ├── mhp3rd/
-│   ├── mh2ndg/
-│   └── utils/
-├── data/                         # Exported data
-│   └── migrations/
-└── package.json
+│   │   │   └── game.ts           # 5 games + GameTheme interface
+│   │   └── utils/index.ts        # cn() helper
+│   └── routes/
+│       ├── +layout.ts            # ssr=false, prerender=false
+│       ├── +layout.svelte        # Conditional layout, theme injection
+│       ├── +page.svelte          # Landing = Game Selector
+│       └── [game]/
+│           ├── +layout.ts
+│           ├── +page.svelte      # Dashboard
+│           ├── monsters/         # list + [id]
+│           ├── weapons/          # list + [id]
+│           ├── armor/            # list + [id]
+│           ├── quests/           # list + [id]
+│           ├── items/            # list + [id]
+│           ├── skills/           # list + [id]
+│           └── builds/           # (placeholder for planner)
+├── scrapers/                     # Future Python scrapers
+├── static/                       # Static assets
+├── AGENTS.md
+├── README.md
+├── roadmap.md
+└── STATUS.md
 ```
 
 ---
 
-## Database (SQLite)
-
-### Main Schema
+## Database Schema (13 tables)
 
 ```sql
--- Supported games
+-- Games
 CREATE TABLE games (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
-    abbreviation TEXT NOT NULL,  -- MHW, MHR, MHWilds, MHP3rd, MH2ndG
+    abbreviation TEXT NOT NULL,
     release_year INTEGER,
     platform TEXT
 );
@@ -119,17 +105,18 @@ CREATE TABLE weapons (
     id INTEGER PRIMARY KEY,
     game_id INTEGER REFERENCES games(id),
     name TEXT NOT NULL,
-    weapon_type TEXT NOT NULL,  -- GS, LS, DB, SA, CB, etc.
+    weapon_type TEXT NOT NULL,
     rarity INTEGER,
     attack INTEGER,
     affinity INTEGER,
     element_type TEXT,
     element_value INTEGER,
-    sharpness JSON,  -- {red, orange, yellow, green, blue, white, purple}
-    slots JSON,      -- [{size: 1}, {size: 2}]
-    skills JSON,     -- [{id, level}]
+    sharpness TEXT,   -- JSON
+    slots TEXT,       -- JSON
+    skills TEXT,      -- JSON
     crafting_cost INTEGER,
-    upgrade_path JSON,
+    upgrade_path TEXT,-- JSON
+    description TEXT,
     language TEXT DEFAULT 'en'
 );
 
@@ -138,8 +125,8 @@ CREATE TABLE armor (
     id INTEGER PRIMARY KEY,
     game_id INTEGER REFERENCES games(id),
     name TEXT NOT NULL,
-    slot_type TEXT NOT NULL,  -- head, chest, arms, waist, legs
-    rank TEXT NOT NULL,       -- low, high, master
+    slot_type TEXT NOT NULL,
+    rank TEXT NOT NULL,
     rarity INTEGER,
     defense_base INTEGER,
     defense_max INTEGER,
@@ -148,21 +135,12 @@ CREATE TABLE armor (
     resistance_thunder INTEGER,
     resistance_ice INTEGER,
     resistance_dragon INTEGER,
-    slots JSON,
-    skills JSON,  -- [{skill_id, level}]
+    slots TEXT,       -- JSON
+    skills TEXT,      -- JSON
     set_id INTEGER,
     crafting_cost INTEGER,
-    materials JSON,
-    language TEXT DEFAULT 'en'
-);
-
--- Armor sets
-CREATE TABLE armor_sets (
-    id INTEGER PRIMARY KEY,
-    game_id INTEGER REFERENCES games(id),
-    name TEXT NOT NULL,
-    bonus_skill TEXT,
-    bonus_required INTEGER,
+    materials TEXT,   -- JSON
+    description TEXT,
     language TEXT DEFAULT 'en'
 );
 
@@ -171,14 +149,14 @@ CREATE TABLE monsters (
     id INTEGER PRIMARY KEY,
     game_id INTEGER REFERENCES games(id),
     name TEXT NOT NULL,
-    species TEXT,  -- flying wyvern, brute wyvern, etc.
-    size TEXT,     -- small, large, elder
-    breakable_parts JSON,  -- [{name, sever, blunt, projectile, elements}]
-    ailments JSON,
+    species TEXT,
+    size TEXT,
+    breakable_parts TEXT, -- JSON
+    ailments TEXT,        -- JSON
+    description TEXT,
     language TEXT DEFAULT 'en'
 );
 
--- Monster weaknesses
 CREATE TABLE monster_weaknesses (
     id INTEGER PRIMARY KEY,
     monster_id INTEGER REFERENCES monsters(id),
@@ -198,8 +176,8 @@ CREATE TABLE quests (
     id INTEGER PRIMARY KEY,
     game_id INTEGER REFERENCES games(id),
     name TEXT NOT NULL,
-    type TEXT,  -- village, hub, event
-    rank TEXT,  -- 1-8 stars, or LR/HR/MR
+    type TEXT,
+    rank TEXT,
     objective TEXT,
     location TEXT,
     time_limit INTEGER,
@@ -207,17 +185,17 @@ CREATE TABLE quests (
     player_limit INTEGER,
     is_key_quest BOOLEAN DEFAULT FALSE,
     unlocks TEXT,
+    description TEXT,
     language TEXT DEFAULT 'en'
 );
 
--- Quest rewards
 CREATE TABLE quest_rewards (
     id INTEGER PRIMARY KEY,
     quest_id INTEGER REFERENCES quests(id),
     item_id INTEGER REFERENCES items(id),
     quantity INTEGER,
-    probability REAL,  -- 0.0 - 1.0
-    condition TEXT     -- main, capture, break_part, etc.
+    probability REAL,
+    condition TEXT
 );
 
 -- Items
@@ -225,18 +203,17 @@ CREATE TABLE items (
     id INTEGER PRIMARY KEY,
     game_id INTEGER REFERENCES games(id),
     name TEXT NOT NULL,
-    category TEXT,  -- material, consumable, ammo, etc.
+    category TEXT,
     rarity INTEGER,
     sell_price INTEGER,
     description TEXT,
     language TEXT DEFAULT 'en'
 );
 
--- Item sources
 CREATE TABLE item_sources (
     id INTEGER PRIMARY KEY,
     item_id INTEGER REFERENCES items(id),
-    source_type TEXT,  -- monster, quest, gathering, shop, crafting
+    source_type TEXT,   -- carve / quest_reward / mining / gather / shiny / bug / fish
     source_id INTEGER,
     quantity_min INTEGER,
     quantity_max INTEGER,
@@ -252,11 +229,10 @@ CREATE TABLE skills (
     name TEXT NOT NULL,
     description TEXT,
     max_level INTEGER,
-    effects JSON,  -- [{level, description}]
+    effects TEXT,        -- JSON
     language TEXT DEFAULT 'en'
 );
 
--- Decorations/Gems
 CREATE TABLE decorations (
     id INTEGER PRIMARY KEY,
     game_id INTEGER REFERENCES games(id),
@@ -268,261 +244,119 @@ CREATE TABLE decorations (
     language TEXT DEFAULT 'en'
 );
 
--- Indexes
-CREATE INDEX idx_weapons_game ON weapons(game_id);
-CREATE INDEX idx_weapons_type ON weapons(weapon_type);
-CREATE INDEX idx_armor_game ON armor(game_id);
-CREATE INDEX idx_armor_slot ON armor(slot_type);
-CREATE INDEX idx_monsters_game ON monsters(game_id);
-CREATE INDEX idx_quests_game ON quests(game_id);
-CREATE INDEX idx_items_game ON items(game_id);
-CREATE INDEX idx_skills_game ON skills(game_id);
+-- Junction tables (v0.2.0)
+CREATE TABLE weapon_materials (
+    id INTEGER PRIMARY KEY,
+    weapon_id INTEGER REFERENCES weapons(id),
+    item_id INTEGER REFERENCES items(id),
+    quantity INTEGER NOT NULL
+);
+
+CREATE TABLE armor_materials (
+    id INTEGER PRIMARY KEY,
+    armor_id INTEGER REFERENCES armor(id),
+    item_id INTEGER REFERENCES items(id),
+    quantity INTEGER NOT NULL
+);
+
+CREATE TABLE item_combine (
+    id INTEGER PRIMARY KEY,
+    result_item_id INTEGER REFERENCES items(id),
+    component_item_id INTEGER REFERENCES items(id),
+    quantity INTEGER NOT NULL,
+    result_quantity INTEGER NOT NULL DEFAULT 1
+);
 ```
 
 ---
 
 ## Priority Games
 
-### Priority 1 (MVP)
-1. **Monster Hunter World: Iceborne** (2018/2019)
-   - Sources: mhw-db.com API, Kiranico, MHWorldData (GitHub)
-   - Status: Most accessible and complete data
+### Current Focus
+1. **Monster Hunter 2ndG / Freedom Unite** (2008) — MHP2G, MVP done
+   - Curated seed: 28 monsters, 30 weapons, 25 armor, 12 quests, 31 items, 20 skills
+   - Materials, drop sources, combine recipes populated
 
-2. **Monster Hunter Rise: Sunbreak** (2021/2022)
-   - Sources: Kiranico, Game8, Monster Hunter Wiki
-   - Status: Good data available
-
-3. **Monster Hunter Wilds** (2025)
+### Planned
+2. **Monster Hunter World: Iceborne** (2018/2019)
+   - Sources: mhw-db.com API, Kiranico
+3. **Monster Hunter Rise: Sunbreak** (2021/2022)
+   - Sources: Kiranico, Game8
+4. **Monster Hunter Wilds** (2025)
    - Sources: Kiranico (mhwilds.kiranico.com), Game8
-   - Status: Constantly updated
-
-### Priority 2
-4. **Monster Hunter Portable 3rd** (2010)
-   - Sources: MHP3rd Database (GitHub), Monster Hunter Wiki
-   - Status: Limited but available data
-
-5. **Monster Hunter 2ndG / Freedom Unite** (2008/2009)
-   - Sources: Monster Hunter Wiki (fandom)
-   - Status: More limited data,OldData
+5. **Monster Hunter Portable 3rd** (2010)
+   - Sources: MHP3rd Database (GitHub)
 
 ---
 
 ## Features by Phase
 
-### Phase 1: MVP Core (6-8 weeks)
-**Goal**: Functional app with MH World data
+### ✅ Phase 1: MVP Core — DONE
+- [x] Tauri v2 + Svelte 5 + shadcn-svelte stack
+- [x] SQLite with migrations and idempotent seed
+- [x] Tailwind CSS v4 with themed-bg utilities
+- [x] Base component structure
+- [x] SQL schema (13 tables)
+- [x] Rust models (serde)
+- [x] List + detail queries
+- [x] Curated MHP2G seed data
+- [x] Game selector UI
+- [x] Per-game dashboard
+- [x] Per-game theming with ornaments
+- [x] Detail views for all entity types
+- [x] Back button + cross-navigation
+- [x] Build verification (cargo, vite, svelte-check)
 
-#### 1.1 Project Setup
-- [ ] Initialize Tauri v2 + Svelte 5 + shadcn-svelte
-- [ ] Configure SQLite with migrations
-- [ ] Configure Tailwind CSS
-- [ ] Base component structure
+### 🚧 Phase 2: Data Expansion — IN PROGRESS
+- [ ] Complete curated data for all MHP2G monsters
+- [ ] Add monster_weaknesses data
+- [ ] Add quest_rewards data
+- [ ] Per-weapon sharpness data
+- [ ] Weapon upgrade paths / evolution trees
+- [ ] Armor set bonuses
 
-#### 1.2 Data Model
-- [ ] Implement SQL schema
-- [ ] Create initial migrations
-- [ ] Rust models (serde)
+### 📋 Phase 3: Build System
+- [ ] Skill picker UI (select desired skills)
+- [ ] Armor pieces filtered by which skills they provide
+- [ ] Optimal set calculator
+- [ ] Save/load builds
+- [ ] Export builds to JSON / share link
 
-#### 1.3 Initial Scrapers
-- [ ] Scraper for MHW (mhw-db.com API)
-- [ ] JSON data importer
-- [ ] Data validation
+### 📋 Phase 4: Multi-Game
+- [ ] MHW scraper (mhw-db.com API)
+- [ ] MHR scraper (Kiranico / Game8)
+- [ ] MHWilds scraper
+- [ ] MHP3rd data import (GitHub DB)
+- [ ] Game-specific UI adaptations (Focus Mode, Wirebugs, etc.)
 
-#### 1.4 Core UI
-- [ ] Main layout with navigation
-- [ ] Game selector (tabs or dropdown)
-- [ ] Home/dashboard page
-- [ ] Global search
+### 📋 Phase 5: Advanced Features
+- [ ] Global search across all entities
+- [ ] Favorites system
+- [ ] Import panel for JSON/CSV
+- [ ] Offline mode verification
+- [ ] Auto-update mechanism
 
-### Phase 2: Complete Encyclopedia (4-6 weeks)
-**Goal**: All data sections
-
-#### 2.1 Monsters
-- [ ] Monster list with filters
-- [ ] Detailed view per monster
-- [ ] Weakness table (parts x elements)
-- [ ] Drop materials
-- [ ] Hunting tips
-
-#### 2.2 Weapons
-- [ ] List by weapon type
-- [ ] Filters by element, rarity, rank
-- [ ] Evolution tree
-- [ ] Weapon comparator
-- [ ] Detailed stats
-
-#### 2.3 Armor
-- [ ] List by slot and rank
-- [ ] Filters by skills
-- [ ] Armor sets and bonuses
-- [ ] Armor comparator
-- [ ] Set builder (see Phase 4)
-
-#### 2.4 Quests
-- [ ] Quest list by type/rank
-- [ ] Highlighted key quests
-- [ ] Rewards with probabilities
-- [ ] Filters by objectives
-
-#### 2.5 Items
-- [ ] Complete item list
-- [ ] Acquisition sources
-- [ ] Gathering locations
-- [ ] Crafting recipes
-
-#### 2.6 Skills
-- [ ] List per game
-- [ ] Description per level
-- [ ] Which armor/decorations provide it
-- [ ] Build guides
-
-### Phase 3: Multi-Game (3-4 weeks)
-**Goal**: Support for all priority games
-
-#### 3.1 Additional Scrapers
-- [ ] Scraper for MHRise/Sunbreak
-- [ ] Scraper for MHWilds
-- [ ] Scraper for MHP3rd
-- [ ] Scraper for MH2ndG
-
-#### 3.2 Per-Game Adaptation
-- [ ] Translation system per game
-- [ ] Adapt UI to game mechanics
-  - Wirebugs (Rise)
-  - Switch Skills (Rise)
-  - Focus Mode (Wilds)
-  - Old skill system (2ndG, P3rd)
-- [ ] Different mechanics data
-
-### Phase 4: Build System (3-4 weeks)
-**Goal**: Planning tools
-
-#### 4.1 Set Builder
-- [ ] Select desired skills
-- [ ] Filter armor by skills
-- [ ] Show optimal combinations
-- [ ] Calculate available slots
-- [ ] Export/share builds
-
-#### 4.2 Build Suggestions
-- [ ] Builds per weapon type
-- [ ] Elemental vs raw builds
-- [ ] Builds per player rank
-- [ ] Meta/endgame builds
-
-#### 4.3 Calculator
-- [ ] Calculate total damage
-- [ ] Compare configurations
-- [ ] Show skill efficiency
-
-### Phase 5: Advanced Features (2-3 weeks)
-**Goal**: Extra features
-
-#### 5.1 Import Panel
-- [ ] UI to import JSON/CSV
-- [ ] Data validation
-- [ ] Update merging
-- [ ] Change log
-
-#### 5.2 Advanced Search
-- [ ] Fuzzy search
-- [ ] Combined filters
-- [ ] Save searches
-
-#### 5.3 Favorites and History
-- [ ] Mark favorite monsters/weapons
-- [ ] View history
-- [ ] Personal notes
-
-### Phase 6: Desktop & Mobile (4-6 weeks)
-**Goal**: Native apps
-
-#### 6.1 Desktop (Tauri v2)
-- [ ] Build for Windows
-- [ ] Build for macOS
-- [ ] Build for Linux
+### 📋 Phase 6: Mobile & Distribution
+- [ ] Mobile build via Tauri v2 (already supported via `cdylib`)
 - [ ] Auto-updater
 - [ ] System tray
-
-#### 6.2 Mobile (Tauri v2)
-- [ ] Adapt UI for mobile
-- [ ] Touch gestures
-- [ ] Build for iOS
-- [ ] Build for Android
-- [ ] Offline-first
+- [ ] Cross-platform packaging (Windows / macOS / Linux / iOS / Android)
 
 ---
 
-## Detailed Data Sources
+## Theming
 
-### Monster Hunter World / Iceborne
-- **API**: https://mhw-db.com (RESTful, JSON)
-- **GitHub**: https://github.com/gatheringhallstudios/MHWorldData
-- **Kiranico**: https://mhworld.kiranico.com
-- **Game8**: https://game8.co/games/Monster-Hunter-World
+Each game has a `GameTheme` object with CSS custom properties applied at the layout level. Themes share a consistent structure but differ in palette, ornament, and accent. Five themes shipped:
 
-### Monster Hunter Rise / Sunbreak
-- **Kiranico**: https://mhrise.kiranico.com
-- **Game8**: https://game8.co/games/Monster-Hunter-Rise
-- **Wiki**: https://monsterhunterwiki.org/wiki/MHRS
-- **GitHub**: https://github.com/Johnx199x/MHP3rd-DataBase (reference)
+| Game | Primary | Accent | Ornament |
+|------|---------|--------|----------|
+| MHW | `#3b82f6` blue | `#fbbf24` gold | tribal |
+| MHR | `#f97316` orange | `#fde047` yellow | japanese |
+| MHWilds | `#22c55e` green | `#facc15` gold | futuristic |
+| MHP3rd | `#a855f7` purple | `#fbbf24` gold | japanese |
+| MH2G | `#b91c1c` red | `#d4a017` gold | medieval |
 
-### Monster Hunter Wilds
-- **Kiranico**: https://mhwilds.kiranico.com
-- **Game8**: https://game8.co/games/Monster-Hunter-Wilds
-- **Wiki**: https://monsterhunterwiki.org/wiki/Monster_Hunter_Wilds
-- **API**: https://wilds.mhdb.io (new)
-
-### Monster Hunter Portable 3rd
-- **GitHub**: https://github.com/Johnx199x/MHP3rd-DataBase
-- **Database**: https://mhp3db.github.io
-- **Wiki**: https://monsterhunter.fandom.com/wiki/Monster_Hunter_Portable_3rd
-
-### Monster Hunter 2ndG / Freedom Unite
-- **Wiki**: https://monsterhunter.fandom.com/wiki/Monster_Hunter_Freedom_Unite
-- **MH-AIO**: https://mh-api.com (multi-game)
-
----
-
-## Scrapers
-
-### Technology
-- **Language**: Python 3.10+
-- **HTTP**: httpx (async) or requests
-- **Parsing**: BeautifulSoup4 / parsel
-- **Storage**: JSON export → SQLite import
-
-### Scraper Structure
-```
-scrapers/
-├── mhw/
-│   ├── weapons.py      # mhw-db.com API
-│   ├── armor.py
-│   ├── monsters.py
-│   ├── quests.py
-│   ├── items.py
-│   └── run_all.py
-├── mhrise/
-│   ├── kiranico.py
-│   └── game8.py
-├── mhwilds/
-│   └── kiranico.py
-├── mhp3rd/
-│   └── wiki.py
-├── mh2ndg/
-│   └── wiki.py
-└── utils/
-    ├── database.py     # SQLite helpers
-    ├── parsers.py      # Common parsers
-    └── exporters.py    # JSON export
-```
-
-### Data Flow
-1. Scraper runs → extracts data from web/API
-2. Exports to normalized JSON
-3. Tauri importer reads JSON
-4. Inserts into SQLite with validation
-5. UI queries SQLite via commands
+Ornaments are CSS `repeating-linear-gradient` patterns defined in `src/app.css`, scoped via `[data-ornament="..."]` attribute on the root wrapper.
 
 ---
 
@@ -530,22 +364,20 @@ scrapers/
 
 ### Supported Languages
 - **English** (primary)
-- **Spanish**
-- **Japanese** (original names)
 
 ### Strategy
-- Each record has `language` field
-- UI allows language switching
-- JP names always available as reference
+- Each record has `language` field (default 'en')
+- All seed data is in English
+- Future: JP names alongside EN
 
 ---
 
 ## Key Technical Decisions
 
 ### Why Tauri + Svelte?
-- **Tauri v2**: Small binaries (5-15MB vs 100MB+ Electron), mobile support, security
-- **Svelte 5**: Compiled, no runtime overhead, runes for reactivity
-- **shadcn-svelte**: Modern components, customizable, good DX
+- **Tauri v2:** Small binaries (5-15MB vs 100MB+ Electron), mobile support, security
+- **Svelte 5:** Compiled, no runtime overhead, runes for reactivity
+- **shadcn-svelte:** Modern components, customizable, good DX
 
 ### Why SQLite?
 - Single multi-game DB (with `game_id` field)
@@ -553,7 +385,7 @@ scrapers/
 - Fast queries with indexes
 - Easy to export/backup
 
-### Why Python scrapers?
+### Why Python scrapers (future)?
 - Better ecosystem for web scraping
 - Easy to maintain independent from core
 - JSON as exchange format
@@ -565,57 +397,32 @@ scrapers/
 
 ---
 
-## Time Estimation
+## Time Estimation (Cumulative)
 
-| Phase | Weeks | Dependencies |
-|-------|-------|--------------|
-| Phase 1: MVP Core | 6-8 | Setup, MHW Scraper |
-| Phase 2: Encyclopedia | 4-6 | Phase 1 |
-| Phase 3: Multi-Game | 3-4 | Phase 2 |
-| Phase 4: Builds | 3-4 | Phase 2 |
-| Phase 5: Advanced | 2-3 | Phase 4 |
-| Phase 6: Desktop/Mobile | 4-6 | Phase 5 |
-| **Total** | **22-31** | |
+| Phase | Weeks | Status |
+|-------|-------|--------|
+| Phase 1: MVP Core | 6-8 | ✅ Done |
+| Phase 2: Data Expansion | 2-3 | 🚧 In progress |
+| Phase 3: Build System | 3-4 | 📋 Planned |
+| Phase 4: Multi-Game | 3-4 | 📋 Planned |
+| Phase 5: Advanced | 2-3 | 📋 Planned |
+| Phase 6: Mobile & Distribution | 4-6 | 📋 Planned |
+| **Total** | **~25 weeks** | |
 
 *Estimation based on part-time work (15-20h/week)*
 
 ---
 
-## Immediate Next Steps
+## Resources
 
-1. **Project setup**
-   ```bash
-   npm create tauri-app@latest mh-aio -- --template svelte-ts
-   cd mh-aio
-   npm install
-   npx shadcn-svelte@next init
-   ```
-
-2. **Install core dependencies**
-   ```bash
-   # Frontend
-   npx shadcn-svelte@next add button card dialog input tabs table badge
-   
-   # Backend (Cargo.toml)
-   # rusqlite = { version = "0.31", features = ["bundled"] }
-   # serde = { version = "1", features = ["derive"] }
-   # serde_json = "1"
-   ```
-
-3. **Create first scraper** (MHW via mhw-db.com API)
-4. **Design SQL schema**
-5. **Implement first Tauri command**
-6. **Create basic UI with shadcn**
-
----
-
-## Resources and Links
-
-- **Tauri v2 Docs**: https://v2.tauri.app
-- **Svelte 5**: https://svelte.dev/docs
-- **shadcn-svelte**: https://next.shadcn-svelte.com
-- **Tailwind CSS**: https://tailwindcss.com
-- **SQLite**: https://www.sqlite.org
+- **Tauri v2 Docs:** https://v2.tauri.app
+- **Svelte 5:** https://svelte.dev/docs
+- **shadcn-svelte:** https://next.shadcn-svelte.com
+- **Tailwind CSS v4:** https://tailwindcss.com
+- **SQLite:** https://www.sqlite.org
+- **MHW API:** https://mhw-db.com
+- **MHWilds API:** https://wilds.mhdb.io
+- **MHP3rd DB:** https://github.com/Johnx199x/MHP3rd-DataBase
 
 ---
 

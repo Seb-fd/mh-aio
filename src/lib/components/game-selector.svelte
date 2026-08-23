@@ -9,7 +9,7 @@
   }
 </script>
 
-<div class="min-h-screen flex flex-col items-center justify-center p-8">
+<div class="min-h-screen flex flex-col items-center justify-center p-8 bg-gray-950">
   <div class="text-center mb-12">
     <h1 class="text-5xl font-bold text-yellow-500 mb-3">MH-AIO</h1>
     <p class="text-xl text-gray-400">Monster Hunter All-in-One Encyclopedia</p>
@@ -25,7 +25,10 @@
         <Card class="p-6 border-2 {game.borderColor} {game.bgHover} transition-all duration-200 cursor-pointer h-full hover:scale-105">
           <div class="flex flex-col h-full">
             <div class="flex items-center gap-3 mb-3">
-              <div class="w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center">
+              <div
+                class="w-10 h-10 rounded-lg flex items-center justify-center"
+                style="background-color: var(--theme-bg-elevated, rgb(31 41 55)); border: 1px solid var(--theme-border-strong, rgb(55 65 81));"
+              >
                 <span class="text-lg {game.color} font-bold">
                   {game.shortName.charAt(0)}
                 </span>

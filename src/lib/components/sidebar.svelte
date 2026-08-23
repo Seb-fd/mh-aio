@@ -39,10 +39,13 @@
   }
 </script>
 
-<aside class="w-64 bg-gray-900 border-r border-gray-800 flex flex-col h-full">
+<aside
+  class="w-64 flex flex-col h-full border-r sidebar"
+  style="background-color: var(--theme-bg-surface); border-color: var(--theme-border);"
+>
   {#if game}
-    <div class="p-4 border-b border-gray-800">
-      <button onclick={changeGame} class="text-xs text-gray-500 hover:text-gray-300 transition-colors mb-2">
+    <div class="p-4 border-b" style="border-color: var(--theme-border);">
+      <button onclick={changeGame} class="text-xs text-gray-500 hover:text-[var(--theme-text-accent)] transition-colors mb-2">
         ← Change Game
       </button>
       <h2 class="text-lg font-bold {game.color}">{game.shortName}</h2>
@@ -55,10 +58,8 @@
       {@const active = isActive(item.href)}
       <button
         onclick={() => navigate(item.href)}
-        class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors
-          {active
-            ? 'bg-yellow-500/10 text-yellow-500 font-medium'
-            : 'text-gray-400 hover:bg-gray-800 hover:text-gray-200'}"
+        class="sidebar-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors text-left"
+        class:active={active}
       >
         <span class="text-base">{item.icon}</span>
         <span>{item.label}</span>
@@ -66,7 +67,25 @@
     {/each}
   </nav>
 
-  <div class="p-4 border-t border-gray-800">
-    <p class="text-xs text-gray-600 text-center">MH-AIO v0.1.0</p>
+  <div class="p-4 border-t" style="border-color: var(--theme-border);">
+    <p class="text-xs text-gray-600 text-center">MH-AIO v0.2.0</p>
   </div>
 </aside>
+
+<style>
+  .sidebar-item {
+    color: rgb(156 163 175);
+  }
+  .sidebar-item:hover {
+    background-color: var(--theme-bg-elevated);
+    color: rgb(229 231 235);
+  }
+  .sidebar-item.active {
+    background-color: color-mix(in oklab, var(--theme-primary) 12%, transparent);
+    color: var(--theme-accent);
+    font-weight: 500;
+  }
+  .sidebar-item.active:hover {
+    background-color: color-mix(in oklab, var(--theme-primary) 18%, transparent);
+  }
+</style>

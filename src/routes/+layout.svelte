@@ -1,7 +1,7 @@
 <script lang="ts">
   import '../app.css';
   import { page } from '$app/stores';
-  import { selectedGame, GAMES } from '$lib/stores/game';
+  import { selectedGame, GAMES, type Game } from '$lib/stores/game';
   import Sidebar from '$lib/components/sidebar.svelte';
   import Header from '$lib/components/header.svelte';
 
@@ -21,16 +21,41 @@
       }
     }
   });
+
+  const themeStyle = $derived.by(() => {
+    if (!game) return '';
+    const t = game.theme;
+    return [
+      `--theme-primary: ${t.primary};`,
+      `--theme-primary-dark: ${t.primaryDark};`,
+      `--theme-accent: ${t.accent};`,
+      `--theme-accent-soft: ${t.accentSoft};`,
+      `--theme-bg-base: ${t.bgBase};`,
+      `--theme-bg-surface: ${t.bgSurface};`,
+      `--theme-bg-elevated: ${t.bgElevated};`,
+      `--theme-border: ${t.border};`,
+      `--theme-border-strong: ${t.borderStrong};`,
+      `--theme-text-accent: ${t.textAccent};`,
+      `--theme-text-on-primary: ${t.textOnPrimary};`,
+      `--theme-banner-from: ${t.bannerFrom};`,
+      `--theme-banner-to: ${t.bannerTo};`,
+      `--theme-glow: ${t.glow};`,
+    ].join(' ');
+  });
 </script>
 
 {#if isHome}
   <div class="min-h-screen bg-gray-950 text-gray-100">
     {@render children()}
   </div>
-{:else}
-  <div class="min-h-screen bg-gray-950 text-gray-100 flex flex-col">
+{:else if game}
+  <div
+    class="min-h-screen text-gray-100 flex flex-col themed-bg"
+    data-ornament={game.theme.ornament}
+    style={themeStyle}
+  >
     <Header onMenuClick={() => sidebarOpen = !sidebarOpen} />
-    
+
     <div class="flex flex-1 overflow-hidden">
       {#if sidebarOpen}
         <div
@@ -51,5 +76,9 @@
         {@render children()}
       </main>
     </div>
+  </div>
+{:else}
+  <div class="min-h-screen bg-gray-950 text-gray-100">
+    {@render children()}
   </div>
 {/if}

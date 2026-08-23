@@ -2,6 +2,20 @@
 
 A comprehensive, cross-platform desktop encyclopedia and toolkit for Monster Hunter games, built with **Tauri v2**, **Rust**, **Svelte 5**, and **SQLite**.
 
+**Current focus: v0.2.0 MVP — Monster Hunter Freedom Unite (MHP2G)**
+
+---
+
+## Features
+
+- **Multi-game support** — switch between MHW, MHR, MHWilds, MHP3rd, MH2G
+- **Complete entity browser** — monsters, weapons, armor, quests, items, skills
+- **Detail views** — click any entity to see official descriptions, stats, crafting materials, drop sources with probabilities, and cross-navigation between related entities
+- **Per-game theming** — each game has its own color palette and decorative ornament pattern (e.g. medieval red/gold for MHP2G, futuristic green for MHWilds)
+- **Offline-first** — SQLite bundled, all data lives locally
+- **Cross-navigation** — items link to the monsters/quests that drop them, materials link to item pages
+- **Back button** — always returns to the previous list view
+
 ---
 
 ## Tech Stack
@@ -16,20 +30,16 @@ A comprehensive, cross-platform desktop encyclopedia and toolkit for Monster Hun
 ## Supported Games
 
 The app supports multiple titles through dynamic game routing (`[game]`):
-- `mhw` — Monster Hunter: World
-- `mhr` — Monster Hunter Rise
-- `mhwilds` — Monster Hunter Wilds
-- `mhp3rd` — Monster Hunter Portable 3rd
-- `mh2g` — Monster Hunter Freedom Unite / Dos (MH2G)
 
-Each game section covers:
-- Monsters
-- Weapons
-- Armor
-- Quests
-- Items
-- Skills
-- Builds
+| Slug | Game | Year | Theme |
+|------|------|------|-------|
+| `mhw` | Monster Hunter: World | 2018 | Tribal / Blue |
+| `mhr` | Monster Hunter Rise | 2021 | Japanese / Orange |
+| `mhwilds` | Monster Hunter Wilds | 2025 | Futuristic / Green |
+| `mhp3rd` | MH Portable 3rd | 2010 | Japanese / Purple |
+| `mh2g` | MH 2ndG (Freedom Unite) | 2008 | Medieval / Red+Gold |
+
+Each game section covers: Monsters, Weapons, Armor, Quests, Items, Skills, Builds.
 
 ---
 
@@ -37,55 +47,104 @@ Each game section covers:
 
 ### Prerequisites
 
-Ensure you have the following installed on your system:
-- **Node.js** (LTS recommended) & npm / pnpm / bun
+- **Node.js** (LTS recommended) & npm
 - **Rust** (stable toolchain via [rustup](https://rustup.rs/))
-- **Tauri v2 Prerequisites** (depends on your OS: WebView2 on Windows, WebKitGTK on Linux, Xcode command line tools on macOS)
+- **Tauri v2 Prerequisites** (WebView2 on Windows, WebKitGTK on Linux, Xcode CLT on macOS)
 
 ### Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Seb-fd/mh-aio.git
-   cd mh-aio
-   ```
+```bash
+git clone https://github.com/Seb-fd/mh-aio.git
+cd mh-aio
+npm install
+```
 
-2. Install frontend dependencies:
-   ```bash
-   npm install
-   ```
-
----
-
-## Development Commands
+### Run
 
 ```bash
-# Run frontend only (Vite dev server on port 1420)
+# Frontend only (Vite dev server on port 1420)
 npm run dev
 
-# Run full desktop app (Svelte frontend + Rust backend via Tauri)
+# Full desktop app (Svelte + Rust via Tauri)
 npx tauri dev
+```
 
-# Build production desktop application
-npx tauri build
+### Build
 
-# Build Rust backend only
-cargo build --manifest-path src-tauri/Cargo.toml
+```bash
+npx tauri build                           # Production desktop app
+cargo build --manifest-path src-tauri/Cargo.toml   # Backend only
+npx svelte-check                          # Type/Svelte validation
 ```
 
 ---
 
 ## Project Structure
 
-- `src/` — Svelte 5 frontend source code, components, stores, and routes.
-  - `src/routes/[game]/` — Dynamic game encyclopedia sub-routes.
-  - `src/lib/components/ui/` — Reusable UI primitives (shadcn-svelte).
-- `src-tauri/` — Rust backend source code, database schema/queries, and Tauri configuration.
-  - `src-tauri/src/db/` — SQLite schema definitions and query handlers.
-  - `src-tauri/src/commands/` — Tauri commands registered in `lib.rs`.
+```
+mh-aio/
+├── src/                              # Frontend (Svelte 5)
+│   ├── app.html
+│   ├── app.css                       # Tailwind + themed-bg utilities per game
+│   ├── lib/
+│   │   ├── api.ts                    # Typed invoke() wrapper
+│   │   ├── components/
+│   │   │   ├── ui/                   # shadcn-svelte primitives
+│   │   │   ├── game-selector.svelte
+│   │   │   ├── sidebar.svelte        # Themed nav
+│   │   │   ├── header.svelte         # Themed top bar
+│   │   │   ├── back-button.svelte    # history.back()
+│   │   │   ├── detail-header.svelte  # Detail page header
+│   │   │   ├── material-list.svelte  # Crafting materials
+│   │   │   └── drop-table.svelte     # Drop sources w/ probability bars
+│   │   ├── stores/
+│   │   │   └── game.ts               # 5 games + GameTheme interface
+│   │   └── utils/index.ts            # cn() helper
+│   └── routes/
+│       ├── +layout.svelte            # Theme injection via CSS vars
+│       ├── +page.svelte              # Game selector landing
+│       └── [game]/
+│           ├── +page.svelte          # Dashboard
+│           ├── monsters/             # list + [id]
+│           ├── weapons/              # list + [id]
+│           ├── armor/                # list + [id]
+│           ├── quests/               # list + [id]
+│           ├── items/                # list + [id]
+│           ├── skills/               # list + [id]
+│           └── builds/               # (placeholder)
+├── src-tauri/                        # Backend (Rust)
+│   ├── src/
+│   │   ├── main.rs
+│   │   ├── lib.rs                    # 14 Tauri commands registered
+│   │   ├── commands/mod.rs
+│   │   └── db/
+│   │       ├── mod.rs                # Database struct (Mutex<Connection>)
+│   │       ├── schema.rs             # 13 tables + ALTER TABLE migrations
+│   │       ├── queries.rs            # List + detail queries w/ JOINs
+│   │       └── seed.rs               # Idempotent MHP2G seed
+│   ├── Cargo.toml
+│   └── tauri.conf.json
+├── AGENTS.md
+├── README.md
+├── roadmap.md
+└── STATUS.md
+```
+
+---
+
+## Database Schema
+
+13 tables with full referential integrity. Highlights:
+
+- **Core**: `games`, `monsters`, `weapons`, `armor`, `quests`, `items`, `skills`
+- **Junctions**: `weapon_materials`, `armor_materials`, `item_combine`
+- **References**: `monster_weaknesses`, `item_sources`, `quest_rewards`
+- **Sets**: `armor_sets`, `decorations`
+
+All entities have a `description` column populated by the seed for MHP2G.
 
 ---
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. All Monster Hunter data is property of Capcom.
