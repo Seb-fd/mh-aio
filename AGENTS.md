@@ -72,3 +72,9 @@ Registered in `src-tauri/src/lib.rs` via `tauri::generate_handler!`. Defined in 
 - **Version Sync**: When preparing a release, update the version string in both `package.json` and `src-tauri/tauri.conf.json`.
 - **Git Tags**: Releases are triggered by pushing a semver git tag (e.g., `git tag v0.1.1 && git push origin v0.1.1`).
 - **CI/CD**: GitHub Actions workflow (`.github/workflows/release.yml`) builds binaries for Windows, macOS, and Linux and publishes them to GitHub Releases automatically.
+
+## Mobile Support (Android & iOS)
+
+- **Tauri v2 Mobile**: Supported via Tauri mobile targets.
+- **Android**: Initialize with `npx tauri android init`, dev mode with `npx tauri android dev`, build with `npx tauri android build`. Requires Android SDK/NDK and Java JDK.
+- **iOS**: Initialize with `npx tauri ios init`, dev mode with `npx tauri ios dev`, build with `npx tauri ios build`. Requires macOS and Xcode.
