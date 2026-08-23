@@ -1,0 +1,61 @@
+<script lang="ts">
+  import { page } from '$app/stores';
+  import { goto } from '$app/navigation';
+  import { selectedGame, GAMES } from '$lib/stores/game';
+  import Card from '$lib/components/ui/card.svelte';
+
+  const game = $derived($selectedGame);
+  const gameId = $derived($page.params.game);
+
+  $effect(() => {
+    const found = GAMES.find(g => g.id === gameId);
+    if (found) {
+      selectedGame.select(found);
+    }
+  });
+
+  const sections = [
+    { href: '/monsters', label: 'Monsters', icon: '🐉', desc: 'Weaknesses, materials and tips' },
+    { href: '/weapons', label: 'Weapons', icon: '⚔️', desc: 'Stats, elements and upgrade tree' },
+    { href: '/armor', label: 'Armor', icon: '🛡️', desc: 'Sets, skills and resistances' },
+    { href: '/quests', label: 'Quests', icon: '📜', desc: 'Key quests, rewards and drop rates' },
+    { href: '/items', label: 'Items', icon: '🎒', desc: 'Materials, consumables and locations' },
+    { href: '/skills', label: 'Skills', icon: '✨', desc: 'Effects per level and synergies' },
+    { href: '/builds', label: 'Builds', icon: '🔧', desc: 'Suggestions and planner' },
+  ];
+
+  function navigate(href: string) {
+    if (!game) return;
+    goto(`/${game.id}${href}`);
+  }
+</script>
+
+{#if game}
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold {game.color} mb-1">{game.name}</h1>
+      <p class="text-gray-400">{game.platform} · {game.year}</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {#each sections as section}
+        <button onclick={() => navigate(section.href)} class="text-left">
+          <Card class="p-5 border border-gray-800 hover:border-gray-700 hover:bg-gray-800/50 transition-all cursor-pointer h-full">
+            <div class="flex items-start gap-3">
+              <span class="text-2xl">{section.icon}</span>
+              <div>
+                <h2 class="font-semibold text-gray-100">{section.label}</h2>
+                <p class="text-sm text-gray-500 mt-0.5">{section.desc}</p>
+              </div>
+            </div>
+          </Card>
+        </button>
+      {/each}
+    </div>
+  </div>
+{:else}
+  <div class="text-center py-20">
+    <p class="text-gray-400">No game selected</p>
+    <a href="/" class="text-yellow-500 hover:underline mt-2 inline-block">Back to selector</a>
+  </div>
+{/if}
