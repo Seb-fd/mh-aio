@@ -75,6 +75,10 @@ Registered in `src-tauri/src/lib.rs` via `tauri::generate_handler!`. Defined in 
 
 ## Mobile Support (Android & iOS)
 
-- **Tauri v2 Mobile**: Supported via Tauri mobile targets.
-- **Android**: Initialize with `npx tauri android init`, dev mode with `npx tauri android dev`, build with `npx tauri android build`. Requires Android SDK/NDK and Java JDK.
+- **Tauri v2 Mobile**: Supported via Tauri mobile targets (`src-tauri/gen/`).
+- **Android**: 
+  - Initialize: `npx tauri android init` (installs Rust NDK targets automatically).
+  - Dev mode (emulator/device): `npx tauri android dev`.
+  - Production build (APK/AAB): `npx tauri android build`.
+  - Requirements: Android SDK/NDK, `ANDROID_HOME` env var, and Java JDK.
 - **iOS**: Initialize with `npx tauri ios init`, dev mode with `npx tauri ios dev`, build with `npx tauri ios build`. Requires macOS and Xcode.
