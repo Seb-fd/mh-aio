@@ -66,3 +66,9 @@ Registered in `src-tauri/src/lib.rs` via `tauri::generate_handler!`. Defined in 
 - **Rust lib crate** is compiled as `["lib", "cdylib", "staticlib"]` to support both desktop and future mobile targets.
 - **FK constraints** — SQLite has FK enforcement on by default in some contexts. When inserting into junction tables, ensure parent rows exist first (seed order matters).
 - **Themed components** must use `var(--theme-*)` not hardcoded colors. Reuse `.themed-card` and `.themed-bg` utility classes where possible.
+
+## Release & Versioning
+
+- **Version Sync**: When preparing a release, update the version string in both `package.json` and `src-tauri/tauri.conf.json`.
+- **Git Tags**: Releases are triggered by pushing a semver git tag (e.g., `git tag v0.1.1 && git push origin v0.1.1`).
+- **CI/CD**: GitHub Actions workflow (`.github/workflows/release.yml`) builds binaries for Windows, macOS, and Linux and publishes them to GitHub Releases automatically.
