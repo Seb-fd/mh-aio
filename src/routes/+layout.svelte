@@ -54,19 +54,20 @@
     data-ornament={game.theme.ornament}
     style={themeStyle}
   >
-    <Header onMenuClick={() => sidebarOpen = !sidebarOpen} />
+    <Header onMenuClick={() => { console.log('[layout] menu click', !sidebarOpen); sidebarOpen = !sidebarOpen; }} />
 
     <div class="flex flex-1 overflow-hidden">
       {#if sidebarOpen}
-        <div
+        <button
+          type="button"
           class="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onclick={() => sidebarOpen = false}
-          role="presentation"
-        ></div>
+          aria-label="Close menu"
+        ></button>
       {/if}
 
       <div
-        class="fixed lg:static inset-y-0 left-0 z-50 transform transition-transform duration-200 ease-in-out
+        class="fixed lg:static inset-y-0 left-0 z-50 transform transition-transform duration-200 ease-in-out touch-manipulation
           {sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}"
       >
         <Sidebar onclose={() => sidebarOpen = false} />
