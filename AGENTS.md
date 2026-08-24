@@ -78,7 +78,8 @@ Registered in `src-tauri/src/lib.rs` via `tauri::generate_handler!`. Defined in 
 - **Tauri v2 Mobile**: Supported via Tauri mobile targets (`src-tauri/gen/`).
 - **Android**: 
   - Initialize: `npx tauri android init` (installs Rust NDK targets automatically).
-  - Dev mode (emulator/device): `npx tauri android dev`.
+  - Dev mode (emulator/device): `npx tauri android dev -t x86_64` (match emulator CPU architecture such as x86_64 or aarch64 to avoid SIGILL crashes).
   - Production build (APK/AAB): `npx tauri android build`.
   - Requirements: Android SDK/NDK, `ANDROID_HOME` env var, and Java JDK.
+  - Vite HMR: Configured in `vite.config.ts` with `hmr` using `TAURI_DEV_HOST`.
 - **iOS**: Initialize with `npx tauri ios init`, dev mode with `npx tauri ios dev`, build with `npx tauri ios build`. Requires macOS and Xcode.
