@@ -23,6 +23,10 @@ pub fn seed(conn: &Connection) -> Result<()> {
     seed_quests(conn)?;
     seed_quest_rewards(conn)?;
     seed_skills(conn)?;
+    seed_skill_levels(conn)?;
+    seed_decorations(conn)?;
+    seed_armor_skill_points(conn)?;
+    seed_weapon_skill_points(conn)?;
     Ok(())
 }
 
@@ -31,7 +35,9 @@ fn clear_mh2g(conn: &Connection) -> Result<()> {
     conn.execute_batch("
         DELETE FROM weapon_materials WHERE weapon_id IN (SELECT id FROM weapons WHERE game_id = 5);
         DELETE FROM weapon_craft WHERE weapon_id IN (SELECT id FROM weapons WHERE game_id = 5);
+        DELETE FROM weapon_skill_points WHERE weapon_id IN (SELECT id FROM weapons WHERE game_id = 5);
         DELETE FROM armor_materials WHERE armor_id IN (SELECT id FROM armor WHERE game_id = 5);
+        DELETE FROM armor_skill_points WHERE armor_id IN (SELECT id FROM armor WHERE game_id = 5);
         DELETE FROM quest_rewards WHERE quest_id IN (SELECT id FROM quests WHERE game_id = 5);
         DELETE FROM item_sources WHERE item_id IN (SELECT id FROM items WHERE game_id = 5)
             OR (source_type = 'carve' AND source_id IN (SELECT id FROM monsters WHERE game_id = 5))
@@ -41,6 +47,9 @@ fn clear_mh2g(conn: &Connection) -> Result<()> {
         DELETE FROM monster_drops WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 5);
         DELETE FROM monster_equipment WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 5) OR game_id = 5;
         DELETE FROM monster_weaknesses WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 5);
+        DELETE FROM skill_levels WHERE skill_id IN (SELECT id FROM skills WHERE game_id = 5);
+        DELETE FROM decoration_materials WHERE decoration_id IN (SELECT id FROM decorations WHERE game_id = 5);
+        DELETE FROM decorations WHERE game_id = 5;
         DELETE FROM monsters WHERE game_id = 5;
         DELETE FROM items WHERE game_id = 5;
         DELETE FROM weapons WHERE game_id = 5;
@@ -715,37 +724,251 @@ fn seed_quest_rewards(conn: &Connection) -> Result<()> {
     Ok(())
 }
 
-fn seed_skills(conn: &Connection) -> Result<()> {
-    let skills: &[(i32, &str, &str, i32)] = &[
-        (1, "Attack Up", "Increases attack power", 7),
-        (2, "Defense Up", "Increases defense", 7),
-        (3, "Health +1", "Increases max health by 10", 1),
-        (4, "Health +2", "Increases max health by 20", 1),
-        (5, "Elemental Attack", "Increases elemental damage", 5),
-        (6, "Sharpness +1", "Weapon sharpness extended", 1),
-        (7, "Sharpness +2", "Weapon sharpness greatly extended", 1),
-        (8, "Recoil Down", "Reduces bowgun recoil", 3),
-        (9, "Reload Speed", "Increases bowgun reload speed", 3),
-        (10, "Evasion +1", "Increases evasion distance", 1),
-        (11, "Evasion +2", "Greatly increases evasion distance", 1),
-        (12, "Stamina Recov", "Recovers stamina faster", 2),
-        (13, "Wind Pressure", "Reduces wind pressure from monsters", 1),
-        (14, "Earplugs", "Nullifies small monster roars", 3),
-        (15, "Poison Res", "Reduces poison damage", 1),
-        (16, "Fire Res +1", "Increases fire resistance", 1),
-        (17, "Ice Res +1", "Increases ice resistance", 1),
-        (18, "Thunder Res +1", "Increases thunder resistance", 1),
-        (19, "Dragon Res +1", "Increases dragon resistance", 1),
-        (20, "Razor Sharp", "Reduces sharpness loss", 3),
-    ];
+#[derive(Deserialize)]
+struct SkillFamilyJson {
+    id: i32,
+    name: String,
+    description: String,
+    max_level: Option<i32>,
+}
 
-    for (id, name, desc, max_lvl) in skills {
+fn seed_skills(conn: &Connection) -> Result<()> {
+    let json_data = include_str!("../../data/mh2g_skills_new.json");
+    let skills: Vec<SkillFamilyJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+
+    for s in skills {
         conn.execute(
             "INSERT OR IGNORE INTO skills (id, game_id, name, description, max_level, language)
              VALUES (?1, ?2, ?3, ?4, ?5, 'en')",
-            rusqlite::params![id, MH2G, name, desc, max_lvl],
+            rusqlite::params![s.id, MH2G, s.name, s.description, s.max_level],
         )?;
     }
 
+    Ok(())
+}
+
+#[derive(Deserialize)]
+struct SkillLevelJson {
+    id: i32,
+    skill_id: i32,
+    points: i32,
+    ability_name: String,
+    description: Option<String>,
+}
+
+fn seed_skill_levels(conn: &Connection) -> Result<()> {
+    let json_data = include_str!("../../data/mh2g_skill_levels.json");
+    let levels: Vec<SkillLevelJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+
+    for l in levels {
+        conn.execute(
+            "INSERT OR IGNORE INTO skill_levels (id, skill_id, points, ability_name, description, language)
+             VALUES (?1, ?2, ?3, ?4, ?5, 'en')",
+            rusqlite::params![l.id, l.skill_id, l.points, l.ability_name, l.description],
+        )?;
+    }
+
+    Ok(())
+}
+
+#[derive(Deserialize)]
+struct DecoSkillPointJson {
+    name: String,
+    points: i32,
+}
+
+#[derive(Deserialize)]
+struct DecoMatJson {
+    name: String,
+    amount: i32,
+}
+
+#[derive(Deserialize)]
+struct DecoJson {
+    id: i32,
+    name: String,
+    slot_size: i32,
+    price: Option<i32>,
+    skill_points: Vec<DecoSkillPointJson>,
+    materials: Vec<DecoMatJson>,
+}
+
+fn seed_decorations(conn: &Connection) -> Result<()> {
+    let json_data = include_str!("../../data/mh2g_decorations.json");
+    let decos: Vec<DecoJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+
+    for d in decos {
+        // Resolve primary and secondary skill ids
+        let mut primary_id: Option<i32> = None;
+        let mut primary_pts: Option<i32> = None;
+        let mut secondary_id: Option<i32> = None;
+        let mut secondary_pts: Option<i32> = None;
+
+        for (idx, sp) in d.skill_points.iter().enumerate() {
+            let normalized = normalize_skill_name(&sp.name);
+            let sid: Option<i32> = conn
+                .query_row(
+                    "SELECT id FROM skills WHERE name = ?1 AND game_id = 5",
+                    rusqlite::params![normalized],
+                    |row| row.get(0),
+                )
+                .optional()?;
+            if idx == 0 {
+                primary_id = sid;
+                primary_pts = Some(sp.points);
+            } else if idx == 1 {
+                secondary_id = sid;
+                secondary_pts = Some(sp.points);
+            }
+        }
+
+        // Skip if primary not resolved (should not happen for faithful data)
+        if primary_id.is_none() {
+            continue;
+        }
+
+        conn.execute(
+            "INSERT OR IGNORE INTO decorations (id, game_id, name, skill_id, skill_level, skill_points, secondary_skill_id, secondary_points, slot_size, rarity, price, language)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, NULL, ?10, 'en')",
+            rusqlite::params![
+                d.id,
+                MH2G,
+                d.name,
+                primary_id,
+                primary_pts,
+                primary_pts,
+                secondary_id,
+                secondary_pts,
+                d.slot_size,
+                d.price
+            ],
+        )?;
+
+        // Insert crafting materials
+        for m in &d.materials {
+            let normalized_mat = normalize_item_name(&m.name);
+            let iid: Option<i32> = conn
+                .query_row(
+                    "SELECT id FROM items WHERE name = ?1 AND game_id = 5",
+                    rusqlite::params![normalized_mat],
+                    |row| row.get(0),
+                )
+                .optional()?;
+            conn.execute(
+                "INSERT OR IGNORE INTO decoration_materials (decoration_id, item_id, item_name, quantity) VALUES (?1, ?2, ?3, ?4)",
+                rusqlite::params![d.id, iid, m.name, m.amount],
+            )?;
+        }
+    }
+
+    Ok(())
+}
+
+fn normalize_item_name(name: &str) -> String {
+    match name {
+        "Crag S Lv3" => "Crag S Lvl3".to_string(),
+        "Crag S Lv2" => "Crag S Lvl2".to_string(),
+        "Crag S Lv1" => "Crag S Lvl1".to_string(),
+        _ => name.to_string(),
+    }
+}
+
+fn normalize_skill_name(name: &str) -> String {
+    match name {
+        "ClustS Add" | "ClustSAdd" => "ClustSAdd".to_string(),
+        "Crag S Add" | "CragSAdd" => "CragSAdd".to_string(),
+        "WindPress" => "Wind Press".to_string(),
+        "PelletS Add" => "PelletSAdd".to_string(),
+        "NormalS Add" => "NormalSAdd".to_string(),
+        "PierceS Add" => "PierceSAdd".to_string(),
+        "ThunderRes" => "ThunderRes".to_string(),
+        _ => name.to_string(),
+    }
+}
+
+fn parse_skill_string(s: &str) -> Vec<(String, i32)> {
+    // Input like "Attack +3, Defense -2, Hunger +5"
+    let mut out = Vec::new();
+    for part in s.split(',') {
+        let t = part.trim();
+        if t.is_empty() {
+            continue;
+        }
+        // split on last space before +/- number
+        if let Some(pos) = t.rfind(|c: char| c == '+' || c == '-') {
+            let name = t[..pos].trim().to_string();
+            let val_str = t[pos..].trim();
+            if let Ok(v) = val_str.parse::<i32>() {
+                if !name.is_empty() {
+                    out.push((name, v));
+                }
+            }
+        }
+    }
+    out
+}
+
+fn seed_armor_skill_points(conn: &Connection) -> Result<()> {
+    let mut stmt = conn.prepare("SELECT id, skills FROM armor WHERE game_id = 5 AND skills IS NOT NULL")?;
+    let rows = stmt.query_map([], |row| Ok((row.get::<_, i32>(0)?, row.get::<_, String>(1)?)))?;
+
+    let mut to_insert: Vec<(i32, i32, i32)> = Vec::new();
+    for r in rows {
+        let (armor_id, skills_str) = r?;
+        for (name, pts) in parse_skill_string(&skills_str) {
+            let normalized = normalize_skill_name(&name);
+            let sid: Option<i32> = conn
+                .query_row(
+                    "SELECT id FROM skills WHERE name = ?1 AND game_id = 5",
+                    rusqlite::params![normalized],
+                    |row| row.get(0),
+                )
+                .optional()?;
+            if let Some(sid) = sid {
+                to_insert.push((armor_id, sid, pts));
+            }
+        }
+    }
+    drop(stmt);
+    for (aid, sid, pts) in to_insert {
+        conn.execute(
+            "INSERT OR IGNORE INTO armor_skill_points (armor_id, skill_id, points) VALUES (?1, ?2, ?3)",
+            rusqlite::params![aid, sid, pts],
+        )?;
+    }
+    Ok(())
+}
+
+fn seed_weapon_skill_points(conn: &Connection) -> Result<()> {
+    let mut stmt = conn.prepare("SELECT id, skills FROM weapons WHERE game_id = 5 AND skills IS NOT NULL AND skills != ''")?;
+    let rows = stmt.query_map([], |row| Ok((row.get::<_, i32>(0)?, row.get::<_, String>(1)?)))?;
+
+    let mut to_insert: Vec<(i32, i32, i32)> = Vec::new();
+    for r in rows {
+        let (weapon_id, skills_str) = r?;
+        for (name, pts) in parse_skill_string(&skills_str) {
+            let normalized = normalize_skill_name(&name);
+            let sid: Option<i32> = conn
+                .query_row(
+                    "SELECT id FROM skills WHERE name = ?1 AND game_id = 5",
+                    rusqlite::params![normalized],
+                    |row| row.get(0),
+                )
+                .optional()?;
+            if let Some(sid) = sid {
+                to_insert.push((weapon_id, sid, pts));
+            }
+        }
+    }
+    drop(stmt);
+    for (wid, sid, pts) in to_insert {
+        conn.execute(
+            "INSERT OR IGNORE INTO weapon_skill_points (weapon_id, skill_id, points) VALUES (?1, ?2, ?3)",
+            rusqlite::params![wid, sid, pts],
+        )?;
+    }
     Ok(())
 }

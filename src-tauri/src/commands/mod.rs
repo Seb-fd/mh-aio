@@ -116,7 +116,25 @@ pub fn get_item_detail(
 pub fn get_skill_detail(
     db: State<'_, Database>,
     id: i32,
-) -> Result<Option<queries::Skill>, String> {
+) -> Result<Option<queries::SkillDetail>, String> {
     let conn = db.conn.lock().map_err(|e| e.to_string())?;
     queries::get_skill_detail(&conn, id).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+pub fn get_decorations(
+    db: State<'_, Database>,
+    game_id: i32,
+) -> Result<Vec<queries::Decoration>, String> {
+    let conn = db.conn.lock().map_err(|e| e.to_string())?;
+    queries::get_decorations_by_game(&conn, game_id).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+pub fn get_decoration_detail(
+    db: State<'_, Database>,
+    id: i32,
+) -> Result<Option<queries::DecorationDetail>, String> {
+    let conn = db.conn.lock().map_err(|e| e.to_string())?;
+    queries::get_decoration_detail(&conn, id).map_err(|e| e.to_string())
 }

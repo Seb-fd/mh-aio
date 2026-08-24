@@ -34,6 +34,8 @@ pub fn run() {
             commands::get_quest_detail,
             commands::get_item_detail,
             commands::get_skill_detail,
+            commands::get_decorations,
+            commands::get_decoration_detail,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

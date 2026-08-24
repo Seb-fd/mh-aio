@@ -261,6 +261,103 @@ export interface Skill {
   language: string;
 }
 
+export interface SkillLevel {
+  id: number;
+  points: number;
+  ability_name: string;
+  description: string | null;
+}
+
+export interface DecoMaterial {
+  item_id: number | null;
+  item_name: string;
+  quantity: number;
+}
+
+export interface SkillDecoration {
+  id: number;
+  name: string;
+  slot_size: number | null;
+  skill_points: number;
+  secondary_skill_name: string | null;
+  secondary_points: number | null;
+  price: number | null;
+  rarity: number | null;
+  materials: DecoMaterial[];
+  unlock: string;
+  acquisition: string;
+}
+
+export interface Decoration {
+  id: number;
+  game_id: number;
+  name: string;
+  skill_id: number | null;
+  skill_name: string | null;
+  skill_points: number | null;
+  secondary_skill_id: number | null;
+  secondary_skill_name: string | null;
+  secondary_points: number | null;
+  slot_size: number | null;
+  rarity: number | null;
+  price: number | null;
+  language: string;
+}
+
+export interface DecorationDetail {
+  id: number;
+  game_id: number;
+  name: string;
+  skill_id: number | null;
+  skill_name: string | null;
+  skill_points: number | null;
+  secondary_skill_id: number | null;
+  secondary_skill_name: string | null;
+  secondary_points: number | null;
+  slot_size: number | null;
+  rarity: number | null;
+  price: number | null;
+  language: string;
+  materials: DecoMaterial[];
+  unlock: string;
+  acquisition: string;
+}
+
+export interface SkillArmorRef {
+  id: number;
+  name: string;
+  slot_type: string;
+  rank: string;
+  rarity: number | null;
+  defense_base: number | null;
+  defense_max: number | null;
+  slots: string | null;
+  points: number;
+}
+
+export interface SkillWeaponRef {
+  id: number;
+  name: string;
+  weapon_type: string;
+  rarity: number | null;
+  attack: number | null;
+  slots: string | null;
+  points: number;
+}
+
+export interface SkillDetail {
+  id: number;
+  game_id: number;
+  name: string;
+  description: string | null;
+  max_level: number | null;
+  language: string;
+  levels: SkillLevel[];
+  decorations: SkillDecoration[];
+  armors: SkillArmorRef[];
+  weapons: SkillWeaponRef[];
+}
+
 export const api = {
   getGames: () => invoke<Game[]>('get_games'),
   getMonsters: (gameId: number) => invoke<Monster[]>('get_monsters', { gameId }),
@@ -269,10 +366,12 @@ export const api = {
   getQuests: (gameId: number) => invoke<Quest[]>('get_quests', { gameId }),
   getItems: (gameId: number) => invoke<Item[]>('get_items', { gameId }),
   getSkills: (gameId: number) => invoke<Skill[]>('get_skills', { gameId }),
+  getDecorations: (gameId: number) => invoke<Decoration[]>('get_decorations', { gameId }),
   getMonsterDetail: (id: number) => invoke<MonsterDetail | null>('get_monster_detail', { id }),
   getWeaponDetail: (id: number) => invoke<WeaponDetail | null>('get_weapon_detail', { id }),
   getArmorDetail: (id: number) => invoke<ArmorDetail | null>('get_armor_detail', { id }),
   getQuestDetail: (id: number) => invoke<QuestDetail | null>('get_quest_detail', { id }),
   getItemDetail: (id: number) => invoke<ItemDetail | null>('get_item_detail', { id }),
-  getSkillDetail: (id: number) => invoke<Skill | null>('get_skill_detail', { id }),
+  getSkillDetail: (id: number) => invoke<SkillDetail | null>('get_skill_detail', { id }),
+  getDecorationDetail: (id: number) => invoke<DecorationDetail | null>('get_decoration_detail', { id }),
 };

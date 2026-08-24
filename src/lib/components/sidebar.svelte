@@ -16,6 +16,7 @@
     { href: '/quests', label: 'Quests', icon: '📜' },
     { href: '/items', label: 'Items', icon: '🎒' },
     { href: '/skills', label: 'Skills', icon: '✨' },
+    { href: '/decorations', label: 'Decorations', icon: '💎' },
     { href: '/builds', label: 'Builds', icon: '🔧' },
   ];
 

@@ -1,0 +1,596 @@
+[
+  {
+    "id": 1,
+    "name": "Alchemy",
+    "description": "Armor skill family \"Alchemy\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 2,
+    "name": "All Resist",
+    "description": "All elemental resistances.",
+    "max_level": 20
+  },
+  {
+    "id": 3,
+    "name": "Anti-Theft",
+    "description": "Armor skill family \"Anti-Theft\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 4,
+    "name": "AntiChamel",
+    "description": "Armor skill family \"AntiChamel\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 5,
+    "name": "AntiDaora",
+    "description": "Armor skill family \"AntiDaora\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 6,
+    "name": "AntiFirDrg",
+    "description": "Armor skill family \"AntiFirDrg\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 7,
+    "name": "Antiseptic",
+    "description": "Armor skill family \"Antiseptic\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 8,
+    "name": "Artisan",
+    "description": "Armor skill family \"Artisan\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 9,
+    "name": "Attack",
+    "description": "Increases or decreases attack power. Higher thresholds give larger multipliers.",
+    "max_level": 20
+  },
+  {
+    "id": 10,
+    "name": "Auto-Guard",
+    "description": "Automatic guarding.",
+    "max_level": 10
+  },
+  {
+    "id": 11,
+    "name": "AutoReload",
+    "description": "Armor skill family \"AutoReload\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 12,
+    "name": "BBQ",
+    "description": "Armor skill family \"BBQ\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 13,
+    "name": "Backpackng",
+    "description": "Armor skill family \"Backpackng\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 14,
+    "name": "BombStrUp",
+    "description": "Armor skill family \"BombStrUp\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 15,
+    "name": "Capacity",
+    "description": "Armor skill family \"Capacity\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 16,
+    "name": "Carving",
+    "description": "Armor skill family \"Carving\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 20
+  },
+  {
+    "id": 17,
+    "name": "ClsRngCAdd",
+    "description": "Armor skill family \"ClsRngCAdd\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 18,
+    "name": "ClustSAdd",
+    "description": "Armor skill family \"ClustSAdd\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 15
+  },
+  {
+    "id": 19,
+    "name": "Cold Res",
+    "description": "Cold resistance.",
+    "max_level": 15
+  },
+  {
+    "id": 20,
+    "name": "ComradeAtk",
+    "description": "Armor skill family \"ComradeAtk\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 21,
+    "name": "ComradeDef",
+    "description": "Armor skill family \"ComradeDef\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 22,
+    "name": "ComrdGuide",
+    "description": "Armor skill family \"ComrdGuide\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 15
+  },
+  {
+    "id": 23,
+    "name": "Constitutn",
+    "description": "Constitution, reduces stamina use on evade/block.",
+    "max_level": 15
+  },
+  {
+    "id": 24,
+    "name": "Cooking",
+    "description": "Armor skill family \"Cooking\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 25,
+    "name": "CragSAdd",
+    "description": "Armor skill family \"CragSAdd\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 15
+  },
+  {
+    "id": 26,
+    "name": "Defense",
+    "description": "Increases or decreases defense.",
+    "max_level": 20
+  },
+  {
+    "id": 27,
+    "name": "Dragon Res",
+    "description": "Dragon resistance.",
+    "max_level": 15
+  },
+  {
+    "id": 28,
+    "name": "Edgemaster",
+    "description": "Armor skill family \"Edgemaster\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 29,
+    "name": "ElementAtk",
+    "description": "Increases elemental damage.",
+    "max_level": 10
+  },
+  {
+    "id": 30,
+    "name": "Evade",
+    "description": "Evasion distance and invulnerability.",
+    "max_level": 15
+  },
+  {
+    "id": 31,
+    "name": "Evade Dist",
+    "description": "Armor skill family \"Evade Dist\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 32,
+    "name": "Everlastng",
+    "description": "Armor skill family \"Everlastng\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 33,
+    "name": "Expert",
+    "description": "Affects affinity (critical rate).",
+    "max_level": 20
+  },
+  {
+    "id": 34,
+    "name": "Faint",
+    "description": "Affects faint duration.",
+    "max_level": 15
+  },
+  {
+    "id": 35,
+    "name": "Fate",
+    "description": "Fate, affects quest rewards.",
+    "max_level": 15
+  },
+  {
+    "id": 36,
+    "name": "Fatigue",
+    "description": "Armor skill family \"Fatigue\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 37,
+    "name": "Fencing",
+    "description": "Armor skill family \"Fencing\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 38,
+    "name": "Fire Res",
+    "description": "Fire resistance increase.",
+    "max_level": 15
+  },
+  {
+    "id": 39,
+    "name": "Fishing",
+    "description": "Armor skill family \"Fishing\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 40,
+    "name": "Fury",
+    "description": "Armor skill family \"Fury\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 41,
+    "name": "Gathering",
+    "description": "Armor skill family \"Gathering\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 15
+  },
+  {
+    "id": 42,
+    "name": "Gluttony",
+    "description": "Armor skill family \"Gluttony\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 15
+  },
+  {
+    "id": 43,
+    "name": "Guard",
+    "description": "Improves guarding ability.",
+    "max_level": 20
+  },
+  {
+    "id": 44,
+    "name": "Guard Up",
+    "description": "Allows blocking normally unblockable attacks.",
+    "max_level": 10
+  },
+  {
+    "id": 45,
+    "name": "Gunnery",
+    "description": "Armor skill family \"Gunnery\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 15
+  },
+  {
+    "id": 46,
+    "name": "Guts",
+    "description": "Prevents fainting when HP above threshold.",
+    "max_level": 10
+  },
+  {
+    "id": 47,
+    "name": "Health",
+    "description": "Increases or decreases maximum health.",
+    "max_level": 20
+  },
+  {
+    "id": 48,
+    "name": "HearProtct",
+    "description": "Provides immunity to monster roars.",
+    "max_level": 15
+  },
+  {
+    "id": 49,
+    "name": "Heat Res",
+    "description": "Heat resistance.",
+    "max_level": 15
+  },
+  {
+    "id": 50,
+    "name": "HiSpdGathr",
+    "description": "Armor skill family \"HiSpdGathr\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 51,
+    "name": "Horn",
+    "description": "Armor skill family \"Horn\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 52,
+    "name": "Hunger",
+    "description": "Affects hunger rate.",
+    "max_level": 15
+  },
+  {
+    "id": 53,
+    "name": "Ice Res",
+    "description": "Ice resistance.",
+    "max_level": 15
+  },
+  {
+    "id": 54,
+    "name": "Map",
+    "description": "Map and Psychic points visibility.",
+    "max_level": 10
+  },
+  {
+    "id": 55,
+    "name": "MixSucRate",
+    "description": "Armor skill family \"MixSucRate\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 20
+  },
+  {
+    "id": 56,
+    "name": "NormalS Up",
+    "description": "Armor skill family \"NormalS Up\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 57,
+    "name": "NormalSAdd",
+    "description": "Armor skill family \"NormalSAdd\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 58,
+    "name": "ParalyCAdd",
+    "description": "Armor skill family \"ParalyCAdd\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 59,
+    "name": "Paralysis",
+    "description": "Paralysis resistance.",
+    "max_level": 15
+  },
+  {
+    "id": 60,
+    "name": "PelletS Up",
+    "description": "Armor skill family \"PelletS Up\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 61,
+    "name": "PelletSAdd",
+    "description": "Armor skill family \"PelletSAdd\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 15
+  },
+  {
+    "id": 62,
+    "name": "Perceive",
+    "description": "Armor skill family \"Perceive\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 63,
+    "name": "PierceS Up",
+    "description": "Armor skill family \"PierceS Up\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 64,
+    "name": "PierceSAdd",
+    "description": "Armor skill family \"PierceSAdd\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 15
+  },
+  {
+    "id": 65,
+    "name": "Poison",
+    "description": "Poison resistance.",
+    "max_level": 15
+  },
+  {
+    "id": 66,
+    "name": "PoisonCAdd",
+    "description": "Armor skill family \"PoisonCAdd\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 67,
+    "name": "Potential",
+    "description": "Adrenaline etc.",
+    "max_level": 15
+  },
+  {
+    "id": 68,
+    "name": "PowerCAdd",
+    "description": "Armor skill family \"PowerCAdd\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 69,
+    "name": "Precision",
+    "description": "Armor skill family \"Precision\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 70,
+    "name": "Protection",
+    "description": "Divine protection.",
+    "max_level": 10
+  },
+  {
+    "id": 71,
+    "name": "PsychicVis",
+    "description": "Armor skill family \"PsychicVis\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 15
+  },
+  {
+    "id": 72,
+    "name": "Quake Res",
+    "description": "Armor skill family \"Quake Res\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 73,
+    "name": "Rec Speed",
+    "description": "Recovery speed after being hit.",
+    "max_level": 20
+  },
+  {
+    "id": 74,
+    "name": "Recoil",
+    "description": "Bowgun recoil reduction.",
+    "max_level": 20
+  },
+  {
+    "id": 75,
+    "name": "Recovery",
+    "description": "Armor skill family \"Recovery\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 76,
+    "name": "Reload",
+    "description": "Reload speed for bowguns.",
+    "max_level": 20
+  },
+  {
+    "id": 77,
+    "name": "ResistSts",
+    "description": "Armor skill family \"ResistSts\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 78,
+    "name": "Sharpness",
+    "description": "Affects sharpness consumption and sharpness level.",
+    "max_level": 10
+  },
+  {
+    "id": 79,
+    "name": "ShortCharg",
+    "description": "Armor skill family \"ShortCharg\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 80,
+    "name": "Shot Mix",
+    "description": "Armor skill family \"Shot Mix\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 81,
+    "name": "Sleep",
+    "description": "Sleep resistance.",
+    "max_level": 15
+  },
+  {
+    "id": 82,
+    "name": "SleepCAdd",
+    "description": "Armor skill family \"SleepCAdd\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 83,
+    "name": "Sneak",
+    "description": "Armor skill family \"Sneak\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 84,
+    "name": "Snow Res",
+    "description": "Armor skill family \"Snow Res\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 85,
+    "name": "Spc Attack",
+    "description": "Armor skill family \"Spc Attack\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 86,
+    "name": "SpeedSetup",
+    "description": "Armor skill family \"SpeedSetup\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 87,
+    "name": "Stamina",
+    "description": "Affects stamina consumption.",
+    "max_level": 10
+  },
+  {
+    "id": 88,
+    "name": "SteadyHand",
+    "description": "Armor skill family \"SteadyHand\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 89,
+    "name": "SwdShrpner",
+    "description": "Armor skill family \"SwdShrpner\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 90,
+    "name": "Sword Draw",
+    "description": "Armor skill family \"Sword Draw\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 91,
+    "name": "Terrain",
+    "description": "Armor skill family \"Terrain\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 15
+  },
+  {
+    "id": 92,
+    "name": "Throw",
+    "description": "Armor skill family \"Throw\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 10
+  },
+  {
+    "id": 93,
+    "name": "ThunderRes",
+    "description": "Thunder resistance.",
+    "max_level": 15
+  },
+  {
+    "id": 94,
+    "name": "Torso Inc",
+    "description": "Torso increment, extra skill points.",
+    "max_level": 10
+  },
+  {
+    "id": 95,
+    "name": "Tranquilzr",
+    "description": "Armor skill family \"Tranquilzr\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 15
+  },
+  {
+    "id": 96,
+    "name": "Water Res",
+    "description": "Water resistance.",
+    "max_level": 15
+  },
+  {
+    "id": 97,
+    "name": "Whim",
+    "description": "Armor skill family \"Whim\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 15
+  },
+  {
+    "id": 98,
+    "name": "Wide Area",
+    "description": "Armor skill family \"Wide Area\". Accumulate points from armor and jewels to activate positive or negative abilities.",
+    "max_level": 20
+  },
+  {
+    "id": 99,
+    "name": "Wind Press",
+    "description": "Provides immunity to wind pressure.",
+    "max_level": 20
+  }
+]

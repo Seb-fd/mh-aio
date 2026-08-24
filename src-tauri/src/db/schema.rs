@@ -191,16 +191,55 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             language TEXT DEFAULT 'en'
         );
 
-        -- Decorations table
+        -- Decorations table (jewels)
         CREATE TABLE IF NOT EXISTS decorations (
             id INTEGER PRIMARY KEY,
             game_id INTEGER REFERENCES games(id),
             name TEXT NOT NULL,
             skill_id INTEGER REFERENCES skills(id),
             skill_level INTEGER,
+            skill_points INTEGER,
+            secondary_skill_id INTEGER REFERENCES skills(id),
+            secondary_points INTEGER,
             slot_size INTEGER,
             rarity INTEGER,
+            price INTEGER,
             language TEXT DEFAULT 'en'
+        );
+
+        -- Skill ability levels (points -> activated ability, includes negative thresholds)
+        CREATE TABLE IF NOT EXISTS skill_levels (
+            id INTEGER PRIMARY KEY,
+            skill_id INTEGER REFERENCES skills(id),
+            points INTEGER NOT NULL,
+            ability_name TEXT NOT NULL,
+            description TEXT,
+            language TEXT DEFAULT 'en'
+        );
+
+        -- Normalized armor <-> skill points (parsed from armor.skills string or structured source)
+        CREATE TABLE IF NOT EXISTS armor_skill_points (
+            armor_id INTEGER REFERENCES armor(id),
+            skill_id INTEGER REFERENCES skills(id),
+            points INTEGER NOT NULL,
+            PRIMARY KEY (armor_id, skill_id)
+        );
+
+        -- Normalized weapon <-> skill points
+        CREATE TABLE IF NOT EXISTS weapon_skill_points (
+            weapon_id INTEGER REFERENCES weapons(id),
+            skill_id INTEGER REFERENCES skills(id),
+            points INTEGER NOT NULL,
+            PRIMARY KEY (weapon_id, skill_id)
+        );
+
+        -- Decoration crafting materials (each jewel -> items)
+        CREATE TABLE IF NOT EXISTS decoration_materials (
+            decoration_id INTEGER REFERENCES decorations(id),
+            item_id INTEGER REFERENCES items(id),
+            item_name TEXT NOT NULL,
+            quantity INTEGER NOT NULL,
+            PRIMARY KEY (decoration_id, item_name)
         );
 
         -- Weapon crafting materials junction table
@@ -259,6 +298,16 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
         CREATE INDEX IF NOT EXISTS idx_monster_drops_monster ON monster_drops(monster_id);
         CREATE INDEX IF NOT EXISTS idx_monster_drops_item ON monster_drops(item_id);
         CREATE INDEX IF NOT EXISTS idx_monster_eq_monster ON monster_equipment(monster_id);
+        CREATE INDEX IF NOT EXISTS idx_skill_levels_skill ON skill_levels(skill_id);
+        CREATE INDEX IF NOT EXISTS idx_skill_levels_points ON skill_levels(points);
+        CREATE INDEX IF NOT EXISTS idx_armor_skill_points_skill ON armor_skill_points(skill_id);
+        CREATE INDEX IF NOT EXISTS idx_armor_skill_points_armor ON armor_skill_points(armor_id);
+        CREATE INDEX IF NOT EXISTS idx_weapon_skill_points_skill ON weapon_skill_points(skill_id);
+        CREATE INDEX IF NOT EXISTS idx_weapon_skill_points_weapon ON weapon_skill_points(weapon_id);
+        CREATE INDEX IF NOT EXISTS idx_decorations_skill ON decorations(skill_id);
+        CREATE INDEX IF NOT EXISTS idx_decorations_game ON decorations(game_id);
+        CREATE INDEX IF NOT EXISTS idx_decoration_mats_deco ON decoration_materials(decoration_id);
+        CREATE INDEX IF NOT EXISTS idx_decoration_mats_item ON decoration_materials(item_id);
     ")?;
 
     apply_migrations(conn)?;
@@ -282,6 +331,13 @@ fn apply_migrations(conn: &Connection) -> Result<()> {
     add_column_if_missing(conn, "quests", "reward_money", "INTEGER")?;
     add_column_if_missing(conn, "quests", "contract_fee", "INTEGER")?;
     add_column_if_missing(conn, "quests", "main_monsters", "TEXT")?;
+    // Decorations extended columns for jewels with two skills
+    add_column_if_missing(conn, "decorations", "skill_points", "INTEGER")?;
+    add_column_if_missing(conn, "decorations", "secondary_skill_id", "INTEGER")?;
+    add_column_if_missing(conn, "decorations", "secondary_points", "INTEGER")?;
+    add_column_if_missing(conn, "decorations", "price", "INTEGER")?;
+    // Backfill skill_level -> skill_points for legacy rows
+    let _ = conn.execute("UPDATE decorations SET skill_points = skill_level WHERE skill_points IS NULL AND skill_level IS NOT NULL", []);
     Ok(())
 }
 

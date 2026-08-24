@@ -280,6 +280,74 @@ pub struct Skill {
     pub language: String,
 }
 
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct SkillLevel {
+    pub id: i32,
+    pub points: i32,
+    pub ability_name: String,
+    pub description: Option<String>,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct DecoMaterial {
+    pub item_id: Option<i32>,
+    pub item_name: String,
+    pub quantity: i32,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct SkillDecoration {
+    pub id: i32,
+    pub name: String,
+    pub slot_size: Option<i32>,
+    pub skill_points: i32,
+    pub secondary_skill_name: Option<String>,
+    pub secondary_points: Option<i32>,
+    pub price: Option<i32>,
+    pub rarity: Option<i32>,
+    pub materials: Vec<DecoMaterial>,
+    pub unlock: String,
+    pub acquisition: String,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct SkillArmorRef {
+    pub id: i32,
+    pub name: String,
+    pub slot_type: String,
+    pub rank: String,
+    pub rarity: Option<i32>,
+    pub defense_base: Option<i32>,
+    pub defense_max: Option<i32>,
+    pub slots: Option<String>,
+    pub points: i32,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct SkillWeaponRef {
+    pub id: i32,
+    pub name: String,
+    pub weapon_type: String,
+    pub rarity: Option<i32>,
+    pub attack: Option<i32>,
+    pub slots: Option<String>,
+    pub points: i32,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct SkillDetail {
+    pub id: i32,
+    pub game_id: i32,
+    pub name: String,
+    pub description: Option<String>,
+    pub max_level: Option<i32>,
+    pub language: String,
+    pub levels: Vec<SkillLevel>,
+    pub decorations: Vec<SkillDecoration>,
+    pub armors: Vec<SkillArmorRef>,
+    pub weapons: Vec<SkillWeaponRef>,
+}
+
 pub fn get_games(conn: &Connection) -> Result<Vec<Game>> {
     let mut stmt = conn.prepare("SELECT id, name, abbreviation, release_year, platform FROM games ORDER BY id")?;
 
@@ -1118,23 +1186,330 @@ pub fn get_skills_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Skill>>
     Ok(skills)
 }
 
-pub fn get_skill_detail(conn: &Connection, id: i32) -> Result<Option<Skill>> {
-    let skill = conn
+pub fn get_skill_detail(conn: &Connection, id: i32) -> Result<Option<SkillDetail>> {
+    let skill: Option<(i32, i32, String, Option<String>, Option<i32>, String)> = conn
         .query_row(
             "SELECT id, game_id, name, description, max_level, language FROM skills WHERE id = ?1",
             params![id],
+            |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?, row.get(4)?, row.get(5)?)),
+        )
+        .optional()?;
+
+    let Some((id, game_id, name, description, max_level, language)) = skill else {
+        return Ok(None);
+    };
+
+    let levels = get_skill_levels(conn, id)?;
+    let decorations = get_skill_decorations(conn, id)?;
+    let armors = get_skill_armors(conn, id)?;
+    let weapons = get_skill_weapons(conn, id)?;
+
+    Ok(Some(SkillDetail {
+        id,
+        game_id,
+        name,
+        description,
+        max_level,
+        language,
+        levels,
+        decorations,
+        armors,
+        weapons,
+    }))
+}
+
+fn get_skill_levels(conn: &Connection, skill_id: i32) -> Result<Vec<SkillLevel>> {
+    let mut stmt = conn.prepare(
+        "SELECT id, points, ability_name, description FROM skill_levels WHERE skill_id = ?1 ORDER BY points DESC",
+    )?;
+    let rows = stmt
+        .query_map(params![skill_id], |row| {
+            Ok(SkillLevel {
+                id: row.get(0)?,
+                points: row.get(1)?,
+                ability_name: row.get(2)?,
+                description: row.get(3)?,
+            })
+        })?
+        .filter_map(|r| r.ok())
+        .collect();
+    Ok(rows)
+}
+
+fn decoration_unlock_and_acquisition(materials: &[DecoMaterial], price: Option<i32>) -> (String, String) {
+    let has_lapis = materials.iter().any(|m| m.item_name == "LapisLazuliJewel");
+    let has_battlefield = materials.iter().any(|m| m.item_name == "BattlefieldJewel");
+    let has_akito = materials.iter().any(|m| m.item_name == "Akito Jewel");
+    let has_suiko = materials.iter().any(|m| m.item_name == "Suiko Jewel");
+    let unlock = if has_lapis {
+        "G Rank - Craft at Village/Hall Smith (G Rank jewel)"
+    } else if has_battlefield {
+        "High Rank (G* / HR 5+) - Craft at Smith, requires Battlefield Jewel"
+    } else if has_akito {
+        "High Rank (HR 4+) - Craft at Smith, requires Akito Jewel"
+    } else if has_suiko {
+        "Low Rank (HR 1+) - Craft at Village Smith from start"
+    } else {
+        "Craft at Equipment Smith"
+    }
+    .to_string();
+    let acquisition = if let Some(p) = price {
+        format!("Crafted at Smith for {}z + materials below", p)
+    } else {
+        "Crafted at Smith with materials below".to_string()
+    };
+    (unlock, acquisition)
+}
+
+fn get_decoration_materials(conn: &Connection, decoration_id: i32) -> Result<Vec<DecoMaterial>> {
+    let mut stmt = conn.prepare(
+        "SELECT item_id, item_name, quantity FROM decoration_materials WHERE decoration_id = ?1 ORDER BY item_name",
+    )?;
+    let rows = stmt
+        .query_map(params![decoration_id], |row| {
+            Ok(DecoMaterial {
+                item_id: row.get(0)?,
+                item_name: row.get(1)?,
+                quantity: row.get(2)?,
+            })
+        })?
+        .filter_map(|r| r.ok())
+        .collect();
+    Ok(rows)
+}
+
+fn get_skill_decorations(conn: &Connection, skill_id: i32) -> Result<Vec<SkillDecoration>> {
+    let mut stmt = conn.prepare(
+        "SELECT d.id, d.name, d.slot_size, d.skill_id, d.skill_points, d.secondary_skill_id, d.secondary_points, d.price, d.rarity,
+                s1.name, s2.name
+         FROM decorations d
+         LEFT JOIN skills s1 ON s1.id = d.skill_id
+         LEFT JOIN skills s2 ON s2.id = d.secondary_skill_id
+         WHERE d.skill_id = ?1 OR d.secondary_skill_id = ?1
+         ORDER BY d.slot_size, d.name",
+    )?;
+    let base_rows: Vec<(i32, String, Option<i32>, Option<i32>, Option<i32>, Option<i32>, Option<i32>, Option<i32>, Option<i32>, Option<String>, Option<String>)> = stmt
+        .query_map(params![skill_id], |row| {
+            Ok((
+                row.get(0)?,
+                row.get(1)?,
+                row.get(2)?,
+                row.get(3)?,
+                row.get(4)?,
+                row.get(5)?,
+                row.get(6)?,
+                row.get(7)?,
+                row.get(8)?,
+                row.get(9)?,
+                row.get(10)?,
+            ))
+        })?
+        .filter_map(|r| r.ok())
+        .collect();
+
+    let mut out = Vec::new();
+    for (id, name, slot_size, prim_id, prim_pts, _sec_id, sec_pts, price, rarity, prim_name, sec_name) in base_rows {
+        let is_primary = prim_id == Some(skill_id);
+        let pts = if is_primary { prim_pts } else { sec_pts }.unwrap_or(0);
+        let (other_name, other_pts) = if is_primary {
+            (sec_name, sec_pts)
+        } else {
+            (prim_name, prim_pts)
+        };
+        let materials = get_decoration_materials(conn, id)?;
+        let (unlock, acquisition) = decoration_unlock_and_acquisition(&materials, price);
+        out.push(SkillDecoration {
+            id,
+            name,
+            slot_size,
+            skill_points: pts,
+            secondary_skill_name: other_name,
+            secondary_points: other_pts,
+            price,
+            rarity,
+            materials,
+            unlock,
+            acquisition,
+        });
+    }
+    Ok(out)
+}
+
+fn get_skill_armors(conn: &Connection, skill_id: i32) -> Result<Vec<SkillArmorRef>> {
+    let mut stmt = conn.prepare(
+        "SELECT a.id, a.name, a.slot_type, a.rank, a.rarity, a.defense_base, a.defense_max, a.slots, asp.points
+         FROM armor_skill_points asp
+         JOIN armor a ON a.id = asp.armor_id
+         WHERE asp.skill_id = ?1
+         ORDER BY a.rank, a.slot_type, a.name
+         LIMIT 200",
+    )?;
+    let rows = stmt
+        .query_map(params![skill_id], |row| {
+            Ok(SkillArmorRef {
+                id: row.get(0)?,
+                name: row.get(1)?,
+                slot_type: row.get(2)?,
+                rank: row.get(3)?,
+                rarity: row.get(4)?,
+                defense_base: row.get(5)?,
+                defense_max: row.get(6)?,
+                slots: row.get(7)?,
+                points: row.get(8)?,
+            })
+        })?
+        .filter_map(|r| r.ok())
+        .collect();
+    Ok(rows)
+}
+
+fn get_skill_weapons(conn: &Connection, skill_id: i32) -> Result<Vec<SkillWeaponRef>> {
+    let mut stmt = conn.prepare(
+        "SELECT w.id, w.name, w.weapon_type, w.rarity, w.attack, w.slots, wsp.points
+         FROM weapon_skill_points wsp
+         JOIN weapons w ON w.id = wsp.weapon_id
+         WHERE wsp.skill_id = ?1
+         ORDER BY w.weapon_type, w.name
+         LIMIT 200",
+    )?;
+    let rows = stmt
+        .query_map(params![skill_id], |row| {
+            Ok(SkillWeaponRef {
+                id: row.get(0)?,
+                name: row.get(1)?,
+                weapon_type: row.get(2)?,
+                rarity: row.get(3)?,
+                attack: row.get(4)?,
+                slots: row.get(5)?,
+                points: row.get(6)?,
+            })
+        })?
+        .filter_map(|r| r.ok())
+        .collect();
+    Ok(rows)
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct Decoration {
+    pub id: i32,
+    pub game_id: i32,
+    pub name: String,
+    pub skill_id: Option<i32>,
+    pub skill_name: Option<String>,
+    pub skill_points: Option<i32>,
+    pub secondary_skill_id: Option<i32>,
+    pub secondary_skill_name: Option<String>,
+    pub secondary_points: Option<i32>,
+    pub slot_size: Option<i32>,
+    pub rarity: Option<i32>,
+    pub price: Option<i32>,
+    pub language: String,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct DecorationDetail {
+    pub id: i32,
+    pub game_id: i32,
+    pub name: String,
+    pub skill_id: Option<i32>,
+    pub skill_name: Option<String>,
+    pub skill_points: Option<i32>,
+    pub secondary_skill_id: Option<i32>,
+    pub secondary_skill_name: Option<String>,
+    pub secondary_points: Option<i32>,
+    pub slot_size: Option<i32>,
+    pub rarity: Option<i32>,
+    pub price: Option<i32>,
+    pub language: String,
+    pub materials: Vec<DecoMaterial>,
+    pub unlock: String,
+    pub acquisition: String,
+}
+
+pub fn get_decorations_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Decoration>> {
+    let mut stmt = conn.prepare(
+        "SELECT d.id, d.game_id, d.name, d.skill_id, s1.name, d.skill_points, d.secondary_skill_id, s2.name, d.secondary_points, d.slot_size, d.rarity, d.price, d.language
+         FROM decorations d
+         LEFT JOIN skills s1 ON s1.id = d.skill_id
+         LEFT JOIN skills s2 ON s2.id = d.secondary_skill_id
+         WHERE d.game_id = ?1
+         ORDER BY d.slot_size, d.name",
+    )?;
+    let rows = stmt
+        .query_map(params![game_id], |row| {
+            Ok(Decoration {
+                id: row.get(0)?,
+                game_id: row.get(1)?,
+                name: row.get(2)?,
+                skill_id: row.get(3)?,
+                skill_name: row.get(4)?,
+                skill_points: row.get(5)?,
+                secondary_skill_id: row.get(6)?,
+                secondary_skill_name: row.get(7)?,
+                secondary_points: row.get(8)?,
+                slot_size: row.get(9)?,
+                rarity: row.get(10)?,
+                price: row.get(11)?,
+                language: row.get(12)?,
+            })
+        })?
+        .filter_map(|r| r.ok())
+        .collect();
+    Ok(rows)
+}
+
+pub fn get_decoration_detail(conn: &Connection, id: i32) -> Result<Option<DecorationDetail>> {
+    let row: Option<(i32, i32, String, Option<i32>, Option<String>, Option<i32>, Option<i32>, Option<String>, Option<i32>, Option<i32>, Option<i32>, Option<i32>, String)> = conn
+        .query_row(
+            "SELECT d.id, d.game_id, d.name, d.skill_id, s1.name, d.skill_points, d.secondary_skill_id, s2.name, d.secondary_points, d.slot_size, d.rarity, d.price, d.language
+             FROM decorations d
+             LEFT JOIN skills s1 ON s1.id = d.skill_id
+             LEFT JOIN skills s2 ON s2.id = d.secondary_skill_id
+             WHERE d.id = ?1",
+            params![id],
             |row| {
-                Ok(Skill {
-                    id: row.get(0)?,
-                    game_id: row.get(1)?,
-                    name: row.get(2)?,
-                    description: row.get(3)?,
-                    max_level: row.get(4)?,
-                    language: row.get(5)?,
-                })
+                Ok((
+                    row.get(0)?,
+                    row.get(1)?,
+                    row.get(2)?,
+                    row.get(3)?,
+                    row.get(4)?,
+                    row.get(5)?,
+                    row.get(6)?,
+                    row.get(7)?,
+                    row.get(8)?,
+                    row.get(9)?,
+                    row.get(10)?,
+                    row.get(11)?,
+                    row.get(12)?,
+                ))
             },
         )
-        .ok();
+        .optional()?;
 
-    Ok(skill)
+    let Some((id, game_id, name, skill_id, skill_name, skill_points, secondary_skill_id, secondary_skill_name, secondary_points, slot_size, rarity, price, language)) = row else {
+        return Ok(None);
+    };
+
+    let materials = get_decoration_materials(conn, id)?;
+    let (unlock, acquisition) = decoration_unlock_and_acquisition(&materials, price);
+
+    Ok(Some(DecorationDetail {
+        id,
+        game_id,
+        name,
+        skill_id,
+        skill_name,
+        skill_points,
+        secondary_skill_id,
+        secondary_skill_name,
+        secondary_points,
+        slot_size,
+        rarity,
+        price,
+        language,
+        materials,
+        unlock,
+        acquisition,
+    }))
 }
