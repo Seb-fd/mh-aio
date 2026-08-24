@@ -6,8 +6,8 @@
 </script>
 
 <header
-  class="h-14 border-b flex items-center px-4 gap-4 shrink-0 backdrop-blur-md"
-  style="background-color: color-mix(in oklab, var(--theme-bg-surface) 85%, transparent); border-color: var(--theme-border);"
+  class="min-h-14 border-b flex items-center px-4 gap-4 shrink-0 backdrop-blur-md sticky top-0 z-30"
+  style="background-color: color-mix(in oklab, var(--theme-bg-surface) 85%, transparent); border-color: var(--theme-border); padding-top: env(safe-area-inset-top);"
 >
   {#if onMenuClick}
     <button

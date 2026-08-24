@@ -48,11 +48,11 @@
   <div class="min-h-screen bg-gray-950 text-gray-100">
     {@render children()}
   </div>
-{:else if game}
+  {:else if game}
   <div
     class="min-h-screen text-gray-100 flex flex-col themed-bg"
     data-ornament={game.theme.ornament}
-    style={themeStyle}
+    style="{themeStyle}; padding-top: env(safe-area-inset-top);"
   >
     <Header onMenuClick={() => { console.log('[layout] menu click', !sidebarOpen); sidebarOpen = !sidebarOpen; }} />
 
