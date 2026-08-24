@@ -52,7 +52,7 @@
   <div
     class="min-h-screen text-gray-100 flex flex-col themed-bg"
     data-ornament={game.theme.ornament}
-    style="{themeStyle}; padding-top: env(safe-area-inset-top);"
+    style={themeStyle}
   >
     <Header onMenuClick={() => { console.log('[layout] menu click', !sidebarOpen); sidebarOpen = !sidebarOpen; }} />
 
