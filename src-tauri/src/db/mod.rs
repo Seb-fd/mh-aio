@@ -20,9 +20,22 @@ impl Database {
 
         conn.execute_batch("PRAGMA journal_mode=WAL;")?;
 
-        schema::create_tables(&conn)?;
-
-        seed::seed(&conn)?;
+        // Wrap seeding in a transaction to make first run fast on Android (avoid per-row autocommit)
+        conn.execute_batch("BEGIN IMMEDIATE;")?;
+        let seed_result: Result<()> = (|| {
+            schema::create_tables(&conn)?;
+            seed::seed(&conn)?;
+            Ok(())
+        })();
+        match seed_result {
+            Ok(_) => {
+                conn.execute_batch("COMMIT;")?;
+            }
+            Err(e) => {
+                let _ = conn.execute_batch("ROLLBACK;");
+                return Err(e);
+            }
+        }
 
         Ok(Self {
             conn: Mutex::new(conn),

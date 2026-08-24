@@ -54,7 +54,7 @@
     data-ornament={game.theme.ornament}
     style={themeStyle}
   >
-    <Header onMenuClick={() => { console.log('[layout] menu click', !sidebarOpen); sidebarOpen = !sidebarOpen; }} />
+    <Header onMenuClick={() => sidebarOpen = !sidebarOpen} />
 
     <div class="flex flex-1 overflow-hidden">
       {#if sidebarOpen}
@@ -67,7 +67,7 @@
       {/if}
 
       <div
-        class="fixed lg:static inset-y-0 left-0 z-50 transform transition-transform duration-200 ease-in-out touch-manipulation
+        class="fixed lg:static inset-y-0 left-0 z-50 transform-gpu will-change-transform transition-transform duration-150 ease-out
           {sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}"
       >
         <Sidebar onclose={() => sidebarOpen = false} />

@@ -12,15 +12,32 @@
   let error = $state<string | null>(null);
   let typeFilter = $state<string>('all');
 
+  async function loadWeapons(id: number, attempt = 0) {
+    try {
+      const data = await api.getWeapons(id);
+      console.log('[weapons] loaded', data.length);
+      weapons = data;
+      error = null;
+    } catch (e) {
+      const msg = String(e);
+      console.error('[weapons] failed', msg);
+      if (msg.includes('state not managed') && attempt < 6) {
+        error = 'Preparing database...';
+        setTimeout(() => loadWeapons(id, attempt + 1), 400 * (attempt + 1));
+        return;
+      }
+      error = msg;
+    } finally {
+      if (error !== 'Preparing database...') loading = false;
+    }
+  }
+
   $effect(() => {
     if (dbId == null) return;
     console.log('[weapons] loading gameId', dbId);
     loading = true;
     error = null;
-    api.getWeapons(dbId)
-      .then((data) => { console.log('[weapons] loaded', data.length); weapons = data; })
-      .catch((e) => { console.error('[weapons] failed', e); error = String(e); })
-      .finally(() => { loading = false; });
+    loadWeapons(dbId);
   });
 
   const weaponTypes = $derived(['all', ...Array.from(new Set(weapons.map(w => w.weapon_type)))]);

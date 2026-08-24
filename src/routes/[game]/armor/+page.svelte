@@ -12,23 +12,32 @@
   let error = $state<string | null>(null);
   let rankFilter = $state<string>('all');
 
+  async function loadArmor(id: number, attempt = 0) {
+    try {
+      const data = await api.getArmor(id);
+      console.log('[armor] loaded', data.length);
+      armors = data;
+      error = null;
+    } catch (e) {
+      const msg = String(e);
+      console.error('[armor] failed', msg);
+      if (msg.includes('state not managed') && attempt < 6) {
+        error = 'Preparing database...';
+        setTimeout(() => loadArmor(id, attempt + 1), 400 * (attempt + 1));
+        return;
+      }
+      error = msg;
+    } finally {
+      if (error !== 'Preparing database...') loading = false;
+    }
+  }
+
   $effect(() => {
     if (dbId == null) return;
     console.log('[armor] loading gameId', dbId);
     loading = true;
     error = null;
-    api.getArmor(dbId)
-      .then((data) => {
-        console.log('[armor] loaded', data.length);
-        armors = data;
-      })
-      .catch((e) => {
-        console.error('[armor] failed', e);
-        error = String(e);
-      })
-      .finally(() => {
-        loading = false;
-      });
+    loadArmor(dbId);
   });
 
   const ranks = $derived(['all', ...Array.from(new Set(armors.map(a => a.rank)))]);

@@ -41,10 +41,10 @@
 
 <aside
   class="w-64 flex flex-col h-full border-r sidebar"
-  style="background-color: var(--theme-bg-surface); border-color: var(--theme-border);"
+  style="background-color: var(--theme-bg-surface); border-color: var(--theme-border); padding-top: calc(env(safe-area-inset-top) + 2px);"
 >
   {#if game}
-    <div class="p-4 border-b" style="border-color: var(--theme-border);">
+    <div class="p-4 pt-2 border-b" style="border-color: var(--theme-border);">
       <button onclick={changeGame} class="text-xs text-gray-500 hover:text-[var(--theme-text-accent)] transition-colors mb-2">
         ← Change Game
       </button>

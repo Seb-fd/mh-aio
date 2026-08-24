@@ -12,23 +12,32 @@
   let loading = $state(true);
   let error = $state<string | null>(null);
 
+  async function loadMonsters(id: number, attempt = 0) {
+    try {
+      const data = await api.getMonsters(id);
+      console.log('[monsters] loaded', data.length);
+      monsters = data;
+      error = null;
+    } catch (e) {
+      const msg = String(e);
+      console.error('[monsters] failed', msg);
+      if (msg.includes('state not managed') && attempt < 6) {
+        error = 'Preparing database...';
+        setTimeout(() => loadMonsters(id, attempt + 1), 400 * (attempt + 1));
+        return;
+      }
+      error = msg;
+    } finally {
+      if (error !== 'Preparing database...') loading = false;
+    }
+  }
+
   $effect(() => {
     if (dbId == null) return;
     console.log('[monsters] loading gameId', dbId);
     loading = true;
     error = null;
-    api.getMonsters(dbId)
-      .then((data) => {
-        console.log('[monsters] loaded', data.length);
-        monsters = data;
-      })
-      .catch((e) => {
-        console.error('[monsters] failed', e);
-        error = String(e);
-      })
-      .finally(() => {
-        loading = false;
-      });
+    loadMonsters(dbId);
   });
 
   function open(id: number) {
