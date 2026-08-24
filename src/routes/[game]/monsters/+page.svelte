@@ -14,13 +14,16 @@
 
   $effect(() => {
     if (dbId == null) return;
+    console.log('[monsters] loading gameId', dbId);
     loading = true;
     error = null;
     api.getMonsters(dbId)
       .then((data) => {
+        console.log('[monsters] loaded', data.length);
         monsters = data;
       })
       .catch((e) => {
+        console.error('[monsters] failed', e);
         error = String(e);
       })
       .finally(() => {

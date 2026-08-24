@@ -14,11 +14,12 @@
 
   $effect(() => {
     if (dbId == null) return;
+    console.log('[weapons] loading gameId', dbId);
     loading = true;
     error = null;
     api.getWeapons(dbId)
-      .then((data) => { weapons = data; })
-      .catch((e) => { error = String(e); })
+      .then((data) => { console.log('[weapons] loaded', data.length); weapons = data; })
+      .catch((e) => { console.error('[weapons] failed', e); error = String(e); })
       .finally(() => { loading = false; });
   });
 

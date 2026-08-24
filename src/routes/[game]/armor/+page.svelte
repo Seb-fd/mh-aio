@@ -14,13 +14,16 @@
 
   $effect(() => {
     if (dbId == null) return;
+    console.log('[armor] loading gameId', dbId);
     loading = true;
     error = null;
     api.getArmor(dbId)
       .then((data) => {
+        console.log('[armor] loaded', data.length);
         armors = data;
       })
       .catch((e) => {
+        console.error('[armor] failed', e);
         error = String(e);
       })
       .finally(() => {
