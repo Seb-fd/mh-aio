@@ -172,12 +172,29 @@ pub struct Quest {
     pub name: String,
     pub r#type: Option<String>,
     pub rank: Option<String>,
+    pub hub: Option<String>,
+    pub stars: Option<i32>,
     pub objective: Option<String>,
     pub location: Option<String>,
     pub time_limit: Option<i32>,
     pub faints_allowed: Option<i32>,
     pub is_key_quest: bool,
+    pub client: Option<String>,
+    pub requirements: Option<String>,
+    pub reward_money: Option<i32>,
+    pub contract_fee: Option<i32>,
+    pub main_monsters: Option<String>,
     pub language: String,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct QuestReward {
+    pub id: i32,
+    pub item_id: i32,
+    pub item_name: String,
+    pub quantity: i32,
+    pub probability: f64,
+    pub condition: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -187,12 +204,20 @@ pub struct QuestDetail {
     pub name: String,
     pub r#type: Option<String>,
     pub rank: Option<String>,
+    pub hub: Option<String>,
+    pub stars: Option<i32>,
     pub objective: Option<String>,
     pub location: Option<String>,
     pub time_limit: Option<i32>,
     pub faints_allowed: Option<i32>,
     pub is_key_quest: bool,
     pub description: Option<String>,
+    pub client: Option<String>,
+    pub requirements: Option<String>,
+    pub reward_money: Option<i32>,
+    pub contract_fee: Option<i32>,
+    pub main_monsters: Option<String>,
+    pub rewards: Vec<QuestReward>,
     pub language: String,
 }
 
@@ -232,6 +257,9 @@ pub struct ItemSource {
     pub quantity_max: Option<i32>,
     pub probability: Option<f64>,
     pub location: Option<String>,
+    pub rank: Option<String>,
+    pub part: Option<String>,
+    pub condition: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
@@ -784,8 +812,10 @@ fn get_armor_materials(conn: &Connection, armor_id: i32) -> Result<Vec<MaterialR
 
 pub fn get_quests_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Quest>> {
     let mut stmt = conn.prepare(
-        "SELECT id, game_id, name, type, rank, objective, location, time_limit, faints_allowed, is_key_quest, language
-         FROM quests WHERE game_id = ?1 ORDER BY rank, id",
+        "SELECT id, game_id, name, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, client, requirements, reward_money, contract_fee, main_monsters, language
+         FROM quests WHERE game_id = ?1 ORDER BY
+            CASE hub WHEN 'elder' THEN 0 WHEN 'nekoto' THEN 1 WHEN 'guild_low' THEN 2 WHEN 'guild_high' THEN 3 WHEN 'guild_g' THEN 4 ELSE 5 END,
+            stars, id",
     )?;
 
     let quests = stmt
@@ -796,18 +826,46 @@ pub fn get_quests_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Quest>>
                 name: row.get(2)?,
                 r#type: row.get(3)?,
                 rank: row.get(4)?,
-                objective: row.get(5)?,
-                location: row.get(6)?,
-                time_limit: row.get(7)?,
-                faints_allowed: row.get(8)?,
-                is_key_quest: row.get(9)?,
-                language: row.get(10)?,
+                hub: row.get(5)?,
+                stars: row.get(6)?,
+                objective: row.get(7)?,
+                location: row.get(8)?,
+                time_limit: row.get(9)?,
+                faints_allowed: row.get(10)?,
+                is_key_quest: row.get(11)?,
+                client: row.get(12)?,
+                requirements: row.get(13)?,
+                reward_money: row.get(14)?,
+                contract_fee: row.get(15)?,
+                main_monsters: row.get(16)?,
+                language: row.get(17)?,
             })
         })?
         .filter_map(|r| r.ok())
         .collect();
 
     Ok(quests)
+}
+
+fn get_quest_rewards(conn: &Connection, quest_id: i32) -> Result<Vec<QuestReward>> {
+    let mut stmt = conn.prepare(
+        "SELECT qr.id, qr.item_id, i.name, qr.quantity, qr.probability, qr.condition
+         FROM quest_rewards qr JOIN items i ON i.id = qr.item_id WHERE qr.quest_id = ?1 ORDER BY qr.probability DESC",
+    )?;
+    let rewards = stmt
+        .query_map(params![quest_id], |row| {
+            Ok(QuestReward {
+                id: row.get(0)?,
+                item_id: row.get(1)?,
+                item_name: row.get(2)?,
+                quantity: row.get(3)?,
+                probability: row.get(4)?,
+                condition: row.get(5)?,
+            })
+        })?
+        .filter_map(|r| r.ok())
+        .collect();
+    Ok(rewards)
 }
 
 pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail>> {
@@ -818,15 +876,22 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
         Option<String>,
         Option<String>,
         Option<String>,
+        Option<i32>,
+        Option<String>,
         Option<String>,
         Option<i32>,
         Option<i32>,
         bool,
         Option<String>,
+        Option<String>,
+        Option<String>,
+        Option<i32>,
+        Option<i32>,
+        Option<String>,
         String,
     )> = conn
         .query_row(
-            "SELECT id, game_id, name, type, rank, objective, location, time_limit, faints_allowed, is_key_quest, description, language
+            "SELECT id, game_id, name, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, description, client, requirements, reward_money, contract_fee, main_monsters, language
              FROM quests WHERE id = ?1",
             params![id],
             |row| {
@@ -843,14 +908,23 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
                     row.get(9)?,
                     row.get(10)?,
                     row.get(11)?,
+                    row.get(12)?,
+                    row.get(13)?,
+                    row.get(14)?,
+                    row.get(15)?,
+                    row.get(16)?,
+                    row.get(17)?,
+                    row.get(18)?,
                 ))
             },
         )
         .optional()?;
 
-    let Some((id, game_id, name, r#type, rank, objective, location, time_limit, faints_allowed, is_key_quest, description, language)) = row else {
+    let Some((id, game_id, name, r#type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, description, client, requirements, reward_money, contract_fee, main_monsters, language)) = row else {
         return Ok(None);
     };
+
+    let rewards = get_quest_rewards(conn, id)?;
 
     Ok(Some(QuestDetail {
         id,
@@ -858,12 +932,20 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
         name,
         r#type,
         rank,
+        hub,
+        stars,
         objective,
         location,
         time_limit,
         faints_allowed,
         is_key_quest,
         description,
+        client,
+        requirements,
+        reward_money,
+        contract_fee,
+        main_monsters,
+        rewards,
         language,
     }))
 }
@@ -936,14 +1018,36 @@ pub fn get_item_detail(conn: &Connection, id: i32) -> Result<Option<ItemDetail>>
 }
 
 fn get_item_sources(conn: &Connection, item_id: i32) -> Result<Vec<ItemSource>> {
+    // Unified sources: monster_drops (carve/capture/break/drop) + quest_rewards + gathering (item_sources)
+    // item_sources rows of type carve/capture/drop/break/quest_reward are filtered out to avoid
+    // duplication with the two authoritative tables above.
     let mut stmt = conn.prepare(
-        "SELECT s.id, s.source_type, s.source_id, s.quantity_min, s.quantity_max, s.probability, s.location,
-                COALESCE(m.name, q.name, 'Unknown')
-         FROM item_sources s
-         LEFT JOIN monsters m ON s.source_type IN ('carve', 'capture', 'drop', 'break') AND m.id = s.source_id
-         LEFT JOIN quests q ON s.source_type = 'quest_reward' AND q.id = s.source_id
-         WHERE s.item_id = ?1
-         ORDER BY s.probability DESC",
+        "SELECT id, source_type, source_id, source_name, quantity_min, quantity_max, probability, location, rank, part, condition FROM (
+            SELECT md.id as id, md.method as source_type, md.monster_id as source_id, m.name as source_name,
+                   md.quantity as quantity_min, md.quantity as quantity_max, md.probability as probability,
+                   NULL as location, md.rank as rank, md.part as part, md.condition as condition
+            FROM monster_drops md
+            JOIN monsters m ON m.id = md.monster_id
+            WHERE md.item_id = ?1
+            UNION ALL
+            SELECT qr.id + 1000000 as id, 'quest_reward' as source_type, qr.quest_id as source_id, q.name as source_name,
+                   qr.quantity as quantity_min, qr.quantity as quantity_max, qr.probability as probability,
+                   q.location as location, q.rank as rank, NULL as part, qr.condition as condition
+            FROM quest_rewards qr
+            JOIN quests q ON q.id = qr.quest_id
+            WHERE qr.item_id = ?1
+            UNION ALL
+            SELECT s.id + 2000000 as id, s.source_type as source_type, s.source_id as source_id,
+                   COALESCE(m2.name, q2.name) as source_name,
+                   s.quantity_min as quantity_min, s.quantity_max as quantity_max, s.probability as probability,
+                   s.location as location, NULL as rank, NULL as part, s.conditions as condition
+            FROM item_sources s
+            LEFT JOIN monsters m2 ON s.source_type IN ('carve', 'capture', 'drop', 'break') AND m2.id = s.source_id
+            LEFT JOIN quests q2 ON s.source_type = 'quest_reward' AND q2.id = s.source_id
+            WHERE s.item_id = ?1 AND s.source_type NOT IN ('carve', 'capture', 'drop', 'break', 'quest_reward')
+        ) ORDER BY
+            CASE rank WHEN 'Low' THEN 0 WHEN 'High' THEN 1 WHEN 'G' THEN 2 ELSE 3 END,
+            probability DESC"
     )?;
 
     let sources = stmt
@@ -957,6 +1061,9 @@ fn get_item_sources(conn: &Connection, item_id: i32) -> Result<Vec<ItemSource>> 
                 quantity_max: row.get(5)?,
                 probability: row.get(6)?,
                 location: row.get(7)?,
+                rank: row.get(8)?,
+                part: row.get(9)?,
+                condition: row.get(10)?,
             })
         })?
         .filter_map(|r| r.ok())

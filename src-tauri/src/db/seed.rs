@@ -21,6 +21,7 @@ pub fn seed(conn: &Connection) -> Result<()> {
     seed_armor(conn)?;
     seed_armor_materials(conn)?;
     seed_quests(conn)?;
+    seed_quest_rewards(conn)?;
     seed_skills(conn)?;
     Ok(())
 }
@@ -627,27 +628,87 @@ fn seed_armor_materials(conn: &Connection) -> Result<()> {
     Ok(())
 }
 
-fn seed_quests(conn: &Connection) -> Result<()> {
-    let quests: &[(i32, &str, &str, &str, &str, i32, i32, bool)] = &[
-        (1, "Gathering Road", "Gathering", "Low", "Mezeporta", 50, 3, false),
-        (2, "The Birth of a Hunter", "Hunting", "Low", "Mezeporta", 50, 3, true),
-        (3, "Rathalos, King of the Sky", "Hunting", "High", "Mezeporta", 50, 2, true),
-        (4, "Tigrex of the Sand Sea", "Hunting", "High", "Mezeporta", 50, 2, true),
-        (5, "Nargacuga, the Shadow", "Hunting", "High", "Mezeporta", 50, 2, true),
-        (6, "Slay Rajang!", "Hunting", "G", "Mezeporta", 50, 1, true),
-        (7, "Kirin, the Lightning", "Hunting", "G", "Mezeporta", 50, 1, true),
-        (8, "Fatalis", "Hunting", "G", "Castle Schrade", 50, 1, true),
-        (9, "White Fatalis", "Hunting", "G", "Castle Schrade", 50, 1, true),
-        (10, "A Gathering in the Forest", "Gathering", "Low", "Forest and Hills", 50, 3, false),
-        (11, "Swimmin' in the Desert", "Gathering", "Low", "Desert", 50, 3, false),
-        (12, "The Piscine Wyvern", "Hunting", "Low", "Desert", 50, 3, true),
-    ];
+#[derive(Deserialize)]
+struct QuestJson {
+    id: i32,
+    name: String,
+    #[serde(rename = "type")]
+    qtype: String,
+    rank: String,
+    hub: Option<String>,
+    stars: Option<i32>,
+    objective: String,
+    location: String,
+    time_limit: Option<i32>,
+    faints_allowed: Option<i32>,
+    is_key_quest: Option<bool>,
+    description: Option<String>,
+    client: Option<String>,
+    requirements: Option<String>,
+    reward_money: Option<i32>,
+    contract_fee: Option<i32>,
+    main_monsters: Option<Vec<String>>,
+}
 
-    for (id, name, qtype, rank, location, time_limit, faints, is_key) in quests {
+fn seed_quests(conn: &Connection) -> Result<()> {
+    let json_data = include_str!("../../data/mh2g_quests.json");
+    let quests: Vec<QuestJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+
+    for q in quests {
+        let main_monsters_json = q
+            .main_monsters
+            .as_ref()
+            .map(|v| serde_json::to_string(v).unwrap_or_else(|_| "[]".to_string()));
         conn.execute(
-            "INSERT OR IGNORE INTO quests (id, game_id, name, type, rank, objective, location, time_limit, faints_allowed, is_key_quest, description, language)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, NULL, 'en')",
-            rusqlite::params![id, MH2G, name, qtype, rank, qtype, location, time_limit, faints, is_key],
+            "INSERT OR IGNORE INTO quests (id, game_id, name, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, description, client, requirements, reward_money, contract_fee, main_monsters, language)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, 'en')",
+            rusqlite::params![
+                q.id,
+                MH2G,
+                q.name,
+                q.qtype,
+                q.rank,
+                q.hub,
+                q.stars,
+                q.objective,
+                q.location,
+                q.time_limit.unwrap_or(50),
+                q.faints_allowed.unwrap_or(3),
+                q.is_key_quest.unwrap_or(false),
+                q.description,
+                q.client,
+                q.requirements,
+                q.reward_money,
+                q.contract_fee,
+                main_monsters_json
+            ],
+        )?;
+    }
+
+    Ok(())
+}
+
+#[derive(Deserialize)]
+struct QuestRewardJson {
+    id: i32,
+    quest_id: i32,
+    item_id: i32,
+    quantity: i32,
+    probability: f64,
+    condition: Option<String>,
+}
+
+fn seed_quest_rewards(conn: &Connection) -> Result<()> {
+    let json_data = include_str!("../../data/mh2g_quest_rewards.json");
+    let rewards: Vec<QuestRewardJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+
+    for r in rewards {
+        conn.execute(
+            "INSERT OR IGNORE INTO quest_rewards (id, quest_id, item_id, quantity, probability, condition)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6)",
+            rusqlite::params![r.id, r.quest_id, r.item_id, r.quantity, r.probability, r.condition],
         )?;
     }
 

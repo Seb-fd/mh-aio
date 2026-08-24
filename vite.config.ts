@@ -8,14 +8,17 @@ export default defineConfig({
   server: {
     port: 1420,
     strictPort: true,
-    host: true,
+    host: process.env.TAURI_DEV_HOST ? '0.0.0.0' : '127.0.0.1',
     hmr: process.env.TAURI_DEV_HOST
       ? {
           protocol: 'ws',
           host: process.env.TAURI_DEV_HOST,
           port: 1421,
         }
-      : undefined,
+      : {
+          host: '127.0.0.1',
+          port: 1421,
+        },
     watch: {
       ignored: ['**/src-tauri/**']
     }

@@ -18,23 +18,25 @@ impl Database {
                 | OpenFlags::SQLITE_OPEN_FULL_MUTEX,
         )?;
 
-        conn.execute_batch("PRAGMA journal_mode=WAL;")?;
-
-        // Wrap seeding in a transaction to make first run fast on Android (avoid per-row autocommit)
-        conn.execute_batch("BEGIN IMMEDIATE;")?;
+        // WAL is fast on desktop but can fail on some Android filesystems; fallback to DELETE
+        let _ = conn.execute_batch("PRAGMA journal_mode=WAL;");
+        // Use a single transaction for seeding (much faster on Android), but don't fail if BEGIN fails
+        let in_txn = conn.execute_batch("BEGIN IMMEDIATE;").is_ok();
         let seed_result: Result<()> = (|| {
             schema::create_tables(&conn)?;
             seed::seed(&conn)?;
             Ok(())
         })();
-        match seed_result {
-            Ok(_) => {
-                conn.execute_batch("COMMIT;")?;
+        match (seed_result, in_txn) {
+            (Ok(_), true) => {
+                let _ = conn.execute_batch("COMMIT;");
             }
-            Err(e) => {
+            (Ok(_), false) => {}
+            (Err(e), true) => {
                 let _ = conn.execute_batch("ROLLBACK;");
                 return Err(e);
             }
+            (Err(e), false) => return Err(e),
         }
 
         Ok(Self {

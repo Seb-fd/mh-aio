@@ -127,6 +127,8 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             name TEXT NOT NULL,
             type TEXT,
             rank TEXT,
+            hub TEXT,
+            stars INTEGER,
             objective TEXT,
             location TEXT,
             time_limit INTEGER,
@@ -135,6 +137,11 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             is_key_quest BOOLEAN DEFAULT FALSE,
             unlocks TEXT,
             description TEXT,
+            client TEXT,
+            requirements TEXT,
+            reward_money INTEGER,
+            contract_fee INTEGER,
+            main_monsters TEXT,
             language TEXT DEFAULT 'en'
         );
 
@@ -268,6 +275,13 @@ fn apply_migrations(conn: &Connection) -> Result<()> {
     add_column_if_missing(conn, "armor", "description", "TEXT")?;
     add_column_if_missing(conn, "armor", "armor_type", "TEXT")?;
     add_column_if_missing(conn, "quests", "description", "TEXT")?;
+    add_column_if_missing(conn, "quests", "hub", "TEXT")?;
+    add_column_if_missing(conn, "quests", "stars", "INTEGER")?;
+    add_column_if_missing(conn, "quests", "client", "TEXT")?;
+    add_column_if_missing(conn, "quests", "requirements", "TEXT")?;
+    add_column_if_missing(conn, "quests", "reward_money", "INTEGER")?;
+    add_column_if_missing(conn, "quests", "contract_fee", "INTEGER")?;
+    add_column_if_missing(conn, "quests", "main_monsters", "TEXT")?;
     Ok(())
 }
 

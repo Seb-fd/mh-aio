@@ -160,12 +160,28 @@ export interface Quest {
   name: string;
   type: string | null;
   rank: string | null;
+  hub: string | null;
+  stars: number | null;
   objective: string | null;
   location: string | null;
   time_limit: number | null;
   faints_allowed: number | null;
   is_key_quest: boolean;
+  client: string | null;
+  requirements: string | null;
+  reward_money: number | null;
+  contract_fee: number | null;
+  main_monsters: string | null;
   language: string;
+}
+
+export interface QuestReward {
+  id: number;
+  item_id: number;
+  item_name: string;
+  quantity: number;
+  probability: number;
+  condition: string | null;
 }
 
 export interface QuestDetail {
@@ -174,12 +190,20 @@ export interface QuestDetail {
   name: string;
   type: string | null;
   rank: string | null;
+  hub: string | null;
+  stars: number | null;
   objective: string | null;
   location: string | null;
   time_limit: number | null;
   faints_allowed: number | null;
   is_key_quest: boolean;
   description: string | null;
+  client: string | null;
+  requirements: string | null;
+  reward_money: number | null;
+  contract_fee: number | null;
+  main_monsters: string | null;
+  rewards: QuestReward[];
   language: string;
 }
 
@@ -203,6 +227,9 @@ export interface ItemSource {
   quantity_max: number | null;
   probability: number | null;
   location: string | null;
+  rank: string | null;
+  part: string | null;
+  condition: string | null;
 }
 
 export interface CombineRecipe {
