@@ -4,25 +4,6 @@
   "windows": ["main"],
   "permissions": [
     "core:default",
-    "shell:default",
-    {
-      "identifier": "core:invoke:allow",
-      "allow": [
-        "greet",
-        "get_games",
-        "get_monsters",
-        "get_weapons",
-        "get_armor",
-        "get_quests",
-        "get_items",
-        "get_skills",
-        "get_monster_detail",
-        "get_weapon_detail",
-        "get_armor_detail",
-        "get_quest_detail",
-        "get_item_detail",
-        "get_skill_detail"
-      ]
-    }
+    "shell:default"
   ]
 }
