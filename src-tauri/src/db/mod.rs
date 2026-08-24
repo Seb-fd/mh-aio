@@ -2,7 +2,7 @@ pub mod schema;
 pub mod queries;
 pub mod seed;
 
-use rusqlite::{Connection, Result};
+use rusqlite::{Connection, OpenFlags, Result};
 use std::sync::Mutex;
 
 pub struct Database {
@@ -11,7 +11,12 @@ pub struct Database {
 
 impl Database {
     pub fn new(path: &str) -> Result<Self> {
-        let conn = Connection::open(path)?;
+        let conn = Connection::open_with_flags(
+            path,
+            OpenFlags::SQLITE_OPEN_READ_WRITE
+                | OpenFlags::SQLITE_OPEN_CREATE
+                | OpenFlags::SQLITE_OPEN_FULLMUTEX,
+        )?;
 
         conn.execute_batch("PRAGMA journal_mode=WAL;")?;
 
