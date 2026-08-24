@@ -59,23 +59,51 @@ cd mh-aio
 npm install
 ```
 
-### Run
+### Running & Building by Platform
 
-```bash
-# Frontend only (Vite dev server on port 1420)
-npm run dev
+#### 🖥️ Desktop (Windows, macOS, Linux)
 
-# Full desktop app (Svelte + Rust via Tauri)
-npx tauri dev
-```
+- **Development mode:**
+  ```bash
+  npx tauri dev
+  ```
+- **Production build (Installers / Binaries):**
+  ```bash
+  npx tauri build
+  ```
 
-### Build
+#### 📱 Mobile (Android & iOS)
 
-```bash
-npx tauri build                           # Production desktop app
-cargo build --manifest-path src-tauri/Cargo.toml   # Backend only
-npx svelte-check                          # Type/Svelte validation
-```
+- **Android:**
+  1. Ensure Android SDK, NDK, and Java JDK are installed, with `ANDROID_HOME` configured.
+  2. Initialize Android (first time only):
+     ```bash
+     npx tauri android init
+     ```
+     *(Note on Windows: Ensure Developer Mode is enabled to allow symbolic links).*
+  3. Run on emulator or connected device:
+     ```bash
+     npx tauri android dev
+     ```
+  4. Build production APK / AAB:
+     ```bash
+     npx tauri android build
+     ```
+
+- **iOS (macOS required):**
+  1. Ensure Xcode and Command Line Tools are installed.
+  2. Initialize iOS (first time only):
+     ```bash
+     npx tauri ios init
+     ```
+  3. Run on simulator or device:
+     ```bash
+     npx tauri ios dev
+     ```
+  4. Build production app:
+     ```bash
+     npx tauri ios build
+     ```
 
 ---
 
