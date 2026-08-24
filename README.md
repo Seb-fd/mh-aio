@@ -31,13 +31,13 @@ A comprehensive, cross-platform desktop encyclopedia and toolkit for Monster Hun
 
 The app supports multiple titles through dynamic game routing (`[game]`):
 
-| Slug | Game | Year | Theme |
-|------|------|------|-------|
-| `mhw` | Monster Hunter: World | 2018 | Tribal / Blue |
-| `mhr` | Monster Hunter Rise | 2021 | Japanese / Orange |
-| `mhwilds` | Monster Hunter Wilds | 2025 | Futuristic / Green |
-| `mhp3rd` | MH Portable 3rd | 2010 | Japanese / Purple |
-| `mh2g` | MH 2ndG (Freedom Unite) | 2008 | Medieval / Red+Gold |
+| Slug | Game | Year |
+|------|------|------|
+| `mhw` | Monster Hunter: World | 2018 |
+| `mhr` | Monster Hunter Rise | 2021 |
+| `mhwilds` | Monster Hunter Wilds | 2025 |
+| `mhp3rd` | MH Portable 3rd | 2010 |
+| `mh2g` | MH 2ndG (Freedom Unite) | 2008 |
 
 Each game section covers: Monsters, Weapons, Armor, Quests, Items, Skills, Builds.
 
@@ -175,4 +175,4 @@ All entities have a `description` column populated by the seed for MHP2G.
 
 ## License
 
-This project is licensed under the MIT License. All Monster Hunter data is property of Capcom.
+This project is **open source** and released under the MIT License. All Monster Hunter data is property of Capcom.
