@@ -139,7 +139,7 @@
 
 ### Immediate (v0.3.0)
 - [ ] Expand curated seed data — cover remaining monsters/weapons/armor
-- [ ] Add monster_weaknesses data for all monsters
+- [x] Add monster_weaknesses data for all monsters
 - [ ] Add quest_rewards data
 - [ ] Per-weapon sharpness data
 - [ ] Weapon upgrade paths / evolution trees

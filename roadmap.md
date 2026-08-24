@@ -309,7 +309,7 @@ CREATE TABLE item_combine (
 
 ### 🚧 Phase 2: Data Expansion — IN PROGRESS
 - [ ] Complete curated data for all MHP2G monsters
-- [ ] Add monster_weaknesses data
+- [x] Add monster_weaknesses data
 - [ ] Add quest_rewards data
 - [ ] Per-weapon sharpness data
 - [ ] Weapon upgrade paths / evolution trees
