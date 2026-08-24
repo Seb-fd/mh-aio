@@ -15,7 +15,7 @@ impl Database {
             path,
             OpenFlags::SQLITE_OPEN_READ_WRITE
                 | OpenFlags::SQLITE_OPEN_CREATE
-                | OpenFlags::SQLITE_OPEN_FULLMUTEX,
+                | OpenFlags::SQLITE_OPEN_FULL_MUTEX,
         )?;
 
         conn.execute_batch("PRAGMA journal_mode=WAL;")?;
