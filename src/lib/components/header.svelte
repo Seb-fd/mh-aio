@@ -7,7 +7,7 @@
 
 <header
   class="border-b flex items-center px-4 gap-4 shrink-0 backdrop-blur-md sticky top-0 z-30"
-  style="background-color: color-mix(in oklab, var(--theme-bg-surface) 85%, transparent); border-color: var(--theme-border); padding-top: env(safe-area-inset-top); min-height: calc(2rem + env(safe-area-inset-top)); padding-bottom: 2px;"
+  style="background-color: color-mix(in oklab, var(--theme-bg-surface) 85%, transparent); border-color: var(--theme-border); margin-top: calc(env(safe-area-inset-top) + 4px); min-height: 2.25rem;"
 >
   {#if onMenuClick}
     <button
