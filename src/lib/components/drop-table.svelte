@@ -37,7 +37,7 @@
 
   function methodDetailLabel(s: ItemSource): string | null {
     if (s.source_type === 'carve' && s.part) {
-      if (s.part.toLowerCase() === 'tail') return 'Tail Cut (carve cola)';
+      if (s.part.toLowerCase() === 'tail') return 'Tail Carve';
       if (s.part.toLowerCase() === 'body') return 'Body Carve';
       return `${s.part} Carve`;
     }
