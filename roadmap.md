@@ -2,7 +2,9 @@
 
 ## Project Vision
 
-A comprehensive, offline-first encyclopedia and toolkit for all Monster Hunter games, covering multiple titles with detailed data on weapons, armor, monsters, quests, skills, items, builds, and suggestions.
+A comprehensive, offline-first encyclopedia and toolkit for all Monster Hunter games, covering multiple titles with detailed data on weapons, armor, monsters, quests, skills, items, builds (incl. an armor set solver ported from Athena's A.S.S.), and suggestions.
+
+Current state: **MH2G / Freedom Unite is fully populated** (2075 armor, 1083 items, 99 skill families, 192 decorations) with detail views, armor set search, and a per-game global search. Other games are wired for routing/theming with data pending.
 
 ---
 
@@ -273,9 +275,11 @@ CREATE TABLE item_combine (
 ## Priority Games
 
 ### Current Focus
-1. **Monster Hunter 2ndG / Freedom Unite** (2008) — MHP2G, MVP done
-   - Curated seed: 28 monsters, 30 weapons, 25 armor, 12 quests, 31 items, 20 skills
+1. **Monster Hunter 2ndG / Freedom Unite** (2008) — MHP2G, **fully populated**
+   - 2075 armor, 1083 items, 99 skill families (214 abilities), 192 decorations, full monster/weapon/quest catalogs
    - Materials, drop sources, combine recipes populated
+   - Data verified against retail UMD (see `docs/fidelity-report.md`)
+   - Armor Set Search (Athena's A.S.S. port) + per-game global search
 
 ### Planned
 2. **Monster Hunter World: Iceborne** (2018/2019)
@@ -296,45 +300,46 @@ CREATE TABLE item_combine (
 - [x] SQLite with migrations and idempotent seed
 - [x] Tailwind CSS v4 with themed-bg utilities
 - [x] Base component structure
-- [x] SQL schema (13 tables)
+- [x] SQL schema (tables + ALTER migrations)
 - [x] Rust models (serde)
 - [x] List + detail queries
-- [x] Curated MHP2G seed data
-- [x] Game selector UI
-- [x] Per-game dashboard
+- [x] Full MHP2G seed data
+- [x] Game selector UI + per-game dashboard
 - [x] Per-game theming with ornaments
 - [x] Detail views for all entity types
 - [x] Back button + cross-navigation
 - [x] Build verification (cargo, vite, svelte-check)
 
-### 🚧 Phase 2: Data Expansion — IN PROGRESS
-- [ ] Complete curated data for all MHP2G monsters
-- [x] Add monster_weaknesses data
-- [ ] Add quest_rewards data
-- [ ] Per-weapon sharpness data
-- [ ] Weapon upgrade paths / evolution trees
-- [ ] Armor set bonuses
+### ✅ Phase 2: Data Expansion (MH2G) — DONE
+- [x] Full MHP2G monster/weapon/armor/quest/item/skill/decor set
+- [x] monster_weaknesses + monster_drops + quest_rewards + item_combine
+- [x] Weapon upgrade paths / evolution trees
+- [x] Armor sets (grouped via `derive_set_name`) + set detail route
+- [x] Data fidelity audit vs retail UMD (`docs/fidelity-report.md`)
+- [x] Gender-locked armor (male/female column)
+- [x] Monster → dedicated armor sets (≥40% material score) + "Uses 1 Material"
 
-### 📋 Phase 3: Build System
-- [ ] Skill picker UI (select desired skills)
-- [ ] Armor pieces filtered by which skills they provide
-- [ ] Optimal set calculator
-- [ ] Save/load builds
-- [ ] Export builds to JSON / share link
+### ✅ Phase 3: Build System — Armor Set Search (DONE)
+- [x] ASS solver port (`src-tauri/src/ass.rs`) — equivalences, jewel solver, Torso Inc, bad-skill fix, 1000 limit, sort
+- [x] Skill picker UI (up to 5 skills) with ability selectors
+- [x] Optimal set calculator (HR/Elder rank gate, gender, weapon slots, piercings)
+- [x] English, guided UX with quick "Try:" examples
+- [ ] Save/load custom builds (future)
+- [ ] Export builds to JSON / share link (future)
 
-### 📋 Phase 4: Multi-Game
+### ✅ Phase 4 (partial): Global Search (DONE)
+- [x] Global per-game search across all entities (accent-insensitive, debounced)
+- [ ] Favorites system (future)
+- [ ] Import panel for JSON/CSV (future)
+- [ ] Offline mode verification (future)
+- [ ] Auto-update mechanism (future)
+
+### 📋 Phase 5: Multi-Game
 - [ ] MHW scraper (mhw-db.com API)
 - [ ] MHR scraper (Kiranico / Game8)
 - [ ] MHWilds scraper
 - [ ] MHP3rd data import (GitHub DB)
 - [ ] Game-specific UI adaptations (Focus Mode, Wirebugs, etc.)
-
-### 📋 Phase 5: Advanced Features
-- [ ] Global search across all entities
-- [ ] Favorites system
-- [ ] Import panel for JSON/CSV
-- [ ] Offline mode verification
-- [ ] Auto-update mechanism
 
 ### 📋 Phase 6: Mobile & Distribution
 - [ ] Mobile build via Tauri v2 (already supported via `cdylib`)
@@ -402,10 +407,10 @@ Ornaments are CSS `repeating-linear-gradient` patterns defined in `src/app.css`,
 | Phase | Weeks | Status |
 |-------|-------|--------|
 | Phase 1: MVP Core | 6-8 | ✅ Done |
-| Phase 2: Data Expansion | 2-3 | 🚧 In progress |
-| Phase 3: Build System | 3-4 | 📋 Planned |
-| Phase 4: Multi-Game | 3-4 | 📋 Planned |
-| Phase 5: Advanced | 2-3 | 📋 Planned |
+| Phase 2: Data Expansion (MH2G) | 2-3 | ✅ Done |
+| Phase 3: Build System (ASS) | 3-4 | ✅ Done |
+| Phase 4: Global Search | 1-2 | ✅ Done |
+| Phase 5: Multi-Game | 3-4 | 📋 Planned |
 | Phase 6: Mobile & Distribution | 4-6 | 📋 Planned |
 | **Total** | **~25 weeks** | |
 
@@ -424,8 +429,12 @@ Ornaments are CSS `repeating-linear-gradient` patterns defined in `src/app.css`,
 - **MHWilds API:** https://wilds.mhdb.io
 - **MHP3rd DB:** https://github.com/Johnx199x/MHP3rd-DataBase
 
+## Credits — Armor Set Search
+
+The **builds / armor set search** engine is a Rust port of **[AthenaADP/MHFU-ASS](https://github.com/AthenaADP/MHFU-ASS)** ("Athena's A.S.S.", MIT). The solver in `src-tauri/src/ass.rs` follows the original C++/CLI algorithm (equivalence grouping, jewel solver, Torso Inc, bad-skill fix, 1000 cap, sort). Data comes from the retail game (not ASS's CSVs); see `docs/fidelity-report.md`.
+
 ---
 
 ## License
 
-Personal/educational project. All Monster Hunter data is property of Capcom.
+Personal/educational project, released under MIT. Armor Set Search port credits Athena AD ([MHFU-ASS](https://github.com/AthenaADP/MHFU-ASS), MIT). All Monster Hunter game data is property of Capcom.

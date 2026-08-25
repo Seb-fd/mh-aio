@@ -2,18 +2,23 @@
 
 A comprehensive, cross-platform desktop encyclopedia and toolkit for Monster Hunter games, built with **Tauri v2**, **Rust**, **Svelte 5**, and **SQLite**.
 
-**Current focus: v0.2.0 MVP — Monster Hunter Freedom Unite (MHP2G)**
+**Current focus: Monster Hunter Freedom Unite (MHP2G / MH2G)** — full dataset with an armor set solver (ported from Athena's A.S.S.), detail views, per-game theming, and a per-game global search.
 
 ---
 
 ## Features
 
 - **Multi-game support** — switch between MHW, MHR, MHWilds, MHP3rd, MH2G
-- **Complete entity browser** — monsters, weapons, armor, quests, items, skills
-- **Detail views** — click any entity to see official descriptions, stats, crafting materials, drop sources with probabilities, and cross-navigation between related entities
-- **Per-game theming** — each game has its own color palette and decorative ornament pattern (e.g. medieval red/gold for MHP2G, futuristic green for MHWilds)
+- **Full MHP2G/MH2G dataset** — 2075 armor pieces, 1083 items, ~99 skill families (214 abilities), 192 decorations, full monster/weapon/quest catalogs — faithful to the retail UMD
+- **Complete entity browser** — monsters, weapons, armor, quests, items, skills, decorations, armor sets
+- **Armor Set Solver (Athena's A.S.S. port)** — pick up to 5 skills and find every armor set that activates them, including recommended jewels, spare slots, resists and defense. Full parity: hunter type (Blademaster/Gunner), gender, HR/Elder rank gate, weapon slots, piercings, Torso Inc, bad-skill handling, 1000-result limit and sort-by.
+- **Armor sets view** — armors grouped into faithful sets (full 5/10-piece sets or singletons like Black Legs), grouped by `derive_set_name` to match the game's smith
+- **Monster → dedicated gear** — per-monster armor sets (≥40% of the set's materials come from that monster), rank-filtered, with a secondary "Uses 1 Material" view; subspecies (Azure/Silver Rathalos) kept separate
+- **Global per-game search** — accent-insensitive, debounced suggestions across monsters, items, skills, weapons, armor/sets, quests and decorations
+- **Gender-locked armor** — male/female-only pieces (e.g. Guardian Helm, Maiden's Hat) honored in both the browser and the solver
+- **Detail views** — official descriptions, stats, crafting materials, drop sources with probabilities, and cross-navigation
+- **Per-game theming** — each game has its own palette + ornament (medieval red/gold for MHP2G, futuristic green for Wilds)
 - **Offline-first** — SQLite bundled, all data lives locally
-- **Cross-navigation** — items link to the monsters/quests that drop them, materials link to item pages
 - **Back button** — always returns to the previous list view
 
 ---
@@ -24,6 +29,19 @@ A comprehensive, cross-platform desktop encyclopedia and toolkit for Monster Hun
 - **Backend:** Rust (Tauri v2 core)
 - **Database:** SQLite (`rusqlite` with bundled feature, WAL mode)
 - **Routing:** SvelteKit (Client-side SPA mode with static adapter and `fallback: 'index.html'`)
+
+---
+
+## Armor Set Search — Credits
+
+The **builds / armor set search** engine is a faithful Rust port of **[AthenaADP/MHFU-ASS](https://github.com/AthenaADP/MHFU-ASS)** ("Athena's A.S.S."), an armor set search tool for Monster Hunter Freedom Unite, released under the **MIT License**.
+
+- Original C++/CLI implementation: [AthenaADP/MHFU-ASS](https://github.com/AthenaADP/MHFU-ASS) (MIT)
+- Ported algorithm — `src-tauri/src/ass.rs` — covers equivalence grouping, the jewel/decoration solver (1/2/3-slot), Torso Inc multiplier, bad-skill auto-fix, the 1000-result cap and sort comparators.
+- Solver inputs mirror the ASS UI: hunter type, gender, HR/Elder (rank gate), weapon slots, piercings, Torso Inc, allow-bad-skills.
+- Note: while the **algorithm** is ported from ASS, the **data** comes from the retail game (verified against your MHP2G UMD + game-extracted DB), not ASS's 2008 CSV snapshot. See `docs/fidelity-report.md`.
+
+Under: **MIT License** — see the upstream repository for the original license.
 
 ---
 
@@ -39,7 +57,7 @@ The app supports multiple titles through dynamic game routing (`[game]`):
 | `mhp3rd` | MH Portable 3rd | 2010 |
 | `mh2g` | MH 2ndG (Freedom Unite) | 2008 |
 
-Each game section covers: Monsters, Weapons, Armor, Quests, Items, Skills, Builds.
+MH2G is the fully populated game; the others are wired for routing/theming with data to come.
 
 ---
 
@@ -120,7 +138,8 @@ mh-aio/
 │   │   │   ├── ui/                   # shadcn-svelte primitives
 │   │   │   ├── game-selector.svelte
 │   │   │   ├── sidebar.svelte        # Themed nav
-│   │   │   ├── header.svelte         # Themed top bar
+│   │   │   ├── header.svelte         # Themed top bar (+ global search)
+│   │   │   ├── global-search.svelte  # Per-game accent-insensitive search
 │   │   │   ├── back-button.svelte    # history.back()
 │   │   │   ├── detail-header.svelte  # Detail page header
 │   │   │   ├── material-list.svelte  # Crafting materials
@@ -133,23 +152,27 @@ mh-aio/
 │       ├── +page.svelte              # Game selector landing
 │       └── [game]/
 │           ├── +page.svelte          # Dashboard
-│           ├── monsters/             # list + [id]
+│           ├── monsters/             # list + [id] (dedicated sets)
 │           ├── weapons/              # list + [id]
-│           ├── armor/                # list + [id]
+│           ├── armor/                # list, sets/[id], [id]
 │           ├── quests/               # list + [id]
 │           ├── items/                # list + [id]
 │           ├── skills/               # list + [id]
-│           └── builds/               # (placeholder)
+│           ├── decorations/          # list + [id]
+│           └── builds/               # Armor Set Search (ASS port)
+├── docs/
+│   └── fidelity-report.md            # Data vs retail UMD audit
 ├── src-tauri/                        # Backend (Rust)
 │   ├── src/
 │   │   ├── main.rs
-│   │   ├── lib.rs                    # 14 Tauri commands registered
+│   │   ├── lib.rs                    # Tauri commands registered
+│   │   ├── ass.rs                    # Armor Set Search solver (ASS port)
 │   │   ├── commands/mod.rs
 │   │   └── db/
 │   │       ├── mod.rs                # Database struct (Mutex<Connection>)
-│   │       ├── schema.rs             # 13 tables + ALTER TABLE migrations
-│   │       ├── queries.rs            # List + detail queries w/ JOINs
-│   │       └── seed.rs               # Idempotent MHP2G seed
+│   │       ├── schema.rs             # Tables + ALTER TABLE migrations
+│   │       ├── queries.rs            # List/detail/search queries w/ JOINs
+│   │       └── seed.rs               # Idempotent MH2G seed
 │   ├── Cargo.toml
 │   └── tauri.conf.json
 ├── AGENTS.md
@@ -160,19 +183,12 @@ mh-aio/
 
 ---
 
-## Database Schema
+## Data Fidelity
 
-13 tables with full referential integrity. Highlights:
-
-- **Core**: `games`, `monsters`, `weapons`, `armor`, `quests`, `items`, `skills`
-- **Junctions**: `weapon_materials`, `armor_materials`, `item_combine`
-- **References**: `monster_weaknesses`, `item_sources`, `quest_rewards`
-- **Sets**: `armor_sets`, `decorations`
-
-All entities have a `description` column populated by the seed for MHP2G.
+MH2G data is generated to match the **retail UMD** (verified against a MHP2G English-patched ISO and a game-extracted DB). `docs/fidelity-report.md` documents the audit: defense/rarity/slots match 100%, and armor skill points were validated (the ported ASS algorithm is used only for solving, never as a data source).
 
 ---
 
 ## License
 
-This project is **open source** and released under the MIT License. All Monster Hunter data is property of Capcom.
+This project is **open source** and released under the MIT License. The **Armor Set Search** engine is a port of [AthenaADP/MHFU-ASS](https://github.com/AthenaADP/MHFU-ASS) (MIT, by Athena AD). All Monster Hunter game data is property of Capcom.
