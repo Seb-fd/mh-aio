@@ -110,6 +110,22 @@ export interface WeaponDetail {
   language: string;
 }
 
+export interface ArmorSet {
+  id: number;
+  game_id: number;
+  name: string;
+  piece_count: number;
+  rank: string | null;
+  rarity: number | null;
+  language: string;
+}
+export interface ArmorSetDetail {
+  id: number;
+  game_id: number;
+  name: string;
+  pieces: Armor[];
+  language: string;
+}
 export interface Armor {
   id: number;
   game_id: number;
@@ -127,6 +143,8 @@ export interface Armor {
   slots: string | null;
   skills: string | null;
   armor_type: string | null;
+  set_id: number | null;
+  gender: string | null;
   language: string;
 }
 
@@ -148,6 +166,7 @@ export interface ArmorDetail {
   skills: string | null;
   set_id: number | null;
   armor_type: string | null;
+  gender: string | null;
   crafting_cost: number | null;
   description: string | null;
   materials: MaterialRef[];
@@ -360,6 +379,14 @@ export interface SkillDetail {
   weapons: SkillWeaponRef[];
 }
 
+export interface SearchResult {
+  kind: string;
+  id: number;
+  name: string;
+  subtitle: string;
+  route: string;
+}
+
 export interface AssSkillReq {
   skill_id: number;
   points_required: number;
@@ -418,11 +445,14 @@ export const api = {
   getMonsters: (gameId: number) => invoke<Monster[]>('get_monsters', { gameId }),
   getWeapons: (gameId: number) => invoke<Weapon[]>('get_weapons', { gameId }),
   getArmor: (gameId: number) => invoke<Armor[]>('get_armor', { gameId }),
+  getArmorSets: (gameId: number) => invoke<ArmorSet[]>('get_armor_sets', { gameId }),
+  getArmorSetDetail: (id: number) => invoke<ArmorSetDetail | null>('get_armor_set_detail', { id }),
   getQuests: (gameId: number) => invoke<Quest[]>('get_quests', { gameId }),
   getItems: (gameId: number) => invoke<Item[]>('get_items', { gameId }),
   getSkills: (gameId: number) => invoke<Skill[]>('get_skills', { gameId }),
   getDecorations: (gameId: number) => invoke<Decoration[]>('get_decorations', { gameId }),
   getMonsterDetail: (id: number) => invoke<MonsterDetail | null>('get_monster_detail', { id }),
+  getMonsterDedicatedSets: (monsterId: number, rank: string | null) => invoke<ArmorSetDetail[]>('get_monster_dedicated_sets', { monsterId, rank }),
   getWeaponDetail: (id: number) => invoke<WeaponDetail | null>('get_weapon_detail', { id }),
   getArmorDetail: (id: number) => invoke<ArmorDetail | null>('get_armor_detail', { id }),
   getQuestDetail: (id: number) => invoke<QuestDetail | null>('get_quest_detail', { id }),
@@ -430,4 +460,5 @@ export const api = {
   getSkillDetail: (id: number) => invoke<SkillDetail | null>('get_skill_detail', { id }),
   getDecorationDetail: (id: number) => invoke<DecorationDetail | null>('get_decoration_detail', { id }),
   searchArmorSets: (query: AssQueryInput) => invoke<AssSolutionView[]>('search_armor_sets', { query }),
+  globalSearch: (gameId: number, query: string) => invoke<SearchResult[]>('global_search', { gameId, query }),
 };

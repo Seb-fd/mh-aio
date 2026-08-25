@@ -78,6 +78,16 @@ pub fn get_monster_detail(
 }
 
 #[tauri::command]
+pub fn get_monster_dedicated_sets(
+    db: State<'_, Database>,
+    monster_id: i32,
+    rank: Option<String>,
+) -> Result<Vec<queries::ArmorSetDetail>, String> {
+    let conn = db.conn.lock().map_err(|e| e.to_string())?;
+    queries::get_monster_dedicated_sets(&conn, monster_id, rank.as_deref()).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
 pub fn get_weapon_detail(
     db: State<'_, Database>,
     id: i32,
@@ -147,4 +157,32 @@ pub fn search_armor_sets(
 ) -> Result<Vec<ass::AssSolutionView>, String> {
     let conn = db.conn.lock().map_err(|e| e.to_string())?;
     ass::search(&conn, query)
+}
+
+#[tauri::command]
+pub fn get_armor_sets(
+    db: State<'_, Database>,
+    game_id: i32,
+) -> Result<Vec<queries::ArmorSet>, String> {
+    let conn = db.conn.lock().map_err(|e| e.to_string())?;
+    queries::get_armor_sets_by_game(&conn, game_id).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+pub fn global_search(
+    db: State<'_, Database>,
+    game_id: i32,
+    query: String,
+) -> Result<Vec<queries::SearchResult>, String> {
+    let conn = db.conn.lock().map_err(|e| e.to_string())?;
+    queries::get_global_search(&conn, game_id, &query).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+pub fn get_armor_set_detail(
+    db: State<'_, Database>,
+    id: i32,
+) -> Result<Option<queries::ArmorSetDetail>, String> {
+    let conn = db.conn.lock().map_err(|e| e.to_string())?;
+    queries::get_armor_set_detail(&conn, id).map_err(|e| e.to_string())
 }

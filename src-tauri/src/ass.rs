@@ -82,6 +82,8 @@ struct Armor {
     ice: i32,
     num_slots: usize,
     armor_type: String, // both/blade/gunner
+    gender: String, // both/male/female
+    rank: String,   // Low/High/G — progression gate derived from HR/elder via get_difficulty
     is_piercing: bool,
     is_torso_inc: bool,
     skill_points: HashMap<i32, i32>, // skill_id -> points
@@ -218,7 +220,7 @@ fn normalize_skill_name(n: &str) -> String {
 
 fn load_armors(conn: &Connection, game_id: i32, skill_name_to_id: &HashMap<String, i32>) -> rusqlite::Result<Vec<Armor>> {
     let mut stmt = conn.prepare(
-        "SELECT id, name, slot_type, rarity, defense_base, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, armor_type, name FROM armor WHERE game_id = ?1",
+        "SELECT id, name, slot_type, rarity, defense_base, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, armor_type, gender, rank FROM armor WHERE game_id = ?1",
     )?;
     let rows = stmt.query_map([game_id], |row| {
         let id: i32 = row.get(0)?;
@@ -234,16 +236,19 @@ fn load_armors(conn: &Connection, game_id: i32, skill_name_to_id: &HashMap<Strin
         let slots: Option<String> = row.get(10)?;
         let skills: Option<String> = row.get(11)?;
         let armor_type: Option<String> = row.get(12)?;
-        // duplicate name for second get, ignore
+        let gender: Option<String> = row.get(13)?;
+        let rank: Option<String> = row.get(14)?;
         Ok((
-            id, name, slot_type, rarity, defence, fire, water, thunder, ice, dragon, slots, skills, armor_type,
+            id, name, slot_type, rarity, defence, fire, water, thunder, ice, dragon, slots, skills, armor_type, gender, rank,
         ))
     })?;
     let mut out = Vec::new();
     for r in rows {
-        let (id, name, slot_type, rarity, defence, fire, water, thunder, ice, dragon, slots, skills, armor_type) = r?;
+        let (id, name, slot_type, rarity, defence, fire, water, thunder, ice, dragon, slots, skills, armor_type, gender, rank) = r?;
         let num_slots = parse_slots(slots);
         let at = armor_type.unwrap_or_else(|| "both".to_string());
+        let gd = gender.unwrap_or_else(|| "both".to_string());
+        let rk = rank.unwrap_or_else(|| "Low".to_string());
         let sp = skill_points_from_str(&skills, skill_name_to_id);
         let is_piercing = name.contains("Piercing");
         let is_torso_inc = sp.contains_key(&torso_skill_id_cached(skill_name_to_id));
@@ -262,6 +267,8 @@ fn load_armors(conn: &Connection, game_id: i32, skill_name_to_id: &HashMap<Strin
             ice: ice.unwrap_or(0),
             num_slots,
             armor_type: at,
+            gender: gd,
+            rank: rk,
             is_piercing,
             is_torso_inc,
             skill_points: sp,
@@ -345,6 +352,21 @@ fn armor_matches_query(armor: &Armor, q: &QueryInternal, danger_skills: &HashSet
     let ht = q.hunter_type.as_str();
     let at = armor.armor_type.as_str();
     if at != "both" && ht != at {
+        return (false, None, false);
+    }
+    // gender
+    let g = q.gender.as_str();
+    let ag = armor.gender.as_str();
+    if ag != "both" && ag != g {
+        return (false, None, false);
+    }
+    // rank gate from HR/elder (GetDifficulty): 1=Low, 2=Low+High, 3=all
+    let rank_ok = match q.difficulty {
+        1 => armor.rank == "Low",
+        2 => armor.rank == "Low" || armor.rank == "High",
+        _ => true,
+    };
+    if !rank_ok {
         return (false, None, false);
     }
     // dummy not present
@@ -551,13 +573,19 @@ fn get_relevant_data(conn: &Connection, input: &AssQueryInput) -> rusqlite::Resu
                 }
             }
         }
-        // If empty due to over-pruning, fallback to include all matching without pruning
+        // If empty due to over-pruning, fallback to include all matching without pruning (still respects rank/gender)
         if q.rel_armor[slot].is_empty() {
-            // relax: include any armor of that slot that passes basic hunter/piercing checks
             for armor in &grouped[slot] {
-                if (!q.include_piercings && armor.is_piercing) { continue; }
-                if (!q.allow_torso_inc && armor.is_torso_inc) { continue; }
+                if !q.include_piercings && armor.is_piercing { continue; }
+                if !q.allow_torso_inc && armor.is_torso_inc { continue; }
                 if armor.armor_type != "both" && armor.armor_type != q.hunter_type { continue; }
+                if armor.gender != "both" && armor.gender != q.gender { continue; }
+                let rank_ok = match q.difficulty {
+                    1 => armor.rank == "Low",
+                    2 => armor.rank == "Low" || armor.rank == "High",
+                    _ => true,
+                };
+                if !rank_ok { continue; }
                 q.rel_armor[slot].push(armor.clone());
             }
         }
@@ -737,7 +765,7 @@ impl EquivalenceSolution {
                 } else {
                     let num2 = (extra+1)/2;
                     self.slots_spare[2] = self.slots_spare[2].saturating_sub(num2);
-                    let remain = used - num2*2;
+                    let remain = used.saturating_sub(num2*2);
                     self.slots_spare[1] = self.slots_spare[1].saturating_sub(remain);
                 }
             } else { self.slots_spare[1] -= used; }
@@ -1089,4 +1117,63 @@ pub fn search(conn: &Connection, input: AssQueryInput) -> Result<Vec<AssSolution
         });
     }
     Ok(views)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::db::{schema, seed};
+
+    fn conn() -> rusqlite::Connection {
+        let c = rusqlite::Connection::open_in_memory().unwrap();
+        schema::create_tables(&c).unwrap();
+        seed::seed(&c).unwrap();
+        c
+    }
+
+    fn attack_id(c: &rusqlite::Connection) -> i32 {
+        c.query_row("SELECT id FROM skills WHERE name='Attack' AND game_id=5", [], |r| r.get(0)).unwrap()
+    }
+
+    fn base_query(c: &rusqlite::Connection, hr: i32, elder: i32) -> AssQueryInput {
+        AssQueryInput {
+            game_id: 5,
+            skills: vec![SkillRequirement { skill_id: attack_id(c), points_required: 20 }],
+            hunter_type: "blade".into(),
+            gender: "male".into(),
+            hr,
+            elder_star: elder,
+            weapon_slots: 3,
+            include_piercings: true,
+            allow_bad: false,
+            allow_torso_inc: true,
+            allow_dummy: false,
+            sort_by: None,
+        }
+    }
+
+    #[test]
+    fn rank_gate_low_excludes_g() {
+        let c = conn();
+        // HR 1 / Elder 1 => difficulty 1 => Low only
+        let res = search(&c, base_query(&c, 1, 1)).unwrap();
+        assert!(!res.is_empty(), "should find low-rank sets");
+        for sol in &res {
+            for a in &sol.armors {
+                // No G-rank (X/Z suffix) pieces should be returned
+                assert!(!a.name.contains(" X") && !a.name.contains(" Z"), "G-rank leaked: {}", a.name);
+            }
+        }
+    }
+
+    #[test]
+    fn rank_gate_high_allows_high() {
+        let c = conn();
+        // HR 5 / Elder 5 => difficulty 2 => Low + High
+        let res = search(&c, base_query(&c, 5, 5)).unwrap();
+        assert!(!res.is_empty());
+        // Should be able to include High rank (S suffix) among pieces
+        let has_high = res.iter().any(|s| s.armors.iter().any(|a| a.name.contains(" S")));
+        assert!(has_high, "high-rank sets expected at difficulty 2");
+    }
 }

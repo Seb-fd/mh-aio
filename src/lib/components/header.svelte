@@ -1,5 +1,6 @@
 <script lang="ts">
   import { selectedGame } from '$lib/stores/game';
+  import GlobalSearch from '$lib/components/global-search.svelte';
 
   let { onMenuClick }: { onMenuClick?: () => void } = $props();
   const game = $derived($selectedGame);
@@ -36,9 +37,13 @@
     </div>
   {/if}
 
-  <div class="flex-1"></div>
+  <div class="flex-1 flex justify-end px-2">
+    {#if game}
+      <GlobalSearch />
+    {/if}
+  </div>
 
   {#if game}
-    <span class="text-xs text-gray-500 hidden md:block">{game.platform}</span>
+    <span class="text-xs text-gray-500 hidden lg:block shrink-0">{game.platform}</span>
   {/if}
 </header>

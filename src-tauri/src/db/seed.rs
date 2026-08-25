@@ -437,8 +437,74 @@ struct ArmorJson {
     slots: Option<String>,
     skills: Option<String>,
     armor_type: Option<String>,
+    gender: Option<String>,
     crafting_cost: Option<i32>,
     description: Option<String>,
+}
+
+fn derive_set_name(armor: &ArmorJson) -> String {
+    // For armors where set == name (singleton artifact), derive correct set by stripping slot word.
+    // This fixes D/S/U/X/Z variants that were incorrectly split per piece (e.g., Kut-Ku Helm D -> Kut-Ku D).
+    if armor.set != armor.name {
+        return armor.set.clone();
+    }
+    // Known slot suffixes (head/chest/arms/waist/legs pieces)
+    const SLOT_WORDS: &[&str] = &[
+        "Helm", "Cap", "Crown", "Mask", "Hat", "Hood", "Head", "Face", "Brain", "Soul", "Horn", "Crest", "Glare", "Snarl", "Piercing",
+        "Mail", "Vest", "Jacket", "Armor", "Hide", "Skin", "Coat", "Plate", "Belt", "Tasset", "Kilt", "Coil", "Obi",
+        "Vambraces", "Guards", "Guards", "Braces", "Gloves", "Mittens",
+        "Greaves", "Leggings", "Boots", "Pants", "Legs", "Feet",
+    ];
+    let parts: Vec<&str> = armor.name.split_whitespace().collect();
+    if parts.is_empty() {
+        return armor.set.clone();
+    }
+    if parts.len() == 1 {
+        // Concatenated names like BlackBeltLeggingsX (no spaces) — strip slot suffix
+        let name = parts[0];
+        for &slot in SLOT_WORDS {
+            for &var in &["X", "Z", "S", "U", "D", "C"] {
+                let suff = format!("{}{}", slot, var);
+                if name.to_ascii_lowercase().ends_with(&suff.to_ascii_lowercase()) {
+                    let base = name[..name.len() - suff.len()].trim();
+                    let derived = if base.is_empty() { slot.to_string() } else { format!("{} {}", base, var) };
+                    return derived;
+                }
+            }
+            if name.to_ascii_lowercase().ends_with(&slot.to_ascii_lowercase()) {
+                let base = name[..name.len() - slot.len()].trim();
+                return if base.is_empty() { slot.to_string() } else { base.to_string() };
+            }
+        }
+        return armor.set.clone();
+    }
+    // Check for variant suffix (single letter D/S/U/X/Z or combined like "S" after Helm)
+    let last = parts.last().unwrap();
+    let has_variant = matches!(*last, "D" | "S" | "U" | "X" | "Z" | "C");
+    let slot_idx = if has_variant && parts.len() >= 2 {
+        parts.len() - 2
+    } else {
+        parts.len() - 1
+    };
+    let slot_word = parts[slot_idx];
+    let is_slot = SLOT_WORDS.iter().any(|&w| w.eq_ignore_ascii_case(slot_word));
+    if !is_slot {
+        return armor.set.clone();
+    }
+    // Build set: all parts except slot word
+    let mut out = Vec::new();
+    for (i, p) in parts.iter().enumerate() {
+        if i == slot_idx {
+            continue;
+        }
+        out.push(*p);
+    }
+    let derived = out.join(" ");
+    if derived.is_empty() {
+        armor.set.clone()
+    } else {
+        derived
+    }
 }
 
 fn seed_armor_sets(conn: &Connection) -> Result<()> {
@@ -446,17 +512,18 @@ fn seed_armor_sets(conn: &Connection) -> Result<()> {
     let armors: Vec<ArmorJson> = serde_json::from_str(json_data)
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
 
-    // Assign set ids in order of first appearance.
+    // Assign set ids in order of first appearance using derived set name (faithful to game, fixes singleton D variants)
     let mut set_id: i32 = 0;
     let mut seen = Vec::<String>::new();
     for a in &armors {
-        if !seen.contains(&a.set) {
-            seen.push(a.set.clone());
+        let set_name = derive_set_name(a);
+        if !seen.contains(&set_name) {
+            seen.push(set_name.clone());
             set_id += 1;
             conn.execute(
                 "INSERT OR IGNORE INTO armor_sets (id, game_id, name, bonus_skill, bonus_required, language)
                  VALUES (?1, ?2, ?3, NULL, NULL, 'en')",
-                rusqlite::params![set_id, MH2G, a.set],
+                rusqlite::params![set_id, MH2G, set_name],
             )?;
         }
     }
@@ -472,24 +539,27 @@ fn seed_armor(conn: &Connection) -> Result<()> {
     let mut set_map: Vec<(String, i32)> = Vec::new();
     let mut set_id: i32 = 0;
     for a in &armors {
-        if !set_map.iter().any(|(s, _)| s == &a.set) {
+        let set_name = derive_set_name(a);
+        if !set_map.iter().any(|(s, _)| s == &set_name) {
             set_id += 1;
-            set_map.push((a.set.clone(), set_id));
+            set_map.push((set_name.clone(), set_id));
         }
     }
     let set_id_of = |set: &str| -> i32 { set_map.iter().find(|(s, _)| s == set).map(|(_, i)| *i).unwrap_or(0) };
+    let set_id_of_armor = |armor: &ArmorJson| -> i32 { set_id_of(&derive_set_name(armor)) };
 
     for a in armors {
+        let gender = a.gender.clone().unwrap_or_else(|| "both".to_string());
         conn.execute(
             "INSERT OR IGNORE INTO armor
                 (id, game_id, name, slot_type, rank, rarity, defense_base, defense_max,
                  resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon,
-                 slots, skills, set_id, armor_type, crafting_cost, description, language)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, 'en')",
+                 slots, skills, set_id, armor_type, gender, crafting_cost, description, language)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, 'en')",
             rusqlite::params![
                 a.id, MH2G, a.name, a.slot_type, a.rank, a.rarity, a.defense_base, a.defense_max,
                 a.resistance_fire, a.resistance_water, a.resistance_thunder, a.resistance_ice, a.resistance_dragon,
-                a.slots, a.skills, set_id_of(&a.set), a.armor_type, a.crafting_cost, a.description
+                a.slots, a.skills, set_id_of_armor(&a), a.armor_type, gender, a.crafting_cost, a.description
             ],
         )?;
     }

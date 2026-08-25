@@ -1,7 +1,7 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
   import { page } from '$app/stores';
-  import { api, type MonsterDetail, type MonsterDrop } from '$lib/api';
+  import { api, type MonsterDetail, type MonsterDrop, type ArmorSetDetail } from '$lib/api';
   import DetailHeader from '$lib/components/detail-header.svelte';
   import { selectedGame } from '$lib/stores/game';
 
@@ -9,6 +9,9 @@
   let monster = $state<MonsterDetail | null>(null);
   let loading = $state(true);
   let error = $state<string | null>(null);
+  let dedicatedSets = $state<ArmorSetDetail[]>([]);
+  let dedicatedLoading = $state(false);
+  let armorViewMode = $state<'dedicated' | 'uses'>('dedicated'); // dedicated default (60% score), uses secondary
 
   $effect(() => {
     if (!id || Number.isNaN(id)) return;
@@ -23,6 +26,22 @@
       })
       .finally(() => {
         loading = false;
+      });
+  });
+
+  // Fetch dedicated armor sets (60% threshold, rank-filtered) whenever monster + rank changes
+  $effect(() => {
+    if (!monster || !id) return;
+    dedicatedLoading = true;
+    api.getMonsterDedicatedSets(id, activeRank)
+      .then((data) => {
+        dedicatedSets = data;
+      })
+      .catch(() => {
+        dedicatedSets = [];
+      })
+      .finally(() => {
+        dedicatedLoading = false;
       });
   });
 
@@ -188,22 +207,58 @@
       </section>
     {/if}
 
-    {#if monster.armor.length > 0 || monster.weapons.length > 0}
+    {#if monster.armor.length > 0 || monster.weapons.length > 0 || dedicatedSets.length > 0}
       <section class="mb-8">
-        <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">Equipment</h2>
-        {#if monster.armor.length > 0}
-          <h3 class="text-sm font-semibold text-gray-200 mb-2">Armor</h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-4">
-            {#each monster.armor as piece (piece.id)}
-              <button
-                onclick={() => goto(`/${$selectedGame?.id ?? ''}/armor/${piece.id}`)}
-                class="text-left px-3 py-2 rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-elevated)] transition-all"
-              >
-                <div class="text-sm text-gray-100 font-medium truncate">{piece.name}</div>
-                <div class="text-[11px] text-gray-500 mt-0.5">{slotLabel[piece.slot_type] ?? piece.slot_type} · {piece.rank} · Def {piece.defense_base ?? 0}</div>
-              </button>
-            {/each}
+        <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">Equipment · Rank filter: {activeRank} (unified with drops)</h2>
+        <!-- Armor: Dedicated (default, 60% score) vs Uses 1 Material (secondary) -->
+        {#if monster.armor.length > 0 || dedicatedSets.length > 0}
+          <div class="flex items-center gap-2 mb-2">
+            <h3 class="text-sm font-semibold text-gray-200">Armor</h3>
+            <div class="flex rounded-full border border-[var(--theme-border)] overflow-hidden ml-2">
+              <button onclick={() => (armorViewMode = 'dedicated')} class="px-3 py-1 text-[11px] font-medium {armorViewMode==='dedicated' ? 'bg-[var(--theme-primary)] text-white' : 'bg-[var(--theme-bg-surface)] text-gray-400'}">Dedicated ({dedicatedSets.length})</button>
+              <button onclick={() => (armorViewMode = 'uses')} class="px-3 py-1 text-[11px] font-medium {armorViewMode==='uses' ? 'bg-[var(--theme-primary)] text-white' : 'bg-[var(--theme-bg-surface)] text-gray-400'}">Uses 1 Material ({monster.armor.length})</button>
+            </div>
           </div>
+          {#if armorViewMode === 'dedicated'}
+            {#if dedicatedLoading}
+              <p class="text-xs text-gray-500 mb-4">Loading dedicated sets (≥60% mats, exact monster, rank {activeRank})…</p>
+            {:else if dedicatedSets.length === 0}
+              <p class="text-xs text-gray-500 mb-4">No dedicated sets for {monster.name} at rank {activeRank} — try another rank or check “Uses 1 Material”.</p>
+            {:else}
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-4">
+                {#each dedicatedSets as set (set.id)}
+                  <div class="rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] p-3">
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-sm font-semibold text-gray-100">{set.name}</span>
+                      <span class="text-[10px] px-2 py-0.5 rounded bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] text-gray-400">{set.pieces[0]?.rank ?? activeRank} · {set.pieces.length} pcs</span>
+                    </div>
+                    <div class="flex flex-wrap gap-1">
+                      {#each set.pieces as piece (piece.id)}
+                        <button
+                          onclick={() => goto(`/${$selectedGame?.id ?? ''}/armor/${piece.id}`)}
+                          class="text-[11px] px-2 py-1 rounded bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] text-gray-300 hover:border-[var(--theme-border-strong)]"
+                        >
+                          {piece.name} <span class="text-gray-500">[{slotLabel[piece.slot_type] ?? piece.slot_type}]</span>
+                        </button>
+                      {/each}
+                    </div>
+                  </div>
+                {/each}
+              </div>
+            {/if}
+          {:else}
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-4">
+              {#each monster.armor as piece (piece.id)}
+                <button
+                  onclick={() => goto(`/${$selectedGame?.id ?? ''}/armor/${piece.id}`)}
+                  class="text-left px-3 py-2 rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-elevated)] transition-all"
+                >
+                  <div class="text-sm text-gray-100 font-medium truncate">{piece.name}</div>
+                  <div class="text-[11px] text-gray-500 mt-0.5">{slotLabel[piece.slot_type] ?? piece.slot_type} · {piece.rank} · Def {piece.defense_base ?? 0}</div>
+                </button>
+              {/each}
+            </div>
+          {/if}
         {/if}
         {#if monster.weapons.length > 0}
           <h3 class="text-sm font-semibold text-gray-200 mb-2">Weapons</h3>

@@ -1,6 +1,76 @@
 use rusqlite::{Connection, OptionalExtension, Result, params};
 use serde::{Deserialize, Serialize};
 
+/// Global search result across all game entities, normalized accent-insensitive.
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct SearchResult {
+    pub kind: String,   // monster | item | skill | weapon | armor | armor_set | quest | decoration
+    pub id: i32,
+    pub name: String,
+    pub subtitle: String,
+    pub route: String,  // relative to game, e.g. /monsters/12
+}
+
+fn strip_accents(s: &str) -> String {
+    let mut out = String::with_capacity(s.len());
+    for c in s.chars() {
+        match c {
+            'à' | 'á' | 'â' | 'ã' | 'ä' | 'å' => out.push('a'),
+            'ç' => out.push('c'),
+            'è' | 'é' | 'ê' | 'ë' => out.push('e'),
+            'ì' | 'í' | 'î' | 'ï' => out.push('i'),
+            'ñ' => out.push('n'),
+            'ò' | 'ó' | 'ô' | 'õ' | 'ö' => out.push('o'),
+            'ù' | 'ú' | 'û' | 'ü' => out.push('u'),
+            'ý' | 'ÿ' => out.push('y'),
+            other => out.push(other),
+        }
+    }
+    out
+}
+
+fn norm_key(s: &str) -> String {
+    strip_accents(s)
+        .to_lowercase()
+        .split_whitespace()
+        .collect::<Vec<_>>()
+        .join(" ")
+}
+
+fn score_match(name_key: &str, tokens: &[&str]) -> i32 {
+    let name = name_key;
+    let full = tokens.join(" ");
+    // exact full match = 100, prefix = 60, any token prefix = 40, contains = 20
+    if name == full {
+        return 100;
+    }
+    if tokens.len() > 1 && (name == full) {
+        return 100;
+    }
+    // prefix of name (all tokens leading)
+    if name.starts_with(&full) {
+        return 60;
+    }
+    let mut best = 0;
+    for t in tokens {
+        if name.starts_with(t) {
+            best = best.max(40);
+        } else if name.contains(t) {
+            best = best.max(20);
+        }
+    }
+    // multi-token: reward if all tokens contained (AND)
+    if tokens.iter().all(|t| name.contains(t)) {
+        best = best.max(30);
+    }
+    best
+}
+
+fn matches_tokens(name_key: &str, tokens: &[&str]) -> bool {
+    // All tokens must be present (AND) to qualify as a suggestion
+    tokens.iter().all(|t| name_key.contains(t))
+}
+
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Game {
     pub id: i32,
@@ -137,6 +207,8 @@ pub struct Armor {
     pub slots: Option<String>,
     pub skills: Option<String>,
     pub armor_type: Option<String>,
+    pub set_id: Option<i32>,
+    pub gender: Option<String>,
     pub language: String,
 }
 
@@ -159,6 +231,7 @@ pub struct ArmorDetail {
     pub skills: Option<String>,
     pub set_id: Option<i32>,
     pub armor_type: Option<String>,
+    pub gender: Option<String>,
     pub crafting_cost: Option<i32>,
     pub description: Option<String>,
     pub materials: Vec<MaterialRef>,
@@ -424,11 +497,69 @@ pub fn get_monster_detail(conn: &Connection, id: i32) -> Result<Option<MonsterDe
     }))
 }
 
+pub fn get_monster_dedicated_sets(conn: &Connection, monster_id: i32, rank: Option<&str>) -> Result<Vec<ArmorSetDetail>> {
+    // Dedicated sets: score >=0.40 monster materials vs total, rank-filtered, sub-species safe via item_id exact match (Lao Shan Auroros 0.54, Borealis 0.45)
+    let mut stmt = conn.prepare(
+        "SELECT s.id, s.game_id, s.name, s.language FROM armor_sets s
+         WHERE s.id IN (
+           SELECT DISTINCT a.set_id FROM armor a
+           JOIN monster_equipment me ON me.equipment_id = a.id
+           WHERE me.monster_id = ?1 AND me.equipment_kind='armor'
+         )",
+    )?;
+    let set_rows: Vec<(i32,i32,String,String)> = stmt.query_map(params![monster_id], |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?)))?.filter_map(|r| r.ok()).collect();
+    drop(stmt);
+    let mut out = Vec::new();
+    for (sid, gid, sname, lang) in set_rows {
+        // Rank filter: check set has at least one piece of requested rank
+        if let Some(r) = rank {
+            let cnt: i64 = conn.query_row("SELECT COUNT(*) FROM armor WHERE set_id=?1 AND rank=?2", params![sid, r], |row| row.get(0)).unwrap_or(0);
+            if cnt==0 { continue; }
+        }
+        let mut mat_stmt = conn.prepare(
+            "SELECT am.quantity, CASE WHEN md.item_id IS NOT NULL THEN 1 ELSE 0 END as is_monster
+             FROM armor a
+             JOIN armor_materials am ON am.armor_id = a.id
+             LEFT JOIN (SELECT DISTINCT item_id FROM monster_drops WHERE monster_id=?1) md ON md.item_id = am.item_id
+             WHERE a.set_id=?2",
+        )?;
+        let mut monster_qty: i64 = 0;
+        let mut total_qty: i64 = 0;
+        let rows = mat_stmt.query_map(params![monster_id, sid], |row| Ok((row.get::<_,i64>(0)?, row.get::<_,i64>(1)?)))?;
+        for r in rows {
+            if let Ok((qty, is_mon)) = r {
+                total_qty += qty;
+                if is_mon!=0 { monster_qty += qty; }
+            }
+        }
+        drop(mat_stmt);
+        if total_qty==0 { continue; }
+        let score = monster_qty as f64 / total_qty as f64;
+        if score < 0.40 { continue; }
+        // Fetch pieces for this set, filtered by rank if needed
+        let pieces_sql = if rank.is_some() {
+            "SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, armor_type, set_id, gender, language FROM armor WHERE set_id=?1 AND rank=?2 ORDER BY CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END, id"
+        } else {
+            "SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, armor_type, set_id, gender, language FROM armor WHERE set_id=?1 ORDER BY CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END, id"
+        };
+        let mut p_stmt = conn.prepare(pieces_sql)?;
+        let pieces: Vec<Armor> = if let Some(r) = rank {
+            p_stmt.query_map(params![sid, r], |row| Ok(Armor{ id: row.get(0)?, game_id: row.get(1)?, name: row.get(2)?, slot_type: row.get(3)?, rank: row.get(4)?, rarity: row.get(5)?, defense_base: row.get(6)?, defense_max: row.get(7)?, resistance_fire: row.get(8)?, resistance_water: row.get(9)?, resistance_thunder: row.get(10)?, resistance_ice: row.get(11)?, resistance_dragon: row.get(12)?, slots: row.get(13)?, skills: row.get(14)?, armor_type: row.get(15)?, set_id: row.get(16)?, gender: row.get(17)?, language: row.get(18)? }))?.filter_map(|r| r.ok()).collect()
+        } else {
+            p_stmt.query_map(params![sid], |row| Ok(Armor{ id: row.get(0)?, game_id: row.get(1)?, name: row.get(2)?, slot_type: row.get(3)?, rank: row.get(4)?, rarity: row.get(5)?, defense_base: row.get(6)?, defense_max: row.get(7)?, resistance_fire: row.get(8)?, resistance_water: row.get(9)?, resistance_thunder: row.get(10)?, resistance_ice: row.get(11)?, resistance_dragon: row.get(12)?, slots: row.get(13)?, skills: row.get(14)?, armor_type: row.get(15)?, set_id: row.get(16)?, gender: row.get(17)?, language: row.get(18)? }))?.filter_map(|r| r.ok()).collect()
+        };
+        if pieces.is_empty() { continue; }
+        out.push(ArmorSetDetail{ id: sid, game_id: gid, name: sname, pieces, language: lang });
+    }
+    out.sort_by_key(|s| s.id);
+    Ok(out)
+}
+
 fn get_monster_related_armor(conn: &Connection, monster_id: i32) -> Result<Vec<Armor>> {
     let mut stmt = conn.prepare(
         "SELECT a.id, a.game_id, a.name, a.slot_type, a.rank, a.rarity, a.defense_base, a.defense_max,
                 a.resistance_fire, a.resistance_water, a.resistance_thunder, a.resistance_ice, a.resistance_dragon,
-                a.slots, a.skills, a.armor_type, a.language
+                a.slots, a.skills, a.armor_type, a.set_id, a.gender, a.language
          FROM armor a
          JOIN monster_equipment me ON a.id = me.equipment_id
          WHERE me.monster_id = ?1 AND me.equipment_kind = 'armor'
@@ -454,7 +585,9 @@ fn get_monster_related_armor(conn: &Connection, monster_id: i32) -> Result<Vec<A
                 slots: row.get(13)?,
                 skills: row.get(14)?,
                 armor_type: row.get(15)?,
-                language: row.get(16)?,
+                set_id: row.get(16)?,
+                gender: row.get(17)?,
+                language: row.get(18)?,
             })
         })?
         .filter_map(|r| r.ok())
@@ -740,7 +873,7 @@ pub fn get_armor_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Armor>> 
     let mut stmt = conn.prepare(
         "SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max,
                 resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon,
-                slots, skills, armor_type, language
+                slots, skills, armor_type, set_id, gender, language
          FROM armor WHERE game_id = ?1 ORDER BY
             CASE rank WHEN 'Low' THEN 0 WHEN 'High' THEN 1 WHEN 'G' THEN 2 ELSE 3 END,
             CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END,
@@ -766,13 +899,112 @@ pub fn get_armor_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Armor>> 
                 slots: row.get(13)?,
                 skills: row.get(14)?,
                 armor_type: row.get(15)?,
-                language: row.get(16)?,
+                set_id: row.get(16)?,
+                gender: row.get(17)?,
+                language: row.get(18)?,
             })
         })?
         .filter_map(|r| r.ok())
         .collect();
 
     Ok(armor)
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct ArmorSet {
+    pub id: i32,
+    pub game_id: i32,
+    pub name: String,
+    pub piece_count: i32,
+    pub rank: Option<String>,
+    pub rarity: Option<i32>,
+    pub language: String,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct ArmorSetDetail {
+    pub id: i32,
+    pub game_id: i32,
+    pub name: String,
+    pub pieces: Vec<Armor>,
+    pub language: String,
+}
+
+pub fn get_armor_sets_by_game(conn: &Connection, game_id: i32) -> Result<Vec<ArmorSet>> {
+    let mut stmt = conn.prepare(
+        "SELECT s.id, s.game_id, s.name, COUNT(a.id) as piece_count,
+                (SELECT rank FROM armor WHERE set_id = s.id LIMIT 1) as rank,
+                (SELECT MAX(rarity) FROM armor WHERE set_id = s.id) as rarity,
+                s.language
+         FROM armor_sets s
+         LEFT JOIN armor a ON a.set_id = s.id
+         WHERE s.game_id = ?1
+         GROUP BY s.id, s.game_id, s.name, s.language
+         ORDER BY s.id",
+    )?;
+    let sets = stmt
+        .query_map(params![game_id], |row| {
+            Ok(ArmorSet {
+                id: row.get(0)?,
+                game_id: row.get(1)?,
+                name: row.get(2)?,
+                piece_count: row.get(3)?,
+                rank: row.get(4)?,
+                rarity: row.get(5)?,
+                language: row.get(6)?,
+            })
+        })?
+        .filter_map(|r| r.ok())
+        .collect();
+    Ok(sets)
+}
+
+pub fn get_armor_set_detail(conn: &Connection, id: i32) -> Result<Option<ArmorSetDetail>> {
+    let row: Option<(i32, i32, String, String)> = conn
+        .query_row(
+            "SELECT id, game_id, name, language FROM armor_sets WHERE id = ?1",
+            params![id],
+            |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?)),
+        )
+        .optional()?;
+    let Some((id, game_id, name, language)) = row else {
+        return Ok(None);
+    };
+    let mut stmt = conn.prepare(
+        "SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max,
+                resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon,
+                slots, skills, armor_type, set_id, gender, language
+         FROM armor WHERE set_id = ?1 ORDER BY
+            CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END,
+            id",
+    )?;
+    let pieces = stmt
+        .query_map(params![id], |row| {
+            Ok(Armor {
+                id: row.get(0)?,
+                game_id: row.get(1)?,
+                name: row.get(2)?,
+                slot_type: row.get(3)?,
+                rank: row.get(4)?,
+                rarity: row.get(5)?,
+                defense_base: row.get(6)?,
+                defense_max: row.get(7)?,
+                resistance_fire: row.get(8)?,
+                resistance_water: row.get(9)?,
+                resistance_thunder: row.get(10)?,
+                resistance_ice: row.get(11)?,
+                resistance_dragon: row.get(12)?,
+                slots: row.get(13)?,
+                skills: row.get(14)?,
+                armor_type: row.get(15)?,
+                set_id: row.get(16)?,
+                gender: row.get(17)?,
+                language: row.get(18)?,
+            })
+        })?
+        .filter_map(|r| r.ok())
+        .collect();
+    Ok(Some(ArmorSetDetail { id, game_id, name, pieces, language }))
 }
 
     pub fn get_armor_detail(conn: &Connection, id: i32) -> Result<Option<ArmorDetail>> {
@@ -793,6 +1025,7 @@ pub fn get_armor_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Armor>> 
         Option<String>,
         Option<String>,
         Option<String>,
+        Option<String>,
         Option<i32>,
         Option<i32>,
         Option<String>,
@@ -801,7 +1034,7 @@ pub fn get_armor_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Armor>> 
         .query_row(
             "SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max,
                     resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon,
-                    slots, skills, armor_type, set_id, crafting_cost, description, language
+                    slots, skills, armor_type, gender, set_id, crafting_cost, description, language
              FROM armor WHERE id = ?1",
             params![id],
             |row| {
@@ -826,12 +1059,13 @@ pub fn get_armor_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Armor>> 
                     row.get(17)?,
                     row.get(18)?,
                     row.get(19)?,
+                    row.get(20)?,
                 ))
             },
         )
         .optional()?;
 
-    let Some((id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, fire, water, thunder, ice, dragon, slots, skills, armor_type, set_id, crafting_cost, description, language)) = row else {
+    let Some((id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, fire, water, thunder, ice, dragon, slots, skills, armor_type, gender, set_id, crafting_cost, description, language)) = row else {
         return Ok(None);
     };
 
@@ -855,6 +1089,7 @@ pub fn get_armor_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Armor>> 
         skills,
         set_id,
         armor_type,
+        gender,
         crafting_cost,
         description,
         materials,
@@ -1524,4 +1759,165 @@ pub fn get_decoration_detail(conn: &Connection, id: i32) -> Result<Option<Decora
         unlock,
         acquisition,
     }))
+}
+
+/// Global accent-insensitive search across all MH2G entities, grouped by kind.
+pub fn get_global_search(conn: &Connection, game_id: i32, query: &str) -> Result<Vec<SearchResult>> {
+    let q = norm_key(query);
+    let tokens: Vec<&str> = q.split(' ').filter(|t| !t.is_empty()).collect();
+    if tokens.is_empty() {
+        return Ok(Vec::new());
+    }
+    let per_kind = 6;
+    let mut out: Vec<SearchResult> = Vec::new();
+
+    // Monsters
+    {
+        let mut stmt = conn.prepare(
+            "SELECT id, name, species FROM monsters WHERE game_id = ?1 ORDER BY id",
+        )?;
+        let rows = stmt.query_map(params![game_id], |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?, r.get::<_, Option<String>>(2)?)))?;
+        let mut local: Vec<(i32, String, String, i32)> = Vec::new();
+        for r in rows {
+            let (id, name, species) = r?;
+            let key = norm_key(&name);
+            if matches_tokens(&key, &tokens) {
+                local.push((score_match(&key, &tokens), name.clone(), species.unwrap_or_default(), id));
+            }
+        }
+        local.sort_by(|a, b| b.0.cmp(&a.0));
+        for (_sc, name, species, id) in local.into_iter().take(per_kind) {
+            out.push(SearchResult { kind: "monster".into(), id, name, subtitle: species, route: format!("/monsters/{}", id) });
+        }
+    }
+
+    // Items
+    {
+        let mut stmt = conn.prepare(
+            "SELECT id, name, category FROM items WHERE game_id = ?1 AND id != 1 ORDER BY id",
+        )?;
+        let rows = stmt.query_map(params![game_id], |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?, r.get::<_, Option<String>>(2)?)))?;
+        let mut local: Vec<(i32, String, String, i32)> = Vec::new();
+        for r in rows {
+            let (id, name, cat) = r?;
+            let key = norm_key(&name);
+            if matches_tokens(&key, &tokens) {
+                local.push((score_match(&key, &tokens), name.clone(), cat.unwrap_or_default(), id));
+            }
+        }
+        local.sort_by(|a, b| b.0.cmp(&a.0));
+        for (_sc, name, cat, id) in local.into_iter().take(per_kind) {
+            out.push(SearchResult { kind: "item".into(), id, name, subtitle: cat, route: format!("/items/{}", id) });
+        }
+    }
+
+    // Skills
+    {
+        let mut stmt = conn.prepare("SELECT id, name FROM skills WHERE game_id = ?1 ORDER BY id")?;
+        let rows = stmt.query_map(params![game_id], |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?)))?;
+        let mut local: Vec<(i32, String, i32)> = Vec::new();
+        for r in rows {
+            let (id, name) = r?;
+            let key = norm_key(&name);
+            if matches_tokens(&key, &tokens) {
+                local.push((score_match(&key, &tokens), name.clone(), id));
+            }
+        }
+        local.sort_by(|a, b| b.0.cmp(&a.0));
+        for (_sc, name, id) in local.into_iter().take(per_kind) {
+            out.push(SearchResult { kind: "skill".into(), id, name, subtitle: "Skill".into(), route: format!("/skills/{}", id) });
+        }
+    }
+
+    // Weapons
+    {
+        let mut stmt = conn.prepare("SELECT id, name, weapon_type FROM weapons WHERE game_id = ?1 ORDER BY id")?;
+        let rows = stmt.query_map(params![game_id], |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?, r.get::<_, String>(2)?)))?;
+        let mut local: Vec<(i32, String, String, i32)> = Vec::new();
+        for r in rows {
+            let (id, name, wtype) = r?;
+            let key = norm_key(&name);
+            if matches_tokens(&key, &tokens) {
+                local.push((score_match(&key, &tokens), name.clone(), wtype, id));
+            }
+        }
+        local.sort_by(|a, b| b.0.cmp(&a.0));
+        for (_sc, name, wtype, id) in local.into_iter().take(per_kind) {
+            out.push(SearchResult { kind: "weapon".into(), id, name, subtitle: wtype, route: format!("/weapons/{}", id) });
+        }
+    }
+
+    // Armor (pieces)
+    {
+        let mut stmt = conn.prepare("SELECT id, name, slot_type, rank FROM armor WHERE game_id = ?1 ORDER BY id")?;
+        let rows = stmt.query_map(params![game_id], |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?, r.get::<_, String>(2)?, r.get::<_, String>(3)?)))?;
+        let mut local: Vec<(i32, String, String, i32)> = Vec::new();
+        for r in rows {
+            let (id, name, slot, rank) = r?;
+            let key = norm_key(&name);
+            if matches_tokens(&key, &tokens) {
+                local.push((score_match(&key, &tokens), name.clone(), format!("{} · {}", slot, rank), id));
+            }
+        }
+        local.sort_by(|a, b| b.0.cmp(&a.0));
+        for (_sc, name, sub, id) in local.into_iter().take(per_kind) {
+            out.push(SearchResult { kind: "armor".into(), id, name, subtitle: sub, route: format!("/armor/{}", id) });
+        }
+    }
+
+    // Armor sets
+    {
+        let mut stmt = conn.prepare("SELECT id, name FROM armor_sets WHERE game_id = ?1 ORDER BY id")?;
+        let rows = stmt.query_map(params![game_id], |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?)))?;
+        let mut local: Vec<(i32, String, i32)> = Vec::new();
+        for r in rows {
+            let (id, name) = r?;
+            let key = norm_key(&name);
+            if matches_tokens(&key, &tokens) {
+                local.push((score_match(&key, &tokens), name.clone(), id));
+            }
+        }
+        local.sort_by(|a, b| b.0.cmp(&a.0));
+        for (_sc, name, id) in local.into_iter().take(per_kind) {
+            out.push(SearchResult { kind: "armor_set".into(), id, name, subtitle: "Armor Set".into(), route: format!("/armor/sets/{}", id) });
+        }
+    }
+
+    // Quests
+    {
+        let mut stmt = conn.prepare("SELECT id, name, rank FROM quests WHERE game_id = ?1 ORDER BY id")?;
+        let rows = stmt.query_map(params![game_id], |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?, r.get::<_, Option<String>>(2)?)))?;
+        let mut local: Vec<(i32, String, String, i32)> = Vec::new();
+        for r in rows {
+            let (id, name, rank) = r?;
+            let key = norm_key(&name);
+            if matches_tokens(&key, &tokens) {
+                local.push((score_match(&key, &tokens), name.clone(), rank.unwrap_or_default(), id));
+            }
+        }
+        local.sort_by(|a, b| b.0.cmp(&a.0));
+        for (_sc, name, rank, id) in local.into_iter().take(per_kind) {
+            out.push(SearchResult { kind: "quest".into(), id, name, subtitle: rank, route: format!("/quests/{}", id) });
+        }
+    }
+
+    // Decorations
+    {
+        let mut stmt = conn.prepare("SELECT id, name, slot_size FROM decorations WHERE game_id = ?1 ORDER BY id")?;
+        let rows = stmt.query_map(params![game_id], |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?, r.get::<_, Option<i32>>(2)?)))?;
+        let mut local: Vec<(i32, String, i32, std::option::Option<i32>)> = Vec::new();
+        for r in rows {
+            let (id, name, slot) = r?;
+            let key = norm_key(&name);
+            if matches_tokens(&key, &tokens) {
+                local.push((score_match(&key, &tokens), name.clone(), id, slot));
+            }
+        }
+        local.sort_by(|a, b| b.0.cmp(&a.0));
+        for (_sc, name, id, slot) in local.into_iter().take(per_kind) {
+            out.push(SearchResult { kind: "decoration".into(), id, name, subtitle: slot.map(|s| format!("{} slot", s)).unwrap_or_default(), route: format!("/decorations/{}", id) });
+        }
+    }
+
+    Ok(out)
 }

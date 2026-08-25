@@ -53,6 +53,7 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             skills TEXT,
             set_id INTEGER,
             armor_type TEXT,
+            gender TEXT DEFAULT 'both',
             crafting_cost INTEGER,
             materials TEXT,
             description TEXT,
@@ -340,6 +341,7 @@ fn apply_migrations(conn: &Connection) -> Result<()> {
     // Backfill skill_level -> skill_points for legacy rows
     let _ = conn.execute("UPDATE decorations SET skill_points = skill_level WHERE skill_points IS NULL AND skill_level IS NOT NULL", []);
     add_column_if_missing(conn, "items", "buy_price", "INTEGER")?;
+    add_column_if_missing(conn, "armor", "gender", "TEXT")?;
     Ok(())
 }
 
