@@ -4,7 +4,7 @@
 
 A comprehensive, offline-first encyclopedia and toolkit for all Monster Hunter games, covering multiple titles with detailed data on weapons, armor, monsters, quests, skills, items, builds (incl. an armor set solver ported from Athena's A.S.S.), and suggestions.
 
-Current state: **MH2G / Freedom Unite is fully populated** (2075 armor, 1083 items, 99 skill families, 192 decorations) with detail views, armor set search, and a per-game global search. Other games are wired for routing/theming with data pending.
+Current state: **MH2G / Freedom Unite is fully populated and verified** (2075 armor, 1083 items, 83 monsters, 1500 weapons, 99 skill families, 192 decorations) with detail views, game-faithful ordering (monsters Hunter's Notes order, weapons Smith order), filtered browsers (Large/Small, Blademaster/Gunner), armor set search, and per-game global search. Other games are wired for routing/theming with data pending.
 
 ---
 
@@ -275,11 +275,11 @@ CREATE TABLE item_combine (
 ## Priority Games
 
 ### Current Focus
-1. **Monster Hunter 2ndG / Freedom Unite** (2008) — MHP2G, **fully populated**
-   - 2075 armor, 1083 items, 99 skill families (214 abilities), 192 decorations, full monster/weapon/quest catalogs
-   - Materials, drop sources, combine recipes populated
+1. **Monster Hunter 2ndG / Freedom Unite** (2008) — MHP2G, **fully populated and verified**
+   - 2075 armor, 1083 items, 83 monsters (54 Large + 25 Small + 4 Giant), 1500 weapons (11 types), 99 skill families (214 abilities), 192 decorations
+   - Materials, drop sources, combine recipes populated; ordering faithful to UMD (Hunter's Notes, Smith trees)
    - Data verified against retail UMD (see `docs/fidelity-report.md`)
-   - Armor Set Search (Athena's A.S.S. port) + per-game global search
+   - Armor Set Search (Athena's A.S.S. port) + per-game global search + ordered, filtered browsers
 
 ### Planned
 2. **Monster Hunter World: Iceborne** (2018/2019)

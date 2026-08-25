@@ -1,6 +1,6 @@
 # MH-AIO - Project Status
 
-## Current Version: v0.2.0+ (Monster Hunter Freedom Unite / MHP2G — full dataset + Armor Set Search)
+## Current Version: v0.3.0 (Monster Hunter Freedom Unite / MHP2G — verified dataset + ordered browsers)
 
 ---
 
@@ -17,9 +17,9 @@
 - [x] `game-selector.svelte`, `sidebar.svelte`, `header.svelte` (themed, CSS vars)
 
 ### Frontend (Svelte 5) — List + Detail Views
-- [x] `monsters/` — list + `[id]` (weaknesses, drops, dedicated armor sets)
-- [x] `weapons/` — list + `[id]` (tree, stats, materials)
-- [x] `armor/` — list (`Sets`/`Pieces` toggle + gender + rank filters), `sets/[id]`, `[id]`
+- [x] `monsters/` — list + `[id]` (weaknesses, drops, dedicated armor sets) — 83 monsters in game order (Felyne 1 … White Fatalis 83), Large/Small/All selector (Large default, order-preserving)
+- [x] `weapons/` — list + `[id]` (tree, stats, materials) — 1500 weapons in Smith order `Great Sword → Bow` (11 types)
+- [x] `armor/` — list (`Sets`/`Pieces` toggle + Both/Male/Female + Blademaster/Gunner + rank filters), `sets/[id]`, `[id]`
 - [x] `quests/` — list + `[id]`
 - [x] `items/` — list (game-order chest sort + name/rarity/price/category) + `[id]`
 - [x] `skills/` — list + `[id]` (levels, decorations, related armor/weapons)
@@ -41,17 +41,20 @@
 - [x] Monster detail: `Dedicated` (default) + `Uses 1 Material` (secondary) tabs; unified rank filter for drops and sets
 - [x] Subspecies kept separate via exact `item_id` match
 
-### Armor Sets / Gender — NEW
+### Armor Sets / Gender / Hunter Type — NEW
 - [x] `derive_set_name` groups D/S/U/X/Z variants into full sets (Kut-Ku Helm D → Kut-Ku D)
 - [x] `/armor/sets/[id]` detail route (pieces + rank + skills)
 - [x] Gender-locked armor: `gender` column, extracted from source CSVs; honors `Guardian Helm` (male), `Maiden's Hat` (female)
-- [x] Gender filter in armor browser + gender applied in ASS solver
+- [x] Gender filter simplified to `Both | Male | Female` (Both = show all, Male/Female include Both) — removed redundant All
+- [x] Hunter type filter `All | Blademaster | Gunner` — for `both` heads distinguishes by higher defense (Helm vs Cap), other slots by `armor_type`
 
-### Data Fidelity (MHP2G) — NEW
-- [x] 2075 armor pieces, 1083 items, 99 skill families (214 abilities), 192 decorations
+### Data Fidelity (MHP2G) — Updated
+- [x] 2075 armor pieces, 1083 items, 83 monsters (54 Large + 25 Small + 4 Giant), 1500 weapons (11 types), 99 skill families (214 abilities), 192 decorations
+- [x] Monster order faithful to UMD Hunter's Notes (Felyne 1 … White Fatalis 83, `ORDER BY id`); Large/Small selector preserves order
+- [x] Weapon order faithful to Smith tree (`Great Sword → Bow`, `ORDER BY CASE weapon_type`, `src-tauri/src/db/queries.rs:698`)
 - [x] Fixed 138 item sell prices vs game-extracted DB (Thawing Agent 100→10 etc.)
 - [x] Wings reclassified Ammo → Material; header artifact removed
-- [x] `docs/fidelity-report.md` — defense/rarity/slots 100% match vs retail UMD + game-extracted DB
+- [x] `docs/fidelity-report.md` — single merged report: defense/rarity/slots 100%, weapons per-type 100%, monster catalog now 83 vs retail UMD + game-extracted DB
 
 ### Backend (Rust / Tauri)
 - [x] `ass.rs`, `commands/mod.rs`, `db/{mod,schema,queries,seed}.rs`

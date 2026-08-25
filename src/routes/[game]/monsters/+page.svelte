@@ -45,6 +45,18 @@
     goto(`/${game.id}/monsters/${id}`);
   }
 
+  let sizeFilter = $state<'large' | 'all' | 'small'>('large');
+
+  const filteredMonsters = $derived(
+    monsters.filter((m) => {
+      const sz = (m.size ?? '').toLowerCase();
+      if (sizeFilter === 'all') return true;
+      if (sizeFilter === 'small') return sz === 'small';
+      // large includes Large + Giant (both considered large)
+      return sz === 'large' || sz === 'giant';
+    })
+  );
+
   function speciesColor(species: string | null): string {
     if (!species) return 'text-gray-400';
     if (species === 'Elder Dragon') return 'text-yellow-400';
@@ -54,20 +66,36 @@
     if (species === 'Leviathan') return 'text-blue-400';
     if (species === 'Carapaceon') return 'text-cyan-400';
     if (species === 'Amphibian') return 'text-emerald-400';
+    if (species === 'Herbivore') return 'text-green-400';
+    if (species === 'Lynian') return 'text-pink-400';
+    if (species === 'Neopteron') return 'text-lime-400';
+    if (species === 'Piscine Wyvern') return 'text-blue-300';
+    if (species === 'Pelagus') return 'text-amber-300';
     return 'text-gray-400';
   }
 </script>
 
 <div class="max-w-6xl mx-auto">
   <div class="mb-6">
-    <h1 class="text-2xl font-bold text-gray-100">Monsters</h1>
-    <p class="text-sm text-gray-500 mt-1">
-      {#if game}
-        {game.shortName} · {monsters.length} monster{monsters.length === 1 ? '' : 's'} registered
-      {:else}
-        Select a game first
+    <div class="flex items-start justify-between gap-4">
+      <div>
+        <h1 class="text-2xl font-bold text-gray-100">Monsters</h1>
+        <p class="text-sm text-gray-500 mt-1">
+          {#if game}
+            {game.shortName} · {filteredMonsters.length} / {monsters.length} monster{monsters.length === 1 ? '' : 's'} · order: ISO mixed (filtered preserves order)
+          {:else}
+            Select a game first
+          {/if}
+        </p>
+      </div>
+      {#if monsters.length > 0}
+        <div class="flex rounded-full border border-[var(--theme-border)] overflow-hidden shrink-0">
+          <button onclick={() => (sizeFilter = 'large')} class="px-3 py-1.5 text-xs font-medium {sizeFilter === 'large' ? 'bg-[var(--theme-primary)] text-white' : 'bg-[var(--theme-bg-surface)] text-gray-400 hover:text-gray-200'}">Large</button>
+          <button onclick={() => (sizeFilter = 'all')} class="px-3 py-1.5 text-xs font-medium {sizeFilter === 'all' ? 'bg-[var(--theme-primary)] text-white' : 'bg-[var(--theme-bg-surface)] text-gray-400 hover:text-gray-200'}">All</button>
+          <button onclick={() => (sizeFilter = 'small')} class="px-3 py-1.5 text-xs font-medium {sizeFilter === 'small' ? 'bg-[var(--theme-primary)] text-white' : 'bg-[var(--theme-bg-surface)] text-gray-400 hover:text-gray-200'}">Small</button>
+        </div>
       {/if}
-    </p>
+    </div>
   </div>
 
   {#if loading}
@@ -83,9 +111,13 @@
     <div class="border rounded-lg p-8 text-center themed-card">
       <p class="text-gray-400">No monsters found for {game?.shortName ?? 'this game'}</p>
     </div>
+  {:else if filteredMonsters.length === 0}
+    <div class="border rounded-lg p-8 text-center themed-card">
+      <p class="text-gray-400">No monsters for filter "{sizeFilter}"</p>
+    </div>
   {:else}
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-      {#each monsters as monster}
+      {#each filteredMonsters as monster}
         <button onclick={() => open(monster.id)} class="text-left">
           <Card class="p-4 border transition-all cursor-pointer hover:scale-[1.02] themed-card">
             <div class="flex items-start justify-between gap-2">

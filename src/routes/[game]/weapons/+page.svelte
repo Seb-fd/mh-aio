@@ -41,13 +41,20 @@
     loadWeapons(dbId);
   });
 
-  const weaponTypes = $derived(['all', ...Array.from(new Set(weapons.map(w => w.weapon_type)))]);
+  const GAME_WEAPON_ORDER = ['Great Sword','Long Sword','Sword & Shield','Dual Blades','Hammer','Hunting Horn','Lance','Gunlance','Light Bowgun','Heavy Bowgun','Bow'];
+  function weaponOrder(t: string): number {
+    const i = GAME_WEAPON_ORDER.indexOf(t);
+    if (i !== -1) return i;
+    if (t === 'Sword and Shield') return 2;
+    return 99;
+  }
+  const weaponTypes = $derived(['all', ...Array.from(new Set(weapons.map(w => w.weapon_type))).sort((a,b)=> weaponOrder(a)-weaponOrder(b))]);
   const filtered = $derived.by(() => {
     let arr = typeFilter === 'all' ? weapons : weapons.filter(w => w.weapon_type === typeFilter);
     if (sortBy === 'name') arr = [...arr].sort((a,b)=> a.name.localeCompare(b.name));
     else if (sortBy === 'rarity') arr = [...arr].sort((a,b)=> (b.rarity??0)-(a.rarity??0));
     else if (sortBy === 'attack') arr = [...arr].sort((a,b)=> (b.attack??0)-(a.attack??0));
-    // smith is default already ORDER BY weapon_type, id from queries.rs:564
+    // smith is default already ORDER BY game weapon order, id from queries.rs:699
     return arr;
   });
 
@@ -83,7 +90,9 @@
       arr.push(w);
       byType.set(w.weapon_type, arr);
     }
-    return [...byType.entries()].map(([type, ws]) => ({ type, forests: buildForest(ws) }));
+    return [...byType.entries()]
+      .sort((a,b)=> weaponOrder(a[0]) - weaponOrder(b[0]))
+      .map(([type, ws]) => ({ type, forests: buildForest(ws) }));
   });
 
   const allCount = $derived(tree.reduce((n, t) => n + countForests(t.forests), 0));

@@ -12,7 +12,8 @@
   let loading = $state(true);
   let error = $state<string | null>(null);
   let rankFilter = $state<string>('all');
-  let genderFilter = $state<string>('all'); // all | both | male | female
+  let genderFilter = $state<string>('both'); // both (show all) | male | female
+  let typeFilter = $state<string>('all'); // all | blade | gunner
   let sortBy = $state<string>('smith'); // smith = armorer list (rank -> slot -> id) faithful to ISO 37652906 string table
   let viewMode = $state<'sets' | 'pieces'>('sets');
 
@@ -45,13 +46,62 @@
   const ranks = $derived(['all', ...Array.from(new Set(armors.map(a => a.rank)))]);
 
   function matchesGender(a: Armor): boolean {
-    if (genderFilter === 'all') return true;
-    if (genderFilter === 'both') return (a.gender ?? 'both') === 'both';
-    return (a.gender ?? 'both') === genderFilter; // male/female: match gender-locked OR both
+    if (genderFilter === 'both') return true; // Both = show all (All+Both redundant)
+    // male/female: include Both + specific gender
+    const g = a.gender ?? 'both';
+    return g === 'both' || g === genderFilter;
+  }
+
+  // For armor_type both on head: higher defense = blademaster (Helm), lower = gunner (Cap)
+  // Precompute blademaster heads (higher defense per set+rank+head)
+  const blademasterHeadIds = $derived.by(() => {
+    const heads = armors.filter(a => a.slot_type === 'head' && (a.armor_type ?? 'both') === 'both');
+    const byKey = new Map<string, Armor[]>();
+    for (const h of heads) {
+      const key = `${h.set_id ?? h.name.split(' ').slice(0, -1).join(' ')}|${h.rank}`;
+      const arr = byKey.get(key) ?? [];
+      arr.push(h);
+      byKey.set(key, arr);
+    }
+    const ids = new Set<number>();
+    for (const [, arr] of byKey) {
+      if (arr.length === 1) {
+        // single head usable by both -> shown in both filters, treat as blademaster for helper but not filtered
+        continue;
+      }
+      if (arr.length >= 2) {
+        const sorted = [...arr].sort((a,b)=> (b.defense_base??0)-(a.defense_base??0));
+        // higher defense is blademaster
+        ids.add(sorted[0].id);
+      }
+    }
+    return ids;
+  });
+
+  function isBlademasterHead(a: Armor): boolean {
+    return blademasterHeadIds.has(a.id);
+  }
+
+  function matchesType(a: Armor): boolean {
+    if (typeFilter === 'all') return true;
+    const t = (a.armor_type ?? 'both').toLowerCase();
+    if (t === 'blade') return typeFilter === 'blade';
+    if (t === 'gunner') return typeFilter === 'gunner';
+    // both
+    if (a.slot_type !== 'head') {
+      // both for non-head is usable by both -> show in both filters
+      return true;
+    }
+    // head with both: distinguish by defense
+    const isBladeHead = isBlademasterHead(a);
+    // single head variant (only one per set/rank) -> show in both
+    const headsSameKey = armors.filter(x => x.slot_type === 'head' && (x.armor_type ?? 'both') === 'both' && `${x.set_id ?? x.name.split(' ').slice(0, -1).join(' ')}|${x.rank}` === `${a.set_id ?? a.name.split(' ').slice(0, -1).join(' ')}|${a.rank}`);
+    if (headsSameKey.length === 1) return true;
+    return typeFilter === 'blade' ? isBladeHead : !isBladeHead;
   }
 
   const filtered = $derived.by(() => {
-    let arr = armors.filter(a => (rankFilter === 'all' || a.rank === rankFilter) && matchesGender(a));
+    let arr = armors.filter(a => (rankFilter === 'all' || a.rank === rankFilter) && matchesGender(a) && matchesType(a));
     if (sortBy === 'name') arr = [...arr].sort((a,b)=> a.name.localeCompare(b.name));
     else if (sortBy === 'rarity') arr = [...arr].sort((a,b)=> (b.rarity??0)-(a.rarity??0));
     else if (sortBy === 'defense') arr = [...arr].sort((a,b)=> (b.defense_base??0)-(a.defense_base??0));
@@ -60,8 +110,8 @@
   });
 
   const filteredSets = $derived.by(() => {
-    // A set is included if it has at least one piece matching rank + gender
-    const setIds = new Set(armors.filter(a => (rankFilter === 'all' || a.rank === rankFilter) && matchesGender(a)).map(a => a.set_id).filter((x): x is number => x != null));
+    // A set is included if it has at least one piece matching rank + gender + type
+    const setIds = new Set(armors.filter(a => (rankFilter === 'all' || a.rank === rankFilter) && matchesGender(a) && matchesType(a)).map(a => a.set_id).filter((x): x is number => x != null));
     let arr = armorSets.filter(s => setIds.has(s.id));
     if (sortBy === 'name') arr = [...arr].sort((a,b)=> a.name.localeCompare(b.name));
     else if (sortBy === 'rarity') arr = [...arr].sort((a,b)=> (b.rarity??0)-(a.rarity??0));
@@ -151,11 +201,20 @@
         <option value="slots">Slots ↓</option>
       </select>
       <span class="flex rounded-full border border-[var(--theme-border)] overflow-hidden text-xs">
-        {#each ['all','both','male','female'] as g}
+        {#each ['both','male','female'] as g}
           <button
             onclick={() => (genderFilter = g)}
             class="px-3 py-1.5 transition-colors {genderFilter === g ? 'bg-[var(--theme-primary)] text-white' : 'bg-[var(--theme-bg-surface)] text-gray-400'}">
-            {g === 'all' ? 'All' : g === 'both' ? 'Both' : g === 'male' ? 'Male' : 'Female'}
+            {g === 'both' ? 'Both' : g === 'male' ? 'Male' : 'Female'}
+          </button>
+        {/each}
+      </span>
+      <span class="flex rounded-full border border-[var(--theme-border)] overflow-hidden text-xs">
+        {#each ['all','blade','gunner'] as t}
+          <button
+            onclick={() => (typeFilter = t)}
+            class="px-3 py-1.5 transition-colors {typeFilter === t ? 'bg-[var(--theme-primary)] text-white' : 'bg-[var(--theme-bg-surface)] text-gray-400'}">
+            {t === 'all' ? 'All' : t === 'blade' ? 'Blademaster' : 'Gunner'}
           </button>
         {/each}
       </span>
@@ -175,7 +234,7 @@
     {#if viewMode === 'sets'}
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
         {#each filteredSets as set}
-          {@const pieces = armors.filter(a => a.set_id === set.id && matchesGender(a)).slice(0, 6)}
+          {@const pieces = armors.filter(a => a.set_id === set.id && matchesGender(a) && matchesType(a)).slice(0, 6)}
           <button onclick={() => openSet(set.id)} class="text-left">
             <Card class="p-4 border themed-card hover:border-[var(--theme-border-strong)] transition-colors">
               <div class="flex items-start justify-between gap-2 mb-2">

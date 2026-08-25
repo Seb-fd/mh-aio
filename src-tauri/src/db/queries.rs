@@ -604,7 +604,22 @@ fn get_monster_related_weapons(conn: &Connection, monster_id: i32) -> Result<Vec
          FROM weapons w
          JOIN monster_equipment me ON w.id = me.equipment_id
          WHERE me.monster_id = ?1 AND me.equipment_kind = 'weapon'
-         ORDER BY w.weapon_type, w.rarity, w.name",
+         ORDER BY
+            CASE w.weapon_type
+                WHEN 'Great Sword' THEN 0
+                WHEN 'Long Sword' THEN 1
+                WHEN 'Sword & Shield' THEN 2
+                WHEN 'Sword and Shield' THEN 2
+                WHEN 'Dual Blades' THEN 3
+                WHEN 'Hammer' THEN 4
+                WHEN 'Hunting Horn' THEN 5
+                WHEN 'Lance' THEN 6
+                WHEN 'Gunlance' THEN 7
+                WHEN 'Light Bowgun' THEN 8
+                WHEN 'Heavy Bowgun' THEN 9
+                WHEN 'Bow' THEN 10
+                ELSE 11
+            END, w.rarity, w.name",
     )?;
 
     let weapons = stmt
@@ -695,12 +710,27 @@ fn get_monster_weaknesses(conn: &Connection, monster_id: i32) -> Result<Vec<Mons
 }
 
 pub fn get_weapons_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Weapon>> {
-    // Smith order: faithful to armorer tree (weapon_type -> creation/upgrade order = id) verified via ISO tree via upgrade_path
+    // Smith order: game weapon-trees order (Great Sword → Bow) verified via ISO tree via upgrade_path
     let mut stmt = conn.prepare(
         "SELECT id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value,
                 sharpness, slots, status_type, status_value, defense_bonus, crafting_cost, upgrade_path,
                 EXISTS(SELECT 1 FROM weapon_craft wc WHERE wc.weapon_id = weapons.id AND wc.craft_kind = 'forge'), language
-         FROM weapons WHERE game_id = ?1 ORDER BY weapon_type, id",
+         FROM weapons WHERE game_id = ?1 ORDER BY
+            CASE weapon_type
+                WHEN 'Great Sword' THEN 0
+                WHEN 'Long Sword' THEN 1
+                WHEN 'Sword & Shield' THEN 2
+                WHEN 'Sword and Shield' THEN 2
+                WHEN 'Dual Blades' THEN 3
+                WHEN 'Hammer' THEN 4
+                WHEN 'Hunting Horn' THEN 5
+                WHEN 'Lance' THEN 6
+                WHEN 'Gunlance' THEN 7
+                WHEN 'Light Bowgun' THEN 8
+                WHEN 'Heavy Bowgun' THEN 9
+                WHEN 'Bow' THEN 10
+                ELSE 11
+            END, id",
     )?;
 
     let weapons = stmt
