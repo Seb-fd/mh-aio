@@ -243,6 +243,7 @@ pub struct Quest {
     pub id: i32,
     pub game_id: i32,
     pub name: String,
+    pub name_original: Option<String>,
     pub r#type: Option<String>,
     pub rank: Option<String>,
     pub hub: Option<String>,
@@ -275,6 +276,7 @@ pub struct QuestDetail {
     pub id: i32,
     pub game_id: i32,
     pub name: String,
+    pub name_original: Option<String>,
     pub r#type: Option<String>,
     pub rank: Option<String>,
     pub hub: Option<String>,
@@ -1152,9 +1154,9 @@ fn get_armor_materials(conn: &Connection, armor_id: i32) -> Result<Vec<MaterialR
 
 pub fn get_quests_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Quest>> {
     let mut stmt = conn.prepare(
-        "SELECT id, game_id, name, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, client, requirements, reward_money, contract_fee, main_monsters, language
+        "SELECT id, game_id, name, name_original, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, client, requirements, reward_money, contract_fee, main_monsters, language
          FROM quests WHERE game_id = ?1 ORDER BY
-            CASE hub WHEN 'elder' THEN 0 WHEN 'nekoto' THEN 1 WHEN 'guild_low' THEN 2 WHEN 'guild_high' THEN 3 WHEN 'guild_g' THEN 4 WHEN 'training' THEN 5 WHEN 'treasure' THEN 6 WHEN 'event' THEN 7 ELSE 8 END,
+            CASE hub WHEN 'elder' THEN 0 WHEN 'nekoto' THEN 1 WHEN 'guild_low' THEN 2 WHEN 'guild_high' THEN 3 WHEN 'guild_g' THEN 4 WHEN 'event' THEN 5 WHEN 'challenge' THEN 6 WHEN 'training' THEN 7 WHEN 'treasure' THEN 8 ELSE 9 END,
             stars, id",
     )?;
 
@@ -1164,21 +1166,22 @@ pub fn get_quests_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Quest>>
                 id: row.get(0)?,
                 game_id: row.get(1)?,
                 name: row.get(2)?,
-                r#type: row.get(3)?,
-                rank: row.get(4)?,
-                hub: row.get(5)?,
-                stars: row.get(6)?,
-                objective: row.get(7)?,
-                location: row.get(8)?,
-                time_limit: row.get(9)?,
-                faints_allowed: row.get(10)?,
-                is_key_quest: row.get(11)?,
-                client: row.get(12)?,
-                requirements: row.get(13)?,
-                reward_money: row.get(14)?,
-                contract_fee: row.get(15)?,
-                main_monsters: row.get(16)?,
-                language: row.get(17)?,
+                name_original: row.get(3)?,
+                r#type: row.get(4)?,
+                rank: row.get(5)?,
+                hub: row.get(6)?,
+                stars: row.get(7)?,
+                objective: row.get(8)?,
+                location: row.get(9)?,
+                time_limit: row.get(10)?,
+                faints_allowed: row.get(11)?,
+                is_key_quest: row.get(12)?,
+                client: row.get(13)?,
+                requirements: row.get(14)?,
+                reward_money: row.get(15)?,
+                contract_fee: row.get(16)?,
+                main_monsters: row.get(17)?,
+                language: row.get(18)?,
             })
         })?
         .filter_map(|r| r.ok())
@@ -1216,6 +1219,7 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
         Option<String>,
         Option<String>,
         Option<String>,
+        Option<String>,
         Option<i32>,
         Option<String>,
         Option<String>,
@@ -1231,7 +1235,7 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
         String,
     )> = conn
         .query_row(
-            "SELECT id, game_id, name, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, description, client, requirements, reward_money, contract_fee, main_monsters, language
+            "SELECT id, game_id, name, name_original, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, description, client, requirements, reward_money, contract_fee, main_monsters, language
              FROM quests WHERE id = ?1",
             params![id],
             |row| {
@@ -1255,12 +1259,13 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
                     row.get(16)?,
                     row.get(17)?,
                     row.get(18)?,
+                    row.get(19)?,
                 ))
             },
         )
         .optional()?;
 
-    let Some((id, game_id, name, r#type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, description, client, requirements, reward_money, contract_fee, main_monsters, language)) = row else {
+    let Some((id, game_id, name, name_original, r#type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, description, client, requirements, reward_money, contract_fee, main_monsters, language)) = row else {
         return Ok(None);
     };
 
@@ -1270,6 +1275,7 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
         id,
         game_id,
         name,
+        name_original,
         r#type,
         rank,
         hub,

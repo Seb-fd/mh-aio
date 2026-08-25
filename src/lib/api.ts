@@ -177,6 +177,7 @@ export interface Quest {
   id: number;
   game_id: number;
   name: string;
+  name_original: string | null;
   type: string | null;
   rank: string | null;
   hub: string | null;
@@ -207,6 +208,7 @@ export interface QuestDetail {
   id: number;
   game_id: number;
   name: string;
+  name_original: string | null;
   type: string | null;
   rank: string | null;
   hub: string | null;

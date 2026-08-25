@@ -126,6 +126,7 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             id INTEGER PRIMARY KEY,
             game_id INTEGER REFERENCES games(id),
             name TEXT NOT NULL,
+            name_original TEXT,
             type TEXT,
             rank TEXT,
             hub TEXT,
@@ -342,6 +343,7 @@ fn apply_migrations(conn: &Connection) -> Result<()> {
     let _ = conn.execute("UPDATE decorations SET skill_points = skill_level WHERE skill_points IS NULL AND skill_level IS NOT NULL", []);
     add_column_if_missing(conn, "items", "buy_price", "INTEGER")?;
     add_column_if_missing(conn, "armor", "gender", "TEXT")?;
+    add_column_if_missing(conn, "quests", "name_original", "TEXT")?;
     Ok(())
 }
 

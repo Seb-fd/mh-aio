@@ -48,6 +48,10 @@
     guild_low: { label: 'Guild Low', icon: '⚔️' },
     guild_high: { label: 'Guild High', icon: '🛡️' },
     guild_g: { label: 'Guild G', icon: '👑' },
+    event: { label: 'Event Quest', icon: '🎉' },
+    challenge: { label: 'Challenge Quest', icon: '🏆' },
+    training: { label: 'Training School', icon: '🎓' },
+    treasure: { label: 'Treasure Hunt', icon: '💰' },
     other: { label: 'Other', icon: '📦' },
   };
 
@@ -93,12 +97,13 @@
   {:else}
     <DetailHeader
       title={quest.name}
-      subtitle={quest.client ?? quest.type ?? ''}
+      subtitle={quest.name_original ? `${quest.name_original} · ${quest.client ?? quest.type ?? ''}` : (quest.client ?? quest.type ?? '')}
       icon={typeIcon[quest.type ?? ''] ?? '📜'}
       tags={[
         { label: quest.rank ?? 'Unknown', color: rankColor[quest.rank ?? ''] ?? 'bg-gray-800 text-gray-300' },
         ...(quest.hub ? [{ label: hubLabel(quest.hub, quest.stars), color: 'bg-[var(--theme-bg-elevated)] text-gray-300 border-[var(--theme-border)]' }] : []),
         ...(quest.is_key_quest ? [{ label: 'Key Quest', color: 'bg-yellow-500/10 text-yellow-500 border border-yellow-500/30' }] : []),
+        ...((quest.hub === 'event' || quest.hub === 'challenge') && quest.description?.includes('Exclusive') ? [{ label: '✨ Exclusive', color: 'bg-purple-500/20 text-purple-300 border border-purple-500/30' }] : []),
       ]}
     />
 

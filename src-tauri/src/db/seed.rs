@@ -593,6 +593,7 @@ fn seed_armor_materials(conn: &Connection) -> Result<()> {
 struct QuestJson {
     id: i32,
     name: String,
+    name_original: Option<String>,
     #[serde(rename = "type")]
     qtype: String,
     rank: String,
@@ -622,12 +623,13 @@ fn seed_quests(conn: &Connection) -> Result<()> {
             .as_ref()
             .map(|v| serde_json::to_string(v).unwrap_or_else(|_| "[]".to_string()));
         conn.execute(
-            "INSERT OR IGNORE INTO quests (id, game_id, name, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, description, client, requirements, reward_money, contract_fee, main_monsters, language)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, 'en')",
+            "INSERT OR IGNORE INTO quests (id, game_id, name, name_original, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, description, client, requirements, reward_money, contract_fee, main_monsters, language)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, 'en')",
             rusqlite::params![
                 q.id,
                 MH2G,
                 q.name,
+                q.name_original,
                 q.qtype,
                 q.rank,
                 q.hub,

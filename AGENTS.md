@@ -67,10 +67,19 @@ Registered in `src-tauri/src/lib.rs` via `tauri::generate_handler!`. Defined in 
 - **FK constraints** — SQLite has FK enforcement on by default in some contexts. When inserting into junction tables, ensure parent rows exist first (seed order matters).
 - **Themed components** must use `var(--theme-*)` not hardcoded colors. Reuse `.themed-card` and `.themed-bg` utility classes where possible.
 
+## Git Workflow — STRICT: No auto-commit/push
+
+> **⚠️ DO NOT commit, tag, push, or create PRs unless the user explicitly says so — in Spanish: NO hagas commit ni push si no te lo pido explícitamente.**
+>
+> - **Default is NO git writes.** Just leave changes unstaged / uncommitted in the working tree. The user will explicitly say `commit`, `push`, `commit y push`, etc. when they want it.
+> - This rule overrides any generic "commit when done" habits. When in doubt, **ask** instead of pushing.
+> - `git status` / `git diff` / `git log` are always allowed (read-only). `git add` / `commit` / `push` / `tag` / `gh pr create` are **forbidden** without explicit user instruction.
+> - Even when the user says "actualiza la documentación" or "procede", that does **not** imply commit/push unless they literally write `commit` or `push`.
+
 ## Release & Versioning
 
 - **Version Sync**: When preparing a release, update the version string in both `package.json` and `src-tauri/tauri.conf.json`.
-- **Git Tags**: Releases are triggered by pushing a semver git tag (e.g., `git tag v0.1.1 && git push origin v0.1.1`).
+- **Git Tags**: Releases are triggered by pushing a semver git tag (e.g., `git tag v0.1.1 && git push origin v0.1.1`) — **only when explicitly requested**.
 - **CI/CD**: GitHub Actions workflow (`.github/workflows/release.yml`) builds binaries for Windows, macOS, and Linux and publishes them to GitHub Releases automatically.
 
 ## Mobile Support (Android & iOS)

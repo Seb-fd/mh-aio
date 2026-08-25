@@ -276,7 +276,7 @@ CREATE TABLE item_combine (
 
 ### Current Focus
 1. **Monster Hunter 2ndG / Freedom Unite** (2008) — MHP2G, **fully populated and verified**
-   - 2075 armor, 1083 items, 83 monsters (54 Large + 25 Small + 4 Giant), 1500 weapons (11 types), 592 quests (Village/Guild/Training/Treasure/Event), 99 skill families (214 abilities), 192 decorations
+   - 2075 armor, 1083 items, 83 monsters (54 Large + 25 Small + 4 Giant), 1500 weapons (11 types), 610 quests (Village/Guild/Training/Treasure/Event/Challenge), 99 skill families (214 abilities), 192 decorations
    - Materials, drop sources, combine recipes populated; ordering faithful to UMD (Hunter's Notes, Smith trees, quest hubs)
    - Data verified against retail UMD and event distribution file (see `docs/fidelity-report.md`)
    - Armor Set Search (Athena's A.S.S. port) + per-game global search + ordered, filtered browsers (Large/Small, Blademaster/Gunner, Training/Treasure/Event)

@@ -12,7 +12,7 @@
 | Decorations | 192 |
 | Weapons | 1500 (11 types) |
 | Monsters | 83 (54 Large, 25 Small, 4 Giant) |
-| Quests | 592 (95 Elder, 35 Nekoto, 89 Guild Low, 165 Guild High, 28 Guild G, 140 Training, 7 Treasure, 33 Event) |
+| Quests | 610 (95 Elder, 35 Nekoto, 89 Guild Low, 77 Guild High, 116 Guild G, 140 Training, 7 Treasure, 37 Event, 14 Challenge) |
 | Weapon materials / craft | 5137 / 1075 recipes (forge + upgrade) |
 | Monster weaknesses / drops / equipment | 163 / 2319 / 1880 |
 | Defense / rarity / slots (armor) | **100% match** vs retail (0 mismatches) |
@@ -71,9 +71,11 @@
 
 ## Quests
 
-- **Base game (ISO):** 559 quests validated via `DATA.BIN` string table (`Mountain Herb Picking` at `335602928`, etc.). Hub distribution: `Elder 95, Nekoto 35, Guild Low 89, Guild High 165, Guild G 28, Training 140, Treasure 7`.
-- **Other split:** Former `other` hub (147: `Training 140` + `Gathering 7`) split into `training` (140) and `treasure` (7: `Treasure in the Mountains!` … `Treasure in the Grt Forest!`). Ordering updated to `elder → nekoto → guild_low → guild_high → guild_g → training → treasure → event` (`src-tauri/src/db/queries.rs:1157`, `src/routes/[game]/quests/+page.svelte:31`).
-- **Event quests:** 33 downloadable quests not in the ISO (validated against the Spanish distribution file `Misiones Descargables MHP2G.txt` — e.g. `Emperador de las llamas JUMP` — Teostra, `Carnaval de cangrejos` — Daimyo Hermitaur + Shogun Ceanataur, `Luz blanca` — White Fatalis — and wiki `MHFU/Quests/Event_Quests`). Added with `hub='event'`, `rank`/`stars` inferred from reward/RC, `type` Hunting, `objective` from enemies; total 592 quests.
+- **Base game (ISO):** 559 quests validated against the `DATA.BIN` string table (`Mountain Herb Picking` at `335602928`, etc.). Each quest record = 13 string-pointer offsets + numeric block; name / objective / description / monsters / client resolve cleanly from the record base (e.g. `Hunt the Carnivore!` → `Slay 5 Giaprey`, client `Pokke Village Guard`). Hub distribution: `Elder 95, Nekoto 35, Guild Low 89, Guild High 77, Guild G 116, Training 140, Treasure 7`.
+- **Guild rank fix (from ISO schema):** `guild_high` previously held 165 quests with `stars` 6–11, mixing HR4-6 (★6-8) with G-rank quests (`stars` 9–11) that belong in `guild_g`. Corrected: moved the 88 `stars >= 9` quests to `guild_g` and normalized to `G★1/2/3` (`stars` 9→1, 10→2, 11→3). Result: `guild_high` 77 (★6-8 = HR4-6), `guild_g` 116 (G★1-3). `stars` is now the faithful MHFU difficulty tier, not a global lineup index.
+- **Other split:** Former `other` hub (147: `Training 140` + `Gathering 7`) split into `training` (140) and `treasure` (7: `Treasure in the Mountains!` … `Treasure in the Grt Forest!`). Ordering `elder → nekoto → guild_low → guild_high → guild_g → event → challenge → training → treasure` (`src-tauri/src/db/queries.rs:1157`).
+- **Event / challenge quests:** 37 event + 14 challenge quests, **not in the base ISO** (they are downloadable). Extracted from the MHP2G Quest Editor kit `*.bin` files (`reward_money` at `0x54`, `contract_fee` at `0x50`, verified across EU↔JP) and validated against GameFAQs/"Event Quests" guide (objective, locale, reward, monsters). JP-exclusive (Famitsu/Dengeki) quests carry `name_original` (Japanese) + English `name`. Total 610 quests.
+- **UI grouping:** Quests are grouped into collapsible accordions by `stars` within each hub (`src/routes/[game]/quests/+page.svelte`); first group expanded by default; `guild_g` labels `G★1-3`.
 
 ## Notes
 
