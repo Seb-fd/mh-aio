@@ -214,6 +214,7 @@ export interface Item {
   category: string | null;
   rarity: number | null;
   sell_price: number | null;
+  buy_price: number | null;
   description: string | null;
   language: string;
 }
@@ -246,6 +247,7 @@ export interface ItemDetail {
   category: string | null;
   rarity: number | null;
   sell_price: number | null;
+  buy_price: number | null;
   description: string | null;
   sources: ItemSource[];
   recipes: CombineRecipe[];
@@ -358,6 +360,59 @@ export interface SkillDetail {
   weapons: SkillWeaponRef[];
 }
 
+export interface AssSkillReq {
+  skill_id: number;
+  points_required: number;
+}
+export interface AssQueryInput {
+  game_id: number;
+  skills: AssSkillReq[];
+  hunter_type: string;
+  gender: string;
+  hr: number;
+  elder_star: number;
+  weapon_slots: number;
+  include_piercings: boolean;
+  allow_bad: boolean;
+  allow_torso_inc: boolean;
+  allow_dummy: boolean;
+  sort_by: string | null;
+}
+export interface AssArmorRef {
+  id: number;
+  name: string;
+  slot_type: string;
+  rarity: number | null;
+  defense_base: number | null;
+  slots: string | null;
+  skills: string | null;
+}
+export interface AssDecorationRef {
+  id: number;
+  name: string;
+  slot_size: number | null;
+  skill_name: string | null;
+  skill_points: number | null;
+  secondary_skill_name: string | null;
+  secondary_points: number | null;
+  count: number;
+}
+export interface AssSolutionView {
+  armors: AssArmorRef[];
+  decorations: AssDecorationRef[];
+  extra_skills: string[];
+  defense: number;
+  fire_res: number;
+  water_res: number;
+  thunder_res: number;
+  ice_res: number;
+  dragon_res: number;
+  rarity: number;
+  difficulty: number;
+  slots_spare: number;
+  slots_spare_detail: number[];
+}
+
 export const api = {
   getGames: () => invoke<Game[]>('get_games'),
   getMonsters: (gameId: number) => invoke<Monster[]>('get_monsters', { gameId }),
@@ -374,4 +429,5 @@ export const api = {
   getItemDetail: (id: number) => invoke<ItemDetail | null>('get_item_detail', { id }),
   getSkillDetail: (id: number) => invoke<SkillDetail | null>('get_skill_detail', { id }),
   getDecorationDetail: (id: number) => invoke<DecorationDetail | null>('get_decoration_detail', { id }),
+  searchArmorSets: (query: AssQueryInput) => invoke<AssSolutionView[]>('search_armor_sets', { query }),
 };

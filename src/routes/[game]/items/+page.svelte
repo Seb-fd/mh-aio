@@ -12,6 +12,7 @@
   let error = $state<string | null>(null);
   let categoryFilter = $state<string>('all');
   let searchTerm = $state('');
+  let sortBy = $state<string>('chest'); // chest = game box (id) faithful to ISO DATA.BIN file 15
 
   $effect(() => {
     if (dbId == null) return;
@@ -30,11 +31,18 @@
   });
 
   const categories = $derived(['all', ...Array.from(new Set(items.map(i => i.category).filter((c): c is string => !!c)))]);
-  const filtered = $derived(
-    items
+  const filtered = $derived.by(() => {
+    let arr = items
       .filter(i => categoryFilter === 'all' || i.category === categoryFilter)
-      .filter(i => searchTerm === '' || i.name.toLowerCase().includes(searchTerm.toLowerCase()))
-  );
+      .filter(i => searchTerm === '' || i.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    // Sorting: chest is already id order from DB, keep stable; other sorts client-side
+    if (sortBy === 'name') arr = [...arr].sort((a,b)=> a.name.localeCompare(b.name));
+    else if (sortBy === 'rarity') arr = [...arr].sort((a,b)=> (b.rarity??0)-(a.rarity??0));
+    else if (sortBy === 'price') arr = [...arr].sort((a,b)=> (b.sell_price??0)-(a.sell_price??0));
+    else if (sortBy === 'category') arr = [...arr].sort((a,b)=> (a.category??'').localeCompare(b.category??'') || a.name.localeCompare(b.name));
+    // chest (id) is default, no sort needed - already ORDER BY id from queries.rs:1023
+    return arr;
+  });
 
   function open(id: number) {
     if (!game) return;
@@ -74,13 +82,20 @@
       <p class="text-gray-400">No items found for {game?.shortName ?? 'this game'}</p>
     </div>
   {:else}
-    <div class="flex flex-wrap gap-2 mb-4">
+    <div class="flex flex-wrap gap-2 mb-4 items-center">
       <input
         type="text"
         bind:value={searchTerm}
         placeholder="Search items..."
         class="px-3 py-1.5 text-sm bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-lg text-gray-100 placeholder-gray-600 focus:outline-none focus:border-[var(--theme-border-strong)]"
       />
+      <select bind:value={sortBy} class="px-3 py-1.5 text-xs bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-full text-gray-300 focus:outline-none">
+        <option value="chest">Chest (Game Order)</option>
+        <option value="name">Name A-Z</option>
+        <option value="rarity">Rarity ↓</option>
+        <option value="price">Sell Price ↓</option>
+        <option value="category">Category</option>
+      </select>
       {#each categories as cat}
         <button
           onclick={() => (categoryFilter = cat)}

@@ -133,6 +133,7 @@ struct ItemJson {
     category: String,
     rarity: Option<i32>,
     sell_price: Option<i32>,
+    buy_price: Option<i32>,
 }
 
 fn seed_items(conn: &Connection) -> Result<()> {
@@ -142,9 +143,9 @@ fn seed_items(conn: &Connection) -> Result<()> {
 
     for it in items {
         conn.execute(
-            "INSERT OR IGNORE INTO items (id, game_id, name, category, rarity, sell_price, description, language)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6, NULL, 'en')",
-            rusqlite::params![it.id, MH2G, it.name, it.category, it.rarity, it.sell_price],
+            "INSERT OR IGNORE INTO items (id, game_id, name, category, rarity, sell_price, buy_price, description, language)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, NULL, 'en')",
+            rusqlite::params![it.id, MH2G, it.name, it.category, it.rarity, it.sell_price, it.buy_price],
         )?;
     }
 

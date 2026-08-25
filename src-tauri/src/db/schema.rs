@@ -163,6 +163,7 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             category TEXT,
             rarity INTEGER,
             sell_price INTEGER,
+            buy_price INTEGER,
             description TEXT,
             language TEXT DEFAULT 'en'
         );
@@ -338,6 +339,7 @@ fn apply_migrations(conn: &Connection) -> Result<()> {
     add_column_if_missing(conn, "decorations", "price", "INTEGER")?;
     // Backfill skill_level -> skill_points for legacy rows
     let _ = conn.execute("UPDATE decorations SET skill_points = skill_level WHERE skill_points IS NULL AND skill_level IS NOT NULL", []);
+    add_column_if_missing(conn, "items", "buy_price", "INTEGER")?;
     Ok(())
 }
 

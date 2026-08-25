@@ -1,3 +1,4 @@
+use crate::ass;
 use crate::db::Database;
 use crate::db::queries;
 use tauri::State;
@@ -137,4 +138,13 @@ pub fn get_decoration_detail(
 ) -> Result<Option<queries::DecorationDetail>, String> {
     let conn = db.conn.lock().map_err(|e| e.to_string())?;
     queries::get_decoration_detail(&conn, id).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+pub fn search_armor_sets(
+    db: State<'_, Database>,
+    query: ass::AssQueryInput,
+) -> Result<Vec<ass::AssSolutionView>, String> {
+    let conn = db.conn.lock().map_err(|e| e.to_string())?;
+    ass::search(&conn, query)
 }

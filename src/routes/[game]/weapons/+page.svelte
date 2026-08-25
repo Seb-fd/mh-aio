@@ -11,6 +11,7 @@
   let loading = $state(true);
   let error = $state<string | null>(null);
   let typeFilter = $state<string>('all');
+  let sortBy = $state<string>('smith'); // smith = armorer tree order (weapon_type -> id) faithful to ISO
 
   async function loadWeapons(id: number, attempt = 0) {
     try {
@@ -41,9 +42,14 @@
   });
 
   const weaponTypes = $derived(['all', ...Array.from(new Set(weapons.map(w => w.weapon_type)))]);
-  const filtered = $derived(
-    typeFilter === 'all' ? weapons : weapons.filter(w => w.weapon_type === typeFilter)
-  );
+  const filtered = $derived.by(() => {
+    let arr = typeFilter === 'all' ? weapons : weapons.filter(w => w.weapon_type === typeFilter);
+    if (sortBy === 'name') arr = [...arr].sort((a,b)=> a.name.localeCompare(b.name));
+    else if (sortBy === 'rarity') arr = [...arr].sort((a,b)=> (b.rarity??0)-(a.rarity??0));
+    else if (sortBy === 'attack') arr = [...arr].sort((a,b)=> (b.attack??0)-(a.attack??0));
+    // smith is default already ORDER BY weapon_type, id from queries.rs:564
+    return arr;
+  });
 
   interface TreeNode { weapon: Weapon; children: TreeNode[] }
 
@@ -57,11 +63,17 @@
       childrenOf.set(w.upgrade_path, arr);
     }
     const roots = typeWeapons.filter(w => !w.upgrade_path || !set.has(w.upgrade_path));
+    const sortFn = (a: Weapon, b: Weapon) => {
+      if (sortBy === 'name') return a.name.localeCompare(b.name);
+      if (sortBy === 'rarity') return (b.rarity??0)-(a.rarity??0);
+      if (sortBy === 'attack') return (b.attack??0)-(a.attack??0);
+      return a.id - b.id; // smith: creation order (id) faithful to ISO
+    };
     const build = (w: Weapon): TreeNode => ({
       weapon: w,
-      children: (childrenOf.get(w.name) ?? []).sort((a, b) => (b.attack ?? 0) - (a.attack ?? 0)).map(build),
+      children: (childrenOf.get(w.name) ?? []).sort(sortFn).map(build),
     });
-    return roots.sort((a, b) => (a.attack ?? 0) - (b.attack ?? 0)).map(build);
+    return roots.sort(sortFn).map(build);
   }
 
   const tree = $derived.by<{ type: string; forests: TreeNode[] }[]>(() => {
@@ -134,7 +146,13 @@
       <p class="text-gray-400">No weapons found for {game?.shortName ?? 'this game'}</p>
     </div>
   {:else}
-    <div class="flex flex-wrap gap-2 mb-6">
+    <div class="flex flex-wrap gap-2 mb-6 items-center">
+      <select bind:value={sortBy} class="px-3 py-1.5 text-xs bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-full text-gray-300 focus:outline-none">
+        <option value="smith">Smith (Game Order)</option>
+        <option value="name">Name A-Z</option>
+        <option value="rarity">Rarity ↓</option>
+        <option value="attack">Attack ↓</option>
+      </select>
       {#each weaponTypes as type}
         <button
           onclick={() => (typeFilter = type)}

@@ -1,3 +1,4 @@
+mod ass;
 mod commands;
 pub mod db;
 
@@ -36,6 +37,7 @@ pub fn run() {
             commands::get_skill_detail,
             commands::get_decorations,
             commands::get_decoration_detail,
+            commands::search_armor_sets,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

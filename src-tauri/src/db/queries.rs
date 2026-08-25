@@ -229,6 +229,7 @@ pub struct Item {
     pub category: Option<String>,
     pub rarity: Option<i32>,
     pub sell_price: Option<i32>,
+    pub buy_price: Option<i32>,
     pub description: Option<String>,
     pub language: String,
 }
@@ -241,6 +242,7 @@ pub struct ItemDetail {
     pub category: Option<String>,
     pub rarity: Option<i32>,
     pub sell_price: Option<i32>,
+    pub buy_price: Option<i32>,
     pub description: Option<String>,
     pub sources: Vec<ItemSource>,
     pub recipes: Vec<CombineRecipe>,
@@ -560,11 +562,12 @@ fn get_monster_weaknesses(conn: &Connection, monster_id: i32) -> Result<Vec<Mons
 }
 
 pub fn get_weapons_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Weapon>> {
+    // Smith order: faithful to armorer tree (weapon_type -> creation/upgrade order = id) verified via ISO tree via upgrade_path
     let mut stmt = conn.prepare(
         "SELECT id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value,
                 sharpness, slots, status_type, status_value, defense_bonus, crafting_cost, upgrade_path,
                 EXISTS(SELECT 1 FROM weapon_craft wc WHERE wc.weapon_id = weapons.id AND wc.craft_kind = 'forge'), language
-         FROM weapons WHERE game_id = ?1 ORDER BY weapon_type, name",
+         FROM weapons WHERE game_id = ?1 ORDER BY weapon_type, id",
     )?;
 
     let weapons = stmt
@@ -733,11 +736,15 @@ fn get_weapon_materials(conn: &Connection, weapon_id: i32) -> Result<Vec<Materia
 }
 
 pub fn get_armor_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Armor>> {
+    // Smith order: faithful to armorer list (rank -> slot -> creation order = id) verified via ISO armor string table order at 37652906
     let mut stmt = conn.prepare(
         "SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max,
                 resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon,
                 slots, skills, armor_type, language
-         FROM armor WHERE game_id = ?1 ORDER BY rank, slot_type, name",
+         FROM armor WHERE game_id = ?1 ORDER BY
+            CASE rank WHEN 'Low' THEN 0 WHEN 'High' THEN 1 WHEN 'G' THEN 2 ELSE 3 END,
+            CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END,
+            id",
     )?;
 
     let armor = stmt
@@ -1019,9 +1026,11 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
 }
 
 pub fn get_items_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Item>> {
+    // Chest order: faithful to PSP item box (hex ID order) verified via ISO DATA.BIN file 15 string table
+    // Alternative sorts handled client-side; keep DB default as game chest.
     let mut stmt = conn.prepare(
-        "SELECT id, game_id, name, category, rarity, sell_price, description, language
-         FROM items WHERE game_id = ?1 ORDER BY category, name",
+        "SELECT id, game_id, name, category, rarity, sell_price, buy_price, description, language
+         FROM items WHERE game_id = ?1 ORDER BY id",
     )?;
 
     let items = stmt
@@ -1033,8 +1042,9 @@ pub fn get_items_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Item>> {
                 category: row.get(3)?,
                 rarity: row.get(4)?,
                 sell_price: row.get(5)?,
-                description: row.get(6)?,
-                language: row.get(7)?,
+                buy_price: row.get(6)?,
+                description: row.get(7)?,
+                language: row.get(8)?,
             })
         })?
         .filter_map(|r| r.ok())
@@ -1044,9 +1054,9 @@ pub fn get_items_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Item>> {
 }
 
 pub fn get_item_detail(conn: &Connection, id: i32) -> Result<Option<ItemDetail>> {
-    let row: Option<(i32, i32, String, Option<String>, Option<i32>, Option<i32>, Option<String>, String)> = conn
+    let row: Option<(i32, i32, String, Option<String>, Option<i32>, Option<i32>, Option<i32>, Option<String>, String)> = conn
         .query_row(
-            "SELECT id, game_id, name, category, rarity, sell_price, description, language
+            "SELECT id, game_id, name, category, rarity, sell_price, buy_price, description, language
              FROM items WHERE id = ?1",
             params![id],
             |row| {
@@ -1059,12 +1069,13 @@ pub fn get_item_detail(conn: &Connection, id: i32) -> Result<Option<ItemDetail>>
                     row.get(5)?,
                     row.get(6)?,
                     row.get(7)?,
+                    row.get(8)?,
                 ))
             },
         )
         .optional()?;
 
-    let Some((id, game_id, name, category, rarity, sell_price, description, language)) = row else {
+    let Some((id, game_id, name, category, rarity, sell_price, buy_price, description, language)) = row else {
         return Ok(None);
     };
 
@@ -1078,6 +1089,7 @@ pub fn get_item_detail(conn: &Connection, id: i32) -> Result<Option<ItemDetail>>
         category,
         rarity,
         sell_price,
+        buy_price,
         description,
         sources,
         recipes,

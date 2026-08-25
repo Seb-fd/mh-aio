@@ -11,6 +11,7 @@
   let loading = $state(true);
   let error = $state<string | null>(null);
   let rankFilter = $state<string>('all');
+  let sortBy = $state<string>('smith'); // smith = armorer list (rank -> slot -> id) faithful to ISO 37652906 string table
 
   async function loadArmor(id: number, attempt = 0) {
     try {
@@ -41,9 +42,15 @@
   });
 
   const ranks = $derived(['all', ...Array.from(new Set(armors.map(a => a.rank)))]);
-  const filtered = $derived(
-    rankFilter === 'all' ? armors : armors.filter(a => a.rank === rankFilter)
-  );
+  const filtered = $derived.by(() => {
+    let arr = rankFilter === 'all' ? armors : armors.filter(a => a.rank === rankFilter);
+    if (sortBy === 'name') arr = [...arr].sort((a,b)=> a.name.localeCompare(b.name));
+    else if (sortBy === 'rarity') arr = [...arr].sort((a,b)=> (b.rarity??0)-(a.rarity??0));
+    else if (sortBy === 'defense') arr = [...arr].sort((a,b)=> (b.defense_base??0)-(a.defense_base??0));
+    else if (sortBy === 'slots') arr = [...arr].sort((a,b)=> parseInt(b.slots??'0') - parseInt(a.slots??'0'));
+    // smith is default ORDER BY rank, slot_type, id from queries.rs:738
+    return arr;
+  });
 
   function open(id: number) {
     if (!game) return;
@@ -91,7 +98,14 @@
       <p class="text-gray-400">No armor found for {game?.shortName ?? 'this game'}</p>
     </div>
   {:else}
-    <div class="flex flex-wrap gap-2 mb-4">
+    <div class="flex flex-wrap gap-2 mb-4 items-center">
+      <select bind:value={sortBy} class="px-3 py-1.5 text-xs bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-full text-gray-300 focus:outline-none">
+        <option value="smith">Smith (Game Order)</option>
+        <option value="name">Name A-Z</option>
+        <option value="rarity">Rarity ↓</option>
+        <option value="defense">Defense ↓</option>
+        <option value="slots">Slots ↓</option>
+      </select>
       {#each ranks as rank}
         <button
           onclick={() => (rankFilter = rank)}
