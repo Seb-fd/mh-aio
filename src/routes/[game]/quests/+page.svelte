@@ -34,12 +34,15 @@
     guild_low: { label: 'Guild Low', sub: '★1-5', icon: '⚔️' },
     guild_high: { label: 'Guild High', sub: '★6-8', icon: '🛡️' },
     guild_g: { label: 'Guild G', sub: 'G★1-3', icon: '👑' },
-    other: { label: 'Other', sub: 'Training & Treasure', icon: '📦' },
+    training: { label: 'Training School', sub: 'Learn the weapons', icon: '🎓' },
+    treasure: { label: 'Treasure Hunt', sub: 'Gather & deliver', icon: '💰' },
+    event: { label: 'Event Quests', sub: 'Downloadable', icon: '🎉' },
+    other: { label: 'Other', sub: 'Misc', icon: '📦' },
   };
 
   const hubs = $derived(
     Array.from(new Set(quests.map(q => q.hub).filter((h): h is string => !!h))).sort((a,b)=>{
-      const order = ['elder','nekoto','guild_low','guild_high','guild_g','other'];
+      const order = ['elder','nekoto','guild_low','guild_high','guild_g','training','treasure','event','other'];
       return order.indexOf(a)-order.indexOf(b);
     })
   );

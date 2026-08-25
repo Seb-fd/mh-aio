@@ -12,6 +12,7 @@
 | Decorations | 192 |
 | Weapons | 1500 (11 types) |
 | Monsters | 83 (54 Large, 25 Small, 4 Giant) |
+| Quests | 592 (95 Elder, 35 Nekoto, 89 Guild Low, 165 Guild High, 28 Guild G, 140 Training, 7 Treasure, 33 Event) |
 | Weapon materials / craft | 5137 / 1075 recipes (forge + upgrade) |
 | Monster weaknesses / drops / equipment | 163 / 2319 / 1880 |
 | Defense / rarity / slots (armor) | **100% match** vs retail (0 mismatches) |
@@ -26,6 +27,7 @@
   - Armor names: string table at offset `37652906` (`Bone Helm`, `Velociprey Helm`, `Hornet Helm` …) — already used in `src-tauri/src/db/queries.rs:872`.
   - Monsters: tables around `37418670` (species `Flying Wyvern`, `Lynian` …) and `37427058` (descriptions `[Bulldrome: Pelagus]`, `[Velocidrome: Bird Wyvern]` …).
   - Weapons: block at `37563513` (`Buster Sword`, `Iron Katana`, `Ravager Blade` … 1500 entries).
+  - Quests: table at `335602928` (`Mountain Herb Picking`, `An Anteka in the Snow` … 559 base quests) plus hub labels `Training`/`Treasure` at `37442195`/`37417942`; Event quests not in ISO, validated against distribution file (33 quests, e.g. `Emperador de las llamas JUMP` — Teostra, `Carnaval de cangrejos`) and wiki.
 - Normalized names (lowercase, strip non-alphanumerics) to handle translation aliases (`Hornetaur→Hornet`, `Volganos→Lava`, `Hypnoc→Hypno`, `Plum D.Hermitaur→Plum Daimyo Hermitaur`, `Vespoid Queen↔Queen Vespoid`) and skill-name differences (`Defence`/`Defense`, `WindPress`/`Wind Press` via `seed.rs:759`).
 - `mhp2g.kiranico.com` is sunset (HTTP 530), so `mhfu-db` was used as the fallback arbiter. The retail ISO is the primary source; `mhfu-db` wins only when the ISO table is ambiguous.
 - Ordering verified: monster order is the in-game Hunter's Notes order (small monsters first), weapon order is the in-game Smith tree `Great Sword → Long Sword → Sword & Shield → Dual Blades → Hammer → Hunting Horn → Lance → Gunlance → Light Bowgun → Heavy Bowgun → Bow` (`src-tauri/src/db/queries.rs:698`, `src/routes/[game]/weapons/+page.svelte:14`).
@@ -66,6 +68,12 @@
 - **Order:** Reordered to the in-game order (`Felyne 1, Melynx 2, Shakalaka 3 … Purple Gypceros 28, Hypnocatrice 29, Remobra 30, Rathian 31, Rathalos 34 … White Fatalis 83`). `ORDER BY id` (`src-tauri/src/db/queries.rs:445`) is now the game order; the UI preserves it when filtering (`src/routes/[game]/monsters/+page.svelte:8` `sizeFilter='large'` default, `All` shows 83, filtered lists keep relative order).
 - **Weaknesses:** 163 rows covering Large monsters; small monsters have no hitzones (detail view handles missing data).
 - **Drops / Equipment:** 2319 / 1880 rows (Large only); small carves (e.g. `Kelbi Horn`) exist as items and can be added later if needed. Descriptions backfilled for all 83 via `seed.rs:114`.
+
+## Quests
+
+- **Base game (ISO):** 559 quests validated via `DATA.BIN` string table (`Mountain Herb Picking` at `335602928`, etc.). Hub distribution: `Elder 95, Nekoto 35, Guild Low 89, Guild High 165, Guild G 28, Training 140, Treasure 7`.
+- **Other split:** Former `other` hub (147: `Training 140` + `Gathering 7`) split into `training` (140) and `treasure` (7: `Treasure in the Mountains!` … `Treasure in the Grt Forest!`). Ordering updated to `elder → nekoto → guild_low → guild_high → guild_g → training → treasure → event` (`src-tauri/src/db/queries.rs:1157`, `src/routes/[game]/quests/+page.svelte:31`).
+- **Event quests:** 33 downloadable quests not in the ISO (validated against the Spanish distribution file `Misiones Descargables MHP2G.txt` — e.g. `Emperador de las llamas JUMP` — Teostra, `Carnaval de cangrejos` — Daimyo Hermitaur + Shogun Ceanataur, `Luz blanca` — White Fatalis — and wiki `MHFU/Quests/Event_Quests`). Added with `hub='event'`, `rank`/`stars` inferred from reward/RC, `type` Hunting, `objective` from enemies; total 592 quests.
 
 ## Notes
 

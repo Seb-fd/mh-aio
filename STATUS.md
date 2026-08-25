@@ -20,7 +20,7 @@
 - [x] `monsters/` — list + `[id]` (weaknesses, drops, dedicated armor sets) — 83 monsters in game order (Felyne 1 … White Fatalis 83), Large/Small/All selector (Large default, order-preserving)
 - [x] `weapons/` — list + `[id]` (tree, stats, materials) — 1500 weapons in Smith order `Great Sword → Bow` (11 types)
 - [x] `armor/` — list (`Sets`/`Pieces` toggle + Both/Male/Female + Blademaster/Gunner + rank filters), `sets/[id]`, `[id]`
-- [x] `quests/` — list + `[id]`
+- [x] `quests/` — list + `[id]` — 592 quests (95 Village Elder, 35 Nekoto, 89 Guild Low, 165 Guild High, 28 Guild G, 140 Training School, 7 Treasure Hunt, 33 Event) in hub order
 - [x] `items/` — list (game-order chest sort + name/rarity/price/category) + `[id]`
 - [x] `skills/` — list + `[id]` (levels, decorations, related armor/weapons)
 - [x] `decorations/` — list + `[id]`
@@ -49,12 +49,14 @@
 - [x] Hunter type filter `All | Blademaster | Gunner` — for `both` heads distinguishes by higher defense (Helm vs Cap), other slots by `armor_type`
 
 ### Data Fidelity (MHP2G) — Updated
-- [x] 2075 armor pieces, 1083 items, 83 monsters (54 Large + 25 Small + 4 Giant), 1500 weapons (11 types), 99 skill families (214 abilities), 192 decorations
+- [x] 2075 armor pieces, 1083 items, 83 monsters (54 Large + 25 Small + 4 Giant), 1500 weapons (11 types), 592 quests ( Training 140 / Treasure 7 / Event 33 ), 99 skill families (214 abilities), 192 decorations
 - [x] Monster order faithful to UMD Hunter's Notes (Felyne 1 … White Fatalis 83, `ORDER BY id`); Large/Small selector preserves order
 - [x] Weapon order faithful to Smith tree (`Great Sword → Bow`, `ORDER BY CASE weapon_type`, `src-tauri/src/db/queries.rs:698`)
+- [x] Quest hubs: `elder → nekoto → guild_low → guild_high → guild_g → training → treasure → event` (`queries.rs:1157`, `quests/+page.svelte:31`); Other split into Training School and Treasure Hunt; Event quests (33 downloadable, not in ISO) validated against distribution file + wiki
+- [x] Quest validation vs ISO `DATA.BIN` string table (`Mountain Herb Picking` at `0x13E…`, `Training`/`Treasure` labels); total 559 base quests match retail
 - [x] Fixed 138 item sell prices vs game-extracted DB (Thawing Agent 100→10 etc.)
 - [x] Wings reclassified Ammo → Material; header artifact removed
-- [x] `docs/fidelity-report.md` — single merged report: defense/rarity/slots 100%, weapons per-type 100%, monster catalog now 83 vs retail UMD + game-extracted DB
+- [x] `docs/fidelity-report.md` — single merged report: defense/rarity/slots 100%, weapons per-type 100%, monster catalog 83, quest hubs 592 vs retail UMD + game-extracted DB + event file
 
 ### Backend (Rust / Tauri)
 - [x] `ass.rs`, `commands/mod.rs`, `db/{mod,schema,queries,seed}.rs`

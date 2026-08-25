@@ -1154,7 +1154,7 @@ pub fn get_quests_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Quest>>
     let mut stmt = conn.prepare(
         "SELECT id, game_id, name, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, client, requirements, reward_money, contract_fee, main_monsters, language
          FROM quests WHERE game_id = ?1 ORDER BY
-            CASE hub WHEN 'elder' THEN 0 WHEN 'nekoto' THEN 1 WHEN 'guild_low' THEN 2 WHEN 'guild_high' THEN 3 WHEN 'guild_g' THEN 4 ELSE 5 END,
+            CASE hub WHEN 'elder' THEN 0 WHEN 'nekoto' THEN 1 WHEN 'guild_low' THEN 2 WHEN 'guild_high' THEN 3 WHEN 'guild_g' THEN 4 WHEN 'training' THEN 5 WHEN 'treasure' THEN 6 WHEN 'event' THEN 7 ELSE 8 END,
             stars, id",
     )?;
 
