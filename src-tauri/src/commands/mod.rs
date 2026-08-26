@@ -186,3 +186,12 @@ pub fn get_armor_set_detail(
     let conn = db.conn.lock().map_err(|e| e.to_string())?;
     queries::get_armor_set_detail(&conn, id).map_err(|e| e.to_string())
 }
+
+#[tauri::command]
+pub fn get_combinations(
+    db: State<'_, Database>,
+    game_id: i32,
+) -> Result<Vec<queries::CombineView>, String> {
+    let conn = db.conn.lock().map_err(|e| e.to_string())?;
+    queries::get_combinations_by_game(&conn, game_id).map_err(|e| e.to_string())
+}

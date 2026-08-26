@@ -1,6 +1,6 @@
 # MH-AIO - Project Status
 
-## Current Version: v0.3.0 (Monster Hunter Freedom Unite / MHP2G — verified dataset + ordered browsers)
+## Current Version: v0.4.0 (Monster Hunter Freedom Unite / MHP2G — 1083 items fully sourced + corrected categories + combinations)
 
 ---
 
@@ -21,7 +21,7 @@
 - [x] `weapons/` — list + `[id]` (tree, stats, materials) — 1500 weapons in Smith order `Great Sword → Bow` (11 types)
 - [x] `armor/` — list (`Sets`/`Pieces` toggle + Both/Male/Female + Blademaster/Gunner + rank filters), `sets/[id]`, `[id]`
    - [x] `quests/` — list + `[id]` — 610 quests (95 Village Elder, 35 Nekoto, 89 Guild Low, 77 Guild High, 116 Guild G, 140 Training School, 7 Treasure Hunt, 37 Event, 14 Challenge) in hub order, grouped into collapsible difficulty accordions (★/G★, first expanded)
-- [x] `items/` — list (game-order chest sort + name/rarity/price/category) + `[id]`
+- [x] `items/` — list (game-order chest sort + name/rarity/price `category • subcategory` + `Charm` + `Ammo/Husk` ISO taxonomy) — 91 Consumable / 913 Material / 79 Ammo (67 fixes: `Power Juice` etc.), `combine` single view (Normal/Alchemy/Treasure badge/filter + `success %` + Book order), `[id]` with clickable combine `A x1 + B x1 = Result x1 • 90%`
 - [x] `skills/` — list + `[id]` (levels, decorations, related armor/weapons)
 - [x] `decorations/` — list + `[id]`
 - [x] `builds/` — **Armor Set Search** (ASS port)
@@ -49,18 +49,19 @@
 - [x] Hunter type filter `All | Blademaster | Gunner` — for `both` heads distinguishes by higher defense (Helm vs Cap), other slots by `armor_type`
 
 ### Data Fidelity (MHP2G) — Updated
-   - [x] 2075 armor pieces, 1083 items, 83 monsters (54 Large + 25 Small + 4 Giant), 1500 weapons (11 types), 610 quests (Training 140 / Treasure 7 / Event 37 / Challenge 14), 99 skill families (214 abilities), 192 decorations
+   - [x] 2075 armor pieces, **1083 items fully sourced** (12,751 `item_sources` rows: `gather/mining/bug/fish` from `maps.json`, `shop` 5 merchants consolidated, `trade` Veggie Elder + Trenya Boat + Pokke Points, `farm` Pokke Farm spots/trees, `small monsters` via `Monsters/monsters-material.json`, plus `monster_drops`/`quest_rewards`; verified vs `MHP2G` ISO `DATA.BIN` offsets), **432 combine recipes** (147 Normal + 18 Alchemy + 7 Treasure, with `combine_type`/`chance` and Book order), 83 monsters (54 Large + 25 Small + 4 Giant), 1500 weapons (11 types), 610 quests (Training 140 / Treasure 7 / Event 37 / Challenge 14), 99 skill families (214 abilities), 192 decorations
+- [x] Item taxonomy re-derived from ISO `tmp_mhfu_upstream/items.json` `icon` + verb: `Consumable 91 / Material 913 / Ammo 79` with `subcategory` (`Recovery, Buff, Food, Charm, Husk, Coating, Ore, Monster Material` etc.; `Powercharm/Powertalon` → `Consumable • Charm`, `Huskberry` → `Ammo • Husk`), 67 fixes (Power Juice, Mega Juice, Cold Meat, Gourmet Fish, Deodorant, 27 Bowgun S)
 - [x] Monster order faithful to UMD Hunter's Notes (Felyne 1 … White Fatalis 83, `ORDER BY id`); Large/Small selector preserves order
 - [x] Weapon order faithful to Smith tree (`Great Sword → Bow`, `ORDER BY CASE weapon_type`, `src-tauri/src/db/queries.rs:698`)
 - [x] Quest hubs: `elder → nekoto → guild_low → guild_high → guild_g → training → treasure → event` (`queries.rs:1157`, `quests/+page.svelte:31`); Other split into Training School and Treasure Hunt; Event quests (33 downloadable, not in ISO) validated against distribution file + wiki
 - [x] Quest validation vs ISO `DATA.BIN` string table (`Mountain Herb Picking` at `0x13E…`, `Training`/`Treasure` labels); total 559 base quests match retail
 - [x] Fixed 138 item sell prices vs game-extracted DB (Thawing Agent 100→10 etc.)
-- [x] Wings reclassified Ammo → Material; header artifact removed
-   - [x] `docs/fidelity-report.md` — single merged report: defense/rarity/slots 100%, weapons per-type 100%, monster catalog 83, quest hubs 610 (ISO string table + guild rank fix + kit Event/Challenge) vs retail UMD + game-extracted DB
+- [x] Item wings/ammo classified per ISO `icon` (Bowgun S + Coatings + Husks → `Ammo`, with `subcategory`); header artifact removed
+   - [x] `docs/fidelity-report.md` — single merged report: defense/rarity/slots 100%, weapons per-type 100%, monster catalog 83, quest hubs 610 (ISO string table + guild rank fix + kit Event/Challenge) vs retail UMD + game-extracted DB + item taxonomy/combine Book order
 
 ### Backend (Rust / Tauri)
-- [x] `ass.rs`, `commands/mod.rs`, `db/{mod,schema,queries,seed}.rs`
-- [x] Tauri commands: `get_games`, `get_monsters`, `get_weapons`, `get_armor`, `get_armor_sets`, `get_armor_set_detail`, `get_quests`, `get_items`, `get_skills`, `get_decorations`, list + detail variants, `search_armor_sets`, `global_search`
+- [x] `ass.rs`, `commands/mod.rs`, `db/{mod,schema,queries,seed}.rs` — `items.subcategory`, `item_combine.combine_type/chance` migrations + `backfill_item_categories`
+- [x] Tauri commands: `get_games`, `get_monsters`, `get_weapons`, `get_armor`, `get_armor_sets`, `get_armor_set_detail`, `get_quests`, `get_items`, `get_skills`, `get_decorations`, `get_combinations` (Book order), list + detail variants (`get_item_detail` with `subcategory` + `recipes` with `combine_type`/`chance`), `search_armor_sets`, `global_search`
 
 ### Build
 - [x] `cargo build` — clean (non-blocking warnings)

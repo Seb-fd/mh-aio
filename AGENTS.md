@@ -28,13 +28,13 @@ There are **no lint, typecheck, format, or test scripts** defined in `package.js
 
 SQLite via `rusqlite` with bundled feature. Schema defined in `src-tauri/src/db/schema.rs`. WAL mode enabled. DB path: `{app_data_dir}/mh-aio.db`. Schema created via `CREATE TABLE IF NOT EXISTS`.
 
-**Migrations**: No framework. `apply_migrations()` in `schema.rs` uses `ALTER TABLE ... ADD COLUMN` with `pragma_table_info` check. New tables (e.g. `weapon_materials`, `armor_materials`, `item_combine`) are picked up automatically on next run since `CREATE TABLE IF NOT EXISTS` is idempotent.
+**Migrations**: No framework. `apply_migrations()` in `schema.rs` uses `ALTER TABLE ... ADD COLUMN` with `pragma_table_info` check. New tables (e.g. `weapon_materials`, `armor_materials`, `item_combine`) are picked up automatically on next run since `CREATE TABLE IF NOT EXISTS` is idempotent. Recent migrations: `items.subcategory TEXT` (item taxonomy), `item_combine.combine_type TEXT` + `chance INTEGER` (Normal/Alchemy/Treasure).
 
-**Seed**: `src-tauri/src/db/seed.rs` runs on startup. Uses `INSERT OR IGNORE` everywhere — fully idempotent for both fresh installs and upgrades from older schemas. `backfill_descriptions` and `backfill_costs` UPDATE existing rows that have NULL fields.
+**Seed**: `src-tauri/src/db/seed.rs` runs on startup. Uses `INSERT OR IGNORE` everywhere — fully idempotent for both fresh installs and upgrades from older schemas. `backfill_descriptions` and `backfill_item_categories` UPDATE existing rows where `category`/`subcategory` changed (e.g. `Power Juice Material→Consumable/Buff`, `Huskberry Consumable→Ammo/Husk`). Current MH2G coverage: **1083 items fully sourced** (`item_sources` 12,751 rows: `gather/mining/bug/fish` from `maps.json`, `shop` consolidated 5 merchants, `trade` Veggie Elder + Trenya Boat + Pokke Points, `farm` Pokke Farm spots/trees, `small monsters` via `Monsters/monsters-material.json`, plus `monster_drops`/`quest_rewards`), **432 combine recipes** (147 Normal + 18 Alchemy + 7 Treasure) with `combine_type`/`chance` and game-book order (`ORDER BY item_combine.id`, ISO `Book of Combos` + `Alchemy Guide`). Categories re-derived from ISO `tmp_mhfu_upstream/items.json` `icon` + English verb: `Consumable 91 / Material 913 / Ammo 79` with `subcategory` (`Recovery, Buff, Food, Charm, Husk, Coating, Ore, Monster Material`, etc.; `Powercharm/Powertalon` → `Consumable • Charm`, `Huskberry/Sm Bone Husk` → `Ammo • Husk`). All scripts in `scripts/` are idempotent generators (`generate_item_sources.py`, `fix_item_categories.py`, `regen_combine.py`).
 
 ## Game routing
 
-Routes use `[game]` param with game IDs: `mhw`, `mhr`, `mhwilds`, `mhp3rd`, `mh2g`. Game definitions live in `src/lib/stores/game.ts` (also persists selection to localStorage). Each `[game]/` sub-route covers: monsters, weapons, armor, quests, items, skills, builds. **Detail routes**: `[game]/monsters/[id]`, `[game]/weapons/[id]`, etc.
+Routes use `[game]` param with game IDs: `mhw`, `mhr`, `mhwilds`, `mhp3rd`, `mh2g`. Game definitions live in `src/lib/stores/game.ts` (also persists selection to localStorage). Each `[game]/` sub-route covers: monsters, weapons, armor, quests, items, skills, builds. **Detail routes**: `[game]/monsters/[id]`, `[game]/weapons/[id]`, etc. **Items sub-routes**: `[game]/items` (list with `category • subcategory` + `Chest` game order) + `[game]/items/combine` (global combinations list, single view with `Normal/Alchemy/Treasure` badge/filter + `success %` + game-book order) + `[game]/items/[id]` (detail with clickable combine recipe `A x1 + B x1 = Result x1 • 90%`).
 
 ## Theming
 
@@ -48,8 +48,8 @@ Ornament patterns (repeating-linear-gradient backgrounds): `medieval` (MHP2G), `
 
 Registered in `src-tauri/src/lib.rs` via `tauri::generate_handler!`. Defined in `src-tauri/src/commands/mod.rs`. All return `Result<T, String>`.
 
-- List: `get_games`, `get_monsters`, `get_weapons`, `get_armor`, `get_quests`, `get_items`, `get_skills` — each takes `game_id: i32`.
-- Detail: `get_monster_detail`, `get_weapon_detail`, `get_armor_detail`, `get_quest_detail`, `get_item_detail`, `get_skill_detail` — each takes `id: i32` and returns an Option<T> with joined material/source data.
+- List: `get_games`, `get_monsters`, `get_weapons`, `get_armor`, `get_quests`, `get_items`, `get_skills`, `get_combinations` — each takes `game_id: i32` (`get_combinations` returns `CombineView` with `combine_type`/`chance` + `components`, ordered by `item_combine.id` = Book order).
+- Detail: `get_monster_detail`, `get_weapon_detail`, `get_armor_detail`, `get_quest_detail`, `get_item_detail` (now with `subcategory` + `combine_type`/`chance` in `recipes`), `get_skill_detail` — each takes `id: i32` and returns an Option<T> with joined material/source data.
 - Legacy: `greet(name: &str) -> String`.
 
 ## Frontend API wrapper

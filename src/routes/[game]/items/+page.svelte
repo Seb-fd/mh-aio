@@ -58,7 +58,15 @@
 
 <div class="max-w-6xl mx-auto">
   <div class="mb-6">
-    <h1 class="text-2xl font-bold text-gray-100">Items</h1>
+    <div class="flex items-center gap-3">
+      <h1 class="text-2xl font-bold text-gray-100">Items</h1>
+      <button
+        onclick={() => { if (game) goto(`/${game.id}/items/combine`); }}
+        class="ml-2 text-xs px-3 py-1 rounded-full border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] text-gray-300 hover:border-[var(--theme-accent)] hover:text-[var(--theme-accent)] transition-colors"
+      >
+        🧪 Combinations →
+      </button>
+    </div>
     <p class="text-sm text-gray-500 mt-1">
       {#if game}
         {game.shortName} · {items.length} items · Materials, consumables and locations
@@ -117,7 +125,7 @@
               <div class="min-w-0">
                 <p class="font-medium text-sm text-gray-100 truncate">{item.name}</p>
                 <p class="text-[10px] uppercase tracking-wide text-gray-500 mt-0.5">
-                  {item.category ?? 'Unknown'} · R{item.rarity ?? 1}
+                  {item.category ?? 'Unknown'}{item.subcategory ? ` • ${item.subcategory}` : ''} · R{item.rarity ?? 1}
                 </p>
               </div>
               {#if item.sell_price !== null && item.sell_price !== undefined}

@@ -8,9 +8,10 @@ A comprehensive, cross-platform desktop encyclopedia and toolkit for Monster Hun
 
 ## Features
 
-- **Multi-game support** — switch between MHW, MHR, MHWilds, MHP3rd, MH2G
-   - **Full MHP2G/MH2G dataset** — 2075 armor pieces, 1083 items, 83 monsters (54 Large + 25 Small + 4 Giant), 1500 weapons (11 types), 610 quests (Village/Guild/Training/Treasure/Event/Challenge), ~99 skill families (214 abilities), 192 decorations — faithful to the retail UMD (`docs/fidelity-report.md`)
-- **Complete entity browser** — monsters, weapons, armor, quests, items, skills, decorations, armor sets — all in game-faithful order and hub order
+ - **Multi-game support** — switch between MHW, MHR, MHWilds, MHP3rd, MH2G
+   - **Full MHP2G/MH2G dataset** — 2075 armor pieces, 1083 items (fully sourced: every gathering node, shop, Veggie Elder/Trenya trade, Pokke Farm, small-monster drops verified vs ISO), 83 monsters (54 Large + 25 Small + 4 Giant), 1500 weapons (11 types), 610 quests (Village/Guild/Training/Treasure/Event/Challenge), ~99 skill families (214 abilities), 192 decorations — faithful to the retail UMD (`docs/fidelity-report.md`)
+- **Complete entity browser** — monsters, weapons, armor, quests, items (with `category • subcategory` + `Charm` + `Ammo/Husk` ISO taxonomy, `Chest` order), skills, decorations, armor sets — all in game-faithful order and hub order
+- **Combinations** — global list `Items → Combinations` (single view, `Normal/Alchemy/Treasure` badge + `success %` + Book order) and clickable recipes in item detail (`Godbug x1 + Wyvern Fang x1 = Life Crystals x1 • 90%`)
 - **Armor Set Solver (Athena's A.S.S. port)** — pick up to 5 skills and find every armor set that activates them, including recommended jewels, spare slots, resists and defense. Full parity: hunter type (Blademaster/Gunner), gender, HR/Elder rank gate, weapon slots, piercings, Torso Inc, bad-skill handling, 1000-result limit and sort-by.
 - **Armor sets view** — armors grouped into faithful sets (full 5/10-piece sets or singletons like Black Legs), grouped by `derive_set_name` to match the game's smith; browser filters: `Both | Male | Female` + `All | Blademaster | Gunner` (head Blademaster = higher defense) + rank
 - **Monster → dedicated gear** — per-monster armor sets (≥40% of the set's materials come from that monster), rank-filtered, with a secondary "Uses 1 Material" view; subspecies (Azure/Silver Rathalos) kept separate; monster list in Hunter's Notes order (Felyne 1 … White Fatalis 83) with Large/Small/All selector
@@ -135,7 +136,7 @@ mh-aio/
 │   ├── app.html
 │   ├── app.css                       # Tailwind + themed-bg utilities per game
 │   ├── lib/
-│   │   ├── api.ts                    # Typed invoke() wrapper
+│   │   ├── api.ts                    # Typed invoke() wrapper (incl. CombineView)
 │   │   ├── components/
 │   │   │   ├── ui/                   # shadcn-svelte primitives
 │   │   │   ├── game-selector.svelte
@@ -145,7 +146,7 @@ mh-aio/
 │   │   │   ├── back-button.svelte    # history.back()
 │   │   │   ├── detail-header.svelte  # Detail page header
 │   │   │   ├── material-list.svelte  # Crafting materials
-│   │   │   └── drop-table.svelte     # Drop sources w/ probability bars
+│   │   │   └── drop-table.svelte     # Drop sources w/ probability bars (Gathering/Shop/Veggie/Trenya)
 │   │   ├── stores/
 │   │   │   └── game.ts               # 5 games + GameTheme interface
 │   │   └── utils/index.ts            # cn() helper
@@ -158,23 +159,27 @@ mh-aio/
 │           ├── weapons/              # list + [id]
 │           ├── armor/                # list, sets/[id], [id]
 │           ├── quests/               # list + [id]
-│           ├── items/                # list + [id]
+│           ├── items/                # list + combine + [id] (category • subcategory, Chest order, clickable recipes)
 │           ├── skills/               # list + [id]
 │           ├── decorations/          # list + [id]
 │           └── builds/               # Armor Set Search (ASS port)
 ├── docs/
 │   └── fidelity-report.md            # Data vs retail UMD audit
+├── scripts/                          # Idempotent generators (mhfu-db + ISO)
+│   ├── generate_item_sources.py      # item_sources 12k+ rows (maps/shop/trade/farm/small monsters)
+│   ├── fix_item_categories.py        # category/subcategory from icon + ISO
+│   └── regen_combine.py              # item_combine 432 rec. with type/chance + Book order
 ├── src-tauri/                        # Backend (Rust)
 │   ├── src/
 │   │   ├── main.rs
-│   │   ├── lib.rs                    # Tauri commands registered
+│   │   ├── lib.rs                    # Tauri commands registered (incl. get_combinations)
 │   │   ├── ass.rs                    # Armor Set Search solver (ASS port)
 │   │   ├── commands/mod.rs
 │   │   └── db/
 │   │       ├── mod.rs                # Database struct (Mutex<Connection>)
-│   │       ├── schema.rs             # Tables + ALTER TABLE migrations
-│   │       ├── queries.rs            # List/detail/search queries w/ JOINs
-│   │       └── seed.rs               # Idempotent MH2G seed
+│   │       ├── schema.rs             # Tables + ALTER TABLE migrations (items.subcategory, item_combine.type/chance)
+│   │       ├── queries.rs            # List/detail/search queries w/ JOINs (CombineView, game order)
+│   │       └── seed.rs               # Idempotent MH2G seed (12k+ sources, 432 combines, backfill categories)
 │   ├── Cargo.toml
 │   └── tauri.conf.json
 ├── AGENTS.md

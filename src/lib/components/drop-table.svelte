@@ -18,6 +18,9 @@
     gather: { label: 'Gathering', icon: '🧺', color: 'text-emerald-400' },
     bug: { label: 'Bug', icon: '🐛', color: 'text-green-400' },
     fish: { label: 'Fishing', icon: '🎣', color: 'text-cyan-400' },
+    shop: { label: 'Shop', icon: '🛒', color: 'text-cyan-400' },
+    trade: { label: 'Trade', icon: '👴', color: 'text-amber-400' },
+    farm: { label: 'Farm', icon: '🌾', color: 'text-green-400' },
   };
 
   const rankStyle: Record<string, string> = {
@@ -88,6 +91,11 @@
     const drops = sources.filter(s => s.source_type === 'drop' || s.source_type === 'shiny').sort(sortByRankProb);
     const gathering = sources.filter(s => ['gather','mining','bug','fish'].includes(s.source_type)).sort(sortByRankProb);
     const quests = sources.filter(s => s.source_type === 'quest_reward').sort(sortByRankProb);
+    const shops = sources.filter(s => s.source_type === 'shop').sort(sortByRankProb);
+    const tradesVeggie = sources.filter(s => s.source_type === 'trade' && (s.location?.includes('Veggie Elder') ?? false)).sort(sortByRankProb);
+    const tradesTrenya = sources.filter(s => s.source_type === 'trade' && (s.location?.includes('Trenya') ?? false)).sort(sortByRankProb);
+    const tradesOther = sources.filter(s => s.source_type === 'trade' && !s.location?.includes('Veggie Elder') && !s.location?.includes('Trenya')).sort(sortByRankProb);
+    const farms = sources.filter(s => s.source_type === 'farm').sort(sortByRankProb);
 
     const out: Section[] = [];
     if (carveBody.length) out.push({ key: 'carve_body', title: 'Carve', icon: '⚔️', color: 'text-red-400', items: carveBody });
@@ -96,9 +104,14 @@
     if (captures.length) out.push({ key: 'capture', title: 'Capture', icon: '🪤', color: 'text-emerald-400', items: captures });
     if (drops.length) out.push({ key: 'drop', title: 'Shiny Drop', icon: '✨', color: 'text-yellow-400', items: drops });
     if (gathering.length) out.push({ key: 'gathering', title: 'Gathering', icon: '🧺', color: 'text-emerald-400', items: gathering });
+    if (shops.length) out.push({ key: 'shop', title: 'Shop (Consolidated)', icon: '🛒', color: 'text-cyan-400', items: shops });
+    if (tradesVeggie.length) out.push({ key: 'trade_veggie', title: 'Veggie Elder Trade', icon: '👴', color: 'text-amber-400', items: tradesVeggie });
+    if (tradesTrenya.length) out.push({ key: 'trade_trenya', title: 'Trenya Boat Trade', icon: '⛵', color: 'text-sky-400', items: tradesTrenya });
+    if (tradesOther.length) out.push({ key: 'trade_other', title: 'Trade', icon: '🤝', color: 'text-amber-400', items: tradesOther });
+    if (farms.length) out.push({ key: 'farm', title: 'Pokke Farm', icon: '🌾', color: 'text-green-400', items: farms });
     if (quests.length) out.push({ key: 'quest', title: 'Quest Rewards', icon: '📜', color: 'text-blue-400', items: quests });
     // Fallback: any remaining types not covered (e.g., future types) go last
-    const covered = new Set([...carveBody, ...carveTail, ...breaks, ...captures, ...drops, ...gathering, ...quests]);
+    const covered = new Set([...carveBody, ...carveTail, ...breaks, ...captures, ...drops, ...gathering, ...shops, ...tradesVeggie, ...tradesTrenya, ...tradesOther, ...farms, ...quests]);
     const remaining = sources.filter(s => !covered.has(s)).sort(sortByRankProb);
     if (remaining.length) out.push({ key: 'other', title: 'Other', icon: '❓', color: 'text-gray-400', items: remaining });
     return out;

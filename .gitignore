@@ -43,3 +43,7 @@ Thumbs.db
 
 # Codebase memory / Local config
 .codebase-memory/
+
+# Dev-only data generation scripts (read external mhfu-db upstream; not needed at runtime)
+scripts/
+tmp_mhfu_upstream/

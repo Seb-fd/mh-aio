@@ -302,6 +302,7 @@ pub struct Item {
     pub game_id: i32,
     pub name: String,
     pub category: Option<String>,
+    pub subcategory: Option<String>,
     pub rarity: Option<i32>,
     pub sell_price: Option<i32>,
     pub buy_price: Option<i32>,
@@ -315,6 +316,7 @@ pub struct ItemDetail {
     pub game_id: i32,
     pub name: String,
     pub category: Option<String>,
+    pub subcategory: Option<String>,
     pub rarity: Option<i32>,
     pub sell_price: Option<i32>,
     pub buy_price: Option<i32>,
@@ -345,6 +347,19 @@ pub struct CombineRecipe {
     pub component_name: String,
     pub quantity: i32,
     pub result_quantity: i32,
+    pub combine_type: String,
+    pub chance: Option<i32>,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct CombineView {
+    pub result_item_id: i32,
+    pub result_name: String,
+    pub category: Option<String>,
+    pub rarity: Option<i32>,
+    pub combine_type: String,
+    pub chance: Option<i32>,
+    pub components: Vec<CombineRecipe>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -1300,7 +1315,7 @@ pub fn get_items_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Item>> {
     // Chest order: faithful to PSP item box (hex ID order) verified via ISO DATA.BIN file 15 string table
     // Alternative sorts handled client-side; keep DB default as game chest.
     let mut stmt = conn.prepare(
-        "SELECT id, game_id, name, category, rarity, sell_price, buy_price, description, language
+        "SELECT id, game_id, name, category, subcategory, rarity, sell_price, buy_price, description, language
          FROM items WHERE game_id = ?1 ORDER BY id",
     )?;
 
@@ -1311,11 +1326,12 @@ pub fn get_items_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Item>> {
                 game_id: row.get(1)?,
                 name: row.get(2)?,
                 category: row.get(3)?,
-                rarity: row.get(4)?,
-                sell_price: row.get(5)?,
-                buy_price: row.get(6)?,
-                description: row.get(7)?,
-                language: row.get(8)?,
+                subcategory: row.get(4)?,
+                rarity: row.get(5)?,
+                sell_price: row.get(6)?,
+                buy_price: row.get(7)?,
+                description: row.get(8)?,
+                language: row.get(9)?,
             })
         })?
         .filter_map(|r| r.ok())
@@ -1325,9 +1341,9 @@ pub fn get_items_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Item>> {
 }
 
 pub fn get_item_detail(conn: &Connection, id: i32) -> Result<Option<ItemDetail>> {
-    let row: Option<(i32, i32, String, Option<String>, Option<i32>, Option<i32>, Option<i32>, Option<String>, String)> = conn
+    let row: Option<(i32, i32, String, Option<String>, Option<String>, Option<i32>, Option<i32>, Option<i32>, Option<String>, String)> = conn
         .query_row(
-            "SELECT id, game_id, name, category, rarity, sell_price, buy_price, description, language
+            "SELECT id, game_id, name, category, subcategory, rarity, sell_price, buy_price, description, language
              FROM items WHERE id = ?1",
             params![id],
             |row| {
@@ -1341,12 +1357,13 @@ pub fn get_item_detail(conn: &Connection, id: i32) -> Result<Option<ItemDetail>>
                     row.get(6)?,
                     row.get(7)?,
                     row.get(8)?,
+                    row.get(9)?,
                 ))
             },
         )
         .optional()?;
 
-    let Some((id, game_id, name, category, rarity, sell_price, buy_price, description, language)) = row else {
+    let Some((id, game_id, name, category, subcategory, rarity, sell_price, buy_price, description, language)) = row else {
         return Ok(None);
     };
 
@@ -1358,6 +1375,7 @@ pub fn get_item_detail(conn: &Connection, id: i32) -> Result<Option<ItemDetail>>
         game_id,
         name,
         category,
+        subcategory,
         rarity,
         sell_price,
         buy_price,
@@ -1425,10 +1443,11 @@ fn get_item_sources(conn: &Connection, item_id: i32) -> Result<Vec<ItemSource>> 
 
 fn get_item_combine_recipes(conn: &Connection, item_id: i32) -> Result<Vec<CombineRecipe>> {
     let mut stmt = conn.prepare(
-        "SELECT ic.component_item_id, i.name, ic.quantity, ic.result_quantity
+        "SELECT ic.component_item_id, i.name, ic.quantity, ic.result_quantity, COALESCE(ic.combine_type,'normal'), ic.chance
          FROM item_combine ic
          JOIN items i ON i.id = ic.component_item_id
-         WHERE ic.result_item_id = ?1",
+         WHERE ic.result_item_id = ?1
+         ORDER BY ic.id",
     )?;
 
     let recipes = stmt
@@ -1438,12 +1457,74 @@ fn get_item_combine_recipes(conn: &Connection, item_id: i32) -> Result<Vec<Combi
                 component_name: row.get(1)?,
                 quantity: row.get(2)?,
                 result_quantity: row.get(3)?,
+                combine_type: row.get(4)?,
+                chance: row.get(5)?,
             })
         })?
         .filter_map(|r| r.ok())
         .collect();
 
     Ok(recipes)
+}
+
+pub fn get_combinations_by_game(conn: &Connection, game_id: i32) -> Result<Vec<CombineView>> {
+    // Game order: by item_combine.id (insertion order = book order from ISO, verified via upstream)
+    let mut stmt = conn.prepare(
+        "SELECT ic.result_item_id, ri.name, ri.category, ri.rarity, COALESCE(ic.combine_type,'normal'), ic.chance, ic.component_item_id, ci.name, ic.quantity, ic.result_quantity, ic.id
+         FROM item_combine ic
+         JOIN items ri ON ri.id = ic.result_item_id
+         JOIN items ci ON ci.id = ic.component_item_id
+         WHERE ri.game_id = ?1
+         ORDER BY ic.id",
+    )?;
+    let mut map: std::collections::BTreeMap<i32, CombineView> = std::collections::BTreeMap::new();
+    let mut order: Vec<i32> = Vec::new();
+    let rows = stmt.query_map(params![game_id], |row| {
+        Ok((
+            row.get::<_, i32>(0)?,
+            row.get::<_, String>(1)?,
+            row.get::<_, Option<String>>(2)?,
+            row.get::<_, Option<i32>>(3)?,
+            row.get::<_, String>(4)?,
+            row.get::<_, Option<i32>>(5)?,
+            row.get::<_, i32>(6)?,
+            row.get::<_, String>(7)?,
+            row.get::<_, i32>(8)?,
+            row.get::<_, i32>(9)?,
+        ))
+    })?;
+    for r in rows {
+        let (rid, rname, cat, rar, ctype, chance, cid, cname, qty, rqty) = r?;
+        let entry = map.entry(rid).or_insert_with(|| {
+            order.push(rid);
+            CombineView {
+                result_item_id: rid,
+                result_name: rname.clone(),
+                category: cat.clone(),
+                rarity: rar,
+                combine_type: ctype.clone(),
+                chance,
+                components: Vec::new(),
+            }
+        });
+        // keep first type/chance (all components of same result share same)
+        entry.components.push(CombineRecipe {
+            component_item_id: cid,
+            component_name: cname,
+            quantity: qty,
+            result_quantity: rqty,
+            combine_type: ctype,
+            chance,
+        });
+    }
+    // Return in game order (by first appearance)
+    let mut out: Vec<CombineView> = Vec::new();
+    for rid in order {
+        if let Some(v) = map.remove(&rid) {
+            out.push(v);
+        }
+    }
+    Ok(out)
 }
 
 pub fn get_skills_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Skill>> {

@@ -163,6 +163,7 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             game_id INTEGER REFERENCES games(id),
             name TEXT NOT NULL,
             category TEXT,
+            subcategory TEXT,
             rarity INTEGER,
             sell_price INTEGER,
             buy_price INTEGER,
@@ -276,7 +277,9 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             result_item_id INTEGER REFERENCES items(id),
             component_item_id INTEGER REFERENCES items(id),
             quantity INTEGER NOT NULL,
-            result_quantity INTEGER NOT NULL DEFAULT 1
+            result_quantity INTEGER NOT NULL DEFAULT 1,
+            combine_type TEXT DEFAULT 'normal',
+            chance INTEGER
         );
 
         -- Indexes
@@ -344,6 +347,10 @@ fn apply_migrations(conn: &Connection) -> Result<()> {
     add_column_if_missing(conn, "items", "buy_price", "INTEGER")?;
     add_column_if_missing(conn, "armor", "gender", "TEXT")?;
     add_column_if_missing(conn, "quests", "name_original", "TEXT")?;
+    add_column_if_missing(conn, "item_combine", "combine_type", "TEXT")?;
+    add_column_if_missing(conn, "item_combine", "chance", "INTEGER")?;
+    let _ = conn.execute("UPDATE item_combine SET combine_type = 'normal' WHERE combine_type IS NULL", []);
+    add_column_if_missing(conn, "items", "subcategory", "TEXT")?;
     Ok(())
 }
 

@@ -1,10 +1,13 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import { goto } from '$app/navigation';
   import { api, type ItemDetail } from '$lib/api';
   import DetailHeader from '$lib/components/detail-header.svelte';
   import DropTable from '$lib/components/drop-table.svelte';
+  import { selectedGame } from '$lib/stores/game';
 
   const id = $derived(Number($page.params.id));
+  const game = $derived($selectedGame);
   let item = $state<ItemDetail | null>(null);
   let loading = $state(true);
   let error = $state<string | null>(null);
@@ -24,6 +27,11 @@
         loading = false;
       });
   });
+
+  function goToItem(itemId: number) {
+    if (!game) return;
+    goto(`/${game.id}/items/${itemId}`);
+  }
 
   const categoryColor: Record<string, string> = {
     Consumable: 'bg-emerald-900/40 text-emerald-300',
@@ -49,10 +57,11 @@
   {:else}
     <DetailHeader
       title={item.name}
-      subtitle={item.category ?? ''}
-      icon={item.category === 'Consumable' ? '🧪' : '📦'}
+      subtitle={item.subcategory ? `${item.category ?? ''} • ${item.subcategory}` : (item.category ?? '')}
+      icon={item.category === 'Ammo' ? '🏹' : item.category === 'Consumable' ? '🧪' : item.subcategory === 'Charm' ? '✨' : '📦'}
       tags={[
         { label: item.category ?? 'Unknown', color: categoryColor[item.category ?? ''] ?? 'bg-gray-800 text-gray-300' },
+        ...(item.subcategory && item.subcategory !== item.category ? [{ label: item.subcategory, color: 'bg-[var(--theme-bg-elevated)] text-gray-300 border-[var(--theme-border)]' }] : []),
         { label: `Rarity ${item.rarity ?? 1}`, color: 'bg-[var(--theme-bg-elevated)] text-gray-300 border-[var(--theme-border)]' },
       ]}
     />
@@ -75,17 +84,32 @@
 
     {#if item.recipes.length > 0}
       <section class="mb-8">
-        <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">Combination Recipe</h2>
+        <div class="flex items-center gap-2 mb-3">
+          <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Combination Recipe</h2>
+          {#if item.recipes[0]}
+            <span class="text-[10px] px-2 py-0.5 rounded-full border font-semibold
+              {item.recipes[0].combine_type === 'alchemy' ? 'bg-amber-900/30 text-amber-300 border-amber-800' : item.recipes[0].combine_type === 'treasure' ? 'bg-purple-900/30 text-purple-300 border-purple-800' : 'bg-sky-900/30 text-sky-300 border-sky-800'}">
+              {item.recipes[0].combine_type === 'alchemy' ? '⚗️ Alchemy' : item.recipes[0].combine_type === 'treasure' ? '💎 Treasure' : '🧪 Normal'}
+            </span>
+            {#if item.recipes[0].chance != null}
+              <span class="text-[10px] px-1.5 py-0.5 rounded border bg-[var(--theme-bg-elevated)] text-gray-400 border-[var(--theme-border)]">{item.recipes[0].chance}% success</span>
+            {/if}
+          {/if}
+        </div>
         <div class="rounded-lg border themed-card p-4">
           <div class="flex flex-wrap items-center gap-2">
             {#each item.recipes as recipe, i}
               {#if i > 0}
                 <span class="text-gray-600 text-lg">+</span>
               {/if}
-              <div class="px-3 py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] flex items-center gap-2">
-                <span class="text-sm text-gray-200">{recipe.component_name}</span>
+              <button
+                onclick={() => goToItem(recipe.component_item_id)}
+                class="px-3 py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] flex items-center gap-2 hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-surface)] transition-colors cursor-pointer text-left"
+                title="Go to {recipe.component_name}"
+              >
+                <span class="text-sm text-gray-200 hover:text-[var(--theme-accent)] transition-colors">{recipe.component_name}</span>
                 <span class="text-xs font-semibold" style="color: var(--theme-accent);">x{recipe.quantity}</span>
-              </div>
+              </button>
             {/each}
             <span class="text-gray-600 text-lg">=</span>
             <div class="px-3 py-1.5 rounded-md flex items-center gap-2" style="background-color: color-mix(in oklab, var(--theme-accent) 15%, var(--theme-bg-elevated)); border: 1px solid color-mix(in oklab, var(--theme-accent) 40%, transparent);">
@@ -93,6 +117,9 @@
               <span class="text-xs font-semibold" style="color: var(--theme-accent);">x{item.recipes[0]?.result_quantity ?? 1}</span>
             </div>
           </div>
+          {#if item.recipes[0]?.combine_type === 'alchemy'}
+            <p class="text-[11px] text-amber-400/70 mt-2">※ Alchemy — requires Alchemy Guide and Books 1-5 (progressively unlocks alchemy recipes)</p>
+          {/if}
         </div>
       </section>
     {/if}

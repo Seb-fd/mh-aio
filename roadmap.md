@@ -44,9 +44,9 @@ mh-aio/
 │   │   │   └── mod.rs            # List + detail commands
 │   │   └── db/
 │   │       ├── mod.rs            # Database struct (Mutex<Connection>)
-│   │       ├── schema.rs         # 13 tables + ALTER TABLE migrations
-│   │       ├── queries.rs        # List + detail queries with JOINs
-│   │       └── seed.rs           # Idempotent seed (INSERT OR IGNORE)
+│   │       ├── schema.rs         # Tables (items + item_sources + item_combine + junctions) + ALTER TABLE migrations
+│   │       ├── queries.rs        # List + detail queries with JOINs (CombineView, game order)
+│   │       └── seed.rs           # Idempotent seed (INSERT OR IGNORE) + category backfill
 │   ├── Cargo.toml                # crate-type = ["lib", "cdylib", "staticlib"]
 │   └── tauri.conf.json
 ├── src/                          # Frontend Svelte 5
@@ -90,7 +90,7 @@ mh-aio/
 
 ---
 
-## Database Schema (13 tables)
+## Database Schema (current tables)
 
 ```sql
 -- Games
@@ -200,14 +200,16 @@ CREATE TABLE quest_rewards (
     condition TEXT
 );
 
--- Items
+-- Items (category + subcategory per ISO item-taxonomy)
 CREATE TABLE items (
     id INTEGER PRIMARY KEY,
     game_id INTEGER REFERENCES games(id),
     name TEXT NOT NULL,
-    category TEXT,
+    category TEXT,        -- Consumable / Material / Ammo (ISO-derived)
+    subcategory TEXT,     -- Recovery / Buff / Food / Charm / Husk / Coating / Ore / Monster Material ...
     rarity INTEGER,
     sell_price INTEGER,
+    buy_price INTEGER,
     description TEXT,
     language TEXT DEFAULT 'en'
 );
@@ -215,7 +217,7 @@ CREATE TABLE items (
 CREATE TABLE item_sources (
     id INTEGER PRIMARY KEY,
     item_id INTEGER REFERENCES items(id),
-    source_type TEXT,   -- carve / quest_reward / mining / gather / shiny / bug / fish
+    source_type TEXT,   -- gather / mining / bug / fish / shop / trade / farm / carve / capture / drop / break / quest_reward
     source_id INTEGER,
     quantity_min INTEGER,
     quantity_max INTEGER,
@@ -223,6 +225,19 @@ CREATE TABLE item_sources (
     location TEXT,
     conditions TEXT
 );
+
+-- Item combination recipes (Book order; combine_type = normal/alchemy/treasure)
+CREATE TABLE item_combine (
+    id INTEGER PRIMARY KEY,
+    result_item_id INTEGER REFERENCES items(id),
+    component_item_id INTEGER REFERENCES items(id),
+    quantity INTEGER NOT NULL,
+    result_quantity INTEGER NOT NULL DEFAULT 1,
+    combine_type TEXT DEFAULT 'normal',
+    chance INTEGER
+);
+
+-- Crafting materials junction tables (weapon_materials, weapon_craft, armor_materials, decoration_materials, monster_equipment)
 
 -- Skills
 CREATE TABLE skills (
@@ -260,14 +275,6 @@ CREATE TABLE armor_materials (
     item_id INTEGER REFERENCES items(id),
     quantity INTEGER NOT NULL
 );
-
-CREATE TABLE item_combine (
-    id INTEGER PRIMARY KEY,
-    result_item_id INTEGER REFERENCES items(id),
-    component_item_id INTEGER REFERENCES items(id),
-    quantity INTEGER NOT NULL,
-    result_quantity INTEGER NOT NULL DEFAULT 1
-);
 ```
 
 ---
@@ -276,10 +283,10 @@ CREATE TABLE item_combine (
 
 ### Current Focus
 1. **Monster Hunter 2ndG / Freedom Unite** (2008) — MHP2G, **fully populated and verified**
-   - 2075 armor, 1083 items, 83 monsters (54 Large + 25 Small + 4 Giant), 1500 weapons (11 types), 610 quests (Village/Guild/Training/Treasure/Event/Challenge), 99 skill families (214 abilities), 192 decorations
-   - Materials, drop sources, combine recipes populated; ordering faithful to UMD (Hunter's Notes, Smith trees, quest hubs)
+   - 2075 armor, **1083 items fully sourced** (12,751 `item_sources` rows + 432 combine recipes), 83 monsters (54 Large + 25 Small + 4 Giant), 1500 weapons (11 types), 610 quests (Village/Guild/Training/Treasure/Event/Challenge), 99 skill families (214 abilities), 192 decorations
+   - Materials, drop sources, combine recipes populated; item taxonomy ISO-derived (`Consumable 91 / Material 913 / Ammo 79` + `subcategory` Charm/Husk/Coating); ordering faithful to UMD (Hunter's Notes, Smith trees, quest hubs, Book of Combos)
    - Data verified against retail UMD and event distribution file (see `docs/fidelity-report.md`)
-   - Armor Set Search (Athena's A.S.S. port) + per-game global search + ordered, filtered browsers (Large/Small, Blademaster/Gunner, Training/Treasure/Event)
+   - Armor Set Search (Athena's A.S.S. port) + per-game global search + ordered, filtered browsers (Large/Small, Blademaster/Gunner, Training/Treasure/Event) + combinations view (Normal/Alchemy/Treasure, `success %`) + clickable recipes
 
 ### Planned
 2. **Monster Hunter World: Iceborne** (2018/2019)
@@ -313,6 +320,9 @@ CREATE TABLE item_combine (
 ### ✅ Phase 2: Data Expansion (MH2G) — DONE
 - [x] Full MHP2G monster/weapon/armor/quest/item/skill/decor set
 - [x] monster_weaknesses + monster_drops + quest_rewards + item_combine
+- [x] **Items fully sourced** (12,751 `item_sources` rows: every gathering node/mining/bug/fish from `maps.json`, 5 merchants consolidated, Veggie Elder + Trenya Boat trades, Pokke Farm spots/trees, small-monster drops) — 1083/1083 covered
+- [x] **Combine recipes** 432 (147 Normal + 18 Alchemy + 7 Treasure) with `chance` + Book order (`get_combinations`, `/items/combine`, clickable `A x1 + B x1 = Result x1 • 90%`)
+- [x] **Item taxonomy ISO-derived** (`Consumable 91 / Material 913 / Ammo 79`, `subcategory` Recovery/Buff/Food/**Charm**/Husk/Coating/Ore/Monster Material) via `fix_item_categories.py`
 - [x] Weapon upgrade paths / evolution trees
 - [x] Armor sets (grouped via `derive_set_name`) + set detail route
 - [x] Data fidelity audit vs retail UMD (`docs/fidelity-report.md`)

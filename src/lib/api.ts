@@ -233,6 +233,7 @@ export interface Item {
   game_id: number;
   name: string;
   category: string | null;
+  subcategory: string | null;
   rarity: number | null;
   sell_price: number | null;
   buy_price: number | null;
@@ -259,6 +260,18 @@ export interface CombineRecipe {
   component_name: string;
   quantity: number;
   result_quantity: number;
+  combine_type: string;
+  chance: number | null;
+}
+
+export interface CombineView {
+  result_item_id: number;
+  result_name: string;
+  category: string | null;
+  rarity: number | null;
+  combine_type: string;
+  chance: number | null;
+  components: CombineRecipe[];
 }
 
 export interface ItemDetail {
@@ -266,6 +279,7 @@ export interface ItemDetail {
   game_id: number;
   name: string;
   category: string | null;
+  subcategory: string | null;
   rarity: number | null;
   sell_price: number | null;
   buy_price: number | null;
@@ -463,4 +477,5 @@ export const api = {
   getDecorationDetail: (id: number) => invoke<DecorationDetail | null>('get_decoration_detail', { id }),
   searchArmorSets: (query: AssQueryInput) => invoke<AssSolutionView[]>('search_armor_sets', { query }),
   globalSearch: (gameId: number, query: string) => invoke<SearchResult[]>('global_search', { gameId, query }),
+  getCombinations: (gameId: number) => invoke<CombineView[]>('get_combinations', { gameId }),
 };

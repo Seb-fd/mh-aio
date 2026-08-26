@@ -12,9 +12,11 @@ pub fn seed(conn: &Connection) -> Result<()> {
     backfill_item_descriptions(conn)?;
     seed_monster_drops(conn)?;
     seed_item_sources_from_drops(conn)?;
+    seed_extra_item_sources(conn)?;
     seed_monster_equipment(conn)?;
     seed_monster_weaknesses(conn)?;
     seed_item_combine(conn)?;
+    seed_extra_item_combine(conn)?;
     seed_weapons(conn)?;
     seed_weapon_materials(conn)?;
     seed_weapon_craft(conn)?;
@@ -131,6 +133,7 @@ struct ItemJson {
     id: i32,
     name: String,
     category: String,
+    subcategory: Option<String>,
     rarity: Option<i32>,
     sell_price: Option<i32>,
     buy_price: Option<i32>,
@@ -141,11 +144,19 @@ fn seed_items(conn: &Connection) -> Result<()> {
     let items: Vec<ItemJson> = serde_json::from_str(json_data)
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
 
-    for it in items {
+    for it in &items {
         conn.execute(
-            "INSERT OR IGNORE INTO items (id, game_id, name, category, rarity, sell_price, buy_price, description, language)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, NULL, 'en')",
-            rusqlite::params![it.id, MH2G, it.name, it.category, it.rarity, it.sell_price, it.buy_price],
+            "INSERT OR IGNORE INTO items (id, game_id, name, category, subcategory, rarity, sell_price, buy_price, description, language)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, NULL, 'en')",
+            rusqlite::params![it.id, MH2G, it.name, it.category, it.subcategory, it.rarity, it.sell_price, it.buy_price],
+        )?;
+    }
+
+    // Backfill for existing DBs where category/subcategory changed (e.g., Power Juice Material→Consumable, Huskberry→Ammo)
+    for it in &items {
+        conn.execute(
+            "UPDATE items SET category = ?1, subcategory = ?2 WHERE id = ?3 AND game_id = 5 AND (category IS NULL OR category != ?1 OR subcategory IS NULL OR subcategory != ?2)",
+            rusqlite::params![it.category, it.subcategory, it.id],
         )?;
     }
 
@@ -181,6 +192,8 @@ struct CombineJson {
     component_item_id: i32,
     quantity: i32,
     result_quantity: i32,
+    combine_type: Option<String>,
+    chance: Option<i32>,
 }
 
 fn seed_item_combine(conn: &Connection) -> Result<()> {
@@ -190,9 +203,9 @@ fn seed_item_combine(conn: &Connection) -> Result<()> {
 
     for rc in recipes {
         conn.execute(
-            "INSERT OR IGNORE INTO item_combine (result_item_id, component_item_id, quantity, result_quantity)
-             VALUES (?1, ?2, ?3, ?4)",
-            rusqlite::params![rc.result_item_id, rc.component_item_id, rc.quantity, rc.result_quantity],
+            "INSERT OR IGNORE INTO item_combine (result_item_id, component_item_id, quantity, result_quantity, combine_type, chance)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6)",
+            rusqlite::params![rc.result_item_id, rc.component_item_id, rc.quantity, rc.result_quantity, rc.combine_type.as_deref().unwrap_or("normal"), rc.chance],
         )?;
     }
 
@@ -258,6 +271,65 @@ fn seed_item_sources_from_drops(conn: &Connection) -> Result<()> {
                monster_id, quantity, quantity, probability
         FROM monster_drops;
     ")?;
+    Ok(())
+}
+
+#[derive(Deserialize)]
+struct ExtraSourceJson {
+    item_id: i32,
+    source_type: String,
+    source_id: Option<i32>,
+    location: Option<String>,
+    probability: Option<f64>,
+    conditions: Option<String>,
+    quantity_min: Option<i32>,
+    quantity_max: Option<i32>,
+}
+
+/// Extended sources: gathering/mining/bug/fish + shop (consolidated) + trade (Veggie Elder + Trenya Boat) + Pokke Farm + small monsters
+/// Data sourced from mhfu-db (Kolyn090/mhfu-db, MIT) verified against MHP2G game assets and ISO DATA.BIN offsets.
+/// Includes maps.json (all gathering nodes), Merchants/*.json (all shops), veggie_elder.json + trenya.json + Farm/* + Monsters/monsters-material.json.
+fn seed_extra_item_sources(conn: &Connection) -> Result<()> {
+    let json_data = include_str!("../../data/mh2g_item_sources_extra.json");
+    let sources: Vec<ExtraSourceJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for s in sources {
+        conn.execute(
+            "INSERT OR IGNORE INTO item_sources (item_id, source_type, source_id, quantity_min, quantity_max, probability, location, conditions)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)",
+            rusqlite::params![
+                s.item_id,
+                s.source_type,
+                s.source_id,
+                s.quantity_min.unwrap_or(1),
+                s.quantity_max.unwrap_or(1),
+                s.probability,
+                s.location,
+                s.conditions
+            ],
+        )?;
+    }
+    Ok(())
+}
+
+#[derive(Deserialize)]
+struct ExtraCombineJson {
+    result_item_id: i32,
+    component_item_id: i32,
+    quantity: i32,
+    result_quantity: i32,
+}
+
+fn seed_extra_item_combine(conn: &Connection) -> Result<()> {
+    let json_data = include_str!("../../data/mh2g_item_combine_extra.json");
+    let recs: Vec<ExtraCombineJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for r in recs {
+        conn.execute(
+            "INSERT OR IGNORE INTO item_combine (result_item_id, component_item_id, quantity, result_quantity) VALUES (?1, ?2, ?3, ?4)",
+            rusqlite::params![r.result_item_id, r.component_item_id, r.quantity, r.result_quantity],
+        )?;
+    }
     Ok(())
 }
 

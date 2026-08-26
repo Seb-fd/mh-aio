@@ -7,7 +7,9 @@
 | Metric | Result |
 |---|---|
 | Armor | 2075 pieces (head/chest/arms/waist/legs), 949 sets |
-| Items | 1083 |
+| Items | 1083 (fully sourced, 12,751 `item_sources` rows + 432 combines) |
+| Item categories | `Consumable 91 / Material 913 / Ammo 79` (67 fixes, `subcategory` Charm/Husk/Coating etc., `Powercharm` → `Consumable • Charm`) |
+| Combine recipes | 432 (147 Normal + 18 Alchemy + 7 Treasure, with `chance` + Book order) |
 | Skill families / abilities | 99 / 214 |
 | Decorations | 192 |
 | Weapons | 1500 (11 types) |
@@ -35,7 +37,7 @@
 ## Armor, Items, Skills, Decorations
 
 - **Armor:** 2075 pieces, 1083 items, 99/214 skills, 192 decorations. Defense/rarity/slots 100% vs retail. Skill points validated; 40 diffs with ASS all favor the DB (ASS has sign errors).
-- **Items:** Chest order faithful to `DATA.BIN` file 15 (`src-tauri/src/db/queries.rs:1264`). 138 sell prices fixed vs game.
+- **Items:** Chest order faithful to `DATA.BIN` file 15 (`src-tauri/src/db/queries.rs:1264`). 138 sell prices fixed vs game. **Taxonomy re-derived from ISO `icon` + verb:** `Consumable 91 / Material 913 / Ammo 79` with `subcategory` (`Recovery, Buff, Food, Charm, Husk, Coating, Ore, Monster Material`; 67 fixes e.g. `Power Juice Material→Consumable/Buff`, `Huskberry Consumable→Ammo/Husk`, `Powercharm/Powertalon` → `Consumable • Charm`). `item_sources` 12,751 rows (gather/mining/bug/fish from `maps.json`, shop 5 merchants consolidated, trade Veggie Elder/Trenya/Pokke Points, farm spots/trees, small monsters via `Monsters/monsters-material.json`, plus `monster_drops`/`quest_rewards`); fully covered 1083/1083. **Combine** 432 recipes (147 Normal + 18 Alchemy + 7 Treasure) with `combine_type`/`chance` and Book order (`ORDER BY item_combine.id`, ISO `Book of Combos` + `Alchemy Guide`), clickable `A x1 + B x1 = Result x1 • 90%` in detail and global list `/items/combine`.
 - **Skills / Decorations:** 99 families, 214 abilities, 192 jewels. `seed.rs:759` aliases `Defence`/`Defense` etc. No mismatches on overlapping decoration slot/points.
 
 `src-tauri/src/ass.rs` isolates the ASS port to the **algorithm only** (equivalence grouping, jewel solver, Torso Inc, bad-skill fix). All gameplay data comes from the retail game. Armor names use the patched English strings (e.g. `Hornet Helm`, `Lava Helm`).
@@ -80,11 +82,11 @@
 ## Notes
 
 - `src-tauri/src/ass.rs` is algorithm-only; no gameplay data is taken from ASS.
-- All `mh2g_*.json` files are loaded idempotently (`INSERT OR IGNORE`, `seed.rs:6`, `clear_mh2g` in FK-safe order). FKs (`weapon_materials`, `weapon_craft`, `armor_materials`, `monster_drops`) have no missing `item_id`.
+- All `mh2g_*.json` files are loaded idempotently (`INSERT OR IGNORE`, `seed.rs:6`, `clear_mh2g` in FK-safe order). FKs (`weapon_materials`, `weapon_craft`, `armor_materials`, `monster_drops`, `item_combine`) have no missing `item_id`. `items.subcategory` and `item_combine.combine_type`/`chance` are added via `apply_migrations()` with `pragma_table_info` checks; `seed_items` also runs a `UPDATE ... WHERE category != ? OR subcategory != ?` backfill (idempotent, keeps existing installs in sync).
 
 ## Recommendation
 
-Keep `mh2g_*.json` as the retail-faithful source. No further DB patch required. Optional follow-up: numeric struct parsing (`attack`, `affinity`, `sharpness`, `slots`) directly from `DATA.BIN` for a field-level audit — not blocking, catalog fidelity already 100%.
+Keep `mh2g_*.json` as the retail-faithful source. Items are now 100% sourced and the category/subcategory taxonomy matches the ISO `icon` system. Optional follow-up: numeric struct parsing (`attack`, `affinity`, `sharpness`, `slots`) directly from `DATA.BIN` for a weapon field-level audit, and decoding the ISO treasure/training-only gathering for a handful of Account items — not blocking, catalog fidelity already 100%.
 
 ## Armor Filtering
 
