@@ -322,7 +322,7 @@ CREATE TABLE armor_materials (
 - [x] monster_weaknesses + monster_drops + quest_rewards + item_combine
 - [x] **Items fully sourced** (12,751 `item_sources` rows: every gathering node/mining/bug/fish from `maps.json`, 5 merchants consolidated, Veggie Elder + Trenya Boat trades, Pokke Farm spots/trees, small-monster drops) — 1083/1083 covered
 - [x] **Combine recipes** 432 (147 Normal + 18 Alchemy + 7 Treasure) with `chance` + Book order (`get_combinations`, `/items/combine`, clickable `A x1 + B x1 = Result x1 • 90%`)
-- [x] **Item taxonomy ISO-derived** (`Consumable 91 / Material 913 / Ammo 79`, `subcategory` Recovery/Buff/Food/**Charm**/Husk/Coating/Ore/Monster Material) via `fix_item_categories.py`
+- [x] **Item taxonomy ISO-derived** (`Consumable 91 / Material 913 / Ammo 79`, `subcategory` Recovery/Buff/Food/**Charm**/Husk/Coating/Ore/Monster Material)
 - [x] Weapon upgrade paths / evolution trees
 - [x] Armor sets (grouped via `derive_set_name`) + set detail route
 - [x] Data fidelity audit vs retail UMD (`docs/fidelity-report.md`)

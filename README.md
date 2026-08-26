@@ -165,10 +165,6 @@ mh-aio/
 │           └── builds/               # Armor Set Search (ASS port)
 ├── docs/
 │   └── fidelity-report.md            # Data vs retail UMD audit
-├── scripts/                          # Idempotent generators (mhfu-db + ISO)
-│   ├── generate_item_sources.py      # item_sources 12k+ rows (maps/shop/trade/farm/small monsters)
-│   ├── fix_item_categories.py        # category/subcategory from icon + ISO
-│   └── regen_combine.py              # item_combine 432 rec. with type/chance + Book order
 ├── src-tauri/                        # Backend (Rust)
 │   ├── src/
 │   │   ├── main.rs
