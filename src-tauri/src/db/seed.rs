@@ -454,6 +454,7 @@ struct WeaponJson {
     upgrade_path: Option<String>,
     description: Option<String>,
     skills: Option<String>,
+    sort_order: Option<i32>,
 }
 
 fn seed_weapons(conn: &Connection) -> Result<()> {
@@ -748,6 +749,7 @@ struct QuestJson {
     time_limit: Option<i32>,
     faints_allowed: Option<i32>,
     is_key_quest: Option<bool>,
+    is_urgent: Option<bool>,
     description: Option<String>,
     client: Option<String>,
     requirements: Option<String>,
@@ -802,7 +804,7 @@ struct QuestRewardJson {
     quest_id: i32,
     item_id: i32,
     quantity: i32,
-    probability: f64,
+    probability: Option<f64>,
     condition: Option<String>,
 }
 
@@ -1223,8 +1225,8 @@ fn seed_mhp3rd_weapons(conn: &Connection) -> Result<()> {
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
     for w in weapons {
         conn.execute(
-            "INSERT OR IGNORE INTO weapons (id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value, sharpness, slots, skills, status_type, status_value, defense_bonus, crafting_cost, upgrade_path, description, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, 'en')",
-            rusqlite::params![w.id, MHP3RD, w.name, w.weapon_type, w.rarity, w.attack, w.affinity, w.element_type, w.element_value, w.sharpness, w.slots, w.skills, w.status_type, w.status_value, w.defense_bonus, w.crafting_cost, w.upgrade_path, w.description],
+            "INSERT OR IGNORE INTO weapons (id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value, sharpness, slots, skills, status_type, status_value, defense_bonus, crafting_cost, upgrade_path, description, sort_order, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, 'en')",
+            rusqlite::params![w.id, MHP3RD, w.name, w.weapon_type, w.rarity, w.attack, w.affinity, w.element_type, w.element_value, w.sharpness, w.slots, w.skills, w.status_type, w.status_value, w.defense_bonus, w.crafting_cost, w.upgrade_path, w.description, w.sort_order],
         )?;
     }
     Ok(())
@@ -1234,18 +1236,41 @@ fn seed_mhp3rd_weapon_materials(conn: &Connection) -> Result<()> {
     let mats: Vec<WeaponMatJson> = serde_json::from_str(json_data)
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
     for m in mats {
-        conn.execute(
-            "INSERT OR IGNORE INTO weapon_materials (weapon_id, item_id, quantity) VALUES (?1, ?2, ?3)",
-            rusqlite::params![m.weapon_id, m.item_id, m.quantity],
-        )?;
+        // Skip rows whose weapon/item are not present in the seeded dataset
+        // (weapon_materials references a few weapons withdrawn from the
+        // `weapons` table, so a direct insert would violate the FK).
+        if weapon_exists(conn, MHP3RD, m.weapon_id) && item_exists(conn, m.item_id) {
+            conn.execute(
+                "INSERT OR IGNORE INTO weapon_materials (weapon_id, item_id, quantity) VALUES (?1, ?2, ?3)",
+                rusqlite::params![m.weapon_id, m.item_id, m.quantity],
+            )?;
+        }
     }
     Ok(())
+}
+
+fn weapon_exists(conn: &Connection, game_id: i32, id: i32) -> bool {
+    conn.query_row(
+        "SELECT 1 FROM weapons WHERE id = ?1 AND game_id = ?2",
+        rusqlite::params![id, game_id],
+        |_| Ok(()),
+    )
+    .is_ok()
+}
+
+fn item_exists(conn: &Connection, id: i32) -> bool {
+    conn.query_row("SELECT 1 FROM items WHERE id = ?1", rusqlite::params![id], |_| Ok(()))
+        .is_ok()
 }
 fn seed_mhp3rd_weapon_craft(conn: &Connection) -> Result<()> {
     let json_data = include_str!("../../data/mhp3rd_weapon_craft.json");
     let rows: Vec<WeaponCraftJson> = serde_json::from_str(json_data)
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
     for r in rows {
+        // Skip weapons withdrawn from the `weapons` table to avoid an FK violation.
+        if !weapon_exists(conn, MHP3RD, r.weapon_id) {
+            continue;
+        }
         for m in &r.forge {
             let iid: Option<i32> = conn
                 .query_row("SELECT id FROM items WHERE name = ?1 AND game_id = 4", rusqlite::params![m.item], |row| row.get(0))
@@ -1333,8 +1358,8 @@ fn seed_mhp3rd_quests(conn: &Connection) -> Result<()> {
     for q in quests {
         let main_monsters_json = q.main_monsters.as_ref().map(|v| serde_json::to_string(v).unwrap_or_else(|_| "[]".to_string()));
         conn.execute(
-            "INSERT OR IGNORE INTO quests (id, game_id, name, name_original, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, description, client, requirements, reward_money, contract_fee, main_monsters, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, 'en')",
-            rusqlite::params![q.id, MHP3RD, q.name, q.name_original, q.qtype, q.rank, q.hub, q.stars, q.objective, q.location, q.time_limit.unwrap_or(50), q.faints_allowed.unwrap_or(3), q.is_key_quest.unwrap_or(false), q.description, q.client, q.requirements, q.reward_money, q.contract_fee, main_monsters_json],
+            "INSERT OR IGNORE INTO quests (id, game_id, name, name_original, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, is_urgent, description, client, requirements, reward_money, contract_fee, main_monsters, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, 'en')",
+            rusqlite::params![q.id, MHP3RD, q.name, q.name_original, q.qtype, q.rank, q.hub, q.stars, q.objective, q.location, q.time_limit.unwrap_or(50), q.faints_allowed.unwrap_or(3), q.is_key_quest.unwrap_or(false), q.is_urgent.unwrap_or(false), q.description, q.client, q.requirements, q.reward_money, q.contract_fee, main_monsters_json],
         )?;
     }
     Ok(())

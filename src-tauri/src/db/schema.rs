@@ -137,6 +137,7 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             faints_allowed INTEGER,
             player_limit INTEGER,
             is_key_quest BOOLEAN DEFAULT FALSE,
+            is_urgent BOOLEAN DEFAULT FALSE,
             unlocks TEXT,
             description TEXT,
             client TEXT,
@@ -351,6 +352,11 @@ fn apply_migrations(conn: &Connection) -> Result<()> {
     add_column_if_missing(conn, "item_combine", "chance", "INTEGER")?;
     let _ = conn.execute("UPDATE item_combine SET combine_type = 'normal' WHERE combine_type IS NULL", []);
     add_column_if_missing(conn, "items", "subcategory", "TEXT")?;
+    // In-game armor-forge order within each weapon type (faithful to the game
+    // weapon-tree sequence, e.g. MHP3rd starts with the Yukumo branch). Falls
+    // back to id when NULL (other games keep their id-based order).
+    add_column_if_missing(conn, "weapons", "sort_order", "INTEGER")?;
+    add_column_if_missing(conn, "quests", "is_urgent", "BOOLEAN DEFAULT FALSE")?;
     Ok(())
 }
 

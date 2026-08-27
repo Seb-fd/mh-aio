@@ -151,6 +151,7 @@ pub struct Weapon {
     pub defense_bonus: Option<i32>,
     pub crafting_cost: Option<i32>,
     pub upgrade_path: Option<String>,
+    pub sort_order: Option<i32>,
     pub is_forgeable: bool,
     pub language: String,
 }
@@ -174,6 +175,7 @@ pub struct WeaponDetail {
     pub defense_bonus: Option<i32>,
     pub crafting_cost: Option<i32>,
     pub upgrade_path: Option<String>,
+    pub sort_order: Option<i32>,
     pub description: Option<String>,
     pub materials: Vec<MaterialRef>,
     pub forge_materials: Vec<MaterialRef>,
@@ -253,6 +255,7 @@ pub struct Quest {
     pub time_limit: Option<i32>,
     pub faints_allowed: Option<i32>,
     pub is_key_quest: bool,
+    pub is_urgent: bool,
     pub client: Option<String>,
     pub requirements: Option<String>,
     pub reward_money: Option<i32>,
@@ -267,7 +270,7 @@ pub struct QuestReward {
     pub item_id: i32,
     pub item_name: String,
     pub quantity: i32,
-    pub probability: f64,
+    pub probability: Option<f64>,
     pub condition: Option<String>,
 }
 
@@ -286,6 +289,7 @@ pub struct QuestDetail {
     pub time_limit: Option<i32>,
     pub faints_allowed: Option<i32>,
     pub is_key_quest: bool,
+    pub is_urgent: bool,
     pub description: Option<String>,
     pub client: Option<String>,
     pub requirements: Option<String>,
@@ -617,7 +621,7 @@ fn get_monster_related_weapons(conn: &Connection, monster_id: i32) -> Result<Vec
     let mut stmt = conn.prepare(
         "SELECT w.id, w.game_id, w.name, w.weapon_type, w.rarity, w.attack, w.affinity, w.element_type, w.element_value,
                 w.sharpness, w.slots, w.status_type, w.status_value, w.defense_bonus, w.crafting_cost, w.upgrade_path,
-                EXISTS(SELECT 1 FROM weapon_craft wc WHERE wc.weapon_id = w.id AND wc.craft_kind = 'forge'), w.language
+                EXISTS(SELECT 1 FROM weapon_craft wc WHERE wc.weapon_id = w.id AND wc.craft_kind = 'forge'), w.sort_order, w.language
          FROM weapons w
          JOIN monster_equipment me ON w.id = me.equipment_id
          WHERE me.monster_id = ?1 AND me.equipment_kind = 'weapon'
@@ -632,11 +636,12 @@ fn get_monster_related_weapons(conn: &Connection, monster_id: i32) -> Result<Vec
                 WHEN 'Hunting Horn' THEN 5
                 WHEN 'Lance' THEN 6
                 WHEN 'Gunlance' THEN 7
-                WHEN 'Light Bowgun' THEN 8
-                WHEN 'Heavy Bowgun' THEN 9
-                WHEN 'Bow' THEN 10
-                ELSE 11
-            END, w.rarity, w.name",
+                WHEN 'Switch Axe' THEN 8
+                WHEN 'Light Bowgun' THEN 9
+                WHEN 'Heavy Bowgun' THEN 10
+                WHEN 'Bow' THEN 11
+                ELSE 12
+            END, COALESCE(w.sort_order, w.id)",
     )?;
 
     let weapons = stmt
@@ -659,7 +664,8 @@ fn get_monster_related_weapons(conn: &Connection, monster_id: i32) -> Result<Vec
                 crafting_cost: row.get(14)?,
                 upgrade_path: row.get(15)?,
                 is_forgeable: row.get::<_, i64>(16)? != 0,
-                language: row.get(17)?,
+                sort_order: row.get(17)?,
+                language: row.get(18)?,
             })
         })?
         .filter_map(|r| r.ok())
@@ -731,7 +737,7 @@ pub fn get_weapons_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Weapon
     let mut stmt = conn.prepare(
         "SELECT id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value,
                 sharpness, slots, status_type, status_value, defense_bonus, crafting_cost, upgrade_path,
-                EXISTS(SELECT 1 FROM weapon_craft wc WHERE wc.weapon_id = weapons.id AND wc.craft_kind = 'forge'), language
+                EXISTS(SELECT 1 FROM weapon_craft wc WHERE wc.weapon_id = weapons.id AND wc.craft_kind = 'forge'), sort_order, language
          FROM weapons WHERE game_id = ?1 ORDER BY
             CASE weapon_type
                 WHEN 'Great Sword' THEN 0
@@ -748,7 +754,7 @@ pub fn get_weapons_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Weapon
                 WHEN 'Heavy Bowgun' THEN 10
                 WHEN 'Bow' THEN 11
                 ELSE 12
-            END, id",
+            END, COALESCE(sort_order, id)",
     )?;
 
     let weapons = stmt
@@ -771,7 +777,8 @@ pub fn get_weapons_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Weapon
                 crafting_cost: row.get(14)?,
                 upgrade_path: row.get(15)?,
                 is_forgeable: row.get::<_, i64>(16)? != 0,
-                language: row.get(17)?,
+                sort_order: row.get(17)?,
+                language: row.get(18)?,
             })
         })?
         .filter_map(|r| r.ok())
@@ -799,13 +806,14 @@ pub fn get_weapon_detail(conn: &Connection, id: i32) -> Result<Option<WeaponDeta
         Option<i32>,
         Option<i32>,
         Option<String>,
+        Option<i32>,
         Option<String>,
         String,
     )> = conn
         .query_row(
             "SELECT id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value,
                     sharpness, slots, skills, status_type, status_value, defense_bonus,
-                    crafting_cost, upgrade_path, description, language
+                    crafting_cost, upgrade_path, sort_order, description, language
              FROM weapons WHERE id = ?1",
             params![id],
             |row| {
@@ -829,12 +837,13 @@ pub fn get_weapon_detail(conn: &Connection, id: i32) -> Result<Option<WeaponDeta
                     row.get(16)?,
                     row.get(17)?,
                     row.get(18)?,
+                    row.get(19)?,
                 ))
             },
         )
         .optional()?;
 
-    let Some((id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value, sharpness, slots, skills, status_type, status_value, defense_bonus, crafting_cost, upgrade_path, description, language)) = row else {
+    let Some((id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value, sharpness, slots, skills, status_type, status_value, defense_bonus, crafting_cost, upgrade_path, sort_order, description, language)) = row else {
         return Ok(None);
     };
 
@@ -861,6 +870,7 @@ pub fn get_weapon_detail(conn: &Connection, id: i32) -> Result<Option<WeaponDeta
         defense_bonus,
         crafting_cost,
         upgrade_path,
+        sort_order,
         description,
         materials,
         forge_materials,
@@ -1170,9 +1180,9 @@ fn get_armor_materials(conn: &Connection, armor_id: i32) -> Result<Vec<MaterialR
 
 pub fn get_quests_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Quest>> {
     let mut stmt = conn.prepare(
-        "SELECT id, game_id, name, name_original, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, client, requirements, reward_money, contract_fee, main_monsters, language
+        "SELECT id, game_id, name, name_original, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, is_urgent, client, requirements, reward_money, contract_fee, main_monsters, language
          FROM quests WHERE game_id = ?1 ORDER BY
-            CASE hub WHEN 'elder' THEN 0 WHEN 'nekoto' THEN 1 WHEN 'village' THEN 2 WHEN 'village_low' THEN 2 WHEN 'village_high' THEN 3 WHEN 'guild_low' THEN 4 WHEN 'guild_high' THEN 5 WHEN 'guild_g' THEN 6 WHEN 'event' THEN 7 WHEN 'challenge' THEN 8 WHEN 'training' THEN 9 WHEN 'treasure' THEN 10 ELSE 11 END,
+            CASE hub WHEN 'elder' THEN 0 WHEN 'nekoto' THEN 1 WHEN 'village' THEN 2 WHEN 'village_low' THEN 2 WHEN 'village_high' THEN 3 WHEN 'guild_low' THEN 4 WHEN 'guild_high' THEN 5 WHEN 'guild_g' THEN 6 WHEN 'event' THEN 7 WHEN 'challenge' THEN 8 WHEN 'training' THEN 9 WHEN 'treasure' THEN 10 WHEN 'hot_spring' THEN 11 WHEN 'drink' THEN 12 WHEN 'nyanta' THEN 13 ELSE 14 END,
             stars, id",
     )?;
 
@@ -1192,12 +1202,13 @@ pub fn get_quests_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Quest>>
                 time_limit: row.get(10)?,
                 faints_allowed: row.get(11)?,
                 is_key_quest: row.get(12)?,
-                client: row.get(13)?,
-                requirements: row.get(14)?,
-                reward_money: row.get(15)?,
-                contract_fee: row.get(16)?,
-                main_monsters: row.get(17)?,
-                language: row.get(18)?,
+                is_urgent: row.get(13)?,
+                client: row.get(14)?,
+                requirements: row.get(15)?,
+                reward_money: row.get(16)?,
+                contract_fee: row.get(17)?,
+                main_monsters: row.get(18)?,
+                language: row.get(19)?,
             })
         })?
         .filter_map(|r| r.ok())
@@ -1242,6 +1253,7 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
         Option<i32>,
         Option<i32>,
         bool,
+        bool,
         Option<String>,
         Option<String>,
         Option<String>,
@@ -1251,7 +1263,7 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
         String,
     )> = conn
         .query_row(
-            "SELECT id, game_id, name, name_original, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, description, client, requirements, reward_money, contract_fee, main_monsters, language
+            "SELECT id, game_id, name, name_original, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, is_urgent, description, client, requirements, reward_money, contract_fee, main_monsters, language
              FROM quests WHERE id = ?1",
             params![id],
             |row| {
@@ -1276,12 +1288,13 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
                     row.get(17)?,
                     row.get(18)?,
                     row.get(19)?,
+                    row.get(20)?,
                 ))
             },
         )
         .optional()?;
 
-    let Some((id, game_id, name, name_original, r#type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, description, client, requirements, reward_money, contract_fee, main_monsters, language)) = row else {
+    let Some((id, game_id, name, name_original, r#type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, is_urgent, description, client, requirements, reward_money, contract_fee, main_monsters, language)) = row else {
         return Ok(None);
     };
 
@@ -1301,6 +1314,7 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
         time_limit,
         faints_allowed,
         is_key_quest,
+        is_urgent,
         description,
         client,
         requirements,

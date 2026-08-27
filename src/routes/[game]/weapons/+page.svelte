@@ -74,7 +74,9 @@
       if (sortBy === 'name') return a.name.localeCompare(b.name);
       if (sortBy === 'rarity') return (b.rarity??0)-(a.rarity??0);
       if (sortBy === 'attack') return (b.attack??0)-(a.attack??0);
-      return a.id - b.id; // smith: creation order (id) faithful to ISO
+      // smith: use the in-game armor-forge order (sort_order) when present,
+      // otherwise fall back to creation order (id) — faithful to the ISO tree.
+      return (a.sort_order ?? a.id) - (b.sort_order ?? b.id);
     };
     const build = (w: Weapon): TreeNode => ({
       weapon: w,

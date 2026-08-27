@@ -38,12 +38,15 @@
     challenge: { label: 'Challenge Quests', sub: 'Arena challenges', icon: '🏆' },
     training: { label: 'Training School', sub: 'Learn the weapons', icon: '🎓' },
     treasure: { label: 'Treasure Hunt', sub: 'Gather & deliver', icon: '💰' },
+    hot_spring: { label: 'Hot Spring', sub: 'Bath quests', icon: '♨️' },
+    drink: { label: 'Drink Quests', sub: 'Felyne bar', icon: '🍺' },
+    nyanta: { label: 'Nyanta Quests', sub: 'Farm felyne', icon: '🐈' },
     other: { label: 'Other', sub: 'Misc', icon: '📦' },
   };
 
   const hubs = $derived(
     Array.from(new Set(quests.map(q => q.hub).filter((h): h is string => !!h))).sort((a,b)=>{
-      const order = ['elder','nekoto','guild_low','guild_high','guild_g','event','challenge','training','treasure','other'];
+      const order = ['elder','nekoto','guild_low','guild_high','guild_g','event','challenge','training','treasure','hot_spring','drink','nyanta','other'];
       return order.indexOf(a)-order.indexOf(b);
     })
   );
@@ -227,6 +230,11 @@
                               {#if quest.is_key_quest}
                                 <span class="text-[10px] uppercase tracking-wide px-1.5 py-0.5 rounded bg-yellow-500/10 text-yellow-500 border border-yellow-500/30">
                                   Key
+                                </span>
+                              {/if}
+                              {#if quest.is_urgent}
+                                <span class="text-[10px] uppercase tracking-wide px-1.5 py-0.5 rounded bg-red-500/10 text-red-400 border border-red-500/30">
+                                  Urgent
                                 </span>
                               {/if}
                             </div>

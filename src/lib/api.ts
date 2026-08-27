@@ -74,6 +74,7 @@ export interface Weapon {
   defense_bonus: number | null;
   crafting_cost: number | null;
   upgrade_path: string | null;
+  sort_order: number | null;
   is_forgeable: boolean;
   language: string;
 }
@@ -102,6 +103,7 @@ export interface WeaponDetail {
   defense_bonus: number | null;
   crafting_cost: number | null;
   upgrade_path: string | null;
+  sort_order: number | null;
   description: string | null;
   materials: MaterialRef[];
   forge_materials: MaterialRef[];
@@ -187,6 +189,7 @@ export interface Quest {
   time_limit: number | null;
   faints_allowed: number | null;
   is_key_quest: boolean;
+  is_urgent: boolean;
   client: string | null;
   requirements: string | null;
   reward_money: number | null;
@@ -200,7 +203,7 @@ export interface QuestReward {
   item_id: number;
   item_name: string;
   quantity: number;
-  probability: number;
+  probability: number | null;
   condition: string | null;
 }
 
@@ -218,6 +221,7 @@ export interface QuestDetail {
   time_limit: number | null;
   faints_allowed: number | null;
   is_key_quest: boolean;
+  is_urgent: boolean;
   description: string | null;
   client: string | null;
   requirements: string | null;

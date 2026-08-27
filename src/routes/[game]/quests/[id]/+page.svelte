@@ -52,6 +52,9 @@
     challenge: { label: 'Challenge Quest', icon: '🏆' },
     training: { label: 'Training School', icon: '🎓' },
     treasure: { label: 'Treasure Hunt', icon: '💰' },
+    hot_spring: { label: 'Hot Spring Quest', icon: '♨️' },
+    drink: { label: 'Drink Quest', icon: '🍺' },
+    nyanta: { label: 'Nyanta Quest', icon: '🐈' },
     other: { label: 'Other', icon: '📦' },
   };
 
@@ -103,6 +106,7 @@
         { label: quest.rank ?? 'Unknown', color: rankColor[quest.rank ?? ''] ?? 'bg-gray-800 text-gray-300' },
         ...(quest.hub ? [{ label: hubLabel(quest.hub, quest.stars), color: 'bg-[var(--theme-bg-elevated)] text-gray-300 border-[var(--theme-border)]' }] : []),
         ...(quest.is_key_quest ? [{ label: 'Key Quest', color: 'bg-yellow-500/10 text-yellow-500 border border-yellow-500/30' }] : []),
+        ...(quest.is_urgent ? [{ label: 'Urgent Quest', color: 'bg-red-500/10 text-red-400 border border-red-500/30' }] : []),
         ...((quest.hub === 'event' || quest.hub === 'challenge') && quest.description?.includes('Exclusive') ? [{ label: '✨ Exclusive', color: 'bg-purple-500/20 text-purple-300 border border-purple-500/30' }] : []),
       ]}
     />
@@ -195,13 +199,15 @@
                     {#if r.condition}
                       <span class="text-[11px] text-amber-400/70">· {r.condition}</span>
                     {/if}
-                    <span class="text-xs text-gray-500 ml-auto">{Math.round(r.probability * 100)}%</span>
+                    <span class="text-xs text-gray-500 ml-auto">{r.probability != null ? `${Math.round(r.probability * 100)}%` : '—'}</span>
                   </div>
+                  {#if r.probability != null}
                   <div class="mt-1.5 flex items-center gap-2">
                     <div class="flex-1 h-1.5 rounded-full bg-[var(--theme-bg-elevated)] overflow-hidden">
                       <div class="h-full bg-[var(--theme-accent)] rounded-full" style="width: {Math.round(r.probability * 100)}%"></div>
                     </div>
                   </div>
+                  {/if}
                 </div>
               </div>
             </button>
