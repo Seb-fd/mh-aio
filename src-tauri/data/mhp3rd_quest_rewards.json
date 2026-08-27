@@ -1,0 +1,3802 @@
+[
+  {
+    "id": 600000,
+    "quest_id": 10001,
+    "item_id": 10670,
+    "quantity": 1,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600001,
+    "quest_id": 10001,
+    "item_id": 10376,
+    "quantity": 2,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600002,
+    "quest_id": 10001,
+    "item_id": 10551,
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600003,
+    "quest_id": 10002,
+    "item_id": 10172,
+    "quantity": 3,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600004,
+    "quest_id": 10002,
+    "item_id": 10137,
+    "quantity": 2,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600005,
+    "quest_id": 10003,
+    "item_id": 10089,
+    "quantity": 3,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600006,
+    "quest_id": 10003,
+    "item_id": 10225,
+    "quantity": 1,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600007,
+    "quest_id": 10003,
+    "item_id": 10371,
+    "quantity": 1,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600008,
+    "quest_id": 10004,
+    "item_id": 10625,
+    "quantity": 3,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600009,
+    "quest_id": 10004,
+    "item_id": 10594,
+    "quantity": 2,
+    "probability": 0.22,
+    "condition": null
+  },
+  {
+    "id": 600010,
+    "quest_id": 10004,
+    "item_id": 10365,
+    "quantity": 2,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600011,
+    "quest_id": 10004,
+    "item_id": 10038,
+    "quantity": 2,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600012,
+    "quest_id": 10006,
+    "item_id": 10218,
+    "quantity": 3,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600013,
+    "quest_id": 10006,
+    "item_id": 10806,
+    "quantity": 3,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600014,
+    "quest_id": 10007,
+    "item_id": 10471,
+    "quantity": 2,
+    "probability": 0.13,
+    "condition": null
+  },
+  {
+    "id": 600015,
+    "quest_id": 10007,
+    "item_id": 10287,
+    "quantity": 2,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "id": 600016,
+    "quest_id": 10008,
+    "item_id": 10266,
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "id": 600017,
+    "quest_id": 10008,
+    "item_id": 10524,
+    "quantity": 2,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600018,
+    "quest_id": 10009,
+    "item_id": 10781,
+    "quantity": 3,
+    "probability": 0.26,
+    "condition": null
+  },
+  {
+    "id": 600019,
+    "quest_id": 10009,
+    "item_id": 10578,
+    "quantity": 3,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600020,
+    "quest_id": 10010,
+    "item_id": 10093,
+    "quantity": 2,
+    "probability": 0.13,
+    "condition": null
+  },
+  {
+    "id": 600021,
+    "quest_id": 10010,
+    "item_id": 10551,
+    "quantity": 2,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "id": 600022,
+    "quest_id": 10010,
+    "item_id": 10746,
+    "quantity": 2,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600023,
+    "quest_id": 10011,
+    "item_id": 10663,
+    "quantity": 1,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600024,
+    "quest_id": 10011,
+    "item_id": 10634,
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "id": 600025,
+    "quest_id": 10011,
+    "item_id": 10003,
+    "quantity": 2,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "id": 600026,
+    "quest_id": 10012,
+    "item_id": 10509,
+    "quantity": 3,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600027,
+    "quest_id": 10012,
+    "item_id": 10187,
+    "quantity": 2,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600028,
+    "quest_id": 10013,
+    "item_id": 10819,
+    "quantity": 3,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600029,
+    "quest_id": 10013,
+    "item_id": 10047,
+    "quantity": 2,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600030,
+    "quest_id": 10014,
+    "item_id": 10174,
+    "quantity": 3,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600031,
+    "quest_id": 10014,
+    "item_id": 10318,
+    "quantity": 3,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600032,
+    "quest_id": 10015,
+    "item_id": 10798,
+    "quantity": 2,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600033,
+    "quest_id": 10015,
+    "item_id": 10297,
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600034,
+    "quest_id": 10016,
+    "item_id": 10033,
+    "quantity": 3,
+    "probability": 0.24,
+    "condition": null
+  },
+  {
+    "id": 600035,
+    "quest_id": 10016,
+    "item_id": 10471,
+    "quantity": 1,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600036,
+    "quest_id": 10017,
+    "item_id": 10739,
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "id": 600037,
+    "quest_id": 10018,
+    "item_id": 10501,
+    "quantity": 2,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600038,
+    "quest_id": 10019,
+    "item_id": 10189,
+    "quantity": 3,
+    "probability": 0.22,
+    "condition": null
+  },
+  {
+    "id": 600039,
+    "quest_id": 10019,
+    "item_id": 10544,
+    "quantity": 1,
+    "probability": 0.28,
+    "condition": null
+  },
+  {
+    "id": 600040,
+    "quest_id": 10019,
+    "item_id": 10421,
+    "quantity": 1,
+    "probability": 0.28,
+    "condition": null
+  },
+  {
+    "id": 600041,
+    "quest_id": 10020,
+    "item_id": 10589,
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600042,
+    "quest_id": 10020,
+    "item_id": 10407,
+    "quantity": 1,
+    "probability": 0.24,
+    "condition": null
+  },
+  {
+    "id": 600043,
+    "quest_id": 10021,
+    "item_id": 10521,
+    "quantity": 3,
+    "probability": 0.28,
+    "condition": null
+  },
+  {
+    "id": 600044,
+    "quest_id": 10021,
+    "item_id": 10624,
+    "quantity": 3,
+    "probability": 0.23,
+    "condition": null
+  },
+  {
+    "id": 600045,
+    "quest_id": 10021,
+    "item_id": 10026,
+    "quantity": 2,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "id": 600046,
+    "quest_id": 10022,
+    "item_id": 10204,
+    "quantity": 3,
+    "probability": 0.14,
+    "condition": null
+  },
+  {
+    "id": 600047,
+    "quest_id": 10022,
+    "item_id": 10585,
+    "quantity": 2,
+    "probability": 0.21,
+    "condition": null
+  },
+  {
+    "id": 600048,
+    "quest_id": 10023,
+    "item_id": 10409,
+    "quantity": 2,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600049,
+    "quest_id": 10024,
+    "item_id": 10793,
+    "quantity": 1,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600050,
+    "quest_id": 10025,
+    "item_id": 10153,
+    "quantity": 3,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "id": 600051,
+    "quest_id": 10026,
+    "item_id": 10748,
+    "quantity": 1,
+    "probability": 0.21,
+    "condition": null
+  },
+  {
+    "id": 600052,
+    "quest_id": 10027,
+    "item_id": 10808,
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600053,
+    "quest_id": 10027,
+    "item_id": 10619,
+    "quantity": 3,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600054,
+    "quest_id": 10028,
+    "item_id": 10771,
+    "quantity": 2,
+    "probability": 0.11,
+    "condition": null
+  },
+  {
+    "id": 600055,
+    "quest_id": 10028,
+    "item_id": 10679,
+    "quantity": 1,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600056,
+    "quest_id": 10028,
+    "item_id": 10693,
+    "quantity": 2,
+    "probability": 0.11,
+    "condition": null
+  },
+  {
+    "id": 600057,
+    "quest_id": 10029,
+    "item_id": 10025,
+    "quantity": 3,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600058,
+    "quest_id": 10029,
+    "item_id": 10763,
+    "quantity": 1,
+    "probability": 0.19,
+    "condition": null
+  },
+  {
+    "id": 600059,
+    "quest_id": 10030,
+    "item_id": 10157,
+    "quantity": 2,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600060,
+    "quest_id": 10030,
+    "item_id": 10564,
+    "quantity": 1,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600061,
+    "quest_id": 10030,
+    "item_id": 10106,
+    "quantity": 3,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600062,
+    "quest_id": 10030,
+    "item_id": 10305,
+    "quantity": 1,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600063,
+    "quest_id": 10031,
+    "item_id": 10765,
+    "quantity": 2,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600064,
+    "quest_id": 10031,
+    "item_id": 10820,
+    "quantity": 3,
+    "probability": 0.23,
+    "condition": null
+  },
+  {
+    "id": 600065,
+    "quest_id": 10032,
+    "item_id": 10166,
+    "quantity": 1,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600066,
+    "quest_id": 10032,
+    "item_id": 10284,
+    "quantity": 3,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600067,
+    "quest_id": 10033,
+    "item_id": 10261,
+    "quantity": 1,
+    "probability": 0.21,
+    "condition": null
+  },
+  {
+    "id": 600068,
+    "quest_id": 10033,
+    "item_id": 10704,
+    "quantity": 2,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600069,
+    "quest_id": 10033,
+    "item_id": 10533,
+    "quantity": 2,
+    "probability": 0.26,
+    "condition": null
+  },
+  {
+    "id": 600070,
+    "quest_id": 10033,
+    "item_id": 10617,
+    "quantity": 2,
+    "probability": 0.23,
+    "condition": null
+  },
+  {
+    "id": 600071,
+    "quest_id": 10034,
+    "item_id": 10246,
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600072,
+    "quest_id": 10034,
+    "item_id": 10154,
+    "quantity": 1,
+    "probability": 0.22,
+    "condition": null
+  },
+  {
+    "id": 600073,
+    "quest_id": 10035,
+    "item_id": 10395,
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "id": 600074,
+    "quest_id": 10035,
+    "item_id": 10701,
+    "quantity": 3,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "id": 600075,
+    "quest_id": 10036,
+    "item_id": 10755,
+    "quantity": 2,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600076,
+    "quest_id": 10036,
+    "item_id": 10414,
+    "quantity": 1,
+    "probability": 0.28,
+    "condition": null
+  },
+  {
+    "id": 600077,
+    "quest_id": 10037,
+    "item_id": 10785,
+    "quantity": 2,
+    "probability": 0.28,
+    "condition": null
+  },
+  {
+    "id": 600078,
+    "quest_id": 10037,
+    "item_id": 10431,
+    "quantity": 2,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600079,
+    "quest_id": 10037,
+    "item_id": 10128,
+    "quantity": 2,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600080,
+    "quest_id": 10038,
+    "item_id": 10258,
+    "quantity": 3,
+    "probability": 0.22,
+    "condition": null
+  },
+  {
+    "id": 600081,
+    "quest_id": 10038,
+    "item_id": 10443,
+    "quantity": 1,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600082,
+    "quest_id": 10038,
+    "item_id": 10509,
+    "quantity": 2,
+    "probability": 0.19,
+    "condition": null
+  },
+  {
+    "id": 600083,
+    "quest_id": 10039,
+    "item_id": 10045,
+    "quantity": 1,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600084,
+    "quest_id": 10040,
+    "item_id": 10802,
+    "quantity": 3,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600085,
+    "quest_id": 10041,
+    "item_id": 10317,
+    "quantity": 1,
+    "probability": 0.22,
+    "condition": null
+  },
+  {
+    "id": 600086,
+    "quest_id": 10041,
+    "item_id": 10224,
+    "quantity": 3,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600087,
+    "quest_id": 10042,
+    "item_id": 10175,
+    "quantity": 3,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600088,
+    "quest_id": 10042,
+    "item_id": 10003,
+    "quantity": 1,
+    "probability": 0.14,
+    "condition": null
+  },
+  {
+    "id": 600089,
+    "quest_id": 10042,
+    "item_id": 10077,
+    "quantity": 3,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600090,
+    "quest_id": 10043,
+    "item_id": 10516,
+    "quantity": 3,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600091,
+    "quest_id": 10043,
+    "item_id": 10230,
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "id": 600092,
+    "quest_id": 10044,
+    "item_id": 10393,
+    "quantity": 2,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600093,
+    "quest_id": 10044,
+    "item_id": 10003,
+    "quantity": 1,
+    "probability": 0.23,
+    "condition": null
+  },
+  {
+    "id": 600094,
+    "quest_id": 10044,
+    "item_id": 10497,
+    "quantity": 2,
+    "probability": 0.22,
+    "condition": null
+  },
+  {
+    "id": 600095,
+    "quest_id": 10045,
+    "item_id": 10506,
+    "quantity": 1,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600096,
+    "quest_id": 10045,
+    "item_id": 10630,
+    "quantity": 1,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600097,
+    "quest_id": 10045,
+    "item_id": 10167,
+    "quantity": 2,
+    "probability": 0.14,
+    "condition": null
+  },
+  {
+    "id": 600098,
+    "quest_id": 10046,
+    "item_id": 10759,
+    "quantity": 1,
+    "probability": 0.21,
+    "condition": null
+  },
+  {
+    "id": 600099,
+    "quest_id": 10046,
+    "item_id": 10693,
+    "quantity": 3,
+    "probability": 0.19,
+    "condition": null
+  },
+  {
+    "id": 600100,
+    "quest_id": 10046,
+    "item_id": 10812,
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "id": 600101,
+    "quest_id": 10047,
+    "item_id": 10411,
+    "quantity": 2,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600102,
+    "quest_id": 10047,
+    "item_id": 10398,
+    "quantity": 1,
+    "probability": 0.21,
+    "condition": null
+  },
+  {
+    "id": 600103,
+    "quest_id": 10048,
+    "item_id": 10605,
+    "quantity": 1,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600104,
+    "quest_id": 10048,
+    "item_id": 10458,
+    "quantity": 2,
+    "probability": 0.19,
+    "condition": null
+  },
+  {
+    "id": 600105,
+    "quest_id": 10049,
+    "item_id": 10116,
+    "quantity": 3,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600106,
+    "quest_id": 10049,
+    "item_id": 10806,
+    "quantity": 1,
+    "probability": 0.14,
+    "condition": null
+  },
+  {
+    "id": 600107,
+    "quest_id": 10049,
+    "item_id": 10291,
+    "quantity": 2,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600108,
+    "quest_id": 10049,
+    "item_id": 10124,
+    "quantity": 1,
+    "probability": 0.19,
+    "condition": null
+  },
+  {
+    "id": 600109,
+    "quest_id": 10050,
+    "item_id": 10644,
+    "quantity": 3,
+    "probability": 0.11,
+    "condition": null
+  },
+  {
+    "id": 600110,
+    "quest_id": 10050,
+    "item_id": 10163,
+    "quantity": 1,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600111,
+    "quest_id": 10050,
+    "item_id": 10380,
+    "quantity": 3,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600112,
+    "quest_id": 10051,
+    "item_id": 10776,
+    "quantity": 2,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "id": 600113,
+    "quest_id": 10051,
+    "item_id": 10161,
+    "quantity": 2,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "id": 600114,
+    "quest_id": 10052,
+    "item_id": 10779,
+    "quantity": 2,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600115,
+    "quest_id": 10052,
+    "item_id": 10633,
+    "quantity": 2,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "id": 600116,
+    "quest_id": 10053,
+    "item_id": 10508,
+    "quantity": 3,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600117,
+    "quest_id": 10054,
+    "item_id": 10770,
+    "quantity": 1,
+    "probability": 0.21,
+    "condition": null
+  },
+  {
+    "id": 600118,
+    "quest_id": 10054,
+    "item_id": 10127,
+    "quantity": 2,
+    "probability": 0.13,
+    "condition": null
+  },
+  {
+    "id": 600119,
+    "quest_id": 10055,
+    "item_id": 10695,
+    "quantity": 2,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600120,
+    "quest_id": 10055,
+    "item_id": 10090,
+    "quantity": 2,
+    "probability": 0.28,
+    "condition": null
+  },
+  {
+    "id": 600121,
+    "quest_id": 10056,
+    "item_id": 10649,
+    "quantity": 2,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600122,
+    "quest_id": 10056,
+    "item_id": 10134,
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600123,
+    "quest_id": 10056,
+    "item_id": 10220,
+    "quantity": 2,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600124,
+    "quest_id": 10057,
+    "item_id": 10375,
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600125,
+    "quest_id": 10057,
+    "item_id": 10622,
+    "quantity": 3,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600126,
+    "quest_id": 10058,
+    "item_id": 10484,
+    "quantity": 2,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600127,
+    "quest_id": 10058,
+    "item_id": 10162,
+    "quantity": 3,
+    "probability": 0.13,
+    "condition": null
+  },
+  {
+    "id": 600128,
+    "quest_id": 10058,
+    "item_id": 10328,
+    "quantity": 1,
+    "probability": 0.19,
+    "condition": null
+  },
+  {
+    "id": 600129,
+    "quest_id": 10059,
+    "item_id": 10070,
+    "quantity": 2,
+    "probability": 0.23,
+    "condition": null
+  },
+  {
+    "id": 600130,
+    "quest_id": 10059,
+    "item_id": 10668,
+    "quantity": 1,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600131,
+    "quest_id": 10059,
+    "item_id": 10216,
+    "quantity": 1,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600132,
+    "quest_id": 10059,
+    "item_id": 10173,
+    "quantity": 1,
+    "probability": 0.11,
+    "condition": null
+  },
+  {
+    "id": 600133,
+    "quest_id": 10060,
+    "item_id": 10482,
+    "quantity": 3,
+    "probability": 0.23,
+    "condition": null
+  },
+  {
+    "id": 600134,
+    "quest_id": 10061,
+    "item_id": 10249,
+    "quantity": 2,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600135,
+    "quest_id": 10061,
+    "item_id": 10549,
+    "quantity": 2,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600136,
+    "quest_id": 10061,
+    "item_id": 10534,
+    "quantity": 1,
+    "probability": 0.2,
+    "condition": null
+  },
+  {
+    "id": 600137,
+    "quest_id": 10061,
+    "item_id": 10381,
+    "quantity": 1,
+    "probability": 0.14,
+    "condition": null
+  },
+  {
+    "id": 600138,
+    "quest_id": 10062,
+    "item_id": 10386,
+    "quantity": 2,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "id": 600139,
+    "quest_id": 10062,
+    "item_id": 10516,
+    "quantity": 1,
+    "probability": 0.22,
+    "condition": null
+  },
+  {
+    "id": 600140,
+    "quest_id": 10062,
+    "item_id": 10474,
+    "quantity": 3,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600141,
+    "quest_id": 10063,
+    "item_id": 10766,
+    "quantity": 1,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600142,
+    "quest_id": 10063,
+    "item_id": 10477,
+    "quantity": 1,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600143,
+    "quest_id": 10064,
+    "item_id": 10398,
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "id": 600144,
+    "quest_id": 10064,
+    "item_id": 10365,
+    "quantity": 2,
+    "probability": 0.24,
+    "condition": null
+  },
+  {
+    "id": 600145,
+    "quest_id": 10064,
+    "item_id": 10013,
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600146,
+    "quest_id": 10064,
+    "item_id": 10717,
+    "quantity": 1,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600147,
+    "quest_id": 10065,
+    "item_id": 10290,
+    "quantity": 1,
+    "probability": 0.14,
+    "condition": null
+  },
+  {
+    "id": 600148,
+    "quest_id": 10065,
+    "item_id": 10523,
+    "quantity": 1,
+    "probability": 0.24,
+    "condition": null
+  },
+  {
+    "id": 600149,
+    "quest_id": 10065,
+    "item_id": 10417,
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600150,
+    "quest_id": 10066,
+    "item_id": 10762,
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600151,
+    "quest_id": 10066,
+    "item_id": 10160,
+    "quantity": 1,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600152,
+    "quest_id": 10067,
+    "item_id": 10208,
+    "quantity": 2,
+    "probability": 0.26,
+    "condition": null
+  },
+  {
+    "id": 600153,
+    "quest_id": 10067,
+    "item_id": 10317,
+    "quantity": 3,
+    "probability": 0.22,
+    "condition": null
+  },
+  {
+    "id": 600154,
+    "quest_id": 10067,
+    "item_id": 10336,
+    "quantity": 2,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600155,
+    "quest_id": 10068,
+    "item_id": 10581,
+    "quantity": 3,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600156,
+    "quest_id": 10068,
+    "item_id": 10106,
+    "quantity": 2,
+    "probability": 0.28,
+    "condition": null
+  },
+  {
+    "id": 600157,
+    "quest_id": 10068,
+    "item_id": 10732,
+    "quantity": 2,
+    "probability": 0.19,
+    "condition": null
+  },
+  {
+    "id": 600158,
+    "quest_id": 10069,
+    "item_id": 10404,
+    "quantity": 2,
+    "probability": 0.28,
+    "condition": null
+  },
+  {
+    "id": 600159,
+    "quest_id": 10069,
+    "item_id": 10418,
+    "quantity": 1,
+    "probability": 0.2,
+    "condition": null
+  },
+  {
+    "id": 600160,
+    "quest_id": 10069,
+    "item_id": 10321,
+    "quantity": 2,
+    "probability": 0.11,
+    "condition": null
+  },
+  {
+    "id": 600161,
+    "quest_id": 10071,
+    "item_id": 10292,
+    "quantity": 3,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600162,
+    "quest_id": 10071,
+    "item_id": 10813,
+    "quantity": 1,
+    "probability": 0.23,
+    "condition": null
+  },
+  {
+    "id": 600163,
+    "quest_id": 10072,
+    "item_id": 10581,
+    "quantity": 1,
+    "probability": 0.22,
+    "condition": null
+  },
+  {
+    "id": 600164,
+    "quest_id": 10072,
+    "item_id": 10138,
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "id": 600165,
+    "quest_id": 10073,
+    "item_id": 10618,
+    "quantity": 1,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600166,
+    "quest_id": 10073,
+    "item_id": 10090,
+    "quantity": 2,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600167,
+    "quest_id": 10074,
+    "item_id": 10795,
+    "quantity": 1,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600168,
+    "quest_id": 10074,
+    "item_id": 10329,
+    "quantity": 3,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600169,
+    "quest_id": 10074,
+    "item_id": 10455,
+    "quantity": 3,
+    "probability": 0.19,
+    "condition": null
+  },
+  {
+    "id": 600170,
+    "quest_id": 10074,
+    "item_id": 10402,
+    "quantity": 2,
+    "probability": 0.13,
+    "condition": null
+  },
+  {
+    "id": 600171,
+    "quest_id": 10075,
+    "item_id": 10086,
+    "quantity": 2,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600172,
+    "quest_id": 10075,
+    "item_id": 10321,
+    "quantity": 2,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "id": 600173,
+    "quest_id": 10076,
+    "item_id": 10506,
+    "quantity": 3,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600174,
+    "quest_id": 10076,
+    "item_id": 10395,
+    "quantity": 1,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600175,
+    "quest_id": 10077,
+    "item_id": 10079,
+    "quantity": 3,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600176,
+    "quest_id": 10077,
+    "item_id": 10242,
+    "quantity": 2,
+    "probability": 0.24,
+    "condition": null
+  },
+  {
+    "id": 600177,
+    "quest_id": 10077,
+    "item_id": 10628,
+    "quantity": 3,
+    "probability": 0.19,
+    "condition": null
+  },
+  {
+    "id": 600178,
+    "quest_id": 10077,
+    "item_id": 10511,
+    "quantity": 2,
+    "probability": 0.19,
+    "condition": null
+  },
+  {
+    "id": 600179,
+    "quest_id": 10078,
+    "item_id": 10048,
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600180,
+    "quest_id": 10079,
+    "item_id": 10820,
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "id": 600181,
+    "quest_id": 10079,
+    "item_id": 10735,
+    "quantity": 2,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "id": 600182,
+    "quest_id": 10080,
+    "item_id": 10084,
+    "quantity": 3,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600183,
+    "quest_id": 10080,
+    "item_id": 10643,
+    "quantity": 3,
+    "probability": 0.22,
+    "condition": null
+  },
+  {
+    "id": 600184,
+    "quest_id": 10081,
+    "item_id": 10279,
+    "quantity": 1,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600185,
+    "quest_id": 10082,
+    "item_id": 10225,
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600186,
+    "quest_id": 10082,
+    "item_id": 10339,
+    "quantity": 3,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600187,
+    "quest_id": 10082,
+    "item_id": 10453,
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600188,
+    "quest_id": 10083,
+    "item_id": 10517,
+    "quantity": 1,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600189,
+    "quest_id": 10083,
+    "item_id": 10564,
+    "quantity": 2,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600190,
+    "quest_id": 10083,
+    "item_id": 10539,
+    "quantity": 3,
+    "probability": 0.22,
+    "condition": null
+  },
+  {
+    "id": 600191,
+    "quest_id": 10084,
+    "item_id": 10763,
+    "quantity": 1,
+    "probability": 0.13,
+    "condition": null
+  },
+  {
+    "id": 600192,
+    "quest_id": 10084,
+    "item_id": 10827,
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600193,
+    "quest_id": 10084,
+    "item_id": 10570,
+    "quantity": 3,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600194,
+    "quest_id": 10085,
+    "item_id": 10346,
+    "quantity": 2,
+    "probability": 0.11,
+    "condition": null
+  },
+  {
+    "id": 600195,
+    "quest_id": 10085,
+    "item_id": 10100,
+    "quantity": 3,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600196,
+    "quest_id": 10086,
+    "item_id": 10215,
+    "quantity": 2,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "id": 600197,
+    "quest_id": 10086,
+    "item_id": 10808,
+    "quantity": 3,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600198,
+    "quest_id": 10086,
+    "item_id": 10543,
+    "quantity": 2,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "id": 600199,
+    "quest_id": 10086,
+    "item_id": 10300,
+    "quantity": 2,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600200,
+    "quest_id": 10087,
+    "item_id": 10099,
+    "quantity": 2,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600201,
+    "quest_id": 10088,
+    "item_id": 10636,
+    "quantity": 3,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600202,
+    "quest_id": 10088,
+    "item_id": 10641,
+    "quantity": 3,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "id": 600203,
+    "quest_id": 10088,
+    "item_id": 10070,
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600204,
+    "quest_id": 10089,
+    "item_id": 10098,
+    "quantity": 1,
+    "probability": 0.21,
+    "condition": null
+  },
+  {
+    "id": 600205,
+    "quest_id": 10089,
+    "item_id": 10094,
+    "quantity": 1,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600206,
+    "quest_id": 10089,
+    "item_id": 10727,
+    "quantity": 2,
+    "probability": 0.11,
+    "condition": null
+  },
+  {
+    "id": 600207,
+    "quest_id": 10090,
+    "item_id": 10460,
+    "quantity": 2,
+    "probability": 0.24,
+    "condition": null
+  },
+  {
+    "id": 600208,
+    "quest_id": 10090,
+    "item_id": 10274,
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "id": 600209,
+    "quest_id": 10091,
+    "item_id": 10306,
+    "quantity": 2,
+    "probability": 0.11,
+    "condition": null
+  },
+  {
+    "id": 600210,
+    "quest_id": 10091,
+    "item_id": 10297,
+    "quantity": 3,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600211,
+    "quest_id": 10092,
+    "item_id": 10542,
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "id": 600212,
+    "quest_id": 10092,
+    "item_id": 10718,
+    "quantity": 3,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600213,
+    "quest_id": 10093,
+    "item_id": 10001,
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "id": 600214,
+    "quest_id": 10093,
+    "item_id": 10052,
+    "quantity": 2,
+    "probability": 0.13,
+    "condition": null
+  },
+  {
+    "id": 600215,
+    "quest_id": 10093,
+    "item_id": 10327,
+    "quantity": 1,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600216,
+    "quest_id": 10094,
+    "item_id": 10026,
+    "quantity": 3,
+    "probability": 0.23,
+    "condition": null
+  },
+  {
+    "id": 600217,
+    "quest_id": 10094,
+    "item_id": 10404,
+    "quantity": 1,
+    "probability": 0.19,
+    "condition": null
+  },
+  {
+    "id": 600218,
+    "quest_id": 10095,
+    "item_id": 10358,
+    "quantity": 3,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600219,
+    "quest_id": 10095,
+    "item_id": 10615,
+    "quantity": 3,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600220,
+    "quest_id": 10096,
+    "item_id": 10165,
+    "quantity": 3,
+    "probability": 0.26,
+    "condition": null
+  },
+  {
+    "id": 600221,
+    "quest_id": 10096,
+    "item_id": 10360,
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "id": 600222,
+    "quest_id": 10097,
+    "item_id": 10476,
+    "quantity": 3,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600223,
+    "quest_id": 10097,
+    "item_id": 10688,
+    "quantity": 3,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600224,
+    "quest_id": 10097,
+    "item_id": 10540,
+    "quantity": 3,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600225,
+    "quest_id": 10098,
+    "item_id": 10445,
+    "quantity": 1,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600226,
+    "quest_id": 10098,
+    "item_id": 10032,
+    "quantity": 1,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600227,
+    "quest_id": 10099,
+    "item_id": 10416,
+    "quantity": 1,
+    "probability": 0.28,
+    "condition": null
+  },
+  {
+    "id": 600228,
+    "quest_id": 10099,
+    "item_id": 10670,
+    "quantity": 1,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600229,
+    "quest_id": 10100,
+    "item_id": 10490,
+    "quantity": 2,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600230,
+    "quest_id": 10100,
+    "item_id": 10014,
+    "quantity": 1,
+    "probability": 0.2,
+    "condition": null
+  },
+  {
+    "id": 600231,
+    "quest_id": 10101,
+    "item_id": 10479,
+    "quantity": 3,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600232,
+    "quest_id": 10101,
+    "item_id": 10435,
+    "quantity": 2,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600233,
+    "quest_id": 10101,
+    "item_id": 10160,
+    "quantity": 3,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600234,
+    "quest_id": 10101,
+    "item_id": 10297,
+    "quantity": 1,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600235,
+    "quest_id": 10102,
+    "item_id": 10332,
+    "quantity": 2,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600236,
+    "quest_id": 10102,
+    "item_id": 10059,
+    "quantity": 1,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600237,
+    "quest_id": 10103,
+    "item_id": 10088,
+    "quantity": 3,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "id": 600238,
+    "quest_id": 10103,
+    "item_id": 10096,
+    "quantity": 1,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600239,
+    "quest_id": 10103,
+    "item_id": 10745,
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600240,
+    "quest_id": 10103,
+    "item_id": 10136,
+    "quantity": 3,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600241,
+    "quest_id": 10104,
+    "item_id": 10505,
+    "quantity": 1,
+    "probability": 0.13,
+    "condition": null
+  },
+  {
+    "id": 600242,
+    "quest_id": 10104,
+    "item_id": 10070,
+    "quantity": 1,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600243,
+    "quest_id": 10105,
+    "item_id": 10180,
+    "quantity": 3,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600244,
+    "quest_id": 10105,
+    "item_id": 10420,
+    "quantity": 2,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600245,
+    "quest_id": 10106,
+    "item_id": 10579,
+    "quantity": 1,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600246,
+    "quest_id": 10106,
+    "item_id": 10754,
+    "quantity": 2,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600247,
+    "quest_id": 10107,
+    "item_id": 10064,
+    "quantity": 2,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600248,
+    "quest_id": 10107,
+    "item_id": 10099,
+    "quantity": 3,
+    "probability": 0.23,
+    "condition": null
+  },
+  {
+    "id": 600249,
+    "quest_id": 10107,
+    "item_id": 10187,
+    "quantity": 3,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600250,
+    "quest_id": 10108,
+    "item_id": 10591,
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "id": 600251,
+    "quest_id": 10109,
+    "item_id": 10196,
+    "quantity": 2,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600252,
+    "quest_id": 10109,
+    "item_id": 10378,
+    "quantity": 2,
+    "probability": 0.24,
+    "condition": null
+  },
+  {
+    "id": 600253,
+    "quest_id": 10110,
+    "item_id": 10582,
+    "quantity": 1,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600254,
+    "quest_id": 10110,
+    "item_id": 10475,
+    "quantity": 2,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600255,
+    "quest_id": 10111,
+    "item_id": 10166,
+    "quantity": 2,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600256,
+    "quest_id": 10111,
+    "item_id": 10215,
+    "quantity": 3,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600257,
+    "quest_id": 10111,
+    "item_id": 10195,
+    "quantity": 2,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600258,
+    "quest_id": 10111,
+    "item_id": 10177,
+    "quantity": 2,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600259,
+    "quest_id": 10112,
+    "item_id": 10762,
+    "quantity": 1,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600260,
+    "quest_id": 10113,
+    "item_id": 10479,
+    "quantity": 2,
+    "probability": 0.11,
+    "condition": null
+  },
+  {
+    "id": 600261,
+    "quest_id": 10113,
+    "item_id": 10070,
+    "quantity": 2,
+    "probability": 0.24,
+    "condition": null
+  },
+  {
+    "id": 600262,
+    "quest_id": 10114,
+    "item_id": 10663,
+    "quantity": 1,
+    "probability": 0.21,
+    "condition": null
+  },
+  {
+    "id": 600263,
+    "quest_id": 10114,
+    "item_id": 10527,
+    "quantity": 3,
+    "probability": 0.14,
+    "condition": null
+  },
+  {
+    "id": 600264,
+    "quest_id": 10114,
+    "item_id": 10685,
+    "quantity": 2,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600265,
+    "quest_id": 10115,
+    "item_id": 10488,
+    "quantity": 3,
+    "probability": 0.13,
+    "condition": null
+  },
+  {
+    "id": 600266,
+    "quest_id": 10115,
+    "item_id": 10618,
+    "quantity": 3,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600267,
+    "quest_id": 10115,
+    "item_id": 10317,
+    "quantity": 3,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600268,
+    "quest_id": 10115,
+    "item_id": 10508,
+    "quantity": 3,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600269,
+    "quest_id": 10116,
+    "item_id": 10714,
+    "quantity": 1,
+    "probability": 0.14,
+    "condition": null
+  },
+  {
+    "id": 600270,
+    "quest_id": 10116,
+    "item_id": 10388,
+    "quantity": 2,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600271,
+    "quest_id": 10116,
+    "item_id": 10209,
+    "quantity": 1,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600272,
+    "quest_id": 10116,
+    "item_id": 10209,
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "id": 600273,
+    "quest_id": 10117,
+    "item_id": 10619,
+    "quantity": 3,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600274,
+    "quest_id": 10117,
+    "item_id": 10561,
+    "quantity": 1,
+    "probability": 0.11,
+    "condition": null
+  },
+  {
+    "id": 600275,
+    "quest_id": 10118,
+    "item_id": 10576,
+    "quantity": 1,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600276,
+    "quest_id": 10119,
+    "item_id": 10456,
+    "quantity": 3,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600277,
+    "quest_id": 10119,
+    "item_id": 10607,
+    "quantity": 2,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600278,
+    "quest_id": 10119,
+    "item_id": 10527,
+    "quantity": 3,
+    "probability": 0.28,
+    "condition": null
+  },
+  {
+    "id": 600279,
+    "quest_id": 10120,
+    "item_id": 10497,
+    "quantity": 2,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600280,
+    "quest_id": 10121,
+    "item_id": 10469,
+    "quantity": 3,
+    "probability": 0.13,
+    "condition": null
+  },
+  {
+    "id": 600281,
+    "quest_id": 10121,
+    "item_id": 10255,
+    "quantity": 2,
+    "probability": 0.2,
+    "condition": null
+  },
+  {
+    "id": 600282,
+    "quest_id": 10121,
+    "item_id": 10533,
+    "quantity": 3,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600283,
+    "quest_id": 10122,
+    "item_id": 10321,
+    "quantity": 2,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600284,
+    "quest_id": 10122,
+    "item_id": 10375,
+    "quantity": 3,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600285,
+    "quest_id": 10123,
+    "item_id": 10797,
+    "quantity": 2,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600286,
+    "quest_id": 10123,
+    "item_id": 10218,
+    "quantity": 1,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600287,
+    "quest_id": 10124,
+    "item_id": 10330,
+    "quantity": 3,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600288,
+    "quest_id": 10124,
+    "item_id": 10410,
+    "quantity": 3,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600289,
+    "quest_id": 10125,
+    "item_id": 10758,
+    "quantity": 3,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600290,
+    "quest_id": 10126,
+    "item_id": 10804,
+    "quantity": 3,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600291,
+    "quest_id": 10126,
+    "item_id": 10251,
+    "quantity": 3,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "id": 600292,
+    "quest_id": 10127,
+    "item_id": 10116,
+    "quantity": 2,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600293,
+    "quest_id": 10127,
+    "item_id": 10819,
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "id": 600294,
+    "quest_id": 10128,
+    "item_id": 10722,
+    "quantity": 3,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600295,
+    "quest_id": 10128,
+    "item_id": 10460,
+    "quantity": 2,
+    "probability": 0.28,
+    "condition": null
+  },
+  {
+    "id": 600296,
+    "quest_id": 10128,
+    "item_id": 10803,
+    "quantity": 2,
+    "probability": 0.14,
+    "condition": null
+  },
+  {
+    "id": 600297,
+    "quest_id": 10129,
+    "item_id": 10142,
+    "quantity": 3,
+    "probability": 0.13,
+    "condition": null
+  },
+  {
+    "id": 600298,
+    "quest_id": 10129,
+    "item_id": 10463,
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "id": 600299,
+    "quest_id": 10130,
+    "item_id": 10257,
+    "quantity": 2,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "id": 600300,
+    "quest_id": 10130,
+    "item_id": 10472,
+    "quantity": 2,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600301,
+    "quest_id": 10130,
+    "item_id": 10520,
+    "quantity": 2,
+    "probability": 0.26,
+    "condition": null
+  },
+  {
+    "id": 600302,
+    "quest_id": 10131,
+    "item_id": 10006,
+    "quantity": 3,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600303,
+    "quest_id": 10131,
+    "item_id": 10734,
+    "quantity": 1,
+    "probability": 0.26,
+    "condition": null
+  },
+  {
+    "id": 600304,
+    "quest_id": 10131,
+    "item_id": 10657,
+    "quantity": 2,
+    "probability": 0.21,
+    "condition": null
+  },
+  {
+    "id": 600305,
+    "quest_id": 10132,
+    "item_id": 10175,
+    "quantity": 3,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600306,
+    "quest_id": 10132,
+    "item_id": 10313,
+    "quantity": 2,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600307,
+    "quest_id": 10132,
+    "item_id": 10117,
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600308,
+    "quest_id": 10132,
+    "item_id": 10665,
+    "quantity": 1,
+    "probability": 0.22,
+    "condition": null
+  },
+  {
+    "id": 600309,
+    "quest_id": 10133,
+    "item_id": 10031,
+    "quantity": 3,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "id": 600310,
+    "quest_id": 10133,
+    "item_id": 10148,
+    "quantity": 3,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600311,
+    "quest_id": 10133,
+    "item_id": 10208,
+    "quantity": 3,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600312,
+    "quest_id": 10134,
+    "item_id": 10381,
+    "quantity": 2,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600313,
+    "quest_id": 10134,
+    "item_id": 10313,
+    "quantity": 1,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600314,
+    "quest_id": 10135,
+    "item_id": 10344,
+    "quantity": 3,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600315,
+    "quest_id": 10135,
+    "item_id": 10186,
+    "quantity": 3,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600316,
+    "quest_id": 10135,
+    "item_id": 10609,
+    "quantity": 1,
+    "probability": 0.21,
+    "condition": null
+  },
+  {
+    "id": 600317,
+    "quest_id": 10135,
+    "item_id": 10437,
+    "quantity": 3,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "id": 600318,
+    "quest_id": 10136,
+    "item_id": 10240,
+    "quantity": 3,
+    "probability": 0.11,
+    "condition": null
+  },
+  {
+    "id": 600319,
+    "quest_id": 10137,
+    "item_id": 10505,
+    "quantity": 2,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600320,
+    "quest_id": 10137,
+    "item_id": 10014,
+    "quantity": 1,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600321,
+    "quest_id": 10138,
+    "item_id": 10155,
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600322,
+    "quest_id": 10139,
+    "item_id": 10059,
+    "quantity": 1,
+    "probability": 0.24,
+    "condition": null
+  },
+  {
+    "id": 600323,
+    "quest_id": 10139,
+    "item_id": 10677,
+    "quantity": 1,
+    "probability": 0.22,
+    "condition": null
+  },
+  {
+    "id": 600324,
+    "quest_id": 10140,
+    "item_id": 10750,
+    "quantity": 2,
+    "probability": 0.21,
+    "condition": null
+  },
+  {
+    "id": 600325,
+    "quest_id": 10141,
+    "item_id": 10582,
+    "quantity": 2,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600326,
+    "quest_id": 10141,
+    "item_id": 10516,
+    "quantity": 3,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600327,
+    "quest_id": 10142,
+    "item_id": 10600,
+    "quantity": 2,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600328,
+    "quest_id": 10142,
+    "item_id": 10827,
+    "quantity": 2,
+    "probability": 0.22,
+    "condition": null
+  },
+  {
+    "id": 600329,
+    "quest_id": 10142,
+    "item_id": 10557,
+    "quantity": 3,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600330,
+    "quest_id": 10143,
+    "item_id": 10650,
+    "quantity": 3,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600331,
+    "quest_id": 10144,
+    "item_id": 10180,
+    "quantity": 1,
+    "probability": 0.19,
+    "condition": null
+  },
+  {
+    "id": 600332,
+    "quest_id": 10144,
+    "item_id": 10817,
+    "quantity": 2,
+    "probability": 0.11,
+    "condition": null
+  },
+  {
+    "id": 600333,
+    "quest_id": 10144,
+    "item_id": 10096,
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600334,
+    "quest_id": 10145,
+    "item_id": 10124,
+    "quantity": 3,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600335,
+    "quest_id": 10145,
+    "item_id": 10771,
+    "quantity": 3,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600336,
+    "quest_id": 10145,
+    "item_id": 10170,
+    "quantity": 1,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600337,
+    "quest_id": 10146,
+    "item_id": 10208,
+    "quantity": 3,
+    "probability": 0.13,
+    "condition": null
+  },
+  {
+    "id": 600338,
+    "quest_id": 10146,
+    "item_id": 10076,
+    "quantity": 2,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600339,
+    "quest_id": 10146,
+    "item_id": 10028,
+    "quantity": 2,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600340,
+    "quest_id": 10147,
+    "item_id": 10634,
+    "quantity": 3,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600341,
+    "quest_id": 10147,
+    "item_id": 10619,
+    "quantity": 1,
+    "probability": 0.19,
+    "condition": null
+  },
+  {
+    "id": 600342,
+    "quest_id": 10148,
+    "item_id": 10042,
+    "quantity": 2,
+    "probability": 0.23,
+    "condition": null
+  },
+  {
+    "id": 600343,
+    "quest_id": 10148,
+    "item_id": 10112,
+    "quantity": 2,
+    "probability": 0.23,
+    "condition": null
+  },
+  {
+    "id": 600344,
+    "quest_id": 10148,
+    "item_id": 10081,
+    "quantity": 1,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600345,
+    "quest_id": 10149,
+    "item_id": 10793,
+    "quantity": 3,
+    "probability": 0.24,
+    "condition": null
+  },
+  {
+    "id": 600346,
+    "quest_id": 10149,
+    "item_id": 10319,
+    "quantity": 2,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600347,
+    "quest_id": 10150,
+    "item_id": 10209,
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600348,
+    "quest_id": 10150,
+    "item_id": 10435,
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600349,
+    "quest_id": 10150,
+    "item_id": 10250,
+    "quantity": 1,
+    "probability": 0.14,
+    "condition": null
+  },
+  {
+    "id": 600350,
+    "quest_id": 10151,
+    "item_id": 10265,
+    "quantity": 2,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "id": 600351,
+    "quest_id": 10151,
+    "item_id": 10497,
+    "quantity": 2,
+    "probability": 0.28,
+    "condition": null
+  },
+  {
+    "id": 600352,
+    "quest_id": 10152,
+    "item_id": 10103,
+    "quantity": 2,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600353,
+    "quest_id": 10152,
+    "item_id": 10297,
+    "quantity": 3,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600354,
+    "quest_id": 10153,
+    "item_id": 10521,
+    "quantity": 1,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600355,
+    "quest_id": 10153,
+    "item_id": 10024,
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "id": 600356,
+    "quest_id": 10154,
+    "item_id": 10164,
+    "quantity": 2,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600357,
+    "quest_id": 10154,
+    "item_id": 10340,
+    "quantity": 2,
+    "probability": 0.24,
+    "condition": null
+  },
+  {
+    "id": 600358,
+    "quest_id": 10154,
+    "item_id": 10648,
+    "quantity": 2,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600359,
+    "quest_id": 10155,
+    "item_id": 10240,
+    "quantity": 2,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600360,
+    "quest_id": 10155,
+    "item_id": 10336,
+    "quantity": 3,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600361,
+    "quest_id": 10156,
+    "item_id": 10790,
+    "quantity": 2,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600362,
+    "quest_id": 10156,
+    "item_id": 10684,
+    "quantity": 2,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600363,
+    "quest_id": 10156,
+    "item_id": 10681,
+    "quantity": 3,
+    "probability": 0.28,
+    "condition": null
+  },
+  {
+    "id": 600364,
+    "quest_id": 10157,
+    "item_id": 10310,
+    "quantity": 3,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600365,
+    "quest_id": 10158,
+    "item_id": 10771,
+    "quantity": 3,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600366,
+    "quest_id": 10158,
+    "item_id": 10480,
+    "quantity": 2,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600367,
+    "quest_id": 10158,
+    "item_id": 10004,
+    "quantity": 2,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600368,
+    "quest_id": 10159,
+    "item_id": 10591,
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600369,
+    "quest_id": 10159,
+    "item_id": 10302,
+    "quantity": 2,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600370,
+    "quest_id": 10160,
+    "item_id": 10480,
+    "quantity": 2,
+    "probability": 0.24,
+    "condition": null
+  },
+  {
+    "id": 600371,
+    "quest_id": 10160,
+    "item_id": 10810,
+    "quantity": 2,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600372,
+    "quest_id": 10161,
+    "item_id": 10020,
+    "quantity": 2,
+    "probability": 0.2,
+    "condition": null
+  },
+  {
+    "id": 600373,
+    "quest_id": 10161,
+    "item_id": 10180,
+    "quantity": 3,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600374,
+    "quest_id": 10161,
+    "item_id": 10129,
+    "quantity": 1,
+    "probability": 0.19,
+    "condition": null
+  },
+  {
+    "id": 600375,
+    "quest_id": 10162,
+    "item_id": 10532,
+    "quantity": 3,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600376,
+    "quest_id": 10162,
+    "item_id": 10436,
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "id": 600377,
+    "quest_id": 10162,
+    "item_id": 10594,
+    "quantity": 2,
+    "probability": 0.24,
+    "condition": null
+  },
+  {
+    "id": 600378,
+    "quest_id": 10163,
+    "item_id": 10825,
+    "quantity": 3,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600379,
+    "quest_id": 10163,
+    "item_id": 10505,
+    "quantity": 1,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600380,
+    "quest_id": 10164,
+    "item_id": 10063,
+    "quantity": 2,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600381,
+    "quest_id": 10164,
+    "item_id": 10043,
+    "quantity": 1,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600382,
+    "quest_id": 10165,
+    "item_id": 10536,
+    "quantity": 2,
+    "probability": 0.2,
+    "condition": null
+  },
+  {
+    "id": 600383,
+    "quest_id": 10165,
+    "item_id": 10269,
+    "quantity": 2,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600384,
+    "quest_id": 10166,
+    "item_id": 10412,
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "id": 600385,
+    "quest_id": 10166,
+    "item_id": 10057,
+    "quantity": 1,
+    "probability": 0.09,
+    "condition": null
+  },
+  {
+    "id": 600386,
+    "quest_id": 10166,
+    "item_id": 10758,
+    "quantity": 3,
+    "probability": 0.2,
+    "condition": null
+  },
+  {
+    "id": 600387,
+    "quest_id": 10167,
+    "item_id": 10814,
+    "quantity": 1,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600388,
+    "quest_id": 10167,
+    "item_id": 10185,
+    "quantity": 2,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600389,
+    "quest_id": 10168,
+    "item_id": 10184,
+    "quantity": 3,
+    "probability": 0.22,
+    "condition": null
+  },
+  {
+    "id": 600390,
+    "quest_id": 10168,
+    "item_id": 10375,
+    "quantity": 2,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600391,
+    "quest_id": 10169,
+    "item_id": 10482,
+    "quantity": 3,
+    "probability": 0.14,
+    "condition": null
+  },
+  {
+    "id": 600392,
+    "quest_id": 10169,
+    "item_id": 10080,
+    "quantity": 2,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600393,
+    "quest_id": 10169,
+    "item_id": 10122,
+    "quantity": 3,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600394,
+    "quest_id": 10170,
+    "item_id": 10529,
+    "quantity": 3,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600395,
+    "quest_id": 10171,
+    "item_id": 10012,
+    "quantity": 1,
+    "probability": 0.26,
+    "condition": null
+  },
+  {
+    "id": 600396,
+    "quest_id": 10171,
+    "item_id": 10612,
+    "quantity": 3,
+    "probability": 0.24,
+    "condition": null
+  },
+  {
+    "id": 600397,
+    "quest_id": 10171,
+    "item_id": 10216,
+    "quantity": 2,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600398,
+    "quest_id": 10172,
+    "item_id": 10799,
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "id": 600399,
+    "quest_id": 10172,
+    "item_id": 10778,
+    "quantity": 1,
+    "probability": 0.2,
+    "condition": null
+  },
+  {
+    "id": 600400,
+    "quest_id": 10172,
+    "item_id": 10294,
+    "quantity": 3,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600401,
+    "quest_id": 10173,
+    "item_id": 10400,
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600402,
+    "quest_id": 10173,
+    "item_id": 10452,
+    "quantity": 1,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600403,
+    "quest_id": 10173,
+    "item_id": 10765,
+    "quantity": 3,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600404,
+    "quest_id": 10174,
+    "item_id": 10199,
+    "quantity": 2,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600405,
+    "quest_id": 10174,
+    "item_id": 10154,
+    "quantity": 2,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600406,
+    "quest_id": 10174,
+    "item_id": 10661,
+    "quantity": 1,
+    "probability": 0.21,
+    "condition": null
+  },
+  {
+    "id": 600407,
+    "quest_id": 10175,
+    "item_id": 10750,
+    "quantity": 1,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600408,
+    "quest_id": 10175,
+    "item_id": 10117,
+    "quantity": 1,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600409,
+    "quest_id": 10175,
+    "item_id": 10297,
+    "quantity": 2,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600410,
+    "quest_id": 10175,
+    "item_id": 10546,
+    "quantity": 2,
+    "probability": 0.19,
+    "condition": null
+  },
+  {
+    "id": 600411,
+    "quest_id": 10176,
+    "item_id": 10053,
+    "quantity": 2,
+    "probability": 0.23,
+    "condition": null
+  },
+  {
+    "id": 600412,
+    "quest_id": 10176,
+    "item_id": 10608,
+    "quantity": 2,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600413,
+    "quest_id": 10178,
+    "item_id": 10433,
+    "quantity": 3,
+    "probability": 0.21,
+    "condition": null
+  },
+  {
+    "id": 600414,
+    "quest_id": 10178,
+    "item_id": 10587,
+    "quantity": 1,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600415,
+    "quest_id": 10178,
+    "item_id": 10413,
+    "quantity": 2,
+    "probability": 0.2,
+    "condition": null
+  },
+  {
+    "id": 600416,
+    "quest_id": 10178,
+    "item_id": 10536,
+    "quantity": 1,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600417,
+    "quest_id": 10179,
+    "item_id": 10800,
+    "quantity": 2,
+    "probability": 0.19,
+    "condition": null
+  },
+  {
+    "id": 600418,
+    "quest_id": 10179,
+    "item_id": 10333,
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "id": 600419,
+    "quest_id": 10180,
+    "item_id": 10296,
+    "quantity": 3,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "id": 600420,
+    "quest_id": 10181,
+    "item_id": 10587,
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "id": 600421,
+    "quest_id": 10181,
+    "item_id": 10084,
+    "quantity": 2,
+    "probability": 0.14,
+    "condition": null
+  },
+  {
+    "id": 600422,
+    "quest_id": 10181,
+    "item_id": 10371,
+    "quantity": 1,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600423,
+    "quest_id": 10182,
+    "item_id": 10163,
+    "quantity": 1,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600424,
+    "quest_id": 10183,
+    "item_id": 10394,
+    "quantity": 3,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600425,
+    "quest_id": 10183,
+    "item_id": 10021,
+    "quantity": 1,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600426,
+    "quest_id": 10185,
+    "item_id": 10509,
+    "quantity": 1,
+    "probability": 0.23,
+    "condition": null
+  },
+  {
+    "id": 600427,
+    "quest_id": 10185,
+    "item_id": 10752,
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600428,
+    "quest_id": 10185,
+    "item_id": 10761,
+    "quantity": 3,
+    "probability": 0.24,
+    "condition": null
+  },
+  {
+    "id": 600429,
+    "quest_id": 10186,
+    "item_id": 10730,
+    "quantity": 3,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600430,
+    "quest_id": 10187,
+    "item_id": 10502,
+    "quantity": 2,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600431,
+    "quest_id": 10187,
+    "item_id": 10782,
+    "quantity": 3,
+    "probability": 0.28,
+    "condition": null
+  },
+  {
+    "id": 600432,
+    "quest_id": 10187,
+    "item_id": 10126,
+    "quantity": 2,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600433,
+    "quest_id": 10188,
+    "item_id": 10276,
+    "quantity": 1,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600434,
+    "quest_id": 10188,
+    "item_id": 10182,
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600435,
+    "quest_id": 10188,
+    "item_id": 10344,
+    "quantity": 1,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600436,
+    "quest_id": 10188,
+    "item_id": 10062,
+    "quantity": 1,
+    "probability": 0.11,
+    "condition": null
+  },
+  {
+    "id": 600437,
+    "quest_id": 10189,
+    "item_id": 10400,
+    "quantity": 2,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "id": 600438,
+    "quest_id": 10189,
+    "item_id": 10193,
+    "quantity": 3,
+    "probability": 0.13,
+    "condition": null
+  },
+  {
+    "id": 600439,
+    "quest_id": 10190,
+    "item_id": 10253,
+    "quantity": 2,
+    "probability": 0.21,
+    "condition": null
+  },
+  {
+    "id": 600440,
+    "quest_id": 10190,
+    "item_id": 10249,
+    "quantity": 2,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600441,
+    "quest_id": 10191,
+    "item_id": 10466,
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600442,
+    "quest_id": 10191,
+    "item_id": 10038,
+    "quantity": 3,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "id": 600443,
+    "quest_id": 10192,
+    "item_id": 10075,
+    "quantity": 2,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600444,
+    "quest_id": 10192,
+    "item_id": 10107,
+    "quantity": 2,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600445,
+    "quest_id": 10192,
+    "item_id": 10493,
+    "quantity": 2,
+    "probability": 0.27,
+    "condition": null
+  },
+  {
+    "id": 600446,
+    "quest_id": 10192,
+    "item_id": 10657,
+    "quantity": 2,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600447,
+    "quest_id": 10193,
+    "item_id": 10666,
+    "quantity": 3,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "id": 600448,
+    "quest_id": 10193,
+    "item_id": 10724,
+    "quantity": 1,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600449,
+    "quest_id": 10194,
+    "item_id": 10024,
+    "quantity": 2,
+    "probability": 0.11,
+    "condition": null
+  },
+  {
+    "id": 600450,
+    "quest_id": 10194,
+    "item_id": 10384,
+    "quantity": 1,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600451,
+    "quest_id": 10194,
+    "item_id": 10412,
+    "quantity": 3,
+    "probability": 0.26,
+    "condition": null
+  },
+  {
+    "id": 600452,
+    "quest_id": 10194,
+    "item_id": 10462,
+    "quantity": 1,
+    "probability": 0.19,
+    "condition": null
+  },
+  {
+    "id": 600453,
+    "quest_id": 10195,
+    "item_id": 10083,
+    "quantity": 1,
+    "probability": 0.31,
+    "condition": null
+  },
+  {
+    "id": 600454,
+    "quest_id": 10195,
+    "item_id": 10545,
+    "quantity": 3,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600455,
+    "quest_id": 10196,
+    "item_id": 10074,
+    "quantity": 3,
+    "probability": 0.11,
+    "condition": null
+  },
+  {
+    "id": 600456,
+    "quest_id": 10196,
+    "item_id": 10250,
+    "quantity": 3,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "id": 600457,
+    "quest_id": 10196,
+    "item_id": 10485,
+    "quantity": 1,
+    "probability": 0.16,
+    "condition": null
+  },
+  {
+    "id": 600458,
+    "quest_id": 10196,
+    "item_id": 10626,
+    "quantity": 2,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "id": 600459,
+    "quest_id": 10197,
+    "item_id": 10124,
+    "quantity": 3,
+    "probability": 0.34,
+    "condition": null
+  },
+  {
+    "id": 600460,
+    "quest_id": 10198,
+    "item_id": 10304,
+    "quantity": 2,
+    "probability": 0.11,
+    "condition": null
+  },
+  {
+    "id": 600461,
+    "quest_id": 10198,
+    "item_id": 10270,
+    "quantity": 2,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600462,
+    "quest_id": 10198,
+    "item_id": 10591,
+    "quantity": 2,
+    "probability": 0.15,
+    "condition": null
+  },
+  {
+    "id": 600463,
+    "quest_id": 10198,
+    "item_id": 10180,
+    "quantity": 3,
+    "probability": 0.23,
+    "condition": null
+  },
+  {
+    "id": 600464,
+    "quest_id": 10199,
+    "item_id": 10454,
+    "quantity": 3,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "id": 600465,
+    "quest_id": 10199,
+    "item_id": 10752,
+    "quantity": 2,
+    "probability": 0.32,
+    "condition": null
+  },
+  {
+    "id": 600466,
+    "quest_id": 10199,
+    "item_id": 10622,
+    "quantity": 3,
+    "probability": 0.21,
+    "condition": null
+  },
+  {
+    "id": 600467,
+    "quest_id": 10200,
+    "item_id": 10064,
+    "quantity": 1,
+    "probability": 0.17,
+    "condition": null
+  },
+  {
+    "id": 600468,
+    "quest_id": 10200,
+    "item_id": 10387,
+    "quantity": 3,
+    "probability": 0.23,
+    "condition": null
+  },
+  {
+    "id": 600469,
+    "quest_id": 10200,
+    "item_id": 10812,
+    "quantity": 1,
+    "probability": 0.33,
+    "condition": null
+  },
+  {
+    "id": 600470,
+    "quest_id": 10201,
+    "item_id": 10489,
+    "quantity": 2,
+    "probability": 0.23,
+    "condition": null
+  },
+  {
+    "id": 600471,
+    "quest_id": 10202,
+    "item_id": 10606,
+    "quantity": 1,
+    "probability": 0.29,
+    "condition": null
+  },
+  {
+    "id": 600472,
+    "quest_id": 10202,
+    "item_id": 10325,
+    "quantity": 3,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "id": 600473,
+    "quest_id": 10203,
+    "item_id": 10795,
+    "quantity": 2,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "id": 600474,
+    "quest_id": 10203,
+    "item_id": 10224,
+    "quantity": 3,
+    "probability": 0.14,
+    "condition": null
+  }
+]

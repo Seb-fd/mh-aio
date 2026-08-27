@@ -743,10 +743,11 @@ pub fn get_weapons_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Weapon
                 WHEN 'Hunting Horn' THEN 5
                 WHEN 'Lance' THEN 6
                 WHEN 'Gunlance' THEN 7
-                WHEN 'Light Bowgun' THEN 8
-                WHEN 'Heavy Bowgun' THEN 9
-                WHEN 'Bow' THEN 10
-                ELSE 11
+                WHEN 'Switch Axe' THEN 8
+                WHEN 'Light Bowgun' THEN 9
+                WHEN 'Heavy Bowgun' THEN 10
+                WHEN 'Bow' THEN 11
+                ELSE 12
             END, id",
     )?;
 
@@ -1171,7 +1172,7 @@ pub fn get_quests_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Quest>>
     let mut stmt = conn.prepare(
         "SELECT id, game_id, name, name_original, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, client, requirements, reward_money, contract_fee, main_monsters, language
          FROM quests WHERE game_id = ?1 ORDER BY
-            CASE hub WHEN 'elder' THEN 0 WHEN 'nekoto' THEN 1 WHEN 'guild_low' THEN 2 WHEN 'guild_high' THEN 3 WHEN 'guild_g' THEN 4 WHEN 'event' THEN 5 WHEN 'challenge' THEN 6 WHEN 'training' THEN 7 WHEN 'treasure' THEN 8 ELSE 9 END,
+            CASE hub WHEN 'elder' THEN 0 WHEN 'nekoto' THEN 1 WHEN 'village' THEN 2 WHEN 'village_low' THEN 2 WHEN 'village_high' THEN 3 WHEN 'guild_low' THEN 4 WHEN 'guild_high' THEN 5 WHEN 'guild_g' THEN 6 WHEN 'event' THEN 7 WHEN 'challenge' THEN 8 WHEN 'training' THEN 9 WHEN 'treasure' THEN 10 ELSE 11 END,
             stars, id",
     )?;
 

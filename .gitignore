@@ -47,3 +47,7 @@ Thumbs.db
 # Dev-only data generation scripts (read external mhfu-db upstream; not needed at runtime)
 scripts/
 tmp_mhfu_upstream/
+tmp_mhp3rd_ass/
+tmp_mhp3rd_upstream/
+tmp_mhp3db/
+tmp_mhfu_upstream_p3rd/

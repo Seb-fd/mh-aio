@@ -1,0 +1,2672 @@
+[
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10015
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10016
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10023
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10024
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10025
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10026
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10027
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10028
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10031
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10032
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10035
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10036
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10041
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10042
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10043
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10044
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10045
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10046
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10047
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10048
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10051
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10052
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10053
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10054
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10055
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10056
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10080
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10102
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10103
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10110
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10111
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10112
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10113
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10114
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10115
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10118
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10119
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10122
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10123
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10128
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10129
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10130
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10131
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10132
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10133
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10134
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10135
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10140
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10141
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10142
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10143
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10144
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10145
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10148
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10149
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10150
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10151
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10152
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10153
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10156
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10157
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10158
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10159
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10160
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10161
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10162
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10163
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10164
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10165
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10166
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10167
+  },
+  {
+    "monster_id": 10046,
+    "kind": "armor",
+    "equipment_id": 10170
+  },
+  {
+    "monster_id": 10046,
+    "kind": "armor",
+    "equipment_id": 10171
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10194
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10195
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10196
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10197
+  },
+  {
+    "monster_id": 10053,
+    "kind": "armor",
+    "equipment_id": 10200
+  },
+  {
+    "monster_id": 10053,
+    "kind": "armor",
+    "equipment_id": 10201
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10210
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10211
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10247
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10248
+  },
+  {
+    "monster_id": 10055,
+    "kind": "armor",
+    "equipment_id": 10251
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10256
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10257
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10258
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10259
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10260
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10261
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10264
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10265
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10268
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10269
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10274
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10275
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10276
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10277
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10278
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10279
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10280
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10281
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10284
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10285
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10286
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10287
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10288
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10289
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10334
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10335
+  },
+  {
+    "monster_id": 10055,
+    "kind": "armor",
+    "equipment_id": 10338
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10343
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10344
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10345
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10346
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10347
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10348
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10351
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10352
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10355
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10356
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10361
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10362
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10363
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10364
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10365
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10366
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10367
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10368
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10373
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10374
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10375
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10376
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10377
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10378
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10381
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10382
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10383
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10384
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10385
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10386
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10389
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10390
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10391
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10392
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10393
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10394
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10395
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10396
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10397
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10398
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10399
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10400
+  },
+  {
+    "monster_id": 10046,
+    "kind": "armor",
+    "equipment_id": 10403
+  },
+  {
+    "monster_id": 10046,
+    "kind": "armor",
+    "equipment_id": 10404
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10429
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10430
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10431
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10432
+  },
+  {
+    "monster_id": 10053,
+    "kind": "armor",
+    "equipment_id": 10435
+  },
+  {
+    "monster_id": 10053,
+    "kind": "armor",
+    "equipment_id": 10436
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10479
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10480
+  },
+  {
+    "monster_id": 10055,
+    "kind": "armor",
+    "equipment_id": 10483
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10488
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10489
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10490
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10491
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10492
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10493
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10496
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10497
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10500
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10501
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10506
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10507
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10508
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10509
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10510
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10511
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10512
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10513
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10516
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10517
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10518
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10519
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10520
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10521
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10561
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10562
+  },
+  {
+    "monster_id": 10055,
+    "kind": "armor",
+    "equipment_id": 10565
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10570
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10571
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10572
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10573
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10574
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10575
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10578
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10579
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10582
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10583
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10588
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10589
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10590
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10591
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10592
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10593
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10594
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10595
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10600
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10601
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10602
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10603
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10604
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10605
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10608
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10609
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10610
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10611
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10612
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10613
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10616
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10617
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10618
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10619
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10620
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10621
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10622
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10623
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10624
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10625
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10626
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10627
+  },
+  {
+    "monster_id": 10046,
+    "kind": "armor",
+    "equipment_id": 10630
+  },
+  {
+    "monster_id": 10046,
+    "kind": "armor",
+    "equipment_id": 10631
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10656
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10657
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10658
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10659
+  },
+  {
+    "monster_id": 10053,
+    "kind": "armor",
+    "equipment_id": 10662
+  },
+  {
+    "monster_id": 10053,
+    "kind": "armor",
+    "equipment_id": 10663
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10693
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10694
+  },
+  {
+    "monster_id": 10055,
+    "kind": "armor",
+    "equipment_id": 10697
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10702
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10703
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10704
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10705
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10706
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10707
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10710
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10711
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10714
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10715
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10720
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10721
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10722
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10723
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10724
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10725
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10726
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10727
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10730
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10731
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10732
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10733
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10734
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10735
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10774
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10775
+  },
+  {
+    "monster_id": 10055,
+    "kind": "armor",
+    "equipment_id": 10778
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10783
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10784
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10785
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10786
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10787
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10788
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10791
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10792
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10795
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10796
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10801
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10802
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10803
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10804
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10805
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10806
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10807
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10808
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10813
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10814
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10815
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10816
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10817
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10818
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10821
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10822
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10823
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10824
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10825
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10826
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10829
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10830
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10831
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10832
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10833
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10834
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10835
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10836
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10837
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10838
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10839
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10840
+  },
+  {
+    "monster_id": 10046,
+    "kind": "armor",
+    "equipment_id": 10843
+  },
+  {
+    "monster_id": 10046,
+    "kind": "armor",
+    "equipment_id": 10844
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10867
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10868
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10869
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10870
+  },
+  {
+    "monster_id": 10053,
+    "kind": "armor",
+    "equipment_id": 10873
+  },
+  {
+    "monster_id": 10053,
+    "kind": "armor",
+    "equipment_id": 10874
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10907
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10908
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10915
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10916
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10917
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 10918
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10919
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 10920
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10923
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 10924
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10927
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 10928
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10933
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 10934
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10935
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 10936
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10937
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 10938
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10939
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 10940
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10943
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 10944
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10945
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 10946
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10947
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 10948
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10990
+  },
+  {
+    "monster_id": 10037,
+    "kind": "armor",
+    "equipment_id": 10991
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10998
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 10999
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 11000
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 11001
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 11002
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 11003
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 11006
+  },
+  {
+    "monster_id": 10036,
+    "kind": "armor",
+    "equipment_id": 11007
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 11010
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 11011
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 11016
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 11017
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 11018
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 11019
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 11020
+  },
+  {
+    "monster_id": 10045,
+    "kind": "armor",
+    "equipment_id": 11021
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 11022
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 11023
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 11028
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 11029
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 11030
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 11031
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 11032
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 11033
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 11036
+  },
+  {
+    "monster_id": 10043,
+    "kind": "armor",
+    "equipment_id": 11037
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 11038
+  },
+  {
+    "monster_id": 10049,
+    "kind": "armor",
+    "equipment_id": 11039
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 11040
+  },
+  {
+    "monster_id": 10027,
+    "kind": "armor",
+    "equipment_id": 11041
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 11044
+  },
+  {
+    "monster_id": 10040,
+    "kind": "armor",
+    "equipment_id": 11045
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 11046
+  },
+  {
+    "monster_id": 10025,
+    "kind": "armor",
+    "equipment_id": 11047
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 11048
+  },
+  {
+    "monster_id": 10054,
+    "kind": "armor",
+    "equipment_id": 11049
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 11050
+  },
+  {
+    "monster_id": 10031,
+    "kind": "armor",
+    "equipment_id": 11051
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 11052
+  },
+  {
+    "monster_id": 10051,
+    "kind": "armor",
+    "equipment_id": 11053
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 11054
+  },
+  {
+    "monster_id": 10021,
+    "kind": "armor",
+    "equipment_id": 11055
+  },
+  {
+    "monster_id": 10046,
+    "kind": "armor",
+    "equipment_id": 11058
+  },
+  {
+    "monster_id": 10046,
+    "kind": "armor",
+    "equipment_id": 11059
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 11084
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 11085
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 11086
+  },
+  {
+    "monster_id": 10047,
+    "kind": "armor",
+    "equipment_id": 11087
+  },
+  {
+    "monster_id": 10053,
+    "kind": "armor",
+    "equipment_id": 11090
+  },
+  {
+    "monster_id": 10053,
+    "kind": "armor",
+    "equipment_id": 11091
+  },
+  {
+    "monster_id": 10032,
+    "kind": "armor",
+    "equipment_id": 11098
+  },
+  {
+    "monster_id": 10032,
+    "kind": "armor",
+    "equipment_id": 11099
+  },
+  {
+    "monster_id": 10033,
+    "kind": "weapon",
+    "equipment_id": 10074
+  },
+  {
+    "monster_id": 10048,
+    "kind": "weapon",
+    "equipment_id": 10182
+  },
+  {
+    "monster_id": 10031,
+    "kind": "weapon",
+    "equipment_id": 10270
+  },
+  {
+    "monster_id": 10051,
+    "kind": "weapon",
+    "equipment_id": 10175
+  },
+  {
+    "monster_id": 10039,
+    "kind": "weapon",
+    "equipment_id": 10050
+  },
+  {
+    "monster_id": 10030,
+    "kind": "weapon",
+    "equipment_id": 10348
+  },
+  {
+    "monster_id": 10053,
+    "kind": "weapon",
+    "equipment_id": 10324
+  },
+  {
+    "monster_id": 10043,
+    "kind": "weapon",
+    "equipment_id": 10280
+  },
+  {
+    "monster_id": 10038,
+    "kind": "weapon",
+    "equipment_id": 10153
+  },
+  {
+    "monster_id": 10045,
+    "kind": "weapon",
+    "equipment_id": 10114
+  },
+  {
+    "monster_id": 10046,
+    "kind": "weapon",
+    "equipment_id": 10323
+  },
+  {
+    "monster_id": 10040,
+    "kind": "weapon",
+    "equipment_id": 10298
+  },
+  {
+    "monster_id": 10048,
+    "kind": "weapon",
+    "equipment_id": 10260
+  },
+  {
+    "monster_id": 10028,
+    "kind": "weapon",
+    "equipment_id": 10317
+  },
+  {
+    "monster_id": 10027,
+    "kind": "weapon",
+    "equipment_id": 10060
+  },
+  {
+    "monster_id": 10027,
+    "kind": "weapon",
+    "equipment_id": 10005
+  },
+  {
+    "monster_id": 10046,
+    "kind": "weapon",
+    "equipment_id": 10455
+  },
+  {
+    "monster_id": 10038,
+    "kind": "weapon",
+    "equipment_id": 10265
+  },
+  {
+    "monster_id": 10032,
+    "kind": "weapon",
+    "equipment_id": 10002
+  },
+  {
+    "monster_id": 10037,
+    "kind": "weapon",
+    "equipment_id": 10370
+  },
+  {
+    "monster_id": 10057,
+    "kind": "weapon",
+    "equipment_id": 10068
+  },
+  {
+    "monster_id": 10059,
+    "kind": "weapon",
+    "equipment_id": 10267
+  },
+  {
+    "monster_id": 10050,
+    "kind": "weapon",
+    "equipment_id": 10062
+  },
+  {
+    "monster_id": 10039,
+    "kind": "weapon",
+    "equipment_id": 10453
+  },
+  {
+    "monster_id": 10042,
+    "kind": "weapon",
+    "equipment_id": 10069
+  },
+  {
+    "monster_id": 10048,
+    "kind": "weapon",
+    "equipment_id": 10426
+  },
+  {
+    "monster_id": 10043,
+    "kind": "weapon",
+    "equipment_id": 10331
+  },
+  {
+    "monster_id": 10029,
+    "kind": "weapon",
+    "equipment_id": 10045
+  },
+  {
+    "monster_id": 10059,
+    "kind": "weapon",
+    "equipment_id": 10218
+  },
+  {
+    "monster_id": 10044,
+    "kind": "weapon",
+    "equipment_id": 10172
+  },
+  {
+    "monster_id": 10051,
+    "kind": "weapon",
+    "equipment_id": 10405
+  },
+  {
+    "monster_id": 10034,
+    "kind": "weapon",
+    "equipment_id": 10293
+  },
+  {
+    "monster_id": 10045,
+    "kind": "weapon",
+    "equipment_id": 10363
+  },
+  {
+    "monster_id": 10043,
+    "kind": "weapon",
+    "equipment_id": 10033
+  },
+  {
+    "monster_id": 10033,
+    "kind": "weapon",
+    "equipment_id": 10279
+  },
+  {
+    "monster_id": 10056,
+    "kind": "weapon",
+    "equipment_id": 10152
+  },
+  {
+    "monster_id": 10036,
+    "kind": "weapon",
+    "equipment_id": 10429
+  },
+  {
+    "monster_id": 10038,
+    "kind": "weapon",
+    "equipment_id": 10222
+  },
+  {
+    "monster_id": 10029,
+    "kind": "weapon",
+    "equipment_id": 10431
+  },
+  {
+    "monster_id": 10038,
+    "kind": "weapon",
+    "equipment_id": 10378
+  },
+  {
+    "monster_id": 10059,
+    "kind": "weapon",
+    "equipment_id": 10108
+  },
+  {
+    "monster_id": 10047,
+    "kind": "weapon",
+    "equipment_id": 10219
+  },
+  {
+    "monster_id": 10027,
+    "kind": "weapon",
+    "equipment_id": 10269
+  },
+  {
+    "monster_id": 10027,
+    "kind": "weapon",
+    "equipment_id": 10250
+  },
+  {
+    "monster_id": 10048,
+    "kind": "weapon",
+    "equipment_id": 10458
+  },
+  {
+    "monster_id": 10026,
+    "kind": "weapon",
+    "equipment_id": 10121
+  },
+  {
+    "monster_id": 10029,
+    "kind": "weapon",
+    "equipment_id": 10185
+  },
+  {
+    "monster_id": 10034,
+    "kind": "weapon",
+    "equipment_id": 10120
+  },
+  {
+    "monster_id": 10050,
+    "kind": "weapon",
+    "equipment_id": 10079
+  },
+  {
+    "monster_id": 10052,
+    "kind": "weapon",
+    "equipment_id": 10149
+  },
+  {
+    "monster_id": 10058,
+    "kind": "weapon",
+    "equipment_id": 10414
+  },
+  {
+    "monster_id": 10047,
+    "kind": "weapon",
+    "equipment_id": 10102
+  },
+  {
+    "monster_id": 10035,
+    "kind": "weapon",
+    "equipment_id": 10236
+  },
+  {
+    "monster_id": 10045,
+    "kind": "weapon",
+    "equipment_id": 10169
+  },
+  {
+    "monster_id": 10021,
+    "kind": "weapon",
+    "equipment_id": 10174
+  },
+  {
+    "monster_id": 10035,
+    "kind": "weapon",
+    "equipment_id": 10171
+  },
+  {
+    "monster_id": 10038,
+    "kind": "weapon",
+    "equipment_id": 10274
+  },
+  {
+    "monster_id": 10059,
+    "kind": "weapon",
+    "equipment_id": 10129
+  },
+  {
+    "monster_id": 10032,
+    "kind": "weapon",
+    "equipment_id": 10271
+  },
+  {
+    "monster_id": 10024,
+    "kind": "weapon",
+    "equipment_id": 10306
+  },
+  {
+    "monster_id": 10025,
+    "kind": "weapon",
+    "equipment_id": 10083
+  },
+  {
+    "monster_id": 10057,
+    "kind": "weapon",
+    "equipment_id": 10089
+  },
+  {
+    "monster_id": 10054,
+    "kind": "weapon",
+    "equipment_id": 10436
+  },
+  {
+    "monster_id": 10031,
+    "kind": "weapon",
+    "equipment_id": 10403
+  },
+  {
+    "monster_id": 10055,
+    "kind": "weapon",
+    "equipment_id": 10294
+  },
+  {
+    "monster_id": 10051,
+    "kind": "weapon",
+    "equipment_id": 10404
+  },
+  {
+    "monster_id": 10047,
+    "kind": "weapon",
+    "equipment_id": 10073
+  },
+  {
+    "monster_id": 10054,
+    "kind": "weapon",
+    "equipment_id": 10396
+  },
+  {
+    "monster_id": 10032,
+    "kind": "weapon",
+    "equipment_id": 10282
+  },
+  {
+    "monster_id": 10034,
+    "kind": "weapon",
+    "equipment_id": 10305
+  },
+  {
+    "monster_id": 10046,
+    "kind": "weapon",
+    "equipment_id": 10365
+  },
+  {
+    "monster_id": 10035,
+    "kind": "weapon",
+    "equipment_id": 10198
+  },
+  {
+    "monster_id": 10037,
+    "kind": "weapon",
+    "equipment_id": 10194
+  },
+  {
+    "monster_id": 10027,
+    "kind": "weapon",
+    "equipment_id": 10227
+  },
+  {
+    "monster_id": 10024,
+    "kind": "weapon",
+    "equipment_id": 10330
+  },
+  {
+    "monster_id": 10042,
+    "kind": "weapon",
+    "equipment_id": 10444
+  },
+  {
+    "monster_id": 10051,
+    "kind": "weapon",
+    "equipment_id": 10147
+  },
+  {
+    "monster_id": 10048,
+    "kind": "weapon",
+    "equipment_id": 10225
+  },
+  {
+    "monster_id": 10057,
+    "kind": "weapon",
+    "equipment_id": 10241
+  },
+  {
+    "monster_id": 10047,
+    "kind": "weapon",
+    "equipment_id": 10025
+  },
+  {
+    "monster_id": 10043,
+    "kind": "weapon",
+    "equipment_id": 10156
+  },
+  {
+    "monster_id": 10038,
+    "kind": "weapon",
+    "equipment_id": 10244
+  },
+  {
+    "monster_id": 10060,
+    "kind": "weapon",
+    "equipment_id": 10058
+  },
+  {
+    "monster_id": 10047,
+    "kind": "weapon",
+    "equipment_id": 10357
+  },
+  {
+    "monster_id": 10031,
+    "kind": "weapon",
+    "equipment_id": 10407
+  },
+  {
+    "monster_id": 10034,
+    "kind": "weapon",
+    "equipment_id": 10028
+  },
+  {
+    "monster_id": 10043,
+    "kind": "weapon",
+    "equipment_id": 10318
+  },
+  {
+    "monster_id": 10021,
+    "kind": "weapon",
+    "equipment_id": 10042
+  },
+  {
+    "monster_id": 10033,
+    "kind": "weapon",
+    "equipment_id": 10249
+  },
+  {
+    "monster_id": 10031,
+    "kind": "weapon",
+    "equipment_id": 10019
+  },
+  {
+    "monster_id": 10022,
+    "kind": "weapon",
+    "equipment_id": 10001
+  },
+  {
+    "monster_id": 10042,
+    "kind": "weapon",
+    "equipment_id": 10075
+  },
+  {
+    "monster_id": 10056,
+    "kind": "weapon",
+    "equipment_id": 10241
+  },
+  {
+    "monster_id": 10060,
+    "kind": "weapon",
+    "equipment_id": 10012
+  },
+  {
+    "monster_id": 10060,
+    "kind": "weapon",
+    "equipment_id": 10251
+  },
+  {
+    "monster_id": 10040,
+    "kind": "weapon",
+    "equipment_id": 10049
+  },
+  {
+    "monster_id": 10044,
+    "kind": "weapon",
+    "equipment_id": 10046
+  },
+  {
+    "monster_id": 10045,
+    "kind": "weapon",
+    "equipment_id": 10048
+  },
+  {
+    "monster_id": 10054,
+    "kind": "weapon",
+    "equipment_id": 10228
+  },
+  {
+    "monster_id": 10045,
+    "kind": "weapon",
+    "equipment_id": 10050
+  },
+  {
+    "monster_id": 10039,
+    "kind": "weapon",
+    "equipment_id": 10024
+  },
+  {
+    "monster_id": 10029,
+    "kind": "weapon",
+    "equipment_id": 10250
+  },
+  {
+    "monster_id": 10052,
+    "kind": "weapon",
+    "equipment_id": 10264
+  },
+  {
+    "monster_id": 10024,
+    "kind": "weapon",
+    "equipment_id": 10258
+  },
+  {
+    "monster_id": 10032,
+    "kind": "weapon",
+    "equipment_id": 10015
+  },
+  {
+    "monster_id": 10048,
+    "kind": "weapon",
+    "equipment_id": 10062
+  },
+  {
+    "monster_id": 10059,
+    "kind": "weapon",
+    "equipment_id": 10257
+  },
+  {
+    "monster_id": 10046,
+    "kind": "weapon",
+    "equipment_id": 10060
+  },
+  {
+    "monster_id": 10027,
+    "kind": "weapon",
+    "equipment_id": 10248
+  },
+  {
+    "monster_id": 10049,
+    "kind": "weapon",
+    "equipment_id": 10071
+  },
+  {
+    "monster_id": 10021,
+    "kind": "weapon",
+    "equipment_id": 10042
+  },
+  {
+    "monster_id": 10033,
+    "kind": "weapon",
+    "equipment_id": 10249
+  },
+  {
+    "monster_id": 10031,
+    "kind": "weapon",
+    "equipment_id": 10019
+  },
+  {
+    "monster_id": 10022,
+    "kind": "weapon",
+    "equipment_id": 10001
+  },
+  {
+    "monster_id": 10042,
+    "kind": "weapon",
+    "equipment_id": 10075
+  },
+  {
+    "monster_id": 10056,
+    "kind": "weapon",
+    "equipment_id": 10241
+  },
+  {
+    "monster_id": 10060,
+    "kind": "weapon",
+    "equipment_id": 10012
+  },
+  {
+    "monster_id": 10060,
+    "kind": "weapon",
+    "equipment_id": 10251
+  },
+  {
+    "monster_id": 10040,
+    "kind": "weapon",
+    "equipment_id": 10049
+  },
+  {
+    "monster_id": 10044,
+    "kind": "weapon",
+    "equipment_id": 10046
+  },
+  {
+    "monster_id": 10045,
+    "kind": "weapon",
+    "equipment_id": 10048
+  },
+  {
+    "monster_id": 10054,
+    "kind": "weapon",
+    "equipment_id": 10228
+  },
+  {
+    "monster_id": 10045,
+    "kind": "weapon",
+    "equipment_id": 10050
+  },
+  {
+    "monster_id": 10039,
+    "kind": "weapon",
+    "equipment_id": 10024
+  },
+  {
+    "monster_id": 10029,
+    "kind": "weapon",
+    "equipment_id": 10250
+  },
+  {
+    "monster_id": 10052,
+    "kind": "weapon",
+    "equipment_id": 10264
+  },
+  {
+    "monster_id": 10024,
+    "kind": "weapon",
+    "equipment_id": 10258
+  },
+  {
+    "monster_id": 10032,
+    "kind": "weapon",
+    "equipment_id": 10015
+  },
+  {
+    "monster_id": 10048,
+    "kind": "weapon",
+    "equipment_id": 10062
+  },
+  {
+    "monster_id": 10059,
+    "kind": "weapon",
+    "equipment_id": 10257
+  },
+  {
+    "monster_id": 10046,
+    "kind": "weapon",
+    "equipment_id": 10060
+  },
+  {
+    "monster_id": 10027,
+    "kind": "weapon",
+    "equipment_id": 10248
+  },
+  {
+    "monster_id": 10049,
+    "kind": "weapon",
+    "equipment_id": 10071
+  }
+]

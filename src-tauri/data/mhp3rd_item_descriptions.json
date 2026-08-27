@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Potion",
+    "description": "Potion description (P3rd)."
+  },
+  {
+    "name": "Mega Potion",
+    "description": "Mega Potion description (P3rd)."
+  },
+  {
+    "name": "Antidote",
+    "description": "Antidote description (P3rd)."
+  },
+  {
+    "name": "Herbal Medicine",
+    "description": "Herbal Medicine description (P3rd)."
+  },
+  {
+    "name": "Catalyst",
+    "description": "Catalyst description (P3rd)."
+  },
+  {
+    "name": "Lifecrystals",
+    "description": "Lifecrystals description (P3rd)."
+  },
+  {
+    "name": "Lifepowder",
+    "description": "Lifepowder description (P3rd)."
+  },
+  {
+    "name": "Demon Drug",
+    "description": "Demon Drug description (P3rd)."
+  },
+  {
+    "name": "Mega Demon Drug",
+    "description": "Mega Demon Drug description (P3rd)."
+  },
+  {
+    "name": "Armor Drug",
+    "description": "Armor Drug description (P3rd)."
+  },
+  {
+    "name": "Mega Armor Drug",
+    "description": "Mega Armor Drug description (P3rd)."
+  },
+  {
+    "name": "Power Pill",
+    "description": "Power Pill description (P3rd)."
+  },
+  {
+    "name": "Armor Pill",
+    "description": "Armor Pill description (P3rd)."
+  },
+  {
+    "name": "Hot Drink",
+    "description": "Hot Drink description (P3rd)."
+  },
+  {
+    "name": "Cool Drink",
+    "description": "Cool Drink description (P3rd)."
+  },
+  {
+    "name": "Psychoserum",
+    "description": "Psychoserum description (P3rd)."
+  },
+  {
+    "name": "Well-done Steak",
+    "description": "Well-done Steak description (P3rd)."
+  },
+  {
+    "name": "Rare Steak",
+    "description": "Rare Steak description (P3rd)."
+  },
+  {
+    "name": "Burnt Meat",
+    "description": "Burnt Meat description (P3rd)."
+  },
+  {
+    "name": "Whetstone",
+    "description": "Whetstone description (P3rd)."
+  },
+  {
+    "name": "Pickaxe",
+    "description": "Pickaxe description (P3rd)."
+  },
+  {
+    "name": "Bug Net",
+    "description": "Bug Net description (P3rd)."
+  },
+  {
+    "name": "BBQ Spit",
+    "description": "BBQ Spit description (P3rd)."
+  },
+  {
+    "name": "Book of Combos 1",
+    "description": "Book of Combos 1 description (P3rd)."
+  },
+  {
+    "name": "Book of Combos 2",
+    "description": "Book of Combos 2 description (P3rd)."
+  },
+  {
+    "name": "Book of Combos 3",
+    "description": "Book of Combos 3 description (P3rd)."
+  },
+  {
+    "name": "Book of Combos 4",
+    "description": "Book of Combos 4 description (P3rd)."
+  },
+  {
+    "name": "Book of Combos 5",
+    "description": "Book of Combos 5 description (P3rd)."
+  },
+  {
+    "name": "Organizer Guide",
+    "description": "Organizer Guide description (P3rd)."
+  },
+  {
+    "name": "BackPacker Guide",
+    "description": "BackPacker Guide description (P3rd)."
+  },
+  {
+    "name": "Blue Mushroom",
+    "description": "Blue Mushroom description (P3rd)."
+  },
+  {
+    "name": "Nitro Mushroom",
+    "description": "Nitro Mushroom description (P3rd)."
+  },
+  {
+    "name": "Parashroom",
+    "description": "Parashroom description (P3rd)."
+  },
+  {
+    "name": "Toadstool",
+    "description": "Toadstool description (P3rd)."
+  },
+  {
+    "name": "Exciteshroom",
+    "description": "Exciteshroom description (P3rd)."
+  },
+  {
+    "name": "Mopeshroom",
+    "description": "Mopeshroom description (P3rd)."
+  },
+  {
+    "name": "Sleep Herb",
+    "description": "Sleep Herb description (P3rd)."
+  },
+  {
+    "name": "Fire Herb",
+    "description": "Fire Herb description (P3rd)."
+  },
+  {
+    "name": "Flowfern",
+    "description": "Flowfern description (P3rd)."
+  },
+  {
+    "name": "Snow Herb",
+    "description": "Snow Herb description (P3rd)."
+  },
+  {
+    "name": "Ivy",
+    "description": "Ivy description (P3rd)."
+  },
+  {
+    "name": "Felvine",
+    "description": "Felvine description (P3rd)."
+  },
+  {
+    "name": "Gloamgrass Root",
+    "description": "Gloamgrass Root description (P3rd)."
+  },
+  {
+    "name": "Hot Pepper",
+    "description": "Hot Pepper description (P3rd)."
+  },
+  {
+    "name": "Bitterbug",
+    "description": "Bitterbug description (P3rd)."
+  },
+  {
+    "name": "Godbug",
+    "description": "Godbug description (P3rd)."
+  },
+  {
+    "name": "Flashbug",
+    "description": "Flashbug description (P3rd)."
+  },
+  {
+    "name": "Thunderbug",
+    "description": "Thunderbug description (P3rd)."
+  },
+  {
+    "name": "Killer Beetle",
+    "description": "Killer Beetle description (P3rd)."
+  },
+  {
+    "name": "Hercudrome",
+    "description": "Hercudrome description (P3rd)."
+  }
+]

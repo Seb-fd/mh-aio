@@ -41,7 +41,7 @@
     loadWeapons(dbId);
   });
 
-  const GAME_WEAPON_ORDER = ['Great Sword','Long Sword','Sword & Shield','Dual Blades','Hammer','Hunting Horn','Lance','Gunlance','Light Bowgun','Heavy Bowgun','Bow'];
+  const GAME_WEAPON_ORDER = ['Great Sword','Long Sword','Sword & Shield','Dual Blades','Hammer','Hunting Horn','Lance','Gunlance','Switch Axe','Light Bowgun','Heavy Bowgun','Bow'];
   function weaponOrder(t: string): number {
     const i = GAME_WEAPON_ORDER.indexOf(t);
     if (i !== -1) return i;

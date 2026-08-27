@@ -1,0 +1,4851 @@
+[
+  {
+    "id": 10001,
+    "name": "﻿#engname",
+    "slot_size": 1,
+    "price": 100,
+    "skill_points": [
+      {
+        "name": "スキル系統1",
+        "points": 0
+      },
+      {
+        "name": "スキル系統2",
+        "points": 0
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 10002,
+    "name": "SteadfastJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Stun",
+        "points": 1
+      },
+      {
+        "name": "Paralysis",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Brd Wyvern Fang",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 10003,
+    "name": "VigilanceJwl[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "Stun",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Regal Frill",
+        "amount": 1
+      },
+      {
+        "name": "Aoashira Pelt",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Grt Jaggi Hide+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10004,
+    "name": "ParalysisJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Paralysis",
+        "points": 1
+      },
+      {
+        "name": "Poison",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Bnahabra Shell",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10005,
+    "name": "ParalysisJwl[2]",
+    "slot_size": 2,
+    "price": 520,
+    "skill_points": [
+      {
+        "name": "Paralysis",
+        "points": 3
+      },
+      {
+        "name": "Poison",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Rangurotora Clw",
+        "amount": 2
+      },
+      {
+        "name": "Monster Fluid",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Torpor Sac",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10006,
+    "name": "Pep Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Sleep",
+        "points": 1
+      },
+      {
+        "name": "Mud/Snow",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Baggi Hide",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10007,
+    "name": "Pep Jewel[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Sleep",
+        "points": 3
+      },
+      {
+        "name": "Mud/Snow",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Regal Crest",
+        "amount": 1
+      },
+      {
+        "name": "Warm Pelt",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Coma Sac",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10008,
+    "name": "Antidote Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Poison",
+        "points": 1
+      },
+      {
+        "name": "Stun",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Froggi Hide",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10009,
+    "name": "Antidote Jwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Poison",
+        "points": 3
+      },
+      {
+        "name": "Stun",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Grt Frggi Arm",
+        "amount": 2
+      },
+      {
+        "name": "Screamer",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Toxin Sac",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10010,
+    "name": "FortitudeJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Fortitude",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Armor Seed",
+        "amount": 2
+      },
+      {
+        "name": "Catalyst",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10011,
+    "name": "Alarm Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Anti-Theft",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Felvine",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 10012,
+    "name": "Teflon Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Mud/Snow",
+        "points": 1
+      },
+      {
+        "name": "Sleep",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Rhenoplos Shell",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10013,
+    "name": "LubricantJwl[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "Mud/Snow",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Rangrtora Belly",
+        "amount": 1
+      },
+      {
+        "name": "Bealite Ore",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10014,
+    "name": "RetroviralJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Antiseptic",
+        "points": 1
+      },
+      {
+        "name": "Sense",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Ludroth Hide",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10015,
+    "name": "AntiviralJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Antiseptic",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Spongy Hide",
+        "amount": 1
+      },
+      {
+        "name": "Earth Crystal",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10016,
+    "name": "Anchor Jewel[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "Quake Res",
+        "points": 1
+      },
+      {
+        "name": "Sleep",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Fertile Mud",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10017,
+    "name": "Tectonic Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Quake Res",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Hprbkka Skl Shl",
+        "amount": 1
+      },
+      {
+        "name": "Carpenterbug",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10018,
+    "name": "Cooling Jwl[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "Heat Res",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Ice Crystal",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 10019,
+    "name": "Warming Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Cold Res",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Baggi Scale",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10020,
+    "name": "Earplug Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "HearProtct",
+        "points": 1
+      },
+      {
+        "name": "Protection",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Rathian Webbing",
+        "amount": 1
+      },
+      {
+        "name": "Urukusu Ear",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Tigrex Carapace",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10021,
+    "name": "Earplug Jwl[3]",
+    "slot_size": 3,
+    "price": 540,
+    "skill_points": [
+      {
+        "name": "HearProtct",
+        "points": 4
+      },
+      {
+        "name": "Protection",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Blk Tigrex Fang",
+        "amount": 2
+      },
+      {
+        "name": "Uncanny Hide+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10022,
+    "name": "WindpressJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "WindPress",
+        "points": 1
+      },
+      {
+        "name": "Fate",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Jinouga Claw",
+        "amount": 1
+      },
+      {
+        "name": "Dragonite Ore",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10023,
+    "name": "WindpressJwl[2]",
+    "slot_size": 2,
+    "price": 440,
+    "skill_points": [
+      {
+        "name": "WindPress",
+        "points": 3
+      },
+      {
+        "name": "Fate",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Sapphire Fang",
+        "amount": 1
+      },
+      {
+        "name": "Carbalite Ore",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 10024,
+    "name": "Attack Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Attack",
+        "points": 1
+      },
+      {
+        "name": "Defense",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Jaggi Scale",
+        "amount": 2
+      },
+      {
+        "name": "Power Seed",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10025,
+    "name": "Attack Jewel[2]",
+    "slot_size": 2,
+    "price": 520,
+    "skill_points": [
+      {
+        "name": "Attack",
+        "points": 3
+      },
+      {
+        "name": "Defense",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Fire Wyvern Clw",
+        "amount": 2
+      },
+      {
+        "name": "Demondrug",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10026,
+    "name": "Attack Jewel[3]",
+    "slot_size": 3,
+    "price": 380,
+    "skill_points": [
+      {
+        "name": "Attack",
+        "points": 5
+      },
+      {
+        "name": "Defense",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Barioth Claw+",
+        "amount": 1
+      },
+      {
+        "name": "Mega Demondrug",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10027,
+    "name": "Expert Jewel[1]",
+    "slot_size": 1,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Expert",
+        "points": 1
+      },
+      {
+        "name": "Dragon Res",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Sharp Fang",
+        "amount": 2
+      },
+      {
+        "name": "Iron Ore",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10028,
+    "name": "Expert Jewel[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Expert",
+        "points": 3
+      },
+      {
+        "name": "Dragon Res",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Nargacuga Wing",
+        "amount": 1
+      },
+      {
+        "name": "Grt Baggi Claw",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "RoyalLudrthScl+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10029,
+    "name": "Expert Jewel[3]",
+    "slot_size": 3,
+    "price": 460,
+    "skill_points": [
+      {
+        "name": "Expert",
+        "points": 5
+      },
+      {
+        "name": "Dragon Res",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Akantor Spike",
+        "amount": 1
+      },
+      {
+        "name": "Hapurubokka Cpc",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10030,
+    "name": "SpcialAtkJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Status",
+        "points": 1
+      },
+      {
+        "name": "Elemental",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Bnahabra Wing",
+        "amount": 3
+      },
+      {
+        "name": "Bnahabra Stingr",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Bnahabra Carpce",
+        "amount": 2
+      },
+      {
+        "name": "Quality Fin",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10031,
+    "name": "SpcialAtkJwl[2]",
+    "slot_size": 2,
+    "price": 440,
+    "skill_points": [
+      {
+        "name": "Status",
+        "points": 3
+      },
+      {
+        "name": "Elemental",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Gigginox Claw+",
+        "amount": 1
+      },
+      {
+        "name": "Monster Broth",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10032,
+    "name": "Element Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Elemental",
+        "points": 1
+      },
+      {
+        "name": "Status",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Alatreon Shell",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10033,
+    "name": "Element Jwl[3]",
+    "slot_size": 3,
+    "price": 540,
+    "skill_points": [
+      {
+        "name": "Elemental",
+        "points": 4
+      },
+      {
+        "name": "Status",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Alatreon Claw",
+        "amount": 2
+      },
+      {
+        "name": "LightningCarpce",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10034,
+    "name": "Fire Atk Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Fire Atk",
+        "points": 1
+      },
+      {
+        "name": "Water Atk",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Rathian Scale",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10035,
+    "name": "Fire Atk Jwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Fire Atk",
+        "points": 3
+      },
+      {
+        "name": "Water Atk",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Inferno Sac",
+        "amount": 1
+      },
+      {
+        "name": "Rangurotora Cpc",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10036,
+    "name": "WaterAtk Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Water Atk",
+        "points": 1
+      },
+      {
+        "name": "Thundr Atk",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "RyalLudrthCrest",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10037,
+    "name": "WaterAtk Jwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Water Atk",
+        "points": 3
+      },
+      {
+        "name": "Thundr Atk",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Chromatic Fluid",
+        "amount": 1
+      },
+      {
+        "name": "PurpRylLdrthScl",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10038,
+    "name": "ThndrAtk Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Thundr Atk",
+        "points": 1
+      },
+      {
+        "name": "Ice Attack",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Gigginox Claw",
+        "amount": 1
+      },
+      {
+        "name": "Thunderbug",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10039,
+    "name": "ThndrAtk Jwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Thundr Atk",
+        "points": 3
+      },
+      {
+        "name": "Ice Attack",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Thunder Sac",
+        "amount": 1
+      },
+      {
+        "name": "Red Qurpeco Scl",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10040,
+    "name": "Ice Atk Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Ice Attack",
+        "points": 1
+      },
+      {
+        "name": "Fire Atk",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Grt Baggi Hide",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10041,
+    "name": "Ice Atk Jwl[2]",
+    "slot_size": 2,
+    "price": 440,
+    "skill_points": [
+      {
+        "name": "Ice Attack",
+        "points": 3
+      },
+      {
+        "name": "Fire Atk",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Frozen Mucus",
+        "amount": 1
+      },
+      {
+        "name": "Urksu Hrd Belly",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10042,
+    "name": "DragnAtk Jwl[1]",
+    "slot_size": 1,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Dragon Atk",
+        "points": 1
+      },
+      {
+        "name": "Status",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Jhen Mohran Scl",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10043,
+    "name": "DragnAtk Jwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Dragon Atk",
+        "points": 3
+      },
+      {
+        "name": "Status",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Ancnt Drgn Bone",
+        "amount": 2
+      },
+      {
+        "name": "Rathalos Carpce",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10044,
+    "name": "DeblitateJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Debilitate",
+        "points": 1
+      },
+      {
+        "name": "Health",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Rathalos Webbng",
+        "amount": 1
+      },
+      {
+        "name": "Rathian Spike",
+        "amount": 1
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Rathalos Scale+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10045,
+    "name": "DeblitateJwl[3]",
+    "slot_size": 3,
+    "price": 540,
+    "skill_points": [
+      {
+        "name": "Debilitate",
+        "points": 4
+      },
+      {
+        "name": "Health",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Akantor Fang",
+        "amount": 1
+      },
+      {
+        "name": "Rathalos Ruby",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10046,
+    "name": "Slam Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Slam",
+        "points": 1
+      },
+      {
+        "name": "Expert",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Doboru Kelp",
+        "amount": 1
+      },
+      {
+        "name": "Doboru Shell",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Mossy Carapace+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10047,
+    "name": "Slam Jewel[3]",
+    "slot_size": 3,
+    "price": 540,
+    "skill_points": [
+      {
+        "name": "Slam",
+        "points": 4
+      },
+      {
+        "name": "Expert",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Ukanlos Claw",
+        "amount": 1
+      },
+      {
+        "name": "Rathian Ruby",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10048,
+    "name": "Ammo Box Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Loading",
+        "points": 1
+      },
+      {
+        "name": "Reload Spd",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Jhen Mohran Arm",
+        "amount": 1
+      },
+      {
+        "name": "Tigrex Claw",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Dviljho Skl Shl",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10049,
+    "name": "Ammo Box Jwl[3]",
+    "slot_size": 3,
+    "price": 380,
+    "skill_points": [
+      {
+        "name": "Loading",
+        "points": 4
+      },
+      {
+        "name": "Reload Spd",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Jhen Mhran Arm+",
+        "amount": 1
+      },
+      {
+        "name": "Wyvern Stone",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10050,
+    "name": "FastChargJwl[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "FastCharge",
+        "points": 1
+      },
+      {
+        "name": "Constitutn",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Hapurubokka Clw",
+        "amount": 1
+      },
+      {
+        "name": "Barroth Spine",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Tigrex Scale+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10051,
+    "name": "FastChargJwl[3]",
+    "slot_size": 3,
+    "price": 380,
+    "skill_points": [
+      {
+        "name": "FastCharge",
+        "points": 4
+      },
+      {
+        "name": "Constitutn",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Jhen Mohran Cpc",
+        "amount": 1
+      },
+      {
+        "name": "SandBariothShl",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10052,
+    "name": "Unlock Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Awaken",
+        "points": 1
+      },
+      {
+        "name": "Sense",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Jinouga Horn",
+        "amount": 1
+      },
+      {
+        "name": "Barioth Spike",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Jinouga Horn+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10053,
+    "name": "Unlock Jewel[2]",
+    "slot_size": 2,
+    "price": 520,
+    "skill_points": [
+      {
+        "name": "Awaken",
+        "points": 3
+      },
+      {
+        "name": "Sense",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Amatsu Horn",
+        "amount": 1
+      },
+      {
+        "name": "Grn Narga Pelt",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10054,
+    "name": "KO Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "KO",
+        "points": 1
+      },
+      {
+        "name": "FastCharge",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Monster Bone+",
+        "amount": 2
+      },
+      {
+        "name": "Rhnplos Skl Shl",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10055,
+    "name": "KO Jewel[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "KO",
+        "points": 3
+      },
+      {
+        "name": "FastCharge",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Diablos Spine",
+        "amount": 2
+      },
+      {
+        "name": "Swallowtail",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Stout Bone",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10056,
+    "name": "FatigeAtkJwl[1]",
+    "slot_size": 1,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "FatigueAtk",
+        "points": 1
+      },
+      {
+        "name": "Stamina",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Barroth Claw",
+        "amount": 1
+      },
+      {
+        "name": "Med Mnster Bone",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10057,
+    "name": "FatigeAtkJwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "FatigueAtk",
+        "points": 3
+      },
+      {
+        "name": "Stamina",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Narga TailSpike",
+        "amount": 2
+      },
+      {
+        "name": "HotSpringTicket",
+        "amount": 1
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Barroth Claw+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10058,
+    "name": "PotentialJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Potential",
+        "points": 1
+      },
+      {
+        "name": "Protection",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Mossy Carapace",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10059,
+    "name": "PotentialJwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Potential",
+        "points": 3
+      },
+      {
+        "name": "Protection",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "IceBarrothSpine",
+        "amount": 2
+      },
+      {
+        "name": "Urukusu Lng Ear",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10060,
+    "name": "AdversityJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Adversity",
+        "points": 1
+      },
+      {
+        "name": "Rec Level",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Call to Arms",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10061,
+    "name": "AdversityJwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Adversity",
+        "points": 3
+      },
+      {
+        "name": "Rec Level",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Wht Raven Quill",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10062,
+    "name": "BombrdierJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "BombStrUp",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Flintstone",
+        "amount": 1
+      },
+      {
+        "name": "Grt Jaggi Hide",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10063,
+    "name": "Fife Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Horn",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Queer Beak",
+        "amount": 1
+      },
+      {
+        "name": "Flute",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10064,
+    "name": "Howitzer Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Gunnery",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Isisium Ore",
+        "amount": 1
+      },
+      {
+        "name": "Lg Barrel-Bomb+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10065,
+    "name": "Defense Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Defense",
+        "points": 1
+      },
+      {
+        "name": "Attack",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Aoashira Shell",
+        "amount": 1
+      },
+      {
+        "name": "Armor Seed",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10066,
+    "name": "Defense Jwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Defense",
+        "points": 3
+      },
+      {
+        "name": "Attack",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Uragaan Shell",
+        "amount": 2
+      },
+      {
+        "name": "Armorskin",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Aoashira Arm+",
+        "amount": 1
+      },
+      {
+        "name": "Mega Armorskin",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10067,
+    "name": "Blight Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Blight Res",
+        "points": 1
+      },
+      {
+        "name": "Health",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Alatreon Plate",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10068,
+    "name": "Blight Jewel[3]",
+    "slot_size": 3,
+    "price": 460,
+    "skill_points": [
+      {
+        "name": "Blight Res",
+        "points": 4
+      },
+      {
+        "name": "Health",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Alatreon Horn+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10069,
+    "name": "Inferno Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Fire Res",
+        "points": 1
+      },
+      {
+        "name": "Water Res",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Fire Herb",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "id": 10070,
+    "name": "Crimson Jwl[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "Fire Res",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Flame Sac",
+        "amount": 2
+      },
+      {
+        "name": "Lg Monster Bone",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 10071,
+    "name": "Stream Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Water Res",
+        "points": 1
+      },
+      {
+        "name": "ThunderRes",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Knife Mackerel",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "id": 10072,
+    "name": "Torrent Jwl[1]",
+    "slot_size": 1,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Water Res",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Aqua Sac",
+        "amount": 2
+      },
+      {
+        "name": "Lg Monster Bone",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 10073,
+    "name": "Thunder Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "ThunderRes",
+        "points": 1
+      },
+      {
+        "name": "Ice Res",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Thunderbug",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 10074,
+    "name": "LightningJwl[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "ThunderRes",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Static Carapace",
+        "amount": 1
+      },
+      {
+        "name": "Lg Monster Bone",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10075,
+    "name": "Freeze Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Ice Res",
+        "points": 1
+      },
+      {
+        "name": "Fire Res",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Ice Crystal",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "id": 10076,
+    "name": "GlacierJwl[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "Ice Res",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Urukusu Claw",
+        "amount": 2
+      },
+      {
+        "name": "Lg Monster Bone",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 10077,
+    "name": "Slayer Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Dragon Res",
+        "points": 1
+      },
+      {
+        "name": "Poison",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Dragon Seed",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10078,
+    "name": "Extinction Jwl[1]",
+    "slot_size": 1,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Dragon Res",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Ancnt Drgn Bone",
+        "amount": 1
+      },
+      {
+        "name": "Shrp Mnster Bne",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10079,
+    "name": "Protectn Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Protection",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Rathian Shell",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10080,
+    "name": "DvnePrtctJwl[1]",
+    "slot_size": 1,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Protection",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Gld Rathian Cpc",
+        "amount": 2
+      },
+      {
+        "name": "Yukumo Ticket",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10081,
+    "name": "Health Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Health",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Bulldrome Hide",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10082,
+    "name": "FeelGood Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Rec Speed",
+        "points": 1
+      },
+      {
+        "name": "Eating",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Jaggi Hide",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10083,
+    "name": "FeelGood Jwl[2]",
+    "slot_size": 2,
+    "price": 440,
+    "skill_points": [
+      {
+        "name": "Rec Speed",
+        "points": 3
+      },
+      {
+        "name": "Eating",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Gigginox Hide",
+        "amount": 1
+      },
+      {
+        "name": "Pale Extract",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Grt Baggi Hide+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10084,
+    "name": "Cure Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Rec Level",
+        "points": 1
+      },
+      {
+        "name": "Rec Speed",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Qurupeco Scale",
+        "amount": 1
+      },
+      {
+        "name": "Kelbi Horn",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10085,
+    "name": "Cure Jewel[2]",
+    "slot_size": 2,
+    "price": 520,
+    "skill_points": [
+      {
+        "name": "Rec Level",
+        "points": 3
+      },
+      {
+        "name": "Rec Speed",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Qurupeco Scale+",
+        "amount": 1
+      },
+      {
+        "name": "Ancient Potion",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10086,
+    "name": "Evade Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Evasion",
+        "points": 1
+      },
+      {
+        "name": "Health",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Urukusu Belly",
+        "amount": 2
+      },
+      {
+        "name": "Killer Beetle",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Nargacuga Wing+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10087,
+    "name": "Evade Jewel[2]",
+    "slot_size": 2,
+    "price": 520,
+    "skill_points": [
+      {
+        "name": "Evasion",
+        "points": 3
+      },
+      {
+        "name": "Health",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "SandBariothPlt",
+        "amount": 2
+      },
+      {
+        "name": "Urukusu Pelt+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10088,
+    "name": "Jump Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Evade Dist",
+        "points": 1
+      },
+      {
+        "name": "Health",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Black Narga Plt",
+        "amount": 2
+      },
+      {
+        "name": "Bnahabra Wing",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Barioth Carapce",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10089,
+    "name": "Jump Jewel[3]",
+    "slot_size": 3,
+    "price": 460,
+    "skill_points": [
+      {
+        "name": "Evade Dist",
+        "points": 4
+      },
+      {
+        "name": "Health",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Grn Narga Wing",
+        "amount": 2
+      },
+      {
+        "name": "Qurupeco Wing",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10090,
+    "name": "Sheathe Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Sheathe",
+        "points": 1
+      },
+      {
+        "name": "Sharpener",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Shellfish",
+        "amount": 1
+      },
+      {
+        "name": "Altarth Abdomen",
+        "amount": 1
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Jaggi Scale+",
+        "amount": 1
+      },
+      {
+        "name": "Drink Ticket",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10091,
+    "name": "Sheathe Jwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Sheathe",
+        "points": 3
+      },
+      {
+        "name": "Sharpener",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Diablos Carapce",
+        "amount": 1
+      },
+      {
+        "name": "Quality Abdomen",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10092,
+    "name": "TrapMastrJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "SpeedSetup",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Glossy Hide",
+        "amount": 1
+      },
+      {
+        "name": "Shock Trap",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10093,
+    "name": "FastEaterJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Eating",
+        "points": 1
+      },
+      {
+        "name": "Rec Level",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Hapurbokka Hide",
+        "amount": 1
+      },
+      {
+        "name": "Aoashira Arm",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Haprbokka Hide+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10094,
+    "name": "FastEaterJwl[3]",
+    "slot_size": 3,
+    "price": 380,
+    "skill_points": [
+      {
+        "name": "Eating",
+        "points": 4
+      },
+      {
+        "name": "Rec Level",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Deviljho Fang",
+        "amount": 2
+      },
+      {
+        "name": "Tigrex Fang+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10095,
+    "name": "Marathon Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Stamina",
+        "points": 1
+      },
+      {
+        "name": "Hunger",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "RoyalLudrothClw",
+        "amount": 1
+      },
+      {
+        "name": "Mega Juice",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "SpongyPurplHide",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10096,
+    "name": "Marathon Jwl[3]",
+    "slot_size": 3,
+    "price": 380,
+    "skill_points": [
+      {
+        "name": "Stamina",
+        "points": 4
+      },
+      {
+        "name": "Hunger",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Green Narga Scl",
+        "amount": 1
+      },
+      {
+        "name": "Spongy Hide+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10097,
+    "name": "Constutn Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Constitutn",
+        "points": 1
+      },
+      {
+        "name": "Stamina",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Regal Snout",
+        "amount": 1
+      },
+      {
+        "name": "Froggi Scale",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Barioth Pelt+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10098,
+    "name": "Constutn Jwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Constitutn",
+        "points": 3
+      },
+      {
+        "name": "Stamina",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Agnaktor Fin+",
+        "amount": 1
+      },
+      {
+        "name": "Grt Frggi Hide+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10099,
+    "name": "WillRecovJwl[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "Will Recov",
+        "points": 1
+      },
+      {
+        "name": "Evasion",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Narga Scale",
+        "amount": 1
+      },
+      {
+        "name": "Med Mnster Bone",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Rhenoplos Crpce",
+        "amount": 2
+      },
+      {
+        "name": "HotSpringTicket",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10100,
+    "name": "WillRecovJwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Will Recov",
+        "points": 3
+      },
+      {
+        "name": "Evasion",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Nargacuga Fang+",
+        "amount": 1
+      },
+      {
+        "name": "Shrp Mnster Bne",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10101,
+    "name": "PickyEatrJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Hunger",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Bulldrome Tusk",
+        "amount": 1
+      },
+      {
+        "name": "Well-Done Steak",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10102,
+    "name": "Fatso Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Gluttony",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Giant Bone",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10103,
+    "name": "Fate Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Fate",
+        "points": 1
+      },
+      {
+        "name": "Whim",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "BrdWyvern Stone",
+        "amount": 1
+      },
+      {
+        "name": "Silver Egg",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10104,
+    "name": "Fate Jewel[3]",
+    "slot_size": 3,
+    "price": 460,
+    "skill_points": [
+      {
+        "name": "Fate",
+        "points": 4
+      },
+      {
+        "name": "Whim",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "GldRathianSpike",
+        "amount": 2
+      },
+      {
+        "name": "Golden Egg",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10105,
+    "name": "Rewards Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Rewards",
+        "points": 1
+      },
+      {
+        "name": "Fate",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Commendation",
+        "amount": 1
+      },
+      {
+        "name": "Jinouga Pelt",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10106,
+    "name": "Rewards Jwl[3]",
+    "slot_size": 3,
+    "price": 380,
+    "skill_points": [
+      {
+        "name": "Rewards",
+        "points": 4
+      },
+      {
+        "name": "Fate",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Commendation G",
+        "amount": 2
+      },
+      {
+        "name": "Jinouga Plate",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10107,
+    "name": "HidecutterJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Carving",
+        "points": 1
+      },
+      {
+        "name": "Fate",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Deviljho Hide",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10108,
+    "name": "HidecutterJwl[3]",
+    "slot_size": 3,
+    "price": 460,
+    "skill_points": [
+      {
+        "name": "Carving",
+        "points": 4
+      },
+      {
+        "name": "Fate",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Amatsu Patagium",
+        "amount": 1
+      },
+      {
+        "name": "Jhen Mohran Jwl",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10109,
+    "name": "BackpckngJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Backpackng",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Power Extract",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10110,
+    "name": "GatherngJwl[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "Gathering",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Pepipo Pumpkin",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10111,
+    "name": "GrabnDashJwl[1]",
+    "slot_size": 1,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "HiSpdGathr",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Pepipo Pumpkin",
+        "amount": 1
+      },
+      {
+        "name": "Sm Monster Bone",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10112,
+    "name": "GoodLuck Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Whim",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Iron Ore",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10113,
+    "name": "FriendshipJwl[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "Wide Area",
+        "points": 1
+      },
+      {
+        "name": "Sense",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Qurupeco Feathr",
+        "amount": 1
+      },
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Comrade Ticket",
+        "amount": 1
+      },
+      {
+        "name": "Sm Goldenfish",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10114,
+    "name": "FriendshipJwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Wide Area",
+        "points": 3
+      },
+      {
+        "name": "Sense",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Red Qurpeco Wng",
+        "amount": 1
+      },
+      {
+        "name": "Lifepowder",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10115,
+    "name": "Psychic Jwl[1]",
+    "slot_size": 1,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Psychic",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Vibrant Down",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10116,
+    "name": "ProfessorJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Combo Rate",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Book of Combos 1",
+        "amount": 1
+      },
+      {
+        "name": "Gagua Feather",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10117,
+    "name": "Armory Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Shot Mix",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Sm Goldenfish",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10118,
+    "name": "StayngPwrJwl[1]",
+    "slot_size": 1,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "LastingPwr",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Large Fin",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10119,
+    "name": "Perceptn Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Perception",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Zuwaroposu Hide",
+        "amount": 1
+      },
+      {
+        "name": "Binoculars",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10120,
+    "name": "Dungmastr Jwl[1]",
+    "slot_size": 1,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "DungMaster",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Dung Bomb",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10121,
+    "name": "Huntsman Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Huntsman",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Sushifish",
+        "amount": 1
+      },
+      {
+        "name": "Raw Meat",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10122,
+    "name": "Ninja Jewel[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "Sense",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Anteka Antlers",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10123,
+    "name": "Artisan Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Artisan",
+        "points": 1
+      },
+      {
+        "name": "Sharpness",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Jhen Mhran Fang",
+        "amount": 1
+      },
+      {
+        "name": "Agnaktor Claw",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Deviljho Claw",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10124,
+    "name": "Artisan Jwl[3]",
+    "slot_size": 3,
+    "price": 460,
+    "skill_points": [
+      {
+        "name": "Artisan",
+        "points": 4
+      },
+      {
+        "name": "Sharpness",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Amatsu Claw",
+        "amount": 1
+      },
+      {
+        "name": "Deviljho Jewel",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10125,
+    "name": "Fencing Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Fencing",
+        "points": 1
+      },
+      {
+        "name": "Artisan",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "EldrDragonBlood",
+        "amount": 1
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Slvr Rthlos Cpc",
+        "amount": 2
+      },
+      {
+        "name": "Ice Agnktr Tail",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10126,
+    "name": "Fencing Jwl[3]",
+    "slot_size": 3,
+    "price": 380,
+    "skill_points": [
+      {
+        "name": "Fencing",
+        "points": 4
+      },
+      {
+        "name": "Artisan",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Ukanlos Shell",
+        "amount": 2
+      },
+      {
+        "name": "Tigrex Jaw",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10127,
+    "name": "Razor Jewel[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "Sharpness",
+        "points": 1
+      },
+      {
+        "name": "Artisan",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Agnaktor Fin",
+        "amount": 1
+      },
+      {
+        "name": "Jinouga Shell",
+        "amount": 1
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Rathian Plate",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10128,
+    "name": "Razor Jewel[3]",
+    "slot_size": 3,
+    "price": 380,
+    "skill_points": [
+      {
+        "name": "Sharpness",
+        "points": 4
+      },
+      {
+        "name": "Artisan",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Agnaktor Fin+",
+        "amount": 1
+      },
+      {
+        "name": "Horrific Maw",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10129,
+    "name": "CritDraw Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Crit Draw",
+        "points": 1
+      },
+      {
+        "name": "Expert",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Twisted Horn",
+        "amount": 1
+      },
+      {
+        "name": "Diablos Shell",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Uragaan Carapce",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10130,
+    "name": "CritDraw Jwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Crit Draw",
+        "points": 3
+      },
+      {
+        "name": "Expert",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Diablos Thorcic",
+        "amount": 1
+      },
+      {
+        "name": "Ice Barroth Shl",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10131,
+    "name": "PunshDrw Jwl[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "PunishDraw",
+        "points": 1
+      },
+      {
+        "name": "Sharpness",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Uragaan Shield",
+        "amount": 1
+      },
+      {
+        "name": "Monster Bone+",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Uragaan Scale+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10132,
+    "name": "PunshDrw Jwl[3]",
+    "slot_size": 3,
+    "price": 380,
+    "skill_points": [
+      {
+        "name": "PunishDraw",
+        "points": 4
+      },
+      {
+        "name": "Sharpness",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "MajesticBlkHorn",
+        "amount": 1
+      },
+      {
+        "name": "Barioth Carapce",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10133,
+    "name": "IronWall Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Constitutn",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Barroth Shell",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10134,
+    "name": "IronWall Jwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 3
+      },
+      {
+        "name": "Constitutn",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Agnaktor Snout",
+        "amount": 1
+      },
+      {
+        "name": "Agnaktor Shell",
+        "amount": 3
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Ice Agnktor Fin",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10135,
+    "name": "HardWall Jwl[1]",
+    "slot_size": 1,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 1
+      },
+      {
+        "name": "Stamina",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Fire Stone",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10136,
+    "name": "HardWall Jwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 3
+      },
+      {
+        "name": "Stamina",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Ice Agnktor Shl",
+        "amount": 1
+      },
+      {
+        "name": "Firecell Stone",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 10137,
+    "name": "Grinder Jwl[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "Sharpener",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Grt Jaggi Claw",
+        "amount": 1
+      },
+      {
+        "name": "Machalite Ore",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10138,
+    "name": "StrngShotJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "NormalS Up",
+        "points": 1
+      },
+      {
+        "name": "Recoil",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Monster Bone+",
+        "amount": 2
+      },
+      {
+        "name": "Rumblefish",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "id": 10139,
+    "name": "StrngShotJwl[3]",
+    "slot_size": 3,
+    "price": 540,
+    "skill_points": [
+      {
+        "name": "NormalS Up",
+        "points": 4
+      },
+      {
+        "name": "Recoil",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Agnaktor Carpce",
+        "amount": 2
+      },
+      {
+        "name": "Shrp Mnster Bne",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10140,
+    "name": "Pierce Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "PierceS Up",
+        "points": 1
+      },
+      {
+        "name": "Recoil",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Uragaan Jaw",
+        "amount": 1
+      },
+      {
+        "name": "Hercudrome",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10141,
+    "name": "Pierce Jewel[3]",
+    "slot_size": 3,
+    "price": 380,
+    "skill_points": [
+      {
+        "name": "PierceS Up",
+        "points": 4
+      },
+      {
+        "name": "Recoil",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Uragaan Ruby",
+        "amount": 1
+      },
+      {
+        "name": "King Scarab",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10142,
+    "name": "Pellet Jewel[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "PelletS Up",
+        "points": 1
+      },
+      {
+        "name": "Recoil",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Isisium Ore",
+        "amount": 2
+      },
+      {
+        "name": "Wyvern Fang",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "id": 10143,
+    "name": "Pellet Jewel[3]",
+    "slot_size": 3,
+    "price": 380,
+    "skill_points": [
+      {
+        "name": "PelletS Up",
+        "points": 4
+      },
+      {
+        "name": "Recoil",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "SteelUrgnShield",
+        "amount": 1
+      },
+      {
+        "name": "Gracium Ore",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10144,
+    "name": "ShotBonusJwl[1]",
+    "slot_size": 1,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "NormalSAdd",
+        "points": 1
+      },
+      {
+        "name": "Reload Spd",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Med Mnster Bone",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10145,
+    "name": "ShotBonusJwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "NormalSAdd",
+        "points": 3
+      },
+      {
+        "name": "Reload Spd",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Monster Bone+",
+        "amount": 2
+      },
+      {
+        "name": "Cutlassfish",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Rangurtora Clw+",
+        "amount": 1
+      },
+      {
+        "name": "Stout Bone",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10146,
+    "name": "PrceBonusJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "PierceSAdd",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Dragonite Ore",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10147,
+    "name": "PlltBonusJwl[1]",
+    "slot_size": 1,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "PelletSAdd",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Hapurubokka Shl",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10148,
+    "name": "BombBonusJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Crag S Add",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Rathalos Shell",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10149,
+    "name": "ScttrBnusJwl[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "ClustS Add",
+        "points": 1
+      },
+      {
+        "name": "Reload Spd",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Uragaan Scale",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10150,
+    "name": "CuttrBnus Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "CutterSAdd",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Urukusu Pelt",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10151,
+    "name": "RapidFireJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Rapid Fire",
+        "points": 1
+      },
+      {
+        "name": "Reload Spd",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Tigrex Fang",
+        "amount": 2
+      },
+      {
+        "name": "Barioth Claw",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "FireWyvrnBrnStm",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10152,
+    "name": "RapidFireJwl[3]",
+    "slot_size": 3,
+    "price": 460,
+    "skill_points": [
+      {
+        "name": "Rapid Fire",
+        "points": 4
+      },
+      {
+        "name": "Reload Spd",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Ukanlos Jaw",
+        "amount": 2
+      },
+      {
+        "name": "Rathalos Plate",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10153,
+    "name": "HighSpeedJwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Reload Spd",
+        "points": 1
+      },
+      {
+        "name": "Recoil",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Pelagicite Ore",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 10154,
+    "name": "HighSpeedJwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "Reload Spd",
+        "points": 3
+      },
+      {
+        "name": "Recoil",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Nargacuga Fang",
+        "amount": 2
+      },
+      {
+        "name": "Lightcrystal",
+        "amount": 2
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "ThndrGiggnoxClw",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10155,
+    "name": "Recoil Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Recoil",
+        "points": 1
+      },
+      {
+        "name": "Reload Spd",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Barroth Skl Shl",
+        "amount": 1
+      },
+      {
+        "name": "RyalLudrthCrest",
+        "amount": 1
+      },
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Barroth Thracic",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10156,
+    "name": "Recoil Jewel[3]",
+    "slot_size": 3,
+    "price": 460,
+    "skill_points": [
+      {
+        "name": "Recoil",
+        "points": 4
+      },
+      {
+        "name": "Reload Spd",
+        "points": -2
+      }
+    ],
+    "materials": [
+      {
+        "name": "LapisLazuli Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Doboru Tail+",
+        "amount": 2
+      },
+      {
+        "name": "Blk Blos Spine",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10157,
+    "name": "Sniper Jewel[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "Precision",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Suiko Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Unknown Skull",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 10158,
+    "name": "Para Ct Jwl[1]",
+    "slot_size": 1,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "ParalyCAdd",
+        "points": 1
+      },
+      {
+        "name": "Attack",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Paralysis Sac",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10159,
+    "name": "Para Ct Jwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "ParalyCAdd",
+        "points": 3
+      },
+      {
+        "name": "Attack",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "ThdrGiggnoxHide",
+        "amount": 1
+      },
+      {
+        "name": "Torpor Sac",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10160,
+    "name": "Sleep Ct Jwl[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "SleepCAdd",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Sleep Sac",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10161,
+    "name": "PoisonCt Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "PoisonCAdd",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Poison Sac",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10162,
+    "name": "Power Ct Jwl[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "PowerCAdd",
+        "points": 1
+      },
+      {
+        "name": "Expert",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Uroktor Scale",
+        "amount": 2
+      },
+      {
+        "name": "Nitroshroom",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "id": 10163,
+    "name": "Power Ct Jwl[2]",
+    "slot_size": 2,
+    "price": 360,
+    "skill_points": [
+      {
+        "name": "PowerCAdd",
+        "points": 3
+      },
+      {
+        "name": "Expert",
+        "points": -1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Battlefield Jwl",
+        "amount": 1
+      },
+      {
+        "name": "Uroktor Scale+",
+        "amount": 1
+      },
+      {
+        "name": "Magma Shard",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10164,
+    "name": "ClsRngCt Jwl[1]",
+    "slot_size": 1,
+    "price": 420,
+    "skill_points": [
+      {
+        "name": "RazorCAdd",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "RoyalLudrothScl",
+        "amount": 1
+      },
+      {
+        "name": "Juvenile Sponge",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 10165,
+    "name": "FatigeCt Jwl[1]",
+    "slot_size": 1,
+    "price": 340,
+    "skill_points": [
+      {
+        "name": "FatigeCAdd",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Akito Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Deepsea Sardine",
+        "amount": 2
+      },
+      {
+        "name": "Lg Monster Bone",
+        "amount": 1
+      }
+    ]
+  }
+]

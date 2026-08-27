@@ -1,0 +1,620 @@
+[
+  {
+    "id": 10001,
+    "name": "Attack",
+    "description": "Attack skill family (P3rd)",
+    "max_level": 5
+  },
+  {
+    "id": 10002,
+    "name": "Expert",
+    "description": "Expert skill family (P3rd)",
+    "max_level": 5
+  },
+  {
+    "id": 10003,
+    "name": "Sharpness",
+    "description": "Sharpness skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10004,
+    "name": "Sharpener",
+    "description": "Sharpener skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10005,
+    "name": "Artisan",
+    "description": "Artisan skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10006,
+    "name": "PunishDraw",
+    "description": "PunishDraw skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10007,
+    "name": "Crit Draw",
+    "description": "Crit Draw skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10008,
+    "name": "FastCharge",
+    "description": "FastCharge skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10009,
+    "name": "Fencing",
+    "description": "Fencing skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10010,
+    "name": "Debilitate",
+    "description": "Debilitate skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10011,
+    "name": "Slam",
+    "description": "Slam skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10012,
+    "name": "KO",
+    "description": "KO skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10013,
+    "name": "FatigueAtk",
+    "description": "FatigueAtk skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10014,
+    "name": "Horn",
+    "description": "Horn skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10015,
+    "name": "Gunnery",
+    "description": "Gunnery skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10016,
+    "name": "Awaken",
+    "description": "Awaken skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10017,
+    "name": "Potential",
+    "description": "Potential skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10018,
+    "name": "Adversity",
+    "description": "Adversity skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10019,
+    "name": "Loading",
+    "description": "Loading skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10020,
+    "name": "Rapid Fire",
+    "description": "Rapid Fire skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10021,
+    "name": "Reload Spd",
+    "description": "Reload Spd skill family (P3rd)",
+    "max_level": 5
+  },
+  {
+    "id": 10022,
+    "name": "Recoil",
+    "description": "Recoil skill family (P3rd)",
+    "max_level": 5
+  },
+  {
+    "id": 10023,
+    "name": "Precision",
+    "description": "Precision skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10024,
+    "name": "NormalS Up",
+    "description": "NormalS Up skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10025,
+    "name": "PierceS Up",
+    "description": "PierceS Up skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10026,
+    "name": "PelletS Up",
+    "description": "PelletS Up skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10027,
+    "name": "NormalSAdd",
+    "description": "NormalSAdd skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10028,
+    "name": "PierceSAdd",
+    "description": "PierceSAdd skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10029,
+    "name": "PelletSAdd",
+    "description": "PelletSAdd skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10030,
+    "name": "Crag S Add",
+    "description": "Crag S Add skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10031,
+    "name": "ClustS Add",
+    "description": "ClustS Add skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10032,
+    "name": "CutterSAdd",
+    "description": "CutterSAdd skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10033,
+    "name": "PoisonCAdd",
+    "description": "PoisonCAdd skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10034,
+    "name": "ParalyCAdd",
+    "description": "ParalyCAdd skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10035,
+    "name": "SleepCAdd",
+    "description": "SleepCAdd skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10036,
+    "name": "PowerCAdd",
+    "description": "PowerCAdd skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10037,
+    "name": "RazorCAdd",
+    "description": "RazorCAdd skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10038,
+    "name": "FatigeCAdd",
+    "description": "FatigeCAdd skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10039,
+    "name": "Status",
+    "description": "Status skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10040,
+    "name": "Elemental",
+    "description": "Elemental skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10041,
+    "name": "Fire Atk",
+    "description": "Fire Atk skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10042,
+    "name": "Water Atk",
+    "description": "Water Atk skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10043,
+    "name": "Thundr Atk",
+    "description": "Thundr Atk skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10044,
+    "name": "Ice Attack",
+    "description": "Ice Attack skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10045,
+    "name": "Dragon Atk",
+    "description": "Dragon Atk skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10046,
+    "name": "Constitutn",
+    "description": "Constitutn skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10047,
+    "name": "Stamina",
+    "description": "Stamina skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10048,
+    "name": "Will Recov",
+    "description": "Will Recov skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10049,
+    "name": "Hunger",
+    "description": "Hunger skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10050,
+    "name": "Evasion",
+    "description": "Evasion skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10051,
+    "name": "Evade Dist",
+    "description": "Evade Dist skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10052,
+    "name": "Sheathe",
+    "description": "Sheathe skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10053,
+    "name": "Sense",
+    "description": "Sense skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10054,
+    "name": "Rec Speed",
+    "description": "Rec Speed skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10055,
+    "name": "Guard",
+    "description": "Guard skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10056,
+    "name": "Guard Up",
+    "description": "Guard Up skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10057,
+    "name": "Auto-Guard",
+    "description": "Auto-Guard skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10058,
+    "name": "Protection",
+    "description": "Protection skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10059,
+    "name": "Poison",
+    "description": "Poison skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10060,
+    "name": "Paralysis",
+    "description": "Paralysis skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10061,
+    "name": "Sleep",
+    "description": "Sleep skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10062,
+    "name": "Stun",
+    "description": "Stun skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10063,
+    "name": "Mud/Snow",
+    "description": "Mud/Snow skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10064,
+    "name": "Quake Res",
+    "description": "Quake Res skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10065,
+    "name": "WindPress",
+    "description": "WindPress skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10066,
+    "name": "Antiseptic",
+    "description": "Antiseptic skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10067,
+    "name": "Anti-Theft",
+    "description": "Anti-Theft skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10068,
+    "name": "Blight Res",
+    "description": "Blight Res skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10069,
+    "name": "Fortitude",
+    "description": "Fortitude skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10070,
+    "name": "HearProtct",
+    "description": "HearProtct skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10071,
+    "name": "Health",
+    "description": "Health skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10072,
+    "name": "Defense",
+    "description": "Defense skill family (P3rd)",
+    "max_level": 5
+  },
+  {
+    "id": 10073,
+    "name": "Fire Res",
+    "description": "Fire Res skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10074,
+    "name": "Water Res",
+    "description": "Water Res skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10075,
+    "name": "ThunderRes",
+    "description": "ThunderRes skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10076,
+    "name": "Ice Res",
+    "description": "Ice Res skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10077,
+    "name": "Dragon Res",
+    "description": "Dragon Res skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10078,
+    "name": "Wide Area",
+    "description": "Wide Area skill family (P3rd)",
+    "max_level": 5
+  },
+  {
+    "id": 10079,
+    "name": "BombStrUp",
+    "description": "BombStrUp skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10080,
+    "name": "SpeedSetup",
+    "description": "SpeedSetup skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10081,
+    "name": "Perception",
+    "description": "Perception skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10082,
+    "name": "Psychic",
+    "description": "Psychic skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10083,
+    "name": "DungMaster",
+    "description": "DungMaster skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10084,
+    "name": "Rec Level",
+    "description": "Rec Level skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10085,
+    "name": "LastingPwr",
+    "description": "LastingPwr skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10086,
+    "name": "Gluttony",
+    "description": "Gluttony skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10087,
+    "name": "Eating",
+    "description": "Eating skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10088,
+    "name": "Huntsman",
+    "description": "Huntsman skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10089,
+    "name": "Backpackng",
+    "description": "Backpackng skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10090,
+    "name": "Heat Res",
+    "description": "Heat Res skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10091,
+    "name": "Cold Res",
+    "description": "Cold Res skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10092,
+    "name": "Gathering",
+    "description": "Gathering skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10093,
+    "name": "HiSpdGathr",
+    "description": "HiSpdGathr skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10094,
+    "name": "Whim",
+    "description": "Whim skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10095,
+    "name": "Fate",
+    "description": "Fate skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10096,
+    "name": "Carving",
+    "description": "Carving skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10097,
+    "name": "Rewards",
+    "description": "Rewards skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10098,
+    "name": "Combo Rate",
+    "description": "Combo Rate skill family (P3rd)",
+    "max_level": 4
+  },
+  {
+    "id": 10099,
+    "name": "Shot Mix",
+    "description": "Shot Mix skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10100,
+    "name": "Torso",
+    "description": "Torso skill family (P3rd)",
+    "max_level": 1
+  },
+  {
+    "id": 10101,
+    "name": "スキル系統1",
+    "description": "スキル系統1 skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10102,
+    "name": "スキル系統2",
+    "description": "スキル系統2 skill family (P3rd)",
+    "max_level": 3
+  },
+  {
+    "id": 10103,
+    "name": "Torso Inc",
+    "description": "Torso Inc skill family (P3rd)",
+    "max_level": 3
+  }
+]

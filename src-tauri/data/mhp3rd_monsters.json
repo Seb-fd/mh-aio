@@ -1,0 +1,362 @@
+[
+  {
+    "id": 10001,
+    "name": "Altaroth",
+    "species": "Neopteron",
+    "size": "Small"
+  },
+  {
+    "id": 10002,
+    "name": "Anteka",
+    "species": "Herbivore",
+    "size": "Small"
+  },
+  {
+    "id": 10003,
+    "name": "Aptonoth",
+    "species": "Herbivore",
+    "size": "Small"
+  },
+  {
+    "id": 10004,
+    "name": "Baggi",
+    "species": "Bird Wyvern",
+    "size": "Small"
+  },
+  {
+    "id": 10005,
+    "name": "Bnahabra",
+    "species": "Neopteron",
+    "size": "Small"
+  },
+  {
+    "id": 10006,
+    "name": "Bullfango",
+    "species": "Beast",
+    "size": "Small"
+  },
+  {
+    "id": 10007,
+    "name": "Delex",
+    "species": "Piscine Wyvern",
+    "size": "Small"
+  },
+  {
+    "id": 10008,
+    "name": "Felyne",
+    "species": "Lynian",
+    "size": "Small"
+  },
+  {
+    "id": 10009,
+    "name": "Gargwa",
+    "species": "Bird Wyvern",
+    "size": "Small"
+  },
+  {
+    "id": 10010,
+    "name": "Giggi",
+    "species": "Leviathan",
+    "size": "Small"
+  },
+  {
+    "id": 10011,
+    "name": "Jaggi",
+    "species": "Bird Wyvern",
+    "size": "Small"
+  },
+  {
+    "id": 10012,
+    "name": "Jaggia",
+    "species": "Bird Wyvern",
+    "size": "Small"
+  },
+  {
+    "id": 10013,
+    "name": "Kelbi",
+    "species": "Herbivore",
+    "size": "Small"
+  },
+  {
+    "id": 10014,
+    "name": "Ludroth",
+    "species": "Leviathan",
+    "size": "Small"
+  },
+  {
+    "id": 10015,
+    "name": "Melynx",
+    "species": "Lynian",
+    "size": "Small"
+  },
+  {
+    "id": 10016,
+    "name": "Popo",
+    "species": "Herbivore",
+    "size": "Small"
+  },
+  {
+    "id": 10017,
+    "name": "Rhenoplos",
+    "species": "Herbivore",
+    "size": "Small"
+  },
+  {
+    "id": 10018,
+    "name": "Slagtoth",
+    "species": "Herbivore",
+    "size": "Small"
+  },
+  {
+    "id": 10019,
+    "name": "Uroktor",
+    "species": "Leviathan",
+    "size": "Small"
+  },
+  {
+    "id": 10020,
+    "name": "Wroggi",
+    "species": "Bird Wyvern",
+    "size": "Small"
+  },
+  {
+    "id": 10021,
+    "name": "Agnaktor",
+    "species": "Leviathan",
+    "size": "Large"
+  },
+  {
+    "id": 10022,
+    "name": "Glacial Agnaktor",
+    "species": "Leviathan",
+    "size": "Large"
+  },
+  {
+    "id": 10023,
+    "name": "Akantor",
+    "species": "Flying Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10024,
+    "name": "Arzuros",
+    "species": "Beast",
+    "size": "Large"
+  },
+  {
+    "id": 10025,
+    "name": "Barioth",
+    "species": "Flying Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10026,
+    "name": "Sand Barioth",
+    "species": "Flying Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10027,
+    "name": "Barroth",
+    "species": "Brute Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10028,
+    "name": "Jade Barroth",
+    "species": "Brute Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10029,
+    "name": "Bulldrome",
+    "species": "Fanged Beast",
+    "size": "Large"
+  },
+  {
+    "id": 10030,
+    "name": "Deviljho",
+    "species": "Brute Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10031,
+    "name": "Diablos",
+    "species": "Flying Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10032,
+    "name": "Black Diablos",
+    "species": "Flying Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10033,
+    "name": "Duramboros",
+    "species": "Brute Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10034,
+    "name": "Gigginox",
+    "species": "Leviathan",
+    "size": "Large"
+  },
+  {
+    "id": 10035,
+    "name": "Baleful Gigginox",
+    "species": "Leviathan",
+    "size": "Large"
+  },
+  {
+    "id": 10036,
+    "name": "Great Baggi",
+    "species": "Bird Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10037,
+    "name": "Great Jaggi",
+    "species": "Bird Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10038,
+    "name": "Great Wroggi",
+    "species": "Bird Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10039,
+    "name": "Lagombi",
+    "species": "Beast",
+    "size": "Large"
+  },
+  {
+    "id": 10040,
+    "name": "Nargacuga",
+    "species": "Flying Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10041,
+    "name": "Green Nargacuga",
+    "species": "Flying Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10042,
+    "name": "Nibelsnarf",
+    "species": "Leviathan",
+    "size": "Large"
+  },
+  {
+    "id": 10043,
+    "name": "Qurupeco",
+    "species": "Bird Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10044,
+    "name": "Crimson Qurupeco",
+    "species": "Bird Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10045,
+    "name": "Rathalos",
+    "species": "Flying Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10046,
+    "name": "Silver Rathalos",
+    "species": "Flying Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10047,
+    "name": "Rathian",
+    "species": "Flying Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10048,
+    "name": "Gold Rathian",
+    "species": "Flying Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10049,
+    "name": "Royal Ludroth",
+    "species": "Leviathan",
+    "size": "Large"
+  },
+  {
+    "id": 10050,
+    "name": "Purple Ludroth",
+    "species": "Leviathan",
+    "size": "Large"
+  },
+  {
+    "id": 10051,
+    "name": "Tigrex",
+    "species": "Flying Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10052,
+    "name": "Brute Tigrex",
+    "species": "Flying Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10053,
+    "name": "Ukanlos",
+    "species": "Flying Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10054,
+    "name": "Uragaan",
+    "species": "Brute Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10055,
+    "name": "Steel Uragaan",
+    "species": "Brute Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10056,
+    "name": "Volvidon",
+    "species": "Beast",
+    "size": "Large"
+  },
+  {
+    "id": 10057,
+    "name": "Zinogre",
+    "species": "Fanged Wyvern",
+    "size": "Large"
+  },
+  {
+    "id": 10058,
+    "name": "Alatreon",
+    "species": "Elder Dragon",
+    "size": "Large"
+  },
+  {
+    "id": 10059,
+    "name": "Amatsu",
+    "species": "Elder Dragon",
+    "size": "Large"
+  },
+  {
+    "id": 10060,
+    "name": "Jhen Mohran",
+    "species": "Elder Dragon",
+    "size": "Large"
+  }
+]

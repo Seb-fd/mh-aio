@@ -1,0 +1,1507 @@
+[
+  {
+    "id": 10001,
+    "skill_id": 10001,
+    "points": 10,
+    "ability_name": "Attack Up [Sm]",
+    "description": null
+  },
+  {
+    "id": 10002,
+    "skill_id": 10001,
+    "points": 15,
+    "ability_name": "Attack Up [Med]",
+    "description": null
+  },
+  {
+    "id": 10003,
+    "skill_id": 10001,
+    "points": 20,
+    "ability_name": "Attack Up [Lg]",
+    "description": null
+  },
+  {
+    "id": 10004,
+    "skill_id": 10001,
+    "points": -10,
+    "ability_name": "Attack Down [Sm]",
+    "description": null
+  },
+  {
+    "id": 10005,
+    "skill_id": 10001,
+    "points": -15,
+    "ability_name": "Attack Down [Med]",
+    "description": null
+  },
+  {
+    "id": 10006,
+    "skill_id": 10001,
+    "points": -20,
+    "ability_name": "Attack Down [Lg]",
+    "description": null
+  },
+  {
+    "id": 10007,
+    "skill_id": 10002,
+    "points": 10,
+    "ability_name": "Reckless Abandon +1",
+    "description": null
+  },
+  {
+    "id": 10008,
+    "skill_id": 10002,
+    "points": 15,
+    "ability_name": "Reckless Abandon +2",
+    "description": null
+  },
+  {
+    "id": 10009,
+    "skill_id": 10002,
+    "points": 20,
+    "ability_name": "Reckless Abandon +3",
+    "description": null
+  },
+  {
+    "id": 10010,
+    "skill_id": 10002,
+    "points": -10,
+    "ability_name": "Reckless Abandon -1",
+    "description": null
+  },
+  {
+    "id": 10011,
+    "skill_id": 10002,
+    "points": -15,
+    "ability_name": "Reckless Abandon -2",
+    "description": null
+  },
+  {
+    "id": 10012,
+    "skill_id": 10002,
+    "points": -20,
+    "ability_name": "Reckless Abandon -3",
+    "description": null
+  },
+  {
+    "id": 10013,
+    "skill_id": 10003,
+    "points": 10,
+    "ability_name": "Sharp Sword",
+    "description": null
+  },
+  {
+    "id": 10014,
+    "skill_id": 10003,
+    "points": -10,
+    "ability_name": "Blunt",
+    "description": null
+  },
+  {
+    "id": 10015,
+    "skill_id": 10004,
+    "points": 10,
+    "ability_name": "Speed Sharpening",
+    "description": null
+  },
+  {
+    "id": 10016,
+    "skill_id": 10004,
+    "points": -10,
+    "ability_name": "Slow Sharpening",
+    "description": null
+  },
+  {
+    "id": 10017,
+    "skill_id": 10005,
+    "points": 15,
+    "ability_name": "Sharpness +1",
+    "description": null
+  },
+  {
+    "id": 10018,
+    "skill_id": 10006,
+    "points": 10,
+    "ability_name": "Unsheathe Stun",
+    "description": null
+  },
+  {
+    "id": 10019,
+    "skill_id": 10007,
+    "points": 10,
+    "ability_name": "Unsheathe Critical",
+    "description": null
+  },
+  {
+    "id": 10020,
+    "skill_id": 10008,
+    "points": 10,
+    "ability_name": "Concentration",
+    "description": null
+  },
+  {
+    "id": 10021,
+    "skill_id": 10008,
+    "points": -10,
+    "ability_name": "Distraction",
+    "description": null
+  },
+  {
+    "id": 10022,
+    "skill_id": 10009,
+    "points": 10,
+    "ability_name": "ESP",
+    "description": null
+  },
+  {
+    "id": 10023,
+    "skill_id": 10010,
+    "points": 10,
+    "ability_name": "Exploiter",
+    "description": null
+  },
+  {
+    "id": 10024,
+    "skill_id": 10011,
+    "points": 10,
+    "ability_name": "Ruiner",
+    "description": null
+  },
+  {
+    "id": 10025,
+    "skill_id": 10012,
+    "points": 10,
+    "ability_name": "Improved KO",
+    "description": null
+  },
+  {
+    "id": 10026,
+    "skill_id": 10013,
+    "points": 10,
+    "ability_name": "Enfeebler",
+    "description": null
+  },
+  {
+    "id": 10027,
+    "skill_id": 10014,
+    "points": 10,
+    "ability_name": "Flute Expert",
+    "description": null
+  },
+  {
+    "id": 10028,
+    "skill_id": 10015,
+    "points": 10,
+    "ability_name": "Gunnery Master",
+    "description": null
+  },
+  {
+    "id": 10029,
+    "skill_id": 10015,
+    "points": 15,
+    "ability_name": "Gunnery King",
+    "description": null
+  },
+  {
+    "id": 10030,
+    "skill_id": 10016,
+    "points": 10,
+    "ability_name": "Unleashed +1",
+    "description": null
+  },
+  {
+    "id": 10031,
+    "skill_id": 10016,
+    "points": 15,
+    "ability_name": "Unleashed +2",
+    "description": null
+  },
+  {
+    "id": 10032,
+    "skill_id": 10017,
+    "points": 10,
+    "ability_name": "Adrenaline +1",
+    "description": null
+  },
+  {
+    "id": 10033,
+    "skill_id": 10017,
+    "points": 15,
+    "ability_name": "Adrenaline +2",
+    "description": null
+  },
+  {
+    "id": 10034,
+    "skill_id": 10017,
+    "points": -10,
+    "ability_name": "Worry",
+    "description": null
+  },
+  {
+    "id": 10035,
+    "skill_id": 10018,
+    "points": 10,
+    "ability_name": "Resilience",
+    "description": null
+  },
+  {
+    "id": 10036,
+    "skill_id": 10019,
+    "points": 15,
+    "ability_name": "Load Up",
+    "description": null
+  },
+  {
+    "id": 10037,
+    "skill_id": 10020,
+    "points": 10,
+    "ability_name": "Rapid Shot +1",
+    "description": null
+  },
+  {
+    "id": 10038,
+    "skill_id": 10021,
+    "points": 10,
+    "ability_name": "Reload Speed +1",
+    "description": null
+  },
+  {
+    "id": 10039,
+    "skill_id": 10021,
+    "points": 15,
+    "ability_name": "Reload Speed +2",
+    "description": null
+  },
+  {
+    "id": 10040,
+    "skill_id": 10021,
+    "points": 20,
+    "ability_name": "Reload Speed +3",
+    "description": null
+  },
+  {
+    "id": 10041,
+    "skill_id": 10021,
+    "points": -10,
+    "ability_name": "Reload Speed -1",
+    "description": null
+  },
+  {
+    "id": 10042,
+    "skill_id": 10021,
+    "points": -15,
+    "ability_name": "Reload Speed -2",
+    "description": null
+  },
+  {
+    "id": 10043,
+    "skill_id": 10021,
+    "points": -20,
+    "ability_name": "Reload Speed -3",
+    "description": null
+  },
+  {
+    "id": 10044,
+    "skill_id": 10022,
+    "points": 10,
+    "ability_name": "Recoil Reduction +1",
+    "description": null
+  },
+  {
+    "id": 10045,
+    "skill_id": 10022,
+    "points": 15,
+    "ability_name": "Recoil Reduction +2",
+    "description": null
+  },
+  {
+    "id": 10046,
+    "skill_id": 10022,
+    "points": 20,
+    "ability_name": "Recoil Reduction +3",
+    "description": null
+  },
+  {
+    "id": 10047,
+    "skill_id": 10022,
+    "points": -10,
+    "ability_name": "Recoil Reduction -1",
+    "description": null
+  },
+  {
+    "id": 10048,
+    "skill_id": 10022,
+    "points": -15,
+    "ability_name": "Recoil Reduction -2",
+    "description": null
+  },
+  {
+    "id": 10049,
+    "skill_id": 10022,
+    "points": -20,
+    "ability_name": "Recoil Reduction -3",
+    "description": null
+  },
+  {
+    "id": 10050,
+    "skill_id": 10023,
+    "points": 10,
+    "ability_name": "Accuracy+1",
+    "description": null
+  },
+  {
+    "id": 10051,
+    "skill_id": 10023,
+    "points": 15,
+    "ability_name": "Accuracy+2",
+    "description": null
+  },
+  {
+    "id": 10052,
+    "skill_id": 10023,
+    "points": -10,
+    "ability_name": "Accuracy-1",
+    "description": null
+  },
+  {
+    "id": 10053,
+    "skill_id": 10023,
+    "points": -15,
+    "ability_name": "Accuracy-2",
+    "description": null
+  },
+  {
+    "id": 10054,
+    "skill_id": 10024,
+    "points": 10,
+    "ability_name": "NormalS/RapidBowUp",
+    "description": null
+  },
+  {
+    "id": 10055,
+    "skill_id": 10025,
+    "points": 10,
+    "ability_name": "PierceS/PierceBowUp",
+    "description": null
+  },
+  {
+    "id": 10056,
+    "skill_id": 10026,
+    "points": 10,
+    "ability_name": "PelletS/ScatterBowUp",
+    "description": null
+  },
+  {
+    "id": 10057,
+    "skill_id": 10027,
+    "points": 10,
+    "ability_name": "Normal S All Add",
+    "description": null
+  },
+  {
+    "id": 10058,
+    "skill_id": 10028,
+    "points": 10,
+    "ability_name": "Pierce S LV1 Add",
+    "description": null
+  },
+  {
+    "id": 10059,
+    "skill_id": 10028,
+    "points": 15,
+    "ability_name": "Pierce S All Add",
+    "description": null
+  },
+  {
+    "id": 10060,
+    "skill_id": 10029,
+    "points": 10,
+    "ability_name": "Pellet S LV1 Add",
+    "description": null
+  },
+  {
+    "id": 10061,
+    "skill_id": 10029,
+    "points": 15,
+    "ability_name": "Pellet S All Add",
+    "description": null
+  },
+  {
+    "id": 10062,
+    "skill_id": 10030,
+    "points": 10,
+    "ability_name": "Crag S LV1 Add",
+    "description": null
+  },
+  {
+    "id": 10063,
+    "skill_id": 10030,
+    "points": 15,
+    "ability_name": "Crag S All Add",
+    "description": null
+  },
+  {
+    "id": 10064,
+    "skill_id": 10031,
+    "points": 10,
+    "ability_name": "Clust S LV1 Add",
+    "description": null
+  },
+  {
+    "id": 10065,
+    "skill_id": 10031,
+    "points": 15,
+    "ability_name": "Clust S All Add",
+    "description": null
+  },
+  {
+    "id": 10066,
+    "skill_id": 10032,
+    "points": 10,
+    "ability_name": "Cutter S Add",
+    "description": null
+  },
+  {
+    "id": 10067,
+    "skill_id": 10033,
+    "points": 10,
+    "ability_name": "Poison Coating Add",
+    "description": null
+  },
+  {
+    "id": 10068,
+    "skill_id": 10034,
+    "points": 10,
+    "ability_name": "Parlysis Coating Add",
+    "description": null
+  },
+  {
+    "id": 10069,
+    "skill_id": 10035,
+    "points": 10,
+    "ability_name": "Sleep Coating Add",
+    "description": null
+  },
+  {
+    "id": 10070,
+    "skill_id": 10036,
+    "points": 10,
+    "ability_name": "Power Coating Add",
+    "description": null
+  },
+  {
+    "id": 10071,
+    "skill_id": 10037,
+    "points": 10,
+    "ability_name": "Close Range Coating Add",
+    "description": null
+  },
+  {
+    "id": 10072,
+    "skill_id": 10038,
+    "points": 10,
+    "ability_name": "Fatigue Coating Add",
+    "description": null
+  },
+  {
+    "id": 10073,
+    "skill_id": 10039,
+    "points": 10,
+    "ability_name": "Abnormal Status Atk +1",
+    "description": null
+  },
+  {
+    "id": 10074,
+    "skill_id": 10039,
+    "points": 15,
+    "ability_name": "Abnormal Status Atk +2",
+    "description": null
+  },
+  {
+    "id": 10075,
+    "skill_id": 10039,
+    "points": -10,
+    "ability_name": "Abnormal Status Atk Down",
+    "description": null
+  },
+  {
+    "id": 10076,
+    "skill_id": 10040,
+    "points": 10,
+    "ability_name": "Element Atk Up",
+    "description": null
+  },
+  {
+    "id": 10077,
+    "skill_id": 10040,
+    "points": -10,
+    "ability_name": "Elemnt Atk Down",
+    "description": null
+  },
+  {
+    "id": 10078,
+    "skill_id": 10041,
+    "points": 10,
+    "ability_name": "Fire Element +1",
+    "description": null
+  },
+  {
+    "id": 10079,
+    "skill_id": 10041,
+    "points": 15,
+    "ability_name": "Fire Element +2",
+    "description": null
+  },
+  {
+    "id": 10080,
+    "skill_id": 10041,
+    "points": -10,
+    "ability_name": "Fire Elment Down",
+    "description": null
+  },
+  {
+    "id": 10081,
+    "skill_id": 10042,
+    "points": 10,
+    "ability_name": "Water Element +1",
+    "description": null
+  },
+  {
+    "id": 10082,
+    "skill_id": 10042,
+    "points": 15,
+    "ability_name": "Water Element +2",
+    "description": null
+  },
+  {
+    "id": 10083,
+    "skill_id": 10042,
+    "points": -10,
+    "ability_name": "Water Element Down",
+    "description": null
+  },
+  {
+    "id": 10084,
+    "skill_id": 10043,
+    "points": 10,
+    "ability_name": "Thunder Element +1",
+    "description": null
+  },
+  {
+    "id": 10085,
+    "skill_id": 10043,
+    "points": 15,
+    "ability_name": "Thunder Element +2",
+    "description": null
+  },
+  {
+    "id": 10086,
+    "skill_id": 10043,
+    "points": -10,
+    "ability_name": "Thunder Element Down",
+    "description": null
+  },
+  {
+    "id": 10087,
+    "skill_id": 10044,
+    "points": 10,
+    "ability_name": "Ice Element +1",
+    "description": null
+  },
+  {
+    "id": 10088,
+    "skill_id": 10044,
+    "points": 15,
+    "ability_name": "Ice Element +2",
+    "description": null
+  },
+  {
+    "id": 10089,
+    "skill_id": 10044,
+    "points": -10,
+    "ability_name": "Ice Element Down",
+    "description": null
+  },
+  {
+    "id": 10090,
+    "skill_id": 10045,
+    "points": 10,
+    "ability_name": "Dragon Element +1",
+    "description": null
+  },
+  {
+    "id": 10091,
+    "skill_id": 10045,
+    "points": 15,
+    "ability_name": "Dragon Element +2",
+    "description": null
+  },
+  {
+    "id": 10092,
+    "skill_id": 10045,
+    "points": -10,
+    "ability_name": "Dragon Element Down",
+    "description": null
+  },
+  {
+    "id": 10093,
+    "skill_id": 10046,
+    "points": 10,
+    "ability_name": "Constitution +1",
+    "description": null
+  },
+  {
+    "id": 10094,
+    "skill_id": 10046,
+    "points": 15,
+    "ability_name": "Constitution +2",
+    "description": null
+  },
+  {
+    "id": 10095,
+    "skill_id": 10046,
+    "points": -10,
+    "ability_name": "Constitution -1",
+    "description": null
+  },
+  {
+    "id": 10096,
+    "skill_id": 10046,
+    "points": -15,
+    "ability_name": "Constitution -2",
+    "description": null
+  },
+  {
+    "id": 10097,
+    "skill_id": 10047,
+    "points": 10,
+    "ability_name": "Runner",
+    "description": null
+  },
+  {
+    "id": 10098,
+    "skill_id": 10047,
+    "points": -10,
+    "ability_name": "Flat Footed",
+    "description": null
+  },
+  {
+    "id": 10099,
+    "skill_id": 10048,
+    "points": 10,
+    "ability_name": "Stamina Recov Up",
+    "description": null
+  },
+  {
+    "id": 10100,
+    "skill_id": 10048,
+    "points": -10,
+    "ability_name": "Stamina Recov Down",
+    "description": null
+  },
+  {
+    "id": 10101,
+    "skill_id": 10049,
+    "points": 10,
+    "ability_name": "Hunger Halved",
+    "description": null
+  },
+  {
+    "id": 10102,
+    "skill_id": 10049,
+    "points": 15,
+    "ability_name": "Hunger Negated",
+    "description": null
+  },
+  {
+    "id": 10103,
+    "skill_id": 10049,
+    "points": -10,
+    "ability_name": "Hunger Inc [Lo]",
+    "description": null
+  },
+  {
+    "id": 10104,
+    "skill_id": 10049,
+    "points": -15,
+    "ability_name": "Hunger Inc [Hi]",
+    "description": null
+  },
+  {
+    "id": 10105,
+    "skill_id": 10050,
+    "points": 10,
+    "ability_name": "Evade +1",
+    "description": null
+  },
+  {
+    "id": 10106,
+    "skill_id": 10050,
+    "points": 15,
+    "ability_name": "Evade +2",
+    "description": null
+  },
+  {
+    "id": 10107,
+    "skill_id": 10050,
+    "points": -10,
+    "ability_name": "Evade Down",
+    "description": null
+  },
+  {
+    "id": 10108,
+    "skill_id": 10051,
+    "points": 15,
+    "ability_name": "Evasion Up",
+    "description": null
+  },
+  {
+    "id": 10109,
+    "skill_id": 10052,
+    "points": 10,
+    "ability_name": "Fast Sheathe",
+    "description": null
+  },
+  {
+    "id": 10110,
+    "skill_id": 10053,
+    "points": 10,
+    "ability_name": "Sneak",
+    "description": null
+  },
+  {
+    "id": 10111,
+    "skill_id": 10053,
+    "points": -10,
+    "ability_name": "Taunt",
+    "description": null
+  },
+  {
+    "id": 10112,
+    "skill_id": 10054,
+    "points": 10,
+    "ability_name": "Recovery Speed +1",
+    "description": null
+  },
+  {
+    "id": 10113,
+    "skill_id": 10054,
+    "points": 15,
+    "ability_name": "Recovery Speed +2",
+    "description": null
+  },
+  {
+    "id": 10114,
+    "skill_id": 10054,
+    "points": -10,
+    "ability_name": "Recovery Spd -1",
+    "description": null
+  },
+  {
+    "id": 10115,
+    "skill_id": 10054,
+    "points": -15,
+    "ability_name": "Recovery Spd -2",
+    "description": null
+  },
+  {
+    "id": 10116,
+    "skill_id": 10055,
+    "points": 10,
+    "ability_name": "Guard +1",
+    "description": null
+  },
+  {
+    "id": 10117,
+    "skill_id": 10055,
+    "points": 15,
+    "ability_name": "Guard +2",
+    "description": null
+  },
+  {
+    "id": 10118,
+    "skill_id": 10055,
+    "points": -10,
+    "ability_name": "Guard -1",
+    "description": null
+  },
+  {
+    "id": 10119,
+    "skill_id": 10056,
+    "points": 10,
+    "ability_name": "Guard Inc",
+    "description": null
+  },
+  {
+    "id": 10120,
+    "skill_id": 10057,
+    "points": 10,
+    "ability_name": "Auto-Guard",
+    "description": null
+  },
+  {
+    "id": 10121,
+    "skill_id": 10058,
+    "points": 10,
+    "ability_name": "Divine Protection",
+    "description": null
+  },
+  {
+    "id": 10122,
+    "skill_id": 10058,
+    "points": -10,
+    "ability_name": "Demonic Protection",
+    "description": null
+  },
+  {
+    "id": 10123,
+    "skill_id": 10059,
+    "points": 10,
+    "ability_name": "Poison Negated",
+    "description": null
+  },
+  {
+    "id": 10124,
+    "skill_id": 10059,
+    "points": -10,
+    "ability_name": "Poison [x2]",
+    "description": null
+  },
+  {
+    "id": 10125,
+    "skill_id": 10060,
+    "points": 10,
+    "ability_name": "Parlysis Negated",
+    "description": null
+  },
+  {
+    "id": 10126,
+    "skill_id": 10060,
+    "points": -10,
+    "ability_name": "Paralysis [x2]",
+    "description": null
+  },
+  {
+    "id": 10127,
+    "skill_id": 10061,
+    "points": 10,
+    "ability_name": "Sleep Negated",
+    "description": null
+  },
+  {
+    "id": 10128,
+    "skill_id": 10061,
+    "points": -10,
+    "ability_name": "Sleep [x2]",
+    "description": null
+  },
+  {
+    "id": 10129,
+    "skill_id": 10062,
+    "points": 10,
+    "ability_name": "Stun Halved",
+    "description": null
+  },
+  {
+    "id": 10130,
+    "skill_id": 10062,
+    "points": 15,
+    "ability_name": "Stun Negated",
+    "description": null
+  },
+  {
+    "id": 10131,
+    "skill_id": 10062,
+    "points": -10,
+    "ability_name": "Stun [x2]",
+    "description": null
+  },
+  {
+    "id": 10132,
+    "skill_id": 10063,
+    "points": 10,
+    "ability_name": "Mud/Snow Res",
+    "description": null
+  },
+  {
+    "id": 10133,
+    "skill_id": 10064,
+    "points": 10,
+    "ability_name": "Quake Res",
+    "description": null
+  },
+  {
+    "id": 10134,
+    "skill_id": 10065,
+    "points": 10,
+    "ability_name": "Wind Breaker",
+    "description": null
+  },
+  {
+    "id": 10135,
+    "skill_id": 10065,
+    "points": 15,
+    "ability_name": "Wind Anchor",
+    "description": null
+  },
+  {
+    "id": 10136,
+    "skill_id": 10066,
+    "points": 10,
+    "ability_name": "Antiseptic",
+    "description": null
+  },
+  {
+    "id": 10137,
+    "skill_id": 10067,
+    "points": 10,
+    "ability_name": "Steal No Effect",
+    "description": null
+  },
+  {
+    "id": 10138,
+    "skill_id": 10068,
+    "points": 10,
+    "ability_name": "Blightproof",
+    "description": null
+  },
+  {
+    "id": 10139,
+    "skill_id": 10069,
+    "points": 10,
+    "ability_name": "Def Down Negate",
+    "description": null
+  },
+  {
+    "id": 10140,
+    "skill_id": 10070,
+    "points": 10,
+    "ability_name": "Earplug",
+    "description": null
+  },
+  {
+    "id": 10141,
+    "skill_id": 10070,
+    "points": 15,
+    "ability_name": "HighGradeEarplug",
+    "description": null
+  },
+  {
+    "id": 10142,
+    "skill_id": 10071,
+    "points": 10,
+    "ability_name": "Health +20",
+    "description": null
+  },
+  {
+    "id": 10143,
+    "skill_id": 10071,
+    "points": 15,
+    "ability_name": "Health +50",
+    "description": null
+  },
+  {
+    "id": 10144,
+    "skill_id": 10071,
+    "points": -10,
+    "ability_name": "Health -10",
+    "description": null
+  },
+  {
+    "id": 10145,
+    "skill_id": 10071,
+    "points": -15,
+    "ability_name": "Health -30",
+    "description": null
+  },
+  {
+    "id": 10146,
+    "skill_id": 10072,
+    "points": 10,
+    "ability_name": "Def Up (S)",
+    "description": null
+  },
+  {
+    "id": 10147,
+    "skill_id": 10072,
+    "points": 15,
+    "ability_name": "Def Up (M)",
+    "description": null
+  },
+  {
+    "id": 10148,
+    "skill_id": 10072,
+    "points": 20,
+    "ability_name": "Def Up (L)",
+    "description": null
+  },
+  {
+    "id": 10149,
+    "skill_id": 10072,
+    "points": -10,
+    "ability_name": "Def Down (S)",
+    "description": null
+  },
+  {
+    "id": 10150,
+    "skill_id": 10072,
+    "points": -15,
+    "ability_name": "Def Down (M)",
+    "description": null
+  },
+  {
+    "id": 10151,
+    "skill_id": 10072,
+    "points": -20,
+    "ability_name": "Def Down (L)",
+    "description": null
+  },
+  {
+    "id": 10152,
+    "skill_id": 10073,
+    "points": 10,
+    "ability_name": "Fire Res (S)",
+    "description": null
+  },
+  {
+    "id": 10153,
+    "skill_id": 10073,
+    "points": 15,
+    "ability_name": "Fire Res (L)",
+    "description": null
+  },
+  {
+    "id": 10154,
+    "skill_id": 10073,
+    "points": -10,
+    "ability_name": "Fire Res Weakened",
+    "description": null
+  },
+  {
+    "id": 10155,
+    "skill_id": 10074,
+    "points": 10,
+    "ability_name": "Water Res (S)",
+    "description": null
+  },
+  {
+    "id": 10156,
+    "skill_id": 10074,
+    "points": 15,
+    "ability_name": "Water Res (L)",
+    "description": null
+  },
+  {
+    "id": 10157,
+    "skill_id": 10074,
+    "points": -10,
+    "ability_name": "Water Res Weakened",
+    "description": null
+  },
+  {
+    "id": 10158,
+    "skill_id": 10075,
+    "points": 10,
+    "ability_name": "Thunder Res (S)",
+    "description": null
+  },
+  {
+    "id": 10159,
+    "skill_id": 10075,
+    "points": 15,
+    "ability_name": "Thunder Res (L)",
+    "description": null
+  },
+  {
+    "id": 10160,
+    "skill_id": 10075,
+    "points": -10,
+    "ability_name": "Thunder Res Weakened",
+    "description": null
+  },
+  {
+    "id": 10161,
+    "skill_id": 10076,
+    "points": 10,
+    "ability_name": "Ice Res (S)",
+    "description": null
+  },
+  {
+    "id": 10162,
+    "skill_id": 10076,
+    "points": 15,
+    "ability_name": "Ice Res (L)",
+    "description": null
+  },
+  {
+    "id": 10163,
+    "skill_id": 10076,
+    "points": -10,
+    "ability_name": "Ice Res Weakened",
+    "description": null
+  },
+  {
+    "id": 10164,
+    "skill_id": 10077,
+    "points": 10,
+    "ability_name": "Dragon Res (S)",
+    "description": null
+  },
+  {
+    "id": 10165,
+    "skill_id": 10077,
+    "points": 15,
+    "ability_name": "Dragon Res (L)",
+    "description": null
+  },
+  {
+    "id": 10166,
+    "skill_id": 10077,
+    "points": -10,
+    "ability_name": "Dragon Res Weakened",
+    "description": null
+  },
+  {
+    "id": 10167,
+    "skill_id": 10078,
+    "points": 10,
+    "ability_name": "Wide Area +1",
+    "description": null
+  },
+  {
+    "id": 10168,
+    "skill_id": 10078,
+    "points": 20,
+    "ability_name": "Wide Area +2",
+    "description": null
+  },
+  {
+    "id": 10169,
+    "skill_id": 10079,
+    "points": 10,
+    "ability_name": "Bombardier",
+    "description": null
+  },
+  {
+    "id": 10170,
+    "skill_id": 10080,
+    "points": 10,
+    "ability_name": "Trap Master",
+    "description": null
+  },
+  {
+    "id": 10171,
+    "skill_id": 10081,
+    "points": 10,
+    "ability_name": "Trnquilizr Guru",
+    "description": null
+  },
+  {
+    "id": 10172,
+    "skill_id": 10082,
+    "points": 10,
+    "ability_name": "Detect",
+    "description": null
+  },
+  {
+    "id": 10173,
+    "skill_id": 10082,
+    "points": 15,
+    "ability_name": "Autotracker",
+    "description": null
+  },
+  {
+    "id": 10174,
+    "skill_id": 10083,
+    "points": 10,
+    "ability_name": "DungBombExpert",
+    "description": null
+  },
+  {
+    "id": 10175,
+    "skill_id": 10084,
+    "points": 10,
+    "ability_name": "Recovery Up",
+    "description": null
+  },
+  {
+    "id": 10176,
+    "skill_id": 10084,
+    "points": -10,
+    "ability_name": "Recovery Down",
+    "description": null
+  },
+  {
+    "id": 10177,
+    "skill_id": 10085,
+    "points": 10,
+    "ability_name": "Item Use Up",
+    "description": null
+  },
+  {
+    "id": 10178,
+    "skill_id": 10085,
+    "points": -10,
+    "ability_name": "Item Use Down",
+    "description": null
+  },
+  {
+    "id": 10179,
+    "skill_id": 10086,
+    "points": 10,
+    "ability_name": "Filled Up",
+    "description": null
+  },
+  {
+    "id": 10180,
+    "skill_id": 10086,
+    "points": 15,
+    "ability_name": "Picky Eater",
+    "description": null
+  },
+  {
+    "id": 10181,
+    "skill_id": 10087,
+    "points": 10,
+    "ability_name": "Quick Eating +1",
+    "description": null
+  },
+  {
+    "id": 10182,
+    "skill_id": 10087,
+    "points": 15,
+    "ability_name": "Quick Eating +2",
+    "description": null
+  },
+  {
+    "id": 10183,
+    "skill_id": 10087,
+    "points": -10,
+    "ability_name": "Slow Life",
+    "description": null
+  },
+  {
+    "id": 10184,
+    "skill_id": 10088,
+    "points": 10,
+    "ability_name": "Huntsman's Life",
+    "description": null
+  },
+  {
+    "id": 10185,
+    "skill_id": 10089,
+    "points": 10,
+    "ability_name": "Backpacking Expert",
+    "description": null
+  },
+  {
+    "id": 10186,
+    "skill_id": 10090,
+    "points": 10,
+    "ability_name": "Heat Cancel",
+    "description": null
+  },
+  {
+    "id": 10187,
+    "skill_id": 10090,
+    "points": -10,
+    "ability_name": "Heat Inc",
+    "description": null
+  },
+  {
+    "id": 10188,
+    "skill_id": 10091,
+    "points": 10,
+    "ability_name": "Cold Eliminate",
+    "description": null
+  },
+  {
+    "id": 10189,
+    "skill_id": 10091,
+    "points": -10,
+    "ability_name": "Cold Increase",
+    "description": null
+  },
+  {
+    "id": 10190,
+    "skill_id": 10092,
+    "points": 10,
+    "ability_name": "Gathering +1",
+    "description": null
+  },
+  {
+    "id": 10191,
+    "skill_id": 10092,
+    "points": 15,
+    "ability_name": "Gathering +2",
+    "description": null
+  },
+  {
+    "id": 10192,
+    "skill_id": 10092,
+    "points": -10,
+    "ability_name": "Gathering -1",
+    "description": null
+  },
+  {
+    "id": 10193,
+    "skill_id": 10093,
+    "points": 10,
+    "ability_name": "Hi-SpdGathering",
+    "description": null
+  },
+  {
+    "id": 10194,
+    "skill_id": 10094,
+    "points": 10,
+    "ability_name": "Spirit's Whim",
+    "description": null
+  },
+  {
+    "id": 10195,
+    "skill_id": 10094,
+    "points": 15,
+    "ability_name": "Divine Whim",
+    "description": null
+  },
+  {
+    "id": 10196,
+    "skill_id": 10094,
+    "points": -10,
+    "ability_name": "Spectre's Whim",
+    "description": null
+  },
+  {
+    "id": 10197,
+    "skill_id": 10094,
+    "points": -15,
+    "ability_name": "Devil's Whim",
+    "description": null
+  },
+  {
+    "id": 10198,
+    "skill_id": 10095,
+    "points": 10,
+    "ability_name": "Good Luck",
+    "description": null
+  },
+  {
+    "id": 10199,
+    "skill_id": 10095,
+    "points": 15,
+    "ability_name": "Luck Booster",
+    "description": null
+  },
+  {
+    "id": 10200,
+    "skill_id": 10095,
+    "points": -10,
+    "ability_name": "Bad Luck",
+    "description": null
+  },
+  {
+    "id": 10201,
+    "skill_id": 10095,
+    "points": -15,
+    "ability_name": "Calamity",
+    "description": null
+  },
+  {
+    "id": 10202,
+    "skill_id": 10096,
+    "points": 15,
+    "ability_name": "Carving Expert",
+    "description": null
+  },
+  {
+    "id": 10203,
+    "skill_id": 10097,
+    "points": 10,
+    "ability_name": "Rewards Expert",
+    "description": null
+  },
+  {
+    "id": 10204,
+    "skill_id": 10097,
+    "points": 15,
+    "ability_name": "Rewards Celeb",
+    "description": null
+  },
+  {
+    "id": 10205,
+    "skill_id": 10098,
+    "points": 10,
+    "ability_name": "Combine Success +20%",
+    "description": null
+  },
+  {
+    "id": 10206,
+    "skill_id": 10098,
+    "points": 15,
+    "ability_name": "Combine Success+45%",
+    "description": null
+  },
+  {
+    "id": 10207,
+    "skill_id": 10098,
+    "points": -10,
+    "ability_name": "Combine Success -10%",
+    "description": null
+  },
+  {
+    "id": 10208,
+    "skill_id": 10098,
+    "points": -15,
+    "ability_name": "Combine Success-20%",
+    "description": null
+  },
+  {
+    "id": 10209,
+    "skill_id": 10099,
+    "points": 10,
+    "ability_name": "Bullet Limit",
+    "description": null
+  },
+  {
+    "id": 10210,
+    "skill_id": 10100,
+    "points": 0,
+    "ability_name": "Torso Inc",
+    "description": null
+  },
+  {
+    "id": 10211,
+    "skill_id": 10101,
+    "points": 10,
+    "ability_name": "スキル系統1 Up",
+    "description": null
+  },
+  {
+    "id": 10212,
+    "skill_id": 10101,
+    "points": -10,
+    "ability_name": "スキル系統1 Down",
+    "description": null
+  },
+  {
+    "id": 10213,
+    "skill_id": 10102,
+    "points": 10,
+    "ability_name": "スキル系統2 Up",
+    "description": null
+  },
+  {
+    "id": 10214,
+    "skill_id": 10102,
+    "points": -10,
+    "ability_name": "スキル系統2 Down",
+    "description": null
+  },
+  {
+    "id": 10215,
+    "skill_id": 10103,
+    "points": 10,
+    "ability_name": "Torso Inc Up",
+    "description": null
+  }
+]
