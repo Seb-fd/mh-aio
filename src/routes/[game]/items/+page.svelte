@@ -2,6 +2,7 @@
   import { goto } from '$app/navigation';
   import { selectedGame } from '$lib/stores/game';
   import { api, type Item } from '$lib/api';
+  import { normKey } from '$lib/utils/norm';
   import Card from '$lib/components/ui/card.svelte';
 
   const game = $derived($selectedGame);
@@ -34,7 +35,7 @@
   const filtered = $derived.by(() => {
     let arr = items
       .filter(i => categoryFilter === 'all' || i.category === categoryFilter)
-      .filter(i => searchTerm === '' || i.name.toLowerCase().includes(searchTerm.toLowerCase()));
+      .filter(i => searchTerm === '' || normKey(i.name).includes(normKey(searchTerm)));
     // Sorting: chest is already id order from DB, keep stable; other sorts client-side
     if (sortBy === 'name') arr = [...arr].sort((a,b)=> a.name.localeCompare(b.name));
     else if (sortBy === 'rarity') arr = [...arr].sort((a,b)=> (b.rarity??0)-(a.rarity??0));

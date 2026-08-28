@@ -7,7 +7,14 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "svelte-check --tsconfig ./tsconfig.json",
+    "typecheck": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^3.0.0",
@@ -16,7 +23,6 @@
     "@tailwindcss/vite": "^4.3.3",
     "@tauri-apps/cli": "^2.0.0",
     "@types/node": "^26.3.0",
-    "bits-ui": "^2.19.0",
     "clsx": "^2.1.1",
     "svelte": "^5.0.0",
     "svelte-check": "^4.0.0",

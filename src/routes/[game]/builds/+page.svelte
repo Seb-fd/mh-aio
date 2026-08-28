@@ -12,7 +12,6 @@
   let allowBad = $state(false);
   let includePiercings = $state(true);
   let allowTorsoInc = $state(true);
-  let includeDummy = $state(false);
   let sortBy = $state('none');
   let showAdvanced = $state(false);
 
@@ -116,7 +115,6 @@
         include_piercings: includePiercings,
         allow_bad: allowBad,
         allow_torso_inc: allowTorsoInc,
-        allow_dummy: includeDummy,
         sort_by: sortBy === 'none' ? null : sortBy,
       };
       const res = await api.searchArmorSets(query as any);
@@ -144,17 +142,18 @@
   const activeCount = $derived(skillSlots.filter(s => s.skillId !== null).length);
 </script>
 
-<div class="max-w-7xl mx-auto">
-  <div class="mb-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="mb-6">
     <h1 class="text-2xl font-bold text-gray-100">Builds</h1>
     <p class="text-sm text-gray-500 mt-1">
       {#if game}Find armor sets for {game.shortName} — pick the skills you want, we handle decorations and slots.{:else}Select a game to start building.{/if}
     </p>
   </div>
 
-  <div class="grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-5">
-    <!-- Left: Builder -->
-    <div class="space-y-4">
+  <div class="lg:h-[calc(100dvh-9.5rem)] lg:min-h-[540px] lg:overflow-hidden">
+    <div class="flex flex-col lg:flex-row lg:items-stretch gap-5 lg:h-full">
+      <!-- Left: Builder -->
+      <div class="space-y-4 lg:w-[360px] lg:shrink-0 lg:min-h-0 lg:overflow-y-auto lg:pr-1">
       <!-- Step 1: Hunter Type -->
       <div class="themed-card rounded-xl border p-4">
         <div class="flex items-center gap-2 mb-3">
@@ -282,7 +281,6 @@
             <label class="flex items-center justify-between gap-2 text-xs text-gray-300 bg-gray-900 rounded-lg px-3 py-2"><span>Allow negative skills</span><input type="checkbox" bind:checked={allowBad} class="accent-[var(--theme-primary)]" /></label>
             <label class="flex items-center justify-between gap-2 text-xs text-gray-300 bg-gray-900 rounded-lg px-3 py-2"><span>Include piercings</span><input type="checkbox" bind:checked={includePiercings} /></label>
             <label class="flex items-center justify-between gap-2 text-xs text-gray-300 bg-gray-900 rounded-lg px-3 py-2"><span>Include Torso Inc</span><input type="checkbox" bind:checked={allowTorsoInc} /></label>
-            <label class="flex items-center justify-between gap-2 text-xs text-gray-500 bg-gray-900 rounded-lg px-3 py-2"><span>Include dummy armors</span><input type="checkbox" bind:checked={includeDummy} /></label>
             <label class="text-xs text-gray-500">Sort by
               <select bind:value={sortBy} class="mt-1 w-full bg-gray-900 border border-gray-800 rounded-lg px-2 py-2 text-xs text-gray-300">
                 {#each sortOptions as o}<option value={o.v}>{o.l}</option>{/each}
@@ -300,7 +298,7 @@
     </div>
 
     <!-- Results -->
-    <div class="themed-card rounded-xl border flex flex-col min-h-[540px]">
+    <div class="themed-card rounded-xl border flex flex-col min-h-0 overflow-hidden lg:flex-1">
       <div class="px-5 py-4 border-b border-gray-800 flex items-center justify-between">
         <div>
           <h2 class="text-sm font-semibold text-gray-100">Results</h2>
@@ -308,7 +306,7 @@
         </div>
         {#if results.length>0}<span class="text-xs px-2.5 py-1 rounded-full bg-gray-800 text-gray-400">{results.length}</span>{/if}
       </div>
-      <div class="flex-1 p-4 space-y-3 overflow-auto max-h-[78vh]">
+      <div class="flex-1 min-h-0 p-4 space-y-3 overflow-auto">
         {#if results.length === 0 && !searching}
           <div class="py-16 text-center">
             <div class="w-16 h-16 mx-auto rounded-2xl bg-gray-900 border border-gray-800 flex items-center justify-center text-2xl mb-4">🛡️</div>
@@ -373,6 +371,7 @@
             {/if}
           </div>
         {/each}
+      </div>
       </div>
     </div>
   </div>

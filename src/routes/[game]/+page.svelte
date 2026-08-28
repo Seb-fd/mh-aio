@@ -1,18 +1,9 @@
 <script lang="ts">
-  import { page } from '$app/stores';
   import { goto } from '$app/navigation';
-  import { selectedGame, GAMES } from '$lib/stores/game';
+  import { selectedGame } from '$lib/stores/game';
   import Card from '$lib/components/ui/card.svelte';
 
   const game = $derived($selectedGame);
-  const gameId = $derived($page.params.game);
-
-  $effect(() => {
-    const found = GAMES.find(g => g.id === gameId);
-    if (found) {
-      selectedGame.select(found);
-    }
-  });
 
   const sections = [
     { href: '/monsters', label: 'Monsters', icon: '🐉', desc: 'Weaknesses, materials and tips' },

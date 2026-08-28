@@ -69,7 +69,7 @@
   </nav>
 
   <div class="p-4 border-t" style="border-color: var(--theme-border);">
-    <p class="text-xs text-gray-600 text-center">MH-AIO v0.2.0</p>
+    <p class="text-xs text-gray-600 text-center">MH-AIO v0.1.0</p>
   </div>
 </aside>
 

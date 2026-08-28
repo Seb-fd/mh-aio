@@ -1,4 +1,4 @@
-use rusqlite::{Connection, OptionalExtension, Result};
+﻿use rusqlite::{Connection, OptionalExtension, Result};
 use serde::Deserialize;
 
 const MH2G: i32 = 5;
@@ -6,8 +6,6 @@ const MHP3RD: i32 = 4;
 
 pub fn seed(conn: &Connection) -> Result<()> {
     seed_games(conn)?;
-    clear_mh2g(conn)?;
-    clear_mhp3rd(conn)?;
     seed_monsters(conn)?;
     backfill_monster_descriptions(conn)?;
     seed_items(conn)?;
@@ -32,7 +30,7 @@ pub fn seed(conn: &Connection) -> Result<()> {
     seed_decorations(conn)?;
     seed_armor_skill_points(conn)?;
     seed_weapon_skill_points(conn)?;
-    // MHP3rd (ULJM-05800) — faithful to ISO normal (English patch), village_low/high + guild_low/high
+    // MHP3rd (ULJM-05800) â€” faithful to ISO normal (English patch), village_low/high + guild_low/high
     seed_mhp3rd_monsters(conn)?;
     backfill_mhp3rd_monster_descriptions(conn)?;
     seed_mhp3rd_items(conn)?;
@@ -58,82 +56,6 @@ pub fn seed(conn: &Connection) -> Result<()> {
     seed_mhp3rd_armor_skill_points(conn)?;
     seed_mhp3rd_weapon_skill_points(conn)?;
     Ok(())
-}
-
-fn clear_game(conn: &Connection, game_id: i32) -> Result<()> {
-    conn.execute(
-        "DELETE FROM weapon_materials WHERE weapon_id IN (SELECT id FROM weapons WHERE game_id = ?1)",
-        rusqlite::params![game_id],
-    )?;
-    conn.execute(
-        "DELETE FROM weapon_craft WHERE weapon_id IN (SELECT id FROM weapons WHERE game_id = ?1)",
-        rusqlite::params![game_id],
-    )?;
-    conn.execute(
-        "DELETE FROM weapon_skill_points WHERE weapon_id IN (SELECT id FROM weapons WHERE game_id = ?1)",
-        rusqlite::params![game_id],
-    )?;
-    conn.execute(
-        "DELETE FROM armor_materials WHERE armor_id IN (SELECT id FROM armor WHERE game_id = ?1)",
-        rusqlite::params![game_id],
-    )?;
-    conn.execute(
-        "DELETE FROM armor_skill_points WHERE armor_id IN (SELECT id FROM armor WHERE game_id = ?1)",
-        rusqlite::params![game_id],
-    )?;
-    conn.execute(
-        "DELETE FROM quest_rewards WHERE quest_id IN (SELECT id FROM quests WHERE game_id = ?1)",
-        rusqlite::params![game_id],
-    )?;
-    conn.execute(
-        "DELETE FROM item_sources WHERE item_id IN (SELECT id FROM items WHERE game_id = ?1)
-            OR (source_type = 'carve' AND source_id IN (SELECT id FROM monsters WHERE game_id = ?1))
-            OR (source_type = 'quest_reward' AND source_id IN (SELECT id FROM quests WHERE game_id = ?1))",
-        rusqlite::params![game_id],
-    )?;
-    conn.execute(
-        "DELETE FROM item_combine WHERE result_item_id IN (SELECT id FROM items WHERE game_id = ?1)
-            OR component_item_id IN (SELECT id FROM items WHERE game_id = ?1)",
-        rusqlite::params![game_id],
-    )?;
-    conn.execute(
-        "DELETE FROM monster_drops WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = ?1)",
-        rusqlite::params![game_id],
-    )?;
-    conn.execute(
-        "DELETE FROM monster_equipment WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = ?1) OR game_id = ?1",
-        rusqlite::params![game_id],
-    )?;
-    conn.execute(
-        "DELETE FROM monster_weaknesses WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = ?1)",
-        rusqlite::params![game_id],
-    )?;
-    conn.execute(
-        "DELETE FROM skill_levels WHERE skill_id IN (SELECT id FROM skills WHERE game_id = ?1)",
-        rusqlite::params![game_id],
-    )?;
-    conn.execute(
-        "DELETE FROM decoration_materials WHERE decoration_id IN (SELECT id FROM decorations WHERE game_id = ?1)",
-        rusqlite::params![game_id],
-    )?;
-    conn.execute("DELETE FROM decorations WHERE game_id = ?1", rusqlite::params![game_id])?;
-    conn.execute("DELETE FROM monsters WHERE game_id = ?1", rusqlite::params![game_id])?;
-    conn.execute("DELETE FROM items WHERE game_id = ?1", rusqlite::params![game_id])?;
-    conn.execute("DELETE FROM weapons WHERE game_id = ?1", rusqlite::params![game_id])?;
-    conn.execute("DELETE FROM armor WHERE game_id = ?1", rusqlite::params![game_id])?;
-    conn.execute("DELETE FROM armor_sets WHERE game_id = ?1", rusqlite::params![game_id])?;
-    conn.execute("DELETE FROM quests WHERE game_id = ?1", rusqlite::params![game_id])?;
-    conn.execute("DELETE FROM skills WHERE game_id = ?1", rusqlite::params![game_id])?;
-    Ok(())
-}
-
-/// Wipe MH2G-related rows in FK-safe order so the real dataset can be rebuilt.
-fn clear_mh2g(conn: &Connection) -> Result<()> {
-    clear_game(conn, MH2G)
-}
-
-fn clear_mhp3rd(conn: &Connection) -> Result<()> {
-    clear_game(conn, MHP3RD)
 }
 
 fn seed_games(conn: &Connection) -> Result<()> {
@@ -224,7 +146,7 @@ fn seed_items(conn: &Connection) -> Result<()> {
         )?;
     }
 
-    // Backfill for existing DBs where category/subcategory changed (e.g., Power Juice Material→Consumable, Huskberry→Ammo)
+    // Backfill for existing DBs where category/subcategory changed (e.g., Power Juice Materialâ†’Consumable, Huskberryâ†’Ammo)
     for it in &items {
         conn.execute(
             "UPDATE items SET category = ?1, subcategory = ?2 WHERE id = ?3 AND game_id = 5 AND (category IS NULL OR category != ?1 OR subcategory IS NULL OR subcategory != ?2)",
@@ -605,7 +527,7 @@ fn derive_set_name(armor: &ArmorJson) -> String {
         return armor.set.clone();
     }
     if parts.len() == 1 {
-        // Concatenated names like BlackBeltLeggingsX (no spaces) — strip slot suffix
+        // Concatenated names like BlackBeltLeggingsX (no spaces) â€” strip slot suffix
         let name = parts[0];
         for &slot in SLOT_WORDS {
             for &var in &["X", "Z", "S", "U", "D", "C"] {
@@ -971,6 +893,10 @@ fn seed_decorations(conn: &Connection) -> Result<()> {
                     |row| row.get(0),
                 )
                 .optional()?;
+            if iid.is_none() {
+                // Never insert a NULL FK — skip unresolved rather than making an orphan.
+                continue;
+            }
             conn.execute(
                 "INSERT OR IGNORE INTO decoration_materials (decoration_id, item_id, item_name, quantity) VALUES (?1, ?2, ?3, ?4)",
                 rusqlite::params![d.id, iid, m.name, m.amount],
@@ -1098,7 +1024,7 @@ fn seed_weapon_skill_points(conn: &Connection) -> Result<()> {
     Ok(())
 }
 
-// ── MHP3rd (ULJM-05800) ── village_low/high + guild_low/high, faithful to ISO normal ──
+// â”€â”€ MHP3rd (ULJM-05800) â”€â”€ village_low/high + guild_low/high, faithful to ISO normal â”€â”€
 
 fn seed_mhp3rd_monsters(conn: &Connection) -> Result<()> {
     let json_data = include_str!("../../data/mhp3rd_monsters.json");
@@ -1443,6 +1369,10 @@ fn seed_mhp3rd_decorations(conn: &Connection) -> Result<()> {
         for m in &d.materials {
             let normalized_mat = normalize_item_name_p3rd(&m.name);
             let iid: Option<i32> = conn.query_row("SELECT id FROM items WHERE LOWER(name) = LOWER(?1) AND game_id = 4", rusqlite::params![normalized_mat], |row| row.get(0)).optional()?;
+            if iid.is_none() {
+                // Never insert a NULL FK — skip unresolved rather than making an orphan.
+                continue;
+            }
             conn.execute(
                 "INSERT OR IGNORE INTO decoration_materials (decoration_id, item_id, item_name, quantity) VALUES (?1, ?2, ?3, ?4)",
                 rusqlite::params![d.id, iid, m.name, m.amount],

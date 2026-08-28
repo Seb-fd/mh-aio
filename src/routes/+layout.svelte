@@ -1,7 +1,7 @@
 <script lang="ts">
   import '../app.css';
   import { page } from '$app/stores';
-  import { selectedGame, GAMES, type Game } from '$lib/stores/game';
+  import { selectedGame, type Game } from '$lib/stores/game';
   import Sidebar from '$lib/components/sidebar.svelte';
   import Header from '$lib/components/header.svelte';
 
@@ -11,16 +11,6 @@
 
   const isHome = $derived($page.url.pathname === '/');
   const game = $derived($selectedGame);
-
-  $effect(() => {
-    const pathGameId = $page.url.pathname.split('/')[1];
-    if (pathGameId && pathGameId !== '') {
-      const found = GAMES.find(g => g.id === pathGameId);
-      if (found && $selectedGame?.id !== pathGameId) {
-        selectedGame.select(found);
-      }
-    }
-  });
 
   const themeStyle = $derived.by(() => {
     if (!game) return '';

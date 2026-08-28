@@ -1,1217 +1,2369 @@
 [
   {
-    "result_item_id": 10001,
-    "component_item_id": 10241,
+    "id": 700000,
+    "result_item_id": 10009,
+    "component_item_id": 10040,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": 95,
-    "id": 700000
+    "chance": 95
   },
   {
-    "result_item_id": 10001,
-    "component_item_id": 10031,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 95,
-    "id": 700001
-  },
-  {
-    "result_item_id": 10002,
-    "component_item_id": 10001,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 90,
-    "id": 700002
-  },
-  {
-    "result_item_id": 10002,
+    "id": 700001,
+    "result_item_id": 10009,
     "component_item_id": 10051,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": 90,
-    "id": 700003
+    "chance": 95
   },
   {
-    "result_item_id": 10003,
-    "component_item_id": 10242,
+    "id": 700002,
+    "result_item_id": 10010,
+    "component_item_id": 10009,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": 95,
-    "id": 700004
+    "chance": 90
   },
   {
-    "result_item_id": 10003,
-    "component_item_id": 10031,
+    "id": 700003,
+    "result_item_id": 10010,
+    "component_item_id": 10042,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": 95,
-    "id": 700005
+    "chance": 90
   },
   {
-    "result_item_id": 10017,
-    "component_item_id": 10134,
+    "id": 700004,
+    "result_item_id": 10012,
+    "component_item_id": 10011,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": 85,
-    "id": 700006
+    "chance": 75
   },
   {
-    "result_item_id": 10007,
+    "id": 700005,
+    "result_item_id": 10012,
+    "component_item_id": 10042,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700006,
+    "result_item_id": 10013,
+    "component_item_id": 10041,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700007,
+    "result_item_id": 10013,
+    "component_item_id": 10051,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700008,
+    "result_item_id": 10014,
+    "component_item_id": 10048,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700009,
+    "result_item_id": 10014,
+    "component_item_id": 10110,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700010,
+    "result_item_id": 10028,
+    "component_item_id": 10012,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 65
+  },
+  {
+    "id": 700011,
+    "result_item_id": 10028,
     "component_item_id": 10046,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": 75,
-    "id": 700007
+    "chance": 65
   },
   {
-    "result_item_id": 10007,
-    "component_item_id": 10006,
+    "id": 700012,
+    "result_item_id": 10029,
+    "component_item_id": 10017,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": 75,
-    "id": 700008
+    "chance": 55
   },
   {
-    "result_item_id": 10127,
-    "component_item_id": 10116,
+    "id": 700013,
+    "result_item_id": 10029,
+    "component_item_id": 10212,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": 55,
-    "id": 700009
+    "chance": 55
   },
   {
-    "result_item_id": 10127,
+    "id": 700014,
+    "result_item_id": 10016,
+    "component_item_id": 10042,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700015,
+    "result_item_id": 10016,
+    "component_item_id": 10110,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700016,
+    "result_item_id": 10017,
+    "component_item_id": 10016,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700017,
+    "result_item_id": 10017,
+    "component_item_id": 10046,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700018,
+    "result_item_id": 10032,
+    "component_item_id": 10016,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700019,
+    "result_item_id": 10032,
+    "component_item_id": 10101,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700020,
+    "result_item_id": 10018,
+    "component_item_id": 10016,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700021,
+    "result_item_id": 10018,
+    "component_item_id": 10034,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700022,
+    "result_item_id": 10015,
+    "component_item_id": 10042,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 65
+  },
+  {
+    "id": 700023,
+    "result_item_id": 10015,
+    "component_item_id": 10052,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 65
+  },
+  {
+    "id": 700024,
+    "result_item_id": 10020,
+    "component_item_id": 10016,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 65
+  },
+  {
+    "id": 700025,
+    "result_item_id": 10020,
     "component_item_id": 10056,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": 55,
-    "id": 700010
+    "chance": 65
   },
   {
-    "result_item_id": 10128,
-    "component_item_id": 10329,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 30,
-    "id": 700011
-  },
-  {
-    "result_item_id": 10128,
-    "component_item_id": 10005,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 30,
-    "id": 700012
-  },
-  {
-    "result_item_id": 10232,
-    "component_item_id": 10279,
+    "id": 700026,
+    "result_item_id": 10022,
+    "component_item_id": 10017,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": 52,
-    "id": 700013
+    "chance": 75
   },
   {
-    "result_item_id": 10635,
-    "component_item_id": 10828,
+    "id": 700027,
+    "result_item_id": 10022,
+    "component_item_id": 10056,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700028,
+    "result_item_id": 10023,
+    "component_item_id": 10016,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 65
+  },
+  {
+    "id": 700029,
+    "result_item_id": 10023,
+    "component_item_id": 10057,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 65
+  },
+  {
+    "id": 700030,
+    "result_item_id": 10025,
+    "component_item_id": 10017,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700031,
+    "result_item_id": 10025,
+    "component_item_id": 10057,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700032,
+    "result_item_id": 10027,
+    "component_item_id": 10049,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700033,
+    "result_item_id": 10027,
+    "component_item_id": 10110,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700034,
+    "result_item_id": 10037,
+    "component_item_id": 10035,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700035,
+    "result_item_id": 10037,
+    "component_item_id": 10049,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700036,
+    "result_item_id": 10026,
+    "component_item_id": 10110,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700037,
+    "result_item_id": 10026,
+    "component_item_id": 10127,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700038,
+    "result_item_id": 10038,
+    "component_item_id": 10035,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700039,
+    "result_item_id": 10038,
+    "component_item_id": 10127,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700040,
+    "result_item_id": 10088,
+    "component_item_id": 10087,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700041,
+    "result_item_id": 10088,
+    "component_item_id": 10053,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700042,
+    "result_item_id": 10089,
+    "component_item_id": 10087,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700043,
+    "result_item_id": 10089,
+    "component_item_id": 10054,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700044,
+    "result_item_id": 10090,
+    "component_item_id": 10087,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700045,
+    "result_item_id": 10090,
+    "component_item_id": 10044,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700046,
+    "result_item_id": 10066,
+    "component_item_id": 10356,
+    "quantity": 1,
+    "result_quantity": 2,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700047,
+    "result_item_id": 10066,
+    "component_item_id": 10117,
+    "quantity": 1,
+    "result_quantity": 2,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700048,
+    "result_item_id": 10329,
+    "component_item_id": 10066,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700049,
+    "result_item_id": 10329,
+    "component_item_id": 10355,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700050,
+    "result_item_id": 10071,
+    "component_item_id": 10066,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700051,
+    "result_item_id": 10071,
+    "component_item_id": 10045,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700052,
+    "result_item_id": 10072,
+    "component_item_id": 10066,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700053,
+    "result_item_id": 10072,
+    "component_item_id": 10053,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700054,
+    "result_item_id": 10068,
+    "component_item_id": 10066,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700055,
+    "result_item_id": 10068,
+    "component_item_id": 10111,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700056,
+    "result_item_id": 10070,
+    "component_item_id": 10066,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700057,
+    "result_item_id": 10070,
+    "component_item_id": 10172,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700058,
+    "result_item_id": 10067,
+    "component_item_id": 10356,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700059,
+    "result_item_id": 10067,
+    "component_item_id": 10047,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700060,
+    "result_item_id": 10073,
+    "component_item_id": 10066,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700061,
+    "result_item_id": 10073,
+    "component_item_id": 10055,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700062,
+    "result_item_id": 10082,
+    "component_item_id": 10043,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700063,
+    "result_item_id": 10082,
+    "component_item_id": 10052,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700064,
+    "result_item_id": 10083,
+    "component_item_id": 10080,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700065,
+    "result_item_id": 10083,
+    "component_item_id": 10043,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700066,
+    "result_item_id": 10084,
+    "component_item_id": 10082,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700067,
+    "result_item_id": 10084,
+    "component_item_id": 10081,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700068,
+    "result_item_id": 10085,
+    "component_item_id": 10083,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700069,
+    "result_item_id": 10085,
+    "component_item_id": 10222,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700070,
+    "result_item_id": 10069,
+    "component_item_id": 10082,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700071,
+    "result_item_id": 10069,
+    "component_item_id": 10405,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700072,
+    "result_item_id": 10086,
+    "component_item_id": 10083,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700073,
+    "result_item_id": 10086,
+    "component_item_id": 10050,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700074,
+    "result_item_id": 10076,
+    "component_item_id": 10109,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700075,
+    "result_item_id": 10076,
+    "component_item_id": 10045,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700076,
+    "result_item_id": 10078,
+    "component_item_id": 10077,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700077,
+    "result_item_id": 10078,
+    "component_item_id": 10076,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700078,
+    "result_item_id": 10079,
+    "component_item_id": 10077,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700079,
+    "result_item_id": 10079,
+    "component_item_id": 10112,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700080,
+    "result_item_id": 10098,
+    "component_item_id": 10097,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700081,
+    "result_item_id": 10098,
+    "component_item_id": 10376,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700082,
+    "result_item_id": 10353,
+    "component_item_id": 10097,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700083,
+    "result_item_id": 10353,
+    "component_item_id": 10375,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700084,
+    "result_item_id": 10354,
+    "component_item_id": 10097,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700085,
+    "result_item_id": 10354,
+    "component_item_id": 10374,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700086,
+    "result_item_id": 10091,
+    "component_item_id": 10117,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700087,
+    "result_item_id": 10091,
+    "component_item_id": 10131,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700088,
+    "result_item_id": 10092,
+    "component_item_id": 10118,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700089,
+    "result_item_id": 10092,
+    "component_item_id": 10131,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700090,
+    "result_item_id": 10093,
+    "component_item_id": 10120,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700091,
+    "result_item_id": 10093,
+    "component_item_id": 10131,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700092,
+    "result_item_id": 10094,
+    "component_item_id": 10076,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700093,
+    "result_item_id": 10094,
+    "component_item_id": 10132,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700094,
+    "result_item_id": 10095,
+    "component_item_id": 10076,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700095,
+    "result_item_id": 10095,
+    "component_item_id": 10134,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700096,
+    "result_item_id": 10096,
+    "component_item_id": 10076,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700097,
+    "result_item_id": 10096,
+    "component_item_id": 10135,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700098,
+    "result_item_id": 10031,
+    "component_item_id": 10030,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 65
+  },
+  {
+    "id": 700099,
+    "result_item_id": 10031,
+    "component_item_id": 10140,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 65
+  },
+  {
+    "id": 700100,
+    "result_item_id": 10064,
+    "component_item_id": 10030,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 65
+  },
+  {
+    "id": 700101,
+    "result_item_id": 10064,
+    "component_item_id": 10039,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 65
+  },
+  {
+    "id": 700102,
+    "result_item_id": 10063,
+    "component_item_id": 10013,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 65
+  },
+  {
+    "id": 700103,
+    "result_item_id": 10063,
+    "component_item_id": 10039,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 65
+  },
+  {
+    "id": 700104,
+    "result_item_id": 10065,
+    "component_item_id": 10021,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 55
+  },
+  {
+    "id": 700105,
+    "result_item_id": 10065,
+    "component_item_id": 10135,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 55
+  },
+  {
+    "id": 700106,
+    "result_item_id": 10185,
+    "component_item_id": 10182,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700107,
+    "result_item_id": 10185,
+    "component_item_id": 10044,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700108,
+    "result_item_id": 10184,
+    "component_item_id": 10182,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700109,
+    "result_item_id": 10184,
+    "component_item_id": 10054,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700110,
+    "result_item_id": 10334,
+    "component_item_id": 10062,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700111,
+    "result_item_id": 10334,
+    "component_item_id": 10134,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700112,
+    "result_item_id": 10004,
+    "component_item_id": 10003,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 100
+  },
+  {
+    "id": 700113,
+    "result_item_id": 10004,
+    "component_item_id": 10306,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 100
+  },
+  {
+    "id": 700114,
+    "result_item_id": 10006,
+    "component_item_id": 10005,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 100
+  },
+  {
+    "id": 700115,
+    "result_item_id": 10006,
+    "component_item_id": 10306,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 100
+  },
+  {
+    "id": 700116,
+    "result_item_id": 10142,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700117,
+    "result_item_id": 10142,
+    "component_item_id": 10362,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700118,
+    "result_item_id": 10143,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 2,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700119,
+    "result_item_id": 10143,
+    "component_item_id": 10101,
+    "quantity": 1,
+    "result_quantity": 2,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700120,
+    "result_item_id": 10145,
+    "component_item_id": 10339,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700121,
+    "result_item_id": 10145,
+    "component_item_id": 10225,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700122,
+    "result_item_id": 10146,
+    "component_item_id": 10339,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700123,
+    "result_item_id": 10146,
+    "component_item_id": 10102,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700124,
+    "result_item_id": 10147,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700125,
+    "result_item_id": 10147,
+    "component_item_id": 10060,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700126,
+    "result_item_id": 10148,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700127,
+    "result_item_id": 10148,
+    "component_item_id": 10139,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700128,
+    "result_item_id": 10149,
+    "component_item_id": 10339,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700129,
+    "result_item_id": 10149,
+    "component_item_id": 10139,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700130,
+    "result_item_id": 10150,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700131,
+    "result_item_id": 10150,
+    "component_item_id": 10052,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700132,
+    "result_item_id": 10151,
+    "component_item_id": 10339,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700133,
+    "result_item_id": 10151,
+    "component_item_id": 10104,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700134,
+    "result_item_id": 10152,
+    "component_item_id": 10339,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700135,
+    "result_item_id": 10152,
+    "component_item_id": 10105,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 95
+  },
+  {
+    "id": 700136,
+    "result_item_id": 10153,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700137,
+    "result_item_id": 10153,
+    "component_item_id": 10061,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700138,
+    "result_item_id": 10154,
+    "component_item_id": 10339,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700139,
+    "result_item_id": 10154,
+    "component_item_id": 10140,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700140,
+    "result_item_id": 10155,
+    "component_item_id": 10339,
+    "quantity": 1,
+    "result_quantity": 2,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700141,
+    "result_item_id": 10155,
+    "component_item_id": 10106,
+    "quantity": 1,
+    "result_quantity": 2,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700142,
+    "result_item_id": 10157,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700143,
+    "result_item_id": 10157,
+    "component_item_id": 10043,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700144,
+    "result_item_id": 10158,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700145,
+    "result_item_id": 10158,
+    "component_item_id": 10100,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700146,
+    "result_item_id": 10159,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700147,
+    "result_item_id": 10159,
+    "component_item_id": 10355,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700148,
+    "result_item_id": 10160,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 2,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700149,
+    "result_item_id": 10160,
+    "component_item_id": 10111,
+    "quantity": 1,
+    "result_quantity": 2,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700150,
+    "result_item_id": 10161,
+    "component_item_id": 10339,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700151,
+    "result_item_id": 10161,
+    "component_item_id": 10058,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700152,
+    "result_item_id": 10170,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700153,
+    "result_item_id": 10170,
+    "component_item_id": 10040,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700154,
+    "result_item_id": 10171,
+    "component_item_id": 10009,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700155,
+    "result_item_id": 10171,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700156,
+    "result_item_id": 10162,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700157,
+    "result_item_id": 10162,
+    "component_item_id": 10053,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700158,
+    "result_item_id": 10163,
+    "component_item_id": 10339,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700159,
+    "result_item_id": 10163,
+    "component_item_id": 10698,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700160,
+    "result_item_id": 10164,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700161,
+    "result_item_id": 10164,
+    "component_item_id": 10054,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700162,
+    "result_item_id": 10165,
+    "component_item_id": 10339,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700163,
+    "result_item_id": 10165,
+    "component_item_id": 10744,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700164,
+    "result_item_id": 10166,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700165,
+    "result_item_id": 10166,
+    "component_item_id": 10044,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700166,
+    "result_item_id": 10167,
+    "component_item_id": 10339,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700167,
+    "result_item_id": 10167,
+    "component_item_id": 10103,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700168,
+    "result_item_id": 10169,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700169,
+    "result_item_id": 10169,
+    "component_item_id": 10047,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700170,
+    "result_item_id": 10342,
+    "component_item_id": 10020,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700171,
+    "result_item_id": 10342,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700172,
+    "result_item_id": 10343,
+    "component_item_id": 10023,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700173,
+    "result_item_id": 10343,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700174,
+    "result_item_id": 10341,
+    "component_item_id": 10339,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700175,
+    "result_item_id": 10341,
+    "component_item_id": 10369,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700176,
+    "result_item_id": 10156,
+    "component_item_id": 10062,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700177,
+    "result_item_id": 10156,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700178,
+    "result_item_id": 10344,
+    "component_item_id": 10062,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700179,
+    "result_item_id": 10344,
+    "component_item_id": 10339,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700180,
+    "result_item_id": 10347,
+    "component_item_id": 10344,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700181,
+    "result_item_id": 10347,
+    "component_item_id": 10053,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700182,
+    "result_item_id": 10348,
+    "component_item_id": 10344,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700183,
+    "result_item_id": 10348,
+    "component_item_id": 10054,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700184,
+    "result_item_id": 10349,
+    "component_item_id": 10344,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700185,
+    "result_item_id": 10349,
+    "component_item_id": 10044,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700186,
+    "result_item_id": 10346,
+    "component_item_id": 10344,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700187,
+    "result_item_id": 10346,
+    "component_item_id": 10100,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 85
+  },
+  {
+    "id": 700188,
+    "result_item_id": 10351,
+    "component_item_id": 10344,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700189,
+    "result_item_id": 10351,
+    "component_item_id": 10047,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700190,
+    "result_item_id": 10074,
+    "component_item_id": 10044,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 65
+  },
+  {
+    "id": 700191,
+    "result_item_id": 10074,
+    "component_item_id": 10054,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 65
+  },
+  {
+    "id": 700192,
+    "result_item_id": 10075,
+    "component_item_id": 10074,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700193,
+    "result_item_id": 10075,
+    "component_item_id": 10066,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 75
+  },
+  {
+    "id": 700194,
+    "result_item_id": 10168,
+    "component_item_id": 10074,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700195,
+    "result_item_id": 10168,
+    "component_item_id": 10059,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 90
+  },
+  {
+    "id": 700196,
+    "result_item_id": 10390,
+    "component_item_id": 10120,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 100
+  },
+  {
+    "id": 700197,
+    "result_item_id": 10390,
+    "component_item_id": 10389,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 100
+  },
+  {
+    "id": 700198,
+    "result_item_id": 10390,
+    "component_item_id": 10114,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 100
+  },
+  {
+    "id": 700199,
+    "result_item_id": 10392,
+    "component_item_id": 10122,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 100
+  },
+  {
+    "id": 700200,
+    "result_item_id": 10392,
+    "component_item_id": 10389,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 100
+  },
+  {
+    "id": 700201,
+    "result_item_id": 10392,
+    "component_item_id": 10380,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "normal",
+    "chance": 100
+  },
+  {
+    "result_item_id": 10169,
+    "component_item_id": 10467,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 30,
+    "id": 700202
+  },
+  {
+    "result_item_id": 10169,
+    "component_item_id": 10328,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 30,
+    "id": 700203
+  },
+  {
+    "result_item_id": 10677,
+    "component_item_id": 10837,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 52,
-    "id": 700014
+    "id": 700204
   },
   {
-    "result_item_id": 10555,
-    "component_item_id": 10443,
+    "result_item_id": 10616,
+    "component_item_id": 10323,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 68,
-    "id": 700015
+    "id": 700205
   },
   {
-    "result_item_id": 10285,
-    "component_item_id": 10492,
+    "result_item_id": 10423,
+    "component_item_id": 10298,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 86,
-    "id": 700016
+    "id": 700206
   },
   {
-    "result_item_id": 10596,
-    "component_item_id": 10191,
+    "result_item_id": 10647,
+    "component_item_id": 10211,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 64,
-    "id": 700017
+    "id": 700207
   },
   {
-    "result_item_id": 10250,
-    "component_item_id": 10436,
+    "result_item_id": 10136,
+    "component_item_id": 10539,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 78,
-    "id": 700018
+    "id": 700208
   },
   {
-    "result_item_id": 10314,
-    "component_item_id": 10622,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 70,
-    "id": 700019
-  },
-  {
-    "result_item_id": 10169,
-    "component_item_id": 10707,
+    "result_item_id": 10362,
+    "component_item_id": 10736,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 58,
-    "id": 700020
+    "id": 700209
   },
   {
-    "result_item_id": 10419,
-    "component_item_id": 10531,
+    "result_item_id": 10525,
+    "component_item_id": 10600,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 55,
-    "id": 700021
+    "id": 700210
   },
   {
-    "result_item_id": 10270,
-    "component_item_id": 10431,
+    "result_item_id": 10410,
+    "component_item_id": 10534,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 71,
-    "id": 700022
+    "id": 700211
   },
   {
-    "result_item_id": 10118,
+    "result_item_id": 10165,
     "component_item_id": 10015,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 93,
-    "id": 700023
+    "id": 700212
   },
   {
-    "result_item_id": 10229,
-    "component_item_id": 10260,
+    "result_item_id": 10391,
+    "component_item_id": 10406,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 53,
-    "id": 700024
+    "id": 700213
   },
   {
-    "result_item_id": 10195,
-    "component_item_id": 10463,
+    "result_item_id": 10375,
+    "component_item_id": 10551,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 57,
-    "id": 700025
+    "id": 700214
   },
   {
-    "result_item_id": 10125,
-    "component_item_id": 10279,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 84,
-    "id": 700026
-  },
-  {
-    "result_item_id": 10601,
-    "component_item_id": 10200,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 78,
-    "id": 700027
-  },
-  {
-    "result_item_id": 10028,
-    "component_item_id": 10352,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 82,
-    "id": 700028
-  },
-  {
-    "result_item_id": 10708,
-    "component_item_id": 10739,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 66,
-    "id": 700029
-  },
-  {
-    "result_item_id": 10674,
-    "component_item_id": 10036,
+    "result_item_id": 10711,
+    "component_item_id": 10004,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 83,
-    "id": 700030
+    "id": 700215
   },
   {
-    "result_item_id": 10585,
-    "component_item_id": 10024,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 85,
-    "id": 700031
-  },
-  {
-    "result_item_id": 10103,
-    "component_item_id": 10313,
+    "result_item_id": 10150,
+    "component_item_id": 10451,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 86,
-    "id": 700032
+    "id": 700216
   },
   {
-    "result_item_id": 10598,
-    "component_item_id": 10213,
+    "result_item_id": 10649,
+    "component_item_id": 10123,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 86,
-    "id": 700033
+    "id": 700217
   },
   {
-    "result_item_id": 10351,
-    "component_item_id": 10641,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 94,
-    "id": 700034
-  },
-  {
-    "result_item_id": 10102,
-    "component_item_id": 10445,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 61,
-    "id": 700035
-  },
-  {
-    "result_item_id": 10455,
-    "component_item_id": 10326,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 77,
-    "id": 700036
-  },
-  {
-    "result_item_id": 10519,
-    "component_item_id": 10762,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 79,
-    "id": 700037
-  },
-  {
-    "result_item_id": 10298,
-    "component_item_id": 10149,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 89,
-    "id": 700038
-  },
-  {
-    "result_item_id": 10322,
-    "component_item_id": 10180,
+    "result_item_id": 10460,
+    "component_item_id": 10102,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 79,
-    "id": 700039
+    "id": 700218
   },
   {
-    "result_item_id": 10471,
-    "component_item_id": 10780,
+    "result_item_id": 10557,
+    "component_item_id": 10794,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 88,
-    "id": 700040
+    "id": 700219
   },
   {
-    "result_item_id": 10809,
-    "component_item_id": 10502,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 76,
-    "id": 700041
-  },
-  {
-    "result_item_id": 10828,
-    "component_item_id": 10764,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 66,
-    "id": 700042
-  },
-  {
-    "result_item_id": 10481,
-    "component_item_id": 10410,
+    "result_item_id": 10238,
+    "component_item_id": 10190,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 77,
-    "id": 700043
+    "id": 700220
   },
   {
-    "result_item_id": 10717,
-    "component_item_id": 10216,
+    "result_item_id": 10245,
+    "component_item_id": 10128,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 63,
-    "id": 700044
+    "id": 700221
   },
   {
-    "result_item_id": 10776,
-    "component_item_id": 10739,
+    "result_item_id": 10790,
+    "component_item_id": 10756,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 61,
-    "id": 700045
+    "id": 700222
   },
   {
-    "result_item_id": 10081,
-    "component_item_id": 10013,
+    "result_item_id": 10093,
+    "component_item_id": 10014,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 81,
-    "id": 700046
+    "id": 700223
   },
   {
-    "result_item_id": 10052,
-    "component_item_id": 10301,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 82,
-    "id": 700047
-  },
-  {
-    "result_item_id": 10278,
-    "component_item_id": 10063,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 80,
-    "id": 700048
-  },
-  {
-    "result_item_id": 10230,
-    "component_item_id": 10217,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 74,
-    "id": 700049
-  },
-  {
-    "result_item_id": 10583,
-    "component_item_id": 10050,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 82,
-    "id": 700050
-  },
-  {
-    "result_item_id": 10078,
+    "result_item_id": 10334,
     "component_item_id": 10439,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
-    "chance": 83,
-    "id": 700051
-  },
-  {
-    "result_item_id": 10310,
-    "component_item_id": 10442,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
     "chance": 82,
-    "id": 700052
+    "id": 700224
   },
   {
-    "result_item_id": 10313,
-    "component_item_id": 10564,
+    "result_item_id": 10416,
+    "component_item_id": 10075,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
-    "chance": 79,
-    "id": 700053
-  },
-  {
-    "result_item_id": 10497,
-    "component_item_id": 10135,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 64,
-    "id": 700054
-  },
-  {
-    "result_item_id": 10782,
-    "component_item_id": 10325,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 54,
-    "id": 700055
-  },
-  {
-    "result_item_id": 10736,
-    "component_item_id": 10622,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 71,
-    "id": 700056
-  },
-  {
-    "result_item_id": 10782,
-    "component_item_id": 10506,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 70,
-    "id": 700057
-  },
-  {
-    "result_item_id": 10457,
-    "component_item_id": 10311,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 52,
-    "id": 700058
-  },
-  {
-    "result_item_id": 10181,
-    "component_item_id": 10511,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 50,
-    "id": 700059
-  },
-  {
-    "result_item_id": 10418,
-    "component_item_id": 10644,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 88,
-    "id": 700060
-  },
-  {
-    "result_item_id": 10296,
-    "component_item_id": 10014,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 75,
-    "id": 700061
-  },
-  {
-    "result_item_id": 10266,
-    "component_item_id": 10567,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 75,
-    "id": 700062
-  },
-  {
-    "result_item_id": 10018,
-    "component_item_id": 10648,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 71,
-    "id": 700063
-  },
-  {
-    "result_item_id": 10728,
-    "component_item_id": 10595,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 64,
-    "id": 700064
-  },
-  {
-    "result_item_id": 10808,
-    "component_item_id": 10463,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 66,
-    "id": 700065
-  },
-  {
-    "result_item_id": 10090,
-    "component_item_id": 10255,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 62,
-    "id": 700066
-  },
-  {
-    "result_item_id": 10422,
-    "component_item_id": 10816,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 90,
-    "id": 700067
-  },
-  {
-    "result_item_id": 10619,
-    "component_item_id": 10634,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 85,
-    "id": 700068
-  },
-  {
-    "result_item_id": 10800,
-    "component_item_id": 10768,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 55,
-    "id": 700069
-  },
-  {
-    "result_item_id": 10567,
-    "component_item_id": 10387,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 62,
-    "id": 700070
-  },
-  {
-    "result_item_id": 10080,
-    "component_item_id": 10556,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 89,
-    "id": 700071
-  },
-  {
-    "result_item_id": 10105,
-    "component_item_id": 10018,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 91,
-    "id": 700072
-  },
-  {
-    "result_item_id": 10215,
-    "component_item_id": 10734,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 83,
-    "id": 700073
-  },
-  {
-    "result_item_id": 10026,
-    "component_item_id": 10143,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 52,
-    "id": 700074
-  },
-  {
-    "result_item_id": 10504,
-    "component_item_id": 10197,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 86,
-    "id": 700075
-  },
-  {
-    "result_item_id": 10198,
-    "component_item_id": 10764,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 62,
-    "id": 700076
-  },
-  {
-    "result_item_id": 10158,
-    "component_item_id": 10285,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 88,
-    "id": 700077
-  },
-  {
-    "result_item_id": 10547,
-    "component_item_id": 10294,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 91,
-    "id": 700078
-  },
-  {
-    "result_item_id": 10084,
-    "component_item_id": 10693,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 51,
-    "id": 700079
-  },
-  {
-    "result_item_id": 10684,
-    "component_item_id": 10668,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 61,
-    "id": 700080
-  },
-  {
-    "result_item_id": 10582,
-    "component_item_id": 10188,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 69,
-    "id": 700081
-  },
-  {
-    "result_item_id": 10419,
-    "component_item_id": 10280,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 59,
-    "id": 700082
-  },
-  {
-    "result_item_id": 10695,
-    "component_item_id": 10529,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 67,
-    "id": 700083
-  },
-  {
-    "result_item_id": 10074,
-    "component_item_id": 10181,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 92,
-    "id": 700084
-  },
-  {
-    "result_item_id": 10578,
-    "component_item_id": 10081,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 95,
-    "id": 700085
-  },
-  {
-    "result_item_id": 10619,
-    "component_item_id": 10339,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 77,
-    "id": 700086
-  },
-  {
-    "result_item_id": 10648,
-    "component_item_id": 10562,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 81,
-    "id": 700087
-  },
-  {
-    "result_item_id": 10341,
-    "component_item_id": 10772,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 61,
-    "id": 700088
-  },
-  {
-    "result_item_id": 10513,
-    "component_item_id": 10506,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 66,
-    "id": 700089
-  },
-  {
-    "result_item_id": 10297,
-    "component_item_id": 10243,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
     "chance": 80,
-    "id": 700090
+    "id": 700225
   },
   {
-    "result_item_id": 10589,
-    "component_item_id": 10204,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 78,
-    "id": 700091
-  },
-  {
-    "result_item_id": 10423,
-    "component_item_id": 10786,
+    "result_item_id": 10634,
+    "component_item_id": 10332,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
-    "chance": 62,
-    "id": 700092
+    "chance": 82,
+    "id": 700226
   },
   {
-    "result_item_id": 10698,
-    "component_item_id": 10675,
+    "result_item_id": 10338,
+    "component_item_id": 10541,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
-    "chance": 58,
-    "id": 700093
+    "chance": 83,
+    "id": 700227
   },
   {
-    "result_item_id": 10558,
-    "component_item_id": 10770,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 86,
-    "id": 700094
-  },
-  {
-    "result_item_id": 10348,
-    "component_item_id": 10024,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 75,
-    "id": 700095
-  },
-  {
-    "result_item_id": 10784,
-    "component_item_id": 10108,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 74,
-    "id": 700096
-  },
-  {
-    "result_item_id": 10558,
-    "component_item_id": 10204,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 92,
-    "id": 700097
-  },
-  {
-    "result_item_id": 10374,
-    "component_item_id": 10124,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 58,
-    "id": 700098
-  },
-  {
-    "result_item_id": 10469,
-    "component_item_id": 10322,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 50,
-    "id": 700099
-  },
-  {
-    "result_item_id": 10762,
-    "component_item_id": 10468,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 79,
-    "id": 700100
-  },
-  {
-    "result_item_id": 10477,
-    "component_item_id": 10290,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 54,
-    "id": 700101
-  },
-  {
-    "result_item_id": 10420,
-    "component_item_id": 10112,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 93,
-    "id": 700102
-  },
-  {
-    "result_item_id": 10063,
-    "component_item_id": 10662,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 92,
-    "id": 700103
-  },
-  {
-    "result_item_id": 10328,
-    "component_item_id": 10604,
+    "result_item_id": 10451,
+    "component_item_id": 10279,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 79,
-    "id": 700104
+    "id": 700228
   },
   {
-    "result_item_id": 10290,
-    "component_item_id": 10616,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 69,
-    "id": 700105
-  },
-  {
-    "result_item_id": 10734,
-    "component_item_id": 10532,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 71,
-    "id": 700106
-  },
-  {
-    "result_item_id": 10459,
-    "component_item_id": 10200,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 65,
-    "id": 700107
-  },
-  {
-    "result_item_id": 10027,
-    "component_item_id": 10750,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 70,
-    "id": 700108
-  },
-  {
-    "result_item_id": 10037,
-    "component_item_id": 10253,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 91,
-    "id": 700109
-  },
-  {
-    "result_item_id": 10795,
-    "component_item_id": 10620,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 50,
-    "id": 700110
-  },
-  {
-    "result_item_id": 10705,
-    "component_item_id": 10350,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 70,
-    "id": 700111
-  },
-  {
-    "result_item_id": 10575,
-    "component_item_id": 10088,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 67,
-    "id": 700112
-  },
-  {
-    "result_item_id": 10368,
-    "component_item_id": 10231,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 91,
-    "id": 700113
-  },
-  {
-    "result_item_id": 10380,
-    "component_item_id": 10654,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 56,
-    "id": 700114
-  },
-  {
-    "result_item_id": 10748,
-    "component_item_id": 10292,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 89,
-    "id": 700115
-  },
-  {
-    "result_item_id": 10431,
-    "component_item_id": 10458,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 78,
-    "id": 700116
-  },
-  {
-    "result_item_id": 10048,
-    "component_item_id": 10318,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 87,
-    "id": 700117
-  },
-  {
-    "result_item_id": 10635,
-    "component_item_id": 10377,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 50,
-    "id": 700118
-  },
-  {
-    "result_item_id": 10515,
+    "result_item_id": 10292,
     "component_item_id": 10449,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
-    "chance": 60,
-    "id": 700119
+    "chance": 52,
+    "id": 700229
   },
   {
-    "result_item_id": 10404,
-    "component_item_id": 10650,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 75,
-    "id": 700120
-  },
-  {
-    "result_item_id": 10319,
-    "component_item_id": 10692,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 59,
-    "id": 700121
-  },
-  {
-    "result_item_id": 10389,
-    "component_item_id": 10793,
+    "result_item_id": 10749,
+    "component_item_id": 10646,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
-    "chance": 82,
-    "id": 700122
-  },
-  {
-    "result_item_id": 10264,
-    "component_item_id": 10650,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 60,
-    "id": 700123
-  },
-  {
-    "result_item_id": 10082,
-    "component_item_id": 10454,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 79,
-    "id": 700124
-  },
-  {
-    "result_item_id": 10532,
-    "component_item_id": 10269,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 57,
-    "id": 700125
-  },
-  {
-    "result_item_id": 10103,
-    "component_item_id": 10606,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 66,
-    "id": 700126
-  },
-  {
-    "result_item_id": 10012,
-    "component_item_id": 10385,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 79,
-    "id": 700127
-  },
-  {
-    "result_item_id": 10205,
-    "component_item_id": 10780,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 59,
-    "id": 700128
-  },
-  {
-    "result_item_id": 10735,
-    "component_item_id": 10712,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 88,
-    "id": 700129
-  },
-  {
-    "result_item_id": 10391,
-    "component_item_id": 10251,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 62,
-    "id": 700130
-  },
-  {
-    "result_item_id": 10557,
-    "component_item_id": 10431,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "alchemy",
-    "chance": 56,
-    "id": 700131
-  },
-  {
-    "result_item_id": 10389,
-    "component_item_id": 10301,
-    "quantity": 1,
-    "result_quantity": 1,
-    "combine_type": "normal",
     "chance": 64,
-    "id": 700132
+    "id": 700230
   },
   {
-    "result_item_id": 10442,
-    "component_item_id": 10566,
+    "result_item_id": 10818,
+    "component_item_id": 10551,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 66,
+    "id": 700231
+  },
+  {
+    "result_item_id": 10528,
+    "component_item_id": 10826,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 90,
+    "id": 700232
+  },
+  {
+    "result_item_id": 10623,
+    "component_item_id": 10513,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 62,
+    "id": 700233
+  },
+  {
+    "result_item_id": 10092,
+    "component_item_id": 10252,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 89,
+    "id": 700234
+  },
+  {
+    "result_item_id": 10152,
+    "component_item_id": 10020,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 91,
+    "id": 700235
+  },
+  {
+    "result_item_id": 10032,
+    "component_item_id": 10040,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 52,
+    "id": 700236
+  },
+  {
+    "result_item_id": 10580,
+    "component_item_id": 10377,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 86,
+    "id": 700237
+  },
+  {
+    "result_item_id": 10096,
+    "component_item_id": 10310,
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "alchemy",
     "chance": 51,
-    "id": 700133
+    "id": 700238
+  },
+  {
+    "result_item_id": 10633,
+    "component_item_id": 10371,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 69,
+    "id": 700239
+  },
+  {
+    "result_item_id": 10726,
+    "component_item_id": 10265,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 67,
+    "id": 700240
+  },
+  {
+    "result_item_id": 10336,
+    "component_item_id": 10101,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 92,
+    "id": 700241
+  },
+  {
+    "result_item_id": 10687,
+    "component_item_id": 10620,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 81,
+    "id": 700242
+  },
+  {
+    "result_item_id": 10479,
+    "component_item_id": 10787,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 61,
+    "id": 700243
+  },
+  {
+    "result_item_id": 10208,
+    "component_item_id": 10800,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 62,
+    "id": 700244
+  },
+  {
+    "result_item_id": 10728,
+    "component_item_id": 10712,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 58,
+    "id": 700245
+  },
+  {
+    "result_item_id": 10260,
+    "component_item_id": 10379,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 92,
+    "id": 700246
+  },
+  {
+    "result_item_id": 10555,
+    "component_item_id": 10460,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 50,
+    "id": 700247
+  },
+  {
+    "result_item_id": 10075,
+    "component_item_id": 10701,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 92,
+    "id": 700248
+  },
+  {
+    "result_item_id": 10466,
+    "component_item_id": 10652,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 79,
+    "id": 700249
+  },
+  {
+    "result_item_id": 10329,
+    "component_item_id": 10767,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 70,
+    "id": 700250
+  },
+  {
+    "result_item_id": 10806,
+    "component_item_id": 10285,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 50,
+    "id": 700251
+  },
+  {
+    "result_item_id": 10197,
+    "component_item_id": 10393,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 91,
+    "id": 700252
+  },
+  {
+    "result_item_id": 10508,
+    "component_item_id": 10693,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 56,
+    "id": 700253
+  },
+  {
+    "result_item_id": 10765,
+    "component_item_id": 10430,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 89,
+    "id": 700254
+  },
+  {
+    "result_item_id": 10534,
+    "component_item_id": 10291,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 78,
+    "id": 700255
+  },
+  {
+    "result_item_id": 10588,
+    "component_item_id": 10308,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 60,
+    "id": 700256
+  },
+  {
+    "result_item_id": 10175,
+    "component_item_id": 10805,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 82,
+    "id": 700257
+  },
+  {
+    "result_item_id": 10094,
+    "component_item_id": 10548,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 79,
+    "id": 700258
+  },
+  {
+    "result_item_id": 10601,
+    "component_item_id": 10409,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 57,
+    "id": 700259
+  },
+  {
+    "result_item_id": 10380,
+    "component_item_id": 10794,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 59,
+    "id": 700260
   },
   {
     "result_item_id": 10617,
-    "component_item_id": 10539,
+    "component_item_id": 10534,
     "quantity": 1,
     "result_quantity": 1,
-    "combine_type": "normal",
-    "chance": 65,
-    "id": 700134
+    "combine_type": "alchemy",
+    "chance": 56,
+    "id": 700261
+  },
+  {
+    "result_item_id": 10316,
+    "component_item_id": 10622,
+    "quantity": 1,
+    "result_quantity": 1,
+    "combine_type": "alchemy",
+    "chance": 51,
+    "id": 700262
   }
 ]

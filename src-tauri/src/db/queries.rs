@@ -29,7 +29,7 @@ fn strip_accents(s: &str) -> String {
     out
 }
 
-fn norm_key(s: &str) -> String {
+pub(crate) fn norm_key(s: &str) -> String {
     strip_accents(s)
         .to_lowercase()
         .split_whitespace()
@@ -64,20 +64,6 @@ fn score_match(name_key: &str, tokens: &[&str]) -> i32 {
         best = best.max(30);
     }
     best
-}
-
-fn matches_tokens(name_key: &str, tokens: &[&str]) -> bool {
-    // All tokens must be present (AND) to qualify as a suggestion
-    tokens.iter().all(|t| name_key.contains(t))
-}
-
-#[derive(Debug, Serialize, Deserialize)]
-pub struct Game {
-    pub id: i32,
-    pub name: String,
-    pub abbreviation: String,
-    pub release_year: Option<i32>,
-    pub platform: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -449,25 +435,6 @@ pub struct SkillDetail {
     pub decorations: Vec<SkillDecoration>,
     pub armors: Vec<SkillArmorRef>,
     pub weapons: Vec<SkillWeaponRef>,
-}
-
-pub fn get_games(conn: &Connection) -> Result<Vec<Game>> {
-    let mut stmt = conn.prepare("SELECT id, name, abbreviation, release_year, platform FROM games ORDER BY id")?;
-
-    let games = stmt
-        .query_map([], |row| {
-            Ok(Game {
-                id: row.get(0)?,
-                name: row.get(1)?,
-                abbreviation: row.get(2)?,
-                release_year: row.get(3)?,
-                platform: row.get(4)?,
-            })
-        })?
-        .filter_map(|r| r.ok())
-        .collect();
-
-    Ok(games)
 }
 
 pub fn get_monsters_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Monster>> {
@@ -1914,6 +1881,51 @@ pub fn get_decoration_detail(conn: &Connection, id: i32) -> Result<Option<Decora
 }
 
 /// Global accent-insensitive search across all MH2G entities, grouped by kind.
+// Escape LIKE metacharacters so a user query can't act as a wildcard.
+fn escape_like(s: &str) -> String {
+    s.replace('\\', "\\\\").replace('%', "\\%").replace('_', "\\_")
+}
+
+/// Build a filtered SELECT that pushes the substring match into SQLite via the
+/// registered `norm_key` scalar function, so only matching rows cross the
+/// Rust boundary instead of every row in the table.
+fn search_filter_sql(table: &str, subtitle_cols: &str, extra_where: &str, tokens: &[&str]) -> (String, Vec<String>) {
+    let likes: Vec<String> = tokens.iter().map(|t| format!("%{}%", escape_like(t))).collect();
+    let likes_sql = tokens.iter().map(|_| "norm_key(name) LIKE ? ESCAPE '\\'").collect::<Vec<_>>().join(" AND ");
+    let sql = format!(
+        "SELECT id, name, {} FROM {} WHERE game_id = ?1 {} AND {} ORDER BY id",
+        subtitle_cols, table, extra_where, likes_sql
+    );
+    (sql, likes)
+}
+
+fn pluck_search(conn: &Connection, sql: &str, game_id: i32, likes: &[String]) -> Result<Vec<(i32, String, String)>> {
+    let mut stmt = conn.prepare(sql)?;
+    let mut params: Vec<Box<dyn rusqlite::ToSql>> = vec![Box::new(game_id)];
+    for l in likes {
+        params.push(Box::new(l.clone()));
+    }
+    let rows = stmt.query_map(
+        rusqlite::params_from_iter(params.iter().map(|b| b.as_ref())),
+        |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?, r.get::<_, String>(2)?)),
+    )?;
+    let mut out = Vec::new();
+    for r in rows {
+        out.push(r?);
+    }
+    Ok(out)
+}
+
+// A per-table descriptor so the 8 search blocks share one loop.
+struct SearchTable<'a> {
+    table: &'a str,
+    kind: &'a str,
+    subtitle_cols: &'a str,
+    extra_where: &'a str,
+    route_prefix: &'a str,
+    fallback_subtitle: &'a str,
+}
+
 pub fn get_global_search(conn: &Connection, game_id: i32, query: &str) -> Result<Vec<SearchResult>> {
     let q = norm_key(query);
     let tokens: Vec<&str> = q.split(' ').filter(|t| !t.is_empty()).collect();
@@ -1923,153 +1935,154 @@ pub fn get_global_search(conn: &Connection, game_id: i32, query: &str) -> Result
     let per_kind = 6;
     let mut out: Vec<SearchResult> = Vec::new();
 
-    // Monsters
-    {
-        let mut stmt = conn.prepare(
-            "SELECT id, name, species FROM monsters WHERE game_id = ?1 ORDER BY id",
-        )?;
-        let rows = stmt.query_map(params![game_id], |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?, r.get::<_, Option<String>>(2)?)))?;
-        let mut local: Vec<(i32, String, String, i32)> = Vec::new();
-        for r in rows {
-            let (id, name, species) = r?;
-            let key = norm_key(&name);
-            if matches_tokens(&key, &tokens) {
-                local.push((score_match(&key, &tokens), name.clone(), species.unwrap_or_default(), id));
-            }
-        }
-        local.sort_by(|a, b| b.0.cmp(&a.0));
-        for (_sc, name, species, id) in local.into_iter().take(per_kind) {
-            out.push(SearchResult { kind: "monster".into(), id, name, subtitle: species, route: format!("/monsters/{}", id) });
-        }
-    }
+    const TABLES: &[SearchTable] = &[
+        SearchTable { table: "monsters", kind: "monster", subtitle_cols: "COALESCE(species,'')", extra_where: "", route_prefix: "/monsters/", fallback_subtitle: "" },
+        SearchTable { table: "items", kind: "item", subtitle_cols: "COALESCE(category,'')", extra_where: "AND id != 1", route_prefix: "/items/", fallback_subtitle: "" },
+        SearchTable { table: "skills", kind: "skill", subtitle_cols: "'Skill'", extra_where: "", route_prefix: "/skills/", fallback_subtitle: "Skill" },
+        SearchTable { table: "weapons", kind: "weapon", subtitle_cols: "weapon_type", extra_where: "", route_prefix: "/weapons/", fallback_subtitle: "" },
+        SearchTable { table: "armor", kind: "armor", subtitle_cols: "slot_type || ' · ' || rank", extra_where: "", route_prefix: "/armor/", fallback_subtitle: "" },
+        SearchTable { table: "armor_sets", kind: "armor_set", subtitle_cols: "'Armor Set'", extra_where: "", route_prefix: "/armor/sets/", fallback_subtitle: "Armor Set" },
+        SearchTable { table: "quests", kind: "quest", subtitle_cols: "COALESCE(rank,'')", extra_where: "", route_prefix: "/quests/", fallback_subtitle: "" },
+        SearchTable { table: "decorations", kind: "decoration", subtitle_cols: "CASE WHEN slot_size IS NULL THEN '' ELSE CAST(slot_size AS TEXT) || ' slot' END", extra_where: "", route_prefix: "/decorations/", fallback_subtitle: "" },
+    ];
 
-    // Items
-    {
-        let mut stmt = conn.prepare(
-            "SELECT id, name, category FROM items WHERE game_id = ?1 AND id != 1 ORDER BY id",
-        )?;
-        let rows = stmt.query_map(params![game_id], |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?, r.get::<_, Option<String>>(2)?)))?;
-        let mut local: Vec<(i32, String, String, i32)> = Vec::new();
-        for r in rows {
-            let (id, name, cat) = r?;
-            let key = norm_key(&name);
-            if matches_tokens(&key, &tokens) {
-                local.push((score_match(&key, &tokens), name.clone(), cat.unwrap_or_default(), id));
-            }
-        }
-        local.sort_by(|a, b| b.0.cmp(&a.0));
-        for (_sc, name, cat, id) in local.into_iter().take(per_kind) {
-            out.push(SearchResult { kind: "item".into(), id, name, subtitle: cat, route: format!("/items/{}", id) });
-        }
-    }
-
-    // Skills
-    {
-        let mut stmt = conn.prepare("SELECT id, name FROM skills WHERE game_id = ?1 ORDER BY id")?;
-        let rows = stmt.query_map(params![game_id], |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?)))?;
-        let mut local: Vec<(i32, String, i32)> = Vec::new();
-        for r in rows {
-            let (id, name) = r?;
-            let key = norm_key(&name);
-            if matches_tokens(&key, &tokens) {
-                local.push((score_match(&key, &tokens), name.clone(), id));
-            }
-        }
-        local.sort_by(|a, b| b.0.cmp(&a.0));
-        for (_sc, name, id) in local.into_iter().take(per_kind) {
-            out.push(SearchResult { kind: "skill".into(), id, name, subtitle: "Skill".into(), route: format!("/skills/{}", id) });
-        }
-    }
-
-    // Weapons
-    {
-        let mut stmt = conn.prepare("SELECT id, name, weapon_type FROM weapons WHERE game_id = ?1 ORDER BY id")?;
-        let rows = stmt.query_map(params![game_id], |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?, r.get::<_, String>(2)?)))?;
-        let mut local: Vec<(i32, String, String, i32)> = Vec::new();
-        for r in rows {
-            let (id, name, wtype) = r?;
-            let key = norm_key(&name);
-            if matches_tokens(&key, &tokens) {
-                local.push((score_match(&key, &tokens), name.clone(), wtype, id));
-            }
-        }
-        local.sort_by(|a, b| b.0.cmp(&a.0));
-        for (_sc, name, wtype, id) in local.into_iter().take(per_kind) {
-            out.push(SearchResult { kind: "weapon".into(), id, name, subtitle: wtype, route: format!("/weapons/{}", id) });
-        }
-    }
-
-    // Armor (pieces)
-    {
-        let mut stmt = conn.prepare("SELECT id, name, slot_type, rank FROM armor WHERE game_id = ?1 ORDER BY id")?;
-        let rows = stmt.query_map(params![game_id], |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?, r.get::<_, String>(2)?, r.get::<_, String>(3)?)))?;
-        let mut local: Vec<(i32, String, String, i32)> = Vec::new();
-        for r in rows {
-            let (id, name, slot, rank) = r?;
-            let key = norm_key(&name);
-            if matches_tokens(&key, &tokens) {
-                local.push((score_match(&key, &tokens), name.clone(), format!("{} · {}", slot, rank), id));
-            }
-        }
+    for t in TABLES {
+        let (sql, likes) = search_filter_sql(t.table, t.subtitle_cols, t.extra_where, &tokens);
+        let rows = pluck_search(conn, &sql, game_id, &likes)?;
+        let mut local: Vec<(i32, String, String, i32)> = rows
+            .into_iter()
+            .map(|(id, name, sub)| {
+                let key = norm_key(&name);
+                (score_match(&key, &tokens), name, sub, id)
+            })
+            .collect();
         local.sort_by(|a, b| b.0.cmp(&a.0));
         for (_sc, name, sub, id) in local.into_iter().take(per_kind) {
-            out.push(SearchResult { kind: "armor".into(), id, name, subtitle: sub, route: format!("/armor/{}", id) });
-        }
-    }
-
-    // Armor sets
-    {
-        let mut stmt = conn.prepare("SELECT id, name FROM armor_sets WHERE game_id = ?1 ORDER BY id")?;
-        let rows = stmt.query_map(params![game_id], |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?)))?;
-        let mut local: Vec<(i32, String, i32)> = Vec::new();
-        for r in rows {
-            let (id, name) = r?;
-            let key = norm_key(&name);
-            if matches_tokens(&key, &tokens) {
-                local.push((score_match(&key, &tokens), name.clone(), id));
-            }
-        }
-        local.sort_by(|a, b| b.0.cmp(&a.0));
-        for (_sc, name, id) in local.into_iter().take(per_kind) {
-            out.push(SearchResult { kind: "armor_set".into(), id, name, subtitle: "Armor Set".into(), route: format!("/armor/sets/{}", id) });
-        }
-    }
-
-    // Quests
-    {
-        let mut stmt = conn.prepare("SELECT id, name, rank FROM quests WHERE game_id = ?1 ORDER BY id")?;
-        let rows = stmt.query_map(params![game_id], |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?, r.get::<_, Option<String>>(2)?)))?;
-        let mut local: Vec<(i32, String, String, i32)> = Vec::new();
-        for r in rows {
-            let (id, name, rank) = r?;
-            let key = norm_key(&name);
-            if matches_tokens(&key, &tokens) {
-                local.push((score_match(&key, &tokens), name.clone(), rank.unwrap_or_default(), id));
-            }
-        }
-        local.sort_by(|a, b| b.0.cmp(&a.0));
-        for (_sc, name, rank, id) in local.into_iter().take(per_kind) {
-            out.push(SearchResult { kind: "quest".into(), id, name, subtitle: rank, route: format!("/quests/{}", id) });
-        }
-    }
-
-    // Decorations
-    {
-        let mut stmt = conn.prepare("SELECT id, name, slot_size FROM decorations WHERE game_id = ?1 ORDER BY id")?;
-        let rows = stmt.query_map(params![game_id], |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?, r.get::<_, Option<i32>>(2)?)))?;
-        let mut local: Vec<(i32, String, i32, std::option::Option<i32>)> = Vec::new();
-        for r in rows {
-            let (id, name, slot) = r?;
-            let key = norm_key(&name);
-            if matches_tokens(&key, &tokens) {
-                local.push((score_match(&key, &tokens), name.clone(), id, slot));
-            }
-        }
-        local.sort_by(|a, b| b.0.cmp(&a.0));
-        for (_sc, name, id, slot) in local.into_iter().take(per_kind) {
-            out.push(SearchResult { kind: "decoration".into(), id, name, subtitle: slot.map(|s| format!("{} slot", s)).unwrap_or_default(), route: format!("/decorations/{}", id) });
+            let subtitle = if sub.is_empty() { t.fallback_subtitle.to_string() } else { sub };
+            out.push(SearchResult {
+                kind: t.kind.into(),
+                id,
+                name,
+                subtitle,
+                route: format!("{}{}", t.route_prefix, id),
+            });
         }
     }
 
     Ok(out)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn conn() -> rusqlite::Connection {
+        let c = rusqlite::Connection::open_in_memory().unwrap();
+        crate::db::register_functions(&c).unwrap();
+        crate::db::schema::create_tables(&c).unwrap();
+        crate::db::seed::seed(&c).unwrap();
+        c
+    }
+
+    #[test]
+    fn global_search_returns_matches_across_kinds() {
+        let c = conn();
+        // "attack" is a skill; "slash" or a monster name should also appear.
+        let results = get_global_search(&c, 5, "attack").unwrap();
+        assert!(!results.is_empty(), "global search for 'attack' returned nothing");
+        assert!(
+            results.iter().any(|r| r.kind == "skill" || r.kind == "item" || r.kind == "weapon"),
+            "expected at least a skill/item/weapon result, got {:?}",
+            results.iter().map(|r| r.kind.as_str()).collect::<Vec<_>>()
+        );
+        for r in &results {
+            assert!(r.route.starts_with('/'), "bad route: {}", r.route);
+            assert!(!r.name.is_empty(), "empty name in result");
+        }
+    }
+
+    #[test]
+    fn global_search_handles_multi_token_and_empty() {
+        let c = conn();
+        assert!(get_global_search(&c, 5, "   ").unwrap().is_empty(), "whitespace query should be empty");
+
+        let single = get_global_search(&c, 5, "attack").unwrap();
+        let multi = get_global_search(&c, 5, "dragon attack").unwrap();
+        // multi-token is a stricter (AND) filter, so it can never return more than single.
+        assert!(multi.len() <= single.len(), "AND filter must be a subset");
+
+        // '%' must be treated literally (escaped), not as a wildcard.
+        let wild = get_global_search(&c, 5, "%%%").unwrap();
+        assert!(wild.is_empty(), "percent query should not match everything");
+    }
+
+    #[test]
+    fn migrating_dirty_db_dedups_before_creating_unique_indexes() {
+        let c = rusqlite::Connection::open_in_memory().unwrap();
+        // Simulate a pre-fix DB: no unique index and duplicate rows.
+        c.execute_batch("CREATE TABLE monster_equipment (id INTEGER PRIMARY KEY, game_id INTEGER, monster_id INTEGER, equipment_kind TEXT NOT NULL, equipment_id INTEGER NOT NULL);").unwrap();
+        c.execute_batch(
+            "INSERT INTO monster_equipment (game_id, monster_id, equipment_kind, equipment_id) VALUES \
+             (5,1,'x',10),(5,1,'x',10),(5,1,'x',11),(5,2,'y',20),(5,2,'y',20);",
+        )
+        .unwrap();
+
+        crate::db::schema::create_tables(&c).unwrap();
+
+        let count: i64 = c
+            .query_row("SELECT COUNT(*) FROM monster_equipment", [], |r| r.get(0))
+            .unwrap();
+        assert_eq!(count, 3, "duplicates should collapse to 3 unique rows");
+
+        // The index now exists; inserting a duplicate must be ignored, not error.
+        crate::db::seed::seed(&c).unwrap();
+    }
+
+    #[test]
+    fn database_new_migrates_dirty_existing_db() {
+        // Reproduces the exact failing startup path from a pre-fix database file.
+        let path = std::env::temp_dir().join(format!("mh_migrate_test_{}.db", std::process::id()));
+        let _ = std::fs::remove_file(&path);
+
+        {
+            let c = rusqlite::Connection::open(&path).unwrap();
+            c.execute_batch("CREATE TABLE monster_equipment (id INTEGER PRIMARY KEY, game_id INTEGER, monster_id INTEGER, equipment_kind TEXT NOT NULL, equipment_id INTEGER NOT NULL);").unwrap();
+            c.execute_batch("INSERT INTO monster_equipment (game_id, monster_id, equipment_kind, equipment_id) VALUES (5,1,'x',10),(5,1,'x',10),(5,2,'y',20),(5,2,'y',20);").unwrap();
+        }
+
+        let result = crate::db::Database::new(path.to_str().unwrap());
+        assert!(result.is_ok(), "Database::new must migrate a dirty DB instead of panicking: {:?}", result.err());
+
+        let _ = std::fs::remove_file(&path);
+    }
+
+    #[test]
+    fn seed_is_idempotent_and_non_destructive() {
+        let c = rusqlite::Connection::open_in_memory().unwrap();
+        crate::db::register_functions(&c).unwrap();
+        crate::db::schema::create_tables(&c).unwrap();
+        crate::db::seed::seed(&c).unwrap();
+
+        let tables = [
+            "monsters", "items", "weapons", "armor", "armor_sets",
+            "skills", "decorations", "quests", "item_combine",
+            "monster_drops", "item_sources", "decoration_materials",
+        ];
+        let count = |c: &rusqlite::Connection, t: &str| -> i64 {
+            c.query_row(&format!("SELECT COUNT(*) FROM {t}"), [], |r| r.get(0)).unwrap()
+        };
+        let first: Vec<i64> = tables.iter().map(|t| count(&c, t)).collect();
+
+        // Second boot: seed runs again over the SAME database.
+        crate::db::seed::seed(&c).unwrap();
+
+        for (i, t) in tables.iter().enumerate() {
+            let after = count(&c, t);
+            assert_eq!(
+                first[i], after,
+                "table '{}' changed size on re-seed: {} -> {} (idempotency busted)",
+                t, first[i], after
+            );
+        }
+    }
 }

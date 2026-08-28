@@ -2,6 +2,7 @@
   import { goto } from '$app/navigation';
   import { selectedGame } from '$lib/stores/game';
   import { api, type Decoration } from '$lib/api';
+  import { normKey } from '$lib/utils/norm';
   import Card from '$lib/components/ui/card.svelte';
 
   const game = $derived($selectedGame);
@@ -37,7 +38,7 @@
     decorations
       .filter(d => slotFilter === 'all' || String(d.slot_size) === slotFilter)
       .filter(d => skillFilter === 'all' || d.skill_name === skillFilter || d.secondary_skill_name === skillFilter)
-      .filter(d => searchTerm === '' || d.name.toLowerCase().includes(searchTerm.toLowerCase()))
+      .filter(d => searchTerm === '' || normKey(d.name).includes(normKey(searchTerm)))
   );
 
   function open(id: number) {

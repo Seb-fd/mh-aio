@@ -1,6 +1,6 @@
 # MH-AIO - Project Status
 
-## Current Version: v0.4.0 (Monster Hunter Freedom Unite / MHP2G — 1083 items fully sourced + corrected categories + combinations)
+## Current Version: v0.1.0 (MHP2G 1083 items fully sourced + corrected categories + 432 combines · MHP3rd 1065 items / 378 quests / 60 monsters / 972 weapons / 1111 armor — all seeded)
 
 ---
 
@@ -59,13 +59,24 @@
 - [x] Item wings/ammo classified per ISO `icon` (Bowgun S + Coatings + Husks → `Ammo`, with `subcategory`); header artifact removed
    - [x] `docs/fidelity-report.md` — single merged report: defense/rarity/slots 100%, weapons per-type 100%, monster catalog 83, quest hubs 610 (ISO string table + guild rank fix + kit Event/Challenge) vs retail UMD + game-extracted DB + item taxonomy/combine Book order
 
+### Data — Monster Hunter Portable 3rd (MHP3rd / `mhp3rd`, DB id 4) — Seeded
+- [x] **1065 items** (`Material 964 / Consumable 55 / Ammo 46`), **291 descriptions** (~28 EN + 263 JP flagged with 🇯🇵 badge), **181 buy prices**; chest-order `id` remapped (0 dangling refs). **263 combines** (202 Normal in `調合リスト` book order + 61 Alchemy) with `chance`.
+- [x] **60 monsters**, **761 drops** (carve/break/capture/drop with rank/part/probability) across all 40 droptable monsters; **monster weaknesses / equipment** seeded.
+- [x] **972 weapons**, **1111 armor pieces** (sets derived via `derive_set_name`), **weapon/armor materials + craft** resolved.
+- [x] **378 quests** (`village 96 · guild_low 88 · guild_high 100 · event 52 · hot_spring 7 · drink 16 · nyanta 3 · training 10 · challenge 6`), all 378 carry `name_original` (JP quest-board title). `quest_rewards` **1867** rows; JP → `item_id` mapping, unresolved logged never orphaned.
+- [x] **Skills / decorations** + `armor_skill_points` / `weapon_skill_points` / `decoration_materials`.
+- [x] **Gather sources** 26 rows (map + area) from `mhp3wiki.info`; shop/trade/farm not yet populated (gather-only). See `docs/fidelity-report.md` § *MH P3rd — Item Catalog & Acquisition*.
+- [x] Data pipeline scripts: `fetch_mhp3rd_fandom.py` → `fetch_mhp3_wiki_data.py` (Playwright) → `generate_mhp3rd_*` + `reindex_mhp3rd_items.py`.
+
 ### Backend (Rust / Tauri)
-- [x] `ass.rs`, `commands/mod.rs`, `db/{mod,schema,queries,seed}.rs` — `items.subcategory`, `item_combine.combine_type/chance` migrations + `backfill_item_categories`
-- [x] Tauri commands: `get_games`, `get_monsters`, `get_weapons`, `get_armor`, `get_armor_sets`, `get_armor_set_detail`, `get_quests`, `get_items`, `get_skills`, `get_decorations`, `get_combinations` (Book order), list + detail variants (`get_item_detail` with `subcategory` + `recipes` with `combine_type`/`chance`), `search_armor_sets`, `global_search`
+- [x] `ass.rs`, `commands/mod.rs`, `db/{mod,schema,queries,seed}.rs` — `items.subcategory`, `item_combine.combine_type/chance` migrations + `backfill_item_categories`; `schema_version` table + `get_schema_version()`; `add_idempotency_constraints()` dedupes + UNIQUE indexes (`uq_item_combine`, `uq_item_sources`, `uq_monster_equipment`, `(game_id, id)` guards) so `INSERT OR IGNORE` is a real upsert; `clear_game` removed.
+- [x] `db/mod.rs` — `register_functions()` exposes `norm_key` as a deterministic SQLite scalar; `get_global_search` now pushes LIKE filtering into SQLite (parametrize + ESCAPE). `rusqlite` `functions` feature; `tauri-plugin-shell` removed; CSP hardened in `tauri.conf.json` (`tauri.conf.dev.json` overlay for devtools).
+- [x] `ass.rs` — `allow_dummy` removed; `danger_skills`/`reorder_gems` left as documented stubs (audit A4); robust tier/hunter_type tests added.
+- [x] Tauri commands: `get_monsters`, `get_weapons`, `get_armor`, `get_armor_sets`, `get_armor_set_detail`, `get_quests`, `get_items`, `get_skills`, `get_decorations`, `get_combinations` (Book order), list + detail variants (`get_item_detail` with `subcategory` + `recipes` with `combine_type`/`chance`), `search_armor_sets`, `global_search`. `greet`/`get_games` removed (game registry is frontend `src/lib/stores/game.ts`).
 
 ### Build
-- [x] `cargo build` — clean (non-blocking warnings)
-- [x] `cargo test` — ASS rank-gate unit tests pass
+- [x] `cargo build` — clean
+- [x] `cargo test` — 9 tests pass (ASS rank-gate + robust tiers/hunter types + global_search + idempotency/migration dedup)
 - [x] `npx svelte-check` — 0 errors, 0 warnings
 
 ---
@@ -93,7 +104,8 @@
 ## 📋 Next Steps
 
 ### Phase 2 (Multi-game)
-- [ ] Populate MHW, MHR, MHWilds, MHP3rd datasets (routing/theming in place)
+- [x] MHP3rd dataset seeded (items, quests, monsters, armor, weapons, combines, drops, skills, decorations) — fidelity pass ongoing (shop/trade/farm sources, numeric struct audit)
+- [ ] Populate MHW, MHR, MHWilds datasets (routing/theming in place)
 
 ### Phase 3 (Builds polish)
 - [ ] Save/load custom builds
@@ -124,11 +136,11 @@ npx tauri build
 # Build Rust backend only
 cargo build --manifest-path src-tauri/Cargo.toml
 
-# Run Rust unit tests (ASS solver)
+# Run Rust unit tests (ASS solver + db/queries idempotency & global_search)
 cargo test --manifest-path src-tauri/Cargo.toml
 
-# Type/Svelte check
-npx svelte-check
+# Type/Svelte check (aliases: lint, typecheck, check)
+npm run check   # or: npm run lint / npm run typecheck
 ```
 
 ---
@@ -139,9 +151,9 @@ npx svelte-check
 mh-aio/
 ├── src/                              # Frontend (Svelte 5)
 │   ├── lib/
-│   │   ├── api.ts                    # Typed invoke() wrapper
+│   │   ├── api.ts                    # Typed invoke() wrapper (get_games removed)
 │   │   ├── components/
-│   │   │   ├── ui/                   # shadcn-svelte primitives
+│   │   │   ├── ui/                   # shadcn-svelte primitives (card, button)
 │   │   │   ├── global-search.svelte  # Per-game accent-insensitive search
 │   │   │   ├── header.svelte         # Themed top bar + search
 │   │   │   ├── sidebar.svelte
@@ -149,25 +161,32 @@ mh-aio/
 │   │   │   ├── detail-header.svelte
 │   │   │   ├── material-list.svelte
 │   │   │   └── drop-table.svelte
-│   │   └── stores/game.ts
+│   │   ├── stores/game.ts            # Game registry + localStorage guard
+│   │   └── utils/
+│   │       ├── index.ts              # cn()
+│   │       └── norm.ts               # normKey() mirrors Rust norm_key
 │   └── routes/[game]/
 │       ├── monsters/                 # list + [id] (dedicated sets)
 │       ├── weapons/                  # list + [id]
 │       ├── armor/                    # list, sets/[id], [id]  (gender/rank filter)
 │       ├── quests/                   # list + [id]
-│       ├── items/                    # list + [id]
+│       ├── items/                    # list + [id] (CJK badge) + combine/
 │       ├── skills/                   # list + [id]
 │       ├── decorations/              # list + [id]
-│       └── builds/                   # Armor Set Search (ASS port)
+│       └── builds/                   # Armor Set Search (ASS port, no dummy)
 ├── docs/fidelity-report.md
+├── LICENSE                           # MIT
 ├── src-tauri/
 │   ├── src/
-│   │   ├── lib.rs                    # Tauri commands registered
+│   │   ├── lib.rs                    # Tauri commands registered (no shell plugin)
 │   │   ├── ass.rs                    # Armor Set Search solver (ASS port)
 │   │   ├── commands/mod.rs
-│   │   └── db/{mod,schema,queries,seed}.rs
-│   ├── Cargo.toml
-│   └── tauri.conf.json
+│   │   └── db/{mod,schema,queries,seed}.rs  # register_functions + idempotency indexes
+│   ├── data/                         # mh2g_*.json + mhp3rd_*.json
+│   ├── Cargo.toml                    # rusqlite {bundled, functions}
+│   ├── capabilities/default.json     # core:default only
+│   ├── tauri.conf.json               # CSP hardened
+│   └── tauri.conf.dev.json           # devtools overlay
 ├── AGENTS.md
 ├── README.md
 ├── roadmap.md

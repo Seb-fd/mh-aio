@@ -4,17 +4,6 @@ use crate::db::queries;
 use tauri::State;
 
 #[tauri::command]
-pub fn greet(name: &str) -> String {
-    format!("Welcome, {}! This is MH-AIO", name)
-}
-
-#[tauri::command]
-pub fn get_games(db: State<'_, Database>) -> Result<Vec<queries::Game>, String> {
-    let conn = db.conn.lock().map_err(|e| e.to_string())?;
-    queries::get_games(&conn).map_err(|e| e.to_string())
-}
-
-#[tauri::command]
 pub fn get_monsters(
     db: State<'_, Database>,
     game_id: i32,

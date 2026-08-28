@@ -93,3 +93,48 @@ Keep `mh2g_*.json` as the retail-faithful source. Items are now 100% sourced and
 - Gender: `Both` shows all; `Male` shows `male + both`, `Female` shows `female + both` (`src/routes/[game]/armor/+page.svelte:47`). The redundant `All` option was removed.
 - Hunter type: `All | Blademaster | Gunner` (`src/routes/[game]/armor/+page.svelte:57`). For `both` heads (e.g. `Rathalos Helm 40` vs `Rathalos Cap 20`) the higher `defense_base` per `set_id|rank` is treated as Blademaster, lower as Gunner; `both` chests/arms/waist/legs are usable by both.
 
+# MH P3rd (MHP3rd) — Item Catalog & Acquisition
+
+**Verdict:** The MHP3rd item catalog + acquisition data in `src-tauri/data/mhp3rd_*.json` is derived from MHP3rd-only sources. Base catalog/descriptions come from the per-game Fandom `MHP3:` pages (`MHP3: Item List` + `MHP3: Monster Item List`, both `Category:MHP3_Database`). The acquisition layer (buy prices, gather map+area, monster carve/break/capture/drop, and the combine list in game-book order) comes from the authoritative JP wiki `www.mhp3wiki.info`, rendered with Playwright (its tables are JS-rendered via the `table_edit2` plugin) and cached under `tmp_mhp3_upstream/wikipages/`. **No MHTri / MH3U data is used.**
+
+## Status
+
+| Aspect | State |
+|---|---|
+| Items | **1065** — real names, rarity, sell price; 0 duplicate names |
+| Categories | `Consumable 55 / Material 964 / Ammo 46`; subcategories from section taxonomy + name heuristics (`Recovery, Buff, Food, Charm, Coating, Husk, Ore, Bone, Sac, Monster Material, …`) |
+| Descriptions | **291** (274 with CJK) — ~28 EN + ~263 **Japanese** (kept faithfully, flagged with a **🇯🇵 JP badge** in the detail UI via CJK detection `[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]`) |
+| Buy prices | **181 items** have `buy_price`; sell/rarity corrected against the wiki |
+| Combine list | **263 recipes** (202 Normal in `調合リスト` book order + 61 Alchemy) with `chance`; verified #1 Potion = Herb + Blue Mushroom 95% |
+| Monster drops | **761 rows** (carve 238 / break 189 / capture 191 / drop 143, Low 378 / High 383) across **40 droptable monsters** with rank/part/quantity/probability — per-monster carve/break/capture tables |
+| Item ids | Re-indexed to the MHP3rd **item-box (chest) order** (`scripts/reindex_mhp3rd_items.py`): matched against the per-game ordered list (books → consumables → plants/tools/baits/insects/ores/bones → ammo → tickets → monster materials), then all `item_id`/`result_item_id`/`component_item_id` references remapped. **0 dangling references** across weapon/armor materials, craft, combine, monster_drops, quest_rewards, item_sources; 0 duplicate ids (10001–11065) |
+| Monsters | **60** (Large + Small) with weaknesses / equipment links |
+| Weapons / Armor | **972 weapons** / **1111 armor pieces** (sets via `derive_set_name`) + forge/upgrade materials |
+| Quests | **378** (`village 96 · guild_low 88 · guild_high 100 · event 52 · hot_spring 7 · drink 16 · nyanta 3 · training 10 · challenge 6`); all 378 carry `name_original` (JP quest-board title = in-game order). Bilingual fields: `location_original`/`objective_original`/`description_original` |
+| Quest rewards | **1867 rows** — JP reward material → `item_id` (Fandom `MHP3: Item List` + curated monster-material map); unresolved logged never orphaned |
+| Item sources (gather) | **26 rows** — `gather` map + area per item (EN map names, `conditions: "Areas: …"`); shop/trade/farm not yet populated |
+| Seed / schema | Idempotent (`add_idempotency_constraints` dedup + UNIQUE indexes, `clear_game` removed; `schema_version` table); `norm_key` registered as SQLite scalar for `get_global_search` |
+
+## Pipeline
+
+- `scripts/fetch_mhp3rd_fandom.py` → caches Fandom `MHP3:` wikitext.
+- `scripts/fetch_mhp3rd_wiki_data.py` (Playwright/Chromium) → renders `index.php?<page>` and caches `tmp_mhp3_upstream/wikipages/`.
+- `scripts/generate_mhp3rd_items.py` → base catalog + EN/JP descriptions.
+- `scripts/generate_mhp3rd_item_sources.py` → buy/sell/rarity + gather sources + combine list.
+- `scripts/generate_mhp3rd_monster_drops.py` → full carve/break/capture/drop tables.
+
+## Known gaps
+
+- **Shop/trade/farm source rows** (`item_sources` type shop/trade/farm) not yet generated; gather (`mining`) is populated. Small-monster carves are in the wiki `小型モンスター` page but not yet absorbed.
+- **Chest order** is derived from the per-game ordered item list (kouryaku.ohuda.com, game category order) — a faithful proxy; ~323/575 box items were matched by JP→EN, the remaining catalog items stay at their prior relative order after the matched block.
+- **Unresolved JP names** are logged (never orphaned): `scripts/mhp3rd_items.log`, `mhp3rd_item_sources.log`, `mhp3rd_monster_drops.log`. Some monster-material JP names lack an EN mapping in the current catalog.
+
+## Verification
+
+`svelte-check` → 0 errors/0 warnings. `cargo test` → 9 tests pass (ASS + `db::queries` idempotency/migration/global_search). `cargo check` → no errors. All seeds deserialize cleanly from the new JSON (items / item_combine / monster_drops / item_sources / quest_rewards structs). `src/lib/utils/norm.ts` mirrors Rust `norm_key` for accent-insensitive list filtering.
+
+## Source
+
+`www.mhp3wiki.info` is reachable via `index.php?<page-name>` (e.g. `index.php?調合リスト`), but its tables are client-rendered — hence Playwright. The archive.org copies of `/wiki/*` are absent, so live rendering is the only route. Quests are supplemented by `scripts/mhp3rd_quest_rewards.log` for unresolved JP reward names.
+
+

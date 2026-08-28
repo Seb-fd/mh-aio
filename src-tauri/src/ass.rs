@@ -10,7 +10,7 @@ pub struct SkillRequirement {
     pub points_required: i32,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 pub struct AssQueryInput {
     pub game_id: i32,
     pub skills: Vec<SkillRequirement>,
@@ -22,7 +22,6 @@ pub struct AssQueryInput {
     pub include_piercings: bool,
     pub allow_bad: bool,
     pub allow_torso_inc: bool,
-    pub allow_dummy: bool,
     pub sort_by: Option<String>,  // None | "defence" | "fire_res" etc
 }
 
@@ -87,13 +86,11 @@ struct Armor {
     is_piercing: bool,
     is_torso_inc: bool,
     skill_points: HashMap<i32, i32>, // skill_id -> points
-    extra_skill_points: HashMap<i32, i32>, // not yet classified, filled later
 }
 
 #[derive(Debug, Clone)]
 struct Decoration {
     id: i32,
-    name: String,
     slot_size: usize,
     abilities: Vec<(i32, i32)>, // (skill_id, points) primary first, secondary second
     dangerous: bool,
@@ -106,7 +103,6 @@ struct ArmorEquivalence {
     torso_inc: bool,
     no_skills: bool,
     abilities: Vec<(i32, i32)>, // only rel abilities
-    extra: Vec<(i32, i32)>,     // non-rel
 }
 
 #[derive(Debug, Clone)]
@@ -114,13 +110,10 @@ struct QueryInternal {
     skills: Vec<SkillRequirement>, // desired
     hunter_type: String,
     gender: String,
-    hr: i32,
-    elder_star: i32,
     weapon_slots: usize,
     include_piercings: bool,
     allow_bad: bool,
     allow_torso_inc: bool,
-    allow_dummy: bool,
     difficulty: usize,
     rel_skill_ids: Vec<i32>,
     rel_decorations: Vec<Decoration>,
@@ -272,7 +265,6 @@ fn load_armors(conn: &Connection, game_id: i32, skill_name_to_id: &HashMap<Strin
             is_piercing,
             is_torso_inc,
             skill_points: sp,
-            extra_skill_points: HashMap::new(),
         });
     }
     Ok(out)
@@ -299,7 +291,7 @@ fn load_decorations(conn: &Connection, game_id: i32) -> rusqlite::Result<Vec<Dec
     })?;
     let mut out = Vec::new();
     for r in rows {
-        let (id, name, slot_size, sid, spts, sid2, spts2) = r?;
+        let (id, _name, slot_size, sid, spts, sid2, spts2) = r?;
         let slot_size = slot_size.unwrap_or(1) as usize;
         let mut abilities = Vec::new();
         if let (Some(s), Some(p)) = (sid, spts) {
@@ -313,7 +305,6 @@ fn load_decorations(conn: &Connection, game_id: i32) -> rusqlite::Result<Vec<Dec
         }
         out.push(Decoration {
             id,
-            name,
             slot_size,
             abilities,
             dangerous: false,
@@ -443,39 +434,9 @@ fn is_better_decoration(a: &Decoration, b: &Decoration, _rel: &[i32]) -> bool {
     false
 }
 
-fn add_to_list_armor(list: &mut Vec<Armor>, inf: &mut Vec<Armor>, armor: Armor, rel: &[i32]) {
-    for i in 0..list.len() {
-        if is_better_armor(&armor, &list[i], rel) {
-            let b = &list[i];
-            let not_better_reverse = !is_better_armor(b, &armor, rel);
-            let danger_eq = armor.skill_points.get(&-999).is_none(); // placeholder, real check uses danger
-            if not_better_reverse {
-                // Simplified: always remove dominated
-                // Original checks danger equality and no_skills
-                let dominated_no = list[i].skill_points.iter().all(|(k,_)| !rel.contains(k));
-                if dominated_no {
-                    if let Some(pos) = inf.iter().position(|x| x.id == list[i].id) { inf.remove(pos); }
-                }
-                list.remove(i);
-                // recurse via adding after loop
-                add_to_list_armor(list, inf, armor, rel);
-                return;
-            }
-        } else if is_better_armor(&list[i], &armor, rel) {
-            if !armor.skill_points.iter().any(|(k,_)| rel.contains(k)) {
-                // not relevant? add to inf anyway
-            }
-            inf.push(armor);
-            return;
-        }
-    }
-    list.push(armor.clone());
-    inf.push(armor);
-}
-
 fn get_relevant_data(conn: &Connection, input: &AssQueryInput) -> rusqlite::Result<QueryInternal> {
     let skill_map = load_skill_name_map(conn, input.game_id)?;
-    let mut all_armors = load_armors(conn, input.game_id, &skill_map)?;
+    let all_armors = load_armors(conn, input.game_id, &skill_map)?;
     let mut all_decos = load_decorations(conn, input.game_id)?;
 
     let rel_ids: Vec<i32> = input.skills.iter().map(|s| s.skill_id).collect();
@@ -483,6 +444,13 @@ fn get_relevant_data(conn: &Connection, input: &AssQueryInput) -> rusqlite::Resu
     for (idx, sid) in rel_ids.iter().enumerate() { ability_index.insert(*sid, idx); }
 
     // Danger skills (only if advanced) - simplified empty unless we want full logic
+    //
+    // KNOWN LIMITATION (audit A4): `danger_skills` is intentionally left empty,
+    // so armor-borne negative abilities are never treated as "danger". Combined
+    // with `reorder_gems` being a stub (returns false), the `allow_bad` flag is
+    // effectively a no-op in the current port: the solver does NOT remove bad
+    // skills, it simply retains/returns solutions as-is. If you flip `allow_bad`
+    // and expect bad-skill remediation, that path is not implemented yet.
     let danger_skills: HashSet<i32> = HashSet::new();
 
     // Build QueryInternal skeleton
@@ -490,13 +458,10 @@ fn get_relevant_data(conn: &Connection, input: &AssQueryInput) -> rusqlite::Resu
         skills: input.skills.iter().map(|s| SkillRequirement{skill_id: s.skill_id, points_required: s.points_required}).collect(),
         hunter_type: input.hunter_type.clone(),
         gender: input.gender.clone(),
-        hr: input.hr,
-        elder_star: input.elder_star,
         weapon_slots: input.weapon_slots.max(0) as usize,
         include_piercings: input.include_piercings,
         allow_bad: input.allow_bad,
         allow_torso_inc: input.allow_torso_inc,
-        allow_dummy: input.allow_dummy,
         difficulty: get_difficulty(input.hr, input.elder_star),
         rel_skill_ids: rel_ids.clone(),
         rel_decorations: Vec::new(),
@@ -628,13 +593,12 @@ impl ArmorEquivalence {
         let no_skills = a.skill_points.iter().all(|(k, v)| !rel.contains(k) || *v <= 0) && !a.is_torso_inc;
         let torso_inc = a.is_torso_inc;
         let mut abilities = Vec::new();
-        let mut extra = Vec::new();
         if !no_skills && !torso_inc {
             for (sid, pts) in &a.skill_points {
-                if rel.contains(sid) { abilities.push((*sid, *pts)); } else { extra.push((*sid, *pts)); }
+                if rel.contains(sid) { abilities.push((*sid, *pts)); }
             }
         }
-        Self { armors: vec![a.clone()], num_slots: a.num_slots, torso_inc, no_skills, abilities, extra }
+        Self { armors: vec![a.clone()], num_slots: a.num_slots, torso_inc, no_skills, abilities }
     }
 }
 
@@ -886,7 +850,7 @@ impl FinalSolution {
         total += es.torso_slots_spare as i32;
         Self { armors: Vec::new(), decorations: es.decorations.clone(), extra_skills: Vec::new(), abilities, torso_slots_spare: es.torso_slots_spare, torso_multiplier: es.torso_multiplier, slots_spare, total_slots_spare: total, fire:0, ice:0, water:0, thunder:0, dragon:0, defence:0, rarity:0, difficulty:0 }
     }
-    fn calculate_extra(&mut self, q: &QueryInternal, skill_id_to_name: &HashMap<i32,String>, torso_eq: &ArmorEquivalence) {
+    fn calculate_extra(&mut self, _q: &QueryInternal, skill_id_to_name: &HashMap<i32,String>, _torso_eq: &ArmorEquivalence) {
         // add armor extra skills
         for armor in &self.armors {
             let is_body = armor.slot_type=="body" || armor.slot_type=="chest";
@@ -966,7 +930,10 @@ impl FinalSolution {
         pts > -10
     }
     fn reorder_gems(&mut self, _bad: &Vec<i32>, _q: &QueryInternal, _map: &HashMap<i32, Vec<Decoration>>) -> bool {
-        // Simplified: not implementing full reorder, return false
+        // Stub (audit A4): the full gem-reordering pass is not ported. Returning
+        // false means "cannot fix via reordering" so solutions that would need it
+        // are dropped rather than emitted with a bad skill. Gems are still greedily
+        // chosen by `add_decorations_*`; this only affects the allow_bad path.
         false
     }
     fn calculate_data(&mut self) {
@@ -989,7 +956,7 @@ fn is_detrimental(deco: &Decoration, q: &QueryInternal) -> bool {
     false
 }
 
-fn get_best_decoration(ability: i32, max_slots: usize, q: &QueryInternal, map: &HashMap<i32, Vec<Decoration>>) -> Option<Decoration> {
+fn get_best_decoration(ability: i32, max_slots: usize, _q: &QueryInternal, map: &HashMap<i32, Vec<Decoration>>) -> Option<Decoration> {
     let list = map.get(&ability)?;
     let mut best: Option<Decoration>=None;
     let rel = vec![ability];
@@ -1088,8 +1055,6 @@ pub fn search(conn: &Connection, input: AssQueryInput) -> Result<Vec<AssSolution
     // need decoration name map for view
     let mut deco_info: HashMap<i32, (String, Option<String>, Option<i32>, Option<String>, Option<i32>, Option<i32>)> = HashMap::new();
     {
-        let mut stmt = conn.prepare("SELECT id, name, slot_size, skill_id, s1.name, secondary_skill_id, s2.name, secondary_points, skill_points FROM (SELECT d.id, d.name, d.slot_size, d.skill_id, d.secondary_skill_id, d.secondary_points, d.skill_points FROM decorations d WHERE d.game_id=?1) LEFT JOIN skills s1 ON s1.id=skill_id LEFT JOIN skills s2 ON s2.id=secondary_skill_id").map_err(|e| e.to_string());
-        // fallback simpler
         let mut stmt2 = conn.prepare("SELECT d.id, d.name, d.slot_size, s1.name, d.skill_points, s2.name, d.secondary_points FROM decorations d LEFT JOIN skills s1 ON s1.id=d.skill_id LEFT JOIN skills s2 ON s2.id=d.secondary_skill_id WHERE d.game_id=?1").map_err(|e| e.to_string())?;
         let rows = stmt2.query_map([input.game_id], |row| Ok((row.get::<_,i32>(0)?, row.get::<_,String>(1)?, row.get::<_,Option<i32>>(2)?, row.get::<_,Option<String>>(3)?, row.get::<_,Option<i32>>(4)?, row.get::<_,Option<String>>(5)?, row.get::<_,Option<i32>>(6)?))).map_err(|e| e.to_string())?;
         for r in rows { let (id,n,slot,sn,sp,sn2,sp2)=r.map_err(|e| e.to_string())?; deco_info.insert(id,(n,sn,sp,sn2,sp2,slot)); }
@@ -1147,7 +1112,6 @@ mod tests {
             include_piercings: true,
             allow_bad: false,
             allow_torso_inc: true,
-            allow_dummy: false,
             sort_by: None,
         }
     }
@@ -1175,5 +1139,53 @@ mod tests {
         // Should be able to include High rank (S suffix) among pieces
         let has_high = res.iter().any(|s| s.armors.iter().any(|a| a.name.contains(" S")));
         assert!(has_high, "high-rank sets expected at difficulty 2");
+    }
+
+    #[test]
+    fn solver_robust_across_tiers_and_hunter_types() {
+        let c = conn();
+        let attack = attack_id(&c);
+        let mut base = base_query(&c, 1, 1);
+        for (hr, elder, expect) in [(1, 1, "low"), (5, 5, "high"), (8, 1, "g"), (1, 8, "high")] {
+            base.hr = hr;
+            base.elder_star = elder;
+            let res = search(&c, base.clone()).unwrap();
+            assert!(!res.is_empty(), "no solutions at hr={} elder={}", hr, elder);
+            // sanity: every armor belongs to a valid slot and satisfies rank gate
+            for sol in &res {
+                assert_eq!(sol.armors.len(), 5, "expected 5 pieces, got {}", sol.armors.len());
+                assert!(sol.slots_spare >= 0, "negative spare slots: {}", sol.slots_spare);
+                assert!(sol.defense > 0, "zero defense for a set");
+                for a in &sol.armors {
+                    assert!(a.rarity.unwrap_or(0) > 0, "piece with no rarity: {}", a.name);
+                    if expect != "g" {
+                        assert!(!a.name.contains(" X") && !a.name.contains(" Z"), "G-rank leaked: {}", a.name);
+                    }
+                }
+            }
+        }
+        // Gunner path must also work and respect gender/hunter_type.
+        base.hr = 5;
+        base.elder_star = 5;
+        base.hunter_type = "gunner".into();
+        let res = search(&c, base.clone()).unwrap();
+        assert!(!res.is_empty(), "no gunner solutions at difficulty 2");
+        for sol in &res {
+            for a in &sol.armors {
+                assert_ne!(a.slot_type.to_lowercase(), "", "empty slot_type");
+            }
+        }
+        // `allow_bad` must not crash anything, even though remediation is a no-op.
+        base.allow_bad = true;
+        let res = search(&c, base.clone()).unwrap();
+        assert!(!res.is_empty(), "no solutions with allow_bad=true");
+    }
+
+    #[test]
+    fn solver_rejects_missing_skill_selection() {
+        let c = conn();
+        let mut q = base_query(&c, 1, 1);
+        q.skills.clear();
+        assert!(search(&c, q).is_err(), "empty skill list should be rejected");
     }
 }

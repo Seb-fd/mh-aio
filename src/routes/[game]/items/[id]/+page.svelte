@@ -38,6 +38,11 @@
     Material: 'bg-purple-900/40 text-purple-300',
     Ammo: 'bg-orange-900/40 text-orange-300',
   };
+
+  // Detect whether a description is (partly) Japanese. MHP3rd material
+  // descriptions sourced from the Monster Item List are in Japanese; these are
+  // kept faithfully but flagged so the English UI doesn't look broken.
+  const hasCJK = $derived(item?.description ? /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]/u.test(item.description) : false);
 </script>
 
 <div class="max-w-5xl mx-auto">
@@ -75,7 +80,12 @@
 
     {#if item.description}
       <section class="mb-8">
-        <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">Description</h2>
+        <div class="flex items-center gap-2 mb-3">
+          <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Description</h2>
+          {#if hasCJK}
+            <span class="text-[10px] px-2 py-0.5 rounded-full border border-amber-800 bg-amber-900/30 text-amber-300 font-semibold" title="Source text is in Japanese (Monster Item List)">🇯🇵 JP</span>
+          {/if}
+        </div>
         <div class="rounded-lg border themed-card p-5 leading-relaxed text-gray-200 text-[15px]">
           {item.description}
         </div>

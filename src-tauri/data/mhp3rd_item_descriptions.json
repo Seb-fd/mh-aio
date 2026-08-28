@@ -1,202 +1,1166 @@
 [
   {
-    "name": "Potion",
-    "description": "Potion description (P3rd)."
+    "name": "Agnaktor Beak",
+    "description": "アグナコトルの特徴的なクチバシ。これを使って地中などを掘り進む事ができている。"
   },
   {
-    "name": "Mega Potion",
-    "description": "Mega Potion description (P3rd)."
+    "name": "Agnaktor Carapace",
+    "description": "炎戈竜の甲殻よりも更に頑丈で耐熱性に優れる外殻。加工することで見事な赤色を表す。"
+  },
+  {
+    "name": "Agnaktor Claw",
+    "description": "爪自体も強力だが、マグマから出た直後の爪はすさまじい温度で要注意。"
+  },
+  {
+    "name": "Agnaktor Fin",
+    "description": "アグナコトルの体にある様々なヒレ状の素材の総称。船の素材にも使用するらしい。"
+  },
+  {
+    "name": "Agnaktor Hide",
+    "description": "耐熱性と柔軟性を兼ね備えた不思議な皮。強度よりも動きやすさを重視した素材。"
+  },
+  {
+    "name": "Agnaktor Scale",
+    "description": "燃えているかの様な色味を持つ鱗なのでそう呼ばれている。価値はそれほど高くない。"
+  },
+  {
+    "name": "Agnaktor Shell",
+    "description": "加工されると鮮やかな赤色になる甲殻。非常に軽く、耐熱性にも優れている。"
+  },
+  {
+    "name": "Agnaktor Tail",
+    "description": "アグナコトルから剥ぎ取られた尻尾。需要が限られている為、価値はそれ程高くない。"
+  },
+  {
+    "name": "Akantor Carapace",
+    "description": "鈍く光る覇竜の甲殻。上等な鉱物の数倍の堅牢さを誇る。加工は困難。"
+  },
+  {
+    "name": "Akantor Gem",
+    "description": "その昔、世界を統べた王が手にしていたという宝玉。漂う覇気は、近づくことすら許さない。"
+  },
+  {
+    "name": "Akantor Hardclaw",
+    "description": "大地をも砕く覇竜の剛爪。堅い岩盤も容易く砕く爪は、もはや生物の物とは思えない。"
+  },
+  {
+    "name": "Akantor Scale",
+    "description": "鈍く光る覇竜の鱗。溶岩の中でも溶けない、恐ろしいほどの頑強さ。"
+  },
+  {
+    "name": "Akantor Spike",
+    "description": "傷ひとつ負うことなく、触れた岩盤を容易く削り取る、黒炎の装甲に生える覇竜の棘。"
+  },
+  {
+    "name": "Akantor Tail",
+    "description": "大岩のような覇竜の尻尾。擦れた大地が丸ごと削り取られる程の重さと迫力。"
+  },
+  {
+    "name": "Akantor Tallfang",
+    "description": "天を突く覇竜の大牙。数多の外敵を貫いたであろうそれは、牙というにはあまりに巨大。"
+  },
+  {
+    "name": "Alatreon Plate",
+    "description": "全ての鱗が逆向きに生えている煌黒龍の逆鱗。まるで鋭い刃のようでもある。"
+  },
+  {
+    "name": "Alatreon Scute",
+    "description": "あらゆる攻撃から身を護る特殊な堅殻。衝撃を相手に跳ね返す力があるという。"
+  },
+  {
+    "name": "Alatreon Tail",
+    "description": "伝説でしか存在しないと思われていた古龍アルバトリオンから剥ぎ取れる尻尾。"
+  },
+  {
+    "name": "Alatreon Talon",
+    "description": "これから作られる武器の威力ははかり知れない。そう思わせるほどの鋭さを持つ爪。"
+  },
+  {
+    "name": "Alatreon Webbing",
+    "description": "時には闇が広がった様に見え、時には光がさした様にも見えるという。"
+  },
+  {
+    "name": "Altaroth Jaw",
+    "description": "甲虫の強靭なアゴ。うまく剥ぎ取る事は困難。"
+  },
+  {
+    "name": "Altaroth Stomach",
+    "description": "甲虫の腹部分から剥ぎ取れた透明な袋。普段は様々なものをここにためこむらしい。"
+  },
+  {
+    "name": "Amatsu Carapace",
+    "description": "荒ぶる天の神を包む鎧。嵐に打たれ続けることで鍛えられた、黒い頑強な甲殻。"
+  },
+  {
+    "name": "Amatsu Claw",
+    "description": "鋭鋒のごとき、神の大爪。その威圧感が、爪の主がただならぬ存在であることを物語る。"
+  },
+  {
+    "name": "Amatsu Horn",
+    "description": "天にそびえる一対の角。一片の傷もない角は、嵐に住まう龍に誰も手向かえなかった証。"
+  },
+  {
+    "name": "Amatsu Pleura",
+    "description": "照らされた者の未来を奪う光を放つという、胸部の甲殻。激情に感応し、輝きを増す。"
+  },
+  {
+    "name": "Amatsu Tail",
+    "description": "天の神の尾。嵐の中でさえ舞うことができる、強靱さを備える。"
+  },
+  {
+    "name": "Amatsu Webbing",
+    "description": "天を舞う神の衣。羽織れば、宙に浮くような感覚を起こす、説話の羽衣を連想させる素材。"
+  },
+  {
+    "name": "Amber Tusks",
+    "description": "ベリオロスに生える２本の鋭い牙。武具素材としては勿論、室内装飾品としても人気。"
+  },
+  {
+    "name": "Anteka Antlers",
+    "description": "ガウシカの角。武具の素材の他に、家の装飾に用いられる事もある。"
   },
   {
     "name": "Antidote",
-    "description": "Antidote description (P3rd)."
+    "description": "Effectively removes all traces of poison from your system."
   },
   {
-    "name": "Herbal Medicine",
-    "description": "Herbal Medicine description (P3rd)."
+    "name": "Arzuros Brace",
+    "description": "アオアシラの前脚を覆っている甲殻。とりわけ分厚く、鋭い突起のある、野性的な素材。"
   },
   {
-    "name": "Catalyst",
-    "description": "Catalyst description (P3rd)."
+    "name": "Arzuros Carapace",
+    "description": "アオアシラの上質な甲殻。厚みを増した堅い甲殻は、並の牙など、たやすく受け流す。"
   },
   {
-    "name": "Lifecrystals",
-    "description": "Lifecrystals description (P3rd)."
+    "name": "Arzuros Pelt",
+    "description": "アオアシラの体毛。白毛はとても柔らかで、青毛は毛脚が短くしっかりしている。"
   },
   {
-    "name": "Lifepowder",
-    "description": "Lifepowder description (P3rd)."
+    "name": "Arzuros Shell",
+    "description": "アオアシラの頭や背中を守る甲殻。しなやかに曲がる、加工しやすい素材。"
   },
   {
-    "name": "Demon Drug",
-    "description": "Demon Drug description (P3rd)."
+    "name": "Azure Dragongem",
+    "description": "伝説の中の伝説。それを手にした時。その者のすべてが終わってしまうと噂される玉石。"
   },
   {
-    "name": "Mega Demon Drug",
-    "description": "Mega Demon Drug description (P3rd)."
+    "name": "Baggi Hide",
+    "description": "鱗の下にある、なめらかな皮。辺境の過酷な環境にも耐えうる丈夫な皮。"
   },
   {
-    "name": "Armor Drug",
-    "description": "Armor Drug description (P3rd)."
+    "name": "Baggi Scale+",
+    "description": "バギィから剥ぎ取った鱗。ジャギィより辺境に生息するため、多少価値は高い。"
   },
   {
-    "name": "Mega Armor Drug",
-    "description": "Mega Armor Drug description (P3rd)."
+    "name": "Baleful Gigginox Claw+",
+    "description": "不気味な色をした電怪竜の爪。剥ぎ取った後も、パリパリと表面に電気が這い回る。"
   },
   {
-    "name": "Power Pill",
-    "description": "Power Pill description (P3rd)."
+    "name": "Baleful Gigginox Hide+",
+    "description": "電怪竜の上質な腹部の皮。肌触りと伸縮性の良さで、この素材に勝るものはない。"
   },
   {
-    "name": "Armor Pill",
-    "description": "Armor Pill description (P3rd)."
+    "name": "Barioth Carapace",
+    "description": "ベリオロスの甲殻の中でも、特に見事な輝きを放つ甲殻。さながら氷盤のよう。"
   },
   {
-    "name": "Hot Drink",
-    "description": "Hot Drink description (P3rd)."
+    "name": "Barioth Claw+",
+    "description": "堅い氷壁にしがみつける鋭利な爪。故にすさまじい殺傷力を秘めている。"
   },
   {
-    "name": "Cool Drink",
-    "description": "Cool Drink description (P3rd)."
+    "name": "Barioth Pelt",
+    "description": "心地よい手触りの白い毛皮。衝撃吸収率が高く、ベリオロスのうたれ強さに納得がいく。"
   },
   {
-    "name": "Psychoserum",
-    "description": "Psychoserum description (P3rd)."
+    "name": "Barioth Shell",
+    "description": "ベリオロスから入手可能な白い甲殻。強度を持ちながらも非常に軽い素材である。"
   },
   {
-    "name": "Well-done Steak",
-    "description": "Well-done Steak description (P3rd)."
+    "name": "Barioth Spike",
+    "description": "ベリオロスの体に生える、様々な大きさの棘。爪同様に氷壁にしがみつく時などに使用。"
   },
   {
-    "name": "Rare Steak",
-    "description": "Rare Steak description (P3rd)."
+    "name": "Barioth Tail",
+    "description": "ベリオロスから剥ぎ取られた尻尾。堅い甲殻に覆われており切断には苦労する。"
   },
   {
-    "name": "Burnt Meat",
-    "description": "Burnt Meat description (P3rd)."
+    "name": "Barroth Carapace",
+    "description": "ボルボロスの甲殻に、何層もの泥が付着して固まり、更に硬度を増している外殻。"
   },
   {
-    "name": "Whetstone",
-    "description": "Whetstone description (P3rd)."
+    "name": "Barroth Claw",
+    "description": "ボルボロスの爪。けっして鋭くはないが、強度がある為多くのものに加工されている。"
   },
   {
-    "name": "Pickaxe",
-    "description": "Pickaxe description (P3rd)."
+    "name": "Barroth Ridge",
+    "description": "ボルボロスの背中部分の甲殻。あまり多く採れない為、素材としての価値は高め。"
   },
   {
-    "name": "Bug Net",
-    "description": "Bug Net description (P3rd)."
+    "name": "Barroth Scalp",
+    "description": "ボルボロスの頭部にある甲殻。かなりの強度があり、うまく剥ぎ取るのが難しい。"
   },
   {
-    "name": "BBQ Spit",
-    "description": "BBQ Spit description (P3rd)."
+    "name": "Barroth Shell",
+    "description": "ボルボロスの甲殻。泥で汚れている事が多いが、それなりの強度をしている。"
+  },
+  {
+    "name": "Barroth Tail",
+    "description": "ボルボロスの尻尾。それほど高価な素材ではない。肉が珍味との噂。"
+  },
+  {
+    "name": "Big Fin",
+    "description": "様々な形状があるヒレの総称。用途に合わせて都合の良いものが使われる。"
+  },
+  {
+    "name": "Bird Wyvern Fang",
+    "description": "鳥竜種から剥ぎ取った牙。ボウガンの弾の素材として利用されるほど、鋭くて丈夫。"
+  },
+  {
+    "name": "Black Diablos Carapace",
+    "description": "普通の角竜の堅殻とは違う成分が含まれているため、より強固で、傷つきにくい。"
+  },
+  {
+    "name": "Black Diablos Ridge+",
+    "description": "黒いディアブロスの堅い甲殻。砂漠の熱風に長期間曝されても劣化しない頑強さ。"
+  },
+  {
+    "name": "Blackcurl Horn",
+    "description": "噂に聞く黒いディアブロスのねじれた角。鈍く黒光りするその角は何とも雄々しい。"
+  },
+  {
+    "name": "Bnahabra Carapace",
+    "description": "飛甲虫の甲殻の中でも特に堅い部位。加工することで特殊な性質を発揮する。"
+  },
+  {
+    "name": "Bnahabra Shell",
+    "description": "加工の方法によっては飛竜の甲殻に匹敵する強度が期待できる。"
+  },
+  {
+    "name": "Bnahabra Spine",
+    "description": "飛甲虫が外敵を攻撃する際に使用する針。中を通る細い管から、麻痺性物質を分泌する。"
+  },
+  {
+    "name": "Bnahabra Wing",
+    "description": "非常に加工の難しい素材。表面と裏面で仕上がりが違う。"
   },
   {
     "name": "Book of Combos 1",
-    "description": "Book of Combos 1 description (P3rd)."
+    "description": "Intro text for first-time combiners. Improves your combining success rate."
   },
   {
     "name": "Book of Combos 2",
-    "description": "Book of Combos 2 description (P3rd)."
+    "description": "Basic text. Together with 1, improves your combining success rate."
   },
   {
     "name": "Book of Combos 3",
-    "description": "Book of Combos 3 description (P3rd)."
+    "description": "Intermediate text. Along with 1 & 2, improves your combining success rate."
   },
   {
     "name": "Book of Combos 4",
-    "description": "Book of Combos 4 description (P3rd)."
+    "description": "Advance text. Along with 1, 2 & 3, improves your combining success rate."
   },
   {
     "name": "Book of Combos 5",
-    "description": "Book of Combos 5 description (P3rd)."
+    "description": "Pro text. Along with 1, 2, 3 & 4, improves your combining success rate."
+  },
+  {
+    "name": "Brilliant Fluid",
+    "description": "保水性の高い潜口竜の体液。その驚くべき保水性能により、武具の性能は大きく高まる。"
+  },
+  {
+    "name": "Broken Skypiercer",
+    "description": "アルバトリオン頭部に生える重なり合った角の一部。剥ぎ取りが難しく、砕けている。"
+  },
+  {
+    "name": "Brute Tigrex Carapace",
+    "description": "黒轟竜の墨色の甲殻。黒轟竜の猛悪な動きにも耐えうる強度は加工を行うのも困難なほど。"
+  },
+  {
+    "name": "Brute Tigrex Claw+",
+    "description": "黒轟竜の鋭く尖った漆黒の爪。引き裂いた獲物の数だけその黒は深みを増すという。"
+  },
+  {
+    "name": "Brute Tigrex Fang+",
+    "description": "黒轟竜の鈍く光る鋭い牙。更に鋭さを増した牙は、獲物の頑丈な外殻さえ易々と砕く。"
+  },
+  {
+    "name": "Brute Tigrex Scale+",
+    "description": "黒く輝く上質な鱗。黒色の成分は、鱗の強度を高める役割を果たし、強固に黒轟竜を覆う。"
+  },
+  {
+    "name": "Bulldrome Hide+",
+    "description": "ドスファンゴの皮。剛毛だが、どこか美しい。"
+  },
+  {
+    "name": "Bulldrome Tusk",
+    "description": "勇猛な大猪の牙。牙につく多数の傷は、数々の突進によるもの。"
+  },
+  {
+    "name": "Bullfango Head",
+    "description": "ファンゴの頭。２本の立派な牙がいかつい。"
+  },
+  {
+    "name": "Bullfango Pelt",
+    "description": "ファンゴの皮。剛毛。"
+  },
+  {
+    "name": "Crimson Qurupeco Scale+",
+    "description": "美しい紅色の羽の下に並ぶ上質な鱗。薄い層が何層にも重なり想像以上の強度を誇る。"
+  },
+  {
+    "name": "Crimson Qurupeco Wing",
+    "description": "紅彩鳥から採れる大振りの羽根。目も覚めるような紅色は貴族の婦人達の注目の的。"
+  },
+  {
+    "name": "Dash Juice",
+    "description": "Allows you to run without becoming fatigued for a period of time."
+  },
+  {
+    "name": "Deviljho Fang",
+    "description": "まがまがしい口から無数に覗く牙。貪欲なる恐暴竜の食事を可能とする凶悪な存在。"
+  },
+  {
+    "name": "Deviljho Gem",
+    "description": "その強さの秘密が隠されていると言われる希少な玉石。怪しい儀式に使用されるとも。"
+  },
+  {
+    "name": "Deviljho Hide",
+    "description": "凶悪な恐暴竜の皮。不快なぬめりがあり、加工処理が難しい。"
+  },
+  {
+    "name": "Deviljho Saliva",
+    "description": "満たされることのない恐暴竜の食欲の象徴。触れたものを瞬時に溶かすほどの強酸性。"
+  },
+  {
+    "name": "Deviljho Scale",
+    "description": "恐暴竜の緑がかった黒い鱗。希少な素材だが、不吉として行商があまり扱いたがらない。"
+  },
+  {
+    "name": "Deviljho Scalp",
+    "description": "暴力的な頭部から採れる甲殻。剥ぎ取り時に気分を害する程の悪臭がするらしい。"
+  },
+  {
+    "name": "Deviljho Tail",
+    "description": "イビルジョーから剥ぎ取った巨大なヒルの様な尻尾。専門に回収している者達がいる。"
+  },
+  {
+    "name": "Deviljho Talon",
+    "description": "鋭さ、強度は申し分がない爪。扱いに慣れぬ者が加工すると大怪我をする危険もある。"
+  },
+  {
+    "name": "Dewy Pleura+",
+    "description": "美しい光沢を放つ凍戈竜の胸郭。過冷却された液体が表面を伝い、潤っている。"
+  },
+  {
+    "name": "Diablos Carapace",
+    "description": "角竜の甲殻よりも堅い部位の外殻で、広い地域で【けんかく】と呼ばれている。"
+  },
+  {
+    "name": "Diablos Fang",
+    "description": "角竜と呼ばれるディアブロスの太くて頑丈な牙。装備品から飾りものまで需要は高い。"
+  },
+  {
+    "name": "Diablos Marrow",
+    "description": "ディアブロスの骨髄。素材同士の結合を助ける希少な成分が含まれる事が近年判明した。"
+  },
+  {
+    "name": "Diablos Medulla",
+    "description": "ディアブロスの延髄。希少な部位で、剥ぎ取り自体も困難。研究者達の注目を集めている。"
+  },
+  {
+    "name": "Diablos Ridge+",
+    "description": "ディアブロスの背中の非常に堅い甲殻。接合面を上手く切り出して武具に利用される。"
+  },
+  {
+    "name": "Diablos Shell",
+    "description": "全身を覆うディアブロスの甲殻。高密度の素材で、見た目以上に重い。"
+  },
+  {
+    "name": "Diablos Tailcase",
+    "description": "鉄のハンマー顔負けの強度と威力を誇る尻尾の甲殻。貴重な素材の一つ。"
+  },
+  {
+    "name": "Duramboros Carapace",
+    "description": "尾槌竜の堅殻。堅さを増した装甲は、難攻不落の城のようにいかなる攻撃も受け止める。"
+  },
+  {
+    "name": "Duramboros Horn",
+    "description": "尾槌竜の角。人の胴の何倍もの太さを持つ巨大な曲角の前に、誰もが言葉を失う。"
+  },
+  {
+    "name": "Duramboros Hump",
+    "description": "尾槌竜の背中のコブ。脂肪のついた厚皮を加工すれば、丈夫でしなやかな武具素材となる。"
+  },
+  {
+    "name": "Duramboros Mossplate",
+    "description": "尾槌竜の苔むした甲殻。苔類の成長は加工後も続き、素材に宿る生命力に驚くばかり。"
+  },
+  {
+    "name": "Duramboros Sacrum",
+    "description": "尾槌竜の見事な仙骨。均斉と堅牢な骨質を持つ物だけが、希少素材として扱われる。"
+  },
+  {
+    "name": "Duramboros Shell",
+    "description": "尾槌竜の甲殻。このケタ違いの装甲は、並のモンスターでは傷つけることさえできない。"
+  },
+  {
+    "name": "Duramboros Tailbone",
+    "description": "尾槌竜の必殺の尾骨。幾度も打ち付け、鍛えられ、骨そのものが球状となった物。"
+  },
+  {
+    "name": "Duramboros Tailcase",
+    "description": "尾槌竜の尾にある甲殻。若い甲殻が迫り上がり、古い甲殻は抜け落ちて入れ替わるという。"
+  },
+  {
+    "name": "Earth Dragongem",
+    "description": "ジエン・モーラン素材の中でも入手が困難な幻の玉石。大地の雄大さが感じられる。"
+  },
+  {
+    "name": "Energy Drink",
+    "description": "Recovers Stamina and cures fatigue. Approved by the Guild."
+  },
+  {
+    "name": "Esoteric swordsman book",
+    "description": "Received from the Download QuestＹＡＩＢＡ・風神と雷神 (Hunt 1 [[Zinogre]] and 1 [[Sand Barioth]])"
+  },
+  {
+    "name": "Famitsu GT",
+    "description": "Received from the Download Quest ファミ通・状態異常を克服せよ(Hunt [[Volvidon]], [[Great Wroggi]] and [[Uragaan]])"
+  },
+  {
+    "name": "Famitsu PT",
+    "description": "Received from the Download Quest ファミ通・大角と巨槌、再び！(Hunt [[Black Diablos]] and [[Steel Uragaan]])"
+  },
+  {
+    "name": "Famitsu ST",
+    "description": "Received from the Download Quest ファミ通・怒涛の突進祭り！(Hunt 20 [[Bullfango]]s)"
+  },
+  {
+    "name": "Famitsu Ticket",
+    "description": "Received from the Download Quest ファミ通・大角と巨鎚の激突！(Hunt 1 [[Diablos]] and 1 [[Uragaan]])"
+  },
+  {
+    "name": "Fearsome Maw",
+    "description": "ギギネブラの特徴的なクチ。短い牙がやすり状に生え、捕食対象の身を削り取る。"
+  },
+  {
+    "name": "Fertile Mud",
+    "description": "ボルボロスが体にまとう泥。意外に農作物にとって栄養価が高いらしい。"
+  },
+  {
+    "name": "Flintstone",
+    "description": "クルペッコが発火させる時に使用する部位。発火させるにはコツがいるらしい。"
+  },
+  {
+    "name": "Frozen Glob",
+    "description": "ボルボロス亜種が体表から分泌する体液が、雪と混ざって固まったもの。溶けにくい。"
+  },
+  {
+    "name": "Gargwa Feather",
+    "description": "ガーグァの羽。大きくて美しい羽は、衣服の装飾にも使われる人気の品。"
+  },
+  {
+    "name": "Gigginox Claw",
+    "description": "ギギネブラの不気味な爪。剥ぎ取りが難しく、入手は簡単ではない。"
+  },
+  {
+    "name": "Gigginox Hide",
+    "description": "ギギネブラの腹部の皮。表面に微細な毛が生えており、防具の裏生地に最適の素材。"
+  },
+  {
+    "name": "Glacial Agnaktor Beak",
+    "description": "太古の昔から凍り付いている大地を、易々と掘り進むことが可能な、氷漬けのクチバシ。"
+  },
+  {
+    "name": "Glacial Agnaktor Carapace",
+    "description": "凍戈竜の堅い甲殻。更に上から頑強な氷をまとっているため、傷一つ付けることすら困難。"
+  },
+  {
+    "name": "Glacial Agnaktor Claw+",
+    "description": "凍った大地に穿ち、スパイクの役割も果たす鋭い爪。傷口が凍傷を起こすほど低温。"
+  },
+  {
+    "name": "Glacial Agnaktor Fin+",
+    "description": "凍戈竜の上質なヒレ。寒冷地の鈍い太陽光を透かし、氷のように透明な輝きを放つ。"
+  },
+  {
+    "name": "Glacial Agnaktor Hide+",
+    "description": "耐寒性と柔軟性を兼ね備えた不思議な皮。凍結する事で皮自体の強度も高くなっている。"
+  },
+  {
+    "name": "Glacial Agnaktor Tail",
+    "description": "凍戈竜から剥ぎ取られた尻尾。用途が限られるため凍戈竜素材の中では安価だが、珍しい品。"
+  },
+  {
+    "name": "Gold Rathian Carapace",
+    "description": "金色の鱗が複数枚集まってできた堅い外殻。金の延べ棒の様でかなりゴージャス。"
+  },
+  {
+    "name": "Gold Rathian Scale+",
+    "description": "金色のリオレイアから剥いだ黄金の鱗。闇夜でも眩しく光り輝いている。"
+  },
+  {
+    "name": "Gold Rathian Spike+",
+    "description": "金色のリオレイアに生えている剣の様に鋭い毛。金色に輝くその先端には、毒性を持つ。"
+  },
+  {
+    "name": "Great Baggi Claw",
+    "description": "ドスバギィから採れる頑丈な爪。バギィと比べて一つ一つが太く発達しているのが判る。"
+  },
+  {
+    "name": "Great Baggi Hide",
+    "description": "ドスバギィの皮。過酷な環境にも耐えうる皮にはいくつもの古傷がある。"
+  },
+  {
+    "name": "Great Jaggi Claw",
+    "description": "ドスジャギィから採れる鉤状の爪。ジャギィと比べると巨大に発達しているのが判る。"
+  },
+  {
+    "name": "Great Jaggi Head",
+    "description": "ドスジャギィの頭。立派なエリマキが特徴的。"
+  },
+  {
+    "name": "Great Jaggi Hide",
+    "description": "ドスジャギィの皮。群れの長にふさわしく、強度、紋様ともに申し分ない。"
+  },
+  {
+    "name": "Great Wroggi Brace",
+    "description": "ドスフロギィの腕周りの堅い部分。鱗が密集して硬化した甲殻や爪などが含まれている。"
+  },
+  {
+    "name": "Great Wroggi Hide",
+    "description": "ドスフロギィの皮。橙色の濃淡と白い斑点模様は、鮮やかな天然の染め物のよう。"
+  },
+  {
+    "name": "Green Nargacuga Fang+",
+    "description": "緑迅竜の鋭い牙。その鋭さはもはや牙というよりも、刃物そのもの。取扱いには要注意。"
+  },
+  {
+    "name": "Green Nargacuga Pelt+",
+    "description": "緑迅竜の鱗の表面に密生したまだらの毛。様々な色が不規則に並び、迷彩の役割を果たす。"
+  },
+  {
+    "name": "Green Nargacuga Razor+",
+    "description": "緑迅竜の翼の中でも特に鋭い大振りの翼。美しい緑色に手を伸ばせば、忽ち斬り刻まれる。"
+  },
+  {
+    "name": "Green Nargacuga Scale+",
+    "description": "緑迅竜の緑色の鱗。その緑色は光の加減で絶妙に変化し、周囲の景色に溶け込む。"
+  },
+  {
+    "name": "Grim Venom Gland",
+    "description": "より濃度の高い毒液を分泌する強力な毒腺。剥ぎ取った後も、しばらくウネウネ動き続ける。"
+  },
+  {
+    "name": "Hard Mossplate",
+    "description": "苔を纏う尾槌竜の堅殻。硬度が増しただけでなく、厚い苔類の層が受けた衝撃を吸収する。"
+  },
+  {
+    "name": "Heavenly Dragongem",
+    "description": "天翔る神の威力の根幹。手にした者は、天空より下界を俯瞰する知覚を得ると言われる玉石。"
+  },
+  {
+    "name": "Herbal Medicine",
+    "description": "Effectively cures poison, and restores a slight amount of health."
+  },
+  {
+    "name": "High Quality Pelt",
+    "description": "手触りの良い上質な毛皮。剥ぎ取るのは難しい。ギルドでも重宝される素材。"
+  },
+  {
+    "name": "Hydro Hide",
+    "description": "水際に生息するモンスターの皮。耐水性は高いが高価なものではない。"
+  },
+  {
+    "name": "Immature Sponge",
+    "description": "まだ発達しきっていない海綿質の素材。装備よりも一般的な需要が高い。"
+  },
+  {
+    "name": "Immunizer",
+    "description": "Medicine that enhances natural recovery ability."
+  },
+  {
+    "name": "Indigo Tusks+",
+    "description": "風牙竜に生える２本の鋭い牙。一見灰青色に見えるが、研磨すると、美しい群青色が現れる。"
+  },
+  {
+    "name": "Invitation to Arms",
+    "description": "Received from the Download Quest 武装戦線・男たちの勝負！"
+  },
+  {
+    "name": "Jade Barroth Carapace",
+    "description": "氷漬けになったボルボロス亜種の堅殻。氷によって、更に強度が増している。"
+  },
+  {
+    "name": "Jade Barroth Claw+",
+    "description": "芯まで凍り付いた氷砕竜の爪。鋭く尖った爪は、凍傷を起こしそうなほど冷たい。"
+  },
+  {
+    "name": "Jade Barroth Ridge+",
+    "description": "氷に覆われた背中部分の甲殻。剥ぎ取るのが困難なため、高値で取引される。"
+  },
+  {
+    "name": "Jade Barroth Scalp",
+    "description": "氷の冠のようにも見える頭殻。その強度ゆえに、剥ぎ取りすら難しく、加工にも苦労する。"
+  },
+  {
+    "name": "Jade Barroth Tail",
+    "description": "氷結した尻尾。氷漬けにされた肉は熟成され、更にうま味を増しているとか。"
+  },
+  {
+    "name": "Jaggi Hide",
+    "description": "鱗の下にある、なめらかな皮。加工がしやすく安価なため、様々なものに使用される。"
+  },
+  {
+    "name": "Jaggi Scale",
+    "description": "ジャギィから剥ぎ取った鱗。手軽に加工でき見た目も美しいため、幅広い層に人気の素材。"
+  },
+  {
+    "name": "Kelbi Horn",
+    "description": "ケルビの角を細かく砕いて煎じたものは、腹痛薬にもなる。"
+  },
+  {
+    "name": "King's Beak",
+    "description": "ドスフロギィのクチバシ。毒を生み出す器官を含んだクチバシは、扱いに注意が必要。"
+  },
+  {
+    "name": "King's Crest",
+    "description": "バギィのボスである象徴。トサカが大きく立派なほど、力のある者の証。"
+  },
+  {
+    "name": "King's Frill",
+    "description": "ジャギィのボスである象徴。エリマキが大きく立派なほど、力のある者の証。"
+  },
+  {
+    "name": "Lagombi Claw",
+    "description": "ウルクススのひんやりと冷たい爪。極寒の地で付着した氷は、溶けることなく、爪を包む。"
+  },
+  {
+    "name": "Lagombi Ear",
+    "description": "ウルクススの長い耳。極寒の環境で鍛えられ、甲殻のような堅さを持つ。"
+  },
+  {
+    "name": "Lagombi Pelt",
+    "description": "ウルクススの白い体毛。そのフサフサの毛は、ひと撫ですれば、やみつきの柔らかさ。"
+  },
+  {
+    "name": "Lagombi Plastron",
+    "description": "ウルクススの腹部を覆う甲殻。氷上を自在に滑れる秘密は、腹甲の溝にあるという。"
+  },
+  {
+    "name": "Lightning Ticket",
+    "description": "Received from the Download Quest 電撃・ダブルライジング (Hunt 2 [[Zinogre]])"
+  },
+  {
+    "name": "MH Club Notice",
+    "description": "Received from the Download Questモンハン部・特選クエスト！ (Hunt 1 [[Qurupeco]])"
+  },
+  {
+    "name": "Majestic Horn",
+    "description": "ディアブロスの上質なねじれた角。状態がよく、より強い武具に加工される。"
+  },
+  {
+    "name": "Mega Dash Juice",
+    "description": "Allows you to run without fatigue for even longer than Power Juice."
+  },
+  {
+    "name": "Mega Nutrients",
+    "description": "Medicine that increases the maximum Health level by a small amount."
+  },
+  {
+    "name": "Mega Potion",
+    "description": "Restores a moderate amount of health."
+  },
+  {
+    "name": "Mohran Brace",
+    "description": "雄大な砂漠を進む峯山龍の腕を覆う、巨大な腕甲。砂を洗い流せば、堅牢な甲殻が現れる。"
+  },
+  {
+    "name": "Mohran Carapace",
+    "description": "砂の街で恒例行事となっている峯山龍狩り。更に堅く、岩をも凌駕する強度を持った甲殻。"
+  },
+  {
+    "name": "Mohran Scale",
+    "description": "砂の街で恒例行事となっている峯山龍狩り。青みがかった鱗は磨くことで更に輝きを増す。"
+  },
+  {
+    "name": "Mohran Shell",
+    "description": "砂の街で恒例行事となっている峯山龍狩り。岩の様な甲殻は、長い年月で形成されたもの。"
+  },
+  {
+    "name": "Nargacuga Fang",
+    "description": "ナルガクルガの牙。小さい牙が鋸状に並ぶことで切断力を高めている。"
+  },
+  {
+    "name": "Nargacuga Marrow",
+    "description": "ナルガクルガの骨髄。剥ぎ取るには技術が必要。迅竜の俊敏さと関連しているとの説も。"
+  },
+  {
+    "name": "Nargacuga Medulla",
+    "description": "ナルガクルガの延髄。触れただけで、身を切裂かれるような苦痛を味わう為、加工が困難。"
+  },
+  {
+    "name": "Nargacuga Pelt",
+    "description": "ナルガクルガの鱗の表面に密生した黒い毛。体を黒毛で覆うことで、暗闇に溶け込む。"
+  },
+  {
+    "name": "Nargacuga Razor",
+    "description": "ナルガクルガのブレード状の翼。飛び掛かり様に獲物を切り裂く大刃へと進化したもの。"
+  },
+  {
+    "name": "Nargacuga Scale",
+    "description": "ナルガクルガの鱗。ナルガクルガの黒毛は、この鱗の表面が毛状に突起したもの。"
+  },
+  {
+    "name": "Nargacuga Tail",
+    "description": "尻尾を攻撃の手段とする迅竜。その尻尾は、もはや武器と見まごうほどの迫力をもつ。"
+  },
+  {
+    "name": "Nargacuga Tailspike",
+    "description": "ナルガクルガの尻尾に生えた棘状の鱗。興奮すると逆立ち、殺傷能力が倍増するという。"
+  },
+  {
+    "name": "Nibelsnarf Carapace",
+    "description": "ハプルボッカの堅さを増した甲殻。加工は困難だが、見合う性能が期待できる。"
+  },
+  {
+    "name": "Nibelsnarf Claw+",
+    "description": "潜口竜の爪。素早く砂をかき出すための野太い爪は、砂漠ならではの進化。"
+  },
+  {
+    "name": "Nibelsnarf Hide",
+    "description": "潜口竜の皮。上面の甲殻とは異なる派手な色彩に、初めて見た者は驚かずにはおれない。"
+  },
+  {
+    "name": "Nibelsnarf Scalp",
+    "description": "潜口竜の様々な器官を含んだ頭部の甲殻。必要な部分を細かく切り出して使われる。"
+  },
+  {
+    "name": "Nibelsnarf Shell",
+    "description": "ハプルボッカの甲殻。角形の隆起のある甲殻は強度に優れ、独自の武具を生み出す。"
+  },
+  {
+    "name": "Nutrients",
+    "description": "Increases the maximum Health level slightly."
   },
   {
     "name": "Organizer Guide",
-    "description": "Organizer Guide description (P3rd)."
+    "description": "Issue of popular \"Hunting Life\" magazine that has an article on item box usage."
   },
   {
-    "name": "BackPacker Guide",
-    "description": "BackPacker Guide description (P3rd)."
+    "name": "Pack Rat Guide",
+    "description": "(?)"
   },
   {
-    "name": "Blue Mushroom",
-    "description": "Blue Mushroom description (P3rd)."
+    "name": "Pirate J Ticket",
+    "description": "Received from the Download Quest 週間少年ジャンプ"
   },
   {
-    "name": "Nitro Mushroom",
-    "description": "Nitro Mushroom description (P3rd)."
+    "name": "Plum Spongy Hide",
+    "description": "弾力のある海綿質の皮。毒を含んでいる事が多いため、紫色に変色している。"
   },
   {
-    "name": "Parashroom",
-    "description": "Parashroom description (P3rd)."
+    "name": "Potion",
+    "description": "Restores a small amount of health."
   },
   {
-    "name": "Toadstool",
-    "description": "Toadstool description (P3rd)."
+    "name": "Purple Ludroth Claw+",
+    "description": "紫水獣の手足にある赤く鋭い爪。攻撃用というよりは、主に移動に使われる。"
   },
   {
-    "name": "Exciteshroom",
-    "description": "Exciteshroom description (P3rd)."
+    "name": "Purple Ludroth Scale+",
+    "description": "紫水獣の乳白色の美しい鱗。藻や毒素で変色していないものは、宝飾品としても人気。"
   },
   {
-    "name": "Mopeshroom",
-    "description": "Mopeshroom description (P3rd)."
+    "name": "Quality Fin",
+    "description": "傷ひとつない、美しいヒレ。破れている箇所もないため強度が高く、希少価値も高い。"
   },
   {
-    "name": "Sleep Herb",
-    "description": "Sleep Herb description (P3rd)."
+    "name": "Quality Sac",
+    "description": "甲虫の上質な腹袋。非常に薄いが、決して破れることのない、しなやかな素材。"
   },
   {
-    "name": "Fire Herb",
-    "description": "Fire Herb description (P3rd)."
+    "name": "Qurupeco Feather",
+    "description": "紫と緑のコントラストが美しい立派な羽根。特に背中に生える羽根が人気。"
   },
   {
-    "name": "Flowfern",
-    "description": "Flowfern description (P3rd)."
+    "name": "Qurupeco Scale",
+    "description": "鮮やかな羽の下に並ぶ鱗。表面からは見えにくいが、脚部では比較的確認しやすい。"
   },
   {
-    "name": "Snow Herb",
-    "description": "Snow Herb description (P3rd)."
+    "name": "Qurupeco Wing",
+    "description": "彩鳥の羽根の中でも、翼付近に生える、特に大振りな羽根。一頭につき数枚しか採れない。"
   },
   {
-    "name": "Ivy",
-    "description": "Ivy description (P3rd)."
+    "name": "Rath Marrow",
+    "description": "剥ぎ取り技術が進化した最近になって切り出せた素材。大気に触れると自然発火する。"
   },
   {
-    "name": "Felvine",
-    "description": "Felvine description (P3rd)."
+    "name": "Rath Medulla",
+    "description": "剥ぎ取り技術が進化した最近になって切り出せた素材。燃え盛るこの器官は加工が困難。"
   },
   {
-    "name": "Gloamgrass Root",
-    "description": "Gloamgrass Root description (P3rd)."
+    "name": "Rath Talon",
+    "description": "火竜の翼に生えている爪。翼を狙い続けて破壊すると、報酬で得られることがある。"
   },
   {
-    "name": "Hot Pepper",
-    "description": "Hot Pepper description (P3rd)."
+    "name": "Rathalos Carapace",
+    "description": "火竜の甲殻よりも堅い外殻で、この地域では【けんかく】と呼ばれている。"
   },
   {
-    "name": "Bitterbug",
-    "description": "Bitterbug description (P3rd)."
+    "name": "Rathalos Ruby",
+    "description": "まれに飛竜の体内で精製される希少な玉石。思わず加工に出すのをためらってしまう。"
   },
   {
-    "name": "Godbug",
-    "description": "Godbug description (P3rd)."
+    "name": "Rathalos Scale",
+    "description": "飛竜、リオレウスの鱗。飛竜の鱗と甲殻は加工素材の基本である。"
   },
   {
-    "name": "Flashbug",
-    "description": "Flashbug description (P3rd)."
+    "name": "Rathalos Shell",
+    "description": "リオレウスの鱗が複数枚集まって、より強固になった甲殻。鱗よりも硬度が高い。"
   },
   {
-    "name": "Thunderbug",
-    "description": "Thunderbug description (P3rd)."
+    "name": "Rathalos Tail",
+    "description": "切り取ったリオレウスの尻尾。用途は多岐にわたる。"
   },
   {
-    "name": "Killer Beetle",
-    "description": "Killer Beetle description (P3rd)."
+    "name": "Rathalos Webbing",
+    "description": "加工難度は高いが保温性に優れており、鎧のインナー素材として広く使われている。"
   },
   {
-    "name": "Hercudrome",
-    "description": "Hercudrome description (P3rd)."
+    "name": "Rathian Carapace",
+    "description": "雌火竜の甲殻よりも堅い部位の外殻で、この地域では【けんかく】と呼ばれている。"
+  },
+  {
+    "name": "Rathian Plate",
+    "description": "尻尾にあるといわれる、リオレイアの逆鱗。灼熱の鱗は火竜の名にふさわしい逸品。"
+  },
+  {
+    "name": "Rathian Ruby",
+    "description": "まれに飛竜の体内で精製される希少な玉石。思わず加工に出すのをためらってしまう。"
+  },
+  {
+    "name": "Rathian Scale",
+    "description": "巣を中心に生息する飛竜、リオレイアの鱗。リオレウスはその雄である。"
+  },
+  {
+    "name": "Rathian Shell",
+    "description": "リオレイアの鱗が複数枚集まって、より強固になった甲殻。鱗よりも硬度が高い。"
+  },
+  {
+    "name": "Rathian Spike",
+    "description": "リオレイアの背中と翼に生えた、針のような毛。毒性を持つ。"
+  },
+  {
+    "name": "Rathian Webbing",
+    "description": "加工難度は高いが保温性に優れており、鎧のインナー素材として広く使われている。"
+  },
+  {
+    "name": "Rhenoplos Carapace",
+    "description": "年月を重ねたリノプロスの、堅く厚みを増した甲殻。小型種の中でも随一の強度を持つ。"
+  },
+  {
+    "name": "Rhenoplos Scalp",
+    "description": "リノプロスの甲殻の中でも特に強度がある部分。突進の威力も納得である。"
+  },
+  {
+    "name": "Rhenoplos Shell",
+    "description": "リノプロスから採れる甲殻。小型のモンスターの中ではそれなりの硬度がある。"
+  },
+  {
+    "name": "Royal Ludroth Claw",
+    "description": "ロアルドロスの手足にある爪。攻撃用というよりは、主に移動に使われる。"
+  },
+  {
+    "name": "Royal Ludroth Crest",
+    "description": "ロアルドロスの頭にある怒り状態で隆起する部位。その数で群れの立場がわかる。"
+  },
+  {
+    "name": "Royal Ludroth Scale",
+    "description": "しなやかな動きを可能とする小型の鱗。武具に使用するにはある程度枚数が必要。"
+  },
+  {
+    "name": "Royal Ludroth Tail",
+    "description": "ロアルドロスのヒレつき尻尾。漁師が船の素材として使うこともある。"
+  },
+  {
+    "name": "Rugged Pleura",
+    "description": "風牙竜が竜巻を発生させる際に行う呼吸運動を助ける器官。非常に薄いが決して破れない。"
+  },
+  {
+    "name": "Sand Barioth Carapace",
+    "description": "風牙竜の体表を覆う赤銅色の甲殻。荒れ狂う砂塵の中でも、傷一つ付かない堅牢な甲殻。"
+  },
+  {
+    "name": "Sand Barioth Claw+",
+    "description": "砂地の上でも踏みこたえる事のできる鋭利な爪。その一撃は、すさまじい威力を誇る。"
+  },
+  {
+    "name": "Sand Barioth Pelt+",
+    "description": "さらっとした手触りの赤銅色の毛皮。衝撃吸収率が非常に高く、防具素材として最適。"
+  },
+  {
+    "name": "Sand Barioth Tail",
+    "description": "風牙竜から剥ぎ取られた尻尾。美しい赤銅色の甲殻に覆われた尻尾は、希少価値が高い。"
+  },
+  {
+    "name": "Scalding Pleura",
+    "description": "炎戈竜の胸部にある、熱線を吐き出す際に使用する器官とその外殻。高温のため注意。"
+  },
+  {
+    "name": "Sharpened Fang",
+    "description": "様々な形状がある牙の総称。用途に合わせて都合の良いものが使われる。"
+  },
+  {
+    "name": "Silver Rathalos Carapace",
+    "description": "銀火竜から剥ぎ取った堅い外殻。銀色の鱗が複数枚集まり冷たい光を帯びる。"
+  },
+  {
+    "name": "Silver Rathalos Scale+",
+    "description": "伝説の銀色のリオレウスから剥いだ上質な鱗。月の様に静かな光を放つ。"
+  },
+  {
+    "name": "Silver Rathalos Tail",
+    "description": "切り取った銀のリオレウスの尻尾。その稀少さゆえ、非常に価値が高い。"
+  },
+  {
+    "name": "Skypiercer",
+    "description": "アルバトリオン頭部に生える重なり合った角の一部。略して天角とも呼ばれる。"
+  },
+  {
+    "name": "Slagtoth Hide+",
+    "description": "ズワロポスの皮。肉厚で弛みのある皮は、爪や牙による致命傷を逃れる役割を果たす。"
+  },
+  {
+    "name": "Spongy Hide",
+    "description": "弾力のある海綿質の皮。高い保水性を誇る。"
+  },
+  {
+    "name": "Steel Uragaan Carapace",
+    "description": "鋼鎚竜の堅牢な甲殻。特殊なガスと化学反応を起こすことでより鉱石の強度が増している。"
+  },
+  {
+    "name": "Steel Uragaan Maw",
+    "description": "鋼鎚竜の赤く巨大な顎。打ち付ける事で熱が発生し、他の部位とは違う変色を遂げている。"
+  },
+  {
+    "name": "Steel Uragaan Scale+",
+    "description": "鋼鎚竜の上質な鱗。体表の鉱物が特殊なガスによって酸化し、七色に輝きを放っている。"
+  },
+  {
+    "name": "Steel Uragaan Scute",
+    "description": "甲殻以上の耐熱性を持つ素材。灼熱のマグマの中にあっても、全くその影響を受けない。"
+  },
+  {
+    "name": "Storm Vesicle",
+    "description": "膨大な貯水が可能な、他に類を見ない器官。一片でも用いれば武具に更なる力を与える。"
+  },
+  {
+    "name": "Strange Beak",
+    "description": "変な形だがナイスなクチバシ。"
+  },
+  {
+    "name": "Strongest Ground Proof",
+    "description": "Received from the Download Quest 範馬刃牙・鬼の遺伝子 (Hunt 1 [[Zinogre]])"
+  },
+  {
+    "name": "Sturdy Fang",
+    "description": "かつてこの素材の価値が高騰し一攫千金を目指したハンターが続出した事もあった。"
+  },
+  {
+    "name": "Tigrex Carapace",
+    "description": "年月を経て堅さを増した轟竜の甲殻。鋭く尖ったエッジが、轟竜の凶暴さを物語る。"
+  },
+  {
+    "name": "Tigrex Claw",
+    "description": "他の飛竜には見られない、特徴的な前脚にある轟竜の爪。凶悪な切れ味を誇っている。"
+  },
+  {
+    "name": "Tigrex Fang",
+    "description": "ティガレックスの牙。獲物を砕く恐怖の牙に、誰もが震えを隠せない。"
+  },
+  {
+    "name": "Tigrex Jaw",
+    "description": "ティガレックスの見事な顎。獲物を容易に噛み砕く頑強な顎は、見た者に恐怖を与える。"
+  },
+  {
+    "name": "Tigrex Scale",
+    "description": "凶暴なティガレックスから剥ぎ取った鱗。とても分厚く、頑丈。"
+  },
+  {
+    "name": "Tigrex Scalp",
+    "description": "ティガレックスの頭。未だ生きているかのような恐ろしい外見。"
+  },
+  {
+    "name": "Tigrex Shell",
+    "description": "どんな衝撃も跳ね返す、ティガレックスの甲殻。驚くほどの頑強さを持つ。"
+  },
+  {
+    "name": "Tigrex Tail",
+    "description": "凶暴なティガレックスの尻尾。しなやかで強力な尻尾は、頑強な武具へと生まれ変わる。"
+  },
+  {
+    "name": "Twisted Horn",
+    "description": "ディアブロスのねじれた大きな角。様々な用途で使用されている。"
+  },
+  {
+    "name": "Ukanlos Carapace",
+    "description": "雪嶺の凍寒に耐え、鉱物を緩やかに取り込み、驚くべき強堅さを得た崩竜の重厚な外殻。"
+  },
+  {
+    "name": "Ukanlos Digger",
+    "description": "崩竜の巨爪。砕氷を繰り返し、特異な形状に発達した爪は、あらゆるものを穿つ。"
+  },
+  {
+    "name": "Ukanlos Fin",
+    "description": "崩竜の背部に走る大振りのヒレ。先端に鋸状の突起が並びあらゆるものを切り払う。"
+  },
+  {
+    "name": "Ukanlos Gem",
+    "description": "その昔、世界を破滅に導いた王が手にしていたという宝玉。近づく者の心を打ち崩す。"
+  },
+  {
+    "name": "Ukanlos Shoveljaw",
+    "description": "崩竜の巨大な突顎。雪塊を削り進むために発達したそれは、ひと掻きで雪崩を引き起こす。"
+  },
+  {
+    "name": "Ukanlos Tail",
+    "description": "氷塊のごとき崩竜の尾。打ち振るうたびに大気は震え、連嶺に木霊する。"
+  },
+  {
+    "name": "Ukanlos Underscale",
+    "description": "崩竜の腹部を覆う分厚い鱗。鋭利な先端部が氷雪を捉え、巨体の雪行を可能にする。"
+  },
+  {
+    "name": "Uncanny Hide",
+    "description": "生前は色が変化していた皮。この不思議な性質ゆえに、一部のマニアに人気の素材。"
+  },
+  {
+    "name": "Uragaan Carapace",
+    "description": "ウラガンキンの堅い甲殻。その硬度ゆえに、切り出すことすら容易ではない。"
+  },
+  {
+    "name": "Uragaan Jaw",
+    "description": "ウラガンキンのいびつな顎。これは溶けた鉱物を塗り固めたものである。"
+  },
+  {
+    "name": "Uragaan Marrow",
+    "description": "入手が難しいウラガンキンの骨髄。特殊な加工に使用される他、薬の研究がされている。"
+  },
+  {
+    "name": "Uragaan Ruby",
+    "description": "ウラガンキンからまれに採れる高価な玉石。加工時に使用すると強度が増すらしい。"
+  },
+  {
+    "name": "Uragaan Scale+",
+    "description": "ウラガンキンから採れる硬質の鱗。成分に含まれる鉱物が光に当たると鈍く輝く。"
+  },
+  {
+    "name": "Uragaan Scute",
+    "description": "甲殻以上の耐熱性を持つ素材。重要な器官をマグマから護るためと考えられている。"
+  },
+  {
+    "name": "Uragaan Shell",
+    "description": "耐熱性と強度を兼ね備えたウラガンキンの甲殻。見た目の派手さはないが堅実な防具に。"
+  },
+  {
+    "name": "Uroktor Scale",
+    "description": "主に火山地帯に生息するモンスターの鱗。耐火性は高いが、高価なものではない。"
+  },
+  {
+    "name": "Velevety Hide",
+    "description": "ギィギから採れる皮。需要が限られるので、価値はあまり高くない。"
+  },
+  {
+    "name": "Venom Gland",
+    "description": "暗闇の中で、怪しい光を放つ奇妙な毒腺。剥ぎ取った後も、しばらくクネクネ動き続ける。"
+  },
+  {
+    "name": "Vivid Feather",
+    "description": "彩鳥の羽根の中でも、絶妙な色合いが美しい、格別の羽根。まさに自然が生み出す芸術品。"
+  },
+  {
+    "name": "Vivid Fluid",
+    "description": "潜口竜の保水性のある体液。これに水分をため込み、砂漠での活動を可能にしている。"
+  },
+  {
+    "name": "Voltstone",
+    "description": "紅彩鳥が電気を発生させる時に使用する部位。溜めた電気を打ちつける衝撃で放電させる。"
+  },
+  {
+    "name": "Volvidon Carapace",
+    "description": "ラングロトラの分厚い甲殻。弾力を増した堅殻の加工には、高い圧力が必要となる。"
+  },
+  {
+    "name": "Volvidon Claw",
+    "description": "ラングロトラの前脚の爪。この大振りの爪が、振るう一撃の威力を飛躍的に高める。"
+  },
+  {
+    "name": "Volvidon Rickrack",
+    "description": "ラングロトラの背中にある蛇腹状の甲殻。柔軟性に優れ、武具の可動部の保護に適する。"
+  },
+  {
+    "name": "Volvidon Shell",
+    "description": "ラングロトラの甲殻。灼熱の溶岩をも、ものともしない耐火耐熱に優れた素材。"
+  },
+  {
+    "name": "Warm Pelt",
+    "description": "小型獣から採れる毛皮。用途は様々だが主に一般的な衣服などに加工される。"
+  },
+  {
+    "name": "White Raven Feather",
+    "description": "Received from the Download Quest 狩猟戦線からの招待 (Hunt 2 [[Diablos]])"
+  },
+  {
+    "name": "Wonderful Beak",
+    "description": "変な形だがステキなクチバシ。"
+  },
+  {
+    "name": "Wroggi Fang",
+    "description": "フロギィの毒の牙。大型モンスターが蝕まれるほど危険な毒を染み出し続ける。"
+  },
+  {
+    "name": "Wroggi Hide",
+    "description": "フロギィの皮。なめせば、扱いやすい鮮やかな橙色の革素材となる。"
+  },
+  {
+    "name": "Wroggi Scale+",
+    "description": "フロギィの鱗。その鮮やかな警戒色から有毒なモンスターの物であることが見てとれる。"
+  },
+  {
+    "name": "Zinogre Carapace",
+    "description": "ジンオウガの青緑の堅殻。王者を包む無傷の鎧は、抵抗がいかに無意味かを知らしめる。"
+  },
+  {
+    "name": "Zinogre Claw",
+    "description": "ジンオウガの爪。その余りある力で振るわれる長く鋭い爪は、獲物をたやすく切り裂く。"
+  },
+  {
+    "name": "Zinogre Electrofur",
+    "description": "電気を蓄え、増幅すると言われる雷狼竜の白い毛。素材の状態でも、性質は失われない。"
+  },
+  {
+    "name": "Zinogre Horn",
+    "description": "ジンオウガの角。その王者の証を見た動物たちは皆、身を潜め、恐れおののく。"
+  },
+  {
+    "name": "Zinogre Jasper",
+    "description": "まれに雷狼竜の体内で精製される希少な玉石。王者の力が凝縮された姿。"
+  },
+  {
+    "name": "Zinogre Plate",
+    "description": "ジンオウガの希少な逆鱗。猛る王者の魂を具現したかのような荒々しい逸品。"
+  },
+  {
+    "name": "Zinogre Shell",
+    "description": "ジンオウガの青緑の甲殻。溢れる電気から自らを守る、絶縁体でもあるという。"
+  },
+  {
+    "name": "Zinogre Shocker",
+    "description": "ジンオウガの躰に連なる、黄土色の甲殻。電気を発生する特異な脂質を備えるという。"
+  },
+  {
+    "name": "Zinogre Tail",
+    "description": "ジンオウガの尻尾。無数の甲殻に覆われた尻尾は、一撃必殺の威力を生み出す。"
   }
 ]

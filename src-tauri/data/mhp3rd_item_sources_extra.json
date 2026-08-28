@@ -1,1 +1,262 @@
-[]
+[
+  {
+    "item_id": 10378,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Stream",
+    "conditions": "Areas: 7,9"
+  },
+  {
+    "item_id": 10114,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Low Rank Flooded Forest",
+    "conditions": "Areas: 2,4,5,7,9"
+  },
+  {
+    "item_id": 10116,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Low Rank Volcano",
+    "conditions": "Areas: 1,2,4"
+  },
+  {
+    "item_id": 10111,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Stream Flooded Forest Deserted Island Tundra Volcano",
+    "conditions": "Areas: 1,7,9 2,4,5,7,10 1,2,3,5,10 3 2,4"
+  },
+  {
+    "item_id": 10112,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Stream Sandy Plains Flooded Forest Deserted Island Tundra Volcano",
+    "conditions": "Areas: 7,9 1,2,10 2,7,9 1,2,4,5,10 1,3 1,2"
+  },
+  {
+    "item_id": 10382,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Yukumo Farm",
+    "conditions": "Areas: 甲虫の香液 王族の香液 稀代の香液 オトモ虫捕り"
+  },
+  {
+    "item_id": 10380,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "High Rank Stream High Rank Sandy Plains High Rank Flooded Forest High Rank Deserted Island High Rank Tundra High Rank Volcano",
+    "conditions": "Areas: 7,9 1,2,4,10 2,4,5,7,9,10 1,3,4,5,10 1,8 1,2,4,9"
+  },
+  {
+    "item_id": 10115,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "High Rank Tundra High Rank Volcano High Rank Yukumo Farm",
+    "conditions": "Areas: 1,3,8,9 1,2,4 稀代の香液"
+  },
+  {
+    "item_id": 10381,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Yukumo Farm",
+    "conditions": "Areas: 甲虫の香液 王族の香液 稀代の香液"
+  },
+  {
+    "item_id": 10120,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Low Rank Stream Low Rank Sandy Plains Low Rank Flooded Forest Low Rank Deserted Island Low Rank Tundra Low Rank Volcano",
+    "conditions": "Areas: 3,6,8 4,6,11 3,5,6,8,10 4,6,7,10 2,4,5 4,5,7,9,10"
+  },
+  {
+    "item_id": 10123,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Flooded Forest",
+    "conditions": "Areas: 5、6、8、10"
+  },
+  {
+    "item_id": 10383,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Flooded Forest",
+    "conditions": "Areas: 5,6,8,10"
+  },
+  {
+    "item_id": 10384,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Low Rank Tundra",
+    "conditions": "Areas: 4,5"
+  },
+  {
+    "item_id": 10128,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Tundra",
+    "conditions": "Areas: 4,5,6,7"
+  },
+  {
+    "item_id": 10121,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Volcano",
+    "conditions": "Areas: 3,4,5,7,8,9,10"
+  },
+  {
+    "item_id": 10125,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Volcano",
+    "conditions": "Areas: 5,8,9,10"
+  },
+  {
+    "item_id": 10122,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "High Rank Volcano",
+    "conditions": "Areas: 4,5,9"
+  },
+  {
+    "item_id": 10124,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "High Rank Tundra",
+    "conditions": "Areas: 4,5,9"
+  },
+  {
+    "item_id": 10126,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "High Rank Volcano",
+    "conditions": "Areas: 5,8,9,10"
+  },
+  {
+    "item_id": 10127,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Tundra",
+    "conditions": "Areas: 2,3,4,6"
+  },
+  {
+    "item_id": 10196,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Tundra",
+    "conditions": "Areas: 4,5,7,9"
+  },
+  {
+    "item_id": 10107,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Low RankFlooded Forest",
+    "conditions": "Areas: キャンプ"
+  },
+  {
+    "item_id": 10371,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Yukumo Farm",
+    "conditions": "Areas: 初期状態 網と桟橋+1 網と桟橋+2 オトモ撒き餌漁"
+  },
+  {
+    "item_id": 10370,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "High RankStream High RankFlooded Forest High RankDeserted Island Yukumo Farm",
+    "conditions": "Areas: 7 4 10 オトモ撒き餌漁"
+  },
+  {
+    "item_id": 10372,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Yukumo Farm",
+    "conditions": "Areas: 網と桟橋+1 網と桟橋+2 オトモ撒き餌漁"
+  },
+  {
+    "item_id": 10373,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Yukumo Farm",
+    "conditions": "Areas: 初期状態 網と桟橋+1 網と桟橋+2 オトモ撒き餌漁"
+  }
+]

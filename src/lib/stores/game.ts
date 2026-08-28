@@ -175,9 +175,28 @@ export const GAMES: Game[] = [
 import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
+function isGame(value: unknown): value is Game {
+  if (!value || typeof value !== 'object') return false;
+  const v = value as Record<string, unknown>;
+  return typeof v.id === 'string' && typeof v.dbId === 'number' && typeof v.name === 'string';
+}
+
+function parseStoredGame(raw: string | null): Game | null {
+  if (!raw) return null;
+  try {
+    const parsed = JSON.parse(raw);
+    // Guard against stale/corrupt localStorage that would otherwise break module init.
+    if (!isGame(parsed)) return null;
+    // Ensure the stored game still exists in the current registry.
+    return GAMES.find((g) => g.id === parsed.id && g.dbId === parsed.dbId) ?? null;
+  } catch {
+    return null;
+  }
+}
+
 function createGameStore() {
   const stored = browser ? localStorage.getItem('selectedGame') : null;
-  const initial = stored ? JSON.parse(stored) : null;
+  const initial = parseStoredGame(stored);
 
   const { subscribe, set, update } = writable<Game | null>(initial);
 

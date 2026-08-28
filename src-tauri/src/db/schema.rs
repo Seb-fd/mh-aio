@@ -315,11 +315,80 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
         CREATE INDEX IF NOT EXISTS idx_decorations_game ON decorations(game_id);
         CREATE INDEX IF NOT EXISTS idx_decoration_mats_deco ON decoration_materials(decoration_id);
         CREATE INDEX IF NOT EXISTS idx_decoration_mats_item ON decoration_materials(item_id);
+
+        -- Schema/bookkeeping version
+        CREATE TABLE IF NOT EXISTS schema_version (
+            id INTEGER PRIMARY KEY CHECK (id = 1),
+            version INTEGER NOT NULL,
+            applied_at TEXT NOT NULL DEFAULT (datetime('now'))
+        );
     ")?;
 
     apply_migrations(conn)?;
+    add_idempotency_constraints(conn)?;
 
     Ok(())
+}
+
+/// Make the seed strictly idempotent WITHOUT the old destructive `clear_game`.
+///
+/// The junction tables below historically used `id INTEGER PRIMARY KEY` (rowid)
+/// with no natural UNIQUE key, so `INSERT OR IGNORE` would append duplicate rows
+/// on every re-run. These UNIQUE indexes give `INSERT OR IGNORE` a real conflict
+/// target so the seed can (and now does) run on every boot without deleting data.
+///
+/// NULL-safe natural keys are used where a column may be NULL (SQLite treats
+/// NULLs as distinct in a UNIQUE index otherwise).
+fn add_idempotency_constraints(conn: &Connection) -> Result<()> {
+    // Cross-game content: enforce (game_id, id) uniqueness so two games can never
+    // collide on a bare `id` primary key. `id` is already PK, so this is a no-op
+    // guard that turns accidental future collisions into hard errors instead of
+    // silent cross-game mixups.
+    let content_tables = ["weapons", "armor", "armor_sets", "monsters", "quests", "items", "skills", "decorations"];
+    for t in content_tables {
+        conn.execute(
+            &format!("CREATE UNIQUE INDEX IF NOT EXISTS uq_{t}_game_id ON {t}(game_id, id)"),
+            [],
+        )?;
+    }
+
+    // Junction / child tables (regenerated reference data). Composite unique keys.
+    //
+    // A database shipped before these UNIQUE indexes existed may already hold
+    // duplicate rows (the old seed deleted + reinserted without any uniqueness
+    // guarantee), so `CREATE UNIQUE INDEX` would fail. Deduplicate first (keep
+    // the lowest rowid), then create the index. This is idempotent — after the
+    // first pass there are no duplicates left.
+    conn.execute_batch("
+        DELETE FROM monster_equipment WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_equipment GROUP BY game_id, monster_id, equipment_kind, equipment_id);
+        DELETE FROM item_combine WHERE rowid NOT IN (SELECT MIN(rowid) FROM item_combine GROUP BY result_item_id, component_item_id, combine_type);
+        DELETE FROM weapon_craft WHERE rowid NOT IN (SELECT MIN(rowid) FROM weapon_craft GROUP BY weapon_id, craft_kind, item_id);
+        DELETE FROM weapon_materials WHERE rowid NOT IN (SELECT MIN(rowid) FROM weapon_materials GROUP BY weapon_id, item_id);
+        DELETE FROM armor_materials WHERE rowid NOT IN (SELECT MIN(rowid) FROM armor_materials GROUP BY armor_id, item_id);
+        DELETE FROM quest_rewards WHERE rowid NOT IN (SELECT MIN(rowid) FROM quest_rewards GROUP BY quest_id, item_id, IFNULL(condition, ''));
+        DELETE FROM monster_drops WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_drops GROUP BY monster_id, item_id, method, IFNULL(part, ''), IFNULL(rank, ''), IFNULL(condition, ''));
+        DELETE FROM monster_weaknesses WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_weaknesses GROUP BY monster_id, IFNULL(part_name, ''));
+        DELETE FROM item_sources WHERE rowid NOT IN (SELECT MIN(rowid) FROM item_sources GROUP BY item_id, source_type, IFNULL(source_id, -1), IFNULL(quantity_min, -1), IFNULL(quantity_max, -1), IFNULL(probability, -1), IFNULL(location, ''), IFNULL(conditions, ''));
+    ")?;
+
+    conn.execute_batch("
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_equipment ON monster_equipment(game_id, monster_id, equipment_kind, equipment_id);
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_item_combine ON item_combine(result_item_id, component_item_id, combine_type);
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_weapon_craft ON weapon_craft(weapon_id, craft_kind, item_id);
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_weapon_materials ON weapon_materials(weapon_id, item_id);
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_armor_materials ON armor_materials(armor_id, item_id);
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_quest_rewards ON quest_rewards(quest_id, item_id, IFNULL(condition, ''));
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_drops ON monster_drops(monster_id, item_id, method, IFNULL(part, ''), IFNULL(rank, ''), IFNULL(condition, ''));
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_weaknesses ON monster_weaknesses(monster_id, IFNULL(part_name, ''));
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_item_sources ON item_sources(item_id, source_type, IFNULL(source_id, -1), IFNULL(quantity_min, -1), IFNULL(quantity_max, -1), IFNULL(probability, -1), IFNULL(location, ''), IFNULL(conditions, ''));
+    ")?;
+
+    Ok(())
+}
+
+pub fn get_schema_version(conn: &Connection) -> Result<i32> {
+    conn.query_row("SELECT version FROM schema_version WHERE id = 1", [], |r| r.get(0))
+        .or(Ok(0))
 }
 
 fn apply_migrations(conn: &Connection) -> Result<()> {

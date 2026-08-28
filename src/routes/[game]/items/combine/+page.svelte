@@ -3,6 +3,7 @@
   import { goto } from '$app/navigation';
   import { api, type CombineView } from '$lib/api';
   import { selectedGame } from '$lib/stores/game';
+  import { normKey } from '$lib/utils/norm';
 
   const game = $derived($selectedGame);
   const dbId = $derived(game?.dbId);
@@ -35,10 +36,10 @@
       arr = arr.filter(c => c.combine_type === filterType);
     }
     if (searchTerm !== '') {
-      const term = searchTerm.toLowerCase();
+      const term = normKey(searchTerm);
       arr = arr.filter(c =>
-        c.result_name.toLowerCase().includes(term) ||
-        c.components.some(comp => comp.component_name.toLowerCase().includes(term))
+        normKey(c.result_name).includes(term) ||
+        c.components.some(comp => normKey(comp.component_name).includes(term))
       );
     }
     return arr;

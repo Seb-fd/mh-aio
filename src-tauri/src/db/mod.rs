@@ -2,11 +2,27 @@ pub mod schema;
 pub mod queries;
 pub mod seed;
 
+use rusqlite::functions::FunctionFlags;
 use rusqlite::{Connection, OpenFlags, Result};
 use std::sync::Mutex;
 
 pub struct Database {
     pub conn: Mutex<Connection>,
+}
+
+/// Register SQLite scalar functions used by queries (kept separate so tests can
+/// set up an in-memory DB identically to `Database::new`).
+pub fn register_functions(conn: &Connection) -> Result<()> {
+    conn.create_scalar_function(
+        "norm_key",
+        1,
+        FunctionFlags::SQLITE_UTF8 | FunctionFlags::SQLITE_DETERMINISTIC,
+        |ctx| {
+            let s: Option<String> = ctx.get(0)?;
+            Ok(s.map(|v| crate::db::queries::norm_key(&v)).unwrap_or_default())
+        },
+    )?;
+    Ok(())
 }
 
 impl Database {
@@ -20,23 +36,35 @@ impl Database {
 
         // WAL is fast on desktop but can fail on some Android filesystems; fallback to DELETE
         let _ = conn.execute_batch("PRAGMA journal_mode=WAL;");
-        // Use a single transaction for seeding (much faster on Android), but don't fail if BEGIN fails
+        // Enforce FK constraints (seed inserts parents before children).
+        conn.execute_batch("PRAGMA foreign_keys = ON;")?;
+
+        register_functions(&conn)?;
+
+        // Single transaction for the (now idempotent) seed — much faster on
+        // Android. If BEGIN fails we fall back to auto-commit per statement; the
+        // seed is safe either way because every write is INSERT OR IGNORE.
         let in_txn = conn.execute_batch("BEGIN IMMEDIATE;").is_ok();
-        let seed_result: Result<()> = (|| {
+        let setup: Result<()> = (|| {
             schema::create_tables(&conn)?;
             seed::seed(&conn)?;
             Ok(())
         })();
-        match (seed_result, in_txn) {
-            (Ok(_), true) => {
-                let _ = conn.execute_batch("COMMIT;");
+        match setup {
+            Ok(()) => {
+                if in_txn {
+                    // Never swallow a failed COMMIT: leave the DB in a consistent state.
+                    conn.execute_batch("COMMIT;")?;
+                }
             }
-            (Ok(_), false) => {}
-            (Err(e), true) => {
-                let _ = conn.execute_batch("ROLLBACK;");
+            Err(e) => {
+                if in_txn {
+                    // Best-effort rollback; the connection is dropped right after,
+                    // but an explicit ROLLBACK prevents leaving it dangling.
+                    let _ = conn.execute_batch("ROLLBACK;");
+                }
                 return Err(e);
             }
-            (Err(e), false) => return Err(e),
         }
 
         Ok(Self {

@@ -4,7 +4,7 @@
 
 A comprehensive, offline-first encyclopedia and toolkit for all Monster Hunter games, covering multiple titles with detailed data on weapons, armor, monsters, quests, skills, items, builds (incl. an armor set solver ported from Athena's A.S.S.), and suggestions.
 
-Current state: **MH2G / Freedom Unite is fully populated and verified** (2075 armor, 1083 items, 83 monsters, 1500 weapons, 99 skill families, 192 decorations) with detail views, game-faithful ordering (monsters Hunter's Notes order, weapons Smith order), filtered browsers (Large/Small, Blademaster/Gunner), armor set search, and per-game global search. Other games are wired for routing/theming with data pending.
+Current state: **MH2G / Freedom Unite is fully populated and verified** (2075 armor, 1083 items, 83 monsters, 1500 weapons, 99 skill families, 192 decorations) with detail views, game-faithful ordering (monsters Hunter's Notes order, weapons Smith order), filtered browsers (Large/Small, Blademaster/Gunner), armor set search, and per-game global search. **MHP3rd / Portable 3rd (DB id 4) is fully seeded** (1065 items, 378 quests — all 378 bilingual, 60 monsters, 972 weapons, 1111 armor, 263 combines, 761 drops, 1867 quest rewards). Remaining titles (MHW/MHR/MHWilds) are wired for routing/theming with data pending.
 
 ---
 
@@ -14,16 +14,16 @@ Current state: **MH2G / Freedom Unite is fully populated and verified** (2075 ar
 - **Framework:** Tauri v2 (Rust + WebView)
 - **UI:** Svelte 5 + TypeScript
 - **Styling:** Tailwind CSS v4 (`@theme` block, no config file)
-- **Components:** shadcn-svelte (bits-ui)
+- **Components:** shadcn-svelte (plain Svelte 5 primitives — `bits-ui` removed)
 - **Build:** Vite (with `server.watch.ignored: ['src-tauri/**']`)
 - **State:** Svelte Stores / Runes (`$state`, `$derived`, `$effect`)
 - **Routing:** SvelteKit client-side (SSR disabled, adapter-static with `fallback: 'index.html'`)
 
 ### Backend (Rust)
-- **Framework:** Tauri v2 Commands (IPC)
-- **Database:** SQLite via `rusqlite` (bundled feature, WAL mode)
+- **Framework:** Tauri v2 Commands (IPC) — `tauri-plugin-shell` removed, CSP hardened
+- **Database:** SQLite via `rusqlite` (`bundled` + `functions` feature, WAL mode, `PRAGMA foreign_keys=ON`, `norm_key` SQL scalar via `register_functions`)
 - **Serialization:** Serde + JSON
-- **Migrations:** Hand-rolled (`ALTER TABLE ... ADD COLUMN` with `pragma_table_info` check) + `INSERT OR IGNORE` seed
+- **Migrations:** Hand-rolled (`ALTER TABLE ... ADD COLUMN` with `pragma_table_info` check) + `schema_version` table + `add_idempotency_constraints()` dedup/UNIQUE indexes; `INSERT OR IGNORE` idempotent seed (no `clear_game`)
 
 ### Future Platforms
 - **Desktop:** Windows / macOS / Linux (Tauri v2) — current
@@ -39,49 +39,56 @@ mh-aio/
 ├── src-tauri/                    # Backend Rust
 │   ├── src/
 │   │   ├── main.rs
-│   │   ├── lib.rs                # 14 Tauri commands registered
+│   │   ├── lib.rs                # Tauri commands registered (no shell, no greet/get_games)
 │   │   ├── commands/
 │   │   │   └── mod.rs            # List + detail commands
 │   │   └── db/
-│   │       ├── mod.rs            # Database struct (Mutex<Connection>)
-│   │       ├── schema.rs         # Tables (items + item_sources + item_combine + junctions) + ALTER TABLE migrations
-│   │       ├── queries.rs        # List + detail queries with JOINs (CombineView, game order)
-│   │       └── seed.rs           # Idempotent seed (INSERT OR IGNORE) + category backfill
-│   ├── Cargo.toml                # crate-type = ["lib", "cdylib", "staticlib"]
-│   └── tauri.conf.json
+│   │       ├── mod.rs            # Database (Mutex<Connection> + register_functions(norm_key))
+│   │       ├── schema.rs         # Tables + ALTER TABLE migrations + schema_version + idempotency UNIQUE indexes
+│   │       ├── queries.rs        # List/detail/search (CombineView, game order, SQLite LIKE via norm_key)
+│   │       └── seed.rs           # Idempotent MH2G+MHP3rd seed (no clear_game, dedup) + backfill
+│   ├── data/                     # mh2g_*.json + mhp3rd_*.json
+│   ├── Cargo.toml                # crate-type = ["lib", "cdylib", "staticlib"]; rusqlite {bundled, functions}
+│   ├── capabilities/default.json # core:default only
+│   ├── tauri.conf.json           # CSP hardened
+│   └── tauri.conf.dev.json       # devtools overlay
 ├── src/                          # Frontend Svelte 5
 │   ├── app.html
 │   ├── app.css                   # Tailwind + themed-bg per game ornament
 │   ├── lib/
-│   │   ├── api.ts                # Typed invoke() wrapper (Tauri commands)
+│   │   ├── api.ts                # Typed invoke() wrapper (no Game/greet)
 │   │   ├── components/
-│   │   │   ├── ui/               # shadcn-svelte primitives (card, button)
+│   │   │   ├── ui/               # shadcn-svelte primitives (card, button — plain Svelte 5)
 │   │   │   ├── game-selector.svelte
-│   │   │   ├── sidebar.svelte    # Themed nav
+│   │   │   ├── sidebar.svelte    # Themed nav (v0.1.0)
 │   │   │   ├── header.svelte     # Themed top bar
 │   │   │   ├── back-button.svelte
 │   │   │   ├── detail-header.svelte
 │   │   │   ├── material-list.svelte
 │   │   │   └── drop-table.svelte
 │   │   ├── stores/
-│   │   │   └── game.ts           # 5 games + GameTheme interface
-│   │   └── utils/index.ts        # cn() helper
+│   │   │   └── game.ts           # 5 games + GameTheme + localStorage guard (parseStoredGame)
+│   │   └── utils/
+│   │       ├── index.ts          # cn()
+│   │       └── norm.ts           # normKey() mirrors Rust norm_key
 │   └── routes/
 │       ├── +layout.ts            # ssr=false, prerender=false
-│       ├── +layout.svelte        # Conditional layout, theme injection
+│       ├── +layout.svelte        # theme injection (no path-sync effect)
 │       ├── +page.svelte          # Landing = Game Selector
 │       └── [game]/
 │           ├── +layout.ts
 │           ├── +page.svelte      # Dashboard
 │           ├── monsters/         # list + [id]
 │           ├── weapons/          # list + [id]
-│           ├── armor/            # list + [id]
+│           ├── armor/            # list, sets/[id], [id]
 │           ├── quests/           # list + [id]
-│           ├── items/            # list + [id]
+│           ├── items/            # list + combine + [id] (JP badge, normKey search)
 │           ├── skills/           # list + [id]
-│           └── builds/           # (placeholder for planner)
-├── scrapers/                     # Future Python scrapers
-├── static/                       # Static assets
+│           ├── decorations/      # list + [id]
+│           └── builds/           # Armor Set Search (ASS port, no dummy)
+├── docs/
+│   └── fidelity-report.md        # MH2G audit + MHP3rd catalog report
+├── LICENSE                       # MIT
 ├── AGENTS.md
 ├── README.md
 ├── roadmap.md
@@ -287,16 +294,17 @@ CREATE TABLE armor_materials (
    - Materials, drop sources, combine recipes populated; item taxonomy ISO-derived (`Consumable 91 / Material 913 / Ammo 79` + `subcategory` Charm/Husk/Coating); ordering faithful to UMD (Hunter's Notes, Smith trees, quest hubs, Book of Combos)
    - Data verified against retail UMD and event distribution file (see `docs/fidelity-report.md`)
    - Armor Set Search (Athena's A.S.S. port) + per-game global search + ordered, filtered browsers (Large/Small, Blademaster/Gunner, Training/Treasure/Event) + combinations view (Normal/Alchemy/Treasure, `success %`) + clickable recipes
+2. **Monster Hunter Portable 3rd** (2010) — MHP3rd, **fully seeded (mhp3rd, DB id 4)**
+   - 1065 items (Material 964 / Consumable 55 / Ammo 46, 291 descriptions, 181 buy prices), 378 quests (`village 96 · guild_low 88 · guild_high 100 · event 52 · hot_spring 7 · drink 16 · nyanta 3 · training 10 · challenge 6`, all 378 carry JP `name_original`), 60 monsters, 972 weapons, 1111 armor, 263 combines (202 Normal + 61 Alchemy), 761 drops, 1867 quest rewards
+   - Sourced from `MHP3: Item List` + `www.mhp3wiki.info` via Playwright; gaps: gathering-only `item_sources` (shop/trade/farm pending), numeric struct audit pending
 
 ### Planned
-2. **Monster Hunter World: Iceborne** (2018/2019)
+3. **Monster Hunter World: Iceborne** (2018/2019)
    - Sources: mhw-db.com API, Kiranico
-3. **Monster Hunter Rise: Sunbreak** (2021/2022)
+4. **Monster Hunter Rise: Sunbreak** (2021/2022)
    - Sources: Kiranico, Game8
-4. **Monster Hunter Wilds** (2025)
+5. **Monster Hunter Wilds** (2025)
    - Sources: Kiranico (mhwilds.kiranico.com), Game8
-5. **Monster Hunter Portable 3rd** (2010)
-   - Sources: MHP3rd Database (GitHub)
 
 ---
 
@@ -344,11 +352,11 @@ CREATE TABLE armor_materials (
 - [ ] Offline mode verification (future)
 - [ ] Auto-update mechanism (future)
 
-### 📋 Phase 5: Multi-Game
+### ✅ Phase 5: Multi-Game — MHP3rd seeded (partial)
+- [x] MHP3rd data import — 1065 items, 378 quests, 60 monsters, 972 weapons, 1111 armor, 263 combines, 761 drops, skills/decorations seeded via `src-tauri/data/mhp3rd_*.json` + `db/seed.rs` (idempotent)
 - [ ] MHW scraper (mhw-db.com API)
 - [ ] MHR scraper (Kiranico / Game8)
 - [ ] MHWilds scraper
-- [ ] MHP3rd data import (GitHub DB)
 - [ ] Game-specific UI adaptations (Focus Mode, Wirebugs, etc.)
 
 ### 📋 Phase 6: Mobile & Distribution

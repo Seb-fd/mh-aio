@@ -1,13 +1,5 @@
 import { invoke } from '@tauri-apps/api/core';
 
-export interface Game {
-  id: number;
-  name: string;
-  abbreviation: string;
-  release_year: number | null;
-  platform: string | null;
-}
-
 export interface Monster {
   id: number;
   game_id: number;
@@ -429,7 +421,6 @@ export interface AssQueryInput {
   include_piercings: boolean;
   allow_bad: boolean;
   allow_torso_inc: boolean;
-  allow_dummy: boolean;
   sort_by: string | null;
 }
 export interface AssArmorRef {
@@ -468,7 +459,6 @@ export interface AssSolutionView {
 }
 
 export const api = {
-  getGames: () => invoke<Game[]>('get_games'),
   getMonsters: (gameId: number) => invoke<Monster[]>('get_monsters', { gameId }),
   getWeapons: (gameId: number) => invoke<Weapon[]>('get_weapons', { gameId }),
   getArmor: (gameId: number) => invoke<Armor[]>('get_armor', { gameId }),
