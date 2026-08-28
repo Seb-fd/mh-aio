@@ -185,7 +185,9 @@ export interface Quest {
   hub: string | null;
   stars: number | null;
   objective: string | null;
+  objective_original: string | null;
   location: string | null;
+  location_original: string | null;
   time_limit: number | null;
   faints_allowed: number | null;
   is_key_quest: boolean;
@@ -195,6 +197,8 @@ export interface Quest {
   reward_money: number | null;
   contract_fee: number | null;
   main_monsters: string | null;
+  description: string | null;
+  description_original: string | null;
   language: string;
 }
 
@@ -217,12 +221,15 @@ export interface QuestDetail {
   hub: string | null;
   stars: number | null;
   objective: string | null;
+  objective_original: string | null;
   location: string | null;
+  location_original: string | null;
   time_limit: number | null;
   faints_allowed: number | null;
   is_key_quest: boolean;
   is_urgent: boolean;
   description: string | null;
+  description_original: string | null;
   client: string | null;
   requirements: string | null;
   reward_money: number | null;

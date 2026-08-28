@@ -357,6 +357,10 @@ fn apply_migrations(conn: &Connection) -> Result<()> {
     // back to id when NULL (other games keep their id-based order).
     add_column_if_missing(conn, "weapons", "sort_order", "INTEGER")?;
     add_column_if_missing(conn, "quests", "is_urgent", "BOOLEAN DEFAULT FALSE")?;
+    // Preserve original JP for MHP3rd quests (EN shown in location/objective, JP kept for reference)
+    add_column_if_missing(conn, "quests", "location_original", "TEXT")?;
+    add_column_if_missing(conn, "quests", "objective_original", "TEXT")?;
+    add_column_if_missing(conn, "quests", "description_original", "TEXT")?;
     Ok(())
 }
 

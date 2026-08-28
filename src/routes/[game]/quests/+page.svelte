@@ -90,7 +90,7 @@
     for (const [stars, items] of map.entries()) {
       groups.push({
         stars,
-        label: stars == null ? 'Unknown' : groupLabel(stars),
+        label: stars == null ? '★' : groupLabel(stars),
         items,
       });
     }

@@ -745,12 +745,15 @@ struct QuestJson {
     hub: Option<String>,
     stars: Option<i32>,
     objective: String,
+    objective_original: Option<String>,
     location: String,
+    location_original: Option<String>,
     time_limit: Option<i32>,
     faints_allowed: Option<i32>,
     is_key_quest: Option<bool>,
     is_urgent: Option<bool>,
     description: Option<String>,
+    description_original: Option<String>,
     client: Option<String>,
     requirements: Option<String>,
     reward_money: Option<i32>,
@@ -769,8 +772,8 @@ fn seed_quests(conn: &Connection) -> Result<()> {
             .as_ref()
             .map(|v| serde_json::to_string(v).unwrap_or_else(|_| "[]".to_string()));
         conn.execute(
-            "INSERT OR IGNORE INTO quests (id, game_id, name, name_original, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, description, client, requirements, reward_money, contract_fee, main_monsters, language)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, 'en')",
+            "INSERT OR IGNORE INTO quests (id, game_id, name, name_original, type, rank, hub, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, description, description_original, client, requirements, reward_money, contract_fee, main_monsters, language)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, ?23, 'en')",
             rusqlite::params![
                 q.id,
                 MH2G,
@@ -781,11 +784,15 @@ fn seed_quests(conn: &Connection) -> Result<()> {
                 q.hub,
                 q.stars,
                 q.objective,
+                q.objective_original.as_deref().unwrap_or(&q.objective),
                 q.location,
+                q.location_original.as_deref().unwrap_or(&q.location),
                 q.time_limit.unwrap_or(50),
                 q.faints_allowed.unwrap_or(3),
                 q.is_key_quest.unwrap_or(false),
+                q.is_urgent.unwrap_or(false),
                 q.description,
+                q.description_original.as_deref().unwrap_or(q.description.as_deref().unwrap_or("")),
                 q.client,
                 q.requirements,
                 q.reward_money,
@@ -793,6 +800,13 @@ fn seed_quests(conn: &Connection) -> Result<()> {
                 main_monsters_json
             ],
         )?;
+    }
+    // Backfill for existing DBs (EN overwrite + preserve original)
+    for q in serde_json::from_str::<Vec<QuestJson>>(include_str!("../../data/mh2g_quests.json")).unwrap_or_default() {
+        let _ = conn.execute(
+            "UPDATE quests SET objective = ?1, objective_original = COALESCE(objective_original, ?2), location = ?3, location_original = COALESCE(location_original, ?4), description = COALESCE(?, description), description_original = COALESCE(description_original, ?) WHERE id = ?5 AND game_id = 5",
+            rusqlite::params![q.objective, q.objective_original.as_deref().unwrap_or(&q.objective), q.location, q.location_original.as_deref().unwrap_or(&q.location), q.description, q.description_original.as_deref().unwrap_or(q.description.as_deref().unwrap_or("")), q.id],
+        );
     }
 
     Ok(())
@@ -1358,9 +1372,16 @@ fn seed_mhp3rd_quests(conn: &Connection) -> Result<()> {
     for q in quests {
         let main_monsters_json = q.main_monsters.as_ref().map(|v| serde_json::to_string(v).unwrap_or_else(|_| "[]".to_string()));
         conn.execute(
-            "INSERT OR IGNORE INTO quests (id, game_id, name, name_original, type, rank, hub, stars, objective, location, time_limit, faints_allowed, is_key_quest, is_urgent, description, client, requirements, reward_money, contract_fee, main_monsters, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, 'en')",
-            rusqlite::params![q.id, MHP3RD, q.name, q.name_original, q.qtype, q.rank, q.hub, q.stars, q.objective, q.location, q.time_limit.unwrap_or(50), q.faints_allowed.unwrap_or(3), q.is_key_quest.unwrap_or(false), q.is_urgent.unwrap_or(false), q.description, q.client, q.requirements, q.reward_money, q.contract_fee, main_monsters_json],
+            "INSERT OR IGNORE INTO quests (id, game_id, name, name_original, type, rank, hub, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, description, description_original, client, requirements, reward_money, contract_fee, main_monsters, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, ?23, 'en')",
+            rusqlite::params![q.id, MHP3RD, q.name, q.name_original, q.qtype, q.rank, q.hub, q.stars, q.objective, q.objective_original.as_deref().unwrap_or(&q.objective), q.location, q.location_original.as_deref().unwrap_or(&q.location), q.time_limit.unwrap_or(50), q.faints_allowed.unwrap_or(3), q.is_key_quest.unwrap_or(false), q.is_urgent.unwrap_or(false), q.description, q.description_original.as_deref().unwrap_or(q.description.as_deref().unwrap_or("")), q.client, q.requirements, q.reward_money, q.contract_fee, main_monsters_json],
         )?;
+    }
+    // Backfill EN for existing installs that already have JP rows (preserve original JP in *_original)
+    for q in serde_json::from_str::<Vec<QuestJson>>(include_str!("../../data/mhp3rd_quests.json")).unwrap_or_default() {
+        let _ = conn.execute(
+            "UPDATE quests SET objective = ?1, objective_original = COALESCE(objective_original, ?2), location = ?3, location_original = COALESCE(location_original, ?4), description = COALESCE(?, description), description_original = COALESCE(description_original, ?) WHERE id = ?5 AND game_id = 4 AND (objective != ?1 OR location != ?3 OR description IS NULL)",
+            rusqlite::params![q.objective, q.objective_original.as_deref().unwrap_or(&q.objective), q.location, q.location_original.as_deref().unwrap_or(&q.location), q.description, q.description_original.as_deref().unwrap_or(q.description.as_deref().unwrap_or("")), q.id],
+        );
     }
     Ok(())
 }
