@@ -59,6 +59,7 @@
       {@const active = isActive(item.href)}
       <button
         onclick={() => navigate(item.href)}
+        aria-current={active ? 'page' : undefined}
         class="sidebar-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors text-left"
         class:active={active}
       >

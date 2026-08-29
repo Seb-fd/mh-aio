@@ -119,18 +119,6 @@
     return arr;
   });
 
-  // Group armors by set for sets view (client-side grouping fallback if API not ready)
-  const groupedBySet = $derived.by(() => {
-    const map = new Map<string, Armor[]>();
-    for (const a of filtered) {
-      // Derive set name like seed does for display grouping when viewMode sets but we have armorSets
-      const key = armorSets.find(s => s.name === a.name.split(' ').slice(0, -1).join(' '))?.name ?? 'Other';
-      // Actually use set_id grouping via API: we already have sets, but for quick UI we map via set name from API
-      // For now just group by first word
-    }
-    return map;
-  });
-
   function open(id: number) {
     if (!game) return;
     goto(`/${game.id}/armor/${id}`);
@@ -232,8 +220,13 @@
     </div>
 
     {#if viewMode === 'sets'}
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
-        {#each filteredSets as set}
+      {#if filteredSets.length === 0}
+        <div class="border rounded-lg p-8 text-center themed-card">
+          <p class="text-gray-400">No sets match current filters</p>
+        </div>
+      {:else}
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+          {#each filteredSets as set}
           {@const pieces = armors.filter(a => a.set_id === set.id && matchesGender(a) && matchesType(a)).slice(0, 6)}
           <button onclick={() => openSet(set.id)} class="text-left">
             <Card class="p-4 border themed-card hover:border-[var(--theme-border-strong)] transition-colors">
@@ -257,10 +250,16 @@
             </Card>
           </button>
         {/each}
-      </div>
+        </div>
+        {/if}
     {:else}
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-        {#each filtered as piece}
+      {#if filtered.length === 0}
+        <div class="border rounded-lg p-8 text-center themed-card">
+          <p class="text-gray-400">No armor pieces match current filters</p>
+        </div>
+      {:else}
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {#each filtered as piece}
           <button onclick={() => open(piece.id)} class="text-left">
             <Card class="p-4 border transition-all cursor-pointer hover:scale-[1.02] themed-card">
               <div class="flex items-start justify-between gap-2 mb-2">
@@ -305,7 +304,8 @@
             </Card>
           </button>
         {/each}
-      </div>
+        </div>
+        {/if}
     {/if}
   {/if}
 </div>

@@ -5,6 +5,7 @@ pub mod seed;
 use rusqlite::functions::FunctionFlags;
 use rusqlite::{Connection, OpenFlags, Result};
 use std::sync::Mutex;
+use std::time::Duration;
 
 pub struct Database {
     pub conn: Mutex<Connection>,
@@ -36,6 +37,11 @@ impl Database {
 
         // WAL is fast on desktop but can fail on some Android filesystems; fallback to DELETE
         let _ = conn.execute_batch("PRAGMA journal_mode=WAL;");
+        // Avoid SQLITE_BUSY on concurrent BEGIN IMMEDIATE / startup races (esp. Android).
+        // 5s is the conventional conservative timeout for bundled SQLite.
+        conn.busy_timeout(Duration::from_millis(5000))?;
+        // Small synchronous=NORMAL is safe with WAL and speeds up commits.
+        let _ = conn.execute_batch("PRAGMA synchronous=NORMAL;");
         // Enforce FK constraints (seed inserts parents before children).
         conn.execute_batch("PRAGMA foreign_keys = ON;")?;
 

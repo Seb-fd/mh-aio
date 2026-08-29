@@ -15,20 +15,28 @@
   let slotFilter = $state<string>('all');
   let skillFilter = $state<string>('all');
 
+  async function loadDecorationsData(id: number, attempt = 0) {
+    try {
+      const data = await api.getDecorations(id);
+      decorations = data;
+      error = null;
+    } catch (e) {
+      const msg = String(e);
+      if (msg.includes('state not managed') && attempt < 6) {
+        error = 'Preparing database...';
+        setTimeout(() => loadDecorationsData(id, attempt + 1), 400 * (attempt + 1));
+        return;
+      }
+      error = msg;
+    } finally {
+      if (error !== 'Preparing database...') loading = false;
+    }
+  }
   $effect(() => {
     if (dbId == null) return;
     loading = true;
     error = null;
-    api.getDecorations(dbId)
-      .then((data) => {
-        decorations = data;
-      })
-      .catch((e) => {
-        error = String(e);
-      })
-      .finally(() => {
-        loading = false;
-      });
+    loadDecorationsData(dbId);
   });
 
   const skills = $derived(['all', ...Array.from(new Set(decorations.flatMap(d => [d.skill_name, d.secondary_skill_name].filter((x): x is string => !!x)))).sort()]);

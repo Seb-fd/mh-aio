@@ -15,20 +15,28 @@
   let searchTerm = $state('');
   let sortBy = $state<string>('chest'); // chest = game box (id) faithful to ISO DATA.BIN file 15
 
+  async function loadItems(id: number, attempt = 0) {
+    try {
+      const data = await api.getItems(id);
+      items = data;
+      error = null;
+    } catch (e) {
+      const msg = String(e);
+      if (msg.includes('state not managed') && attempt < 6) {
+        error = 'Preparing database...';
+        setTimeout(() => loadItems(id, attempt + 1), 400 * (attempt + 1));
+        return;
+      }
+      error = msg;
+    } finally {
+      if (error !== 'Preparing database...') loading = false;
+    }
+  }
   $effect(() => {
     if (dbId == null) return;
     loading = true;
     error = null;
-    api.getItems(dbId)
-      .then((data) => {
-        items = data;
-      })
-      .catch((e) => {
-        error = String(e);
-      })
-      .finally(() => {
-        loading = false;
-      });
+    loadItems(dbId);
   });
 
   const categories = $derived(['all', ...Array.from(new Set(items.map(i => i.category).filter((c): c is string => !!c)))]);

@@ -443,15 +443,20 @@ fn get_relevant_data(conn: &Connection, input: &AssQueryInput) -> rusqlite::Resu
     let mut ability_index = HashMap::new();
     for (idx, sid) in rel_ids.iter().enumerate() { ability_index.insert(*sid, idx); }
 
-    // Danger skills (only if advanced) - simplified empty unless we want full logic
-    //
-    // KNOWN LIMITATION (audit A4): `danger_skills` is intentionally left empty,
-    // so armor-borne negative abilities are never treated as "danger". Combined
-    // with `reorder_gems` being a stub (returns false), the `allow_bad` flag is
-    // effectively a no-op in the current port: the solver does NOT remove bad
-    // skills, it simply retains/returns solutions as-is. If you flip `allow_bad`
-    // and expect bad-skill remediation, that path is not implemented yet.
-    let danger_skills: HashSet<i32> = HashSet::new();
+    // Danger skills: skills that have a negative threshold (e.g. Attack -10 triggers a bad ability).
+    // When `allow_bad` is false, armors carrying those negatives are treated as risky and the solver
+    // later tries to patch them via `fix_bad_skills`. `reorder_gems` remains a stub (see below).
+    let mut danger_skills: HashSet<i32> = HashSet::new();
+    if !input.allow_bad {
+        // Populate from skill_levels negative thresholds — conservative: any skill with a <0 level is dangerous.
+        if let Ok(mut stmt) = conn.prepare("SELECT DISTINCT skill_id FROM skill_levels WHERE points < 0") {
+            if let Ok(rows) = stmt.query_map([], |row| row.get::<_, i32>(0)) {
+                for r in rows.flatten() {
+                    danger_skills.insert(r);
+                }
+            }
+        }
+    }
 
     // Build QueryInternal skeleton
     let mut q = QueryInternal {

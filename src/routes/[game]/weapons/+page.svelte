@@ -3,6 +3,7 @@
   import { goto } from '$app/navigation';
   import { selectedGame } from '$lib/stores/game';
   import { api, type Weapon } from '$lib/api';
+  import { elementColor, sharpnessValues, SHARP_COLORS_ARR as SHARP_COLORS } from '$lib/utils/mh';
 
   const game = $derived($selectedGame);
   const dbId = $derived(game?.dbId);
@@ -107,28 +108,8 @@
     goto(`/${game.id}/weapons/${id}`);
   }
 
-  function elementColor(elem: string | null): string {
-    if (!elem) return 'text-gray-500';
-    const lower = elem.toLowerCase();
-    if (lower === 'fire') return 'text-orange-400';
-    if (lower === 'water') return 'text-blue-400';
-    if (lower === 'thunder') return 'text-yellow-400';
-    if (lower === 'ice') return 'text-cyan-400';
-    if (lower === 'dragon') return 'text-purple-400';
-    return 'text-gray-400';
-  }
-
-  const SHARP_COLORS = ['#e74c3c', '#ff9800', '#f4d03f', '#58d68d', '#5dade2', '#ffffff'];
-  const SHARP_LABELS = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'White'];
-  function sharpnessSegments(raw: string | null | undefined): number[] {
-    if (!raw) return [];
-    try {
-      const a = JSON.parse(raw);
-      return (Array.isArray(a) ? a.map(Number) : []).slice(0, 6);
-    } catch {
-      return [];
-    }
-  }
+  // Helpers now from $lib/utils/mh (DRY)
+  const sharpnessSegments = sharpnessValues;
 </script>
 
 <div class="max-w-6xl mx-auto">
@@ -177,19 +158,21 @@
       {/each}
     </div>
 
-    {#each tree as group}
-      <section class="mb-10">
-        <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">{group.type}</h2>
-        {#each group.forests as node}
-          {@render treeNode(node, 0)}
-        {/each}
-      </section>
-    {/each}
+    <div class="overflow-x-auto -mx-2 px-2">
+      {#each tree as group}
+        <section class="mb-10 min-w-[320px]">
+          <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">{group.type}</h2>
+          {#each group.forests as node}
+            {@render treeNode(node, 0)}
+          {/each}
+        </section>
+      {/each}
+    </div>
   {/if}
 </div>
 
 {#snippet treeNode(node: TreeNode, depth: number)}
-  <div class="mb-1.5" style="margin-left: {depth * 18}px">
+  <div class="mb-1.5 min-w-0" style="margin-left: {depth * 18}px">
     <div class="flex items-center gap-2">
       <button
         onclick={() => open(node.weapon.id)}

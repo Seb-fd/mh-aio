@@ -723,8 +723,15 @@ fn seed_quests(conn: &Connection) -> Result<()> {
             ],
         )?;
     }
-    // Backfill for existing DBs (EN overwrite + preserve original)
-    for q in serde_json::from_str::<Vec<QuestJson>>(include_str!("../../data/mh2g_quests.json")).unwrap_or_default() {
+    // Backfill for existing DBs (EN overwrite + preserve original) — reuse parsed list; log if second parse unexpectedly fails.
+    let backfill: Vec<QuestJson> = match serde_json::from_str(include_str!("../../data/mh2g_quests.json")) {
+        Ok(v) => v,
+        Err(e) => {
+            eprintln!("[seed] mh2g_quests backfill parse failed: {}", e);
+            Vec::new()
+        }
+    };
+    for q in backfill {
         let _ = conn.execute(
             "UPDATE quests SET objective = ?1, objective_original = COALESCE(objective_original, ?2), location = ?3, location_original = COALESCE(location_original, ?4), description = COALESCE(?, description), description_original = COALESCE(description_original, ?) WHERE id = ?5 AND game_id = 5",
             rusqlite::params![q.objective, q.objective_original.as_deref().unwrap_or(&q.objective), q.location, q.location_original.as_deref().unwrap_or(&q.location), q.description, q.description_original.as_deref().unwrap_or(q.description.as_deref().unwrap_or("")), q.id],
@@ -1190,17 +1197,23 @@ fn seed_mhp3rd_weapon_materials(conn: &Connection) -> Result<()> {
 }
 
 fn weapon_exists(conn: &Connection, game_id: i32, id: i32) -> bool {
+    // Use optional() so SQLITE_BUSY / other errors don't masquerade as "not found"
+    // and silently drop legitimate weapon_materials rows under contention.
     conn.query_row(
         "SELECT 1 FROM weapons WHERE id = ?1 AND game_id = ?2",
         rusqlite::params![id, game_id],
-        |_| Ok(()),
+        |row| row.get::<_, i32>(0),
     )
-    .is_ok()
+    .optional()
+    .map(|opt| opt.is_some())
+    .unwrap_or(false)
 }
 
 fn item_exists(conn: &Connection, id: i32) -> bool {
-    conn.query_row("SELECT 1 FROM items WHERE id = ?1", rusqlite::params![id], |_| Ok(()))
-        .is_ok()
+    conn.query_row("SELECT 1 FROM items WHERE id = ?1", rusqlite::params![id], |row| row.get::<_, i32>(0))
+        .optional()
+        .map(|opt| opt.is_some())
+        .unwrap_or(false)
 }
 fn seed_mhp3rd_weapon_craft(conn: &Connection) -> Result<()> {
     let json_data = include_str!("../../data/mhp3rd_weapon_craft.json");
@@ -1303,7 +1316,14 @@ fn seed_mhp3rd_quests(conn: &Connection) -> Result<()> {
         )?;
     }
     // Backfill EN for existing installs that already have JP rows (preserve original JP in *_original)
-    for q in serde_json::from_str::<Vec<QuestJson>>(include_str!("../../data/mhp3rd_quests.json")).unwrap_or_default() {
+    let mhp3rd_backfill: Vec<QuestJson> = match serde_json::from_str(include_str!("../../data/mhp3rd_quests.json")) {
+        Ok(v) => v,
+        Err(e) => {
+            eprintln!("[seed] mhp3rd_quests backfill parse failed: {}", e);
+            Vec::new()
+        }
+    };
+    for q in mhp3rd_backfill {
         let _ = conn.execute(
             "UPDATE quests SET objective = ?1, objective_original = COALESCE(objective_original, ?2), location = ?3, location_original = COALESCE(location_original, ?4), description = COALESCE(?, description), description_original = COALESCE(description_original, ?) WHERE id = ?5 AND game_id = 4 AND (objective != ?1 OR location != ?3 OR description IS NULL)",
             rusqlite::params![q.objective, q.objective_original.as_deref().unwrap_or(&q.objective), q.location, q.location_original.as_deref().unwrap_or(&q.location), q.description, q.description_original.as_deref().unwrap_or(q.description.as_deref().unwrap_or("")), q.id],

@@ -11,20 +11,28 @@
   let loading = $state(true);
   let error = $state<string | null>(null);
 
+  async function loadSkillsData(id: number, attempt = 0) {
+    try {
+      const data = await api.getSkills(id);
+      skills = data;
+      error = null;
+    } catch (e) {
+      const msg = String(e);
+      if (msg.includes('state not managed') && attempt < 6) {
+        error = 'Preparing database...';
+        setTimeout(() => loadSkillsData(id, attempt + 1), 400 * (attempt + 1));
+        return;
+      }
+      error = msg;
+    } finally {
+      if (error !== 'Preparing database...') loading = false;
+    }
+  }
   $effect(() => {
     if (dbId == null) return;
     loading = true;
     error = null;
-    api.getSkills(dbId)
-      .then((data) => {
-        skills = data;
-      })
-      .catch((e) => {
-        error = String(e);
-      })
-      .finally(() => {
-        loading = false;
-      });
+    loadSkillsData(dbId);
   });
 
   function open(id: number) {

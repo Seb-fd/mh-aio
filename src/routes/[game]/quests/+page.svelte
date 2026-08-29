@@ -12,20 +12,28 @@
   let error = $state<string | null>(null);
   let hubFilter = $state<string>('elder');
 
+  async function loadQuests(id: number, attempt = 0) {
+    try {
+      const data = await api.getQuests(id);
+      quests = data;
+      error = null;
+    } catch (e) {
+      const msg = String(e);
+      if (msg.includes('state not managed') && attempt < 6) {
+        error = 'Preparing database...';
+        setTimeout(() => loadQuests(id, attempt + 1), 400 * (attempt + 1));
+        return;
+      }
+      error = msg;
+    } finally {
+      if (error !== 'Preparing database...') loading = false;
+    }
+  }
   $effect(() => {
     if (dbId == null) return;
     loading = true;
     error = null;
-    api.getQuests(dbId)
-      .then((data) => {
-        quests = data;
-      })
-      .catch((e) => {
-        error = String(e);
-      })
-      .finally(() => {
-        loading = false;
-      });
+    loadQuests(dbId);
   });
 
   const hubMeta: Record<string, { label: string; sub: string; icon: string }> = {
@@ -207,6 +215,8 @@
             <div class="rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] overflow-hidden">
               <button
                 onclick={() => toggle(group.stars)}
+                aria-expanded={isOpen(group.stars)}
+                aria-controls={"quest-group-" + (group.stars ?? 'none')}
                 class="w-full flex items-center gap-2.5 px-4 py-2.5 text-left bg-[var(--theme-bg-elevated)] hover:bg-[var(--theme-bg-elevated)]/70 transition-colors"
               >
                 <span class="text-[10px] text-gray-400 transition-transform {isOpen(group.stars) ? 'rotate-90' : ''}">▶</span>
@@ -215,7 +225,7 @@
                 <div class="flex-1 h-px bg-[var(--theme-border)] ml-1"></div>
               </button>
               {#if isOpen(group.stars)}
-                <div class="p-2 space-y-2">
+                <div id={"quest-group-" + (group.stars ?? 'none')} class="p-2 space-y-2">
                   {#each group.items as quest}
                     <button onclick={() => open(quest.id)} class="w-full text-left">
                       <Card class="p-4 border transition-all cursor-pointer themed-card">

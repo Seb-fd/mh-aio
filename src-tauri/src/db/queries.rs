@@ -177,7 +177,7 @@ pub struct MaterialRef {
     pub quantity: i32,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Armor {
     pub id: i32,
     pub game_id: i32,
@@ -453,7 +453,7 @@ pub fn get_monsters_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Monst
                 language: row.get(5)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
 
     Ok(monsters)
@@ -502,47 +502,65 @@ pub fn get_monster_dedicated_sets(conn: &Connection, monster_id: i32, rank: Opti
            WHERE me.monster_id = ?1 AND me.equipment_kind='armor'
          )",
     )?;
-    let set_rows: Vec<(i32,i32,String,String)> = stmt.query_map(params![monster_id], |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?)))?.filter_map(|r| r.ok()).collect();
+    let set_rows: Vec<(i32,i32,String,String)> = stmt.query_map(params![monster_id], |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?)))?.filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok()).collect();
     drop(stmt);
-    let mut out = Vec::new();
-    for (sid, gid, sname, lang) in set_rows {
-        // Rank filter: check set has at least one piece of requested rank
-        if let Some(r) = rank {
-            let cnt: i64 = conn.query_row("SELECT COUNT(*) FROM armor WHERE set_id=?1 AND rank=?2", params![sid, r], |row| row.get(0)).unwrap_or(0);
-            if cnt==0 { continue; }
-        }
-        let mut mat_stmt = conn.prepare(
-            "SELECT am.quantity, CASE WHEN md.item_id IS NOT NULL THEN 1 ELSE 0 END as is_monster
+    // Batch material score for all candidate sets in a single aggregation (eliminates N+1 mat_stmt prepares).
+    let mut score_map: std::collections::HashMap<i32, (i64, i64)> = std::collections::HashMap::new();
+    if !set_rows.is_empty() {
+        let set_ids: Vec<i32> = set_rows.iter().map(|(sid,_,_,_)| *sid).collect();
+        // Build IN list safely — ids are integers from trusted DB, no injection.
+        let in_list = set_ids.iter().map(|id| id.to_string()).collect::<Vec<_>>().join(",");
+        let agg_sql = format!(
+            "SELECT a.set_id, SUM(am.quantity) as total_qty, SUM(CASE WHEN md.item_id IS NOT NULL THEN am.quantity ELSE 0 END) as mon_qty
              FROM armor a
              JOIN armor_materials am ON am.armor_id = a.id
-             LEFT JOIN (SELECT DISTINCT item_id FROM monster_drops WHERE monster_id=?1) md ON md.item_id = am.item_id
-             WHERE a.set_id=?2",
-        )?;
-        let mut monster_qty: i64 = 0;
-        let mut total_qty: i64 = 0;
-        let rows = mat_stmt.query_map(params![monster_id, sid], |row| Ok((row.get::<_,i64>(0)?, row.get::<_,i64>(1)?)))?;
-        for r in rows {
-            if let Ok((qty, is_mon)) = r {
-                total_qty += qty;
-                if is_mon!=0 { monster_qty += qty; }
+             LEFT JOIN (SELECT DISTINCT item_id FROM monster_drops WHERE monster_id={}) md ON md.item_id = am.item_id
+             WHERE a.set_id IN ({}) GROUP BY a.set_id",
+            monster_id, in_list
+        );
+        let mut agg_stmt = conn.prepare(&agg_sql)?;
+        let agg_rows = agg_stmt.query_map([], |row| Ok((row.get::<_, i32>(0)?, row.get::<_, i64>(1)?, row.get::<_, i64>(2)?)))?;
+        for r in agg_rows {
+            if let Ok((sid, total, mon)) = r {
+                score_map.insert(sid, (mon, total));
             }
         }
-        drop(mat_stmt);
+    }
+    // Batch fetch pieces for all candidate sets (eliminates N per-set queries + rank COUNT).
+    let mut pieces_by_set: std::collections::HashMap<i32, Vec<Armor>> = std::collections::HashMap::new();
+    if !set_rows.is_empty() {
+        let set_ids_str = set_rows.iter().map(|(sid,_,_,_)| sid.to_string()).collect::<Vec<_>>().join(",");
+        if let Some(r) = rank {
+            let sql = format!("SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, armor_type, set_id, gender, language FROM armor WHERE set_id IN ({}) AND rank = ?1 ORDER BY set_id, CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END, id", set_ids_str);
+            let mut p_stmt = conn.prepare(&sql)?;
+            for row in p_stmt.query_map(params![r], |row| Ok(Armor{ id: row.get(0)?, game_id: row.get(1)?, name: row.get(2)?, slot_type: row.get(3)?, rank: row.get(4)?, rarity: row.get(5)?, defense_base: row.get(6)?, defense_max: row.get(7)?, resistance_fire: row.get(8)?, resistance_water: row.get(9)?, resistance_thunder: row.get(10)?, resistance_ice: row.get(11)?, resistance_dragon: row.get(12)?, slots: row.get(13)?, skills: row.get(14)?, armor_type: row.get(15)?, set_id: row.get(16)?, gender: row.get(17)?, language: row.get(18)? }))? {
+                match row {
+                    Ok(armor) => {
+                        if let Some(sid) = armor.set_id { pieces_by_set.entry(sid).or_default().push(armor); }
+                    }
+                    Err(e) => eprintln!("[queries] armor row decode skipped: {}", e),
+                }
+            }
+        } else {
+            let sql = format!("SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, armor_type, set_id, gender, language FROM armor WHERE set_id IN ({}) ORDER BY set_id, CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END, id", set_ids_str);
+            let mut p_stmt = conn.prepare(&sql)?;
+            for row in p_stmt.query_map([], |row| Ok(Armor{ id: row.get(0)?, game_id: row.get(1)?, name: row.get(2)?, slot_type: row.get(3)?, rank: row.get(4)?, rarity: row.get(5)?, defense_base: row.get(6)?, defense_max: row.get(7)?, resistance_fire: row.get(8)?, resistance_water: row.get(9)?, resistance_thunder: row.get(10)?, resistance_ice: row.get(11)?, resistance_dragon: row.get(12)?, slots: row.get(13)?, skills: row.get(14)?, armor_type: row.get(15)?, set_id: row.get(16)?, gender: row.get(17)?, language: row.get(18)? }))? {
+                match row {
+                    Ok(armor) => {
+                        if let Some(sid) = armor.set_id { pieces_by_set.entry(sid).or_default().push(armor); }
+                    }
+                    Err(e) => eprintln!("[queries] armor row decode skipped: {}", e),
+                }
+            }
+        }
+    }
+    let mut out = Vec::new();
+    for (sid, gid, sname, lang) in set_rows {
+        let (monster_qty, total_qty) = score_map.get(&sid).copied().unwrap_or((0, 0));
         if total_qty==0 { continue; }
         let score = monster_qty as f64 / total_qty as f64;
         if score < 0.40 { continue; }
-        // Fetch pieces for this set, filtered by rank if needed
-        let pieces_sql = if rank.is_some() {
-            "SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, armor_type, set_id, gender, language FROM armor WHERE set_id=?1 AND rank=?2 ORDER BY CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END, id"
-        } else {
-            "SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, armor_type, set_id, gender, language FROM armor WHERE set_id=?1 ORDER BY CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END, id"
-        };
-        let mut p_stmt = conn.prepare(pieces_sql)?;
-        let pieces: Vec<Armor> = if let Some(r) = rank {
-            p_stmt.query_map(params![sid, r], |row| Ok(Armor{ id: row.get(0)?, game_id: row.get(1)?, name: row.get(2)?, slot_type: row.get(3)?, rank: row.get(4)?, rarity: row.get(5)?, defense_base: row.get(6)?, defense_max: row.get(7)?, resistance_fire: row.get(8)?, resistance_water: row.get(9)?, resistance_thunder: row.get(10)?, resistance_ice: row.get(11)?, resistance_dragon: row.get(12)?, slots: row.get(13)?, skills: row.get(14)?, armor_type: row.get(15)?, set_id: row.get(16)?, gender: row.get(17)?, language: row.get(18)? }))?.filter_map(|r| r.ok()).collect()
-        } else {
-            p_stmt.query_map(params![sid], |row| Ok(Armor{ id: row.get(0)?, game_id: row.get(1)?, name: row.get(2)?, slot_type: row.get(3)?, rank: row.get(4)?, rarity: row.get(5)?, defense_base: row.get(6)?, defense_max: row.get(7)?, resistance_fire: row.get(8)?, resistance_water: row.get(9)?, resistance_thunder: row.get(10)?, resistance_ice: row.get(11)?, resistance_dragon: row.get(12)?, slots: row.get(13)?, skills: row.get(14)?, armor_type: row.get(15)?, set_id: row.get(16)?, gender: row.get(17)?, language: row.get(18)? }))?.filter_map(|r| r.ok()).collect()
-        };
+        let pieces = pieces_by_set.get(&sid).cloned().unwrap_or_default();
         if pieces.is_empty() { continue; }
         out.push(ArmorSetDetail{ id: sid, game_id: gid, name: sname, pieces, language: lang });
     }
@@ -585,7 +603,7 @@ fn get_monster_related_armor(conn: &Connection, monster_id: i32) -> Result<Vec<A
                 language: row.get(18)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
 
     Ok(armor)
@@ -642,7 +660,7 @@ fn get_monster_related_weapons(conn: &Connection, monster_id: i32) -> Result<Vec
                 language: row.get(18)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
 
     Ok(weapons)
@@ -673,7 +691,7 @@ fn get_monster_drops(conn: &Connection, monster_id: i32) -> Result<Vec<MonsterDr
                 condition: row.get(9)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
 
     Ok(drops)
@@ -700,7 +718,7 @@ fn get_monster_weaknesses(conn: &Connection, monster_id: i32) -> Result<Vec<Mons
                 dragon: row.get(9)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
 
     Ok(weaknesses)
@@ -755,7 +773,7 @@ pub fn get_weapons_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Weapon
                 language: row.get(18)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
 
     Ok(weapons)
@@ -871,7 +889,7 @@ fn get_weapon_craft_materials(conn: &Connection, weapon_id: i32, kind: &str) -> 
                 quantity: row.get(2)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
 
     Ok(materials)
@@ -894,7 +912,7 @@ fn get_weapon_materials(conn: &Connection, weapon_id: i32) -> Result<Vec<Materia
                 quantity: row.get(2)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
 
     Ok(materials)
@@ -936,7 +954,7 @@ pub fn get_armor_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Armor>> 
                 language: row.get(18)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
 
     Ok(armor)
@@ -986,7 +1004,7 @@ pub fn get_armor_sets_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Arm
                 language: row.get(6)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
     Ok(sets)
 }
@@ -1034,7 +1052,7 @@ pub fn get_armor_set_detail(conn: &Connection, id: i32) -> Result<Option<ArmorSe
                 language: row.get(18)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
     Ok(Some(ArmorSetDetail { id, game_id, name, pieces, language }))
 }
@@ -1146,7 +1164,7 @@ fn get_armor_materials(conn: &Connection, armor_id: i32) -> Result<Vec<MaterialR
                 quantity: row.get(2)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
 
     Ok(materials)
@@ -1189,7 +1207,7 @@ pub fn get_quests_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Quest>>
                 language: row.get(23)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
 
     Ok(quests)
@@ -1211,7 +1229,7 @@ fn get_quest_rewards(conn: &Connection, quest_id: i32) -> Result<Vec<QuestReward
                 condition: row.get(5)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
     Ok(rewards)
 }
@@ -1336,7 +1354,7 @@ pub fn get_items_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Item>> {
                 language: row.get(9)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
 
     Ok(items)
@@ -1437,7 +1455,7 @@ fn get_item_sources(conn: &Connection, item_id: i32) -> Result<Vec<ItemSource>> 
                 condition: row.get(10)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
 
     Ok(sources)
@@ -1463,7 +1481,7 @@ fn get_item_combine_recipes(conn: &Connection, item_id: i32) -> Result<Vec<Combi
                 chance: row.get(5)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
 
     Ok(recipes)
@@ -1546,7 +1564,7 @@ pub fn get_skills_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Skill>>
                 language: row.get(5)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
 
     Ok(skills)
@@ -1597,7 +1615,7 @@ fn get_skill_levels(conn: &Connection, skill_id: i32) -> Result<Vec<SkillLevel>>
                 description: row.get(3)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
     Ok(rows)
 }
@@ -1639,7 +1657,7 @@ fn get_decoration_materials(conn: &Connection, decoration_id: i32) -> Result<Vec
                 quantity: row.get(2)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
     Ok(rows)
 }
@@ -1670,7 +1688,7 @@ fn get_skill_decorations(conn: &Connection, skill_id: i32) -> Result<Vec<SkillDe
                 row.get(10)?,
             ))
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
 
     let mut out = Vec::new();
@@ -1724,7 +1742,7 @@ fn get_skill_armors(conn: &Connection, skill_id: i32) -> Result<Vec<SkillArmorRe
                 points: row.get(8)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
     Ok(rows)
 }
@@ -1750,7 +1768,7 @@ fn get_skill_weapons(conn: &Connection, skill_id: i32) -> Result<Vec<SkillWeapon
                 points: row.get(6)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
     Ok(rows)
 }
@@ -1819,7 +1837,7 @@ pub fn get_decorations_by_game(conn: &Connection, game_id: i32) -> Result<Vec<De
                 language: row.get(12)?,
             })
         })?
-        .filter_map(|r| r.ok())
+        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
         .collect();
     Ok(rows)
 }

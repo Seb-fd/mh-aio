@@ -1,6 +1,6 @@
 <script lang="ts">
   import { selectedGame } from '$lib/stores/game';
-  import { api, type Skill, type SkillLevel } from '$lib/api';
+  import { api, type Skill, type SkillLevel, type AssSolutionView, type AssQueryInput } from '$lib/api';
 
   const game = $derived($selectedGame);
 
@@ -28,7 +28,7 @@
   let skillLevelsMap = $state<Map<number, SkillLevel[]>>(new Map());
   let searching = $state(false);
   let error = $state<string | null>(null);
-  let results = $state<any[]>([]);
+  let results = $state<AssSolutionView[]>([]);
   let resultsCountText = $state('');
 
   async function loadSkills() {
@@ -42,10 +42,12 @@
         try {
           const detail = await api.getSkillDetail(s.id);
           if (detail) m.set(s.id, detail.levels);
-        } catch {}
+        } catch (err) {
+          console.warn('[builds] skill detail load skipped', s.id, err);
+        }
       }));
       skillLevelsMap = m;
-    } catch (e: any) {
+    } catch (e: unknown) {
       console.error(e);
     }
   }
@@ -104,7 +106,7 @@
     if (reqSkills.length > 5) { error = 'You can select up to 5 skills.'; return; }
     searching = true; error = null; results = []; resultsCountText = '';
     try {
-      const query = {
+      const query: AssQueryInput = {
         game_id: game.dbId,
         skills: reqSkills,
         hunter_type: hunterType,
@@ -117,12 +119,12 @@
         allow_torso_inc: allowTorsoInc,
         sort_by: sortBy === 'none' ? null : sortBy,
       };
-      const res = await api.searchArmorSets(query as any);
+      const res = await api.searchArmorSets(query);
       results = res;
       if (res.length >= 1000) resultsCountText = `Showing first 1000 results`;
       else resultsCountText = `${res.length} ${res.length === 1 ? 'set found' : 'sets found'}`;
-    } catch (e: any) {
-      error = e?.toString() ?? 'Search failed. Try adjusting your skills or filters.';
+    } catch (e: unknown) {
+      error = e instanceof Error ? e.message : String(e ?? 'Search failed. Try adjusting your skills or filters.');
     } finally { searching = false; }
   }
 
@@ -161,13 +163,13 @@
           <h2 class="text-sm font-semibold text-gray-200">Hunter Type</h2>
         </div>
         <div class="grid grid-cols-2 gap-2">
-          <button onclick={() => hunterType = 'blade'} class="group relative p-3 rounded-xl border-2 text-left transition-all {hunterType==='blade' ? 'border-[var(--theme-primary)] bg-[var(--theme-primary)]/10' : 'border-gray-800 bg-gray-900/50 hover:border-gray-700'}">
+          <button onclick={() => hunterType = 'blade'} class="group relative p-3 rounded-xl border-2 text-left transition-all {hunterType==='blade' ? 'border-[var(--theme-primary)] bg-[var(--theme-primary)]/10' : 'border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)]'}">
             <div class="text-lg">⚔️</div>
             <div class="text-sm font-medium mt-1 {hunterType==='blade' ? 'text-white' : 'text-gray-300'}">Blademaster</div>
             <div class="text-xs text-gray-500">Sword & melee</div>
             {#if hunterType==='blade'}<div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-[var(--theme-primary)]"></div>{/if}
           </button>
-          <button onclick={() => hunterType = 'gunner'} class="group relative p-3 rounded-xl border-2 text-left transition-all {hunterType==='gunner' ? 'border-[var(--theme-primary)] bg-[var(--theme-primary)]/10' : 'border-gray-800 bg-gray-900/50 hover:border-gray-700'}">
+          <button onclick={() => hunterType = 'gunner'} class="group relative p-3 rounded-xl border-2 text-left transition-all {hunterType==='gunner' ? 'border-[var(--theme-primary)] bg-[var(--theme-primary)]/10' : 'border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)]'}">
             <div class="text-lg">🏹</div>
             <div class="text-sm font-medium mt-1 {hunterType==='gunner' ? 'text-white' : 'text-gray-300'}">Gunner</div>
             <div class="text-xs text-gray-500">Bowguns & bows</div>
@@ -182,20 +184,20 @@
           <div class="flex items-center gap-2">
             <span class="w-6 h-6 rounded-full bg-[var(--theme-primary)] text-white flex items-center justify-center text-xs font-bold">2</span>
             <h2 class="text-sm font-semibold text-gray-200">Skills</h2>
-            <span class="text-xs px-2 py-0.5 rounded-full bg-gray-800 text-gray-400">{activeCount}/5</span>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-[var(--theme-bg-elevated)] text-gray-400">{activeCount}/5</span>
           </div>
           {#if activeCount>0}<button onclick={() => skillSlots.forEach((_,i)=>clearSkill(i))} class="text-xs text-gray-500 hover:text-gray-300">Clear all</button>{/if}
         </div>
         <p class="text-xs text-gray-500 mb-3">Choose up to 5 skills. We’ll find sets that activate them.</p>
         <div class="space-y-2">
           {#each skillSlots as slot, idx}
-            <div class="rounded-xl border-2 bg-gray-950 p-2.5 transition-colors {slot.skillId ? 'border-[var(--theme-primary)]/40 bg-[var(--theme-primary)]/5' : 'border-dashed border-gray-800 hover:border-gray-700'}">
+            <div class="rounded-xl border-2 bg-[var(--theme-bg-base)] p-2.5 transition-colors {slot.skillId ? 'border-[var(--theme-primary)]/40 bg-[var(--theme-primary)]/5' : 'border-dashed border-[var(--theme-border)] hover:border-[var(--theme-border-strong)]'}">
               {#if slot.skillId}
                 <div class="flex items-start gap-2">
                   <div class="w-8 h-8 rounded-lg bg-[var(--theme-primary)]/15 flex items-center justify-center text-sm shrink-0">✨</div>
                   <div class="flex-1 min-w-0">
                     <div class="text-sm font-medium text-gray-100 truncate">{slot.skillName}</div>
-                    <select bind:value={slot.points} class="mt-1 w-full bg-gray-900 border border-gray-800 rounded-lg px-2 py-1 text-xs text-gray-300">
+                    <select bind:value={slot.points} class="mt-1 w-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-lg px-2 py-1 text-xs text-gray-300">
                       {#each getAbilityOptions(slot.skillId) as lvl}
                         <option value={lvl.points}>{lvl.ability_name} ({lvl.points >0 ? '+' : ''}{lvl.points})</option>
                       {/each}
@@ -204,22 +206,22 @@
                       {/if}
                     </select>
                   </div>
-                  <button onclick={() => clearSkill(idx)} class="w-7 h-7 rounded-lg bg-gray-900 hover:bg-gray-800 flex items-center justify-center text-gray-500 hover:text-gray-300 shrink-0">×</button>
+                  <button onclick={() => clearSkill(idx)} class="w-7 h-7 rounded-lg bg-[var(--theme-bg-surface)] hover:bg-[var(--theme-bg-elevated)] flex items-center justify-center text-gray-500 hover:text-gray-300 shrink-0">×</button>
                 </div>
               {:else}
                 <div class="relative">
                   <input
                     placeholder="Add a skill — try “Attack” or “Earplug”"
-                    class="w-full bg-gray-900 border border-gray-800 rounded-lg pl-9 pr-3 py-2.5 text-sm text-gray-200 placeholder-gray-600 focus:outline-none focus:border-[var(--theme-primary)]/50"
+                    class="w-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-lg pl-9 pr-3 py-2.5 text-sm text-gray-200 placeholder-gray-600 focus:outline-none focus:border-[var(--theme-primary)]/50"
                     bind:value={slot.filter}
                     onfocus={() => slot.open = true}
                     oninput={() => slot.open = true}
                   />
                   <span class="absolute left-3 top-2.5 text-gray-600 text-sm">🔍</span>
                   {#if slot.open}
-                    <div class="absolute z-10 mt-1 w-full max-h-48 overflow-auto bg-gray-900 border border-gray-800 rounded-xl shadow-xl">
+                    <div class="absolute z-10 mt-1 w-full max-h-48 overflow-auto bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-xl shadow-xl">
                       {#each filteredSkills(slot.filter) as s}
-                        <button class="w-full text-left px-3 py-2.5 text-sm hover:bg-gray-800 text-gray-300 flex items-center justify-between" onclick={() => selectSkill(idx, s)}>
+                        <button class="w-full text-left px-3 py-2.5 text-sm hover:bg-[var(--theme-bg-elevated)] text-gray-300 flex items-center justify-between" onclick={() => selectSkill(idx, s)}>
                           <span>{s.name}</span>
                           <span class="text-xs text-gray-600">+{skillLevelsMap.get(s.id)?.filter(l=>l.points>0)[0]?.points ?? 10}</span>
                         </button>
@@ -236,32 +238,32 @@
         </div>
         <div class="mt-3 flex flex-wrap gap-1.5">
           <span class="text-xs text-gray-600 py-1">Try:</span>
-          <button onclick={() => applyExample([{name:'Attack', points:20},{name:'Sharpness', points:10}])} class="text-xs px-2.5 py-1 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-300">Attack + Sharpness</button>
-          <button onclick={() => applyExample([{name:'HearProtct', points:10},{name:'WindPress', points:10}])} class="text-xs px-2.5 py-1 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-300">Earplug + Wind</button>
-          <button onclick={() => applyExample([{name:'Expert', points:20}])} class="text-xs px-2.5 py-1 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-300">Critical</button>
+          <button onclick={() => applyExample([{name:'Attack', points:20},{name:'Sharpness', points:10}])} class="text-xs px-2.5 py-1 rounded-full bg-[var(--theme-bg-elevated)] hover:bg-[var(--theme-bg-elevated)] text-gray-300">Attack + Sharpness</button>
+          <button onclick={() => applyExample([{name:'HearProtct', points:10},{name:'WindPress', points:10}])} class="text-xs px-2.5 py-1 rounded-full bg-[var(--theme-bg-elevated)] hover:bg-[var(--theme-bg-elevated)] text-gray-300">Earplug + Wind</button>
+          <button onclick={() => applyExample([{name:'Expert', points:20}])} class="text-xs px-2.5 py-1 rounded-full bg-[var(--theme-bg-elevated)] hover:bg-[var(--theme-bg-elevated)] text-gray-300">Critical</button>
         </div>
       </div>
 
       <!-- Step 3: Filters -->
       <div class="themed-card rounded-xl border p-4">
         <div class="flex items-center gap-2 mb-3">
-          <span class="w-6 h-6 rounded-full bg-gray-800 text-gray-400 flex items-center justify-center text-xs font-bold">3</span>
+          <span class="w-6 h-6 rounded-full bg-[var(--theme-bg-elevated)] text-gray-400 flex items-center justify-center text-xs font-bold">3</span>
           <h2 class="text-sm font-semibold text-gray-200">Hunter Details</h2>
           <span class="text-xs text-gray-600 ml-auto">Optional</span>
         </div>
         <div class="grid grid-cols-3 gap-2">
           <label class="text-xs text-gray-500">HR
-            <select bind:value={hr} class="mt-1 w-full bg-gray-900 border border-gray-800 rounded-lg px-2 py-2 text-sm text-gray-200">
+            <select bind:value={hr} class="mt-1 w-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-lg px-2 py-2 text-sm text-gray-200">
               {#each [1,2,3,4,5,6,7,8,9] as v}<option value={v}>{v}</option>{/each}
             </select>
           </label>
           <label class="text-xs text-gray-500">Elder ★
-            <select bind:value={elderStar} class="mt-1 w-full bg-gray-900 border border-gray-800 rounded-lg px-2 py-2 text-sm text-gray-200">
+            <select bind:value={elderStar} class="mt-1 w-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-lg px-2 py-2 text-sm text-gray-200">
               {#each [1,2,3,4,5,6,7,8,9] as v}<option value={v}>{v}</option>{/each}
             </select>
           </label>
           <label class="text-xs text-gray-500">Weapon Slots
-            <select bind:value={weaponSlots} class="mt-1 w-full bg-gray-900 border border-gray-800 rounded-lg px-2 py-2 text-sm text-gray-200">
+            <select bind:value={weaponSlots} class="mt-1 w-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-lg px-2 py-2 text-sm text-gray-200">
               <option value={0}>0 — none</option>
               <option value={1}>1 — O--</option>
               <option value={2}>2 — OO-</option>
@@ -270,19 +272,19 @@
           </label>
         </div>
         <div class="mt-3 flex gap-2">
-          <button onclick={() => gender='male'} class="flex-1 py-2 rounded-lg border text-xs font-medium {gender==='male' ? 'bg-[var(--theme-primary)] text-white border-[var(--theme-primary)]' : 'bg-gray-900 border-gray-800 text-gray-400'}">Male</button>
-          <button onclick={() => gender='female'} class="flex-1 py-2 rounded-lg border text-xs font-medium {gender==='female' ? 'bg-[var(--theme-primary)] text-white border-[var(--theme-primary)]' : 'bg-gray-900 border-gray-800 text-gray-400'}">Female</button>
+          <button onclick={() => gender='male'} class="flex-1 py-2 rounded-lg border text-xs font-medium {gender==='male' ? 'bg-[var(--theme-primary)] text-white border-[var(--theme-primary)]' : 'bg-[var(--theme-bg-surface)] border-[var(--theme-border)] text-gray-400'}">Male</button>
+          <button onclick={() => gender='female'} class="flex-1 py-2 rounded-lg border text-xs font-medium {gender==='female' ? 'bg-[var(--theme-primary)] text-white border-[var(--theme-primary)]' : 'bg-[var(--theme-bg-surface)] border-[var(--theme-border)] text-gray-400'}">Female</button>
         </div>
         <button onclick={() => showAdvanced = !showAdvanced} class="mt-3 w-full text-xs text-gray-500 hover:text-gray-300 flex items-center justify-center gap-1">
           {showAdvanced ? 'Hide advanced' : 'Show advanced'} <span class="text-[10px]">{showAdvanced ? '▲' : '▼'}</span>
         </button>
         {#if showAdvanced}
-          <div class="mt-3 space-y-2 pt-3 border-t border-gray-800">
-            <label class="flex items-center justify-between gap-2 text-xs text-gray-300 bg-gray-900 rounded-lg px-3 py-2"><span>Allow negative skills</span><input type="checkbox" bind:checked={allowBad} class="accent-[var(--theme-primary)]" /></label>
-            <label class="flex items-center justify-between gap-2 text-xs text-gray-300 bg-gray-900 rounded-lg px-3 py-2"><span>Include piercings</span><input type="checkbox" bind:checked={includePiercings} /></label>
-            <label class="flex items-center justify-between gap-2 text-xs text-gray-300 bg-gray-900 rounded-lg px-3 py-2"><span>Include Torso Inc</span><input type="checkbox" bind:checked={allowTorsoInc} /></label>
+          <div class="mt-3 space-y-2 pt-3 border-t border-[var(--theme-border)]">
+            <label class="flex items-center justify-between gap-2 text-xs text-gray-300 bg-[var(--theme-bg-surface)] rounded-lg px-3 py-2" title={allowBad ? 'Negative skills allowed — solutions may include bad abilities' : 'Negative skills filtered — solver tries to patch bad skills with jewels (advanced reordering not yet implemented)'}><span>Allow negative skills {#if !allowBad}<span class="ml-1 text-[10px] text-gray-500">(beta)</span>{/if}</span><input type="checkbox" bind:checked={allowBad} class="accent-[var(--theme-primary)]" /></label>
+            <label class="flex items-center justify-between gap-2 text-xs text-gray-300 bg-[var(--theme-bg-surface)] rounded-lg px-3 py-2"><span>Include piercings</span><input type="checkbox" bind:checked={includePiercings} /></label>
+            <label class="flex items-center justify-between gap-2 text-xs text-gray-300 bg-[var(--theme-bg-surface)] rounded-lg px-3 py-2"><span>Include Torso Inc</span><input type="checkbox" bind:checked={allowTorsoInc} /></label>
             <label class="text-xs text-gray-500">Sort by
-              <select bind:value={sortBy} class="mt-1 w-full bg-gray-900 border border-gray-800 rounded-lg px-2 py-2 text-xs text-gray-300">
+              <select bind:value={sortBy} class="mt-1 w-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-lg px-2 py-2 text-xs text-gray-300">
                 {#each sortOptions as o}<option value={o.v}>{o.l}</option>{/each}
               </select>
             </label>
@@ -290,7 +292,7 @@
         {/if}
       </div>
 
-      <button class="w-full py-3 rounded-xl text-sm font-bold flex items-center justify-center gap-2 {searching ? 'bg-gray-800 text-gray-500' : 'bg-[var(--theme-primary)] text-white hover:opacity-90 shadow-lg shadow-[var(--theme-primary)]/20'}" disabled={searching || activeCount===0} onclick={doSearch}>
+      <button class="w-full py-3 rounded-xl text-sm font-bold flex items-center justify-center gap-2 {searching ? 'bg-[var(--theme-bg-elevated)] text-gray-500' : 'bg-[var(--theme-primary)] text-white hover:opacity-90 shadow-lg shadow-[var(--theme-primary)]/20'}" disabled={searching || activeCount===0} onclick={doSearch}>
         {#if searching}<span class="w-4 h-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin"></span> Searching...{:else}Find Armor Sets →{/if}
       </button>
       <p class="text-xs text-center text-gray-600">{activeCount === 0 ? 'Add at least one skill to search' : `${activeCount} skill${activeCount>1?'s':''} selected — ready to search`}</p>
@@ -299,48 +301,48 @@
 
     <!-- Results -->
     <div class="themed-card rounded-xl border flex flex-col min-h-0 overflow-hidden lg:flex-1">
-      <div class="px-5 py-4 border-b border-gray-800 flex items-center justify-between">
+      <div class="px-5 py-4 border-b border-[var(--theme-border)] flex items-center justify-between">
         <div>
           <h2 class="text-sm font-semibold text-gray-100">Results</h2>
           <p class="text-xs text-gray-500">{resultsCountText || 'Your matching sets will appear here'}</p>
         </div>
-        {#if results.length>0}<span class="text-xs px-2.5 py-1 rounded-full bg-gray-800 text-gray-400">{results.length}</span>{/if}
+        {#if results.length>0}<span class="text-xs px-2.5 py-1 rounded-full bg-[var(--theme-bg-elevated)] text-gray-400">{results.length}</span>{/if}
       </div>
       <div class="flex-1 min-h-0 p-4 space-y-3 overflow-auto">
         {#if results.length === 0 && !searching}
           <div class="py-16 text-center">
-            <div class="w-16 h-16 mx-auto rounded-2xl bg-gray-900 border border-gray-800 flex items-center justify-center text-2xl mb-4">🛡️</div>
+            <div class="w-16 h-16 mx-auto rounded-2xl bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] flex items-center justify-center text-2xl mb-4">🛡️</div>
             <h3 class="text-sm font-semibold text-gray-300">No sets yet</h3>
             <p class="text-xs text-gray-500 mt-1 max-w-sm mx-auto">Choose the skills you need — like Attack, Earplug, or Sharpness — and we’ll find every armor combination that activates them, including the jewels you’ll need to slot in.</p>
             <div class="mt-6 flex flex-wrap justify-center gap-2">
-              <button onclick={() => applyExample([{name:'Attack', points:20}])} class="text-xs px-3 py-1.5 rounded-full border border-gray-800 bg-gray-900 text-gray-400 hover:text-gray-200">Try Attack Up (Large)</button>
-              <button onclick={() => applyExample([{name:'HearProtct', points:10}])} class="text-xs px-3 py-1.5 rounded-full border border-gray-800 bg-gray-900 text-gray-400 hover:text-gray-200">Try Earplug</button>
+              <button onclick={() => applyExample([{name:'Attack', points:20}])} class="text-xs px-3 py-1.5 rounded-full border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] text-gray-400 hover:text-gray-200">Try Attack Up (Large)</button>
+              <button onclick={() => applyExample([{name:'HearProtct', points:10}])} class="text-xs px-3 py-1.5 rounded-full border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] text-gray-400 hover:text-gray-200">Try Earplug</button>
             </div>
           </div>
         {/if}
         {#if searching}
           <div class="space-y-3">
             {#each [1,2,3] as _}
-              <div class="bg-gray-950 border border-gray-800 rounded-xl p-4 animate-pulse">
-                <div class="h-3 bg-gray-800 rounded w-1/3 mb-3"></div>
-                <div class="grid grid-cols-2 gap-2"><div class="h-8 bg-gray-900 rounded"></div><div class="h-8 bg-gray-900 rounded"></div><div class="h-8 bg-gray-900 rounded"></div><div class="h-8 bg-gray-900 rounded"></div></div>
+              <div class="bg-[var(--theme-bg-base)] border border-[var(--theme-border)] rounded-xl p-4 animate-pulse">
+                <div class="h-3 bg-[var(--theme-bg-elevated)] rounded w-1/3 mb-3"></div>
+                <div class="grid grid-cols-2 gap-2"><div class="h-8 bg-[var(--theme-bg-surface)] rounded"></div><div class="h-8 bg-[var(--theme-bg-surface)] rounded"></div><div class="h-8 bg-[var(--theme-bg-surface)] rounded"></div><div class="h-8 bg-[var(--theme-bg-surface)] rounded"></div></div>
               </div>
             {/each}
           </div>
         {/if}
         {#each results as sol, i}
-          <div class="bg-gray-950 border border-gray-800 rounded-xl p-4 hover:border-gray-700 transition-colors">
+          <div class="bg-[var(--theme-bg-base)] border border-[var(--theme-border)] rounded-xl p-4 hover:border-[var(--theme-border-strong)] transition-colors">
             <div class="flex items-center justify-between mb-3">
               <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-[var(--theme-primary)] text-white">#{i+1}</span>
               <div class="flex items-center gap-1.5 text-[11px]">
-                <span class="px-2 py-1 rounded-full bg-gray-900 border border-gray-800 text-gray-400">DEF {sol.defense}</span>
-                <span class="px-2 py-1 rounded-full bg-gray-900 border border-gray-800 text-emerald-400">{sol.slots_spare} spare</span>
+                <span class="px-2 py-1 rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-gray-400">DEF {sol.defense}</span>
+                <span class="px-2 py-1 rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-emerald-400">{sol.slots_spare} spare</span>
               </div>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {#each sol.armors as a}
-                <div class="flex items-center gap-2 bg-gray-900 rounded-xl px-3 py-2.5 border border-gray-800">
-                  <span class="w-8 h-8 rounded-lg bg-gray-800 flex items-center justify-center text-xs shrink-0">{a.slot_type==='head' ? '⛑️' : a.slot_type==='chest' ? '🦺' : a.slot_type==='arms' ? '🥊' : a.slot_type==='waist' ? '🪢' : '🥾'}</span>
+                <div class="flex items-center gap-2 bg-[var(--theme-bg-surface)] rounded-xl px-3 py-2.5 border border-[var(--theme-border)]">
+                  <span class="w-8 h-8 rounded-lg bg-[var(--theme-bg-elevated)] flex items-center justify-center text-xs shrink-0">{a.slot_type==='head' ? '⛑️' : a.slot_type==='chest' ? '🦺' : a.slot_type==='arms' ? '🥊' : a.slot_type==='waist' ? '🪢' : '🥾'}</span>
                   <div class="flex-1 min-w-0">
                     <div class="text-sm font-medium text-gray-100 truncate">{a.name}</div>
                     <div class="text-xs text-gray-500">{a.slot_type} · {a.slots} {a.slots==='1' ? 'slot' : 'slots'}</div>
@@ -354,14 +356,14 @@
               <span class="px-2 py-1 rounded-full bg-yellow-950/40 text-yellow-300 border border-yellow-900/30">Thunder {sol.thunder_res}</span>
               <span class="px-2 py-1 rounded-full bg-cyan-950/40 text-cyan-300 border border-cyan-900/30">Ice {sol.ice_res}</span>
               <span class="px-2 py-1 rounded-full bg-purple-950/40 text-purple-300 border border-purple-900/30">Dragon {sol.dragon_res}</span>
-              <span class="px-2 py-1 rounded-full bg-gray-900 border border-gray-800 text-gray-400">Rarity {sol.rarity}</span>
+              <span class="px-2 py-1 rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-gray-400">Rarity {sol.rarity}</span>
             </div>
             {#if sol.decorations.length}
               <div class="mt-3">
                 <div class="text-xs font-medium text-gray-400 mb-1.5">Jewels needed</div>
                 <div class="flex flex-wrap gap-1.5">
                   {#each sol.decorations as d}
-                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[var(--theme-primary)]/10 border border-[var(--theme-primary)]/20 text-xs text-[var(--theme-primary)]">💎 {d.count}× {d.name}<span class="text-gray-500">({d.skill_name} {d.skill_points >0 ? '+' : ''}{d.skill_points}{#if d.secondary_skill_name} / {d.secondary_skill_name}{/if})</span></span>
+                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[var(--theme-primary)]/10 border border-[var(--theme-primary)]/20 text-xs text-[var(--theme-primary)]">💎 {d.count}× {d.name}<span class="text-gray-500">({d.skill_name} {(d.skill_points ?? 0) >0 ? '+' : ''}{d.skill_points ?? 0}{#if d.secondary_skill_name} / {d.secondary_skill_name}{/if})</span></span>
                   {/each}
                 </div>
               </div>

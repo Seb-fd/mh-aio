@@ -104,11 +104,18 @@
   }
 </script>
 
-<div class="relative w-full max-w-xs md:max-w-sm" onblur={onBlur}>
+<div class="relative w-full max-w-xs md:max-w-sm" onfocusout={onBlur}>
   <div class="relative">
-    <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm">🔍</span>
+    <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm" aria-hidden="true">🔍</span>
+    <label for="global-search-input" class="sr-only">Search {game?.shortName ?? 'current game'}</label>
     <input
+      id="global-search-input"
       type="text"
+      role="combobox"
+      aria-expanded={open && query.trim().length >= 2}
+      aria-controls="global-search-listbox"
+      aria-autocomplete="list"
+      aria-activedescendant={activeIndex >= 0 ? `search-opt-${activeIndex}` : undefined}
       placeholder="Search {game?.shortName ?? 'this game'} — skills, monsters, items…"
       bind:value={query}
       oninput={onInput}
@@ -124,6 +131,9 @@
 
   {#if open && query.trim().length >= 2}
     <div
+      id="global-search-listbox"
+      role="listbox"
+      aria-label="Search results"
       class="absolute z-50 mt-2 w-full max-h-[70vh] overflow-auto rounded-xl border shadow-2xl"
       style="background-color: var(--theme-bg-surface); border-color: var(--theme-border-strong);"
     >
@@ -141,6 +151,9 @@
             {@const flat = indexInGroup(kind, idx)}
             {@const selected = flat === activeIndex}
             <button
+              id="search-opt-{flat}"
+              role="option"
+              aria-selected={selected}
               class="w-full flex items-center gap-2.5 px-3 py-2 text-left transition-colors {selected ? 'bg-[var(--theme-primary)]/10' : 'hover:bg-[var(--theme-bg-elevated)]'}"
               onmouseenter={() => (activeIndex = flat)}
               onclick={() => go(r)}

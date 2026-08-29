@@ -5,6 +5,7 @@
   import { api, type WeaponDetail, type Weapon } from '$lib/api';
   import DetailHeader from '$lib/components/detail-header.svelte';
   import MaterialList from '$lib/components/material-list.svelte';
+  import { elementColor, sharpnessValues, SHARP_COLORS_ARR as SHARP_COLORS, SHARP_LABELS } from '$lib/utils/mh';
 
   const id = $derived(Number($page.params.id));
   let weapon = $state<WeaponDetail | null>(null);
@@ -69,28 +70,8 @@
 
   const isUpgrade = $derived(!!weapon?.upgrade_path);
 
-  function elementColor(elem: string | null): string {
-    if (!elem) return 'text-gray-400';
-    const lower = elem.toLowerCase();
-    if (lower === 'fire') return 'text-orange-400';
-    if (lower === 'water') return 'text-blue-400';
-    if (lower === 'thunder') return 'text-yellow-400';
-    if (lower === 'ice') return 'text-cyan-400';
-    if (lower === 'dragon') return 'text-purple-400';
-    return 'text-gray-400';
-  }
-
-  const SHARP_COLORS = ['#e74c3c', '#ff9800', '#f4d03f', '#58d68d', '#5dade2', '#ffffff'];
-  const SHARP_LABELS = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'White'];
-  function sharpnessSegments(raw: string | null | undefined): number[] {
-    if (!raw) return [];
-    try {
-      const a = JSON.parse(raw);
-      return (Array.isArray(a) ? a.map(Number) : []).slice(0, 6);
-    } catch {
-      return [];
-    }
-  }
+  // Helpers now from $lib/utils/mh (DRY)
+  const sharpnessSegments = sharpnessValues;
   const sharpTotal = $derived(sharpnessSegments(weapon?.sharpness).reduce((a, b) => a + b, 0));
 
   function openWeapon(wid: number | null | undefined) {
