@@ -34,6 +34,9 @@ jobs:
       - name: Version sync check
         run: node scripts/check-version.js
 
+      - name: SvelteKit sync
+        run: npx svelte-kit sync
+
       - name: Svelte check
         run: npm run check
 
