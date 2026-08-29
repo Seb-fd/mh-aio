@@ -1,6 +1,6 @@
 [package]
 name = "mh-aio"
-version = "0.1.0"
+version = "0.1.1"
 description = "Monster Hunter All-in-One Encyclopedia"
 authors = ["you"]
 edition = "2021"
