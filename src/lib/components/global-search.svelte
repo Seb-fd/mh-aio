@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { goto } from '$app/navigation';
-  import { selectedGame } from '$lib/stores/game';
-  import { api, type SearchResult } from '$lib/api';
+  import { goto } from '$app/navigation'
+  import { selectedGame } from '$lib/stores/game'
+  import { api, type SearchResult } from '$lib/api'
 
-  const game = $derived($selectedGame);
+  const game = $derived($selectedGame)
 
-  let query = $state('');
-  let results = $state<SearchResult[]>([]);
-  let loading = $state(false);
-  let open = $state(false);
-  let activeIndex = $state(-1);
-  let debounceTimer: ReturnType<typeof setTimeout> | undefined;
+  let query = $state('')
+  let results = $state<SearchResult[]>([])
+  let loading = $state(false)
+  let open = $state(false)
+  let activeIndex = $state(-1)
+  let debounceTimer: ReturnType<typeof setTimeout> | undefined
 
   const kindMeta: Record<string, { icon: string; label: string }> = {
     monster: { icon: '🐉', label: 'Monster' },
@@ -21,93 +21,103 @@
     armor_set: { icon: '🛡️', label: 'Armor Set' },
     quest: { icon: '📜', label: 'Quest' },
     decoration: { icon: '💎', label: 'Decoration' },
-  };
+  }
 
   function onInput() {
-    open = true;
-    activeIndex = -1;
-    clearTimeout(debounceTimer);
-    const q = query.trim();
+    open = true
+    activeIndex = -1
+    clearTimeout(debounceTimer)
+    const q = query.trim()
     if (q.length < 2) {
-      results = [];
-      loading = false;
-      return;
+      results = []
+      loading = false
+      return
     }
-    loading = true;
-    debounceTimer = setTimeout(() => runSearch(q), 250);
+    loading = true
+    debounceTimer = setTimeout(() => runSearch(q), 250)
   }
 
   async function runSearch(q: string) {
-    if (!game) return;
+    if (!game) return
     try {
-      const res = await api.globalSearch(game.dbId, q);
-      results = res ?? [];
+      const res = await api.globalSearch(game.dbId, q)
+      results = res ?? []
     } catch (e) {
-      console.error('[search]', e);
-      results = [];
+      console.error('[search]', e)
+      results = []
     } finally {
-      loading = false;
+      loading = false
     }
   }
 
   function go(r: SearchResult) {
-    if (!game) return;
-    open = false;
-    query = '';
-    results = [];
-    goto(`/${game.id}${r.route}`);
+    if (!game) return
+    open = false
+    query = ''
+    results = []
+    goto(`/${game.id}${r.route}`)
   }
 
   function onKeydown(e: KeyboardEvent) {
     if (!open || results.length === 0) {
-      if (e.key === 'Escape') { open = false; query = ''; }
-      return;
+      if (e.key === 'Escape') {
+        open = false
+        query = ''
+      }
+      return
     }
     if (e.key === 'ArrowDown') {
-      e.preventDefault();
-      activeIndex = Math.min(activeIndex + 1, results.length - 1);
+      e.preventDefault()
+      activeIndex = Math.min(activeIndex + 1, results.length - 1)
     } else if (e.key === 'ArrowUp') {
-      e.preventDefault();
-      activeIndex = Math.max(activeIndex - 1, -1);
+      e.preventDefault()
+      activeIndex = Math.max(activeIndex - 1, -1)
     } else if (e.key === 'Enter' && activeIndex >= 0) {
-      e.preventDefault();
-      go(results[activeIndex]);
+      e.preventDefault()
+      go(results[activeIndex])
     } else if (e.key === 'Escape') {
-      open = false;
+      open = false
     }
   }
 
   function onBlur() {
-    setTimeout(() => { open = false; }, 150);
+    setTimeout(() => {
+      open = false
+    }, 150)
   }
 
   const grouped = $derived.by(() => {
-    const map = new Map<string, SearchResult[]>();
+    const map = new Map<string, SearchResult[]>()
     for (const r of results) {
-      const arr = map.get(r.kind) ?? [];
-      arr.push(r);
-      map.set(r.kind, arr);
+      const arr = map.get(r.kind) ?? []
+      arr.push(r)
+      map.set(r.kind, arr)
     }
-    return map;
-  });
+    return map
+  })
 
-  const groupedEntries = $derived([...grouped.entries()]);
-  let flatIndex = -1;
+  const groupedEntries = $derived([...grouped.entries()])
   function indexInGroup(group: string, idx: number): number {
     // compute flattened index for highlight navigation
-    let base = 0;
+    let base = 0
     for (const [g, arr] of groupedEntries) {
-      if (g === group) { return base + idx; }
-      base += arr.length;
+      if (g === group) {
+        return base + idx
+      }
+      base += arr.length
     }
-    return base;
+    return base
   }
 </script>
 
 <div class="relative w-full max-w-xs md:max-w-sm" onfocusout={onBlur}>
   <div class="relative">
-    <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm" aria-hidden="true">🔍</span>
-    <label for="global-search-input" class="sr-only">Search {game?.shortName ?? 'current game'}</label>
+    <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm" aria-hidden="true"
+      >🔍</span
+    >
+    <label for="global-search-input" class="sr-only"
+      >Search {game?.shortName ?? 'current game'}</label
+    >
     <input
       id="global-search-input"
       type="text"
@@ -125,7 +135,9 @@
       style="background-color: var(--theme-bg-elevated); border-color: var(--theme-border); color: var(--theme-text-accent);"
     />
     {#if loading}
-      <span class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-500 w-3 h-3 border-2 border-gray-500 border-t-transparent rounded-full animate-spin"></span>
+      <span
+        class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-500 w-3 h-3 border-2 border-gray-500 border-t-transparent rounded-full animate-spin"
+      ></span>
     {/if}
   </div>
 
@@ -144,8 +156,11 @@
       {:else}
         {#each groupedEntries as [kind, items]}
           {@const meta = kindMeta[kind] ?? { icon: '🔍', label: kind }}
-          <div class="px-3 pt-2 pb-1 text-[10px] uppercase tracking-widest font-semibold text-gray-500">
-            {meta.icon} {meta.label}
+          <div
+            class="px-3 pt-2 pb-1 text-[10px] uppercase tracking-widest font-semibold text-gray-500"
+          >
+            {meta.icon}
+            {meta.label}
           </div>
           {#each items as r, idx}
             {@const flat = indexInGroup(kind, idx)}
@@ -154,7 +169,9 @@
               id="search-opt-{flat}"
               role="option"
               aria-selected={selected}
-              class="w-full flex items-center gap-2.5 px-3 py-2 text-left transition-colors {selected ? 'bg-[var(--theme-primary)]/10' : 'hover:bg-[var(--theme-bg-elevated)]'}"
+              class="w-full flex items-center gap-2.5 px-3 py-2 text-left transition-colors {selected
+                ? 'bg-[var(--theme-primary)]/10'
+                : 'hover:bg-[var(--theme-bg-elevated)]'}"
               onmouseenter={() => (activeIndex = flat)}
               onclick={() => go(r)}
               value="search-{r.kind}-{r.id}"

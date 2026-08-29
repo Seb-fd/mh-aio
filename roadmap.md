@@ -11,6 +11,7 @@ Current state: **MH2G / Freedom Unite is fully populated and verified** (2075 ar
 ## Tech Stack
 
 ### Frontend
+
 - **Framework:** Tauri v2 (Rust + WebView)
 - **UI:** Svelte 5 + TypeScript
 - **Styling:** Tailwind CSS v4 (`@theme` block, no config file)
@@ -20,12 +21,14 @@ Current state: **MH2G / Freedom Unite is fully populated and verified** (2075 ar
 - **Routing:** SvelteKit client-side (SSR disabled, adapter-static with `fallback: 'index.html'`)
 
 ### Backend (Rust)
+
 - **Framework:** Tauri v2 Commands (IPC) — `tauri-plugin-shell` removed, CSP hardened
 - **Database:** SQLite via `rusqlite` (`bundled` + `functions` feature, WAL mode, `PRAGMA foreign_keys=ON`, `norm_key` SQL scalar via `register_functions`)
 - **Serialization:** Serde + JSON
 - **Migrations:** Hand-rolled (`ALTER TABLE ... ADD COLUMN` with `pragma_table_info` check) + `schema_version` table + `add_idempotency_constraints()` dedup/UNIQUE indexes; `INSERT OR IGNORE` idempotent seed (no `clear_game`)
 
 ### Future Platforms
+
 - **Desktop:** Windows / macOS / Linux (Tauri v2) — current
 - **Mobile:** iOS / Android (Tauri v2 mobile) — planned (lib already supports `cdylib` + `staticlib`)
 - **Web:** PWA — not planned (Tauri-focused)
@@ -289,6 +292,7 @@ CREATE TABLE armor_materials (
 ## Priority Games
 
 ### Current Focus
+
 1. **Monster Hunter 2ndG / Freedom Unite** (2008) — MHP2G, **fully populated and verified**
    - 2075 armor, **1083 items fully sourced** (12,751 `item_sources` rows + 432 combine recipes), 83 monsters (54 Large + 25 Small + 4 Giant), 1500 weapons (11 types), 610 quests (Village/Guild/Training/Treasure/Event/Challenge), 99 skill families (214 abilities), 192 decorations
    - Materials, drop sources, combine recipes populated; item taxonomy ISO-derived (`Consumable 91 / Material 913 / Ammo 79` + `subcategory` Charm/Husk/Coating); ordering faithful to UMD (Hunter's Notes, Smith trees, quest hubs, Book of Combos)
@@ -299,6 +303,7 @@ CREATE TABLE armor_materials (
    - Sourced from `MHP3: Item List` + `www.mhp3wiki.info` via Playwright; gaps: gathering-only `item_sources` (shop/trade/farm pending), numeric struct audit pending
 
 ### Planned
+
 3. **Monster Hunter World: Iceborne** (2018/2019)
    - Sources: mhw-db.com API, Kiranico
 4. **Monster Hunter Rise: Sunbreak** (2021/2022)
@@ -311,6 +316,7 @@ CREATE TABLE armor_materials (
 ## Features by Phase
 
 ### ✅ Phase 1: MVP Core — DONE
+
 - [x] Tauri v2 + Svelte 5 + shadcn-svelte stack
 - [x] SQLite with migrations and idempotent seed
 - [x] Tailwind CSS v4 with themed-bg utilities
@@ -326,6 +332,7 @@ CREATE TABLE armor_materials (
 - [x] Build verification (cargo, vite, svelte-check)
 
 ### ✅ Phase 2: Data Expansion (MH2G) — DONE
+
 - [x] Full MHP2G monster/weapon/armor/quest/item/skill/decor set
 - [x] monster_weaknesses + monster_drops + quest_rewards + item_combine
 - [x] **Items fully sourced** (12,751 `item_sources` rows: every gathering node/mining/bug/fish from `maps.json`, 5 merchants consolidated, Veggie Elder + Trenya Boat trades, Pokke Farm spots/trees, small-monster drops) — 1083/1083 covered
@@ -338,6 +345,7 @@ CREATE TABLE armor_materials (
 - [x] Monster → dedicated armor sets (≥40% material score) + "Uses 1 Material"
 
 ### ✅ Phase 3: Build System — Armor Set Search (DONE)
+
 - [x] ASS solver port (`src-tauri/src/ass.rs`) — equivalences, jewel solver, Torso Inc, bad-skill fix, 1000 limit, sort
 - [x] Skill picker UI (up to 5 skills) with ability selectors
 - [x] Optimal set calculator (HR/Elder rank gate, gender, weapon slots, piercings)
@@ -346,6 +354,7 @@ CREATE TABLE armor_materials (
 - [ ] Export builds to JSON / share link (future)
 
 ### ✅ Phase 4 (partial): Global Search (DONE)
+
 - [x] Global per-game search across all entities (accent-insensitive, debounced)
 - [ ] Favorites system (future)
 - [ ] Import panel for JSON/CSV (future)
@@ -353,6 +362,7 @@ CREATE TABLE armor_materials (
 - [ ] Auto-update mechanism (future)
 
 ### ✅ Phase 5: Multi-Game — MHP3rd seeded (partial)
+
 - [x] MHP3rd data import — 1065 items, 378 quests, 60 monsters, 972 weapons, 1111 armor, 263 combines, 761 drops, skills/decorations seeded via `src-tauri/data/mhp3rd_*.json` + `db/seed.rs` (idempotent)
 - [ ] MHW scraper (mhw-db.com API)
 - [ ] MHR scraper (Kiranico / Game8)
@@ -360,6 +370,7 @@ CREATE TABLE armor_materials (
 - [ ] Game-specific UI adaptations (Focus Mode, Wirebugs, etc.)
 
 ### 📋 Phase 6: Mobile & Distribution
+
 - [ ] Mobile build via Tauri v2 (already supported via `cdylib`)
 - [ ] Auto-updater
 - [ ] System tray
@@ -371,13 +382,13 @@ CREATE TABLE armor_materials (
 
 Each game has a `GameTheme` object with CSS custom properties applied at the layout level. Themes share a consistent structure but differ in palette, ornament, and accent. Five themes shipped:
 
-| Game | Primary | Accent | Ornament |
-|------|---------|--------|----------|
-| MHW | `#3b82f6` blue | `#fbbf24` gold | tribal |
-| MHR | `#f97316` orange | `#fde047` yellow | japanese |
-| MHWilds | `#22c55e` green | `#facc15` gold | futuristic |
-| MHP3rd | `#a855f7` purple | `#fbbf24` gold | japanese |
-| MH2G | `#b91c1c` red | `#d4a017` gold | medieval |
+| Game    | Primary          | Accent           | Ornament   |
+| ------- | ---------------- | ---------------- | ---------- |
+| MHW     | `#3b82f6` blue   | `#fbbf24` gold   | tribal     |
+| MHR     | `#f97316` orange | `#fde047` yellow | japanese   |
+| MHWilds | `#22c55e` green  | `#facc15` gold   | futuristic |
+| MHP3rd  | `#a855f7` purple | `#fbbf24` gold   | japanese   |
+| MH2G    | `#b91c1c` red    | `#d4a017` gold   | medieval   |
 
 Ornaments are CSS `repeating-linear-gradient` patterns defined in `src/app.css`, scoped via `[data-ornament="..."]` attribute on the root wrapper.
 
@@ -386,9 +397,11 @@ Ornaments are CSS `repeating-linear-gradient` patterns defined in `src/app.css`,
 ## Internationalization
 
 ### Supported Languages
+
 - **English** (primary)
 
 ### Strategy
+
 - Each record has `language` field (default 'en')
 - All seed data is in English
 - Future: JP names alongside EN
@@ -398,22 +411,26 @@ Ornaments are CSS `repeating-linear-gradient` patterns defined in `src/app.css`,
 ## Key Technical Decisions
 
 ### Why Tauri + Svelte?
+
 - **Tauri v2:** Small binaries (5-15MB vs 100MB+ Electron), mobile support, security
 - **Svelte 5:** Compiled, no runtime overhead, runes for reactivity
 - **shadcn-svelte:** Modern components, customizable, good DX
 
 ### Why SQLite?
+
 - Single multi-game DB (with `game_id` field)
 - Offline-first, no network dependencies
 - Fast queries with indexes
 - Easy to export/backup
 
 ### Why Python scrapers (future)?
+
 - Better ecosystem for web scraping
 - Easy to maintain independent from core
 - JSON as exchange format
 
 ### Why not Firebase/Supabase?
+
 - Requires internet connection
 - Costs scale with usage
 - Capcom data is static (doesn't change frequently)
@@ -422,17 +439,17 @@ Ornaments are CSS `repeating-linear-gradient` patterns defined in `src/app.css`,
 
 ## Time Estimation (Cumulative)
 
-| Phase | Weeks | Status |
-|-------|-------|--------|
-| Phase 1: MVP Core | 6-8 | ✅ Done |
-| Phase 2: Data Expansion (MH2G) | 2-3 | ✅ Done |
-| Phase 3: Build System (ASS) | 3-4 | ✅ Done |
-| Phase 4: Global Search | 1-2 | ✅ Done |
-| Phase 5: Multi-Game | 3-4 | 📋 Planned |
-| Phase 6: Mobile & Distribution | 4-6 | 📋 Planned |
-| **Total** | **~25 weeks** | |
+| Phase                          | Weeks         | Status     |
+| ------------------------------ | ------------- | ---------- |
+| Phase 1: MVP Core              | 6-8           | ✅ Done    |
+| Phase 2: Data Expansion (MH2G) | 2-3           | ✅ Done    |
+| Phase 3: Build System (ASS)    | 3-4           | ✅ Done    |
+| Phase 4: Global Search         | 1-2           | ✅ Done    |
+| Phase 5: Multi-Game            | 3-4           | 📋 Planned |
+| Phase 6: Mobile & Distribution | 4-6           | 📋 Planned |
+| **Total**                      | **~25 weeks** |            |
 
-*Estimation based on part-time work (15-20h/week)*
+_Estimation based on part-time work (15-20h/week)_
 
 ---
 

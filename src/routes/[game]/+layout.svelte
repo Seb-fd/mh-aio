@@ -1,19 +1,19 @@
 <script lang="ts">
-  import { page } from '$app/stores';
-  import { selectedGame, GAMES } from '$lib/stores/game';
+  import { page } from '$app/state'
+  import { selectedGame, GAMES } from '$lib/stores/game'
 
-  let { children } = $props();
+  let { children } = $props()
 
-  const gameId = $derived($page.params.game);
+  const gameId = $derived(page.params.game)
 
   $effect(() => {
     if (gameId) {
-      const found = GAMES.find((g) => g.id === gameId);
+      const found = GAMES.find((g) => g.id === gameId)
       if (found && $selectedGame?.id !== found.id) {
-        selectedGame.select(found);
+        selectedGame.select(found)
       }
     }
-  });
+  })
 </script>
 
 {@render children()}

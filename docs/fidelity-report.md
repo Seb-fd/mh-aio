@@ -4,24 +4,24 @@
 
 ## Summary
 
-| Metric | Result |
-|---|---|
-| Armor | 2075 pieces (head/chest/arms/waist/legs), 949 sets |
-| Items | 1083 (fully sourced, 12,751 `item_sources` rows + 432 combines) |
-| Item categories | `Consumable 91 / Material 913 / Ammo 79` (67 fixes, `subcategory` Charm/Husk/Coating etc., `Powercharm` → `Consumable • Charm`) |
-| Combine recipes | 432 (147 Normal + 18 Alchemy + 7 Treasure, with `chance` + Book order) |
-| Skill families / abilities | 99 / 214 |
-| Decorations | 192 |
-| Weapons | 1500 (11 types) |
-| Monsters | 83 (54 Large, 25 Small, 4 Giant) |
-| Quests | 610 (95 Elder, 35 Nekoto, 89 Guild Low, 77 Guild High, 116 Guild G, 140 Training, 7 Treasure, 37 Event, 14 Challenge) |
-| Weapon materials / craft | 5137 / 1075 recipes (forge + upgrade) |
-| Monster weaknesses / drops / equipment | 163 / 2319 / 1880 |
-| Defense / rarity / slots (armor) | **100% match** vs retail (0 mismatches) |
-| Skill points (normalized, 1828 overlapping) | 40 diffs — **all favor our DB** (ASS has ±1 and sign flips, e.g. Kirin Crest X Protection -2 vs +2) |
-| Decorations (overlapping) | 0 mismatches on slot/points |
-| Weapons per type | **100% match** vs game-extracted DB (see below) |
-| Monster order | In-game order (Felyne 1, Melynx 2, Shakalaka 3 … Rathian 31, Rathalos 34 … White Fatalis 83) |
+| Metric                                      | Result                                                                                                                          |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Armor                                       | 2075 pieces (head/chest/arms/waist/legs), 949 sets                                                                              |
+| Items                                       | 1083 (fully sourced, 12,751 `item_sources` rows + 432 combines)                                                                 |
+| Item categories                             | `Consumable 91 / Material 913 / Ammo 79` (67 fixes, `subcategory` Charm/Husk/Coating etc., `Powercharm` → `Consumable • Charm`) |
+| Combine recipes                             | 432 (147 Normal + 18 Alchemy + 7 Treasure, with `chance` + Book order)                                                          |
+| Skill families / abilities                  | 99 / 214                                                                                                                        |
+| Decorations                                 | 192                                                                                                                             |
+| Weapons                                     | 1500 (11 types)                                                                                                                 |
+| Monsters                                    | 83 (54 Large, 25 Small, 4 Giant)                                                                                                |
+| Quests                                      | 610 (95 Elder, 35 Nekoto, 89 Guild Low, 77 Guild High, 116 Guild G, 140 Training, 7 Treasure, 37 Event, 14 Challenge)           |
+| Weapon materials / craft                    | 5137 / 1075 recipes (forge + upgrade)                                                                                           |
+| Monster weaknesses / drops / equipment      | 163 / 2319 / 1880                                                                                                               |
+| Defense / rarity / slots (armor)            | **100% match** vs retail (0 mismatches)                                                                                         |
+| Skill points (normalized, 1828 overlapping) | 40 diffs — **all favor our DB** (ASS has ±1 and sign flips, e.g. Kirin Crest X Protection -2 vs +2)                             |
+| Decorations (overlapping)                   | 0 mismatches on slot/points                                                                                                     |
+| Weapons per type                            | **100% match** vs game-extracted DB (see below)                                                                                 |
+| Monster order                               | In-game order (Felyne 1, Melynx 2, Shakalaka 3 … Rathian 31, Rathalos 34 … White Fatalis 83)                                    |
 
 ## Method
 
@@ -44,20 +44,20 @@
 
 ## Weapons
 
-| Type | Count (DB) | Count (game-extracted) |
-|---|---|---|
-| Great Sword | 176 | 176 |
-| Long Sword | 122 | 122 |
-| Sword & Shield | 161 | 161 |
-| Dual Blades | 140 | 140 |
-| Hammer | 190 | 190 |
-| Hunting Horn | 95 | 95 |
-| Lance | 177 | 177 |
-| Gunlance | 87 | 87 |
-| Light Bowgun | 133 | 133 |
-| Heavy Bowgun | 103 | 103 |
-| Bow | 116 | 116 |
-| **Total** | **1500** | **1500** |
+| Type           | Count (DB) | Count (game-extracted) |
+| -------------- | ---------- | ---------------------- |
+| Great Sword    | 176        | 176                    |
+| Long Sword     | 122        | 122                    |
+| Sword & Shield | 161        | 161                    |
+| Dual Blades    | 140        | 140                    |
+| Hammer         | 190        | 190                    |
+| Hunting Horn   | 95         | 95                     |
+| Lance          | 177        | 177                    |
+| Gunlance       | 87         | 87                     |
+| Light Bowgun   | 133        | 133                    |
+| Heavy Bowgun   | 103        | 103                    |
+| Bow            | 116        | 116                    |
+| **Total**      | **1500**   | **1500**               |
 
 - Catalog: 1500 names present in the ISO weapon block (`Buster Sword` at `0x23D6…`, `Iron Katana`, `Bone Katana` …). Three minor alias diffs remain (`Carbalite Sword`, `Carbalite Sword+`, `Gold Semi-Auto` vs `Gold Semiauto` in the extracted DB) — same item, spacing/casing.
 - Tree: `upgrade_path` faithful to the in-game Smith tree (e.g. `Ravager Blade → Ravager Blade+ → Tactical Blade`). `weapon_craft` forge/upgrade resolves `item_id` via `SELECT id FROM items WHERE name=?` (`seed.rs:394`); 0 missing FKs. `weapon_materials` (5137) and `weapon_craft` (1075) totals are coherent once forge+upgrade arrays are denested (~4800–5100 materials).
@@ -99,21 +99,21 @@ Keep `mh2g_*.json` as the retail-faithful source. Items are now 100% sourced and
 
 ## Status
 
-| Aspect | State |
-|---|---|
-| Items | **1065** — real names, rarity, sell price; 0 duplicate names |
-| Categories | `Consumable 55 / Material 964 / Ammo 46`; subcategories from section taxonomy + name heuristics (`Recovery, Buff, Food, Charm, Coating, Husk, Ore, Bone, Sac, Monster Material, …`) |
-| Descriptions | **291** (274 with CJK) — ~28 EN + ~263 **Japanese** (kept faithfully, flagged with a **🇯🇵 JP badge** in the detail UI via CJK detection `[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]`) |
-| Buy prices | **181 items** have `buy_price`; sell/rarity corrected against the wiki |
-| Combine list | **263 recipes** (202 Normal in `調合リスト` book order + 61 Alchemy) with `chance`; verified #1 Potion = Herb + Blue Mushroom 95% |
-| Monster drops | **761 rows** (carve 238 / break 189 / capture 191 / drop 143, Low 378 / High 383) across **40 droptable monsters** with rank/part/quantity/probability — per-monster carve/break/capture tables |
-| Item ids | Re-indexed to the MHP3rd **item-box (chest) order** (`scripts/reindex_mhp3rd_items.py`): matched against the per-game ordered list (books → consumables → plants/tools/baits/insects/ores/bones → ammo → tickets → monster materials), then all `item_id`/`result_item_id`/`component_item_id` references remapped. **0 dangling references** across weapon/armor materials, craft, combine, monster_drops, quest_rewards, item_sources; 0 duplicate ids (10001–11065) |
-| Monsters | **60** (Large + Small) with weaknesses / equipment links |
-| Weapons / Armor | **972 weapons** / **1111 armor pieces** (sets via `derive_set_name`) + forge/upgrade materials |
-| Quests | **378** (`village 96 · guild_low 88 · guild_high 100 · event 52 · hot_spring 7 · drink 16 · nyanta 3 · training 10 · challenge 6`); all 378 carry `name_original` (JP quest-board title = in-game order). Bilingual fields: `location_original`/`objective_original`/`description_original` |
-| Quest rewards | **1867 rows** — JP reward material → `item_id` (Fandom `MHP3: Item List` + curated monster-material map); unresolved logged never orphaned |
-| Item sources (gather) | **26 rows** — `gather` map + area per item (EN map names, `conditions: "Areas: …"`); shop/trade/farm not yet populated |
-| Seed / schema | Idempotent (`add_idempotency_constraints` dedup + UNIQUE indexes, `clear_game` removed; `schema_version` table); `norm_key` registered as SQLite scalar for `get_global_search` |
+| Aspect                | State                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Items                 | **1065** — real names, rarity, sell price; 0 duplicate names                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Categories            | `Consumable 55 / Material 964 / Ammo 46`; subcategories from section taxonomy + name heuristics (`Recovery, Buff, Food, Charm, Coating, Husk, Ore, Bone, Sac, Monster Material, …`)                                                                                                                                                                                                                                                                                    |
+| Descriptions          | **291** (274 with CJK) — ~28 EN + ~263 **Japanese** (kept faithfully, flagged with a **🇯🇵 JP badge** in the detail UI via CJK detection `[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]`)                                                                                                                                                                                                                                                                                   |
+| Buy prices            | **181 items** have `buy_price`; sell/rarity corrected against the wiki                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Combine list          | **263 recipes** (202 Normal in `調合リスト` book order + 61 Alchemy) with `chance`; verified #1 Potion = Herb + Blue Mushroom 95%                                                                                                                                                                                                                                                                                                                                      |
+| Monster drops         | **761 rows** (carve 238 / break 189 / capture 191 / drop 143, Low 378 / High 383) across **40 droptable monsters** with rank/part/quantity/probability — per-monster carve/break/capture tables                                                                                                                                                                                                                                                                        |
+| Item ids              | Re-indexed to the MHP3rd **item-box (chest) order** (`scripts/reindex_mhp3rd_items.py`): matched against the per-game ordered list (books → consumables → plants/tools/baits/insects/ores/bones → ammo → tickets → monster materials), then all `item_id`/`result_item_id`/`component_item_id` references remapped. **0 dangling references** across weapon/armor materials, craft, combine, monster_drops, quest_rewards, item_sources; 0 duplicate ids (10001–11065) |
+| Monsters              | **60** (Large + Small) with weaknesses / equipment links                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Weapons / Armor       | **972 weapons** / **1111 armor pieces** (sets via `derive_set_name`) + forge/upgrade materials                                                                                                                                                                                                                                                                                                                                                                         |
+| Quests                | **378** (`village 96 · guild_low 88 · guild_high 100 · event 52 · hot_spring 7 · drink 16 · nyanta 3 · training 10 · challenge 6`); all 378 carry `name_original` (JP quest-board title = in-game order). Bilingual fields: `location_original`/`objective_original`/`description_original`                                                                                                                                                                            |
+| Quest rewards         | **1867 rows** — JP reward material → `item_id` (Fandom `MHP3: Item List` + curated monster-material map); unresolved logged never orphaned                                                                                                                                                                                                                                                                                                                             |
+| Item sources (gather) | **26 rows** — `gather` map + area per item (EN map names, `conditions: "Areas: …"`); shop/trade/farm not yet populated                                                                                                                                                                                                                                                                                                                                                 |
+| Seed / schema         | Idempotent (`add_idempotency_constraints` dedup + UNIQUE indexes, `clear_game` removed; `schema_version` table); `norm_key` registered as SQLite scalar for `get_global_search`                                                                                                                                                                                                                                                                                        |
 
 ## Pipeline
 
@@ -136,5 +136,3 @@ Keep `mh2g_*.json` as the retail-faithful source. Items are now 100% sourced and
 ## Source
 
 `www.mhp3wiki.info` is reachable via `index.php?<page-name>` (e.g. `index.php?調合リスト`), but its tables are client-rendered — hence Playwright. The archive.org copies of `/wiki/*` are absent, so live rendering is the only route. Quests are supplemented by `scripts/mhp3rd_quest_rewards.log` for unresolved JP reward names.
-
-

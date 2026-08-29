@@ -1,6 +1,6 @@
 use crate::ass;
-use crate::db::Database;
 use crate::db::queries;
+use crate::db::Database;
 use tauri::State;
 
 #[tauri::command]
@@ -13,46 +13,31 @@ pub fn get_monsters(
 }
 
 #[tauri::command]
-pub fn get_weapons(
-    db: State<'_, Database>,
-    game_id: i32,
-) -> Result<Vec<queries::Weapon>, String> {
+pub fn get_weapons(db: State<'_, Database>, game_id: i32) -> Result<Vec<queries::Weapon>, String> {
     let conn = db.conn.lock().map_err(|e| e.to_string())?;
     queries::get_weapons_by_game(&conn, game_id).map_err(|e| e.to_string())
 }
 
 #[tauri::command]
-pub fn get_armor(
-    db: State<'_, Database>,
-    game_id: i32,
-) -> Result<Vec<queries::Armor>, String> {
+pub fn get_armor(db: State<'_, Database>, game_id: i32) -> Result<Vec<queries::Armor>, String> {
     let conn = db.conn.lock().map_err(|e| e.to_string())?;
     queries::get_armor_by_game(&conn, game_id).map_err(|e| e.to_string())
 }
 
 #[tauri::command]
-pub fn get_quests(
-    db: State<'_, Database>,
-    game_id: i32,
-) -> Result<Vec<queries::Quest>, String> {
+pub fn get_quests(db: State<'_, Database>, game_id: i32) -> Result<Vec<queries::Quest>, String> {
     let conn = db.conn.lock().map_err(|e| e.to_string())?;
     queries::get_quests_by_game(&conn, game_id).map_err(|e| e.to_string())
 }
 
 #[tauri::command]
-pub fn get_items(
-    db: State<'_, Database>,
-    game_id: i32,
-) -> Result<Vec<queries::Item>, String> {
+pub fn get_items(db: State<'_, Database>, game_id: i32) -> Result<Vec<queries::Item>, String> {
     let conn = db.conn.lock().map_err(|e| e.to_string())?;
     queries::get_items_by_game(&conn, game_id).map_err(|e| e.to_string())
 }
 
 #[tauri::command]
-pub fn get_skills(
-    db: State<'_, Database>,
-    game_id: i32,
-) -> Result<Vec<queries::Skill>, String> {
+pub fn get_skills(db: State<'_, Database>, game_id: i32) -> Result<Vec<queries::Skill>, String> {
     let conn = db.conn.lock().map_err(|e| e.to_string())?;
     queries::get_skills_by_game(&conn, game_id).map_err(|e| e.to_string())
 }
@@ -73,7 +58,8 @@ pub fn get_monster_dedicated_sets(
     rank: Option<String>,
 ) -> Result<Vec<queries::ArmorSetDetail>, String> {
     let conn = db.conn.lock().map_err(|e| e.to_string())?;
-    queries::get_monster_dedicated_sets(&conn, monster_id, rank.as_deref()).map_err(|e| e.to_string())
+    queries::get_monster_dedicated_sets(&conn, monster_id, rank.as_deref())
+        .map_err(|e| e.to_string())
 }
 
 #[tauri::command]

@@ -1,48 +1,51 @@
 <script lang="ts">
-  import { page } from '$app/stores';
-  import { goto } from '$app/navigation';
-  import { api, type ItemDetail } from '$lib/api';
-  import DetailHeader from '$lib/components/detail-header.svelte';
-  import DropTable from '$lib/components/drop-table.svelte';
-  import { selectedGame } from '$lib/stores/game';
+  import { page } from '$app/state'
+  import { goto } from '$app/navigation'
+  import { api, type ItemDetail } from '$lib/api'
+  import DetailHeader from '$lib/components/detail-header.svelte'
+  import DropTable from '$lib/components/drop-table.svelte'
+  import { selectedGame } from '$lib/stores/game'
 
-  const id = $derived(Number($page.params.id));
-  const game = $derived($selectedGame);
-  let item = $state<ItemDetail | null>(null);
-  let loading = $state(true);
-  let error = $state<string | null>(null);
+  const id = $derived(Number(page.params.id))
+  const game = $derived($selectedGame)
+  let item = $state<ItemDetail | null>(null)
+  let loading = $state(true)
+  let error = $state<string | null>(null)
 
   $effect(() => {
-    if (!id || Number.isNaN(id)) return;
-    loading = true;
-    error = null;
-    api.getItemDetail(id)
+    if (!id || Number.isNaN(id)) return
+    loading = true
+    error = null
+    api
+      .getItemDetail(id)
       .then((data) => {
-        item = data;
+        item = data
       })
       .catch((e) => {
-        error = String(e);
+        error = String(e)
       })
       .finally(() => {
-        loading = false;
-      });
-  });
+        loading = false
+      })
+  })
 
   function goToItem(itemId: number) {
-    if (!game) return;
-    goto(`/${game.id}/items/${itemId}`);
+    if (!game) return
+    goto(`/${game.id}/items/${itemId}`)
   }
 
   const categoryColor: Record<string, string> = {
     Consumable: 'bg-emerald-900/40 text-emerald-300',
     Material: 'bg-purple-900/40 text-purple-300',
     Ammo: 'bg-orange-900/40 text-orange-300',
-  };
+  }
 
   // Detect whether a description is (partly) Japanese. MHP3rd material
   // descriptions sourced from the Monster Item List are in Japanese; these are
   // kept faithfully but flagged so the English UI doesn't look broken.
-  const hasCJK = $derived(item?.description ? /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]/u.test(item.description) : false);
+  const hasCJK = $derived(
+    item?.description ? /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]/u.test(item.description) : false,
+  )
 </script>
 
 <div class="max-w-5xl mx-auto">
@@ -62,19 +65,42 @@
   {:else}
     <DetailHeader
       title={item.name}
-      subtitle={item.subcategory ? `${item.category ?? ''} • ${item.subcategory}` : (item.category ?? '')}
-      icon={item.category === 'Ammo' ? '🏹' : item.category === 'Consumable' ? '🧪' : item.subcategory === 'Charm' ? '✨' : '📦'}
+      subtitle={item.subcategory
+        ? `${item.category ?? ''} • ${item.subcategory}`
+        : (item.category ?? '')}
+      icon={item.category === 'Ammo'
+        ? '🏹'
+        : item.category === 'Consumable'
+          ? '🧪'
+          : item.subcategory === 'Charm'
+            ? '✨'
+            : '📦'}
       tags={[
-        { label: item.category ?? 'Unknown', color: categoryColor[item.category ?? ''] ?? 'bg-gray-800 text-gray-300' },
-        ...(item.subcategory && item.subcategory !== item.category ? [{ label: item.subcategory, color: 'bg-[var(--theme-bg-elevated)] text-gray-300 border-[var(--theme-border)]' }] : []),
-        { label: `Rarity ${item.rarity ?? 1}`, color: 'bg-[var(--theme-bg-elevated)] text-gray-300 border-[var(--theme-border)]' },
+        {
+          label: item.category ?? 'Unknown',
+          color: categoryColor[item.category ?? ''] ?? 'bg-gray-800 text-gray-300',
+        },
+        ...(item.subcategory && item.subcategory !== item.category
+          ? [
+              {
+                label: item.subcategory,
+                color: 'bg-[var(--theme-bg-elevated)] text-gray-300 border-[var(--theme-border)]',
+              },
+            ]
+          : []),
+        {
+          label: `Rarity ${item.rarity ?? 1}`,
+          color: 'bg-[var(--theme-bg-elevated)] text-gray-300 border-[var(--theme-border)]',
+        },
       ]}
     />
 
     {#if item.sell_price !== null && item.sell_price !== undefined}
       <div class="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg border themed-card">
         <span class="text-xs uppercase tracking-wide text-gray-500">Sell Price</span>
-        <span class="text-base font-semibold" style="color: var(--theme-accent);">{item.sell_price}z</span>
+        <span class="text-base font-semibold" style="color: var(--theme-accent);"
+          >{item.sell_price}z</span
+        >
       </div>
     {/if}
 
@@ -83,7 +109,10 @@
         <div class="flex items-center gap-2 mb-3">
           <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Description</h2>
           {#if hasCJK}
-            <span class="text-[10px] px-2 py-0.5 rounded-full border border-amber-800 bg-amber-900/30 text-amber-300 font-semibold" title="Source text is in Japanese (Monster Item List)">🇯🇵 JP</span>
+            <span
+              class="text-[10px] px-2 py-0.5 rounded-full border border-amber-800 bg-amber-900/30 text-amber-300 font-semibold"
+              title="Source text is in Japanese (Monster Item List)">🇯🇵 JP</span
+            >
           {/if}
         </div>
         <div class="rounded-lg border themed-card p-5 leading-relaxed text-gray-200 text-[15px]">
@@ -95,14 +124,29 @@
     {#if item.recipes.length > 0}
       <section class="mb-8">
         <div class="flex items-center gap-2 mb-3">
-          <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Combination Recipe</h2>
+          <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold">
+            Combination Recipe
+          </h2>
           {#if item.recipes[0]}
-            <span class="text-[10px] px-2 py-0.5 rounded-full border font-semibold
-              {item.recipes[0].combine_type === 'alchemy' ? 'bg-amber-900/30 text-amber-300 border-amber-800' : item.recipes[0].combine_type === 'treasure' ? 'bg-purple-900/30 text-purple-300 border-purple-800' : 'bg-sky-900/30 text-sky-300 border-sky-800'}">
-              {item.recipes[0].combine_type === 'alchemy' ? '⚗️ Alchemy' : item.recipes[0].combine_type === 'treasure' ? '💎 Treasure' : '🧪 Normal'}
+            <span
+              class="text-[10px] px-2 py-0.5 rounded-full border font-semibold
+              {item.recipes[0].combine_type === 'alchemy'
+                ? 'bg-amber-900/30 text-amber-300 border-amber-800'
+                : item.recipes[0].combine_type === 'treasure'
+                  ? 'bg-purple-900/30 text-purple-300 border-purple-800'
+                  : 'bg-sky-900/30 text-sky-300 border-sky-800'}"
+            >
+              {item.recipes[0].combine_type === 'alchemy'
+                ? '⚗️ Alchemy'
+                : item.recipes[0].combine_type === 'treasure'
+                  ? '💎 Treasure'
+                  : '🧪 Normal'}
             </span>
             {#if item.recipes[0].chance != null}
-              <span class="text-[10px] px-1.5 py-0.5 rounded border bg-[var(--theme-bg-elevated)] text-gray-400 border-[var(--theme-border)]">{item.recipes[0].chance}% success</span>
+              <span
+                class="text-[10px] px-1.5 py-0.5 rounded border bg-[var(--theme-bg-elevated)] text-gray-400 border-[var(--theme-border)]"
+                >{item.recipes[0].chance}% success</span
+              >
             {/if}
           {/if}
         </div>
@@ -117,25 +161,40 @@
                 class="px-3 py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] flex items-center gap-2 hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-surface)] transition-colors cursor-pointer text-left"
                 title="Go to {recipe.component_name}"
               >
-                <span class="text-sm text-gray-200 hover:text-[var(--theme-accent)] transition-colors">{recipe.component_name}</span>
-                <span class="text-xs font-semibold" style="color: var(--theme-accent);">x{recipe.quantity}</span>
+                <span
+                  class="text-sm text-gray-200 hover:text-[var(--theme-accent)] transition-colors"
+                  >{recipe.component_name}</span
+                >
+                <span class="text-xs font-semibold" style="color: var(--theme-accent);"
+                  >x{recipe.quantity}</span
+                >
               </button>
             {/each}
             <span class="text-gray-600 text-lg">=</span>
-            <div class="px-3 py-1.5 rounded-md flex items-center gap-2" style="background-color: color-mix(in oklab, var(--theme-accent) 15%, var(--theme-bg-elevated)); border: 1px solid color-mix(in oklab, var(--theme-accent) 40%, transparent);">
+            <div
+              class="px-3 py-1.5 rounded-md flex items-center gap-2"
+              style="background-color: color-mix(in oklab, var(--theme-accent) 15%, var(--theme-bg-elevated)); border: 1px solid color-mix(in oklab, var(--theme-accent) 40%, transparent);"
+            >
               <span class="text-sm text-gray-100">{item.name}</span>
-              <span class="text-xs font-semibold" style="color: var(--theme-accent);">x{item.recipes[0]?.result_quantity ?? 1}</span>
+              <span class="text-xs font-semibold" style="color: var(--theme-accent);"
+                >x{item.recipes[0]?.result_quantity ?? 1}</span
+              >
             </div>
           </div>
           {#if item.recipes[0]?.combine_type === 'alchemy'}
-            <p class="text-[11px] text-amber-400/70 mt-2">※ Alchemy — requires Alchemy Guide and Books 1-5 (progressively unlocks alchemy recipes)</p>
+            <p class="text-[11px] text-amber-400/70 mt-2">
+              ※ Alchemy — requires Alchemy Guide and Books 1-5 (progressively unlocks alchemy
+              recipes)
+            </p>
           {/if}
         </div>
       </section>
     {/if}
 
     <section>
-      <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">How to Obtain</h2>
+      <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
+        How to Obtain
+      </h2>
       <DropTable sources={item.sources} />
     </section>
   {/if}

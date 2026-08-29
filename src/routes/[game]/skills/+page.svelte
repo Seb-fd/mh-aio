@@ -1,43 +1,43 @@
 <script lang="ts">
-  import { goto } from '$app/navigation';
-  import { selectedGame } from '$lib/stores/game';
-  import { api, type Skill } from '$lib/api';
-  import Card from '$lib/components/ui/card.svelte';
+  import { goto } from '$app/navigation'
+  import { selectedGame } from '$lib/stores/game'
+  import { api, type Skill } from '$lib/api'
+  import Card from '$lib/components/ui/card.svelte'
 
-  const game = $derived($selectedGame);
-  const dbId = $derived(game?.dbId);
+  const game = $derived($selectedGame)
+  const dbId = $derived(game?.dbId)
 
-  let skills = $state<Skill[]>([]);
-  let loading = $state(true);
-  let error = $state<string | null>(null);
+  let skills = $state<Skill[]>([])
+  let loading = $state(true)
+  let error = $state<string | null>(null)
 
   async function loadSkillsData(id: number, attempt = 0) {
     try {
-      const data = await api.getSkills(id);
-      skills = data;
-      error = null;
+      const data = await api.getSkills(id)
+      skills = data
+      error = null
     } catch (e) {
-      const msg = String(e);
+      const msg = String(e)
       if (msg.includes('state not managed') && attempt < 6) {
-        error = 'Preparing database...';
-        setTimeout(() => loadSkillsData(id, attempt + 1), 400 * (attempt + 1));
-        return;
+        error = 'Preparing database...'
+        setTimeout(() => loadSkillsData(id, attempt + 1), 400 * (attempt + 1))
+        return
       }
-      error = msg;
+      error = msg
     } finally {
-      if (error !== 'Preparing database...') loading = false;
+      if (error !== 'Preparing database...') loading = false
     }
   }
   $effect(() => {
-    if (dbId == null) return;
-    loading = true;
-    error = null;
-    loadSkillsData(dbId);
-  });
+    if (dbId == null) return
+    loading = true
+    error = null
+    loadSkillsData(dbId)
+  })
 
   function open(id: number) {
-    if (!game) return;
-    goto(`/${game.id}/skills/${id}`);
+    if (!game) return
+    goto(`/${game.id}/skills/${id}`)
   }
 </script>
 
@@ -74,7 +74,9 @@
             <div class="flex items-start justify-between gap-2 mb-1">
               <h3 class="font-semibold text-gray-100">{skill.name}</h3>
               {#if skill.max_level}
-                <span class="text-[10px] uppercase tracking-wide text-gray-500 bg-[var(--theme-bg-elevated)] px-2 py-0.5 rounded shrink-0 border border-[var(--theme-border)]">
+                <span
+                  class="text-[10px] uppercase tracking-wide text-gray-500 bg-[var(--theme-bg-elevated)] px-2 py-0.5 rounded shrink-0 border border-[var(--theme-border)]"
+                >
                   Lv 1-{skill.max_level}
                 </span>
               {/if}

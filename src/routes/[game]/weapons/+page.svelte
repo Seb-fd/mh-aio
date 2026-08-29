@@ -1,115 +1,135 @@
 <script lang="ts">
-  import { page } from '$app/stores';
-  import { goto } from '$app/navigation';
-  import { selectedGame } from '$lib/stores/game';
-  import { api, type Weapon } from '$lib/api';
-  import { elementColor, sharpnessValues, SHARP_COLORS_ARR as SHARP_COLORS } from '$lib/utils/mh';
+  import { goto } from '$app/navigation'
+  import { selectedGame } from '$lib/stores/game'
+  import { api, type Weapon } from '$lib/api'
+  import { elementColor, sharpnessValues, SHARP_COLORS_ARR as SHARP_COLORS } from '$lib/utils/mh'
 
-  const game = $derived($selectedGame);
-  const dbId = $derived(game?.dbId);
+  const game = $derived($selectedGame)
+  const dbId = $derived(game?.dbId)
 
-  let weapons = $state<Weapon[]>([]);
-  let loading = $state(true);
-  let error = $state<string | null>(null);
-  let typeFilter = $state<string>('all');
-  let sortBy = $state<string>('smith'); // smith = armorer tree order (weapon_type -> id) faithful to ISO
+  let weapons = $state<Weapon[]>([])
+  let loading = $state(true)
+  let error = $state<string | null>(null)
+  let typeFilter = $state<string>('all')
+  let sortBy = $state<string>('smith') // smith = armorer tree order (weapon_type -> id) faithful to ISO
 
   async function loadWeapons(id: number, attempt = 0) {
     try {
-      const data = await api.getWeapons(id);
-      console.log('[weapons] loaded', data.length);
-      weapons = data;
-      error = null;
+      const data = await api.getWeapons(id)
+      console.log('[weapons] loaded', data.length)
+      weapons = data
+      error = null
     } catch (e) {
-      const msg = String(e);
-      console.error('[weapons] failed', msg);
+      const msg = String(e)
+      console.error('[weapons] failed', msg)
       if (msg.includes('state not managed') && attempt < 6) {
-        error = 'Preparing database...';
-        setTimeout(() => loadWeapons(id, attempt + 1), 400 * (attempt + 1));
-        return;
+        error = 'Preparing database...'
+        setTimeout(() => loadWeapons(id, attempt + 1), 400 * (attempt + 1))
+        return
       }
-      error = msg;
+      error = msg
     } finally {
-      if (error !== 'Preparing database...') loading = false;
+      if (error !== 'Preparing database...') loading = false
     }
   }
 
   $effect(() => {
-    if (dbId == null) return;
-    console.log('[weapons] loading gameId', dbId);
-    loading = true;
-    error = null;
-    loadWeapons(dbId);
-  });
+    if (dbId == null) return
+    console.log('[weapons] loading gameId', dbId)
+    loading = true
+    error = null
+    loadWeapons(dbId)
+  })
 
-  const GAME_WEAPON_ORDER = ['Great Sword','Long Sword','Sword & Shield','Dual Blades','Hammer','Hunting Horn','Lance','Gunlance','Switch Axe','Light Bowgun','Heavy Bowgun','Bow'];
+  const GAME_WEAPON_ORDER = [
+    'Great Sword',
+    'Long Sword',
+    'Sword & Shield',
+    'Dual Blades',
+    'Hammer',
+    'Hunting Horn',
+    'Lance',
+    'Gunlance',
+    'Switch Axe',
+    'Light Bowgun',
+    'Heavy Bowgun',
+    'Bow',
+  ]
   function weaponOrder(t: string): number {
-    const i = GAME_WEAPON_ORDER.indexOf(t);
-    if (i !== -1) return i;
-    if (t === 'Sword and Shield') return 2;
-    return 99;
+    const i = GAME_WEAPON_ORDER.indexOf(t)
+    if (i !== -1) return i
+    if (t === 'Sword and Shield') return 2
+    return 99
   }
-  const weaponTypes = $derived(['all', ...Array.from(new Set(weapons.map(w => w.weapon_type))).sort((a,b)=> weaponOrder(a)-weaponOrder(b))]);
+  const weaponTypes = $derived([
+    'all',
+    ...Array.from(new Set(weapons.map((w) => w.weapon_type))).sort(
+      (a, b) => weaponOrder(a) - weaponOrder(b),
+    ),
+  ])
   const filtered = $derived.by(() => {
-    let arr = typeFilter === 'all' ? weapons : weapons.filter(w => w.weapon_type === typeFilter);
-    if (sortBy === 'name') arr = [...arr].sort((a,b)=> a.name.localeCompare(b.name));
-    else if (sortBy === 'rarity') arr = [...arr].sort((a,b)=> (b.rarity??0)-(a.rarity??0));
-    else if (sortBy === 'attack') arr = [...arr].sort((a,b)=> (b.attack??0)-(a.attack??0));
+    let arr = typeFilter === 'all' ? weapons : weapons.filter((w) => w.weapon_type === typeFilter)
+    if (sortBy === 'name') arr = [...arr].sort((a, b) => a.name.localeCompare(b.name))
+    else if (sortBy === 'rarity') arr = [...arr].sort((a, b) => (b.rarity ?? 0) - (a.rarity ?? 0))
+    else if (sortBy === 'attack') arr = [...arr].sort((a, b) => (b.attack ?? 0) - (a.attack ?? 0))
     // smith is default already ORDER BY game weapon order, id from queries.rs:699
-    return arr;
-  });
+    return arr
+  })
 
-  interface TreeNode { weapon: Weapon; children: TreeNode[] }
+  interface TreeNode {
+    weapon: Weapon
+    children: TreeNode[]
+  }
 
   function buildForest(typeWeapons: Weapon[]): TreeNode[] {
-    const set = new Set(typeWeapons.map(w => w.name));
-    const childrenOf = new Map<string, Weapon[]>();
+    const set = new Set(typeWeapons.map((w) => w.name))
+    const childrenOf = new Map<string, Weapon[]>()
     for (const w of typeWeapons) {
-      if (!w.upgrade_path) continue;
-      const arr = childrenOf.get(w.upgrade_path) ?? [];
-      arr.push(w);
-      childrenOf.set(w.upgrade_path, arr);
+      if (!w.upgrade_path) continue
+      const arr = childrenOf.get(w.upgrade_path) ?? []
+      arr.push(w)
+      childrenOf.set(w.upgrade_path, arr)
     }
-    const roots = typeWeapons.filter(w => !w.upgrade_path || !set.has(w.upgrade_path));
+    const roots = typeWeapons.filter((w) => !w.upgrade_path || !set.has(w.upgrade_path))
     const sortFn = (a: Weapon, b: Weapon) => {
-      if (sortBy === 'name') return a.name.localeCompare(b.name);
-      if (sortBy === 'rarity') return (b.rarity??0)-(a.rarity??0);
-      if (sortBy === 'attack') return (b.attack??0)-(a.attack??0);
+      if (sortBy === 'name') return a.name.localeCompare(b.name)
+      if (sortBy === 'rarity') return (b.rarity ?? 0) - (a.rarity ?? 0)
+      if (sortBy === 'attack') return (b.attack ?? 0) - (a.attack ?? 0)
       // smith: use the in-game armor-forge order (sort_order) when present,
       // otherwise fall back to creation order (id) — faithful to the ISO tree.
-      return (a.sort_order ?? a.id) - (b.sort_order ?? b.id);
-    };
+      return (a.sort_order ?? a.id) - (b.sort_order ?? b.id)
+    }
     const build = (w: Weapon): TreeNode => ({
       weapon: w,
       children: (childrenOf.get(w.name) ?? []).sort(sortFn).map(build),
-    });
-    return roots.sort(sortFn).map(build);
+    })
+    return roots.sort(sortFn).map(build)
   }
 
   const tree = $derived.by<{ type: string; forests: TreeNode[] }[]>(() => {
-    const byType = new Map<string, Weapon[]>();
+    const byType = new Map<string, Weapon[]>()
     for (const w of filtered) {
-      const arr = byType.get(w.weapon_type) ?? [];
-      arr.push(w);
-      byType.set(w.weapon_type, arr);
+      const arr = byType.get(w.weapon_type) ?? []
+      arr.push(w)
+      byType.set(w.weapon_type, arr)
     }
     return [...byType.entries()]
-      .sort((a,b)=> weaponOrder(a[0]) - weaponOrder(b[0]))
-      .map(([type, ws]) => ({ type, forests: buildForest(ws) }));
-  });
+      .sort((a, b) => weaponOrder(a[0]) - weaponOrder(b[0]))
+      .map(([type, ws]) => ({ type, forests: buildForest(ws) }))
+  })
 
-  const allCount = $derived(tree.reduce((n, t) => n + countForests(t.forests), 0));
-  function countForests(f: TreeNode[]): number {
-    return f.reduce((n, node) => n + 1 + countForests(node.children), 0);
+  const _allCount = $derived(tree.reduce((n, t) => n + _countForests(t.forests), 0))
+  function _countForests(f: TreeNode[]): number {
+    return f.reduce((n, node) => n + 1 + _countForests(node.children), 0)
   }
 
   function open(id: number) {
-    if (!game) return;
-    goto(`/${game.id}/weapons/${id}`);
+    if (!game) return
+    goto(`/${game.id}/weapons/${id}`)
   }
 
   // Helpers now from $lib/utils/mh (DRY)
-  const sharpnessSegments = sharpnessValues;
+  const sharpnessSegments = sharpnessValues
 </script>
 
 <div class="max-w-6xl mx-auto">
@@ -139,7 +159,10 @@
     </div>
   {:else}
     <div class="flex flex-wrap gap-2 mb-6 items-center">
-      <select bind:value={sortBy} class="px-3 py-1.5 text-xs bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-full text-gray-300 focus:outline-none">
+      <select
+        bind:value={sortBy}
+        class="px-3 py-1.5 text-xs bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-full text-gray-300 focus:outline-none"
+      >
         <option value="smith">Smith (Game Order)</option>
         <option value="name">Name A-Z</option>
         <option value="rarity">Rarity ↓</option>
@@ -161,7 +184,9 @@
     <div class="overflow-x-auto -mx-2 px-2">
       {#each tree as group}
         <section class="mb-10 min-w-[320px]">
-          <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">{group.type}</h2>
+          <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">
+            {group.type}
+          </h2>
           {#each group.forests as node}
             {@render treeNode(node, 0)}
           {/each}
@@ -182,18 +207,28 @@
           {#if node.weapon.is_forgeable}
             <span class="text-[12px] shrink-0" title="Crafted directly from materials">🛠️</span>
           {/if}
-          <span class="text-[10px] text-gray-500 shrink-0 w-10 text-center rounded bg-[var(--theme-bg-elevated)] py-0.5 border border-[var(--theme-border)]">R{node.weapon.rarity ?? 1}</span>
+          <span
+            class="text-[10px] text-gray-500 shrink-0 w-10 text-center rounded bg-[var(--theme-bg-elevated)] py-0.5 border border-[var(--theme-border)]"
+            >R{node.weapon.rarity ?? 1}</span
+          >
           <span class="text-sm text-gray-100 font-medium truncate">{node.weapon.name}</span>
           {#if node.weapon.element_type}
-            <span class="text-[11px] {elementColor(node.weapon.element_type)} shrink-0">{node.weapon.element_type} {node.weapon.element_value ?? 0}</span>
+            <span class="text-[11px] {elementColor(node.weapon.element_type)} shrink-0"
+              >{node.weapon.element_type} {node.weapon.element_value ?? 0}</span
+            >
           {/if}
-          <span class="text-[11px] text-gray-500 ml-auto shrink-0">ATK {node.weapon.attack ?? 0}</span>
+          <span class="text-[11px] text-gray-500 ml-auto shrink-0"
+            >ATK {node.weapon.attack ?? 0}</span
+          >
         </div>
         {#if sharpnessSegments(node.weapon.sharpness).length > 0}
           <div class="flex items-center gap-[1px] mt-1.5 h-1.5">
             {#each sharpnessSegments(node.weapon.sharpness) as seg, i}
               {#if seg > 0}
-                <div class="rounded-[1px]" style="height: 6px; width: {seg}px; background: {SHARP_COLORS[i] ?? '#666'};"></div>
+                <div
+                  class="rounded-[1px]"
+                  style="height: 6px; width: {seg}px; background: {SHARP_COLORS[i] ?? '#666'};"
+                ></div>
               {/if}
             {/each}
           </div>

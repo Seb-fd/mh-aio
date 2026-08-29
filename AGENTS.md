@@ -92,7 +92,7 @@ Registered in `src-tauri/src/lib.rs` via `tauri::generate_handler!`. Defined in 
 ## Mobile Support (Android & iOS)
 
 - **Tauri v2 Mobile**: Supported via Tauri mobile targets (`src-tauri/gen/`).
-- **Android**: 
+- **Android**:
   - Initialize: `npx tauri android init` (installs Rust NDK targets automatically).
   - Dev mode (emulator/device): `npx tauri android dev -t x86_64` (match emulator CPU architecture such as x86_64 or aarch64 to avoid SIGILL crashes).
   - Production build (APK/AAB): `npx tauri android build`.

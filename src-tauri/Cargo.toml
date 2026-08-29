@@ -21,6 +21,20 @@ rusqlite = { version = "0.31", features = ["bundled", "functions"] }
 [lints.rust]
 linker_messages = "allow"
 
+[lints.clippy]
+type_complexity = "allow"
+too_many_arguments = "allow"
+needless_range_loop = "allow"
+ptr_arg = "allow"
+collapsible_if = "allow"
+manual_memcpy = "allow"
+identity_op = "allow"
+unnecessary_cast = "allow"
+manual_flatten = "allow"
+unnecessary_sort_by = "allow"
+manual_pattern_char_comparison = "allow"
+manual_div_ceil = "allow"
+
 [profile.release]
 panic = "abort"
 codegen-units = 1

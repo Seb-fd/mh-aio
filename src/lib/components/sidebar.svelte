@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { page } from '$app/stores';
-  import { goto } from '$app/navigation';
-  import { selectedGame } from '$lib/stores/game';
+  import { page } from '$app/state'
+  import { goto } from '$app/navigation'
+  import { selectedGame } from '$lib/stores/game'
 
-  let { onclose }: { onclose?: () => void } = $props();
+  let { onclose }: { onclose?: () => void } = $props()
 
-  const game = $derived($selectedGame);
-  const currentPath = $derived($page.url.pathname);
+  const game = $derived($selectedGame)
+  const currentPath = $derived(page.url.pathname)
 
   const navItems = [
     { href: '', label: 'Home', icon: '🏠' },
@@ -18,25 +18,25 @@
     { href: '/skills', label: 'Skills', icon: '✨' },
     { href: '/decorations', label: 'Decorations', icon: '💎' },
     { href: '/builds', label: 'Builds', icon: '🔧' },
-  ];
+  ]
 
   function navigate(href: string) {
-    if (!game) return;
-    goto(`/${game.id}${href}`);
-    onclose?.();
+    if (!game) return
+    goto(`/${game.id}${href}`)
+    onclose?.()
   }
 
   function isActive(href: string): boolean {
-    if (!game) return false;
-    const full = `/${game.id}${href}`;
-    if (href === '') return currentPath === full;
-    return currentPath.startsWith(full);
+    if (!game) return false
+    const full = `/${game.id}${href}`
+    if (href === '') return currentPath === full
+    return currentPath.startsWith(full)
   }
 
   function changeGame() {
-    selectedGame.clear();
-    goto('/');
-    onclose?.();
+    selectedGame.clear()
+    goto('/')
+    onclose?.()
   }
 </script>
 
@@ -46,7 +46,10 @@
 >
   {#if game}
     <div class="p-4 pt-2 border-b" style="border-color: var(--theme-border);">
-      <button onclick={changeGame} class="text-xs text-gray-500 hover:text-[var(--theme-text-accent)] transition-colors mb-2">
+      <button
+        onclick={changeGame}
+        class="text-xs text-gray-500 hover:text-[var(--theme-text-accent)] transition-colors mb-2"
+      >
         ← Change Game
       </button>
       <h2 class="text-lg font-bold {game.color}">{game.shortName}</h2>
@@ -61,7 +64,7 @@
         onclick={() => navigate(item.href)}
         aria-current={active ? 'page' : undefined}
         class="sidebar-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors text-left"
-        class:active={active}
+        class:active
       >
         <span class="text-base">{item.icon}</span>
         <span>{item.label}</span>

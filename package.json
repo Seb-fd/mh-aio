@@ -11,7 +11,12 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "svelte-check --tsconfig ./tsconfig.json",
-    "typecheck": "svelte-check --tsconfig ./tsconfig.json"
+    "lint:eslint": "eslint .",
+    "lint:eslint:fix": "eslint . --fix",
+    "typecheck": "svelte-check --tsconfig ./tsconfig.json",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "version:check": "node scripts/check-version.js"
   },
   "engines": {
     "node": ">=18"
@@ -24,11 +29,17 @@
     "@tauri-apps/cli": "^2.0.0",
     "@types/node": "^26.3.0",
     "clsx": "^2.1.1",
+    "eslint": "^9.39.5",
+    "eslint-plugin-svelte": "^3.23.0",
+    "globals": "^17.11.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-svelte": "^4.1.1",
     "svelte": "^5.0.0",
     "svelte-check": "^4.0.0",
     "tailwind-merge": "^3.6.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.0.0",
+    "typescript-eslint": "^8.68.0",
     "vite": "^6.0.0"
   },
   "dependencies": {

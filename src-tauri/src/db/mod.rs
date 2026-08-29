@@ -1,5 +1,5 @@
-pub mod schema;
 pub mod queries;
+pub mod schema;
 pub mod seed;
 
 use rusqlite::functions::FunctionFlags;
@@ -20,14 +20,15 @@ pub fn register_functions(conn: &Connection) -> Result<()> {
         FunctionFlags::SQLITE_UTF8 | FunctionFlags::SQLITE_DETERMINISTIC,
         |ctx| {
             let s: Option<String> = ctx.get(0)?;
-            Ok(s.map(|v| crate::db::queries::norm_key(&v)).unwrap_or_default())
+            Ok(s.map(|v| crate::db::queries::norm_key(&v))
+                .unwrap_or_default())
         },
     )?;
     Ok(())
 }
 
 impl Database {
-    pub fn new(path: &str) -> Result<Self> {
+    pub fn new<P: AsRef<std::path::Path>>(path: P) -> Result<Self> {
         let conn = Connection::open_with_flags(
             path,
             OpenFlags::SQLITE_OPEN_READ_WRITE
@@ -36,12 +37,16 @@ impl Database {
         )?;
 
         // WAL is fast on desktop but can fail on some Android filesystems; fallback to DELETE
-        let _ = conn.execute_batch("PRAGMA journal_mode=WAL;");
+        if let Err(e) = conn.execute_batch("PRAGMA journal_mode=WAL;") {
+            eprintln!("[db] WAL mode failed (fallback to DELETE): {}", e);
+        }
         // Avoid SQLITE_BUSY on concurrent BEGIN IMMEDIATE / startup races (esp. Android).
         // 5s is the conventional conservative timeout for bundled SQLite.
         conn.busy_timeout(Duration::from_millis(5000))?;
         // Small synchronous=NORMAL is safe with WAL and speeds up commits.
-        let _ = conn.execute_batch("PRAGMA synchronous=NORMAL;");
+        if let Err(e) = conn.execute_batch("PRAGMA synchronous=NORMAL;") {
+            eprintln!("[db] synchronous=NORMAL failed: {}", e);
+        }
         // Enforce FK constraints (seed inserts parents before children).
         conn.execute_batch("PRAGMA foreign_keys = ON;")?;
 

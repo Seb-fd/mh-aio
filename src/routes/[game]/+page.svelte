@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { goto } from '$app/navigation';
-  import { selectedGame } from '$lib/stores/game';
-  import Card from '$lib/components/ui/card.svelte';
+  import { goto } from '$app/navigation'
+  import { selectedGame } from '$lib/stores/game'
+  import Card from '$lib/components/ui/card.svelte'
 
-  const game = $derived($selectedGame);
+  const game = $derived($selectedGame)
 
   const sections = [
     { href: '/monsters', label: 'Monsters', icon: '🐉', desc: 'Weaknesses, materials and tips' },
@@ -13,11 +13,11 @@
     { href: '/items', label: 'Items', icon: '🎒', desc: 'Materials, consumables and locations' },
     { href: '/skills', label: 'Skills', icon: '✨', desc: 'Effects per level and synergies' },
     { href: '/builds', label: 'Builds', icon: '🔧', desc: 'Suggestions and planner' },
-  ];
+  ]
 
   function navigate(href: string) {
-    if (!game) return;
-    goto(`/${game.id}${href}`);
+    if (!game) return
+    goto(`/${game.id}${href}`)
   }
 </script>
 
@@ -31,7 +31,9 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {#each sections as section}
         <button onclick={() => navigate(section.href)} class="text-left">
-          <Card class="p-5 border border-gray-800 hover:border-gray-700 hover:bg-gray-800/50 transition-all cursor-pointer h-full">
+          <Card
+            class="p-5 border border-gray-800 hover:border-gray-700 hover:bg-gray-800/50 transition-all cursor-pointer h-full"
+          >
             <div class="flex items-start gap-3">
               <span class="text-2xl">{section.icon}</span>
               <div>

@@ -45,11 +45,11 @@ Thumbs.db
 .codebase-memory/
 
 # Dev-only data generation scripts (read external mhfu-db upstream; not needed at runtime)
-scripts/
+scripts/*
+!scripts/check-version.js
 tmp_mhfu_upstream/
 tmp_mhp3rd_ass/
 tmp_mhp3rd_upstream/
 tmp_mhp3db/
 tmp_mhfu_upstream_p3rd/
-tmp_mhp3_upstream/
 tmp_mhp3_upstream/

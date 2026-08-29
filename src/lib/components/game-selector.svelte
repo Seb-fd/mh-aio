@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { goto } from '$app/navigation';
-  import { GAMES, selectedGame, type Game } from '$lib/stores/game';
-  import Card from '$lib/components/ui/card.svelte';
+  import { goto } from '$app/navigation'
+  import { GAMES, selectedGame, type Game } from '$lib/stores/game'
+  import Card from '$lib/components/ui/card.svelte'
 
   function selectGame(game: Game) {
-    selectedGame.select(game);
-    goto(`/${game.id}`);
+    selectedGame.select(game)
+    goto(`/${game.id}`)
   }
 </script>
 
@@ -18,11 +18,10 @@
 
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl w-full">
     {#each GAMES as game}
-      <button
-        onclick={() => selectGame(game)}
-        class="text-left"
-      >
-        <Card class="p-6 border-2 {game.borderColor} {game.bgHover} transition-all duration-200 cursor-pointer h-full hover:scale-105">
+      <button onclick={() => selectGame(game)} class="text-left">
+        <Card
+          class="p-6 border-2 {game.borderColor} {game.bgHover} transition-all duration-200 cursor-pointer h-full hover:scale-105"
+        >
           <div class="flex flex-col h-full">
             <div class="flex items-center gap-3 mb-3">
               <div

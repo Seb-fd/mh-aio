@@ -14,7 +14,7 @@ pub fn run() {
             }
 
             let db_path = app_dir.join("mh-aio.db");
-            let db = db::Database::new(db_path.to_str().ok_or("invalid db path")?)?;
+            let db = db::Database::new(&db_path)?;
 
             app.manage(db);
 

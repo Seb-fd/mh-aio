@@ -1,5 +1,5 @@
 <script lang="ts">
-  import BackButton from './back-button.svelte';
+  import BackButton from './back-button.svelte'
 
   let {
     title,
@@ -7,11 +7,11 @@
     icon,
     tags = [],
   }: {
-    title: string;
-    subtitle?: string;
-    icon?: string;
-    tags?: { label: string; color?: string }[];
-  } = $props();
+    title: string
+    subtitle?: string
+    icon?: string
+    tags?: { label: string; color?: string }[]
+  } = $props()
 </script>
 
 <header class="relative mb-6 pb-6 border-b border-[var(--theme-border)]">
@@ -21,7 +21,10 @@
 
   <div class="flex items-start gap-4">
     {#if icon}
-      <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[var(--theme-banner-from)] to-[var(--theme-banner-to)] border border-[var(--theme-border-strong)] flex items-center justify-center shrink-0 shadow-lg" style="box-shadow: 0 0 30px var(--theme-glow);">
+      <div
+        class="w-14 h-14 rounded-xl bg-gradient-to-br from-[var(--theme-banner-from)] to-[var(--theme-banner-to)] border border-[var(--theme-border-strong)] flex items-center justify-center shrink-0 shadow-lg"
+        style="box-shadow: 0 0 30px var(--theme-glow);"
+      >
         <span class="text-2xl">{icon}</span>
       </div>
     {/if}
@@ -33,7 +36,10 @@
       {#if tags.length > 0}
         <div class="flex flex-wrap gap-1.5 mt-3">
           {#each tags as tag}
-            <span class="text-[10px] uppercase tracking-wide px-2 py-0.5 rounded border {tag.color ?? 'bg-[var(--theme-bg-elevated)] text-gray-300 border-[var(--theme-border)]'}">
+            <span
+              class="text-[10px] uppercase tracking-wide px-2 py-0.5 rounded border {tag.color ??
+                'bg-[var(--theme-bg-elevated)] text-gray-300 border-[var(--theme-border)]'}"
+            >
               {tag.label}
             </span>
           {/each}

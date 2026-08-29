@@ -8,16 +8,16 @@ A comprehensive, cross-platform desktop encyclopedia and toolkit for Monster Hun
 
 ## Features
 
- - **Multi-game support** — switch between MHW, MHR, MHWilds, MHP3rd, MH2G
-   - **Full MHP2G/MH2G dataset** — 2075 armor pieces, 1083 items (fully sourced: every gathering node, shop, Veggie Elder/Trenya trade, Pokke Farm, small-monster drops verified vs ISO), 83 monsters (54 Large + 25 Small + 4 Giant), 1500 weapons (11 types), 610 quests (Village/Guild/Training/Treasure/Event/Challenge), ~99 skill families (214 abilities), 192 decorations — faithful to the retail UMD (`docs/fidelity-report.md`)
-   - **MHP3rd (Portable 3rd) dataset seeded** — 1065 items (Material/Consumable/Ammo), 378 quests (village/guild/event/hot_spring/drink/nyanta/training/challenge, all 378 carry JP `name_original`), 60 monsters, 972 weapons, 1111 armor, 263 combines (202 Normal + 61 Alchemy) — sourced from `MHP3: Item List` + `www.mhp3wiki.info` via Playwright
+- **Multi-game support** — switch between MHW, MHR, MHWilds, MHP3rd, MH2G
+  - **Full MHP2G/MH2G dataset** — 2075 armor pieces, 1083 items (fully sourced: every gathering node, shop, Veggie Elder/Trenya trade, Pokke Farm, small-monster drops verified vs ISO), 83 monsters (54 Large + 25 Small + 4 Giant), 1500 weapons (11 types), 610 quests (Village/Guild/Training/Treasure/Event/Challenge), ~99 skill families (214 abilities), 192 decorations — faithful to the retail UMD (`docs/fidelity-report.md`)
+  - **MHP3rd (Portable 3rd) dataset seeded** — 1065 items (Material/Consumable/Ammo), 378 quests (village/guild/event/hot_spring/drink/nyanta/training/challenge, all 378 carry JP `name_original`), 60 monsters, 972 weapons, 1111 armor, 263 combines (202 Normal + 61 Alchemy) — sourced from `MHP3: Item List` + `www.mhp3wiki.info` via Playwright
 - **Complete entity browser** — monsters, weapons, armor, quests, items (with `category • subcategory` + `Charm` + `Ammo/Husk` ISO taxonomy, `Chest` order), skills, decorations, armor sets — all in game-faithful order and hub order
 - **Combinations** — global list `Items → Combinations` (single view, `Normal/Alchemy/Treasure` badge + `success %` + Book order) and clickable recipes in item detail (`Godbug x1 + Wyvern Fang x1 = Life Crystals x1 • 90%`)
 - **Armor Set Solver (Athena's A.S.S. port)** — pick up to 5 skills and find every armor set that activates them, including recommended jewels, spare slots, resists and defense. Full parity: hunter type (Blademaster/Gunner), gender, HR/Elder rank gate, weapon slots, piercings, Torso Inc, bad-skill handling, 1000-result limit and sort-by.
 - **Armor sets view** — armors grouped into faithful sets (full 5/10-piece sets or singletons like Black Legs), grouped by `derive_set_name` to match the game's smith; browser filters: `Both | Male | Female` + `All | Blademaster | Gunner` (head Blademaster = higher defense) + rank
 - **Monster → dedicated gear** — per-monster armor sets (≥40% of the set's materials come from that monster), rank-filtered, with a secondary "Uses 1 Material" view; subspecies (Azure/Silver Rathalos) kept separate; monster list in Hunter's Notes order (Felyne 1 … White Fatalis 83) with Large/Small/All selector
 - **Weapon trees** — 11 trees in Smith order `Great Sword → Long Sword → Sword & Shield → Dual Blades → Hammer → Hunting Horn → Lance → Gunlance → Light Bowgun → Heavy Bowgun → Bow`
-   - **Quests** — 610 quests across 9 hubs `Village Elder → Nekoto → Guild Low/High/G → Event → Challenge → Training School → Treasure Hunt` grouped into collapsible difficulty accordions (★ / G★ tiers); Event/Challenge downloadable quests validated vs kit `.bin` + guide
+  - **Quests** — 610 quests across 9 hubs `Village Elder → Nekoto → Guild Low/High/G → Event → Challenge → Training School → Treasure Hunt` grouped into collapsible difficulty accordions (★ / G★ tiers); Event/Challenge downloadable quests validated vs kit `.bin` + guide
 - **Global per-game search** — accent-insensitive, debounced suggestions across monsters, items, skills, weapons, armor/sets, quests and decorations
 - **Gender-locked armor** — male/female-only pieces (e.g. Guardian Helm, Maiden's Hat) honored in both the browser and the solver
 - **Detail views** — official descriptions, stats, crafting materials, drop sources with probabilities, and cross-navigation
@@ -53,13 +53,13 @@ Under: **MIT License** — see the upstream repository for the original license.
 
 The app supports multiple titles through dynamic game routing (`[game]`):
 
-| Slug | Game | Year |
-|------|------|------|
-| `mhw` | Monster Hunter: World | 2018 |
-| `mhr` | Monster Hunter Rise | 2021 |
-| `mhwilds` | Monster Hunter Wilds | 2025 |
-| `mhp3rd` | MH Portable 3rd | 2010 |
-| `mh2g` | MH 2ndG (Freedom Unite) | 2008 |
+| Slug      | Game                    | Year |
+| --------- | ----------------------- | ---- |
+| `mhw`     | Monster Hunter: World   | 2018 |
+| `mhr`     | Monster Hunter Rise     | 2021 |
+| `mhwilds` | Monster Hunter Wilds    | 2025 |
+| `mhp3rd`  | MH Portable 3rd         | 2010 |
+| `mh2g`    | MH 2ndG (Freedom Unite) | 2008 |
 
 MH2G is the verified-complete game; MHP3rd is fully seeded (routing + theming + all entity browsers); the remaining titles are wired for routing/theming with data to come.
 
@@ -102,7 +102,7 @@ npm install
      ```bash
      npx tauri android init
      ```
-     *(Note on Windows: Ensure Developer Mode is enabled to allow symbolic links).*
+     _(Note on Windows: Ensure Developer Mode is enabled to allow symbolic links)._
   3. Run on emulator or connected device:
      ```bash
      npx tauri android dev

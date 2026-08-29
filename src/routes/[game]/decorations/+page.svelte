@@ -1,57 +1,71 @@
 <script lang="ts">
-  import { goto } from '$app/navigation';
-  import { selectedGame } from '$lib/stores/game';
-  import { api, type Decoration } from '$lib/api';
-  import { normKey } from '$lib/utils/norm';
-  import Card from '$lib/components/ui/card.svelte';
+  import { goto } from '$app/navigation'
+  import { selectedGame } from '$lib/stores/game'
+  import { api, type Decoration } from '$lib/api'
+  import { normKey } from '$lib/utils/norm'
+  import Card from '$lib/components/ui/card.svelte'
 
-  const game = $derived($selectedGame);
-  const dbId = $derived(game?.dbId);
+  const game = $derived($selectedGame)
+  const dbId = $derived(game?.dbId)
 
-  let decorations = $state<Decoration[]>([]);
-  let loading = $state(true);
-  let error = $state<string | null>(null);
-  let searchTerm = $state('');
-  let slotFilter = $state<string>('all');
-  let skillFilter = $state<string>('all');
+  let decorations = $state<Decoration[]>([])
+  let loading = $state(true)
+  let error = $state<string | null>(null)
+  let searchTerm = $state('')
+  let slotFilter = $state<string>('all')
+  let skillFilter = $state<string>('all')
 
   async function loadDecorationsData(id: number, attempt = 0) {
     try {
-      const data = await api.getDecorations(id);
-      decorations = data;
-      error = null;
+      const data = await api.getDecorations(id)
+      decorations = data
+      error = null
     } catch (e) {
-      const msg = String(e);
+      const msg = String(e)
       if (msg.includes('state not managed') && attempt < 6) {
-        error = 'Preparing database...';
-        setTimeout(() => loadDecorationsData(id, attempt + 1), 400 * (attempt + 1));
-        return;
+        error = 'Preparing database...'
+        setTimeout(() => loadDecorationsData(id, attempt + 1), 400 * (attempt + 1))
+        return
       }
-      error = msg;
+      error = msg
     } finally {
-      if (error !== 'Preparing database...') loading = false;
+      if (error !== 'Preparing database...') loading = false
     }
   }
   $effect(() => {
-    if (dbId == null) return;
-    loading = true;
-    error = null;
-    loadDecorationsData(dbId);
-  });
+    if (dbId == null) return
+    loading = true
+    error = null
+    loadDecorationsData(dbId)
+  })
 
-  const skills = $derived(['all', ...Array.from(new Set(decorations.flatMap(d => [d.skill_name, d.secondary_skill_name].filter((x): x is string => !!x)))).sort()]);
-  const slots = ['all', '1', '2', '3'];
+  const skills = $derived([
+    'all',
+    ...Array.from(
+      new Set(
+        decorations.flatMap((d) =>
+          [d.skill_name, d.secondary_skill_name].filter((x): x is string => !!x),
+        ),
+      ),
+    ).sort(),
+  ])
+  const slots = ['all', '1', '2', '3']
 
   const filtered = $derived(
     decorations
-      .filter(d => slotFilter === 'all' || String(d.slot_size) === slotFilter)
-      .filter(d => skillFilter === 'all' || d.skill_name === skillFilter || d.secondary_skill_name === skillFilter)
-      .filter(d => searchTerm === '' || normKey(d.name).includes(normKey(searchTerm)))
-  );
+      .filter((d) => slotFilter === 'all' || String(d.slot_size) === slotFilter)
+      .filter(
+        (d) =>
+          skillFilter === 'all' ||
+          d.skill_name === skillFilter ||
+          d.secondary_skill_name === skillFilter,
+      )
+      .filter((d) => searchTerm === '' || normKey(d.name).includes(normKey(searchTerm))),
+  )
 
   function open(id: number) {
-    if (!game) return;
-    goto(`/${game.id}/decorations/${id}`);
+    if (!game) return
+    goto(`/${game.id}/decorations/${id}`)
   }
 </script>
 
@@ -118,22 +132,43 @@
                 <p class="font-medium text-sm text-gray-100 truncate">{deco.name}</p>
                 <p class="text-[11px] text-gray-500 mt-0.5">
                   {#if deco.skill_name}
-                    <span class="{(deco.skill_points ?? 0) >= 0 ? 'text-emerald-400' : 'text-red-400'}">{deco.skill_name} {(deco.skill_points ?? 0) > 0 ? '+' : ''}{deco.skill_points}</span>
+                    <span
+                      class={(deco.skill_points ?? 0) >= 0 ? 'text-emerald-400' : 'text-red-400'}
+                      >{deco.skill_name}
+                      {(deco.skill_points ?? 0) > 0 ? '+' : ''}{deco.skill_points}</span
+                    >
                   {/if}
                   {#if deco.secondary_skill_name}
                     <span class="text-gray-600"> · </span>
-                    <span class="{(deco.secondary_points ?? 0) >= 0 ? 'text-emerald-400' : 'text-red-400'}">{deco.secondary_skill_name} {(deco.secondary_points ?? 0) > 0 ? '+' : ''}{deco.secondary_points}</span>
+                    <span
+                      class={(deco.secondary_points ?? 0) >= 0
+                        ? 'text-emerald-400'
+                        : 'text-red-400'}
+                      >{deco.secondary_skill_name}
+                      {(deco.secondary_points ?? 0) > 0 ? '+' : ''}{deco.secondary_points}</span
+                    >
                   {/if}
                 </p>
               </div>
-              <span class="inline-flex items-center justify-center w-6 h-6 rounded text-xs font-bold border shrink-0
-                {deco.slot_size === 1 ? 'bg-gray-800 text-gray-300 border-gray-700' : deco.slot_size === 2 ? 'bg-blue-900/30 text-blue-300 border-blue-800' : 'bg-yellow-900/30 text-yellow-300 border-yellow-800'}">
+              <span
+                class="inline-flex items-center justify-center w-6 h-6 rounded text-xs font-bold border shrink-0
+                {deco.slot_size === 1
+                  ? 'bg-gray-800 text-gray-300 border-gray-700'
+                  : deco.slot_size === 2
+                    ? 'bg-blue-900/30 text-blue-300 border-blue-800'
+                    : 'bg-yellow-900/30 text-yellow-300 border-yellow-800'}"
+              >
                 {deco.slot_size ?? '-'}
               </span>
             </div>
             <div class="flex items-center justify-between mt-2">
-              <span class="text-[10px] px-1.5 py-0.5 rounded bg-[var(--theme-bg-elevated)] text-gray-400 border border-[var(--theme-border)]">Slot {deco.slot_size}</span>
-              <span class="text-xs font-medium" style="color: var(--theme-accent);">{deco.price ?? 0}z</span>
+              <span
+                class="text-[10px] px-1.5 py-0.5 rounded bg-[var(--theme-bg-elevated)] text-gray-400 border border-[var(--theme-border)]"
+                >Slot {deco.slot_size}</span
+              >
+              <span class="text-xs font-medium" style="color: var(--theme-accent);"
+                >{deco.price ?? 0}z</span
+              >
             </div>
           </Card>
         </button>

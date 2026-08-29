@@ -1,7 +1,8 @@
 use rusqlite::{Connection, Result};
 
 pub fn create_tables(conn: &Connection) -> Result<()> {
-    conn.execute_batch("
+    conn.execute_batch(
+        "
         -- Games table
         CREATE TABLE IF NOT EXISTS games (
             id INTEGER PRIMARY KEY,
@@ -322,7 +323,8 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             version INTEGER NOT NULL,
             applied_at TEXT NOT NULL DEFAULT (datetime('now'))
         );
-    ")?;
+    ",
+    )?;
 
     apply_migrations(conn)?;
     add_idempotency_constraints(conn)?;
@@ -344,7 +346,16 @@ fn add_idempotency_constraints(conn: &Connection) -> Result<()> {
     // collide on a bare `id` primary key. `id` is already PK, so this is a no-op
     // guard that turns accidental future collisions into hard errors instead of
     // silent cross-game mixups.
-    let content_tables = ["weapons", "armor", "armor_sets", "monsters", "quests", "items", "skills", "decorations"];
+    let content_tables = [
+        "weapons",
+        "armor",
+        "armor_sets",
+        "monsters",
+        "quests",
+        "items",
+        "skills",
+        "decorations",
+    ];
     for t in content_tables {
         conn.execute(
             &format!("CREATE UNIQUE INDEX IF NOT EXISTS uq_{t}_game_id ON {t}(game_id, id)"),
@@ -387,8 +398,10 @@ fn add_idempotency_constraints(conn: &Connection) -> Result<()> {
 }
 
 pub fn get_schema_version(conn: &Connection) -> Result<i32> {
-    conn.query_row("SELECT version FROM schema_version WHERE id = 1", [], |r| r.get(0))
-        .or(Ok(0))
+    conn.query_row("SELECT version FROM schema_version WHERE id = 1", [], |r| {
+        r.get(0)
+    })
+    .or(Ok(0))
 }
 
 fn apply_migrations(conn: &Connection) -> Result<()> {
@@ -419,7 +432,10 @@ fn apply_migrations(conn: &Connection) -> Result<()> {
     add_column_if_missing(conn, "quests", "name_original", "TEXT")?;
     add_column_if_missing(conn, "item_combine", "combine_type", "TEXT")?;
     add_column_if_missing(conn, "item_combine", "chance", "INTEGER")?;
-    let _ = conn.execute("UPDATE item_combine SET combine_type = 'normal' WHERE combine_type IS NULL", []);
+    let _ = conn.execute(
+        "UPDATE item_combine SET combine_type = 'normal' WHERE combine_type IS NULL",
+        [],
+    );
     add_column_if_missing(conn, "items", "subcategory", "TEXT")?;
     // In-game armor-forge order within each weapon type (faithful to the game
     // weapon-tree sequence, e.g. MHP3rd starts with the Yukumo branch). Falls
@@ -439,6 +455,17 @@ fn add_column_if_missing(
     column: &str,
     column_type: &str,
 ) -> Result<()> {
+    // Validate identifiers to prevent injection; callers use hardcoded names.
+    let is_ident = |s: &str| {
+        !s.is_empty()
+            && s.chars()
+                .all(|c| c.is_ascii_alphanumeric() || c == '_' || c == '.')
+    };
+    if !is_ident(table) || !is_ident(column) {
+        return Err(rusqlite::Error::InvalidParameterName(format!(
+            "invalid identifier {table}.{column}"
+        )));
+    }
     let exists: bool = conn
         .query_row(
             "SELECT COUNT(*) > 0 FROM pragma_table_info(?1) WHERE name = ?2",
@@ -448,7 +475,13 @@ fn add_column_if_missing(
         .unwrap_or(false);
 
     if !exists {
-        let stmt = format!("ALTER TABLE {} ADD COLUMN {} {}", table, column, column_type);
+        // Double-quote identifiers to handle reserved words safely.
+        let stmt = format!(
+            "ALTER TABLE \"{}\" ADD COLUMN \"{}\" {}",
+            table.replace('"', "\"\""),
+            column.replace('"', "\"\""),
+            column_type
+        );
         conn.execute(&stmt, [])?;
     }
 

@@ -1,4 +1,4 @@
-﻿use rusqlite::{Connection, OptionalExtension, Result};
+use rusqlite::{Connection, OptionalExtension, Result};
 use serde::Deserialize;
 
 const MH2G: i32 = 5;
@@ -228,7 +228,8 @@ fn backfill_item_descriptions(conn: &Connection) -> Result<()> {
 }
 
 #[derive(Deserialize)]
-struct DropJson {    monster_id: i32,
+struct DropJson {
+    monster_id: i32,
     item_id: i32,
     method: String,
     part: Option<String>,
@@ -320,7 +321,7 @@ fn seed_extra_item_combine(conn: &Connection) -> Result<()> {
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
     for r in recs {
         conn.execute(
-            "INSERT OR IGNORE INTO item_combine (result_item_id, component_item_id, quantity, result_quantity) VALUES (?1, ?2, ?3, ?4)",
+            "INSERT OR IGNORE INTO item_combine (result_item_id, component_item_id, quantity, result_quantity, combine_type, chance) VALUES (?1, ?2, ?3, ?4, 'normal', NULL)",
             rusqlite::params![r.result_item_id, r.component_item_id, r.quantity, r.result_quantity],
         )?;
     }
@@ -459,7 +460,11 @@ fn seed_weapon_craft(conn: &Connection) -> Result<()> {
     for r in rows {
         for m in &r.forge {
             let iid: Option<i32> = conn
-                .query_row("SELECT id FROM items WHERE name = ?1 AND game_id = 5", rusqlite::params![m.item], |row| row.get(0))
+                .query_row(
+                    "SELECT id FROM items WHERE name = ?1 AND game_id = 5",
+                    rusqlite::params![m.item],
+                    |row| row.get(0),
+                )
                 .optional()?;
             if let Some(iid) = iid {
                 conn.execute(
@@ -471,7 +476,11 @@ fn seed_weapon_craft(conn: &Connection) -> Result<()> {
         }
         for m in &r.upgrade {
             let iid: Option<i32> = conn
-                .query_row("SELECT id FROM items WHERE name = ?1 AND game_id = 5", rusqlite::params![m.item], |row| row.get(0))
+                .query_row(
+                    "SELECT id FROM items WHERE name = ?1 AND game_id = 5",
+                    rusqlite::params![m.item],
+                    |row| row.get(0),
+                )
                 .optional()?;
             if let Some(iid) = iid {
                 conn.execute(
@@ -517,10 +526,46 @@ fn derive_set_name(armor: &ArmorJson) -> String {
     }
     // Known slot suffixes (head/chest/arms/waist/legs pieces)
     const SLOT_WORDS: &[&str] = &[
-        "Helm", "Cap", "Crown", "Mask", "Hat", "Hood", "Head", "Face", "Brain", "Soul", "Horn", "Crest", "Glare", "Snarl", "Piercing",
-        "Mail", "Vest", "Jacket", "Armor", "Hide", "Skin", "Coat", "Plate", "Belt", "Tasset", "Kilt", "Coil", "Obi",
-        "Vambraces", "Guards", "Guards", "Braces", "Gloves", "Mittens",
-        "Greaves", "Leggings", "Boots", "Pants", "Legs", "Feet",
+        "Helm",
+        "Cap",
+        "Crown",
+        "Mask",
+        "Hat",
+        "Hood",
+        "Head",
+        "Face",
+        "Brain",
+        "Soul",
+        "Horn",
+        "Crest",
+        "Glare",
+        "Snarl",
+        "Piercing",
+        "Mail",
+        "Vest",
+        "Jacket",
+        "Armor",
+        "Hide",
+        "Skin",
+        "Coat",
+        "Plate",
+        "Belt",
+        "Tasset",
+        "Kilt",
+        "Coil",
+        "Obi",
+        "Vambraces",
+        "Guards",
+        "Guards",
+        "Braces",
+        "Gloves",
+        "Mittens",
+        "Greaves",
+        "Leggings",
+        "Boots",
+        "Pants",
+        "Legs",
+        "Feet",
     ];
     let parts: Vec<&str> = armor.name.split_whitespace().collect();
     if parts.is_empty() {
@@ -532,15 +577,29 @@ fn derive_set_name(armor: &ArmorJson) -> String {
         for &slot in SLOT_WORDS {
             for &var in &["X", "Z", "S", "U", "D", "C"] {
                 let suff = format!("{}{}", slot, var);
-                if name.to_ascii_lowercase().ends_with(&suff.to_ascii_lowercase()) {
+                if name
+                    .to_ascii_lowercase()
+                    .ends_with(&suff.to_ascii_lowercase())
+                {
                     let base = name[..name.len() - suff.len()].trim();
-                    let derived = if base.is_empty() { slot.to_string() } else { format!("{} {}", base, var) };
+                    let derived = if base.is_empty() {
+                        slot.to_string()
+                    } else {
+                        format!("{} {}", base, var)
+                    };
                     return derived;
                 }
             }
-            if name.to_ascii_lowercase().ends_with(&slot.to_ascii_lowercase()) {
+            if name
+                .to_ascii_lowercase()
+                .ends_with(&slot.to_ascii_lowercase())
+            {
                 let base = name[..name.len() - slot.len()].trim();
-                return if base.is_empty() { slot.to_string() } else { base.to_string() };
+                return if base.is_empty() {
+                    slot.to_string()
+                } else {
+                    base.to_string()
+                };
             }
         }
         return armor.set.clone();
@@ -554,7 +613,9 @@ fn derive_set_name(armor: &ArmorJson) -> String {
         parts.len() - 1
     };
     let slot_word = parts[slot_idx];
-    let is_slot = SLOT_WORDS.iter().any(|&w| w.eq_ignore_ascii_case(slot_word));
+    let is_slot = SLOT_WORDS
+        .iter()
+        .any(|&w| w.eq_ignore_ascii_case(slot_word));
     if !is_slot {
         return armor.set.clone();
     }
@@ -612,7 +673,13 @@ fn seed_armor(conn: &Connection) -> Result<()> {
             set_map.push((set_name.clone(), set_id));
         }
     }
-    let set_id_of = |set: &str| -> i32 { set_map.iter().find(|(s, _)| s == set).map(|(_, i)| *i).unwrap_or(0) };
+    let set_id_of = |set: &str| -> i32 {
+        set_map
+            .iter()
+            .find(|(s, _)| s == set)
+            .map(|(_, i)| *i)
+            .unwrap_or(0)
+    };
     let set_id_of_armor = |armor: &ArmorJson| -> i32 { set_id_of(&derive_set_name(armor)) };
 
     for a in armors {
@@ -724,13 +791,14 @@ fn seed_quests(conn: &Connection) -> Result<()> {
         )?;
     }
     // Backfill for existing DBs (EN overwrite + preserve original) — reuse parsed list; log if second parse unexpectedly fails.
-    let backfill: Vec<QuestJson> = match serde_json::from_str(include_str!("../../data/mh2g_quests.json")) {
-        Ok(v) => v,
-        Err(e) => {
-            eprintln!("[seed] mh2g_quests backfill parse failed: {}", e);
-            Vec::new()
-        }
-    };
+    let backfill: Vec<QuestJson> =
+        match serde_json::from_str(include_str!("../../data/mh2g_quests.json")) {
+            Ok(v) => v,
+            Err(e) => {
+                eprintln!("[seed] mh2g_quests backfill parse failed: {}", e);
+                Vec::new()
+            }
+        };
     for q in backfill {
         let _ = conn.execute(
             "UPDATE quests SET objective = ?1, objective_original = COALESCE(objective_original, ?2), location = ?3, location_original = COALESCE(location_original, ?4), description = COALESCE(?, description), description_original = COALESCE(description_original, ?) WHERE id = ?5 AND game_id = 5",
@@ -970,8 +1038,11 @@ fn parse_skill_string(s: &str) -> Vec<(String, i32)> {
 }
 
 fn seed_armor_skill_points(conn: &Connection) -> Result<()> {
-    let mut stmt = conn.prepare("SELECT id, skills FROM armor WHERE game_id = 5 AND skills IS NOT NULL")?;
-    let rows = stmt.query_map([], |row| Ok((row.get::<_, i32>(0)?, row.get::<_, String>(1)?)))?;
+    let mut stmt =
+        conn.prepare("SELECT id, skills FROM armor WHERE game_id = 5 AND skills IS NOT NULL")?;
+    let rows = stmt.query_map([], |row| {
+        Ok((row.get::<_, i32>(0)?, row.get::<_, String>(1)?))
+    })?;
 
     let mut to_insert: Vec<(i32, i32, i32)> = Vec::new();
     for r in rows {
@@ -1001,8 +1072,12 @@ fn seed_armor_skill_points(conn: &Connection) -> Result<()> {
 }
 
 fn seed_weapon_skill_points(conn: &Connection) -> Result<()> {
-    let mut stmt = conn.prepare("SELECT id, skills FROM weapons WHERE game_id = 5 AND skills IS NOT NULL AND skills != ''")?;
-    let rows = stmt.query_map([], |row| Ok((row.get::<_, i32>(0)?, row.get::<_, String>(1)?)))?;
+    let mut stmt = conn.prepare(
+        "SELECT id, skills FROM weapons WHERE game_id = 5 AND skills IS NOT NULL AND skills != ''",
+    )?;
+    let rows = stmt.query_map([], |row| {
+        Ok((row.get::<_, i32>(0)?, row.get::<_, String>(1)?))
+    })?;
 
     let mut to_insert: Vec<(i32, i32, i32)> = Vec::new();
     for r in rows {
@@ -1160,7 +1235,7 @@ fn seed_mhp3rd_extra_item_combine(conn: &Connection) -> Result<()> {
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
     for r in recs {
         conn.execute(
-            "INSERT OR IGNORE INTO item_combine (result_item_id, component_item_id, quantity, result_quantity) VALUES (?1, ?2, ?3, ?4)",
+            "INSERT OR IGNORE INTO item_combine (result_item_id, component_item_id, quantity, result_quantity, combine_type, chance) VALUES (?1, ?2, ?3, ?4, 'normal', NULL)",
             rusqlite::params![r.result_item_id, r.component_item_id, r.quantity, r.result_quantity],
         )?;
     }
@@ -1186,7 +1261,7 @@ fn seed_mhp3rd_weapon_materials(conn: &Connection) -> Result<()> {
         // Skip rows whose weapon/item are not present in the seeded dataset
         // (weapon_materials references a few weapons withdrawn from the
         // `weapons` table, so a direct insert would violate the FK).
-        if weapon_exists(conn, MHP3RD, m.weapon_id) && item_exists(conn, m.item_id) {
+        if weapon_exists(conn, MHP3RD, m.weapon_id)? && item_exists(conn, m.item_id)? {
             conn.execute(
                 "INSERT OR IGNORE INTO weapon_materials (weapon_id, item_id, quantity) VALUES (?1, ?2, ?3)",
                 rusqlite::params![m.weapon_id, m.item_id, m.quantity],
@@ -1196,24 +1271,26 @@ fn seed_mhp3rd_weapon_materials(conn: &Connection) -> Result<()> {
     Ok(())
 }
 
-fn weapon_exists(conn: &Connection, game_id: i32, id: i32) -> bool {
-    // Use optional() so SQLITE_BUSY / other errors don't masquerade as "not found"
-    // and silently drop legitimate weapon_materials rows under contention.
-    conn.query_row(
-        "SELECT 1 FROM weapons WHERE id = ?1 AND game_id = ?2",
-        rusqlite::params![id, game_id],
-        |row| row.get::<_, i32>(0),
-    )
-    .optional()
-    .map(|opt| opt.is_some())
-    .unwrap_or(false)
+fn weapon_exists(conn: &Connection, game_id: i32, id: i32) -> Result<bool> {
+    Ok(conn
+        .query_row(
+            "SELECT 1 FROM weapons WHERE id = ?1 AND game_id = ?2",
+            rusqlite::params![id, game_id],
+            |row| row.get::<_, i32>(0),
+        )
+        .optional()?
+        .is_some())
 }
 
-fn item_exists(conn: &Connection, id: i32) -> bool {
-    conn.query_row("SELECT 1 FROM items WHERE id = ?1", rusqlite::params![id], |row| row.get::<_, i32>(0))
-        .optional()
-        .map(|opt| opt.is_some())
-        .unwrap_or(false)
+fn item_exists(conn: &Connection, id: i32) -> Result<bool> {
+    Ok(conn
+        .query_row(
+            "SELECT 1 FROM items WHERE id = ?1",
+            rusqlite::params![id],
+            |row| row.get::<_, i32>(0),
+        )
+        .optional()?
+        .is_some())
 }
 fn seed_mhp3rd_weapon_craft(conn: &Connection) -> Result<()> {
     let json_data = include_str!("../../data/mhp3rd_weapon_craft.json");
@@ -1221,12 +1298,16 @@ fn seed_mhp3rd_weapon_craft(conn: &Connection) -> Result<()> {
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
     for r in rows {
         // Skip weapons withdrawn from the `weapons` table to avoid an FK violation.
-        if !weapon_exists(conn, MHP3RD, r.weapon_id) {
+        if !weapon_exists(conn, MHP3RD, r.weapon_id)? {
             continue;
         }
         for m in &r.forge {
             let iid: Option<i32> = conn
-                .query_row("SELECT id FROM items WHERE name = ?1 AND game_id = 4", rusqlite::params![m.item], |row| row.get(0))
+                .query_row(
+                    "SELECT id FROM items WHERE name = ?1 AND game_id = 4",
+                    rusqlite::params![m.item],
+                    |row| row.get(0),
+                )
                 .optional()?;
             if let Some(iid) = iid {
                 conn.execute(
@@ -1237,7 +1318,11 @@ fn seed_mhp3rd_weapon_craft(conn: &Connection) -> Result<()> {
         }
         for m in &r.upgrade {
             let iid: Option<i32> = conn
-                .query_row("SELECT id FROM items WHERE name = ?1 AND game_id = 4", rusqlite::params![m.item], |row| row.get(0))
+                .query_row(
+                    "SELECT id FROM items WHERE name = ?1 AND game_id = 4",
+                    rusqlite::params![m.item],
+                    |row| row.get(0),
+                )
                 .optional()?;
             if let Some(iid) = iid {
                 conn.execute(
@@ -1281,7 +1366,13 @@ fn seed_mhp3rd_armor(conn: &Connection) -> Result<()> {
             set_map.push((set_name.clone(), set_id + 10000));
         }
     }
-    let set_id_of = |set: &str| -> i32 { set_map.iter().find(|(s, _)| s == set).map(|(_, i)| *i).unwrap_or(0) };
+    let set_id_of = |set: &str| -> i32 {
+        set_map
+            .iter()
+            .find(|(s, _)| s == set)
+            .map(|(_, i)| *i)
+            .unwrap_or(0)
+    };
     let set_id_of_armor = |armor: &ArmorJson| -> i32 { set_id_of(&derive_set_name(armor)) };
     for a in armors {
         let gender = a.gender.clone().unwrap_or_else(|| "both".to_string());
@@ -1309,20 +1400,24 @@ fn seed_mhp3rd_quests(conn: &Connection) -> Result<()> {
     let quests: Vec<QuestJson> = serde_json::from_str(json_data)
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
     for q in quests {
-        let main_monsters_json = q.main_monsters.as_ref().map(|v| serde_json::to_string(v).unwrap_or_else(|_| "[]".to_string()));
+        let main_monsters_json = q
+            .main_monsters
+            .as_ref()
+            .map(|v| serde_json::to_string(v).unwrap_or_else(|_| "[]".to_string()));
         conn.execute(
             "INSERT OR IGNORE INTO quests (id, game_id, name, name_original, type, rank, hub, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, description, description_original, client, requirements, reward_money, contract_fee, main_monsters, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, ?23, 'en')",
             rusqlite::params![q.id, MHP3RD, q.name, q.name_original, q.qtype, q.rank, q.hub, q.stars, q.objective, q.objective_original.as_deref().unwrap_or(&q.objective), q.location, q.location_original.as_deref().unwrap_or(&q.location), q.time_limit.unwrap_or(50), q.faints_allowed.unwrap_or(3), q.is_key_quest.unwrap_or(false), q.is_urgent.unwrap_or(false), q.description, q.description_original.as_deref().unwrap_or(q.description.as_deref().unwrap_or("")), q.client, q.requirements, q.reward_money, q.contract_fee, main_monsters_json],
         )?;
     }
     // Backfill EN for existing installs that already have JP rows (preserve original JP in *_original)
-    let mhp3rd_backfill: Vec<QuestJson> = match serde_json::from_str(include_str!("../../data/mhp3rd_quests.json")) {
-        Ok(v) => v,
-        Err(e) => {
-            eprintln!("[seed] mhp3rd_quests backfill parse failed: {}", e);
-            Vec::new()
-        }
-    };
+    let mhp3rd_backfill: Vec<QuestJson> =
+        match serde_json::from_str(include_str!("../../data/mhp3rd_quests.json")) {
+            Ok(v) => v,
+            Err(e) => {
+                eprintln!("[seed] mhp3rd_quests backfill parse failed: {}", e);
+                Vec::new()
+            }
+        };
     for q in mhp3rd_backfill {
         let _ = conn.execute(
             "UPDATE quests SET objective = ?1, objective_original = COALESCE(objective_original, ?2), location = ?3, location_original = COALESCE(location_original, ?4), description = COALESCE(?, description), description_original = COALESCE(description_original, ?) WHERE id = ?5 AND game_id = 4 AND (objective != ?1 OR location != ?3 OR description IS NULL)",
@@ -1378,17 +1473,37 @@ fn seed_mhp3rd_decorations(conn: &Connection) -> Result<()> {
         let mut secondary_pts: Option<i32> = None;
         for (idx, sp) in d.skill_points.iter().enumerate() {
             let normalized = normalize_skill_name_p3rd(&sp.name);
-            let sid: Option<i32> = conn.query_row("SELECT id FROM skills WHERE name = ?1 AND game_id = 4", rusqlite::params![normalized], |row| row.get(0)).optional()?;
-            if idx == 0 { primary_id = sid; primary_pts = Some(sp.points); } else if idx == 1 { secondary_id = sid; secondary_pts = Some(sp.points); }
+            let sid: Option<i32> = conn
+                .query_row(
+                    "SELECT id FROM skills WHERE name = ?1 AND game_id = 4",
+                    rusqlite::params![normalized],
+                    |row| row.get(0),
+                )
+                .optional()?;
+            if idx == 0 {
+                primary_id = sid;
+                primary_pts = Some(sp.points);
+            } else if idx == 1 {
+                secondary_id = sid;
+                secondary_pts = Some(sp.points);
+            }
         }
-        if primary_id.is_none() { continue; }
+        if primary_id.is_none() {
+            continue;
+        }
         conn.execute(
             "INSERT OR IGNORE INTO decorations (id, game_id, name, skill_id, skill_level, skill_points, secondary_skill_id, secondary_points, slot_size, rarity, price, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, NULL, ?10, 'en')",
             rusqlite::params![d.id, MHP3RD, d.name, primary_id, primary_pts, primary_pts, secondary_id, secondary_pts, d.slot_size, d.price],
         )?;
         for m in &d.materials {
             let normalized_mat = normalize_item_name_p3rd(&m.name);
-            let iid: Option<i32> = conn.query_row("SELECT id FROM items WHERE LOWER(name) = LOWER(?1) AND game_id = 4", rusqlite::params![normalized_mat], |row| row.get(0)).optional()?;
+            let iid: Option<i32> = conn
+                .query_row(
+                    "SELECT id FROM items WHERE LOWER(name) = LOWER(?1) AND game_id = 4",
+                    rusqlite::params![normalized_mat],
+                    |row| row.get(0),
+                )
+                .optional()?;
             if iid.is_none() {
                 // Never insert a NULL FK — skip unresolved rather than making an orphan.
                 continue;
@@ -1402,15 +1517,26 @@ fn seed_mhp3rd_decorations(conn: &Connection) -> Result<()> {
     Ok(())
 }
 fn seed_mhp3rd_armor_skill_points(conn: &Connection) -> Result<()> {
-    let mut stmt = conn.prepare("SELECT id, skills FROM armor WHERE game_id = 4 AND skills IS NOT NULL")?;
-    let rows = stmt.query_map([], |row| Ok((row.get::<_, i32>(0)?, row.get::<_, String>(1)?)))?;
+    let mut stmt =
+        conn.prepare("SELECT id, skills FROM armor WHERE game_id = 4 AND skills IS NOT NULL")?;
+    let rows = stmt.query_map([], |row| {
+        Ok((row.get::<_, i32>(0)?, row.get::<_, String>(1)?))
+    })?;
     let mut to_insert: Vec<(i32, i32, i32)> = Vec::new();
     for r in rows {
         let (armor_id, skills_str) = r?;
         for (name, pts) in parse_skill_string(&skills_str) {
             let normalized = normalize_skill_name_p3rd(&name);
-            let sid: Option<i32> = conn.query_row("SELECT id FROM skills WHERE name = ?1 AND game_id = 4", rusqlite::params![normalized], |row| row.get(0)).optional()?;
-            if let Some(sid) = sid { to_insert.push((armor_id, sid, pts)); }
+            let sid: Option<i32> = conn
+                .query_row(
+                    "SELECT id FROM skills WHERE name = ?1 AND game_id = 4",
+                    rusqlite::params![normalized],
+                    |row| row.get(0),
+                )
+                .optional()?;
+            if let Some(sid) = sid {
+                to_insert.push((armor_id, sid, pts));
+            }
         }
     }
     drop(stmt);
@@ -1420,15 +1546,27 @@ fn seed_mhp3rd_armor_skill_points(conn: &Connection) -> Result<()> {
     Ok(())
 }
 fn seed_mhp3rd_weapon_skill_points(conn: &Connection) -> Result<()> {
-    let mut stmt = conn.prepare("SELECT id, skills FROM weapons WHERE game_id = 4 AND skills IS NOT NULL AND skills != ''")?;
-    let rows = stmt.query_map([], |row| Ok((row.get::<_, i32>(0)?, row.get::<_, String>(1)?)))?;
+    let mut stmt = conn.prepare(
+        "SELECT id, skills FROM weapons WHERE game_id = 4 AND skills IS NOT NULL AND skills != ''",
+    )?;
+    let rows = stmt.query_map([], |row| {
+        Ok((row.get::<_, i32>(0)?, row.get::<_, String>(1)?))
+    })?;
     let mut to_insert: Vec<(i32, i32, i32)> = Vec::new();
     for r in rows {
         let (weapon_id, skills_str) = r?;
         for (name, pts) in parse_skill_string(&skills_str) {
             let normalized = normalize_skill_name_p3rd(&name);
-            let sid: Option<i32> = conn.query_row("SELECT id FROM skills WHERE name = ?1 AND game_id = 4", rusqlite::params![normalized], |row| row.get(0)).optional()?;
-            if let Some(sid) = sid { to_insert.push((weapon_id, sid, pts)); }
+            let sid: Option<i32> = conn
+                .query_row(
+                    "SELECT id FROM skills WHERE name = ?1 AND game_id = 4",
+                    rusqlite::params![normalized],
+                    |row| row.get(0),
+                )
+                .optional()?;
+            if let Some(sid) = sid {
+                to_insert.push((weapon_id, sid, pts));
+            }
         }
     }
     drop(stmt);

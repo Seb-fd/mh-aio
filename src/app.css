@@ -40,8 +40,16 @@
     background-color: var(--theme-bg-base);
     background-image:
       radial-gradient(ellipse 80% 50% at 50% -10%, var(--theme-glow), transparent),
-      radial-gradient(ellipse 60% 50% at 100% 100%, color-mix(in oklab, var(--theme-primary) 8%, transparent), transparent),
-      linear-gradient(180deg, var(--theme-bg-base) 0%, color-mix(in oklab, var(--theme-bg-base) 95%, var(--theme-primary-dark)) 100%);
+      radial-gradient(
+        ellipse 60% 50% at 100% 100%,
+        color-mix(in oklab, var(--theme-primary) 8%, transparent),
+        transparent
+      ),
+      linear-gradient(
+        180deg,
+        var(--theme-bg-base) 0%,
+        color-mix(in oklab, var(--theme-bg-base) 95%, var(--theme-primary-dark)) 100%
+      );
     background-attachment: fixed;
   }
 
@@ -90,7 +98,12 @@
   [data-ornament='futuristic'] .themed-bg {
     background-image:
       radial-gradient(ellipse 80% 50% at 50% -10%, var(--theme-glow), transparent),
-      linear-gradient(180deg, var(--theme-bg-base) 0%, var(--theme-bg-surface) 50%, var(--theme-bg-base) 100%);
+      linear-gradient(
+        180deg,
+        var(--theme-bg-base) 0%,
+        var(--theme-bg-surface) 50%,
+        var(--theme-bg-base) 100%
+      );
     background-attachment: fixed;
   }
 

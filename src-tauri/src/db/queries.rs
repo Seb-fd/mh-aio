@@ -1,14 +1,14 @@
-use rusqlite::{Connection, OptionalExtension, Result, params};
+use rusqlite::{params, Connection, OptionalExtension, Result};
 use serde::{Deserialize, Serialize};
 
 /// Global search result across all game entities, normalized accent-insensitive.
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct SearchResult {
-    pub kind: String,   // monster | item | skill | weapon | armor | armor_set | quest | decoration
+    pub kind: String, // monster | item | skill | weapon | armor | armor_set | quest | decoration
     pub id: i32,
     pub name: String,
     pub subtitle: String,
-    pub route: String,  // relative to game, e.g. /monsters/12
+    pub route: String, // relative to game, e.g. /monsters/12
 }
 
 fn strip_accents(s: &str) -> String {
@@ -453,7 +453,10 @@ pub fn get_monsters_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Monst
                 language: row.get(5)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
 
     Ok(monsters)
@@ -492,7 +495,11 @@ pub fn get_monster_detail(conn: &Connection, id: i32) -> Result<Option<MonsterDe
     }))
 }
 
-pub fn get_monster_dedicated_sets(conn: &Connection, monster_id: i32, rank: Option<&str>) -> Result<Vec<ArmorSetDetail>> {
+pub fn get_monster_dedicated_sets(
+    conn: &Connection,
+    monster_id: i32,
+    rank: Option<&str>,
+) -> Result<Vec<ArmorSetDetail>> {
     // Dedicated sets: score >=0.40 monster materials vs total, rank-filtered, sub-species safe via item_id exact match (Lao Shan Auroros 0.54, Borealis 0.45)
     let mut stmt = conn.prepare(
         "SELECT s.id, s.game_id, s.name, s.language FROM armor_sets s
@@ -502,24 +509,43 @@ pub fn get_monster_dedicated_sets(conn: &Connection, monster_id: i32, rank: Opti
            WHERE me.monster_id = ?1 AND me.equipment_kind='armor'
          )",
     )?;
-    let set_rows: Vec<(i32,i32,String,String)> = stmt.query_map(params![monster_id], |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?)))?.filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok()).collect();
+    let set_rows: Vec<(i32, i32, String, String)> = stmt
+        .query_map(params![monster_id], |row| {
+            Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?))
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
     drop(stmt);
     // Batch material score for all candidate sets in a single aggregation (eliminates N+1 mat_stmt prepares).
-    let mut score_map: std::collections::HashMap<i32, (i64, i64)> = std::collections::HashMap::new();
+    let mut score_map: std::collections::HashMap<i32, (i64, i64)> =
+        std::collections::HashMap::new();
     if !set_rows.is_empty() {
-        let set_ids: Vec<i32> = set_rows.iter().map(|(sid,_,_,_)| *sid).collect();
-        // Build IN list safely — ids are integers from trusted DB, no injection.
-        let in_list = set_ids.iter().map(|id| id.to_string()).collect::<Vec<_>>().join(",");
+        let set_ids: Vec<i32> = set_rows.iter().map(|(sid, _, _, _)| *sid).collect();
+        // Build IN list safely — ids are integers from trusted DB (not user input), no injection.
+        let in_list = set_ids
+            .iter()
+            .map(|id| id.to_string())
+            .collect::<Vec<_>>()
+            .join(",");
         let agg_sql = format!(
             "SELECT a.set_id, SUM(am.quantity) as total_qty, SUM(CASE WHEN md.item_id IS NOT NULL THEN am.quantity ELSE 0 END) as mon_qty
              FROM armor a
              JOIN armor_materials am ON am.armor_id = a.id
-             LEFT JOIN (SELECT DISTINCT item_id FROM monster_drops WHERE monster_id={}) md ON md.item_id = am.item_id
+             LEFT JOIN (SELECT DISTINCT item_id FROM monster_drops WHERE monster_id=?) md ON md.item_id = am.item_id
              WHERE a.set_id IN ({}) GROUP BY a.set_id",
-            monster_id, in_list
+            in_list
         );
         let mut agg_stmt = conn.prepare(&agg_sql)?;
-        let agg_rows = agg_stmt.query_map([], |row| Ok((row.get::<_, i32>(0)?, row.get::<_, i64>(1)?, row.get::<_, i64>(2)?)))?;
+        let agg_rows = agg_stmt.query_map(params![monster_id], |row| {
+            Ok((
+                row.get::<_, i32>(0)?,
+                row.get::<_, i64>(1)?,
+                row.get::<_, i64>(2)?,
+            ))
+        })?;
         for r in agg_rows {
             if let Ok((sid, total, mon)) = r {
                 score_map.insert(sid, (mon, total));
@@ -527,16 +553,45 @@ pub fn get_monster_dedicated_sets(conn: &Connection, monster_id: i32, rank: Opti
         }
     }
     // Batch fetch pieces for all candidate sets (eliminates N per-set queries + rank COUNT).
-    let mut pieces_by_set: std::collections::HashMap<i32, Vec<Armor>> = std::collections::HashMap::new();
+    let mut pieces_by_set: std::collections::HashMap<i32, Vec<Armor>> =
+        std::collections::HashMap::new();
     if !set_rows.is_empty() {
-        let set_ids_str = set_rows.iter().map(|(sid,_,_,_)| sid.to_string()).collect::<Vec<_>>().join(",");
+        let set_ids_str = set_rows
+            .iter()
+            .map(|(sid, _, _, _)| sid.to_string())
+            .collect::<Vec<_>>()
+            .join(",");
         if let Some(r) = rank {
             let sql = format!("SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, armor_type, set_id, gender, language FROM armor WHERE set_id IN ({}) AND rank = ?1 ORDER BY set_id, CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END, id", set_ids_str);
             let mut p_stmt = conn.prepare(&sql)?;
-            for row in p_stmt.query_map(params![r], |row| Ok(Armor{ id: row.get(0)?, game_id: row.get(1)?, name: row.get(2)?, slot_type: row.get(3)?, rank: row.get(4)?, rarity: row.get(5)?, defense_base: row.get(6)?, defense_max: row.get(7)?, resistance_fire: row.get(8)?, resistance_water: row.get(9)?, resistance_thunder: row.get(10)?, resistance_ice: row.get(11)?, resistance_dragon: row.get(12)?, slots: row.get(13)?, skills: row.get(14)?, armor_type: row.get(15)?, set_id: row.get(16)?, gender: row.get(17)?, language: row.get(18)? }))? {
+            for row in p_stmt.query_map(params![r], |row| {
+                Ok(Armor {
+                    id: row.get(0)?,
+                    game_id: row.get(1)?,
+                    name: row.get(2)?,
+                    slot_type: row.get(3)?,
+                    rank: row.get(4)?,
+                    rarity: row.get(5)?,
+                    defense_base: row.get(6)?,
+                    defense_max: row.get(7)?,
+                    resistance_fire: row.get(8)?,
+                    resistance_water: row.get(9)?,
+                    resistance_thunder: row.get(10)?,
+                    resistance_ice: row.get(11)?,
+                    resistance_dragon: row.get(12)?,
+                    slots: row.get(13)?,
+                    skills: row.get(14)?,
+                    armor_type: row.get(15)?,
+                    set_id: row.get(16)?,
+                    gender: row.get(17)?,
+                    language: row.get(18)?,
+                })
+            })? {
                 match row {
                     Ok(armor) => {
-                        if let Some(sid) = armor.set_id { pieces_by_set.entry(sid).or_default().push(armor); }
+                        if let Some(sid) = armor.set_id {
+                            pieces_by_set.entry(sid).or_default().push(armor);
+                        }
                     }
                     Err(e) => eprintln!("[queries] armor row decode skipped: {}", e),
                 }
@@ -544,10 +599,34 @@ pub fn get_monster_dedicated_sets(conn: &Connection, monster_id: i32, rank: Opti
         } else {
             let sql = format!("SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, armor_type, set_id, gender, language FROM armor WHERE set_id IN ({}) ORDER BY set_id, CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END, id", set_ids_str);
             let mut p_stmt = conn.prepare(&sql)?;
-            for row in p_stmt.query_map([], |row| Ok(Armor{ id: row.get(0)?, game_id: row.get(1)?, name: row.get(2)?, slot_type: row.get(3)?, rank: row.get(4)?, rarity: row.get(5)?, defense_base: row.get(6)?, defense_max: row.get(7)?, resistance_fire: row.get(8)?, resistance_water: row.get(9)?, resistance_thunder: row.get(10)?, resistance_ice: row.get(11)?, resistance_dragon: row.get(12)?, slots: row.get(13)?, skills: row.get(14)?, armor_type: row.get(15)?, set_id: row.get(16)?, gender: row.get(17)?, language: row.get(18)? }))? {
+            for row in p_stmt.query_map([], |row| {
+                Ok(Armor {
+                    id: row.get(0)?,
+                    game_id: row.get(1)?,
+                    name: row.get(2)?,
+                    slot_type: row.get(3)?,
+                    rank: row.get(4)?,
+                    rarity: row.get(5)?,
+                    defense_base: row.get(6)?,
+                    defense_max: row.get(7)?,
+                    resistance_fire: row.get(8)?,
+                    resistance_water: row.get(9)?,
+                    resistance_thunder: row.get(10)?,
+                    resistance_ice: row.get(11)?,
+                    resistance_dragon: row.get(12)?,
+                    slots: row.get(13)?,
+                    skills: row.get(14)?,
+                    armor_type: row.get(15)?,
+                    set_id: row.get(16)?,
+                    gender: row.get(17)?,
+                    language: row.get(18)?,
+                })
+            })? {
                 match row {
                     Ok(armor) => {
-                        if let Some(sid) = armor.set_id { pieces_by_set.entry(sid).or_default().push(armor); }
+                        if let Some(sid) = armor.set_id {
+                            pieces_by_set.entry(sid).or_default().push(armor);
+                        }
                     }
                     Err(e) => eprintln!("[queries] armor row decode skipped: {}", e),
                 }
@@ -557,12 +636,24 @@ pub fn get_monster_dedicated_sets(conn: &Connection, monster_id: i32, rank: Opti
     let mut out = Vec::new();
     for (sid, gid, sname, lang) in set_rows {
         let (monster_qty, total_qty) = score_map.get(&sid).copied().unwrap_or((0, 0));
-        if total_qty==0 { continue; }
+        if total_qty == 0 {
+            continue;
+        }
         let score = monster_qty as f64 / total_qty as f64;
-        if score < 0.40 { continue; }
+        if score < 0.40 {
+            continue;
+        }
         let pieces = pieces_by_set.get(&sid).cloned().unwrap_or_default();
-        if pieces.is_empty() { continue; }
-        out.push(ArmorSetDetail{ id: sid, game_id: gid, name: sname, pieces, language: lang });
+        if pieces.is_empty() {
+            continue;
+        }
+        out.push(ArmorSetDetail {
+            id: sid,
+            game_id: gid,
+            name: sname,
+            pieces,
+            language: lang,
+        });
     }
     out.sort_by_key(|s| s.id);
     Ok(out)
@@ -603,7 +694,10 @@ fn get_monster_related_armor(conn: &Connection, monster_id: i32) -> Result<Vec<A
                 language: row.get(18)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
 
     Ok(armor)
@@ -660,7 +754,10 @@ fn get_monster_related_weapons(conn: &Connection, monster_id: i32) -> Result<Vec
                 language: row.get(18)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
 
     Ok(weapons)
@@ -691,7 +788,10 @@ fn get_monster_drops(conn: &Connection, monster_id: i32) -> Result<Vec<MonsterDr
                 condition: row.get(9)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
 
     Ok(drops)
@@ -718,7 +818,10 @@ fn get_monster_weaknesses(conn: &Connection, monster_id: i32) -> Result<Vec<Mons
                 dragon: row.get(9)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
 
     Ok(weaknesses)
@@ -773,7 +876,10 @@ pub fn get_weapons_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Weapon
                 language: row.get(18)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
 
     Ok(weapons)
@@ -835,7 +941,29 @@ pub fn get_weapon_detail(conn: &Connection, id: i32) -> Result<Option<WeaponDeta
         )
         .optional()?;
 
-    let Some((id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value, sharpness, slots, skills, status_type, status_value, defense_bonus, crafting_cost, upgrade_path, sort_order, description, language)) = row else {
+    let Some((
+        id,
+        game_id,
+        name,
+        weapon_type,
+        rarity,
+        attack,
+        affinity,
+        element_type,
+        element_value,
+        sharpness,
+        slots,
+        skills,
+        status_type,
+        status_value,
+        defense_bonus,
+        crafting_cost,
+        upgrade_path,
+        sort_order,
+        description,
+        language,
+    )) = row
+    else {
         return Ok(None);
     };
 
@@ -872,7 +1000,11 @@ pub fn get_weapon_detail(conn: &Connection, id: i32) -> Result<Option<WeaponDeta
     }))
 }
 
-fn get_weapon_craft_materials(conn: &Connection, weapon_id: i32, kind: &str) -> Result<Vec<MaterialRef>> {
+fn get_weapon_craft_materials(
+    conn: &Connection,
+    weapon_id: i32,
+    kind: &str,
+) -> Result<Vec<MaterialRef>> {
     let mut stmt = conn.prepare(
         "SELECT wc.item_id, i.name, wc.quantity
          FROM weapon_craft wc
@@ -889,7 +1021,10 @@ fn get_weapon_craft_materials(conn: &Connection, weapon_id: i32, kind: &str) -> 
                 quantity: row.get(2)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
 
     Ok(materials)
@@ -912,7 +1047,10 @@ fn get_weapon_materials(conn: &Connection, weapon_id: i32) -> Result<Vec<Materia
                 quantity: row.get(2)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
 
     Ok(materials)
@@ -954,7 +1092,10 @@ pub fn get_armor_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Armor>> 
                 language: row.get(18)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
 
     Ok(armor)
@@ -1004,7 +1145,10 @@ pub fn get_armor_sets_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Arm
                 language: row.get(6)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
     Ok(sets)
 }
@@ -1052,12 +1196,21 @@ pub fn get_armor_set_detail(conn: &Connection, id: i32) -> Result<Option<ArmorSe
                 language: row.get(18)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
-    Ok(Some(ArmorSetDetail { id, game_id, name, pieces, language }))
+    Ok(Some(ArmorSetDetail {
+        id,
+        game_id,
+        name,
+        pieces,
+        language,
+    }))
 }
 
-    pub fn get_armor_detail(conn: &Connection, id: i32) -> Result<Option<ArmorDetail>> {
+pub fn get_armor_detail(conn: &Connection, id: i32) -> Result<Option<ArmorDetail>> {
     let row: Option<(
         i32,
         i32,
@@ -1115,7 +1268,30 @@ pub fn get_armor_set_detail(conn: &Connection, id: i32) -> Result<Option<ArmorSe
         )
         .optional()?;
 
-    let Some((id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, fire, water, thunder, ice, dragon, slots, skills, armor_type, gender, set_id, crafting_cost, description, language)) = row else {
+    let Some((
+        id,
+        game_id,
+        name,
+        slot_type,
+        rank,
+        rarity,
+        defense_base,
+        defense_max,
+        fire,
+        water,
+        thunder,
+        ice,
+        dragon,
+        slots,
+        skills,
+        armor_type,
+        gender,
+        set_id,
+        crafting_cost,
+        description,
+        language,
+    )) = row
+    else {
         return Ok(None);
     };
 
@@ -1164,7 +1340,10 @@ fn get_armor_materials(conn: &Connection, armor_id: i32) -> Result<Vec<MaterialR
                 quantity: row.get(2)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
 
     Ok(materials)
@@ -1207,7 +1386,10 @@ pub fn get_quests_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Quest>>
                 language: row.get(23)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
 
     Ok(quests)
@@ -1229,7 +1411,10 @@ fn get_quest_rewards(conn: &Connection, quest_id: i32) -> Result<Vec<QuestReward
                 condition: row.get(5)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
     Ok(rewards)
 }
@@ -1296,7 +1481,33 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
         )
         .optional()?;
 
-    let Some((id, game_id, name, name_original, r#type, rank, hub, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, description, description_original, client, requirements, reward_money, contract_fee, main_monsters, language)) = row else {
+    let Some((
+        id,
+        game_id,
+        name,
+        name_original,
+        r#type,
+        rank,
+        hub,
+        stars,
+        objective,
+        objective_original,
+        location,
+        location_original,
+        time_limit,
+        faints_allowed,
+        is_key_quest,
+        is_urgent,
+        description,
+        description_original,
+        client,
+        requirements,
+        reward_money,
+        contract_fee,
+        main_monsters,
+        language,
+    )) = row
+    else {
         return Ok(None);
     };
 
@@ -1354,7 +1565,10 @@ pub fn get_items_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Item>> {
                 language: row.get(9)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
 
     Ok(items)
@@ -1383,7 +1597,19 @@ pub fn get_item_detail(conn: &Connection, id: i32) -> Result<Option<ItemDetail>>
         )
         .optional()?;
 
-    let Some((id, game_id, name, category, subcategory, rarity, sell_price, buy_price, description, language)) = row else {
+    let Some((
+        id,
+        game_id,
+        name,
+        category,
+        subcategory,
+        rarity,
+        sell_price,
+        buy_price,
+        description,
+        language,
+    )) = row
+    else {
         return Ok(None);
     };
 
@@ -1455,7 +1681,10 @@ fn get_item_sources(conn: &Connection, item_id: i32) -> Result<Vec<ItemSource>> 
                 condition: row.get(10)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
 
     Ok(sources)
@@ -1481,7 +1710,10 @@ fn get_item_combine_recipes(conn: &Connection, item_id: i32) -> Result<Vec<Combi
                 chance: row.get(5)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
 
     Ok(recipes)
@@ -1564,7 +1796,10 @@ pub fn get_skills_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Skill>>
                 language: row.get(5)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
 
     Ok(skills)
@@ -1575,7 +1810,16 @@ pub fn get_skill_detail(conn: &Connection, id: i32) -> Result<Option<SkillDetail
         .query_row(
             "SELECT id, game_id, name, description, max_level, language FROM skills WHERE id = ?1",
             params![id],
-            |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?, row.get(4)?, row.get(5)?)),
+            |row| {
+                Ok((
+                    row.get(0)?,
+                    row.get(1)?,
+                    row.get(2)?,
+                    row.get(3)?,
+                    row.get(4)?,
+                    row.get(5)?,
+                ))
+            },
         )
         .optional()?;
 
@@ -1615,12 +1859,18 @@ fn get_skill_levels(conn: &Connection, skill_id: i32) -> Result<Vec<SkillLevel>>
                 description: row.get(3)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
     Ok(rows)
 }
 
-fn decoration_unlock_and_acquisition(materials: &[DecoMaterial], price: Option<i32>) -> (String, String) {
+fn decoration_unlock_and_acquisition(
+    materials: &[DecoMaterial],
+    price: Option<i32>,
+) -> (String, String) {
     let has_lapis = materials.iter().any(|m| m.item_name == "LapisLazuliJewel");
     let has_battlefield = materials.iter().any(|m| m.item_name == "BattlefieldJewel");
     let has_akito = materials.iter().any(|m| m.item_name == "Akito Jewel");
@@ -1657,7 +1907,10 @@ fn get_decoration_materials(conn: &Connection, decoration_id: i32) -> Result<Vec
                 quantity: row.get(2)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
     Ok(rows)
 }
@@ -1672,7 +1925,19 @@ fn get_skill_decorations(conn: &Connection, skill_id: i32) -> Result<Vec<SkillDe
          WHERE d.skill_id = ?1 OR d.secondary_skill_id = ?1
          ORDER BY d.slot_size, d.name",
     )?;
-    let base_rows: Vec<(i32, String, Option<i32>, Option<i32>, Option<i32>, Option<i32>, Option<i32>, Option<i32>, Option<i32>, Option<String>, Option<String>)> = stmt
+    let base_rows: Vec<(
+        i32,
+        String,
+        Option<i32>,
+        Option<i32>,
+        Option<i32>,
+        Option<i32>,
+        Option<i32>,
+        Option<i32>,
+        Option<i32>,
+        Option<String>,
+        Option<String>,
+    )> = stmt
         .query_map(params![skill_id], |row| {
             Ok((
                 row.get(0)?,
@@ -1688,11 +1953,27 @@ fn get_skill_decorations(conn: &Connection, skill_id: i32) -> Result<Vec<SkillDe
                 row.get(10)?,
             ))
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
 
     let mut out = Vec::new();
-    for (id, name, slot_size, prim_id, prim_pts, _sec_id, sec_pts, price, rarity, prim_name, sec_name) in base_rows {
+    for (
+        id,
+        name,
+        slot_size,
+        prim_id,
+        prim_pts,
+        _sec_id,
+        sec_pts,
+        price,
+        rarity,
+        prim_name,
+        sec_name,
+    ) in base_rows
+    {
         let is_primary = prim_id == Some(skill_id);
         let pts = if is_primary { prim_pts } else { sec_pts }.unwrap_or(0);
         let (other_name, other_pts) = if is_primary {
@@ -1742,7 +2023,10 @@ fn get_skill_armors(conn: &Connection, skill_id: i32) -> Result<Vec<SkillArmorRe
                 points: row.get(8)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
     Ok(rows)
 }
@@ -1768,7 +2052,10 @@ fn get_skill_weapons(conn: &Connection, skill_id: i32) -> Result<Vec<SkillWeapon
                 points: row.get(6)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
     Ok(rows)
 }
@@ -1837,7 +2124,10 @@ pub fn get_decorations_by_game(conn: &Connection, game_id: i32) -> Result<Vec<De
                 language: row.get(12)?,
             })
         })?
-        .filter_map(|r| r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e)).ok())
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
         .collect();
     Ok(rows)
 }
@@ -1871,7 +2161,22 @@ pub fn get_decoration_detail(conn: &Connection, id: i32) -> Result<Option<Decora
         )
         .optional()?;
 
-    let Some((id, game_id, name, skill_id, skill_name, skill_points, secondary_skill_id, secondary_skill_name, secondary_points, slot_size, rarity, price, language)) = row else {
+    let Some((
+        id,
+        game_id,
+        name,
+        skill_id,
+        skill_name,
+        skill_points,
+        secondary_skill_id,
+        secondary_skill_name,
+        secondary_points,
+        slot_size,
+        rarity,
+        price,
+        language,
+    )) = row
+    else {
         return Ok(None);
     };
 
@@ -1901,15 +2206,29 @@ pub fn get_decoration_detail(conn: &Connection, id: i32) -> Result<Option<Decora
 /// Global accent-insensitive search across all MH2G entities, grouped by kind.
 // Escape LIKE metacharacters so a user query can't act as a wildcard.
 fn escape_like(s: &str) -> String {
-    s.replace('\\', "\\\\").replace('%', "\\%").replace('_', "\\_")
+    s.replace('\\', "\\\\")
+        .replace('%', "\\%")
+        .replace('_', "\\_")
 }
 
 /// Build a filtered SELECT that pushes the substring match into SQLite via the
 /// registered `norm_key` scalar function, so only matching rows cross the
 /// Rust boundary instead of every row in the table.
-fn search_filter_sql(table: &str, subtitle_cols: &str, extra_where: &str, tokens: &[&str]) -> (String, Vec<String>) {
-    let likes: Vec<String> = tokens.iter().map(|t| format!("%{}%", escape_like(t))).collect();
-    let likes_sql = tokens.iter().map(|_| "norm_key(name) LIKE ? ESCAPE '\\'").collect::<Vec<_>>().join(" AND ");
+fn search_filter_sql(
+    table: &str,
+    subtitle_cols: &str,
+    extra_where: &str,
+    tokens: &[&str],
+) -> (String, Vec<String>) {
+    let likes: Vec<String> = tokens
+        .iter()
+        .map(|t| format!("%{}%", escape_like(t)))
+        .collect();
+    let likes_sql = tokens
+        .iter()
+        .map(|_| "norm_key(name) LIKE ? ESCAPE '\\'")
+        .collect::<Vec<_>>()
+        .join(" AND ");
     let sql = format!(
         "SELECT id, name, {} FROM {} WHERE game_id = ?1 {} AND {} ORDER BY id",
         subtitle_cols, table, extra_where, likes_sql
@@ -1917,7 +2236,12 @@ fn search_filter_sql(table: &str, subtitle_cols: &str, extra_where: &str, tokens
     (sql, likes)
 }
 
-fn pluck_search(conn: &Connection, sql: &str, game_id: i32, likes: &[String]) -> Result<Vec<(i32, String, String)>> {
+fn pluck_search(
+    conn: &Connection,
+    sql: &str,
+    game_id: i32,
+    likes: &[String],
+) -> Result<Vec<(i32, String, String)>> {
     let mut stmt = conn.prepare(sql)?;
     let mut params: Vec<Box<dyn rusqlite::ToSql>> = vec![Box::new(game_id)];
     for l in likes {
@@ -1925,7 +2249,13 @@ fn pluck_search(conn: &Connection, sql: &str, game_id: i32, likes: &[String]) ->
     }
     let rows = stmt.query_map(
         rusqlite::params_from_iter(params.iter().map(|b| b.as_ref())),
-        |r| Ok((r.get::<_, i32>(0)?, r.get::<_, String>(1)?, r.get::<_, String>(2)?)),
+        |r| {
+            Ok((
+                r.get::<_, i32>(0)?,
+                r.get::<_, String>(1)?,
+                r.get::<_, String>(2)?,
+            ))
+        },
     )?;
     let mut out = Vec::new();
     for r in rows {
@@ -1944,7 +2274,11 @@ struct SearchTable<'a> {
     fallback_subtitle: &'a str,
 }
 
-pub fn get_global_search(conn: &Connection, game_id: i32, query: &str) -> Result<Vec<SearchResult>> {
+pub fn get_global_search(
+    conn: &Connection,
+    game_id: i32,
+    query: &str,
+) -> Result<Vec<SearchResult>> {
     let q = norm_key(query);
     let tokens: Vec<&str> = q.split(' ').filter(|t| !t.is_empty()).collect();
     if tokens.is_empty() {
@@ -1954,14 +2288,71 @@ pub fn get_global_search(conn: &Connection, game_id: i32, query: &str) -> Result
     let mut out: Vec<SearchResult> = Vec::new();
 
     const TABLES: &[SearchTable] = &[
-        SearchTable { table: "monsters", kind: "monster", subtitle_cols: "COALESCE(species,'')", extra_where: "", route_prefix: "/monsters/", fallback_subtitle: "" },
-        SearchTable { table: "items", kind: "item", subtitle_cols: "COALESCE(category,'')", extra_where: "AND id != 1", route_prefix: "/items/", fallback_subtitle: "" },
-        SearchTable { table: "skills", kind: "skill", subtitle_cols: "'Skill'", extra_where: "", route_prefix: "/skills/", fallback_subtitle: "Skill" },
-        SearchTable { table: "weapons", kind: "weapon", subtitle_cols: "weapon_type", extra_where: "", route_prefix: "/weapons/", fallback_subtitle: "" },
-        SearchTable { table: "armor", kind: "armor", subtitle_cols: "slot_type || ' · ' || rank", extra_where: "", route_prefix: "/armor/", fallback_subtitle: "" },
-        SearchTable { table: "armor_sets", kind: "armor_set", subtitle_cols: "'Armor Set'", extra_where: "", route_prefix: "/armor/sets/", fallback_subtitle: "Armor Set" },
-        SearchTable { table: "quests", kind: "quest", subtitle_cols: "COALESCE(rank,'')", extra_where: "", route_prefix: "/quests/", fallback_subtitle: "" },
-        SearchTable { table: "decorations", kind: "decoration", subtitle_cols: "CASE WHEN slot_size IS NULL THEN '' ELSE CAST(slot_size AS TEXT) || ' slot' END", extra_where: "", route_prefix: "/decorations/", fallback_subtitle: "" },
+        SearchTable {
+            table: "monsters",
+            kind: "monster",
+            subtitle_cols: "COALESCE(species,'')",
+            extra_where: "",
+            route_prefix: "/monsters/",
+            fallback_subtitle: "",
+        },
+        SearchTable {
+            table: "items",
+            kind: "item",
+            subtitle_cols: "COALESCE(category,'')",
+            extra_where: "AND id != 1",
+            route_prefix: "/items/",
+            fallback_subtitle: "",
+        },
+        SearchTable {
+            table: "skills",
+            kind: "skill",
+            subtitle_cols: "'Skill'",
+            extra_where: "",
+            route_prefix: "/skills/",
+            fallback_subtitle: "Skill",
+        },
+        SearchTable {
+            table: "weapons",
+            kind: "weapon",
+            subtitle_cols: "weapon_type",
+            extra_where: "",
+            route_prefix: "/weapons/",
+            fallback_subtitle: "",
+        },
+        SearchTable {
+            table: "armor",
+            kind: "armor",
+            subtitle_cols: "slot_type || ' · ' || rank",
+            extra_where: "",
+            route_prefix: "/armor/",
+            fallback_subtitle: "",
+        },
+        SearchTable {
+            table: "armor_sets",
+            kind: "armor_set",
+            subtitle_cols: "'Armor Set'",
+            extra_where: "",
+            route_prefix: "/armor/sets/",
+            fallback_subtitle: "Armor Set",
+        },
+        SearchTable {
+            table: "quests",
+            kind: "quest",
+            subtitle_cols: "COALESCE(rank,'')",
+            extra_where: "",
+            route_prefix: "/quests/",
+            fallback_subtitle: "",
+        },
+        SearchTable {
+            table: "decorations",
+            kind: "decoration",
+            subtitle_cols:
+                "CASE WHEN slot_size IS NULL THEN '' ELSE CAST(slot_size AS TEXT) || ' slot' END",
+            extra_where: "",
+            route_prefix: "/decorations/",
+            fallback_subtitle: "",
+        },
     ];
 
     for t in TABLES {
@@ -1976,7 +2367,11 @@ pub fn get_global_search(conn: &Connection, game_id: i32, query: &str) -> Result
             .collect();
         local.sort_by(|a, b| b.0.cmp(&a.0));
         for (_sc, name, sub, id) in local.into_iter().take(per_kind) {
-            let subtitle = if sub.is_empty() { t.fallback_subtitle.to_string() } else { sub };
+            let subtitle = if sub.is_empty() {
+                t.fallback_subtitle.to_string()
+            } else {
+                sub
+            };
             out.push(SearchResult {
                 kind: t.kind.into(),
                 id,
@@ -2007,9 +2402,14 @@ mod tests {
         let c = conn();
         // "attack" is a skill; "slash" or a monster name should also appear.
         let results = get_global_search(&c, 5, "attack").unwrap();
-        assert!(!results.is_empty(), "global search for 'attack' returned nothing");
         assert!(
-            results.iter().any(|r| r.kind == "skill" || r.kind == "item" || r.kind == "weapon"),
+            !results.is_empty(),
+            "global search for 'attack' returned nothing"
+        );
+        assert!(
+            results
+                .iter()
+                .any(|r| r.kind == "skill" || r.kind == "item" || r.kind == "weapon"),
             "expected at least a skill/item/weapon result, got {:?}",
             results.iter().map(|r| r.kind.as_str()).collect::<Vec<_>>()
         );
@@ -2022,7 +2422,10 @@ mod tests {
     #[test]
     fn global_search_handles_multi_token_and_empty() {
         let c = conn();
-        assert!(get_global_search(&c, 5, "   ").unwrap().is_empty(), "whitespace query should be empty");
+        assert!(
+            get_global_search(&c, 5, "   ").unwrap().is_empty(),
+            "whitespace query should be empty"
+        );
 
         let single = get_global_search(&c, 5, "attack").unwrap();
         let multi = get_global_search(&c, 5, "dragon attack").unwrap();
@@ -2069,7 +2472,11 @@ mod tests {
         }
 
         let result = crate::db::Database::new(path.to_str().unwrap());
-        assert!(result.is_ok(), "Database::new must migrate a dirty DB instead of panicking: {:?}", result.err());
+        assert!(
+            result.is_ok(),
+            "Database::new must migrate a dirty DB instead of panicking: {:?}",
+            result.err()
+        );
 
         let _ = std::fs::remove_file(&path);
     }
@@ -2082,12 +2489,22 @@ mod tests {
         crate::db::seed::seed(&c).unwrap();
 
         let tables = [
-            "monsters", "items", "weapons", "armor", "armor_sets",
-            "skills", "decorations", "quests", "item_combine",
-            "monster_drops", "item_sources", "decoration_materials",
+            "monsters",
+            "items",
+            "weapons",
+            "armor",
+            "armor_sets",
+            "skills",
+            "decorations",
+            "quests",
+            "item_combine",
+            "monster_drops",
+            "item_sources",
+            "decoration_materials",
         ];
         let count = |c: &rusqlite::Connection, t: &str| -> i64 {
-            c.query_row(&format!("SELECT COUNT(*) FROM {t}"), [], |r| r.get(0)).unwrap()
+            c.query_row(&format!("SELECT COUNT(*) FROM {t}"), [], |r| r.get(0))
+                .unwrap()
         };
         let first: Vec<i64> = tables.iter().map(|t| count(&c, t)).collect();
 

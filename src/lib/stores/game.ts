@@ -1,32 +1,32 @@
 export interface GameTheme {
-  primary: string;
-  primaryDark: string;
-  accent: string;
-  accentSoft: string;
-  bgBase: string;
-  bgSurface: string;
-  bgElevated: string;
-  border: string;
-  borderStrong: string;
-  textAccent: string;
-  textOnPrimary: string;
-  bannerFrom: string;
-  bannerTo: string;
-  glow: string;
-  ornament: 'japanese' | 'medieval' | 'tribal' | 'futuristic' | 'hunt' | 'default';
+  primary: string
+  primaryDark: string
+  accent: string
+  accentSoft: string
+  bgBase: string
+  bgSurface: string
+  bgElevated: string
+  border: string
+  borderStrong: string
+  textAccent: string
+  textOnPrimary: string
+  bannerFrom: string
+  bannerTo: string
+  glow: string
+  ornament: 'japanese' | 'medieval' | 'tribal' | 'futuristic' | 'hunt' | 'default'
 }
 
 export interface Game {
-  id: string;
-  dbId: number;
-  name: string;
-  shortName: string;
-  year: number;
-  platform: string;
-  color: string;
-  borderColor: string;
-  bgHover: string;
-  theme: GameTheme;
+  id: string
+  dbId: number
+  name: string
+  shortName: string
+  year: number
+  platform: string
+  color: string
+  borderColor: string
+  bgHover: string
+  theme: GameTheme
 }
 
 export const GAMES: Game[] = [
@@ -170,50 +170,50 @@ export const GAMES: Game[] = [
       ornament: 'medieval',
     },
   },
-];
+]
 
-import { writable } from 'svelte/store';
-import { browser } from '$app/environment';
+import { writable } from 'svelte/store'
+import { browser } from '$app/environment'
 
 function isGame(value: unknown): value is Game {
-  if (!value || typeof value !== 'object') return false;
-  const v = value as Record<string, unknown>;
-  return typeof v.id === 'string' && typeof v.dbId === 'number' && typeof v.name === 'string';
+  if (!value || typeof value !== 'object') return false
+  const v = value as Record<string, unknown>
+  return typeof v.id === 'string' && typeof v.dbId === 'number' && typeof v.name === 'string'
 }
 
 function parseStoredGame(raw: string | null): Game | null {
-  if (!raw) return null;
+  if (!raw) return null
   try {
-    const parsed = JSON.parse(raw);
+    const parsed = JSON.parse(raw)
     // Guard against stale/corrupt localStorage that would otherwise break module init.
-    if (!isGame(parsed)) return null;
+    if (!isGame(parsed)) return null
     // Ensure the stored game still exists in the current registry.
-    return GAMES.find((g) => g.id === parsed.id && g.dbId === parsed.dbId) ?? null;
+    return GAMES.find((g) => g.id === parsed.id && g.dbId === parsed.dbId) ?? null
   } catch {
-    return null;
+    return null
   }
 }
 
 function createGameStore() {
-  const stored = browser ? localStorage.getItem('selectedGame') : null;
-  const initial = parseStoredGame(stored);
+  const stored = browser ? localStorage.getItem('selectedGame') : null
+  const initial = parseStoredGame(stored)
 
-  const { subscribe, set, update } = writable<Game | null>(initial);
+  const { subscribe, set } = writable<Game | null>(initial)
 
   return {
     subscribe,
     select: (game: Game) => {
-      if (browser) localStorage.setItem('selectedGame', JSON.stringify(game));
-      set(game);
+      if (browser) localStorage.setItem('selectedGame', JSON.stringify(game))
+      set(game)
     },
     clear: () => {
-      if (browser) localStorage.removeItem('selectedGame');
-      set(null);
+      if (browser) localStorage.removeItem('selectedGame')
+      set(null)
     },
     getById: (id: string): Game | undefined => {
-      return GAMES.find(g => g.id === id);
-    }
-  };
+      return GAMES.find((g) => g.id === id)
+    },
+  }
 }
 
-export const selectedGame = createGameStore();
+export const selectedGame = createGameStore()
