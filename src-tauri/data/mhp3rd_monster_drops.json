@@ -748,50 +748,6 @@
     "id": 500067
   },
   {
-    "monster_id": 10022,
-    "item_id": 11048,
-    "method": "capture",
-    "part": null,
-    "rank": "Low",
-    "quantity": 1,
-    "probability": 0.3,
-    "condition": null,
-    "id": 500068
-  },
-  {
-    "monster_id": 10022,
-    "item_id": 11049,
-    "method": "capture",
-    "part": null,
-    "rank": "Low",
-    "quantity": 1,
-    "probability": 0.1,
-    "condition": null,
-    "id": 500069
-  },
-  {
-    "monster_id": 10022,
-    "item_id": 11050,
-    "method": "capture",
-    "part": null,
-    "rank": "Low",
-    "quantity": 1,
-    "probability": 0.24,
-    "condition": null,
-    "id": 500070
-  },
-  {
-    "monster_id": 10022,
-    "item_id": 11051,
-    "method": "capture",
-    "part": null,
-    "rank": "Low",
-    "quantity": 1,
-    "probability": 0.1,
-    "condition": null,
-    "id": 500071
-  },
-  {
     "monster_id": 10023,
     "item_id": 10665,
     "method": "drop",
@@ -8369,5 +8325,9225 @@
     "probability": 0.42,
     "condition": null,
     "id": 500760
+  },
+  {
+    "monster_id": 10013,
+    "item_id": 10212,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10013,
+    "item_id": 10212,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10013,
+    "item_id": 10212,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10013,
+    "item_id": 10212,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10013,
+    "item_id": 10212,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10013,
+    "item_id": 10212,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10013,
+    "item_id": 10212,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10215,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10215,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10215,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10215,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10215,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10215,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10215,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10216,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10216,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10216,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10216,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10216,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10216,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10216,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10217,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10217,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10217,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10217,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10218,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10218,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10218,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10218,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10218,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10218,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10218,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10219,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10219,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10219,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10219,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10219,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10219,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10219,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10220,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10220,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10220,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10220,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10220,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10220,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10220,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10222,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10222,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10222,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10222,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10222,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10222,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10222,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10223,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10223,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10223,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10223,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10223,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10223,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10223,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10224,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10224,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10224,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10224,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10226,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10226,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10226,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10226,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.02,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10226,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10226,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10226,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10227,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10227,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10227,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10227,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10227,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10227,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10227,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10228,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10228,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10228,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10228,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.02,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10228,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10228,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10228,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10229,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10229,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10229,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10229,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10229,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10229,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10229,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10230,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10230,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10230,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10230,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10230,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10230,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10230,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10303,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10303,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10303,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10303,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10303,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10303,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10303,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10304,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10304,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10304,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10304,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10304,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10304,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10304,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10305,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10305,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10305,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10305,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10305,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10305,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10305,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10307,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10307,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10307,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10307,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10307,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10307,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10307,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10308,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10308,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10308,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10308,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10308,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10308,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10308,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10309,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10309,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10309,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10309,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10309,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10309,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10309,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10316,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10316,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10316,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10316,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10316,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10316,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10316,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10317,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10317,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10317,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10317,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10317,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10317,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10317,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10321,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10321,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10321,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10321,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10321,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10321,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10321,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10322,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10322,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10322,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10322,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10322,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10322,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10322,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10411,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10411,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10411,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10411,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.02,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10411,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10411,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10411,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10412,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10412,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10412,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10412,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.02,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10412,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10412,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10412,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10413,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10413,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10413,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10413,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10413,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10413,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10413,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10414,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10414,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10414,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10414,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.02,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10414,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10414,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10414,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10416,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10416,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10416,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10416,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.02,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10416,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10416,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10416,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10417,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10417,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10417,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10417,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.02,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10417,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10417,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10417,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10418,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10418,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10418,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10418,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10418,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10418,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10418,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10419,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10419,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10419,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10419,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10420,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10420,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10420,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10420,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10421,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10421,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10421,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10421,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10422,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10422,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10422,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10422,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10422,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10422,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10422,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10423,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10423,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10423,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10423,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10018,
+    "item_id": 10424,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10018,
+    "item_id": 10424,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10018,
+    "item_id": 10424,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10018,
+    "item_id": 10424,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10018,
+    "item_id": 10424,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10018,
+    "item_id": 10424,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10018,
+    "item_id": 10424,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10018,
+    "item_id": 10425,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10018,
+    "item_id": 10425,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10018,
+    "item_id": 10425,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10018,
+    "item_id": 10425,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10426,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10426,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10426,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10426,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10426,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10426,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10426,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10427,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10427,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10427,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10427,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10427,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10427,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10427,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10428,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10428,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10428,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10428,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10428,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10428,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10428,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10429,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10429,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10429,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10429,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10429,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10429,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10429,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10029,
+    "item_id": 10430,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10029,
+    "item_id": 10430,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10029,
+    "item_id": 10430,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10029,
+    "item_id": 10430,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10029,
+    "item_id": 10431,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10029,
+    "item_id": 10431,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10029,
+    "item_id": 10431,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10029,
+    "item_id": 10431,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10432,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10432,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10432,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10432,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10432,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10432,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10432,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10433,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10433,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10433,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10433,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10024,
+    "item_id": 10434,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10024,
+    "item_id": 10434,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10024,
+    "item_id": 10434,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10024,
+    "item_id": 10434,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10024,
+    "item_id": 10434,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10024,
+    "item_id": 10434,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10024,
+    "item_id": 10434,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10024,
+    "item_id": 10435,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10024,
+    "item_id": 10435,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10024,
+    "item_id": 10435,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10024,
+    "item_id": 10435,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10043,
+    "item_id": 10436,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10043,
+    "item_id": 10436,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10043,
+    "item_id": 10436,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10043,
+    "item_id": 10436,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10043,
+    "item_id": 10436,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10043,
+    "item_id": 10436,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10043,
+    "item_id": 10436,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10043,
+    "item_id": 10437,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10043,
+    "item_id": 10437,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10043,
+    "item_id": 10437,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10043,
+    "item_id": 10437,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10043,
+    "item_id": 10437,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10043,
+    "item_id": 10437,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10043,
+    "item_id": 10437,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10438,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10438,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10438,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10438,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10438,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10438,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10438,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10439,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10439,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10439,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10439,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10039,
+    "item_id": 10440,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10039,
+    "item_id": 10440,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10039,
+    "item_id": 10440,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10039,
+    "item_id": 10440,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10039,
+    "item_id": 10441,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10039,
+    "item_id": 10441,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10039,
+    "item_id": 10441,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10039,
+    "item_id": 10441,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10442,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10442,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10442,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10442,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10442,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10442,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10442,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10443,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10443,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10443,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10443,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10443,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10443,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10443,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10444,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10444,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10444,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10444,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10444,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10444,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10444,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10445,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10445,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10445,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10445,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10446,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10446,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10446,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10446,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10446,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10446,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10446,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10447,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10447,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10447,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10447,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10448,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10448,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10448,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10448,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10448,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10448,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10448,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10449,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10449,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10449,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10449,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10450,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10450,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10450,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10450,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10450,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10450,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10450,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10451,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10451,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10451,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10451,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10451,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10451,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10451,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10452,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10452,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10452,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10452,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10452,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10452,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10452,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10453,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10453,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10453,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10453,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10453,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10453,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10453,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10454,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10454,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10454,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10454,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10454,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10454,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10454,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10455,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10455,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10455,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10455,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10455,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10455,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10455,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10456,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10456,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10456,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10456,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10456,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10456,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10456,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10457,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10457,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10457,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10457,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10457,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10457,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10457,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10458,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10458,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10458,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10458,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10458,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10458,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10458,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10459,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10459,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10459,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10459,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10460,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10460,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10460,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10460,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10460,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10460,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10460,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10461,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10461,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10461,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10461,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10461,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10461,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10461,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10462,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10462,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10462,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10462,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10462,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10462,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10462,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10463,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10463,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.25,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10463,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.3,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10463,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.18,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10464,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10464,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10464,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10464,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10464,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10464,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10464,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10465,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10465,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10465,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10465,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10465,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10465,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.08,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10465,
+    "method": "drop",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.07,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10466,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10466,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.12,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10466,
+    "method": "drop",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.1,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10466,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10466,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.04,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10467,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10468,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10469,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10470,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10471,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10021,
+    "item_id": 10472,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10021,
+    "item_id": 10473,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10474,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10475,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10476,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10059,
+    "item_id": 10477,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10023,
+    "item_id": 10478,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10053,
+    "item_id": 10479,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10480,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10023,
+    "item_id": 10533,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10023,
+    "item_id": 10534,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10023,
+    "item_id": 10535,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10542,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10543,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10544,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10545,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10546,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10547,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10548,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10549,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10550,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10551,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10552,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10553,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10560,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10561,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10023,
+    "item_id": 10562,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10563,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10029,
+    "item_id": 10564,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10570,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10571,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10575,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10576,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10578,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10579,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10582,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10584,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10586,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10587,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10588,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10592,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10593,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10595,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10596,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10059,
+    "item_id": 10599,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10059,
+    "item_id": 10600,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10059,
+    "item_id": 10601,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10604,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10607,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10608,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10611,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10612,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10614,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10619,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10620,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10053,
+    "item_id": 10621,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10622,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10624,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10625,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10627,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10628,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10629,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10631,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10635,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10637,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10053,
+    "item_id": 10639,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10053,
+    "item_id": 10640,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10053,
+    "item_id": 10641,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10643,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10039,
+    "item_id": 10644,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10023,
+    "item_id": 10645,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10646,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10024,
+    "item_id": 10647,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10024,
+    "item_id": 10648,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10024,
+    "item_id": 10649,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10024,
+    "item_id": 10650,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10024,
+    "item_id": 10651,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10655,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10657,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10658,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10660,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10010,
+    "item_id": 10662,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10021,
+    "item_id": 10663,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10021,
+    "item_id": 10664,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10666,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10671,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10672,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10673,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10675,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10676,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10677,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10059,
+    "item_id": 10678,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10682,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10684,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10010,
+    "item_id": 10686,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10689,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10691,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10693,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10694,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10695,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10696,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10697,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10018,
+    "item_id": 10701,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10703,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10706,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10053,
+    "item_id": 10707,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10053,
+    "item_id": 10708,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10712,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10716,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10717,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10718,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10719,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10720,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10722,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10039,
+    "item_id": 10723,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10724,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10032,
+    "item_id": 10727,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10728,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10730,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10733,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10059,
+    "item_id": 10734,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10736,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10738,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10739,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10740,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10743,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10023,
+    "item_id": 10744,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10019,
+    "item_id": 10746,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10747,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10749,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10029,
+    "item_id": 10752,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10018,
+    "item_id": 10753,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10755,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10021,
+    "item_id": 10757,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10019,
+    "item_id": 10758,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10039,
+    "item_id": 10759,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10039,
+    "item_id": 10760,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10039,
+    "item_id": 10761,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10039,
+    "item_id": 10763,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10006,
+    "item_id": 10765,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10766,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10768,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10770,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10006,
+    "item_id": 10773,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10029,
+    "item_id": 10774,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10009,
+    "item_id": 10778,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10043,
+    "item_id": 10780,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10783,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10787,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10791,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10793,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10795,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10797,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10798,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10803,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10039,
+    "item_id": 10807,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10809,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10811,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10059,
+    "item_id": 10812,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10813,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10022,
+    "item_id": 10817,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10024,
+    "item_id": 10820,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10822,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10020,
+    "item_id": 10824,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10829,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10839,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10843,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10049,
+    "item_id": 10844,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10005,
+    "item_id": 10846,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10847,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10848,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10851,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10854,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10857,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10858,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10859,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10863,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10865,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10867,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10868,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10869,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10874,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10876,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10879,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10883,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10888,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10889,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10895,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10004,
+    "item_id": 10896,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10898,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10899,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10032,
+    "item_id": 10901,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10902,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10001,
+    "item_id": 10905,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10906,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10014,
+    "item_id": 10911,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10041,
+    "item_id": 10914,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10017,
+    "item_id": 10919,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10046,
+    "item_id": 10921,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10922,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10048,
+    "item_id": 10923,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10925,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10008,
+    "item_id": 10928,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.2,
+    "condition": null
+  },
+  {
+    "monster_id": 10048,
+    "item_id": 10929,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10002,
+    "item_id": 10935,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10936,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10937,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10944,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10945,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10946,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10947,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10021,
+    "item_id": 10949,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10011,
+    "item_id": 10953,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10055,
+    "item_id": 10954,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10961,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10962,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10037,
+    "item_id": 10969,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10037,
+    "item_id": 10970,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10037,
+    "item_id": 10971,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10038,
+    "item_id": 10972,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10038,
+    "item_id": 10973,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10036,
+    "item_id": 10974,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10036,
+    "item_id": 10975,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10976,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10977,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10044,
+    "item_id": 10978,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10044,
+    "item_id": 10979,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10049,
+    "item_id": 10980,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10049,
+    "item_id": 10981,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10049,
+    "item_id": 10982,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10050,
+    "item_id": 10983,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10050,
+    "item_id": 10984,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10028,
+    "item_id": 10985,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10028,
+    "item_id": 10986,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10028,
+    "item_id": 10987,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10028,
+    "item_id": 10988,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10028,
+    "item_id": 10989,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10990,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10048,
+    "item_id": 10993,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10048,
+    "item_id": 10994,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10048,
+    "item_id": 10995,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10046,
+    "item_id": 10996,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10046,
+    "item_id": 10997,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10046,
+    "item_id": 10998,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 11000,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 11001,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 11002,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10041,
+    "item_id": 11003,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10041,
+    "item_id": 11004,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10041,
+    "item_id": 11005,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10041,
+    "item_id": 11006,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10026,
+    "item_id": 11007,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10026,
+    "item_id": 11008,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10026,
+    "item_id": 11009,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10026,
+    "item_id": 11010,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10055,
+    "item_id": 11011,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10055,
+    "item_id": 11012,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10055,
+    "item_id": 11013,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10055,
+    "item_id": 11014,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11015,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11016,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11017,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11019,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10052,
+    "item_id": 11020,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10052,
+    "item_id": 11021,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10052,
+    "item_id": 11022,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10052,
+    "item_id": 11023,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10032,
+    "item_id": 11024,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10032,
+    "item_id": 11025,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10022,
+    "item_id": 11026,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10022,
+    "item_id": 11027,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10022,
+    "item_id": 11028,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10022,
+    "item_id": 11029,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10022,
+    "item_id": 11030,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10022,
+    "item_id": 11031,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10023,
+    "item_id": 11032,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10023,
+    "item_id": 11033,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10023,
+    "item_id": 11034,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10023,
+    "item_id": 11035,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10053,
+    "item_id": 11036,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10053,
+    "item_id": 11037,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10053,
+    "item_id": 11038,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10053,
+    "item_id": 11039,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10053,
+    "item_id": 11040,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10059,
+    "item_id": 11041,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10059,
+    "item_id": 11042,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.35,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10134,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10134,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10134,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10134,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10136,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10136,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10136,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10136,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10310,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10310,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10310,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10310,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10311,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10311,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10311,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10311,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10312,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10312,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10312,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10312,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10314,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10314,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10314,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10314,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10315,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10315,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10315,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10315,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10319,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10319,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10319,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10319,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10320,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10320,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10320,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10320,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10323,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10323,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10323,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10323,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10401,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10401,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10402,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10402,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10402,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10402,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10537,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10537,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10537,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10537,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10538,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10538,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10538,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10538,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10559,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10559,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10559,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10559,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10573,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10573,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10573,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10573,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10583,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10583,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10583,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10583,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10585,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10585,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10585,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10585,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10602,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10602,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10602,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10602,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10661,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10661,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10661,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10661,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10668,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10668,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10668,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10668,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10669,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10669,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10669,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10669,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10690,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10690,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10690,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10690,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10709,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10709,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10709,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10709,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10711,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10711,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10711,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10711,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10777,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10777,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10777,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10777,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10821,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10821,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10821,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10821,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10872,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10872,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10903,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10903,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10918,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10918,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10938,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10938,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.06,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10991,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10991,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10991,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10991,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10992,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10992,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10992,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10992,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10999,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10999,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10999,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10999,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 11044,
+    "method": "carve",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 11044,
+    "method": "capture",
+    "part": null,
+    "rank": "Low",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 11044,
+    "method": "carve",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 11044,
+    "method": "capture",
+    "part": null,
+    "rank": "High",
+    "quantity": 1,
+    "probability": 0.03,
+    "condition": null
   }
 ]
