@@ -303,8 +303,23 @@ pub struct Item {
     pub rarity: Option<i32>,
     pub sell_price: Option<i32>,
     pub buy_price: Option<i32>,
+    pub carry_limit: Option<i32>,
+    pub icon_name: Option<String>,
+    pub icon_color: Option<String>,
+    pub icon_url: Option<String>,
     pub description: Option<String>,
     pub language: String,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct MelderRecipe {
+    pub id: i32,
+    pub result_item_id: i32,
+    pub result_name: String,
+    pub research_cost: i32,
+    pub melding_cost: i32,
+    pub unlock_condition: Option<String>,
+    pub melder_type: String,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -317,9 +332,14 @@ pub struct ItemDetail {
     pub rarity: Option<i32>,
     pub sell_price: Option<i32>,
     pub buy_price: Option<i32>,
+    pub carry_limit: Option<i32>,
+    pub icon_name: Option<String>,
+    pub icon_color: Option<String>,
+    pub icon_url: Option<String>,
     pub description: Option<String>,
     pub sources: Vec<ItemSource>,
     pub recipes: Vec<CombineRecipe>,
+    pub melder: Option<MelderRecipe>,
     pub language: String,
 }
 
@@ -1546,7 +1566,7 @@ pub fn get_items_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Item>> {
     // Chest order: faithful to PSP item box (hex ID order) verified via ISO DATA.BIN file 15 string table
     // Alternative sorts handled client-side; keep DB default as game chest.
     let mut stmt = conn.prepare(
-        "SELECT id, game_id, name, category, subcategory, rarity, sell_price, buy_price, description, language
+        "SELECT id, game_id, name, category, subcategory, rarity, sell_price, buy_price, carry_limit, icon_name, icon_color, icon_url, description, language
          FROM items WHERE game_id = ?1 ORDER BY id",
     )?;
 
@@ -1561,8 +1581,12 @@ pub fn get_items_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Item>> {
                 rarity: row.get(5)?,
                 sell_price: row.get(6)?,
                 buy_price: row.get(7)?,
-                description: row.get(8)?,
-                language: row.get(9)?,
+                carry_limit: row.get(8)?,
+                icon_name: row.get(9)?,
+                icon_color: row.get(10)?,
+                icon_url: row.get(11)?,
+                description: row.get(12)?,
+                language: row.get(13)?,
             })
         })?
         .filter_map(|r| {
@@ -1575,27 +1599,44 @@ pub fn get_items_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Item>> {
 }
 
 pub fn get_item_detail(conn: &Connection, id: i32) -> Result<Option<ItemDetail>> {
-    let row: Option<(i32, i32, String, Option<String>, Option<String>, Option<i32>, Option<i32>, Option<i32>, Option<String>, String)> = conn
-        .query_row(
-            "SELECT id, game_id, name, category, subcategory, rarity, sell_price, buy_price, description, language
+    let row: Option<(
+        i32,
+        i32,
+        String,
+        Option<String>,
+        Option<String>,
+        Option<i32>,
+        Option<i32>,
+        Option<i32>,
+        Option<i32>,
+        Option<String>,
+        Option<String>,
+        Option<String>,
+        Option<String>,
+        String,
+    )> = conn.query_row(
+        "SELECT id, game_id, name, category, subcategory, rarity, sell_price, buy_price, carry_limit, icon_name, icon_color, icon_url, description, language
              FROM items WHERE id = ?1",
-            params![id],
-            |row| {
-                Ok((
-                    row.get(0)?,
-                    row.get(1)?,
-                    row.get(2)?,
-                    row.get(3)?,
-                    row.get(4)?,
-                    row.get(5)?,
-                    row.get(6)?,
-                    row.get(7)?,
-                    row.get(8)?,
-                    row.get(9)?,
-                ))
-            },
-        )
-        .optional()?;
+        params![id],
+        |row| {
+            Ok((
+                row.get(0)?,
+                row.get(1)?,
+                row.get(2)?,
+                row.get(3)?,
+                row.get(4)?,
+                row.get(5)?,
+                row.get(6)?,
+                row.get(7)?,
+                row.get(8)?,
+                row.get(9)?,
+                row.get(10)?,
+                row.get(11)?,
+                row.get(12)?,
+                row.get(13)?,
+            ))
+        },
+    ).optional()?;
 
     let Some((
         id,
@@ -1606,6 +1647,10 @@ pub fn get_item_detail(conn: &Connection, id: i32) -> Result<Option<ItemDetail>>
         rarity,
         sell_price,
         buy_price,
+        carry_limit,
+        icon_name,
+        icon_color,
+        icon_url,
         description,
         language,
     )) = row
@@ -1615,6 +1660,7 @@ pub fn get_item_detail(conn: &Connection, id: i32) -> Result<Option<ItemDetail>>
 
     let sources = get_item_sources(conn, id)?;
     let recipes = get_item_combine_recipes(conn, id)?;
+    let melder = get_melder_recipe(conn, id)?;
 
     Ok(Some(ItemDetail {
         id,
@@ -1625,11 +1671,63 @@ pub fn get_item_detail(conn: &Connection, id: i32) -> Result<Option<ItemDetail>>
         rarity,
         sell_price,
         buy_price,
+        carry_limit,
+        icon_name,
+        icon_color,
+        icon_url,
         description,
         sources,
         recipes,
+        melder,
         language,
     }))
+}
+
+fn get_melder_recipe(conn: &Connection, item_id: i32) -> Result<Option<MelderRecipe>> {
+    let row: Option<(i32, i32, String, i32, i32, Option<String>, String)> = conn
+        .query_row(
+            "SELECT mr.id, mr.result_item_id, i.name, mr.research_cost, mr.melding_cost, mr.unlock_condition, mr.melder_type
+             FROM melder_recipes mr JOIN items i ON i.id = mr.result_item_id
+             WHERE mr.result_item_id = ?1 LIMIT 1",
+            params![item_id],
+            |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?, r.get(3)?, r.get(4)?, r.get(5)?, r.get(6)?)),
+        )
+        .optional()?;
+    Ok(row.map(|(id, result_item_id, result_name, research_cost, melding_cost, unlock_condition, melder_type)| MelderRecipe {
+        id,
+        result_item_id,
+        result_name,
+        research_cost,
+        melding_cost,
+        unlock_condition,
+        melder_type,
+    }))
+}
+
+pub fn get_melder_recipes_by_game(conn: &Connection, game_id: i32) -> Result<Vec<MelderRecipe>> {
+    let mut stmt = conn.prepare(
+        "SELECT mr.id, mr.result_item_id, i.name, mr.research_cost, mr.melding_cost, mr.unlock_condition, mr.melder_type
+         FROM melder_recipes mr JOIN items i ON i.id = mr.result_item_id
+         WHERE mr.game_id = ?1 ORDER BY mr.id",
+    )?;
+    let recs = stmt
+        .query_map(params![game_id], |row| {
+            Ok(MelderRecipe {
+                id: row.get(0)?,
+                result_item_id: row.get(1)?,
+                result_name: row.get(2)?,
+                research_cost: row.get(3)?,
+                melding_cost: row.get(4)?,
+                unlock_condition: row.get(5)?,
+                melder_type: row.get(6)?,
+            })
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+    Ok(recs)
 }
 
 fn get_item_sources(conn: &Connection, item_id: i32) -> Result<Vec<ItemSource>> {

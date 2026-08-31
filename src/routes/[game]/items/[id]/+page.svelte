@@ -4,6 +4,7 @@
   import { api, type ItemDetail } from '$lib/api'
   import DetailHeader from '$lib/components/detail-header.svelte'
   import DropTable from '$lib/components/drop-table.svelte'
+  import ItemIcon from '$lib/components/item-icon.svelte'
   import { selectedGame } from '$lib/stores/game'
 
   const id = $derived(Number(page.params.id))
@@ -75,6 +76,7 @@
           : item.subcategory === 'Charm'
             ? '✨'
             : '📦'}
+      iconUrl={item.icon_url}
       tags={[
         {
           label: item.category ?? 'Unknown',
@@ -95,14 +97,39 @@
       ]}
     />
 
-    {#if item.sell_price !== null && item.sell_price !== undefined}
-      <div class="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg border themed-card">
-        <span class="text-xs uppercase tracking-wide text-gray-500">Sell Price</span>
-        <span class="text-base font-semibold" style="color: var(--theme-accent);"
-          >{item.sell_price}z</span
-        >
-      </div>
-    {/if}
+    <div class="mb-6 flex flex-wrap gap-2">
+      {#if item.sell_price !== null && item.sell_price !== undefined}
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border themed-card">
+          <span class="text-xs uppercase tracking-wide text-gray-500">Sell</span>
+          <span class="text-sm font-semibold" style="color: var(--theme-accent);"
+            >{item.sell_price}z</span
+          >
+        </div>
+      {/if}
+      {#if item.buy_price !== null && item.buy_price !== undefined}
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border themed-card">
+          <span class="text-xs uppercase tracking-wide text-gray-500">Buy</span>
+          <span class="text-sm font-semibold" style="color: var(--theme-accent);"
+            >{item.buy_price}z</span
+          >
+        </div>
+      {/if}
+      {#if item.carry_limit !== null && item.carry_limit !== undefined}
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border themed-card">
+          <span class="text-xs uppercase tracking-wide text-gray-500">Carry</span>
+          <span class="text-sm font-semibold text-gray-200">x{item.carry_limit}</span>
+        </div>
+      {/if}
+      {#if item.icon_url || item.icon_name}
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border themed-card">
+          <ItemIcon iconUrl={item.icon_url} iconName={item.icon_name} iconColor={item.icon_color} size={24} alt={item.name} />
+          <span class="text-xs text-gray-500">{item.icon_name ?? 'Icon'}</span>
+          {#if item.icon_color}
+            <span class="text-xs text-gray-600">· {item.icon_color}</span>
+          {/if}
+        </div>
+      {/if}
+    </div>
 
     {#if item.description}
       <section class="mb-8">
@@ -188,6 +215,33 @@
             </p>
           {/if}
         </div>
+      </section>
+    {/if}
+
+    {#if item.melder}
+      <section class="mb-8">
+        <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">Elder Melder</h2>
+        <div class="rounded-lg border themed-card p-4 flex flex-wrap items-center gap-3">
+          <div class="px-3 py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)]">
+            <span class="text-xs text-gray-500">Research</span>
+            <span class="ml-2 text-sm font-semibold" style="color: var(--theme-accent);">{item.melder.research_cost} RP</span>
+          </div>
+          <div class="px-3 py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)]">
+            <span class="text-xs text-gray-500">Melding</span>
+            <span class="ml-2 text-sm font-semibold" style="color: var(--theme-accent);">{item.melder.melding_cost} MP</span>
+          </div>
+          <span
+            class="text-[10px] px-2 py-1 rounded-full border font-semibold
+            {item.melder.melder_type === 'celestial' ? 'bg-purple-900/30 text-purple-300 border-purple-800' : item.melder.melder_type === 'gold' ? 'bg-yellow-900/30 text-yellow-300 border-yellow-800' : item.melder.melder_type === 'silver' ? 'bg-gray-800 text-gray-300 border-gray-700' : item.melder.melder_type === 'steel' ? 'bg-slate-800 text-slate-300 border-slate-700' : item.melder.melder_type === 'guiding' ? 'bg-emerald-900/30 text-emerald-300 border-emerald-800' : 'bg-sky-900/30 text-sky-300 border-sky-800'}"
+          >
+            {item.melder.melder_type === 'celestial' ? '✨ Celestial' : item.melder.melder_type === 'gold' ? '🥇 Gold' : item.melder.melder_type === 'silver' ? '🥈 Silver' : item.melder.melder_type === 'steel' ? '🔩 Steel' : item.melder.melder_type === 'guiding' ? '🗺️ Guiding' : '⚗️ Normal'}
+            {item.melder.melder_type}
+          </span>
+          {#if item.melder.unlock_condition}
+            <span class="text-xs text-gray-500">Unlock: {item.melder.unlock_condition}</span>
+          {/if}
+        </div>
+        <p class="text-[11px] text-gray-500 mt-2">Meld at the Elder Melder in Astera/Seliana. Requires Research Points + materials for Melding Points.</p>
       </section>
     {/if}
 

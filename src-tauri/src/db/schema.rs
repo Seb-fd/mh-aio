@@ -170,7 +170,22 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             sell_price INTEGER,
             buy_price INTEGER,
             description TEXT,
+            carry_limit INTEGER,
+            icon_name TEXT,
+            icon_color TEXT,
+            icon_url TEXT,
             language TEXT DEFAULT 'en'
+        );
+
+        -- Elder Melder recipes (MHW/Iceborne melding)
+        CREATE TABLE IF NOT EXISTS melder_recipes (
+            id INTEGER PRIMARY KEY,
+            game_id INTEGER REFERENCES games(id),
+            result_item_id INTEGER REFERENCES items(id),
+            research_cost INTEGER,
+            melding_cost INTEGER,
+            unlock_condition TEXT,
+            melder_type TEXT DEFAULT 'normal'
         );
 
         -- Item sources table
@@ -302,6 +317,8 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
         CREATE INDEX IF NOT EXISTS idx_item_combine_result ON item_combine(result_item_id);
         CREATE INDEX IF NOT EXISTS idx_item_combine_component ON item_combine(component_item_id);
         CREATE INDEX IF NOT EXISTS idx_item_sources_item ON item_sources(item_id);
+        CREATE INDEX IF NOT EXISTS idx_melder_result ON melder_recipes(result_item_id);
+        CREATE INDEX IF NOT EXISTS idx_melder_game ON melder_recipes(game_id);
         CREATE INDEX IF NOT EXISTS idx_quest_rewards_quest ON quest_rewards(quest_id);
         CREATE INDEX IF NOT EXISTS idx_monster_drops_monster ON monster_drops(monster_id);
         CREATE INDEX IF NOT EXISTS idx_monster_drops_item ON monster_drops(item_id);
@@ -380,6 +397,7 @@ fn add_idempotency_constraints(conn: &Connection) -> Result<()> {
         DELETE FROM monster_drops WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_drops GROUP BY monster_id, item_id, method, IFNULL(part, ''), IFNULL(rank, ''), IFNULL(condition, ''));
         DELETE FROM monster_weaknesses WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_weaknesses GROUP BY monster_id, IFNULL(part_name, ''));
         DELETE FROM item_sources WHERE rowid NOT IN (SELECT MIN(rowid) FROM item_sources GROUP BY item_id, source_type, IFNULL(source_id, -1), IFNULL(quantity_min, -1), IFNULL(quantity_max, -1), IFNULL(probability, -1), IFNULL(location, ''), IFNULL(conditions, ''));
+        DELETE FROM melder_recipes WHERE rowid NOT IN (SELECT MIN(rowid) FROM melder_recipes GROUP BY game_id, result_item_id);
     ")?;
 
     conn.execute_batch("
@@ -392,6 +410,7 @@ fn add_idempotency_constraints(conn: &Connection) -> Result<()> {
         CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_drops ON monster_drops(monster_id, item_id, method, IFNULL(part, ''), IFNULL(rank, ''), IFNULL(condition, ''));
         CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_weaknesses ON monster_weaknesses(monster_id, IFNULL(part_name, ''));
         CREATE UNIQUE INDEX IF NOT EXISTS uq_item_sources ON item_sources(item_id, source_type, IFNULL(source_id, -1), IFNULL(quantity_min, -1), IFNULL(quantity_max, -1), IFNULL(probability, -1), IFNULL(location, ''), IFNULL(conditions, ''));
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_melder_recipes ON melder_recipes(game_id, result_item_id);
     ")?;
 
     Ok(())
@@ -405,6 +424,11 @@ pub fn get_schema_version(conn: &Connection) -> Result<i32> {
 }
 
 fn apply_migrations(conn: &Connection) -> Result<()> {
+    // MHW items extended fields (carry_limit/icon) — backfill for DBs created before this patch
+    add_column_if_missing(conn, "items", "carry_limit", "INTEGER")?;
+    add_column_if_missing(conn, "items", "icon_name", "TEXT")?;
+    add_column_if_missing(conn, "items", "icon_color", "TEXT")?;
+    add_column_if_missing(conn, "items", "icon_url", "TEXT")?;
     add_column_if_missing(conn, "monsters", "description", "TEXT")?;
     add_column_if_missing(conn, "weapons", "description", "TEXT")?;
     add_column_if_missing(conn, "weapons", "status_type", "TEXT")?;

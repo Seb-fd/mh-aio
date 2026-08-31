@@ -240,6 +240,10 @@ export interface Item {
   rarity: number | null
   sell_price: number | null
   buy_price: number | null
+  carry_limit: number | null
+  icon_name: string | null
+  icon_color: string | null
+  icon_url: string | null
   description: string | null
   language: string
 }
@@ -277,6 +281,16 @@ export interface CombineView {
   components: CombineRecipe[]
 }
 
+export interface MelderRecipe {
+  id: number
+  result_item_id: number
+  result_name: string
+  research_cost: number
+  melding_cost: number
+  unlock_condition: string | null
+  melder_type: string
+}
+
 export interface ItemDetail {
   id: number
   game_id: number
@@ -286,9 +300,14 @@ export interface ItemDetail {
   rarity: number | null
   sell_price: number | null
   buy_price: number | null
+  carry_limit: number | null
+  icon_name: string | null
+  icon_color: string | null
+  icon_url: string | null
   description: string | null
   sources: ItemSource[]
   recipes: CombineRecipe[]
+  melder: MelderRecipe | null
   language: string
 }
 
@@ -483,4 +502,5 @@ export const api = {
   globalSearch: (gameId: number, query: string) =>
     invoke<SearchResult[]>('global_search', { gameId, query }),
   getCombinations: (gameId: number) => invoke<CombineView[]>('get_combinations', { gameId }),
+  getMelderRecipes: (gameId: number) => invoke<MelderRecipe[]>('get_melder_recipes', { gameId }),
 }

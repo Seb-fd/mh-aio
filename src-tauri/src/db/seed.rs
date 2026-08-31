@@ -1,6 +1,7 @@
 use rusqlite::{Connection, OptionalExtension, Result};
 use serde::Deserialize;
 
+const MHW: i32 = 1;
 const MH2G: i32 = 5;
 const MHP3RD: i32 = 4;
 
@@ -55,6 +56,10 @@ pub fn seed(conn: &Connection) -> Result<()> {
     seed_mhp3rd_decorations(conn)?;
     seed_mhp3rd_armor_skill_points(conn)?;
     seed_mhp3rd_weapon_skill_points(conn)?;
+    // MHW + Iceborne (game_id 1) — items 100% (MHWorldData + Kiranico), combine + melder
+    seed_mhw_items(conn)?;
+    seed_mhw_item_combine(conn)?;
+    seed_mhw_melder_recipes(conn)?;
     Ok(())
 }
 
@@ -131,6 +136,9 @@ struct ItemJson {
     rarity: Option<i32>,
     sell_price: Option<i32>,
     buy_price: Option<i32>,
+    icon_url: Option<String>,
+    icon_name: Option<String>,
+    icon_color: Option<String>,
 }
 
 fn seed_items(conn: &Connection) -> Result<()> {
@@ -140,17 +148,17 @@ fn seed_items(conn: &Connection) -> Result<()> {
 
     for it in &items {
         conn.execute(
-            "INSERT OR IGNORE INTO items (id, game_id, name, category, subcategory, rarity, sell_price, buy_price, description, language)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, NULL, 'en')",
-            rusqlite::params![it.id, MH2G, it.name, it.category, it.subcategory, it.rarity, it.sell_price, it.buy_price],
+            "INSERT OR IGNORE INTO items (id, game_id, name, category, subcategory, rarity, sell_price, buy_price, icon_url, icon_name, icon_color, description, language)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, NULL, 'en')",
+            rusqlite::params![it.id, MH2G, it.name, it.category, it.subcategory, it.rarity, it.sell_price, it.buy_price, it.icon_url, it.icon_name, it.icon_color],
         )?;
     }
 
-    // Backfill for existing DBs where category/subcategory changed (e.g., Power Juice Materialâ†’Consumable, Huskberryâ†’Ammo)
+    // Backfill for existing DBs where category/subcategory/icon changed (e.g., Power Juice Material→Consumable, Huskberry→Ammo)
     for it in &items {
         conn.execute(
-            "UPDATE items SET category = ?1, subcategory = ?2 WHERE id = ?3 AND game_id = 5 AND (category IS NULL OR category != ?1 OR subcategory IS NULL OR subcategory != ?2)",
-            rusqlite::params![it.category, it.subcategory, it.id],
+            "UPDATE items SET category = ?1, subcategory = ?2, icon_url = COALESCE(?3, icon_url), icon_name = COALESCE(?4, icon_name), icon_color = COALESCE(?5, icon_color) WHERE id = ?6 AND game_id = 5 AND (category IS NULL OR category != ?1 OR subcategory IS NULL OR subcategory != ?2 OR icon_url IS NULL)",
+            rusqlite::params![it.category, it.subcategory, it.icon_url, it.icon_name, it.icon_color, it.id],
         )?;
     }
 
@@ -1572,6 +1580,92 @@ fn seed_mhp3rd_weapon_skill_points(conn: &Connection) -> Result<()> {
     drop(stmt);
     for (wid, sid, pts) in to_insert {
         conn.execute("INSERT OR IGNORE INTO weapon_skill_points (weapon_id, skill_id, points) VALUES (?1, ?2, ?3)", rusqlite::params![wid, sid, pts])?;
+    }
+    Ok(())
+}
+
+// ── MHW + Iceborne (game_id 1) ── World + Iceborne 100% (MHWorldData + Kiranico)
+
+#[derive(Deserialize)]
+struct MhwItemJson {
+    id: i32,
+    name: String,
+    category: String,
+    subcategory: Option<String>,
+    rarity: Option<i32>,
+    sell_price: Option<i32>,
+    buy_price: Option<i32>,
+    carry_limit: Option<i32>,
+    icon_name: Option<String>,
+    icon_color: Option<String>,
+    icon_url: Option<String>,
+    description: Option<String>,
+}
+
+fn seed_mhw_items(conn: &Connection) -> Result<()> {
+    let json_data = include_str!("../../data/mhw_items.json");
+    let items: Vec<MhwItemJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for it in &items {
+        conn.execute(
+            "INSERT OR IGNORE INTO items (id, game_id, name, category, subcategory, rarity, sell_price, buy_price, carry_limit, icon_name, icon_color, icon_url, description, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, 'en')",
+            rusqlite::params![it.id, MHW, it.name, it.category, it.subcategory, it.rarity, it.sell_price, it.buy_price, it.carry_limit, it.icon_name, it.icon_color, it.icon_url, it.description],
+        )?;
+    }
+    // Backfill for existing DBs where category/subcategory/icon changed
+    for it in &items {
+        conn.execute(
+            "UPDATE items SET category = ?1, subcategory = ?2, rarity = COALESCE(?3, rarity), sell_price = COALESCE(?4, sell_price), buy_price = COALESCE(?5, buy_price), carry_limit = COALESCE(?6, carry_limit), icon_name = COALESCE(?7, icon_name), icon_color = COALESCE(?8, icon_color), icon_url = COALESCE(?9, icon_url), description = COALESCE(NULLIF(description,''), ?10) WHERE id = ?11 AND game_id = 1",
+            rusqlite::params![it.category, it.subcategory, it.rarity, it.sell_price, it.buy_price, it.carry_limit, it.icon_name, it.icon_color, it.icon_url, it.description, it.id],
+        )?;
+    }
+    Ok(())
+}
+
+#[derive(Deserialize)]
+struct MhwCombineJson {
+    result_item_id: i32,
+    component_item_id: i32,
+    quantity: i32,
+    result_quantity: i32,
+}
+
+fn seed_mhw_item_combine(conn: &Connection) -> Result<()> {
+    let json_data = include_str!("../../data/mhw_item_combine.json");
+    let recipes: Vec<MhwCombineJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for rc in recipes {
+        // Ensure both result and component exist (FK guard)
+        if item_exists(conn, rc.result_item_id)? && item_exists(conn, rc.component_item_id)? {
+            conn.execute(
+                "INSERT OR IGNORE INTO item_combine (result_item_id, component_item_id, quantity, result_quantity, combine_type, chance) VALUES (?1, ?2, ?3, ?4, 'normal', NULL)",
+                rusqlite::params![rc.result_item_id, rc.component_item_id, rc.quantity, rc.result_quantity],
+            )?;
+        }
+    }
+    Ok(())
+}
+
+#[derive(Deserialize)]
+struct MhwMelderJson {
+    result_item_id: i32,
+    research_cost: i32,
+    melding_cost: i32,
+    unlock_condition: Option<String>,
+    melder_type: Option<String>,
+}
+
+fn seed_mhw_melder_recipes(conn: &Connection) -> Result<()> {
+    let json_data = include_str!("../../data/mhw_melder_recipes.json");
+    let recipes: Vec<MhwMelderJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for r in recipes {
+        if item_exists(conn, r.result_item_id)? {
+            conn.execute(
+                "INSERT OR IGNORE INTO melder_recipes (game_id, result_item_id, research_cost, melding_cost, unlock_condition, melder_type) VALUES (1, ?1, ?2, ?3, ?4, ?5)",
+                rusqlite::params![r.result_item_id, r.research_cost, r.melding_cost, r.unlock_condition, r.melder_type.as_deref().unwrap_or("normal")],
+            )?;
+        }
     }
     Ok(())
 }

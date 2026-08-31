@@ -41,6 +41,7 @@ pub fn run() {
             commands::get_decoration_detail,
             commands::search_armor_sets,
             commands::get_combinations,
+            commands::get_melder_recipes,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

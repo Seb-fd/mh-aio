@@ -4,6 +4,7 @@
   import { api, type Item } from '$lib/api'
   import { normKey } from '$lib/utils/norm'
   import Card from '$lib/components/ui/card.svelte'
+  import ItemIcon from '$lib/components/item-icon.svelte'
 
   const game = $derived($selectedGame)
   const dbId = $derived(game?.dbId)
@@ -143,12 +144,16 @@
       {#each filtered as item}
         <button onclick={() => open(item.id)} class="text-left">
           <Card class="p-3 border transition-all cursor-pointer themed-card">
-            <div class="flex items-center justify-between gap-2">
-              <div class="min-w-0">
+            <div class="flex items-center gap-3">
+              <ItemIcon iconUrl={item.icon_url} iconName={item.icon_name} iconColor={item.icon_color} size={36} alt={item.name} />
+              <div class="min-w-0 flex-1">
                 <p class="font-medium text-sm text-gray-100 truncate">{item.name}</p>
                 <p class="text-[10px] uppercase tracking-wide text-gray-500 mt-0.5">
                   {item.category ?? 'Unknown'}{item.subcategory ? ` • ${item.subcategory}` : ''} · R{item.rarity ??
                     1}
+                  {#if item.carry_limit}
+                    · x{item.carry_limit}
+                  {/if}
                 </p>
               </div>
               {#if item.sell_price !== null && item.sell_price !== undefined}

@@ -1,0 +1,1479 @@
+[
+  {
+    "result_item_id": 20002,
+    "research_cost": 20,
+    "melding_cost": 10,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20007,
+    "research_cost": 20,
+    "melding_cost": 10,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20003,
+    "research_cost": 50,
+    "melding_cost": 30,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20004,
+    "research_cost": 80,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20058,
+    "research_cost": 20,
+    "melding_cost": 30,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20022,
+    "research_cost": 40,
+    "melding_cost": 50,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20026,
+    "research_cost": 40,
+    "melding_cost": 50,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20027,
+    "research_cost": 30,
+    "melding_cost": 50,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21060,
+    "research_cost": 50,
+    "melding_cost": 80,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20028,
+    "research_cost": 30,
+    "melding_cost": 50,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20029,
+    "research_cost": 40,
+    "melding_cost": 50,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20030,
+    "research_cost": 40,
+    "melding_cost": 50,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20018,
+    "research_cost": 80,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20021,
+    "research_cost": 80,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20025,
+    "research_cost": 80,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20065,
+    "research_cost": 20,
+    "melding_cost": 30,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20059,
+    "research_cost": 20,
+    "melding_cost": 30,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20067,
+    "research_cost": 40,
+    "melding_cost": 20,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20068,
+    "research_cost": 40,
+    "melding_cost": 20,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20069,
+    "research_cost": 40,
+    "melding_cost": 20,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20074,
+    "research_cost": 40,
+    "melding_cost": 30,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20077,
+    "research_cost": 80,
+    "melding_cost": 50,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20081,
+    "research_cost": 80,
+    "melding_cost": 50,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20082,
+    "research_cost": 20,
+    "melding_cost": 30,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20060,
+    "research_cost": 40,
+    "melding_cost": 20,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20061,
+    "research_cost": 40,
+    "melding_cost": 20,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20062,
+    "research_cost": 40,
+    "melding_cost": 20,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21339,
+    "research_cost": 100,
+    "melding_cost": 50,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21209,
+    "research_cost": 20,
+    "melding_cost": 10,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21210,
+    "research_cost": 20,
+    "melding_cost": 10,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21211,
+    "research_cost": 20,
+    "melding_cost": 10,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21212,
+    "research_cost": 20,
+    "melding_cost": 10,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21213,
+    "research_cost": 20,
+    "melding_cost": 10,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20592,
+    "research_cost": 30,
+    "melding_cost": 50,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20593,
+    "research_cost": 30,
+    "melding_cost": 50,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20578,
+    "research_cost": 50,
+    "melding_cost": 20,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20276,
+    "research_cost": 100,
+    "melding_cost": 100,
+    "unlock_condition": "Steel Wyverian Print",
+    "melder_type": "steel"
+  },
+  {
+    "result_item_id": 20280,
+    "research_cost": 200,
+    "melding_cost": 100,
+    "unlock_condition": "Steel Wyverian Print",
+    "melder_type": "steel"
+  },
+  {
+    "result_item_id": 20313,
+    "research_cost": 100,
+    "melding_cost": 100,
+    "unlock_condition": "Steel Wyverian Print",
+    "melder_type": "steel"
+  },
+  {
+    "result_item_id": 20316,
+    "research_cost": 200,
+    "melding_cost": 100,
+    "unlock_condition": "Steel Wyverian Print",
+    "melder_type": "steel"
+  },
+  {
+    "result_item_id": 20344,
+    "research_cost": 100,
+    "melding_cost": 100,
+    "unlock_condition": "Steel Wyverian Print",
+    "melder_type": "steel"
+  },
+  {
+    "result_item_id": 20349,
+    "research_cost": 200,
+    "melding_cost": 100,
+    "unlock_condition": "Steel Wyverian Print",
+    "melder_type": "steel"
+  },
+  {
+    "result_item_id": 20360,
+    "research_cost": 100,
+    "melding_cost": 100,
+    "unlock_condition": "Steel Wyverian Print",
+    "melder_type": "steel"
+  },
+  {
+    "result_item_id": 20364,
+    "research_cost": 200,
+    "melding_cost": 100,
+    "unlock_condition": "Steel Wyverian Print",
+    "melder_type": "steel"
+  },
+  {
+    "result_item_id": 20394,
+    "research_cost": 100,
+    "melding_cost": 100,
+    "unlock_condition": "Steel Wyverian Print",
+    "melder_type": "steel"
+  },
+  {
+    "result_item_id": 20400,
+    "research_cost": 200,
+    "melding_cost": 100,
+    "unlock_condition": "Steel Wyverian Print",
+    "melder_type": "steel"
+  },
+  {
+    "result_item_id": 20123,
+    "research_cost": 100,
+    "melding_cost": 100,
+    "unlock_condition": "Silver Wyverian Print",
+    "melder_type": "silver"
+  },
+  {
+    "result_item_id": 20124,
+    "research_cost": 200,
+    "melding_cost": 100,
+    "unlock_condition": "Silver Wyverian Print",
+    "melder_type": "silver"
+  },
+  {
+    "result_item_id": 20125,
+    "research_cost": 200,
+    "melding_cost": 100,
+    "unlock_condition": "Silver Wyverian Print",
+    "melder_type": "silver"
+  },
+  {
+    "result_item_id": 20142,
+    "research_cost": 200,
+    "melding_cost": 100,
+    "unlock_condition": "Silver Wyverian Print",
+    "melder_type": "silver"
+  },
+  {
+    "result_item_id": 20173,
+    "research_cost": 200,
+    "melding_cost": 100,
+    "unlock_condition": "Silver Wyverian Print",
+    "melder_type": "silver"
+  },
+  {
+    "result_item_id": 20267,
+    "research_cost": 200,
+    "melding_cost": 100,
+    "unlock_condition": "Silver Wyverian Print",
+    "melder_type": "silver"
+  },
+  {
+    "result_item_id": 20277,
+    "research_cost": 200,
+    "melding_cost": 100,
+    "unlock_condition": "Silver Wyverian Print",
+    "melder_type": "silver"
+  },
+  {
+    "result_item_id": 20333,
+    "research_cost": 200,
+    "melding_cost": 100,
+    "unlock_condition": "Silver Wyverian Print",
+    "melder_type": "silver"
+  },
+  {
+    "result_item_id": 20322,
+    "research_cost": 200,
+    "melding_cost": 100,
+    "unlock_condition": "Silver Wyverian Print",
+    "melder_type": "silver"
+  },
+  {
+    "result_item_id": 20345,
+    "research_cost": 200,
+    "melding_cost": 100,
+    "unlock_condition": "Silver Wyverian Print",
+    "melder_type": "silver"
+  },
+  {
+    "result_item_id": 20171,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20172,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20380,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20281,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20272,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20327,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20338,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20350,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20395,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20403,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20418,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20426,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20435,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20449,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20457,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20411,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20463,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20442,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20466,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20674,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20784,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20778,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20789,
+    "research_cost": 400,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20790,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20791,
+    "research_cost": 300,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20792,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20793,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Celestial Wyverian Print",
+    "melder_type": "celestial"
+  },
+  {
+    "result_item_id": 20799,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Celestial Wyverian Print",
+    "melder_type": "celestial"
+  },
+  {
+    "result_item_id": 20804,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Celestial Wyverian Print",
+    "melder_type": "celestial"
+  },
+  {
+    "result_item_id": 20825,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Celestial Wyverian Print",
+    "melder_type": "celestial"
+  },
+  {
+    "result_item_id": 20833,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Celestial Wyverian Print",
+    "melder_type": "celestial"
+  },
+  {
+    "result_item_id": 20839,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Celestial Wyverian Print",
+    "melder_type": "celestial"
+  },
+  {
+    "result_item_id": 20844,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Celestial Wyverian Print",
+    "melder_type": "celestial"
+  },
+  {
+    "result_item_id": 20857,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20869,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Celestial Wyverian Print",
+    "melder_type": "celestial"
+  },
+  {
+    "result_item_id": 20882,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Celestial Wyverian Print",
+    "melder_type": "celestial"
+  },
+  {
+    "result_item_id": 20888,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Celestial Wyverian Print",
+    "melder_type": "celestial"
+  },
+  {
+    "result_item_id": 20899,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Celestial Wyverian Print",
+    "melder_type": "celestial"
+  },
+  {
+    "result_item_id": 20912,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Celestial Wyverian Print",
+    "melder_type": "celestial"
+  },
+  {
+    "result_item_id": 20928,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Celestial Wyverian Print",
+    "melder_type": "celestial"
+  },
+  {
+    "result_item_id": 20935,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Celestial Wyverian Print",
+    "melder_type": "celestial"
+  },
+  {
+    "result_item_id": 20942,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20959,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20996,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Gold Wyverian Print",
+    "melder_type": "gold"
+  },
+  {
+    "result_item_id": 20853,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21248,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Celestial Wyverian Print",
+    "melder_type": "celestial"
+  },
+  {
+    "result_item_id": 21257,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21289,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21286,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21297,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Celestial Wyverian Print",
+    "melder_type": "celestial"
+  },
+  {
+    "result_item_id": 21306,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": "Celestial Wyverian Print",
+    "melder_type": "celestial"
+  },
+  {
+    "result_item_id": 21021,
+    "research_cost": 100,
+    "melding_cost": 120,
+    "unlock_condition": "Guiding Lands materials",
+    "melder_type": "guiding"
+  },
+  {
+    "result_item_id": 21022,
+    "research_cost": 150,
+    "melding_cost": 160,
+    "unlock_condition": "Guiding Lands materials",
+    "melder_type": "guiding"
+  },
+  {
+    "result_item_id": 21023,
+    "research_cost": 200,
+    "melding_cost": 240,
+    "unlock_condition": "Guiding Lands materials",
+    "melder_type": "guiding"
+  },
+  {
+    "result_item_id": 21089,
+    "research_cost": 350,
+    "melding_cost": 160,
+    "unlock_condition": "Guiding Lands materials",
+    "melder_type": "guiding"
+  },
+  {
+    "result_item_id": 21047,
+    "research_cost": 400,
+    "melding_cost": 240,
+    "unlock_condition": "Guiding Lands materials",
+    "melder_type": "guiding"
+  },
+  {
+    "result_item_id": 21093,
+    "research_cost": 100,
+    "melding_cost": 120,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21095,
+    "research_cost": 100,
+    "melding_cost": 120,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21101,
+    "research_cost": 100,
+    "melding_cost": 120,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21105,
+    "research_cost": 150,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21132,
+    "research_cost": 200,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21138,
+    "research_cost": 200,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21124,
+    "research_cost": 250,
+    "melding_cost": 320,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21149,
+    "research_cost": 250,
+    "melding_cost": 320,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21133,
+    "research_cost": 250,
+    "melding_cost": 320,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21159,
+    "research_cost": 300,
+    "melding_cost": 400,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21094,
+    "research_cost": 100,
+    "melding_cost": 120,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21099,
+    "research_cost": 100,
+    "melding_cost": 120,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21109,
+    "research_cost": 150,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21114,
+    "research_cost": 150,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21134,
+    "research_cost": 200,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21140,
+    "research_cost": 200,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21136,
+    "research_cost": 250,
+    "melding_cost": 320,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21157,
+    "research_cost": 300,
+    "melding_cost": 400,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21161,
+    "research_cost": 300,
+    "melding_cost": 400,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21170,
+    "research_cost": 300,
+    "melding_cost": 400,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21111,
+    "research_cost": 100,
+    "melding_cost": 120,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21112,
+    "research_cost": 150,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21110,
+    "research_cost": 150,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21097,
+    "research_cost": 150,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21126,
+    "research_cost": 200,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21130,
+    "research_cost": 250,
+    "melding_cost": 320,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21155,
+    "research_cost": 300,
+    "melding_cost": 400,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21167,
+    "research_cost": 300,
+    "melding_cost": 400,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21171,
+    "research_cost": 300,
+    "melding_cost": 400,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21116,
+    "research_cost": 100,
+    "melding_cost": 120,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21117,
+    "research_cost": 150,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21128,
+    "research_cost": 200,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21146,
+    "research_cost": 200,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21142,
+    "research_cost": 250,
+    "melding_cost": 320,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21148,
+    "research_cost": 250,
+    "melding_cost": 320,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21165,
+    "research_cost": 300,
+    "melding_cost": 400,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21103,
+    "research_cost": 150,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21107,
+    "research_cost": 200,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21153,
+    "research_cost": 300,
+    "melding_cost": 400,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21163,
+    "research_cost": 300,
+    "melding_cost": 400,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21169,
+    "research_cost": 300,
+    "melding_cost": 400,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21119,
+    "research_cost": 100,
+    "melding_cost": 120,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21120,
+    "research_cost": 150,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21122,
+    "research_cost": 200,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21144,
+    "research_cost": 200,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21151,
+    "research_cost": 300,
+    "melding_cost": 400,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21173,
+    "research_cost": 300,
+    "melding_cost": 400,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21266,
+    "research_cost": 150,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21281,
+    "research_cost": 200,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21268,
+    "research_cost": 250,
+    "melding_cost": 320,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21272,
+    "research_cost": 300,
+    "melding_cost": 400,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21096,
+    "research_cost": 350,
+    "melding_cost": 120,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21102,
+    "research_cost": 350,
+    "melding_cost": 120,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21106,
+    "research_cost": 400,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21057,
+    "research_cost": 450,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21139,
+    "research_cost": 450,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21125,
+    "research_cost": 500,
+    "melding_cost": 320,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21150,
+    "research_cost": 500,
+    "melding_cost": 320,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21058,
+    "research_cost": 500,
+    "melding_cost": 320,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21100,
+    "research_cost": 350,
+    "melding_cost": 120,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21055,
+    "research_cost": 400,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21115,
+    "research_cost": 400,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21135,
+    "research_cost": 450,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21141,
+    "research_cost": 450,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21137,
+    "research_cost": 500,
+    "melding_cost": 320,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21113,
+    "research_cost": 400,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21056,
+    "research_cost": 400,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21098,
+    "research_cost": 400,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21127,
+    "research_cost": 450,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21131,
+    "research_cost": 450,
+    "melding_cost": 320,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21118,
+    "research_cost": 400,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21129,
+    "research_cost": 450,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21147,
+    "research_cost": 450,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21143,
+    "research_cost": 500,
+    "melding_cost": 320,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21104,
+    "research_cost": 400,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21108,
+    "research_cost": 450,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21121,
+    "research_cost": 400,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21123,
+    "research_cost": 450,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21145,
+    "research_cost": 450,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21267,
+    "research_cost": 400,
+    "melding_cost": 160,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21280,
+    "research_cost": 450,
+    "melding_cost": 240,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21269,
+    "research_cost": 500,
+    "melding_cost": 320,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21232,
+    "research_cost": 200,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21233,
+    "research_cost": 500,
+    "melding_cost": 100,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20510,
+    "research_cost": 100,
+    "melding_cost": 300,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20511,
+    "research_cost": 100,
+    "melding_cost": 300,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20512,
+    "research_cost": 100,
+    "melding_cost": 300,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20513,
+    "research_cost": 100,
+    "melding_cost": 300,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 20514,
+    "research_cost": 100,
+    "melding_cost": 300,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21290,
+    "research_cost": 200,
+    "melding_cost": 300,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21332,
+    "research_cost": 200,
+    "melding_cost": 300,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21334,
+    "research_cost": 200,
+    "melding_cost": 300,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21030,
+    "research_cost": 200,
+    "melding_cost": 300,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21031,
+    "research_cost": 200,
+    "melding_cost": 300,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21331,
+    "research_cost": 300,
+    "melding_cost": 300,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21333,
+    "research_cost": 300,
+    "melding_cost": 300,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21335,
+    "research_cost": 300,
+    "melding_cost": 300,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21175,
+    "research_cost": 300,
+    "melding_cost": 300,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  },
+  {
+    "result_item_id": 21176,
+    "research_cost": 300,
+    "melding_cost": 300,
+    "unlock_condition": null,
+    "melder_type": "normal"
+  }
+]
