@@ -151,7 +151,9 @@
     />
 
     <div class="flex flex-wrap gap-2 mb-4">
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] text-xs text-gray-300">
+      <span
+        class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] text-xs text-gray-300"
+      >
         <ItemIcon
           iconUrl={quest.icon_url}
           iconName={quest.icon_name}
@@ -161,7 +163,9 @@
         />
         {quest.type ?? '—'}
       </span>
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] text-xs text-gray-300">
+      <span
+        class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] text-xs text-gray-300"
+      >
         <ItemIcon
           iconUrl={quest.hub_icon_url}
           iconName={quest.hub_icon_name}

@@ -91,7 +91,14 @@
   <div class="max-w-5xl mx-auto">
     <div class="mb-8 flex items-center gap-4">
       {#if game.iconUrl}
-        <img src={game.iconUrl} alt={game.name} width="56" height="56" class="w-14 h-14 object-contain rounded-lg shrink-0" loading="lazy" />
+        <img
+          src={game.iconUrl}
+          alt={game.name}
+          width="56"
+          height="56"
+          class="w-14 h-14 object-contain rounded-lg shrink-0"
+          loading="lazy"
+        />
       {/if}
       <div>
         <h1 class="text-3xl font-bold {game.color} mb-1">{game.name}</h1>

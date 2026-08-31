@@ -186,7 +186,9 @@
       {#each tree as group}
         {@const groupIcon = group.forests[0]?.weapon}
         <section class="mb-10 min-w-[320px]">
-          <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4 flex items-center gap-2">
+          <h2
+            class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4 flex items-center gap-2"
+          >
             {#if groupIcon}
               <ItemIcon
                 iconUrl={groupIcon.icon_url}

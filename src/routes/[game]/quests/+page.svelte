@@ -157,7 +157,7 @@
     G: 'bg-yellow-900/40 text-yellow-300',
   }
 
-  const typeIcon: Record<string, string> = {
+  const _typeIcon: Record<string, string> = {
     Hunting: '⚔️',
     Gathering: '🧺',
     Slaying: '🗡️',

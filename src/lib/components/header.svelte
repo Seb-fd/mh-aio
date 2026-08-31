@@ -45,7 +45,14 @@
       style="background-color: var(--theme-bg-elevated); border-color: var(--theme-border-strong);"
     >
       {#if game.iconUrl}
-        <img src={game.iconUrl} alt={game.name} width="16" height="16" class="w-4 h-4 object-contain rounded-sm shrink-0" loading="lazy" />
+        <img
+          src={game.iconUrl}
+          alt={game.name}
+          width="16"
+          height="16"
+          class="w-4 h-4 object-contain rounded-sm shrink-0"
+          loading="lazy"
+        />
       {:else}
         <span class="w-2 h-2 rounded-full" style="background-color: var(--theme-accent);"></span>
       {/if}
