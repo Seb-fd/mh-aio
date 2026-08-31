@@ -769,36 +769,60 @@ fn decoration_skill_icon(skill: &str) -> (&'static str, &'static str) {
     // 017i red, 017e teal, 017b cyan, 017f ochre, 017h coral, 017c lavender, 017d mauve, 017a grey-blue, 017g olive
     match skill {
         // 017i - red (Attack/Fire)
-        "Attack" | "Fire Res" | "BombStrUp" | "Stinger" | "Potential" | "Fate" | "Draw" | "PowerCAdd" | "Spc Attack" => ("ItemIcon017i.png", "Red"),
+        "Attack" | "Fire Res" | "BombStrUp" | "Stinger" | "Potential" | "Fate" | "Draw"
+        | "PowerCAdd" | "Spc Attack" => ("ItemIcon017i.png", "Red"),
         // 017e - teal/green (Expert/Defense)
-        "Expert" | "Defense" | "Freezer" | "Jumping" | "Steadfast" | "Stun" | "Paralysis" | "Transportr" | "Constitutn" => ("ItemIcon017e.png", "Green"),
+        "Expert" | "Defense" | "Freezer" | "Jumping" | "Steadfast" | "Stun" | "Paralysis"
+        | "Transportr" | "Constitutn" => ("ItemIcon017e.png", "Green"),
         // 017b - cyan/blue (Evade/Water)
-        "Evade" | "Evade Dist" | "Water Res" | "Resistor" | "Fencing" | "Reload" | "Quickload" | "Salvo" | "Sleep" | "Sheathing" | "Trapmaster" | "SleepCAdd" => ("ItemIcon017b.png", "Cyan"),
+        "Evade" | "Evade Dist" | "Water Res" | "Resistor" | "Fencing" | "Reload" | "Quickload"
+        | "Salvo" | "Sleep" | "Sheathing" | "Trapmaster" | "SleepCAdd" => {
+            ("ItemIcon017b.png", "Cyan")
+        }
         // 017f - ochre/yellow (Thunder/Stamina)
-        "ThunderRes" | "Exhaust" | "Sprinter" | "Gobbler" | "Perceive" | "ParalyCAdd" | "SwdShrpner" | "Fatigue" => ("ItemIcon017f.png", "Yellow"),
+        "ThunderRes" | "Exhaust" | "Sprinter" | "Gobbler" | "Perceive" | "ParalyCAdd"
+        | "SwdShrpner" | "Fatigue" => ("ItemIcon017f.png", "Yellow"),
         // 017h - coral pink (Recovery)
-        "Recovery" | "Medicine" | "Rec Speed" | "Antiseptic" | "Hunger" | "Gathering" | "Tranquilzr" | "Health" => ("ItemIcon017h.png", "Pink"),
+        "Recovery" | "Medicine" | "Rec Speed" | "Antiseptic" | "Hunger" | "Gathering"
+        | "Tranquilzr" | "Health" => ("ItemIcon017h.png", "Pink"),
         // 017c - lavender (Disabler/Element)
-        "Disabler" | "ElementAtk" | "Dragon Res" | "Heavy Attack" | "Friendship" | "Blessing" | "Protection" | "Wide Area" => ("ItemIcon017c.png", "Violet"),
+        "Disabler" | "ElementAtk" | "Dragon Res" | "Heavy Attack" | "Friendship" | "Blessing"
+        | "Protection" | "Wide Area" => ("ItemIcon017c.png", "Violet"),
         // 017d - mauve (Charger/KO)
-        "Charger" | "KO" | "Metabolism" | "Gambit" | "PsychicVis" | "Carving" | "Precision" | "ShortCharg" => ("ItemIcon017d.png", "DarkPurple"),
+        "Charger" | "KO" | "Metabolism" | "Gambit" | "PsychicVis" | "Carving" | "Precision"
+        | "ShortCharg" => ("ItemIcon017d.png", "DarkPurple"),
         // 017a - grey-blue (Guard/Earplug)
-        "Guard" | "Guard Up" | "Auto-Guard" | "HearProtct" | "WindPress" | "Quake Res" | "Razor" | "Chamber" | "Gunnery" | "PierceSAdd" | "PelletSAdd" => ("ItemIcon017a.png", "Gray"),
+        "Guard" | "Guard Up" | "Auto-Guard" | "HearProtct" | "WindPress" | "Quake Res"
+        | "Razor" | "Chamber" | "Gunnery" | "PierceSAdd" | "PelletSAdd" => {
+            ("ItemIcon017a.png", "Gray")
+        }
         // 017g - olive (Antidote/Handicraft)
-        "Antidote" | "Prevention" | "Handicraft" | "Footing" | "Professor" | "Sneak" | "Terrain" => ("ItemIcon017g.png", "Lime"),
+        "Antidote" | "Prevention" | "Handicraft" | "Footing" | "Professor" | "Sneak"
+        | "Terrain" => ("ItemIcon017g.png", "Lime"),
         // fallback by keyword
         _ => {
             let s = skill.to_ascii_lowercase();
-            if s.contains("attack") || s.contains("fire") || s.contains("bomb") { ("ItemIcon017i.png", "Red") }
-            else if s.contains("expert") || s.contains("stun") || s.contains("defense") { ("ItemIcon017e.png", "Green") }
-            else if s.contains("evade") || s.contains("water") || s.contains("sleep") { ("ItemIcon017b.png", "Cyan") }
-            else if s.contains("thunder") || s.contains("sprinter") || s.contains("paraly") { ("ItemIcon017f.png", "Yellow") }
-            else if s.contains("recover") || s.contains("medicine") || s.contains("hunger") { ("ItemIcon017h.png", "Pink") }
-            else if s.contains("element") || s.contains("dragon") || s.contains("friend") { ("ItemIcon017c.png", "Violet") }
-            else if s.contains("charger") || s.contains("psychic") || s.contains("ko") { ("ItemIcon017d.png", "DarkPurple") }
-            else if s.contains("guard") || s.contains("earplug") || s.contains("wind") { ("ItemIcon017a.png", "Gray") }
-            else if s.contains("handicraft") || s.contains("antidote") { ("ItemIcon017g.png", "Lime") }
-            else { ("ItemIcon017a.png", "Gray") }
+            if s.contains("attack") || s.contains("fire") || s.contains("bomb") {
+                ("ItemIcon017i.png", "Red")
+            } else if s.contains("expert") || s.contains("stun") || s.contains("defense") {
+                ("ItemIcon017e.png", "Green")
+            } else if s.contains("evade") || s.contains("water") || s.contains("sleep") {
+                ("ItemIcon017b.png", "Cyan")
+            } else if s.contains("thunder") || s.contains("sprinter") || s.contains("paraly") {
+                ("ItemIcon017f.png", "Yellow")
+            } else if s.contains("recover") || s.contains("medicine") || s.contains("hunger") {
+                ("ItemIcon017h.png", "Pink")
+            } else if s.contains("element") || s.contains("dragon") || s.contains("friend") {
+                ("ItemIcon017c.png", "Violet")
+            } else if s.contains("charger") || s.contains("psychic") || s.contains("ko") {
+                ("ItemIcon017d.png", "DarkPurple")
+            } else if s.contains("guard") || s.contains("earplug") || s.contains("wind") {
+                ("ItemIcon017a.png", "Gray")
+            } else if s.contains("handicraft") || s.contains("antidote") {
+                ("ItemIcon017g.png", "Lime")
+            } else {
+                ("ItemIcon017a.png", "Gray")
+            }
         }
     }
 }
@@ -807,8 +831,7 @@ fn monster_icon_slug(name: &str) -> String {
     // "Lao-Shan Lung" -> "lao-shan-lung", "Yian Kut-Ku" -> "yian-kut-ku"
     name.to_ascii_lowercase()
         .replace(' ', "-")
-        .replace('\'', "")
-        .replace('’', "")
+        .replace(['\'', '’'], "")
 }
 
 fn monster_icon_color(species: &str) -> &'static str {
@@ -863,7 +886,7 @@ fn seed_armor(conn: &Connection) -> Result<()> {
             rusqlite::params![
                 a.id, MH2G, a.name, a.slot_type, a.rank, a.rarity, a.defense_base, a.defense_max,
                 a.resistance_fire, a.resistance_water, a.resistance_thunder, a.resistance_ice, a.resistance_dragon,
-                a.slots, a.skills, set_id_of_armor(&a), a.armor_type, gender, a.crafting_cost, a.description,
+                a.slots, a.skills, set_id_of_armor(a), a.armor_type, gender, a.crafting_cost, a.description,
                 a.slot_type, icon_color, icon_url
             ],
         )?;
@@ -943,7 +966,11 @@ fn seed_quests(conn: &Connection) -> Result<()> {
         let type_slug = quest_type_slug(&q.qtype);
         let icon_url = format!("/icons/mhfu/quests/{}.png", type_slug);
         let icon_color = quest_type_color(&q.qtype);
-        let hub_slug = q.hub.as_deref().map(quest_hub_slug).unwrap_or_else(|| "unknown".to_string());
+        let hub_slug = q
+            .hub
+            .as_deref()
+            .map(quest_hub_slug)
+            .unwrap_or_else(|| "unknown".to_string());
         let hub_icon_url = format!("/icons/mhfu/quests/hubs/{}.png", hub_slug);
         conn.execute(
             "INSERT OR IGNORE INTO quests (id, game_id, name, name_original, type, rank, hub, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, description, description_original, client, requirements, reward_money, contract_fee, main_monsters, icon_name, icon_color, icon_url, hub_icon_name, hub_icon_color, hub_icon_url, language)
@@ -1001,7 +1028,11 @@ fn seed_quests(conn: &Connection) -> Result<()> {
         let type_slug = quest_type_slug(&q.qtype);
         let icon_url = format!("/icons/mhfu/quests/{}.png", type_slug);
         let icon_color = quest_type_color(&q.qtype);
-        let hub_slug = q.hub.as_deref().map(quest_hub_slug).unwrap_or_else(|| "unknown".to_string());
+        let hub_slug = q
+            .hub
+            .as_deref()
+            .map(quest_hub_slug)
+            .unwrap_or_else(|| "unknown".to_string());
         let hub_icon_url = format!("/icons/mhfu/quests/hubs/{}.png", hub_slug);
         let _ = conn.execute(
             "UPDATE quests SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(icon_url, ?3), hub_icon_name = COALESCE(hub_icon_name, ?4), hub_icon_color = COALESCE(hub_icon_color, 'Gray'), hub_icon_url = COALESCE(hub_icon_url, ?5) WHERE id = ?6 AND game_id = 5 AND (icon_url IS NULL OR hub_icon_url IS NULL)",
@@ -1144,7 +1175,11 @@ fn seed_decorations(conn: &Connection) -> Result<()> {
             continue;
         }
 
-        let primary_skill_name = d.skill_points.get(0).map(|s| s.name.as_str()).unwrap_or("Unknown");
+        let primary_skill_name = d
+            .skill_points
+            .first()
+            .map(|s| s.name.as_str())
+            .unwrap_or("Unknown");
         let (icon_file, icon_color) = decoration_skill_icon(primary_skill_name);
         let icon_url = format!("/icons/mhfu/decorations/{}", icon_file);
         let icon_name = primary_skill_name.to_string();
@@ -1660,7 +1695,11 @@ fn seed_mhp3rd_quests(conn: &Connection) -> Result<()> {
         let type_slug = quest_type_slug(&q.qtype);
         let icon_url = format!("/icons/mhfu/quests/{}.png", type_slug);
         let icon_color = quest_type_color(&q.qtype);
-        let hub_slug = q.hub.as_deref().map(quest_hub_slug).unwrap_or_else(|| "unknown".to_string());
+        let hub_slug = q
+            .hub
+            .as_deref()
+            .map(quest_hub_slug)
+            .unwrap_or_else(|| "unknown".to_string());
         let hub_icon_url = format!("/icons/mhfu/quests/hubs/{}.png", hub_slug);
         conn.execute(
             "INSERT OR IGNORE INTO quests (id, game_id, name, name_original, type, rank, hub, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, description, description_original, client, requirements, reward_money, contract_fee, main_monsters, icon_name, icon_color, icon_url, hub_icon_name, hub_icon_color, hub_icon_url, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, ?23, ?24, ?25, ?26, ?27, ?28, ?29, 'en')",
@@ -1686,7 +1725,11 @@ fn seed_mhp3rd_quests(conn: &Connection) -> Result<()> {
         let type_slug = quest_type_slug(&q.qtype);
         let icon_url = format!("/icons/mhfu/quests/{}.png", type_slug);
         let icon_color = quest_type_color(&q.qtype);
-        let hub_slug = q.hub.as_deref().map(quest_hub_slug).unwrap_or_else(|| "unknown".to_string());
+        let hub_slug = q
+            .hub
+            .as_deref()
+            .map(quest_hub_slug)
+            .unwrap_or_else(|| "unknown".to_string());
         let hub_icon_url = format!("/icons/mhfu/quests/hubs/{}.png", hub_slug);
         let _ = conn.execute(
             "UPDATE quests SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(icon_url, ?3), hub_icon_name = COALESCE(hub_icon_name, ?4), hub_icon_color = COALESCE(hub_icon_color, 'Gray'), hub_icon_url = COALESCE(hub_icon_url, ?5) WHERE id = ?6 AND game_id = 4 AND (icon_url IS NULL OR hub_icon_url IS NULL)",
@@ -1760,7 +1803,11 @@ fn seed_mhp3rd_decorations(conn: &Connection) -> Result<()> {
         if primary_id.is_none() {
             continue;
         }
-        let primary_skill_name = d.skill_points.get(0).map(|s| s.name.as_str()).unwrap_or("Unknown");
+        let primary_skill_name = d
+            .skill_points
+            .first()
+            .map(|s| s.name.as_str())
+            .unwrap_or("Unknown");
         let (icon_file, icon_color) = decoration_skill_icon(primary_skill_name);
         let icon_url = format!("/icons/mhfu/decorations/{}", icon_file);
         let icon_name = primary_skill_name.to_string();

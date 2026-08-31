@@ -524,7 +524,19 @@ pub fn get_monster_detail(conn: &Connection, id: i32) -> Result<Option<MonsterDe
         )
         .optional()?;
 
-    let Some((id, game_id, name, species, size, description, icon_name, icon_color, icon_url, language)) = monster else {
+    let Some((
+        id,
+        game_id,
+        name,
+        species,
+        size,
+        description,
+        icon_name,
+        icon_color,
+        icon_url,
+        language,
+    )) = monster
+    else {
         return Ok(None);
     };
 
