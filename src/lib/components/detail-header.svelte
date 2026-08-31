@@ -29,7 +29,13 @@
         class="w-14 h-14 rounded-xl bg-gradient-to-br from-[var(--theme-banner-from)] to-[var(--theme-banner-to)] border border-[var(--theme-border-strong)] flex items-center justify-center shrink-0 shadow-lg p-1.5"
         style="box-shadow: 0 0 30px var(--theme-glow);"
       >
-        <img src={iconUrl} alt={title} class="w-10 h-10 object-contain" loading="lazy" onerror={() => (imgFailed = true)} />
+        <img
+          src={iconUrl}
+          alt={title}
+          class="w-10 h-10 object-contain"
+          loading="lazy"
+          onerror={() => (imgFailed = true)}
+        />
       </div>
     {:else if icon}
       <div

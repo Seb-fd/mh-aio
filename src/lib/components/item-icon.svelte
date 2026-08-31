@@ -45,7 +45,7 @@
 {#if iconUrl && !failed}
   <img
     src={iconUrl}
-    alt={alt}
+    {alt}
     width={size}
     height={size}
     class="shrink-0 object-contain"
@@ -56,10 +56,14 @@
 {:else if iconName}
   <div
     class="shrink-0 rounded-md flex items-center justify-center border border-white/10"
-    style="width: {size}px; height: {size}px; background-color: {colorCss(iconColor)}22; border-color: {colorCss(iconColor)}55;"
+    style="width: {size}px; height: {size}px; background-color: {colorCss(
+      iconColor,
+    )}22; border-color: {colorCss(iconColor)}55;"
     title={iconName + (iconColor ? ` (${iconColor})` : '')}
   >
-    <span class="text-[9px] font-bold leading-none" style="color: {colorCss(iconColor)}">{iconName.slice(0, 2).toUpperCase()}</span>
+    <span class="text-[9px] font-bold leading-none" style="color: {colorCss(iconColor)}"
+      >{iconName.slice(0, 2).toUpperCase()}</span
+    >
   </div>
 {:else}
   <div
