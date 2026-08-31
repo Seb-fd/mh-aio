@@ -95,12 +95,24 @@ fn seed_monsters(conn: &Connection) -> Result<()> {
     let monsters: Vec<MonsterJson> = serde_json::from_str(json_data)
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
 
-    for m in monsters {
+    for m in &monsters {
+        let slug = monster_icon_slug(&m.name);
+        let icon_url = format!("/icons/mhfu/monsters/{}.png", slug);
+        let icon_color = monster_icon_color(&m.species);
         conn.execute(
-            "INSERT OR IGNORE INTO monsters (id, game_id, name, species, size, description, language)
-             VALUES (?1, ?2, ?3, ?4, ?5, NULL, 'en')",
-            rusqlite::params![m.id, MH2G, m.name, m.species, m.size],
+            "INSERT OR IGNORE INTO monsters (id, game_id, name, species, size, description, icon_name, icon_color, icon_url, language)
+             VALUES (?1, ?2, ?3, ?4, ?5, NULL, ?6, ?7, ?8, 'en')",
+            rusqlite::params![m.id, MH2G, m.name, m.species, m.size, m.name, icon_color, icon_url],
         )?;
+    }
+    for m in &monsters {
+        let slug = monster_icon_slug(&m.name);
+        let icon_url = format!("/icons/mhfu/monsters/{}.png", slug);
+        let icon_color = monster_icon_color(&m.species);
+        let _ = conn.execute(
+            "UPDATE monsters SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(icon_url, ?3) WHERE id = ?4 AND game_id = 5 AND (icon_url IS NULL OR icon_name IS NULL)",
+            rusqlite::params![m.name, icon_color, icon_url, m.id],
+        );
     }
 
     Ok(())
@@ -366,6 +378,33 @@ fn seed_monster_weaknesses(conn: &Connection) -> Result<()> {
     Ok(())
 }
 
+fn weapon_icon_slug(weapon_type: &str) -> &'static str {
+    match weapon_type {
+        "Great Sword" => "great-sword",
+        "Long Sword" => "long-sword",
+        "Sword & Shield" | "Sword and Shield" => "sword-and-shield",
+        "Dual Blades" => "dual-blades",
+        "Hammer" => "hammer",
+        "Hunting Horn" => "hunting-horn",
+        "Lance" => "lance",
+        "Gunlance" => "gunlance",
+        "Switch Axe" => "switch-axe",
+        "Light Bowgun" => "light-bowgun",
+        "Heavy Bowgun" => "heavy-bowgun",
+        "Bow" => "bow",
+        _ => "great-sword",
+    }
+}
+
+fn weapon_icon_color(rarity: i32) -> &'static str {
+    match rarity {
+        1..=2 => "Gray",
+        3..=4 => "White",
+        5..=6 => "Green",
+        _ => "Gold",
+    }
+}
+
 #[derive(Deserialize)]
 struct WeaponJson {
     id: i32,
@@ -393,12 +432,15 @@ fn seed_weapons(conn: &Connection) -> Result<()> {
     let weapons: Vec<WeaponJson> = serde_json::from_str(json_data)
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
 
-    for w in weapons {
+    for w in &weapons {
+        let slug = weapon_icon_slug(&w.weapon_type);
+        let icon_url = format!("/icons/mhfu/weapons/{}.png", slug);
+        let icon_color = weapon_icon_color(w.rarity);
         conn.execute(
             "INSERT OR IGNORE INTO weapons
                 (id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value,
-                 sharpness, slots, skills, status_type, status_value, defense_bonus, crafting_cost, upgrade_path, description, language)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, 'en')",
+                 sharpness, slots, skills, status_type, status_value, defense_bonus, crafting_cost, upgrade_path, description, icon_name, icon_color, icon_url, language)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, 'en')",
             rusqlite::params![
                 w.id,
                 MH2G,
@@ -417,8 +459,21 @@ fn seed_weapons(conn: &Connection) -> Result<()> {
                 w.defense_bonus,
                 w.crafting_cost,
                 w.upgrade_path,
-                w.description
+                w.description,
+                w.weapon_type,
+                icon_color,
+                icon_url
             ],
+        )?;
+    }
+    // Backfill for existing DBs where icon was NULL or type changed
+    for w in &weapons {
+        let slug = weapon_icon_slug(&w.weapon_type);
+        let icon_url = format!("/icons/mhfu/weapons/{}.png", slug);
+        let icon_color = weapon_icon_color(w.rarity);
+        conn.execute(
+            "UPDATE weapons SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(icon_url, ?3) WHERE id = ?4 AND game_id = 5 AND (icon_url IS NULL OR icon_name IS NULL)",
+            rusqlite::params![w.weapon_type, icon_color, icon_url, w.id],
         )?;
     }
 
@@ -667,6 +722,111 @@ fn seed_armor_sets(conn: &Connection) -> Result<()> {
     Ok(())
 }
 
+fn armor_icon_color(rank: &str) -> &'static str {
+    match rank {
+        "G" => "Gold",
+        "High" => "Blue",
+        _ => "Gray",
+    }
+}
+
+fn quest_type_slug(qtype: &str) -> &'static str {
+    match qtype.to_ascii_lowercase().as_str() {
+        "hunting" | "hunt" => "hunt",
+        "gathering" | "gather" | "collection" => "gather",
+        "slaying" | "slay" => "slay",
+        "capturing" | "capture" => "capture",
+        "training" | "arena" => "training",
+        "event" => "event",
+        "challenge" => "challenge",
+        _ => "hunt",
+    }
+}
+
+fn quest_type_color(qtype: &str) -> &'static str {
+    match qtype.to_ascii_lowercase().as_str() {
+        "hunting" | "hunt" => "Red",
+        "gathering" | "gather" => "Green",
+        "slaying" | "slay" => "Orange",
+        "capturing" | "capture" => "Blue",
+        "training" | "arena" => "Yellow",
+        _ => "Gray",
+    }
+}
+
+fn quest_hub_slug(hub: &str) -> String {
+    // normalize hub to slug: elder, nekoto, guild_low -> guild-low etc.
+    let h = hub.to_ascii_lowercase();
+    match h.as_str() {
+        "village" | "village_low" | "village_high" => "village".to_string(),
+        "guild_low" | "guild_high" | "guild_g" => h.replace('_', "-"),
+        _ => h.replace('_', "-"),
+    }
+}
+
+fn decoration_skill_icon(skill: &str) -> (&'static str, &'static str) {
+    // Returns (file, color) for the 9 ItemIcon017 hue family, per MHP3:_Decoration_List auth table
+    // 017i red, 017e teal, 017b cyan, 017f ochre, 017h coral, 017c lavender, 017d mauve, 017a grey-blue, 017g olive
+    match skill {
+        // 017i - red (Attack/Fire)
+        "Attack" | "Fire Res" | "BombStrUp" | "Stinger" | "Potential" | "Fate" | "Draw" | "PowerCAdd" | "Spc Attack" => ("ItemIcon017i.png", "Red"),
+        // 017e - teal/green (Expert/Defense)
+        "Expert" | "Defense" | "Freezer" | "Jumping" | "Steadfast" | "Stun" | "Paralysis" | "Transportr" | "Constitutn" => ("ItemIcon017e.png", "Green"),
+        // 017b - cyan/blue (Evade/Water)
+        "Evade" | "Evade Dist" | "Water Res" | "Resistor" | "Fencing" | "Reload" | "Quickload" | "Salvo" | "Sleep" | "Sheathing" | "Trapmaster" | "SleepCAdd" => ("ItemIcon017b.png", "Cyan"),
+        // 017f - ochre/yellow (Thunder/Stamina)
+        "ThunderRes" | "Exhaust" | "Sprinter" | "Gobbler" | "Perceive" | "ParalyCAdd" | "SwdShrpner" | "Fatigue" => ("ItemIcon017f.png", "Yellow"),
+        // 017h - coral pink (Recovery)
+        "Recovery" | "Medicine" | "Rec Speed" | "Antiseptic" | "Hunger" | "Gathering" | "Tranquilzr" | "Health" => ("ItemIcon017h.png", "Pink"),
+        // 017c - lavender (Disabler/Element)
+        "Disabler" | "ElementAtk" | "Dragon Res" | "Heavy Attack" | "Friendship" | "Blessing" | "Protection" | "Wide Area" => ("ItemIcon017c.png", "Violet"),
+        // 017d - mauve (Charger/KO)
+        "Charger" | "KO" | "Metabolism" | "Gambit" | "PsychicVis" | "Carving" | "Precision" | "ShortCharg" => ("ItemIcon017d.png", "DarkPurple"),
+        // 017a - grey-blue (Guard/Earplug)
+        "Guard" | "Guard Up" | "Auto-Guard" | "HearProtct" | "WindPress" | "Quake Res" | "Razor" | "Chamber" | "Gunnery" | "PierceSAdd" | "PelletSAdd" => ("ItemIcon017a.png", "Gray"),
+        // 017g - olive (Antidote/Handicraft)
+        "Antidote" | "Prevention" | "Handicraft" | "Footing" | "Professor" | "Sneak" | "Terrain" => ("ItemIcon017g.png", "Lime"),
+        // fallback by keyword
+        _ => {
+            let s = skill.to_ascii_lowercase();
+            if s.contains("attack") || s.contains("fire") || s.contains("bomb") { ("ItemIcon017i.png", "Red") }
+            else if s.contains("expert") || s.contains("stun") || s.contains("defense") { ("ItemIcon017e.png", "Green") }
+            else if s.contains("evade") || s.contains("water") || s.contains("sleep") { ("ItemIcon017b.png", "Cyan") }
+            else if s.contains("thunder") || s.contains("sprinter") || s.contains("paraly") { ("ItemIcon017f.png", "Yellow") }
+            else if s.contains("recover") || s.contains("medicine") || s.contains("hunger") { ("ItemIcon017h.png", "Pink") }
+            else if s.contains("element") || s.contains("dragon") || s.contains("friend") { ("ItemIcon017c.png", "Violet") }
+            else if s.contains("charger") || s.contains("psychic") || s.contains("ko") { ("ItemIcon017d.png", "DarkPurple") }
+            else if s.contains("guard") || s.contains("earplug") || s.contains("wind") { ("ItemIcon017a.png", "Gray") }
+            else if s.contains("handicraft") || s.contains("antidote") { ("ItemIcon017g.png", "Lime") }
+            else { ("ItemIcon017a.png", "Gray") }
+        }
+    }
+}
+
+fn monster_icon_slug(name: &str) -> String {
+    // "Lao-Shan Lung" -> "lao-shan-lung", "Yian Kut-Ku" -> "yian-kut-ku"
+    name.to_ascii_lowercase()
+        .replace(' ', "-")
+        .replace('\'', "")
+        .replace('’', "")
+}
+
+fn monster_icon_color(species: &str) -> &'static str {
+    match species {
+        "Elder Dragon" => "Gold",
+        "Flying Wyvern" => "Red",
+        "Fanged Wyvern" => "Orange",
+        "Brute Wyvern" => "DarkRed",
+        "Carapaceon" => "Orange",
+        "Leviathan" => "Blue",
+        "Pelagus" => "Green",
+        "Lynian" => "Beige",
+        "Neopteron" => "Cyan",
+        "Herbivore" => "Lime",
+        _ => "Gray",
+    }
+}
+
 fn seed_armor(conn: &Connection) -> Result<()> {
     let json_data = include_str!("../../data/mh2g_armor.json");
     let armors: Vec<ArmorJson> = serde_json::from_str(json_data)
@@ -690,19 +850,31 @@ fn seed_armor(conn: &Connection) -> Result<()> {
     };
     let set_id_of_armor = |armor: &ArmorJson| -> i32 { set_id_of(&derive_set_name(armor)) };
 
-    for a in armors {
+    for a in &armors {
         let gender = a.gender.clone().unwrap_or_else(|| "both".to_string());
+        let icon_color = armor_icon_color(&a.rank);
+        let icon_url = format!("/icons/mhfu/armor/{}.png", a.slot_type);
         conn.execute(
             "INSERT OR IGNORE INTO armor
                 (id, game_id, name, slot_type, rank, rarity, defense_base, defense_max,
                  resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon,
-                 slots, skills, set_id, armor_type, gender, crafting_cost, description, language)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, 'en')",
+                 slots, skills, set_id, armor_type, gender, crafting_cost, description, icon_name, icon_color, icon_url, language)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, ?23, 'en')",
             rusqlite::params![
                 a.id, MH2G, a.name, a.slot_type, a.rank, a.rarity, a.defense_base, a.defense_max,
                 a.resistance_fire, a.resistance_water, a.resistance_thunder, a.resistance_ice, a.resistance_dragon,
-                a.slots, a.skills, set_id_of_armor(&a), a.armor_type, gender, a.crafting_cost, a.description
+                a.slots, a.skills, set_id_of_armor(&a), a.armor_type, gender, a.crafting_cost, a.description,
+                a.slot_type, icon_color, icon_url
             ],
+        )?;
+    }
+    // Backfill existing DBs
+    for a in &armors {
+        let icon_color = armor_icon_color(&a.rank);
+        let icon_url = format!("/icons/mhfu/armor/{}.png", a.slot_type);
+        conn.execute(
+            "UPDATE armor SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(icon_url, ?3) WHERE id = ?4 AND game_id = 5 AND (icon_url IS NULL OR icon_name IS NULL)",
+            rusqlite::params![a.slot_type, icon_color, icon_url, a.id],
         )?;
     }
 
@@ -763,14 +935,19 @@ fn seed_quests(conn: &Connection) -> Result<()> {
     let quests: Vec<QuestJson> = serde_json::from_str(json_data)
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
 
-    for q in quests {
+    for q in &quests {
         let main_monsters_json = q
             .main_monsters
             .as_ref()
             .map(|v| serde_json::to_string(v).unwrap_or_else(|_| "[]".to_string()));
+        let type_slug = quest_type_slug(&q.qtype);
+        let icon_url = format!("/icons/mhfu/quests/{}.png", type_slug);
+        let icon_color = quest_type_color(&q.qtype);
+        let hub_slug = q.hub.as_deref().map(quest_hub_slug).unwrap_or_else(|| "unknown".to_string());
+        let hub_icon_url = format!("/icons/mhfu/quests/hubs/{}.png", hub_slug);
         conn.execute(
-            "INSERT OR IGNORE INTO quests (id, game_id, name, name_original, type, rank, hub, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, description, description_original, client, requirements, reward_money, contract_fee, main_monsters, language)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, ?23, 'en')",
+            "INSERT OR IGNORE INTO quests (id, game_id, name, name_original, type, rank, hub, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, description, description_original, client, requirements, reward_money, contract_fee, main_monsters, icon_name, icon_color, icon_url, hub_icon_name, hub_icon_color, hub_icon_url, language)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, ?23, ?24, ?25, ?26, ?27, ?28, ?29, 'en')",
             rusqlite::params![
                 q.id,
                 MH2G,
@@ -794,7 +971,13 @@ fn seed_quests(conn: &Connection) -> Result<()> {
                 q.requirements,
                 q.reward_money,
                 q.contract_fee,
-                main_monsters_json
+                main_monsters_json,
+                q.qtype,
+                icon_color,
+                icon_url,
+                q.hub.clone().unwrap_or_else(|| "unknown".to_string()),
+                "Gray",
+                hub_icon_url
             ],
         )?;
     }
@@ -811,6 +994,18 @@ fn seed_quests(conn: &Connection) -> Result<()> {
         let _ = conn.execute(
             "UPDATE quests SET objective = ?1, objective_original = COALESCE(objective_original, ?2), location = ?3, location_original = COALESCE(location_original, ?4), description = COALESCE(?, description), description_original = COALESCE(description_original, ?) WHERE id = ?5 AND game_id = 5",
             rusqlite::params![q.objective, q.objective_original.as_deref().unwrap_or(&q.objective), q.location, q.location_original.as_deref().unwrap_or(&q.location), q.description, q.description_original.as_deref().unwrap_or(q.description.as_deref().unwrap_or("")), q.id],
+        );
+    }
+    // Backfill icons for existing DBs where icon was NULL
+    for q in &quests {
+        let type_slug = quest_type_slug(&q.qtype);
+        let icon_url = format!("/icons/mhfu/quests/{}.png", type_slug);
+        let icon_color = quest_type_color(&q.qtype);
+        let hub_slug = q.hub.as_deref().map(quest_hub_slug).unwrap_or_else(|| "unknown".to_string());
+        let hub_icon_url = format!("/icons/mhfu/quests/hubs/{}.png", hub_slug);
+        let _ = conn.execute(
+            "UPDATE quests SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(icon_url, ?3), hub_icon_name = COALESCE(hub_icon_name, ?4), hub_icon_color = COALESCE(hub_icon_color, 'Gray'), hub_icon_url = COALESCE(hub_icon_url, ?5) WHERE id = ?6 AND game_id = 5 AND (icon_url IS NULL OR hub_icon_url IS NULL)",
+            rusqlite::params![q.qtype, icon_color, icon_url, q.hub.clone().unwrap_or_else(|| "unknown".to_string()), hub_icon_url, q.id],
         );
     }
 
@@ -949,9 +1144,13 @@ fn seed_decorations(conn: &Connection) -> Result<()> {
             continue;
         }
 
+        let primary_skill_name = d.skill_points.get(0).map(|s| s.name.as_str()).unwrap_or("Unknown");
+        let (icon_file, icon_color) = decoration_skill_icon(primary_skill_name);
+        let icon_url = format!("/icons/mhfu/decorations/{}", icon_file);
+        let icon_name = primary_skill_name.to_string();
         conn.execute(
-            "INSERT OR IGNORE INTO decorations (id, game_id, name, skill_id, skill_level, skill_points, secondary_skill_id, secondary_points, slot_size, rarity, price, language)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, NULL, ?10, 'en')",
+            "INSERT OR IGNORE INTO decorations (id, game_id, name, skill_id, skill_level, skill_points, secondary_skill_id, secondary_points, slot_size, rarity, price, icon_name, icon_color, icon_url, language)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, NULL, ?10, ?11, ?12, ?13, 'en')",
             rusqlite::params![
                 d.id,
                 MH2G,
@@ -962,9 +1161,21 @@ fn seed_decorations(conn: &Connection) -> Result<()> {
                 secondary_id,
                 secondary_pts,
                 d.slot_size,
-                d.price
+                d.price,
+                icon_name,
+                icon_color,
+                icon_url
             ],
         )?;
+        // Backfill existing DBs where icon was NULL or slot-based placeholder (migrate to skill hue)
+        let _ = conn.execute(
+            "UPDATE decorations SET icon_name = ?1, icon_color = ?2, icon_url = ?3 WHERE id = ?4 AND game_id = 5 AND (icon_url IS NULL OR icon_url LIKE '%slot-%' OR icon_name LIKE 'Slot %')",
+            rusqlite::params![icon_name, icon_color, icon_url, d.id],
+        );
+        let _ = conn.execute(
+            "UPDATE decorations SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(icon_url, ?3) WHERE id = ?4 AND game_id = 5 AND (icon_url IS NULL OR icon_name IS NULL)",
+            rusqlite::params![icon_name, icon_color, icon_url, d.id],
+        );
 
         // Insert crafting materials
         for m in &d.materials {
@@ -1120,11 +1331,23 @@ fn seed_mhp3rd_monsters(conn: &Connection) -> Result<()> {
     let json_data = include_str!("../../data/mhp3rd_monsters.json");
     let monsters: Vec<MonsterJson> = serde_json::from_str(json_data)
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
-    for m in monsters {
+    for m in &monsters {
+        let slug = monster_icon_slug(&m.name);
+        let icon_url = format!("/icons/mhp3rd/monsters/{}.png", slug);
+        let icon_color = monster_icon_color(&m.species);
         conn.execute(
-            "INSERT OR IGNORE INTO monsters (id, game_id, name, species, size, description, language) VALUES (?1, ?2, ?3, ?4, ?5, NULL, 'en')",
-            rusqlite::params![m.id, MHP3RD, m.name, m.species, m.size],
+            "INSERT OR IGNORE INTO monsters (id, game_id, name, species, size, description, icon_name, icon_color, icon_url, language) VALUES (?1, ?2, ?3, ?4, ?5, NULL, ?6, ?7, ?8, 'en')",
+            rusqlite::params![m.id, MHP3RD, m.name, m.species, m.size, m.name, icon_color, icon_url],
         )?;
+    }
+    for m in &monsters {
+        let slug = monster_icon_slug(&m.name);
+        let icon_url = format!("/icons/mhp3rd/monsters/{}.png", slug);
+        let icon_color = monster_icon_color(&m.species);
+        let _ = conn.execute(
+            "UPDATE monsters SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(icon_url, ?3) WHERE id = ?4 AND game_id = 4 AND (icon_url IS NULL OR icon_name IS NULL)",
+            rusqlite::params![m.name, icon_color, icon_url, m.id],
+        );
     }
     Ok(())
 }
@@ -1253,10 +1476,22 @@ fn seed_mhp3rd_weapons(conn: &Connection) -> Result<()> {
     let json_data = include_str!("../../data/mhp3rd_weapons.json");
     let weapons: Vec<WeaponJson> = serde_json::from_str(json_data)
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
-    for w in weapons {
+    for w in &weapons {
+        let slug = weapon_icon_slug(&w.weapon_type);
+        let icon_url = format!("/icons/mhfu/weapons/{}.png", slug);
+        let icon_color = weapon_icon_color(w.rarity);
         conn.execute(
-            "INSERT OR IGNORE INTO weapons (id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value, sharpness, slots, skills, status_type, status_value, defense_bonus, crafting_cost, upgrade_path, description, sort_order, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, 'en')",
-            rusqlite::params![w.id, MHP3RD, w.name, w.weapon_type, w.rarity, w.attack, w.affinity, w.element_type, w.element_value, w.sharpness, w.slots, w.skills, w.status_type, w.status_value, w.defense_bonus, w.crafting_cost, w.upgrade_path, w.description, w.sort_order],
+            "INSERT OR IGNORE INTO weapons (id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value, sharpness, slots, skills, status_type, status_value, defense_bonus, crafting_cost, upgrade_path, description, sort_order, icon_name, icon_color, icon_url, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, 'en')",
+            rusqlite::params![w.id, MHP3RD, w.name, w.weapon_type, w.rarity, w.attack, w.affinity, w.element_type, w.element_value, w.sharpness, w.slots, w.skills, w.status_type, w.status_value, w.defense_bonus, w.crafting_cost, w.upgrade_path, w.description, w.sort_order, w.weapon_type, icon_color, icon_url],
+        )?;
+    }
+    for w in &weapons {
+        let slug = weapon_icon_slug(&w.weapon_type);
+        let icon_url = format!("/icons/mhfu/weapons/{}.png", slug);
+        let icon_color = weapon_icon_color(w.rarity);
+        conn.execute(
+            "UPDATE weapons SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(icon_url, ?3) WHERE id = ?4 AND game_id = 4 AND (icon_url IS NULL OR icon_name IS NULL)",
+            rusqlite::params![w.weapon_type, icon_color, icon_url, w.id],
         )?;
     }
     Ok(())
@@ -1382,11 +1617,21 @@ fn seed_mhp3rd_armor(conn: &Connection) -> Result<()> {
             .unwrap_or(0)
     };
     let set_id_of_armor = |armor: &ArmorJson| -> i32 { set_id_of(&derive_set_name(armor)) };
-    for a in armors {
+    for a in &armors {
         let gender = a.gender.clone().unwrap_or_else(|| "both".to_string());
+        let icon_color = armor_icon_color(&a.rank);
+        let icon_url = format!("/icons/mhfu/armor/{}.png", a.slot_type);
         conn.execute(
-            "INSERT OR IGNORE INTO armor (id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, set_id, armor_type, gender, crafting_cost, description, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, 'en')",
-            rusqlite::params![a.id, MHP3RD, a.name, a.slot_type, a.rank, a.rarity, a.defense_base, a.defense_max, a.resistance_fire, a.resistance_water, a.resistance_thunder, a.resistance_ice, a.resistance_dragon, a.slots, a.skills, set_id_of_armor(&a), a.armor_type, gender, a.crafting_cost, a.description],
+            "INSERT OR IGNORE INTO armor (id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, set_id, armor_type, gender, crafting_cost, description, icon_name, icon_color, icon_url, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, ?23, 'en')",
+            rusqlite::params![a.id, MHP3RD, a.name, a.slot_type, a.rank, a.rarity, a.defense_base, a.defense_max, a.resistance_fire, a.resistance_water, a.resistance_thunder, a.resistance_ice, a.resistance_dragon, a.slots, a.skills, set_id_of_armor(a), a.armor_type, gender, a.crafting_cost, a.description, a.slot_type, icon_color, icon_url],
+        )?;
+    }
+    for a in &armors {
+        let icon_color = armor_icon_color(&a.rank);
+        let icon_url = format!("/icons/mhfu/armor/{}.png", a.slot_type);
+        conn.execute(
+            "UPDATE armor SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(icon_url, ?3) WHERE id = ?4 AND game_id = 4 AND (icon_url IS NULL OR icon_name IS NULL)",
+            rusqlite::params![a.slot_type, icon_color, icon_url, a.id],
         )?;
     }
     Ok(())
@@ -1407,14 +1652,19 @@ fn seed_mhp3rd_quests(conn: &Connection) -> Result<()> {
     let json_data = include_str!("../../data/mhp3rd_quests.json");
     let quests: Vec<QuestJson> = serde_json::from_str(json_data)
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
-    for q in quests {
+    for q in &quests {
         let main_monsters_json = q
             .main_monsters
             .as_ref()
             .map(|v| serde_json::to_string(v).unwrap_or_else(|_| "[]".to_string()));
+        let type_slug = quest_type_slug(&q.qtype);
+        let icon_url = format!("/icons/mhfu/quests/{}.png", type_slug);
+        let icon_color = quest_type_color(&q.qtype);
+        let hub_slug = q.hub.as_deref().map(quest_hub_slug).unwrap_or_else(|| "unknown".to_string());
+        let hub_icon_url = format!("/icons/mhfu/quests/hubs/{}.png", hub_slug);
         conn.execute(
-            "INSERT OR IGNORE INTO quests (id, game_id, name, name_original, type, rank, hub, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, description, description_original, client, requirements, reward_money, contract_fee, main_monsters, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, ?23, 'en')",
-            rusqlite::params![q.id, MHP3RD, q.name, q.name_original, q.qtype, q.rank, q.hub, q.stars, q.objective, q.objective_original.as_deref().unwrap_or(&q.objective), q.location, q.location_original.as_deref().unwrap_or(&q.location), q.time_limit.unwrap_or(50), q.faints_allowed.unwrap_or(3), q.is_key_quest.unwrap_or(false), q.is_urgent.unwrap_or(false), q.description, q.description_original.as_deref().unwrap_or(q.description.as_deref().unwrap_or("")), q.client, q.requirements, q.reward_money, q.contract_fee, main_monsters_json],
+            "INSERT OR IGNORE INTO quests (id, game_id, name, name_original, type, rank, hub, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, description, description_original, client, requirements, reward_money, contract_fee, main_monsters, icon_name, icon_color, icon_url, hub_icon_name, hub_icon_color, hub_icon_url, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, ?23, ?24, ?25, ?26, ?27, ?28, ?29, 'en')",
+            rusqlite::params![q.id, MHP3RD, q.name, q.name_original, q.qtype, q.rank, q.hub, q.stars, q.objective, q.objective_original.as_deref().unwrap_or(&q.objective), q.location, q.location_original.as_deref().unwrap_or(&q.location), q.time_limit.unwrap_or(50), q.faints_allowed.unwrap_or(3), q.is_key_quest.unwrap_or(false), q.is_urgent.unwrap_or(false), q.description, q.description_original.as_deref().unwrap_or(q.description.as_deref().unwrap_or("")), q.client, q.requirements, q.reward_money, q.contract_fee, main_monsters_json, q.qtype, icon_color, icon_url, q.hub.clone().unwrap_or_else(|| "unknown".to_string()), "Gray", hub_icon_url],
         )?;
     }
     // Backfill EN for existing installs that already have JP rows (preserve original JP in *_original)
@@ -1430,6 +1680,17 @@ fn seed_mhp3rd_quests(conn: &Connection) -> Result<()> {
         let _ = conn.execute(
             "UPDATE quests SET objective = ?1, objective_original = COALESCE(objective_original, ?2), location = ?3, location_original = COALESCE(location_original, ?4), description = COALESCE(?, description), description_original = COALESCE(description_original, ?) WHERE id = ?5 AND game_id = 4 AND (objective != ?1 OR location != ?3 OR description IS NULL)",
             rusqlite::params![q.objective, q.objective_original.as_deref().unwrap_or(&q.objective), q.location, q.location_original.as_deref().unwrap_or(&q.location), q.description, q.description_original.as_deref().unwrap_or(q.description.as_deref().unwrap_or("")), q.id],
+        );
+    }
+    for q in &quests {
+        let type_slug = quest_type_slug(&q.qtype);
+        let icon_url = format!("/icons/mhfu/quests/{}.png", type_slug);
+        let icon_color = quest_type_color(&q.qtype);
+        let hub_slug = q.hub.as_deref().map(quest_hub_slug).unwrap_or_else(|| "unknown".to_string());
+        let hub_icon_url = format!("/icons/mhfu/quests/hubs/{}.png", hub_slug);
+        let _ = conn.execute(
+            "UPDATE quests SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(icon_url, ?3), hub_icon_name = COALESCE(hub_icon_name, ?4), hub_icon_color = COALESCE(hub_icon_color, 'Gray'), hub_icon_url = COALESCE(hub_icon_url, ?5) WHERE id = ?6 AND game_id = 4 AND (icon_url IS NULL OR hub_icon_url IS NULL)",
+            rusqlite::params![q.qtype, icon_color, icon_url, q.hub.clone().unwrap_or_else(|| "unknown".to_string()), hub_icon_url, q.id],
         );
     }
     Ok(())
@@ -1499,10 +1760,22 @@ fn seed_mhp3rd_decorations(conn: &Connection) -> Result<()> {
         if primary_id.is_none() {
             continue;
         }
+        let primary_skill_name = d.skill_points.get(0).map(|s| s.name.as_str()).unwrap_or("Unknown");
+        let (icon_file, icon_color) = decoration_skill_icon(primary_skill_name);
+        let icon_url = format!("/icons/mhfu/decorations/{}", icon_file);
+        let icon_name = primary_skill_name.to_string();
         conn.execute(
-            "INSERT OR IGNORE INTO decorations (id, game_id, name, skill_id, skill_level, skill_points, secondary_skill_id, secondary_points, slot_size, rarity, price, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, NULL, ?10, 'en')",
-            rusqlite::params![d.id, MHP3RD, d.name, primary_id, primary_pts, primary_pts, secondary_id, secondary_pts, d.slot_size, d.price],
+            "INSERT OR IGNORE INTO decorations (id, game_id, name, skill_id, skill_level, skill_points, secondary_skill_id, secondary_points, slot_size, rarity, price, icon_name, icon_color, icon_url, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, NULL, ?10, ?11, ?12, ?13, 'en')",
+            rusqlite::params![d.id, MHP3RD, d.name, primary_id, primary_pts, primary_pts, secondary_id, secondary_pts, d.slot_size, d.price, icon_name, icon_color, icon_url],
         )?;
+        let _ = conn.execute(
+            "UPDATE decorations SET icon_name = ?1, icon_color = ?2, icon_url = ?3 WHERE id = ?4 AND game_id = 4 AND (icon_url IS NULL OR icon_url LIKE '%slot-%' OR icon_name LIKE 'Slot %')",
+            rusqlite::params![icon_name, icon_color, icon_url, d.id],
+        );
+        let _ = conn.execute(
+            "UPDATE decorations SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(icon_url, ?3) WHERE id = ?4 AND game_id = 4 AND (icon_url IS NULL OR icon_name IS NULL)",
+            rusqlite::params![icon_name, icon_color, icon_url, d.id],
+        );
         for m in &d.materials {
             let normalized_mat = normalize_item_name_p3rd(&m.name);
             let iid: Option<i32> = conn

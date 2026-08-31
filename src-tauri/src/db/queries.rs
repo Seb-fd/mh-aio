@@ -73,6 +73,9 @@ pub struct Monster {
     pub name: String,
     pub species: Option<String>,
     pub size: Option<String>,
+    pub icon_name: Option<String>,
+    pub icon_color: Option<String>,
+    pub icon_url: Option<String>,
     pub language: String,
 }
 
@@ -88,6 +91,9 @@ pub struct MonsterDetail {
     pub drops: Vec<MonsterDrop>,
     pub armor: Vec<Armor>,
     pub weapons: Vec<Weapon>,
+    pub icon_name: Option<String>,
+    pub icon_color: Option<String>,
+    pub icon_url: Option<String>,
     pub language: String,
 }
 
@@ -139,6 +145,9 @@ pub struct Weapon {
     pub upgrade_path: Option<String>,
     pub sort_order: Option<i32>,
     pub is_forgeable: bool,
+    pub icon_name: Option<String>,
+    pub icon_color: Option<String>,
+    pub icon_url: Option<String>,
     pub language: String,
 }
 
@@ -167,6 +176,9 @@ pub struct WeaponDetail {
     pub forge_materials: Vec<MaterialRef>,
     pub upgrade_materials: Vec<MaterialRef>,
     pub is_forgeable: bool,
+    pub icon_name: Option<String>,
+    pub icon_color: Option<String>,
+    pub icon_url: Option<String>,
     pub language: String,
 }
 
@@ -197,6 +209,9 @@ pub struct Armor {
     pub armor_type: Option<String>,
     pub set_id: Option<i32>,
     pub gender: Option<String>,
+    pub icon_name: Option<String>,
+    pub icon_color: Option<String>,
+    pub icon_url: Option<String>,
     pub language: String,
 }
 
@@ -223,6 +238,9 @@ pub struct ArmorDetail {
     pub crafting_cost: Option<i32>,
     pub description: Option<String>,
     pub materials: Vec<MaterialRef>,
+    pub icon_name: Option<String>,
+    pub icon_color: Option<String>,
+    pub icon_url: Option<String>,
     pub language: String,
 }
 
@@ -251,6 +269,12 @@ pub struct Quest {
     pub main_monsters: Option<String>,
     pub description: Option<String>,
     pub description_original: Option<String>,
+    pub icon_name: Option<String>,
+    pub icon_color: Option<String>,
+    pub icon_url: Option<String>,
+    pub hub_icon_name: Option<String>,
+    pub hub_icon_color: Option<String>,
+    pub hub_icon_url: Option<String>,
     pub language: String,
 }
 
@@ -290,6 +314,12 @@ pub struct QuestDetail {
     pub contract_fee: Option<i32>,
     pub main_monsters: Option<String>,
     pub rewards: Vec<QuestReward>,
+    pub icon_name: Option<String>,
+    pub icon_color: Option<String>,
+    pub icon_url: Option<String>,
+    pub hub_icon_name: Option<String>,
+    pub hub_icon_color: Option<String>,
+    pub hub_icon_url: Option<String>,
     pub language: String,
 }
 
@@ -459,7 +489,7 @@ pub struct SkillDetail {
 
 pub fn get_monsters_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Monster>> {
     let mut stmt = conn.prepare(
-        "SELECT id, game_id, name, species, size, language FROM monsters WHERE game_id = ?1 ORDER BY id",
+        "SELECT id, game_id, name, species, size, icon_name, icon_color, icon_url, language FROM monsters WHERE game_id = ?1 ORDER BY id",
     )?;
 
     let monsters = stmt
@@ -470,7 +500,10 @@ pub fn get_monsters_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Monst
                 name: row.get(2)?,
                 species: row.get(3)?,
                 size: row.get(4)?,
-                language: row.get(5)?,
+                icon_name: row.get(5)?,
+                icon_color: row.get(6)?,
+                icon_url: row.get(7)?,
+                language: row.get(8)?,
             })
         })?
         .filter_map(|r| {
@@ -483,15 +516,15 @@ pub fn get_monsters_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Monst
 }
 
 pub fn get_monster_detail(conn: &Connection, id: i32) -> Result<Option<MonsterDetail>> {
-    let monster: Option<(i32, i32, String, Option<String>, Option<String>, Option<String>, String)> = conn
+    let monster: Option<(i32, i32, String, Option<String>, Option<String>, Option<String>, Option<String>, Option<String>, Option<String>, String)> = conn
         .query_row(
-            "SELECT id, game_id, name, species, size, description, language FROM monsters WHERE id = ?1",
+            "SELECT id, game_id, name, species, size, description, icon_name, icon_color, icon_url, language FROM monsters WHERE id = ?1",
             params![id],
-            |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?, row.get(4)?, row.get(5)?, row.get(6)?)),
+            |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?, row.get(4)?, row.get(5)?, row.get(6)?, row.get(7)?, row.get(8)?, row.get(9)?)),
         )
         .optional()?;
 
-    let Some((id, game_id, name, species, size, description, language)) = monster else {
+    let Some((id, game_id, name, species, size, description, icon_name, icon_color, icon_url, language)) = monster else {
         return Ok(None);
     };
 
@@ -511,6 +544,9 @@ pub fn get_monster_detail(conn: &Connection, id: i32) -> Result<Option<MonsterDe
         drops,
         armor,
         weapons,
+        icon_name,
+        icon_color,
+        icon_url,
         language,
     }))
 }
@@ -582,7 +618,7 @@ pub fn get_monster_dedicated_sets(
             .collect::<Vec<_>>()
             .join(",");
         if let Some(r) = rank {
-            let sql = format!("SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, armor_type, set_id, gender, language FROM armor WHERE set_id IN ({}) AND rank = ?1 ORDER BY set_id, CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END, id", set_ids_str);
+            let sql = format!("SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, armor_type, set_id, gender, icon_name, icon_color, icon_url, language FROM armor WHERE set_id IN ({}) AND rank = ?1 ORDER BY set_id, CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END, id", set_ids_str);
             let mut p_stmt = conn.prepare(&sql)?;
             for row in p_stmt.query_map(params![r], |row| {
                 Ok(Armor {
@@ -604,7 +640,10 @@ pub fn get_monster_dedicated_sets(
                     armor_type: row.get(15)?,
                     set_id: row.get(16)?,
                     gender: row.get(17)?,
-                    language: row.get(18)?,
+                    icon_name: row.get(18)?,
+                    icon_color: row.get(19)?,
+                    icon_url: row.get(20)?,
+                    language: row.get(21)?,
                 })
             })? {
                 match row {
@@ -617,7 +656,7 @@ pub fn get_monster_dedicated_sets(
                 }
             }
         } else {
-            let sql = format!("SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, armor_type, set_id, gender, language FROM armor WHERE set_id IN ({}) ORDER BY set_id, CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END, id", set_ids_str);
+            let sql = format!("SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, armor_type, set_id, gender, icon_name, icon_color, icon_url, language FROM armor WHERE set_id IN ({}) ORDER BY set_id, CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END, id", set_ids_str);
             let mut p_stmt = conn.prepare(&sql)?;
             for row in p_stmt.query_map([], |row| {
                 Ok(Armor {
@@ -639,7 +678,10 @@ pub fn get_monster_dedicated_sets(
                     armor_type: row.get(15)?,
                     set_id: row.get(16)?,
                     gender: row.get(17)?,
-                    language: row.get(18)?,
+                    icon_name: row.get(18)?,
+                    icon_color: row.get(19)?,
+                    icon_url: row.get(20)?,
+                    language: row.get(21)?,
                 })
             })? {
                 match row {
@@ -683,7 +725,7 @@ fn get_monster_related_armor(conn: &Connection, monster_id: i32) -> Result<Vec<A
     let mut stmt = conn.prepare(
         "SELECT a.id, a.game_id, a.name, a.slot_type, a.rank, a.rarity, a.defense_base, a.defense_max,
                 a.resistance_fire, a.resistance_water, a.resistance_thunder, a.resistance_ice, a.resistance_dragon,
-                a.slots, a.skills, a.armor_type, a.set_id, a.gender, a.language
+                a.slots, a.skills, a.armor_type, a.set_id, a.gender, a.icon_name, a.icon_color, a.icon_url, a.language
          FROM armor a
          JOIN monster_equipment me ON a.id = me.equipment_id
          WHERE me.monster_id = ?1 AND me.equipment_kind = 'armor'
@@ -711,7 +753,10 @@ fn get_monster_related_armor(conn: &Connection, monster_id: i32) -> Result<Vec<A
                 armor_type: row.get(15)?,
                 set_id: row.get(16)?,
                 gender: row.get(17)?,
-                language: row.get(18)?,
+                icon_name: row.get(18)?,
+                icon_color: row.get(19)?,
+                icon_url: row.get(20)?,
+                language: row.get(21)?,
             })
         })?
         .filter_map(|r| {
@@ -727,7 +772,7 @@ fn get_monster_related_weapons(conn: &Connection, monster_id: i32) -> Result<Vec
     let mut stmt = conn.prepare(
         "SELECT w.id, w.game_id, w.name, w.weapon_type, w.rarity, w.attack, w.affinity, w.element_type, w.element_value,
                 w.sharpness, w.slots, w.status_type, w.status_value, w.defense_bonus, w.crafting_cost, w.upgrade_path,
-                EXISTS(SELECT 1 FROM weapon_craft wc WHERE wc.weapon_id = w.id AND wc.craft_kind = 'forge'), w.sort_order, w.language
+                EXISTS(SELECT 1 FROM weapon_craft wc WHERE wc.weapon_id = w.id AND wc.craft_kind = 'forge'), w.sort_order, w.icon_name, w.icon_color, w.icon_url, w.language
          FROM weapons w
          JOIN monster_equipment me ON w.id = me.equipment_id
          WHERE me.monster_id = ?1 AND me.equipment_kind = 'weapon'
@@ -771,7 +816,10 @@ fn get_monster_related_weapons(conn: &Connection, monster_id: i32) -> Result<Vec
                 upgrade_path: row.get(15)?,
                 is_forgeable: row.get::<_, i64>(16)? != 0,
                 sort_order: row.get(17)?,
-                language: row.get(18)?,
+                icon_name: row.get(18)?,
+                icon_color: row.get(19)?,
+                icon_url: row.get(20)?,
+                language: row.get(21)?,
             })
         })?
         .filter_map(|r| {
@@ -852,7 +900,7 @@ pub fn get_weapons_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Weapon
     let mut stmt = conn.prepare(
         "SELECT id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value,
                 sharpness, slots, status_type, status_value, defense_bonus, crafting_cost, upgrade_path,
-                EXISTS(SELECT 1 FROM weapon_craft wc WHERE wc.weapon_id = weapons.id AND wc.craft_kind = 'forge'), sort_order, language
+                EXISTS(SELECT 1 FROM weapon_craft wc WHERE wc.weapon_id = weapons.id AND wc.craft_kind = 'forge'), sort_order, icon_name, icon_color, icon_url, language
          FROM weapons WHERE game_id = ?1 ORDER BY
             CASE weapon_type
                 WHEN 'Great Sword' THEN 0
@@ -893,7 +941,10 @@ pub fn get_weapons_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Weapon
                 upgrade_path: row.get(15)?,
                 is_forgeable: row.get::<_, i64>(16)? != 0,
                 sort_order: row.get(17)?,
-                language: row.get(18)?,
+                icon_name: row.get(18)?,
+                icon_color: row.get(19)?,
+                icon_url: row.get(20)?,
+                language: row.get(21)?,
             })
         })?
         .filter_map(|r| {
@@ -926,12 +977,15 @@ pub fn get_weapon_detail(conn: &Connection, id: i32) -> Result<Option<WeaponDeta
         Option<String>,
         Option<i32>,
         Option<String>,
+        Option<String>,
+        Option<String>,
+        Option<String>,
         String,
     )> = conn
         .query_row(
             "SELECT id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value,
                     sharpness, slots, skills, status_type, status_value, defense_bonus,
-                    crafting_cost, upgrade_path, sort_order, description, language
+                    crafting_cost, upgrade_path, sort_order, description, icon_name, icon_color, icon_url, language
              FROM weapons WHERE id = ?1",
             params![id],
             |row| {
@@ -956,6 +1010,9 @@ pub fn get_weapon_detail(conn: &Connection, id: i32) -> Result<Option<WeaponDeta
                     row.get(17)?,
                     row.get(18)?,
                     row.get(19)?,
+                    row.get(20)?,
+                    row.get(21)?,
+                    row.get(22)?,
                 ))
             },
         )
@@ -981,6 +1038,9 @@ pub fn get_weapon_detail(conn: &Connection, id: i32) -> Result<Option<WeaponDeta
         upgrade_path,
         sort_order,
         description,
+        icon_name,
+        icon_color,
+        icon_url,
         language,
     )) = row
     else {
@@ -1016,6 +1076,9 @@ pub fn get_weapon_detail(conn: &Connection, id: i32) -> Result<Option<WeaponDeta
         forge_materials,
         upgrade_materials,
         is_forgeable,
+        icon_name,
+        icon_color,
+        icon_url,
         language,
     }))
 }
@@ -1081,7 +1144,7 @@ pub fn get_armor_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Armor>> 
     let mut stmt = conn.prepare(
         "SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max,
                 resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon,
-                slots, skills, armor_type, set_id, gender, language
+                slots, skills, armor_type, set_id, gender, icon_name, icon_color, icon_url, language
          FROM armor WHERE game_id = ?1 ORDER BY
             CASE rank WHEN 'Low' THEN 0 WHEN 'High' THEN 1 WHEN 'G' THEN 2 ELSE 3 END,
             CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END,
@@ -1109,7 +1172,10 @@ pub fn get_armor_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Armor>> 
                 armor_type: row.get(15)?,
                 set_id: row.get(16)?,
                 gender: row.get(17)?,
-                language: row.get(18)?,
+                icon_name: row.get(18)?,
+                icon_color: row.get(19)?,
+                icon_url: row.get(20)?,
+                language: row.get(21)?,
             })
         })?
         .filter_map(|r| {
@@ -1187,7 +1253,7 @@ pub fn get_armor_set_detail(conn: &Connection, id: i32) -> Result<Option<ArmorSe
     let mut stmt = conn.prepare(
         "SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max,
                 resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon,
-                slots, skills, armor_type, set_id, gender, language
+                slots, skills, armor_type, set_id, gender, icon_name, icon_color, icon_url, language
          FROM armor WHERE set_id = ?1 ORDER BY
             CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END,
             id",
@@ -1213,7 +1279,10 @@ pub fn get_armor_set_detail(conn: &Connection, id: i32) -> Result<Option<ArmorSe
                 armor_type: row.get(15)?,
                 set_id: row.get(16)?,
                 gender: row.get(17)?,
-                language: row.get(18)?,
+                icon_name: row.get(18)?,
+                icon_color: row.get(19)?,
+                icon_url: row.get(20)?,
+                language: row.get(21)?,
             })
         })?
         .filter_map(|r| {
@@ -1252,12 +1321,15 @@ pub fn get_armor_detail(conn: &Connection, id: i32) -> Result<Option<ArmorDetail
         Option<i32>,
         Option<i32>,
         Option<String>,
+        Option<String>,
+        Option<String>,
+        Option<String>,
         String,
     )> = conn
         .query_row(
             "SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max,
                     resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon,
-                    slots, skills, armor_type, gender, set_id, crafting_cost, description, language
+                    slots, skills, armor_type, gender, set_id, crafting_cost, description, icon_name, icon_color, icon_url, language
              FROM armor WHERE id = ?1",
             params![id],
             |row| {
@@ -1283,6 +1355,9 @@ pub fn get_armor_detail(conn: &Connection, id: i32) -> Result<Option<ArmorDetail
                     row.get(18)?,
                     row.get(19)?,
                     row.get(20)?,
+                    row.get(21)?,
+                    row.get(22)?,
+                    row.get(23)?,
                 ))
             },
         )
@@ -1309,6 +1384,9 @@ pub fn get_armor_detail(conn: &Connection, id: i32) -> Result<Option<ArmorDetail
         set_id,
         crafting_cost,
         description,
+        icon_name,
+        icon_color,
+        icon_url,
         language,
     )) = row
     else {
@@ -1339,6 +1417,9 @@ pub fn get_armor_detail(conn: &Connection, id: i32) -> Result<Option<ArmorDetail
         crafting_cost,
         description,
         materials,
+        icon_name,
+        icon_color,
+        icon_url,
         language,
     }))
 }
@@ -1371,7 +1452,7 @@ fn get_armor_materials(conn: &Connection, armor_id: i32) -> Result<Vec<MaterialR
 
 pub fn get_quests_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Quest>> {
     let mut stmt = conn.prepare(
-        "SELECT id, game_id, name, name_original, type, rank, hub, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, client, requirements, reward_money, contract_fee, main_monsters, description, description_original, language
+        "SELECT id, game_id, name, name_original, type, rank, hub, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, client, requirements, reward_money, contract_fee, main_monsters, description, description_original, icon_name, icon_color, icon_url, hub_icon_name, hub_icon_color, hub_icon_url, language
          FROM quests WHERE game_id = ?1 ORDER BY
             CASE hub WHEN 'elder' THEN 0 WHEN 'nekoto' THEN 1 WHEN 'village' THEN 2 WHEN 'village_low' THEN 2 WHEN 'village_high' THEN 3 WHEN 'guild_low' THEN 4 WHEN 'guild_high' THEN 5 WHEN 'guild_g' THEN 6 WHEN 'event' THEN 7 WHEN 'challenge' THEN 8 WHEN 'training' THEN 9 WHEN 'treasure' THEN 10 WHEN 'hot_spring' THEN 11 WHEN 'drink' THEN 12 WHEN 'nyanta' THEN 13 ELSE 14 END,
             stars, id",
@@ -1403,7 +1484,13 @@ pub fn get_quests_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Quest>>
                 main_monsters: row.get(20)?,
                 description: row.get(21)?,
                 description_original: row.get(22)?,
-                language: row.get(23)?,
+                icon_name: row.get(23)?,
+                icon_color: row.get(24)?,
+                icon_url: row.get(25)?,
+                hub_icon_name: row.get(26)?,
+                hub_icon_color: row.get(27)?,
+                hub_icon_url: row.get(28)?,
+                language: row.get(29)?,
             })
         })?
         .filter_map(|r| {
@@ -1464,10 +1551,16 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
         Option<i32>,
         Option<i32>,
         Option<String>,
+        Option<String>,
+        Option<String>,
+        Option<String>,
+        Option<String>,
+        Option<String>,
+        Option<String>,
         String,
     )> = conn
         .query_row(
-            "SELECT id, game_id, name, name_original, type, rank, hub, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, description, description_original, client, requirements, reward_money, contract_fee, main_monsters, language
+            "SELECT id, game_id, name, name_original, type, rank, hub, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, description, description_original, client, requirements, reward_money, contract_fee, main_monsters, icon_name, icon_color, icon_url, hub_icon_name, hub_icon_color, hub_icon_url, language
              FROM quests WHERE id = ?1",
             params![id],
             |row| {
@@ -1496,6 +1589,12 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
                     row.get(21)?,
                     row.get(22)?,
                     row.get(23)?,
+                    row.get(24)?,
+                    row.get(25)?,
+                    row.get(26)?,
+                    row.get(27)?,
+                    row.get(28)?,
+                    row.get(29)?,
                 ))
             },
         )
@@ -1525,6 +1624,12 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
         reward_money,
         contract_fee,
         main_monsters,
+        icon_name,
+        icon_color,
+        icon_url,
+        hub_icon_name,
+        hub_icon_color,
+        hub_icon_url,
         language,
     )) = row
     else {
@@ -1558,6 +1663,12 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
         contract_fee,
         main_monsters,
         rewards,
+        icon_name,
+        icon_color,
+        icon_url,
+        hub_icon_name,
+        hub_icon_color,
+        hub_icon_url,
         language,
     }))
 }
@@ -2182,6 +2293,9 @@ pub struct Decoration {
     pub slot_size: Option<i32>,
     pub rarity: Option<i32>,
     pub price: Option<i32>,
+    pub icon_name: Option<String>,
+    pub icon_color: Option<String>,
+    pub icon_url: Option<String>,
     pub language: String,
 }
 
@@ -2199,6 +2313,9 @@ pub struct DecorationDetail {
     pub slot_size: Option<i32>,
     pub rarity: Option<i32>,
     pub price: Option<i32>,
+    pub icon_name: Option<String>,
+    pub icon_color: Option<String>,
+    pub icon_url: Option<String>,
     pub language: String,
     pub materials: Vec<DecoMaterial>,
     pub unlock: String,
@@ -2207,7 +2324,7 @@ pub struct DecorationDetail {
 
 pub fn get_decorations_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Decoration>> {
     let mut stmt = conn.prepare(
-        "SELECT d.id, d.game_id, d.name, d.skill_id, s1.name, d.skill_points, d.secondary_skill_id, s2.name, d.secondary_points, d.slot_size, d.rarity, d.price, d.language
+        "SELECT d.id, d.game_id, d.name, d.skill_id, s1.name, d.skill_points, d.secondary_skill_id, s2.name, d.secondary_points, d.slot_size, d.rarity, d.price, d.icon_name, d.icon_color, d.icon_url, d.language
          FROM decorations d
          LEFT JOIN skills s1 ON s1.id = d.skill_id
          LEFT JOIN skills s2 ON s2.id = d.secondary_skill_id
@@ -2229,7 +2346,10 @@ pub fn get_decorations_by_game(conn: &Connection, game_id: i32) -> Result<Vec<De
                 slot_size: row.get(9)?,
                 rarity: row.get(10)?,
                 price: row.get(11)?,
-                language: row.get(12)?,
+                icon_name: row.get(12)?,
+                icon_color: row.get(13)?,
+                icon_url: row.get(14)?,
+                language: row.get(15)?,
             })
         })?
         .filter_map(|r| {
@@ -2241,9 +2361,9 @@ pub fn get_decorations_by_game(conn: &Connection, game_id: i32) -> Result<Vec<De
 }
 
 pub fn get_decoration_detail(conn: &Connection, id: i32) -> Result<Option<DecorationDetail>> {
-    let row: Option<(i32, i32, String, Option<i32>, Option<String>, Option<i32>, Option<i32>, Option<String>, Option<i32>, Option<i32>, Option<i32>, Option<i32>, String)> = conn
+    let row: Option<(i32, i32, String, Option<i32>, Option<String>, Option<i32>, Option<i32>, Option<String>, Option<i32>, Option<i32>, Option<i32>, Option<i32>, Option<String>, Option<String>, Option<String>, String)> = conn
         .query_row(
-            "SELECT d.id, d.game_id, d.name, d.skill_id, s1.name, d.skill_points, d.secondary_skill_id, s2.name, d.secondary_points, d.slot_size, d.rarity, d.price, d.language
+            "SELECT d.id, d.game_id, d.name, d.skill_id, s1.name, d.skill_points, d.secondary_skill_id, s2.name, d.secondary_points, d.slot_size, d.rarity, d.price, d.icon_name, d.icon_color, d.icon_url, d.language
              FROM decorations d
              LEFT JOIN skills s1 ON s1.id = d.skill_id
              LEFT JOIN skills s2 ON s2.id = d.secondary_skill_id
@@ -2264,6 +2384,9 @@ pub fn get_decoration_detail(conn: &Connection, id: i32) -> Result<Option<Decora
                     row.get(10)?,
                     row.get(11)?,
                     row.get(12)?,
+                    row.get(13)?,
+                    row.get(14)?,
+                    row.get(15)?,
                 ))
             },
         )
@@ -2282,6 +2405,9 @@ pub fn get_decoration_detail(conn: &Connection, id: i32) -> Result<Option<Decora
         slot_size,
         rarity,
         price,
+        icon_name,
+        icon_color,
+        icon_url,
         language,
     )) = row
     else {
@@ -2304,6 +2430,9 @@ pub fn get_decoration_detail(conn: &Connection, id: i32) -> Result<Option<Decora
         slot_size,
         rarity,
         price,
+        icon_name,
+        icon_color,
+        icon_url,
         language,
         materials,
         unlock,

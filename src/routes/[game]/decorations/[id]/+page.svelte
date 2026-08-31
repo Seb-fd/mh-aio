@@ -3,6 +3,7 @@
   import { goto } from '$app/navigation'
   import { api, type DecorationDetail } from '$lib/api'
   import DetailHeader from '$lib/components/detail-header.svelte'
+  import ItemIcon from '$lib/components/item-icon.svelte'
 
   const id = $derived(Number(page.params.id))
   const game = $derived(page.params.game)
@@ -56,6 +57,7 @@
       title={deco.name}
       subtitle="Jewel · Decoration"
       icon="💎"
+      iconUrl={deco.icon_url}
       tags={[
         {
           label: `Slot ${deco.slot_size ?? '-'}`,
@@ -83,8 +85,17 @@
     />
 
     <div class="grid grid-cols-2 gap-3 mb-8">
-      <div class="rounded-lg border themed-card p-3 text-center">
+      <div class="rounded-lg border themed-card p-3 text-center flex flex-col items-center">
         <p class="text-[10px] uppercase tracking-wide text-gray-500">Slot Size</p>
+        <div class="mt-1">
+          <ItemIcon
+            iconUrl={deco.icon_url}
+            iconName={deco.icon_name}
+            iconColor={deco.icon_color}
+            size={28}
+            alt={deco.name}
+          />
+        </div>
         <p class="text-xl font-bold text-gray-100 mt-1">{deco.slot_size ?? '-'}</p>
         <p class="text-[11px] text-gray-500 mt-1">Requires armor/weapon slot of >= size</p>
       </div>

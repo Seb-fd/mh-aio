@@ -25,12 +25,23 @@
           <div class="flex flex-col h-full">
             <div class="flex items-center gap-3 mb-3">
               <div
-                class="w-10 h-10 rounded-lg flex items-center justify-center"
+                class="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden"
                 style="background-color: var(--theme-bg-elevated, rgb(31 41 55)); border: 1px solid var(--theme-border-strong, rgb(55 65 81));"
               >
-                <span class="text-lg {game.color} font-bold">
-                  {game.shortName.charAt(0)}
-                </span>
+                {#if game.iconUrl}
+                  <img
+                    src={game.iconUrl}
+                    alt={game.name}
+                    width="40"
+                    height="40"
+                    class="w-10 h-10 object-contain"
+                    loading="lazy"
+                  />
+                {:else}
+                  <span class="text-lg {game.color} font-bold">
+                    {game.shortName.charAt(0)}
+                  </span>
+                {/if}
               </div>
               <div>
                 <h2 class="text-lg font-semibold {game.color}">{game.shortName}</h2>

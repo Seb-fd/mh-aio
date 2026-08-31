@@ -27,6 +27,7 @@ export interface Game {
   borderColor: string
   bgHover: string
   theme: GameTheme
+  iconUrl?: string | null
 }
 
 export const GAMES: Game[] = [
@@ -152,6 +153,7 @@ export const GAMES: Game[] = [
     color: 'text-red-400',
     borderColor: 'border-red-500/50 hover:border-red-400',
     bgHover: 'hover:bg-red-500/10',
+    iconUrl: '/icons/games/mhp2ndg.png',
     theme: {
       primary: '#b91c1c',
       primaryDark: '#7f1d1d',

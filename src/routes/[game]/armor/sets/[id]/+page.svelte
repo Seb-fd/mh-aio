@@ -4,6 +4,7 @@
   import DetailHeader from '$lib/components/detail-header.svelte'
   import { goto } from '$app/navigation'
   import { selectedGame } from '$lib/stores/game'
+  import ItemIcon from '$lib/components/item-icon.svelte'
 
   const setId = $derived(Number(page.params.id))
   let set = $state<ArmorSetDetail | null>(null)
@@ -84,8 +85,15 @@
           <div
             class="rounded-lg border themed-card p-4 hover:border-[var(--theme-border-strong)] transition-colors"
           >
-            <div class="flex items-start justify-between gap-2 mb-2">
-              <h3 class="font-semibold text-gray-100 truncate">{piece.name}</h3>
+            <div class="flex items-center gap-2 mb-2">
+              <ItemIcon
+                iconUrl={piece.icon_url}
+                iconName={piece.icon_name}
+                iconColor={piece.icon_color}
+                size={28}
+                alt={piece.slot_type}
+              />
+              <h3 class="font-semibold text-gray-100 truncate flex-1">{piece.name}</h3>
               <span
                 class="text-[10px] uppercase tracking-wide px-2 py-0.5 rounded shrink-0 {rankColor[
                   piece.rank

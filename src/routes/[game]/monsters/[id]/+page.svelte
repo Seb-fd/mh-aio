@@ -138,6 +138,7 @@
       title={monster.name}
       subtitle={monster.species ?? ''}
       icon="🐉"
+      iconUrl={monster.icon_url}
       tags={[
         {
           label: monster.size ?? 'Unknown',

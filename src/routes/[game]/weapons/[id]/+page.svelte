@@ -4,6 +4,7 @@
   import { selectedGame } from '$lib/stores/game'
   import { api, type WeaponDetail, type Weapon } from '$lib/api'
   import DetailHeader from '$lib/components/detail-header.svelte'
+  import ItemIcon from '$lib/components/item-icon.svelte'
   import MaterialList from '$lib/components/material-list.svelte'
   import {
     elementColor,
@@ -120,6 +121,7 @@
       title={weapon.name}
       subtitle={weapon.weapon_type}
       icon="⚔️"
+      iconUrl={weapon.icon_url}
       tags={[
         {
           label: `Rarity ${weapon.rarity ?? 1}`,
@@ -320,6 +322,13 @@
         : 'border-color: var(--theme-border); background-color: var(--theme-bg-surface); color: rgb(209 213 219);'}
     >
       <div class="flex items-center gap-2 min-w-0">
+        <ItemIcon
+          iconUrl={node.weapon.icon_url}
+          iconName={node.weapon.icon_name}
+          iconColor={node.weapon.icon_color}
+          size={20}
+          alt={node.weapon.weapon_type}
+        />
         <span
           class="text-[10px] shrink-0 w-9 text-center rounded py-0.5 border border-[var(--theme-border)]"
           style="color: rgb(156 163 175);">{node.weapon.rarity ?? 1}</span

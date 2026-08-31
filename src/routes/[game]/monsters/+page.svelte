@@ -3,6 +3,7 @@
   import { selectedGame } from '$lib/stores/game'
   import { api, type Monster } from '$lib/api'
   import Card from '$lib/components/ui/card.svelte'
+  import ItemIcon from '$lib/components/item-icon.svelte'
 
   const game = $derived($selectedGame)
   const dbId = $derived(game?.dbId)
@@ -137,8 +138,15 @@
       {#each filteredMonsters as monster}
         <button onclick={() => open(monster.id)} class="text-left">
           <Card class="p-4 border transition-all cursor-pointer hover:scale-[1.02] themed-card">
-            <div class="flex items-start justify-between gap-2">
-              <div class="min-w-0">
+            <div class="flex items-center gap-3">
+              <ItemIcon
+                iconUrl={monster.icon_url}
+                iconName={monster.icon_name}
+                iconColor={monster.icon_color}
+                size={40}
+                alt={monster.name}
+              />
+              <div class="min-w-0 flex-1">
                 <h3
                   class="font-semibold text-gray-100 truncate group-hover:text-[var(--theme-text-accent)]"
                 >

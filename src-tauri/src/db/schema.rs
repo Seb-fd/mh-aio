@@ -32,6 +32,9 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             crafting_cost INTEGER,
             upgrade_path TEXT,
             description TEXT,
+            icon_name TEXT,
+            icon_color TEXT,
+            icon_url TEXT,
             language TEXT DEFAULT 'en'
         );
 
@@ -58,6 +61,9 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             crafting_cost INTEGER,
             materials TEXT,
             description TEXT,
+            icon_name TEXT,
+            icon_color TEXT,
+            icon_url TEXT,
             language TEXT DEFAULT 'en'
         );
 
@@ -81,6 +87,9 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             breakable_parts TEXT,
             ailments TEXT,
             description TEXT,
+            icon_name TEXT,
+            icon_color TEXT,
+            icon_url TEXT,
             language TEXT DEFAULT 'en'
         );
 
@@ -146,6 +155,12 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             reward_money INTEGER,
             contract_fee INTEGER,
             main_monsters TEXT,
+            icon_name TEXT,
+            icon_color TEXT,
+            icon_url TEXT,
+            hub_icon_name TEXT,
+            hub_icon_color TEXT,
+            hub_icon_url TEXT,
             language TEXT DEFAULT 'en'
         );
 
@@ -225,6 +240,9 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             slot_size INTEGER,
             rarity INTEGER,
             price INTEGER,
+            icon_name TEXT,
+            icon_color TEXT,
+            icon_url TEXT,
             language TEXT DEFAULT 'en'
         );
 
@@ -470,6 +488,28 @@ fn apply_migrations(conn: &Connection) -> Result<()> {
     add_column_if_missing(conn, "quests", "location_original", "TEXT")?;
     add_column_if_missing(conn, "quests", "objective_original", "TEXT")?;
     add_column_if_missing(conn, "quests", "description_original", "TEXT")?;
+    // MHP2G offline weapon/armor icons (per-type/slot) — bundle 100% offline
+    add_column_if_missing(conn, "weapons", "icon_name", "TEXT")?;
+    add_column_if_missing(conn, "weapons", "icon_color", "TEXT")?;
+    add_column_if_missing(conn, "weapons", "icon_url", "TEXT")?;
+    add_column_if_missing(conn, "armor", "icon_name", "TEXT")?;
+    add_column_if_missing(conn, "armor", "icon_color", "TEXT")?;
+    add_column_if_missing(conn, "armor", "icon_url", "TEXT")?;
+    // Quest offline icons per type + hub (MHWiki) — bundle 100% offline
+    add_column_if_missing(conn, "quests", "icon_name", "TEXT")?;
+    add_column_if_missing(conn, "quests", "icon_color", "TEXT")?;
+    add_column_if_missing(conn, "quests", "icon_url", "TEXT")?;
+    add_column_if_missing(conn, "quests", "hub_icon_name", "TEXT")?;
+    add_column_if_missing(conn, "quests", "hub_icon_color", "TEXT")?;
+    add_column_if_missing(conn, "quests", "hub_icon_url", "TEXT")?;
+    // Decoration offline icons per slot_size — bundle 100% offline
+    add_column_if_missing(conn, "decorations", "icon_name", "TEXT")?;
+    add_column_if_missing(conn, "decorations", "icon_color", "TEXT")?;
+    add_column_if_missing(conn, "decorations", "icon_url", "TEXT")?;
+    // Monster offline icons per-monster (MHFU/MHP3) — bundle 100% offline
+    add_column_if_missing(conn, "monsters", "icon_name", "TEXT")?;
+    add_column_if_missing(conn, "monsters", "icon_color", "TEXT")?;
+    add_column_if_missing(conn, "monsters", "icon_url", "TEXT")?;
     Ok(())
 }
 

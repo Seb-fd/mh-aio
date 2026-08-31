@@ -2,6 +2,7 @@
   import { goto } from '$app/navigation'
   import { selectedGame } from '$lib/stores/game'
   import { api, type Weapon } from '$lib/api'
+  import ItemIcon from '$lib/components/item-icon.svelte'
   import { elementColor, sharpnessValues, SHARP_COLORS_ARR as SHARP_COLORS } from '$lib/utils/mh'
 
   const game = $derived($selectedGame)
@@ -183,8 +184,18 @@
 
     <div class="overflow-x-auto -mx-2 px-2">
       {#each tree as group}
+        {@const groupIcon = group.forests[0]?.weapon}
         <section class="mb-10 min-w-[320px]">
-          <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">
+          <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4 flex items-center gap-2">
+            {#if groupIcon}
+              <ItemIcon
+                iconUrl={groupIcon.icon_url}
+                iconName={groupIcon.icon_name}
+                iconColor={groupIcon.icon_color}
+                size={20}
+                alt={group.type}
+              />
+            {/if}
             {group.type}
           </h2>
           {#each group.forests as node}
@@ -204,6 +215,13 @@
         class="flex-1 text-left px-3 py-2 rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-elevated)] transition-all"
       >
         <div class="flex items-center gap-2 min-w-0">
+          <ItemIcon
+            iconUrl={node.weapon.icon_url}
+            iconName={node.weapon.icon_name}
+            iconColor={node.weapon.icon_color}
+            size={22}
+            alt={node.weapon.weapon_type}
+          />
           {#if node.weapon.is_forgeable}
             <span class="text-[12px] shrink-0" title="Crafted directly from materials">🛠️</span>
           {/if}

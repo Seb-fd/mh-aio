@@ -60,6 +60,7 @@
       title={armor.name}
       subtitle={slotLabel[armor.slot_type] ?? armor.slot_type}
       icon="🛡️"
+      iconUrl={armor.icon_url}
       tags={[
         { label: armor.rank, color: rankColor[armor.rank] ?? 'bg-gray-800 text-gray-300' },
         {

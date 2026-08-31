@@ -3,6 +3,7 @@
   import { selectedGame } from '$lib/stores/game'
   import { api, type Quest } from '$lib/api'
   import Card from '$lib/components/ui/card.svelte'
+  import ItemIcon from '$lib/components/item-icon.svelte'
 
   const game = $derived($selectedGame)
   const dbId = $derived(game?.dbId)
@@ -202,6 +203,7 @@
     <div class="flex flex-wrap gap-2 mb-6">
       {#each hubs as hub}
         {@const meta = hubMeta[hub] ?? { label: hub, sub: '', icon: '📜' }}
+        {@const hubSlug = hub.replace('_', '-')}
         <button
           onclick={() => (hubFilter = hub)}
           class="px-3 py-1.5 text-xs rounded-full border transition-colors flex items-center gap-1.5"
@@ -209,7 +211,13 @@
             ? `background-color: color-mix(in oklab, var(--theme-accent) 12%, transparent); border-color: color-mix(in oklab, var(--theme-accent) 50%, transparent); color: var(--theme-accent);`
             : `background-color: var(--theme-bg-surface); border-color: var(--theme-border); color: rgb(156 163 175);`}
         >
-          <span>{meta.icon}</span>
+          <ItemIcon
+            iconUrl={`/icons/mhfu/quests/hubs/${hubSlug}.png`}
+            iconName={hub}
+            iconColor="Gray"
+            size={16}
+            alt={meta.label}
+          />
           <span>{meta.label}</span>
           <span class="text-[10px] opacity-60">({hubCounts[hub] ?? 0})</span>
         </button>
@@ -217,9 +225,16 @@
     </div>
 
     {@const meta = hubMeta[hubFilter] ?? { label: hubFilter ?? 'Unknown', sub: '', icon: '📜' }}
+    {@const filterHubSlug = hubFilter.replace('_', '-')}
     <div class="mb-6">
       <div class="flex items-center gap-2 mb-3">
-        <span class="text-sm">{meta.icon}</span>
+        <ItemIcon
+          iconUrl={`/icons/mhfu/quests/hubs/${filterHubSlug}.png`}
+          iconName={hubFilter}
+          iconColor="Gray"
+          size={18}
+          alt={meta.label}
+        />
         <h2 class="text-sm font-semibold text-gray-200">{meta.label}</h2>
         <span class="text-[11px] text-gray-500">{meta.sub} · {filtered.length}</span>
         <div class="flex-1 h-px bg-[var(--theme-border)] ml-2"></div>
@@ -257,7 +272,20 @@
                         <div class="flex items-start justify-between gap-3">
                           <div class="min-w-0 flex-1">
                             <div class="flex items-center gap-2 mb-1 flex-wrap">
-                              <span class="text-base">{typeIcon[quest.type ?? ''] ?? '📜'}</span>
+                              <ItemIcon
+                                iconUrl={quest.icon_url}
+                                iconName={quest.icon_name}
+                                iconColor={quest.icon_color}
+                                size={20}
+                                alt={quest.type ?? 'quest'}
+                              />
+                              <ItemIcon
+                                iconUrl={quest.hub_icon_url}
+                                iconName={quest.hub_icon_name}
+                                iconColor={quest.hub_icon_color}
+                                size={16}
+                                alt={quest.hub ?? 'hub'}
+                              />
                               <h3 class="font-semibold text-gray-100">{quest.name}</h3>
                               {#if quest.stars}
                                 <span

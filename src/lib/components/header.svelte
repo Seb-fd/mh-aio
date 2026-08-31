@@ -44,7 +44,11 @@
       class="hidden sm:flex items-center gap-2 ml-4 px-3 py-1 rounded-full border"
       style="background-color: var(--theme-bg-elevated); border-color: var(--theme-border-strong);"
     >
-      <span class="w-2 h-2 rounded-full" style="background-color: var(--theme-accent);"></span>
+      {#if game.iconUrl}
+        <img src={game.iconUrl} alt={game.name} width="16" height="16" class="w-4 h-4 object-contain rounded-sm shrink-0" loading="lazy" />
+      {:else}
+        <span class="w-2 h-2 rounded-full" style="background-color: var(--theme-accent);"></span>
+      {/if}
       <span class="text-sm {game.color} font-medium">{game.shortName}</span>
       <span class="text-xs text-gray-500">·</span>
       <span class="text-xs text-gray-500">{game.year}</span>

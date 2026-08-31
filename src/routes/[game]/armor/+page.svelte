@@ -3,6 +3,7 @@
   import { selectedGame } from '$lib/stores/game'
   import { api, type Armor, type ArmorSet } from '$lib/api'
   import Card from '$lib/components/ui/card.svelte'
+  import ItemIcon from '$lib/components/item-icon.svelte'
 
   const game = $derived($selectedGame)
   const dbId = $derived(game?.dbId)
@@ -289,8 +290,14 @@
                 <div class="flex flex-wrap gap-1">
                   {#each pieces as p}
                     <span
-                      class="text-[10px] px-2 py-1 rounded bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] text-gray-300"
-                      >{p.name}
+                      class="text-[10px] px-2 py-1 rounded bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] text-gray-300 inline-flex items-center gap-1"
+                      ><ItemIcon
+                        iconUrl={p.icon_url}
+                        iconName={p.icon_name}
+                        iconColor={p.icon_color}
+                        size={14}
+                        alt={p.slot_type}
+                      />{p.name}
                       <span class="text-gray-500">[{slotLabel[p.slot_type] ?? p.slot_type}]</span
                       ></span
                     >
@@ -316,8 +323,15 @@
           {#each filtered as piece}
             <button onclick={() => open(piece.id)} class="text-left">
               <Card class="p-4 border transition-all cursor-pointer hover:scale-[1.02] themed-card">
-                <div class="flex items-start justify-between gap-2 mb-2">
-                  <h3 class="font-semibold text-gray-100 truncate">{piece.name}</h3>
+                <div class="flex items-center gap-2 mb-2">
+                  <ItemIcon
+                    iconUrl={piece.icon_url}
+                    iconName={piece.icon_name}
+                    iconColor={piece.icon_color}
+                    size={28}
+                    alt={piece.slot_type}
+                  />
+                  <h3 class="font-semibold text-gray-100 truncate flex-1">{piece.name}</h3>
                   <span
                     class="text-[10px] uppercase tracking-wide px-2 py-0.5 rounded shrink-0 {rankColor[
                       piece.rank

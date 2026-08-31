@@ -2,6 +2,7 @@
   import { page } from '$app/state'
   import { goto } from '$app/navigation'
   import { selectedGame } from '$lib/stores/game'
+  import ItemIcon from '$lib/components/item-icon.svelte'
 
   let { onclose }: { onclose?: () => void } = $props()
 
@@ -9,15 +10,78 @@
   const currentPath = $derived(page.url.pathname)
 
   const navItems = [
-    { href: '', label: 'Home', icon: '🏠' },
-    { href: '/monsters', label: 'Monsters', icon: '🐉' },
-    { href: '/weapons', label: 'Weapons', icon: '⚔️' },
-    { href: '/armor', label: 'Armor', icon: '🛡️' },
-    { href: '/quests', label: 'Quests', icon: '📜' },
-    { href: '/items', label: 'Items', icon: '🎒' },
-    { href: '/skills', label: 'Skills', icon: '✨' },
-    { href: '/decorations', label: 'Decorations', icon: '💎' },
-    { href: '/builds', label: 'Builds', icon: '🔧' },
+    {
+      href: '',
+      label: 'Home',
+      icon: '🏠',
+      iconUrl: '/icons/mhfu/home.png',
+      iconName: 'Home',
+      iconColor: 'Red',
+    },
+    {
+      href: '/monsters',
+      label: 'Monsters',
+      icon: '🐉',
+      iconUrl: '/icons/mhfu/quests/hunt.png',
+      iconName: 'Hunting',
+      iconColor: 'Red',
+    },
+    {
+      href: '/weapons',
+      label: 'Weapons',
+      icon: '⚔️',
+      iconUrl: '/icons/mhfu/quests/slay.png',
+      iconName: 'Slaying',
+      iconColor: 'Orange',
+    },
+    {
+      href: '/armor',
+      label: 'Armor',
+      icon: '🛡️',
+      iconUrl: '/icons/mhfu/armor/head.png',
+      iconName: 'Head',
+      iconColor: 'Gray',
+    },
+    {
+      href: '/quests',
+      label: 'Quests',
+      icon: '📜',
+      iconUrl: '/icons/mhfu/quests/event.png',
+      iconName: 'Event',
+      iconColor: 'Gray',
+    },
+    {
+      href: '/items',
+      label: 'Items',
+      icon: '🎒',
+      iconUrl: '/icons/mhfu/MH4G-Medicine_Icon_Green.png',
+      iconName: 'Medicine',
+      iconColor: 'Green',
+    },
+    {
+      href: '/skills',
+      label: 'Skills',
+      icon: '✨',
+      iconUrl: '/icons/mhfu/skills/skills.png',
+      iconName: 'Skills',
+      iconColor: 'Violet',
+    },
+    {
+      href: '/decorations',
+      label: 'Decorations',
+      icon: '💎',
+      iconUrl: '/icons/mhfu/decorations/ItemIcon017i.png',
+      iconName: 'Attack',
+      iconColor: 'Red',
+    },
+    {
+      href: '/builds',
+      label: 'Builds',
+      icon: '🔧',
+      iconUrl: '/icons/mhfu/builds/forging.png',
+      iconName: 'Forging',
+      iconColor: 'Gray',
+    },
   ]
 
   function navigate(href: string) {
@@ -52,8 +116,22 @@
       >
         ← Change Game
       </button>
-      <h2 class="text-lg font-bold {game.color}">{game.shortName}</h2>
-      <p class="text-xs text-gray-500">{game.name}</p>
+      <div class="flex items-center gap-3">
+        {#if game.iconUrl}
+          <img
+            src={game.iconUrl}
+            alt={game.name}
+            width="36"
+            height="36"
+            class="w-9 h-9 object-contain rounded-md shrink-0"
+            loading="lazy"
+          />
+        {/if}
+        <div class="min-w-0">
+          <h2 class="text-lg font-bold {game.color} leading-none">{game.shortName}</h2>
+          <p class="text-xs text-gray-500 truncate">{game.name}</p>
+        </div>
+      </div>
     </div>
   {/if}
 
@@ -66,7 +144,17 @@
         class="sidebar-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors text-left"
         class:active
       >
-        <span class="text-base">{item.icon}</span>
+        {#if item.iconUrl}
+          <ItemIcon
+            iconUrl={item.iconUrl}
+            iconName={item.iconName}
+            iconColor={item.iconColor}
+            size={20}
+            alt={item.label}
+          />
+        {:else}
+          <span class="text-base">{item.icon}</span>
+        {/if}
         <span>{item.label}</span>
       </button>
     {/each}

@@ -4,6 +4,7 @@
   import { api, type Decoration } from '$lib/api'
   import { normKey } from '$lib/utils/norm'
   import Card from '$lib/components/ui/card.svelte'
+  import ItemIcon from '$lib/components/item-icon.svelte'
 
   const game = $derived($selectedGame)
   const dbId = $derived(game?.dbId)
@@ -127,8 +128,15 @@
       {#each filtered as deco}
         <button onclick={() => open(deco.id)} class="text-left">
           <Card class="p-3 border transition-all cursor-pointer themed-card h-full">
-            <div class="flex items-start justify-between gap-2">
-              <div class="min-w-0">
+            <div class="flex items-start gap-2">
+              <ItemIcon
+                iconUrl={deco.icon_url}
+                iconName={deco.icon_name}
+                iconColor={deco.icon_color}
+                size={32}
+                alt={deco.name}
+              />
+              <div class="min-w-0 flex-1">
                 <p class="font-medium text-sm text-gray-100 truncate">{deco.name}</p>
                 <p class="text-[11px] text-gray-500 mt-0.5">
                   {#if deco.skill_name}
@@ -150,16 +158,6 @@
                   {/if}
                 </p>
               </div>
-              <span
-                class="inline-flex items-center justify-center w-6 h-6 rounded text-xs font-bold border shrink-0
-                {deco.slot_size === 1
-                  ? 'bg-gray-800 text-gray-300 border-gray-700'
-                  : deco.slot_size === 2
-                    ? 'bg-blue-900/30 text-blue-300 border-blue-800'
-                    : 'bg-yellow-900/30 text-yellow-300 border-yellow-800'}"
-              >
-                {deco.slot_size ?? '-'}
-              </span>
             </div>
             <div class="flex items-center justify-between mt-2">
               <span

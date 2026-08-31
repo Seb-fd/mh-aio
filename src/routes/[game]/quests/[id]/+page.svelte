@@ -4,6 +4,7 @@
   import { selectedGame } from '$lib/stores/game'
   import { api, type QuestDetail } from '$lib/api'
   import DetailHeader from '$lib/components/detail-header.svelte'
+  import ItemIcon from '$lib/components/item-icon.svelte'
 
   const id = $derived(Number(page.params.id))
   let quest = $state<QuestDetail | null>(null)
@@ -107,6 +108,7 @@
         ? `${quest.name_original} · ${quest.client ?? quest.type ?? ''}`
         : (quest.client ?? quest.type ?? '')}
       icon={typeIcon[quest.type ?? ''] ?? '📜'}
+      iconUrl={quest.icon_url}
       tags={[
         {
           label: quest.rank ?? 'Unknown',
@@ -147,6 +149,29 @@
           : []),
       ]}
     />
+
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] text-xs text-gray-300">
+        <ItemIcon
+          iconUrl={quest.icon_url}
+          iconName={quest.icon_name}
+          iconColor={quest.icon_color}
+          size={18}
+          alt={quest.type ?? 'type'}
+        />
+        {quest.type ?? '—'}
+      </span>
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] text-xs text-gray-300">
+        <ItemIcon
+          iconUrl={quest.hub_icon_url}
+          iconName={quest.hub_icon_name}
+          iconColor={quest.hub_icon_color}
+          size={18}
+          alt={quest.hub ?? 'hub'}
+        />
+        {hubLabel(quest.hub, quest.stars)}
+      </span>
+    </div>
 
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
       <div class="rounded-lg border themed-card p-3 text-center">

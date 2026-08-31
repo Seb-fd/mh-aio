@@ -6,6 +6,9 @@ export interface Monster {
   name: string
   species: string | null
   size: string | null
+  icon_name: string | null
+  icon_color: string | null
+  icon_url: string | null
   language: string
 }
 
@@ -46,6 +49,9 @@ export interface MonsterDetail {
   drops: MonsterDrop[]
   armor: Armor[]
   weapons: Weapon[]
+  icon_name: string | null
+  icon_color: string | null
+  icon_url: string | null
   language: string
 }
 
@@ -68,6 +74,9 @@ export interface Weapon {
   upgrade_path: string | null
   sort_order: number | null
   is_forgeable: boolean
+  icon_name: string | null
+  icon_color: string | null
+  icon_url: string | null
   language: string
 }
 
@@ -101,6 +110,9 @@ export interface WeaponDetail {
   forge_materials: MaterialRef[]
   upgrade_materials: MaterialRef[]
   is_forgeable: boolean
+  icon_name: string | null
+  icon_color: string | null
+  icon_url: string | null
   language: string
 }
 
@@ -139,6 +151,9 @@ export interface Armor {
   armor_type: string | null
   set_id: number | null
   gender: string | null
+  icon_name: string | null
+  icon_color: string | null
+  icon_url: string | null
   language: string
 }
 
@@ -164,6 +179,9 @@ export interface ArmorDetail {
   crafting_cost: number | null
   description: string | null
   materials: MaterialRef[]
+  icon_name: string | null
+  icon_color: string | null
+  icon_url: string | null
   language: string
 }
 
@@ -191,6 +209,12 @@ export interface Quest {
   main_monsters: string | null
   description: string | null
   description_original: string | null
+  icon_name: string | null
+  icon_color: string | null
+  icon_url: string | null
+  hub_icon_name: string | null
+  hub_icon_color: string | null
+  hub_icon_url: string | null
   language: string
 }
 
@@ -228,6 +252,12 @@ export interface QuestDetail {
   contract_fee: number | null
   main_monsters: string | null
   rewards: QuestReward[]
+  icon_name: string | null
+  icon_color: string | null
+  icon_url: string | null
+  hub_icon_name: string | null
+  hub_icon_color: string | null
+  hub_icon_url: string | null
   language: string
 }
 
@@ -360,6 +390,9 @@ export interface Decoration {
   slot_size: number | null
   rarity: number | null
   price: number | null
+  icon_name: string | null
+  icon_color: string | null
+  icon_url: string | null
   language: string
 }
 
@@ -376,6 +409,9 @@ export interface DecorationDetail {
   slot_size: number | null
   rarity: number | null
   price: number | null
+  icon_name: string | null
+  icon_color: string | null
+  icon_url: string | null
   language: string
   materials: DecoMaterial[]
   unlock: string
