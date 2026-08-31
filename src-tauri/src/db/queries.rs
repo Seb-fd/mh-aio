@@ -1693,15 +1693,25 @@ fn get_melder_recipe(conn: &Connection, item_id: i32) -> Result<Option<MelderRec
             |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?, r.get(3)?, r.get(4)?, r.get(5)?, r.get(6)?)),
         )
         .optional()?;
-    Ok(row.map(|(id, result_item_id, result_name, research_cost, melding_cost, unlock_condition, melder_type)| MelderRecipe {
-        id,
-        result_item_id,
-        result_name,
-        research_cost,
-        melding_cost,
-        unlock_condition,
-        melder_type,
-    }))
+    Ok(row.map(
+        |(
+            id,
+            result_item_id,
+            result_name,
+            research_cost,
+            melding_cost,
+            unlock_condition,
+            melder_type,
+        )| MelderRecipe {
+            id,
+            result_item_id,
+            result_name,
+            research_cost,
+            melding_cost,
+            unlock_condition,
+            melder_type,
+        },
+    ))
 }
 
 pub fn get_melder_recipes_by_game(conn: &Connection, game_id: i32) -> Result<Vec<MelderRecipe>> {
