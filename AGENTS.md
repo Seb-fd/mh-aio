@@ -33,7 +33,9 @@ SQLite via `rusqlite` with bundled feature. Schema defined in `src-tauri/src/db/
 
 **Idempotency**: The seed is strictly idempotent **without** the old destructive `clear_game`. `add_idempotency_constraints()` in `schema.rs` first **dedupes** pre-existing dirty junction rows (keeps lowest `rowid`) then creates `CREATE UNIQUE INDEX IF NOT EXISTS` natural keys (e.g. `uq_item_combine(result_item_id, component_item_id, combine_type)`, `uq_item_sources(...)`, `uq_monster_equipment(game_id, monster_id, equipment_kind, equipment_id)`) and `(game_id, id)` guard indexes on content tables, so `INSERT OR IGNORE` has a real conflict target and no longer appends duplicates on re-run. `clear_game`/`clear_mh2g`/`clear_mhp3rd` were removed entirely.
 
-**Seed**: `src-tauri/src/db/seed.rs` runs on startup, en `BEGIN IMMEDIATE` + `INSERT OR IGNORE` — fully idempotent. Current **MHP3rd (mhp3rd, game_id 4)**: 1044 items (1065→1044 tras purga `"(Hunt 1 [[Zinogre]])"` + 18 typo) actualizados con `mikejsavage/MHP3DB` (`DATA.BIN` desencriptado ULJM-05800, 813 items canónicos con `value/rarity/icon` + `MHP3DB` como proxy ISO — el ISO `Monster Hunter Portable 3rd HD` es PS3 cifrado y `PSP ULJM-05800` no estaba disponible; extracción directa `pycdlib` falla con `DATA.BIN` cifrado `0xd6e3…`). 60 monsters, 972 weapons, 1111 armor, 378 quests, 263 combines (202 Normal + 61 Alchemy). `item_sources` 2016 (`shop` 102 + `gather` 110 / `mining` 100 / `bug` 36 / `fish` 30 / `trade` 528 / `farm` 120 / `carve` 374 / `drop` 515 + `capture` 98 small-monster) con `buy_price` 150. `monster_drops` 1679 (756 base + 792 inferidos +130 curados `Skypiercer/Dragongem/Mohran`→elder). `quest_rewards` 1867→1863. Sin `MHTri/MH3U` (0). `descriptions` 0 null (531 backfill) + `categories` 394.
+**Seed**: `src-tauri/src/db/seed.rs` runs on startup, in `BEGIN IMMEDIATE` + `INSERT OR IGNORE` — fully idempotent. Current **MHP3rd (mhp3rd, game_id 4)**: 1044 items (1065→1044 after purging `"(Hunt 1 [[Zinogre]])"` + 18 typos) updated with `mikejsavage/MHP3DB` (`DATA.BIN` decrypted ULJM-05800, 813 canonical items with `value/rarity/icon` + `MHP3DB` as ISO proxy — the `Monster Hunter Portable 3rd HD` ISO is PS3 encrypted and `PSP ULJM-05800` was not available; direct extraction via `pycdlib` fails with encrypted `DATA.BIN` `0xd6e3…`). 60 monsters, 972 weapons, 1111 armor, 378 quests, 263 combines (202 Normal + 61 Alchemy). `item_sources` 2016 (`shop` 102 + `gather` 110 / `mining` 100 / `bug` 36 / `fish` 30 / `trade` 528 / `farm` 120 / `carve` 374 / `drop` 515 + `capture` 98 small-monster) with `buy_price` 150. `monster_drops` 1679 (756 base + 792 inferred +130 healed `Skypiercer/Dragongem/Mohran`→elder). `quest_rewards` 1867→1863. No `MHTri/MH3U` (0). `descriptions` 0 null (531 backfill) + `categories` 394.
+
+MHW coverage: **1359 items** (World+Iceborne incl. 20 event/collab, Chest `sort_order` 1-1339 MHWorldData + 2000+ extras, 343 Fandom icons), **94 monsters** (Small 23 + Large 71 incl. variants Azure/Seething/Blackveil/Ruiner/Fatalis/Alatreon/Safi, 94 offline icons, species corrected), **3544 weapons** (14 types Great Sword→Bow incl. Charge Blade/Insect Glaive, Smith tree `sort_order` DFS, 8-color per-rarity icons White/Yellow/Green/Light Blue/Blue/Purple/Orange/Red), **5862 monster drops** (MHWorldData `monster_rewards.csv` 5680 +182 Fandom, `rank` Low/High/Master, `probability` %), `weapon_craft` 10056 / `weapon_materials` 9719. `monsters.sort_order` + `items.sort_order` give Chest/Small→Large sections; `weapons` no longer shows `All` (default `Great Sword`).
 
 MH2G coverage: **1083 items fully sourced** (`item_sources` 12,751 rows: `gather/mining/bug/fish` from `maps.json`, `shop` consolidated 5 merchants, `trade` Veggie Elder + Trenya Boat + Pokke Points, `farm` Pokke Farm spots/trees, `small monsters` via `Monsters/monsters-material.json`, plus `monster_drops`/`quest_rewards`), **432 combine recipes** (147 Normal + 18 Alchemy + 7 Treasure) with `combine_type`/`chance` and game-book order (`ORDER BY item_combine.id`, ISO `Book of Combos` + `Alchemy Guide`). Categories re-derived from ISO `tmp_mhfu_upstream/items.json` `icon` + English verb: `Consumable 91 / Material 913 / Ammo 79` with `subcategory` (`Recovery, Buff, Food, Charm, Husk, Coating, Ore, Monster Material`, etc.; `Powercharm/Powertalon` → `Consumable • Charm`, `Huskberry/Sm Bone Husk` → `Ammo • Husk`).
 
@@ -76,12 +78,20 @@ Registered in `src-tauri/src/lib.rs` via `tauri::generate_handler!`. Defined in 
 
 ## Git Workflow — STRICT: No auto-commit/push
 
-> **⚠️ DO NOT commit, tag, push, or create PRs unless the user explicitly says so — in Spanish: NO hagas commit ni push si no te lo pido explícitamente.**
+> **⚠️ DO NOT commit, tag, push, or create PRs unless the user explicitly says so.**
 >
-> - **Default is NO git writes.** Just leave changes unstaged / uncommitted in the working tree. The user will explicitly say `commit`, `push`, `commit y push`, etc. when they want it.
+> - **Default is NO git writes.** Just leave changes unstaged / uncommitted in the working tree. The user will explicitly say `commit`, `push`, `commit and push`, etc. when they want it.
 > - This rule overrides any generic "commit when done" habits. When in doubt, **ask** instead of pushing.
 > - `git status` / `git diff` / `git log` are always allowed (read-only). `git add` / `commit` / `push` / `tag` / `gh pr create` are **forbidden** without explicit user instruction.
-> - Even when the user says "actualiza la documentación" or "procede", that does **not** imply commit/push unless they literally write `commit` or `push`.
+> - Even when the user says "update the documentation" or "proceed", that does **not** imply commit/push unless they literally write `commit` or `push`.
+> - **Pre-commit/push CI gate — MANDATORY when the user requests commit/push:** Before `git add/commit/push/tag`, **ensure GitHub CI will pass**. Run locally everything CI runs and fix findings before committing:
+>   ```bash
+>   npm run check   # svelte-check (also lint/typecheck — they are aliases)
+>   cargo test --manifest-path src-tauri/Cargo.toml
+>   cargo build --manifest-path src-tauri/Cargo.toml  # if the workflow builds
+>   # + check .github/workflows/*.yml for extra jobs (release, tauri build) and run them if applicable
+>   ```
+>   If something fails, **fix it first**, re-run until green, and only then `commit/push`. If push already happened and CI fails, fix immediately with a new commit. Do not ask the user to act as CI.
 
 ## Release & Versioning
 

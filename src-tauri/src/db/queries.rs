@@ -334,6 +334,7 @@ pub struct Item {
     pub sell_price: Option<i32>,
     pub buy_price: Option<i32>,
     pub carry_limit: Option<i32>,
+    pub sort_order: Option<i32>,
     pub icon_name: Option<String>,
     pub icon_color: Option<String>,
     pub icon_url: Option<String>,
@@ -363,6 +364,7 @@ pub struct ItemDetail {
     pub sell_price: Option<i32>,
     pub buy_price: Option<i32>,
     pub carry_limit: Option<i32>,
+    pub sort_order: Option<i32>,
     pub icon_name: Option<String>,
     pub icon_color: Option<String>,
     pub icon_url: Option<String>,
@@ -489,7 +491,7 @@ pub struct SkillDetail {
 
 pub fn get_monsters_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Monster>> {
     let mut stmt = conn.prepare(
-        "SELECT id, game_id, name, species, size, icon_name, icon_color, icon_url, language FROM monsters WHERE game_id = ?1 ORDER BY id",
+        "SELECT id, game_id, name, species, size, icon_name, icon_color, icon_url, language FROM monsters WHERE game_id = ?1 ORDER BY CASE size WHEN 'Small' THEN 0 ELSE 1 END, COALESCE(sort_order, id), id",
     )?;
 
     let monsters = stmt
@@ -800,10 +802,12 @@ fn get_monster_related_weapons(conn: &Connection, monster_id: i32) -> Result<Vec
                 WHEN 'Lance' THEN 6
                 WHEN 'Gunlance' THEN 7
                 WHEN 'Switch Axe' THEN 8
-                WHEN 'Light Bowgun' THEN 9
-                WHEN 'Heavy Bowgun' THEN 10
-                WHEN 'Bow' THEN 11
-                ELSE 12
+                WHEN 'Charge Blade' THEN 9
+                WHEN 'Insect Glaive' THEN 10
+                WHEN 'Light Bowgun' THEN 11
+                WHEN 'Heavy Bowgun' THEN 12
+                WHEN 'Bow' THEN 13
+                ELSE 14
             END, COALESCE(w.sort_order, w.id)",
     )?;
 
@@ -925,10 +929,12 @@ pub fn get_weapons_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Weapon
                 WHEN 'Lance' THEN 6
                 WHEN 'Gunlance' THEN 7
                 WHEN 'Switch Axe' THEN 8
-                WHEN 'Light Bowgun' THEN 9
-                WHEN 'Heavy Bowgun' THEN 10
-                WHEN 'Bow' THEN 11
-                ELSE 12
+                WHEN 'Charge Blade' THEN 9
+                WHEN 'Insect Glaive' THEN 10
+                WHEN 'Light Bowgun' THEN 11
+                WHEN 'Heavy Bowgun' THEN 12
+                WHEN 'Bow' THEN 13
+                ELSE 14
             END, COALESCE(sort_order, id)",
     )?;
 
@@ -1686,11 +1692,11 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
 }
 
 pub fn get_items_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Item>> {
-    // Chest order: faithful to PSP item box (hex ID order) verified via ISO DATA.BIN file 15 string table
+    // Chest order: faithful to in-game item box (sort_order = MHWorldData id for MHW, DATA.BIN for PSP)
     // Alternative sorts handled client-side; keep DB default as game chest.
     let mut stmt = conn.prepare(
-        "SELECT id, game_id, name, category, subcategory, rarity, sell_price, buy_price, carry_limit, icon_name, icon_color, icon_url, description, language
-         FROM items WHERE game_id = ?1 ORDER BY id",
+        "SELECT id, game_id, name, category, subcategory, rarity, sell_price, buy_price, carry_limit, sort_order, icon_name, icon_color, icon_url, description, language
+         FROM items WHERE game_id = ?1 ORDER BY COALESCE(sort_order, id), id",
     )?;
 
     let items = stmt
@@ -1705,11 +1711,12 @@ pub fn get_items_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Item>> {
                 sell_price: row.get(6)?,
                 buy_price: row.get(7)?,
                 carry_limit: row.get(8)?,
-                icon_name: row.get(9)?,
-                icon_color: row.get(10)?,
-                icon_url: row.get(11)?,
-                description: row.get(12)?,
-                language: row.get(13)?,
+                sort_order: row.get(9)?,
+                icon_name: row.get(10)?,
+                icon_color: row.get(11)?,
+                icon_url: row.get(12)?,
+                description: row.get(13)?,
+                language: row.get(14)?,
             })
         })?
         .filter_map(|r| {
@@ -1732,13 +1739,14 @@ pub fn get_item_detail(conn: &Connection, id: i32) -> Result<Option<ItemDetail>>
         Option<i32>,
         Option<i32>,
         Option<i32>,
+        Option<i32>,
         Option<String>,
         Option<String>,
         Option<String>,
         Option<String>,
         String,
     )> = conn.query_row(
-        "SELECT id, game_id, name, category, subcategory, rarity, sell_price, buy_price, carry_limit, icon_name, icon_color, icon_url, description, language
+        "SELECT id, game_id, name, category, subcategory, rarity, sell_price, buy_price, carry_limit, sort_order, icon_name, icon_color, icon_url, description, language
              FROM items WHERE id = ?1",
         params![id],
         |row| {
@@ -1757,6 +1765,7 @@ pub fn get_item_detail(conn: &Connection, id: i32) -> Result<Option<ItemDetail>>
                 row.get(11)?,
                 row.get(12)?,
                 row.get(13)?,
+                row.get(14)?,
             ))
         },
     ).optional()?;
@@ -1771,6 +1780,7 @@ pub fn get_item_detail(conn: &Connection, id: i32) -> Result<Option<ItemDetail>>
         sell_price,
         buy_price,
         carry_limit,
+        sort_order,
         icon_name,
         icon_color,
         icon_url,
@@ -1795,6 +1805,7 @@ pub fn get_item_detail(conn: &Connection, id: i32) -> Result<Option<ItemDetail>>
         sell_price,
         buy_price,
         carry_limit,
+        sort_order,
         icon_name,
         icon_color,
         icon_url,

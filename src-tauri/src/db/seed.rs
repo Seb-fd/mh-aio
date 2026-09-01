@@ -56,10 +56,18 @@ pub fn seed(conn: &Connection) -> Result<()> {
     seed_mhp3rd_decorations(conn)?;
     seed_mhp3rd_armor_skill_points(conn)?;
     seed_mhp3rd_weapon_skill_points(conn)?;
-    // MHW + Iceborne (game_id 1) — items 100% (MHWorldData + Kiranico), combine + melder
+    // MHW + Iceborne (game_id 1) — items 100% (Fandom MHWI + MHW lists + Monster Materials), combine + melder + drops/sources + weapons
     seed_mhw_items(conn)?;
     seed_mhw_item_combine(conn)?;
+    seed_mhw_extra_item_combine(conn)?;
     seed_mhw_melder_recipes(conn)?;
+    seed_mhw_monsters(conn)?;
+    seed_mhw_monster_drops(conn)?;
+    seed_mhw_item_sources_from_drops(conn)?;
+    seed_mhw_extra_item_sources(conn)?;
+    seed_mhw_weapons(conn)?;
+    seed_mhw_weapon_materials(conn)?;
+    seed_mhw_weapon_craft(conn)?;
     Ok(())
 }
 
@@ -389,6 +397,8 @@ fn weapon_icon_slug(weapon_type: &str) -> &'static str {
         "Lance" => "lance",
         "Gunlance" => "gunlance",
         "Switch Axe" => "switch-axe",
+        "Charge Blade" => "charge-blade",
+        "Insect Glaive" => "insect-glaive",
         "Light Bowgun" => "light-bowgun",
         "Heavy Bowgun" => "heavy-bowgun",
         "Bow" => "bow",
@@ -396,6 +406,7 @@ fn weapon_icon_slug(weapon_type: &str) -> &'static str {
     }
 }
 
+#[allow(dead_code)]
 fn weapon_icon_color(rarity: i32) -> &'static str {
     match rarity {
         1..=2 => "Gray",
@@ -403,6 +414,23 @@ fn weapon_icon_color(rarity: i32) -> &'static str {
         5..=6 => "Green",
         _ => "Gold",
     }
+}
+
+fn weapon_icon_color_mhw(rarity: i32) -> (&'static str, &'static str) {
+    // Returns (display color, file suffix) for 8-color Fandom mapping (White/Yellow/Green/Light Blue/Blue/Purple/Orange/Red)
+    // Faithful to MHWI weapon tree headers: R1 White, R2 White, R3 Yellow, R4 Green, R5 Light Blue, R6 Blue, R7 Purple, R8 Orange, R9 Red, R10 Light Blue, R11 Yellow, R12 White
+    let (color, slug) = match rarity {
+        1 | 2 | 12 => ("White", "white"),
+        3 | 11 => ("Yellow", "yellow"),
+        4 => ("Green", "green"),
+        5 | 10 => ("Light Blue", "light-blue"),
+        6 => ("Blue", "blue"),
+        7 => ("Purple", "purple"),
+        8 => ("Orange", "orange"),
+        9 => ("Red", "red"),
+        _ => ("White", "white"),
+    };
+    (color, slug)
 }
 
 #[derive(Deserialize)]
@@ -434,8 +462,8 @@ fn seed_weapons(conn: &Connection) -> Result<()> {
 
     for w in &weapons {
         let slug = weapon_icon_slug(&w.weapon_type);
-        let icon_url = format!("/icons/mhfu/weapons/{}.png", slug);
-        let icon_color = weapon_icon_color(w.rarity);
+        let (icon_color, color_slug) = weapon_icon_color_mhw(w.rarity);
+        let icon_url = format!("/icons/mhfu/weapons/{}-{}.png", slug, color_slug);
         conn.execute(
             "INSERT OR IGNORE INTO weapons
                 (id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value,
@@ -466,15 +494,21 @@ fn seed_weapons(conn: &Connection) -> Result<()> {
             ],
         )?;
     }
-    // Backfill for existing DBs where icon was NULL or type changed
+    // Backfill for existing DBs where icon was NULL or type changed - migrate generic to per-rarity
     for w in &weapons {
         let slug = weapon_icon_slug(&w.weapon_type);
-        let icon_url = format!("/icons/mhfu/weapons/{}.png", slug);
-        let icon_color = weapon_icon_color(w.rarity);
+        let (icon_color, color_slug) = weapon_icon_color_mhw(w.rarity);
+        let icon_url = format!("/icons/mhfu/weapons/{}-{}.png", slug, color_slug);
+        let generic_url = format!("/icons/mhfu/weapons/{}.png", slug);
         conn.execute(
-            "UPDATE weapons SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(icon_url, ?3) WHERE id = ?4 AND game_id = 5 AND (icon_url IS NULL OR icon_name IS NULL)",
-            rusqlite::params![w.weapon_type, icon_color, icon_url, w.id],
+            "UPDATE weapons SET icon_name = COALESCE(icon_name, ?1), icon_color = ?2, icon_url = COALESCE(NULLIF(icon_url, ?3), ?4) WHERE id = ?5 AND game_id = 5",
+            rusqlite::params![w.weapon_type, icon_color, generic_url, icon_url, w.id],
         )?;
+        // Also ensure existing per-rarity rows get updated if they still have old 4-color Gray/Gold
+        let _ = conn.execute(
+            "UPDATE weapons SET icon_color = ?1, icon_url = ?2 WHERE id = ?3 AND game_id = 5 AND (icon_color IN ('Gray','Gold','Green') OR icon_url = ?4)",
+            rusqlite::params![icon_color, icon_url, w.id, generic_url],
+        );
     }
 
     Ok(())
@@ -1513,8 +1547,8 @@ fn seed_mhp3rd_weapons(conn: &Connection) -> Result<()> {
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
     for w in &weapons {
         let slug = weapon_icon_slug(&w.weapon_type);
-        let icon_url = format!("/icons/mhfu/weapons/{}.png", slug);
-        let icon_color = weapon_icon_color(w.rarity);
+        let (icon_color, color_slug) = weapon_icon_color_mhw(w.rarity);
+        let icon_url = format!("/icons/mhfu/weapons/{}-{}.png", slug, color_slug);
         conn.execute(
             "INSERT OR IGNORE INTO weapons (id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value, sharpness, slots, skills, status_type, status_value, defense_bonus, crafting_cost, upgrade_path, description, sort_order, icon_name, icon_color, icon_url, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, 'en')",
             rusqlite::params![w.id, MHP3RD, w.name, w.weapon_type, w.rarity, w.attack, w.affinity, w.element_type, w.element_value, w.sharpness, w.slots, w.skills, w.status_type, w.status_value, w.defense_bonus, w.crafting_cost, w.upgrade_path, w.description, w.sort_order, w.weapon_type, icon_color, icon_url],
@@ -1522,12 +1556,17 @@ fn seed_mhp3rd_weapons(conn: &Connection) -> Result<()> {
     }
     for w in &weapons {
         let slug = weapon_icon_slug(&w.weapon_type);
-        let icon_url = format!("/icons/mhfu/weapons/{}.png", slug);
-        let icon_color = weapon_icon_color(w.rarity);
+        let (icon_color, color_slug) = weapon_icon_color_mhw(w.rarity);
+        let icon_url = format!("/icons/mhfu/weapons/{}-{}.png", slug, color_slug);
+        let generic_url = format!("/icons/mhfu/weapons/{}.png", slug);
         conn.execute(
-            "UPDATE weapons SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(icon_url, ?3) WHERE id = ?4 AND game_id = 4 AND (icon_url IS NULL OR icon_name IS NULL)",
-            rusqlite::params![w.weapon_type, icon_color, icon_url, w.id],
+            "UPDATE weapons SET icon_name = COALESCE(icon_name, ?1), icon_color = ?2, icon_url = COALESCE(NULLIF(icon_url, ?3), ?4) WHERE id = ?5 AND game_id = 4",
+            rusqlite::params![w.weapon_type, icon_color, generic_url, icon_url, w.id],
         )?;
+        let _ = conn.execute(
+            "UPDATE weapons SET icon_color = ?1, icon_url = ?2 WHERE id = ?3 AND game_id = 4 AND (icon_color IN ('Gray','Gold','Green') OR icon_url = ?4)",
+            rusqlite::params![icon_color, icon_url, w.id, generic_url],
+        );
     }
     Ok(())
 }
@@ -1920,6 +1959,7 @@ struct MhwItemJson {
     icon_color: Option<String>,
     icon_url: Option<String>,
     description: Option<String>,
+    sort_order: Option<i32>,
 }
 
 fn seed_mhw_items(conn: &Connection) -> Result<()> {
@@ -1928,17 +1968,22 @@ fn seed_mhw_items(conn: &Connection) -> Result<()> {
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
     for it in &items {
         conn.execute(
-            "INSERT OR IGNORE INTO items (id, game_id, name, category, subcategory, rarity, sell_price, buy_price, carry_limit, icon_name, icon_color, icon_url, description, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, 'en')",
-            rusqlite::params![it.id, MHW, it.name, it.category, it.subcategory, it.rarity, it.sell_price, it.buy_price, it.carry_limit, it.icon_name, it.icon_color, it.icon_url, it.description],
+            "INSERT OR IGNORE INTO items (id, game_id, name, category, subcategory, rarity, sell_price, buy_price, carry_limit, icon_name, icon_color, icon_url, description, sort_order, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, 'en')",
+            rusqlite::params![it.id, MHW, it.name, it.category, it.subcategory, it.rarity, it.sell_price, it.buy_price, it.carry_limit, it.icon_name, it.icon_color, it.icon_url, it.description, it.sort_order],
         )?;
     }
-    // Backfill for existing DBs where category/subcategory/icon changed
+    // Backfill for existing DBs where category/subcategory/icon/sort changed
     for it in &items {
         conn.execute(
-            "UPDATE items SET category = ?1, subcategory = ?2, rarity = COALESCE(?3, rarity), sell_price = COALESCE(?4, sell_price), buy_price = COALESCE(?5, buy_price), carry_limit = COALESCE(?6, carry_limit), icon_name = COALESCE(?7, icon_name), icon_color = COALESCE(?8, icon_color), icon_url = COALESCE(?9, icon_url), description = COALESCE(NULLIF(description,''), ?10) WHERE id = ?11 AND game_id = 1",
-            rusqlite::params![it.category, it.subcategory, it.rarity, it.sell_price, it.buy_price, it.carry_limit, it.icon_name, it.icon_color, it.icon_url, it.description, it.id],
+            "UPDATE items SET category = ?1, subcategory = ?2, rarity = COALESCE(?3, rarity), sell_price = COALESCE(?4, sell_price), buy_price = COALESCE(?5, buy_price), carry_limit = COALESCE(?6, carry_limit), icon_name = COALESCE(?7, icon_name), icon_color = COALESCE(?8, icon_color), icon_url = COALESCE(?9, icon_url), description = COALESCE(NULLIF(description,''), ?10), sort_order = COALESCE(?11, sort_order) WHERE id = ?12 AND game_id = 1",
+            rusqlite::params![it.category, it.subcategory, it.rarity, it.sell_price, it.buy_price, it.carry_limit, it.icon_name, it.icon_color, it.icon_url, it.description, it.sort_order, it.id],
         )?;
     }
+    // Ensure every MHW item has sort_order (fallback to id offset for legacy DBs)
+    let _ = conn.execute(
+        "UPDATE items SET sort_order = id - 20000 WHERE game_id = 1 AND sort_order IS NULL",
+        [],
+    );
     Ok(())
 }
 
@@ -1984,6 +2029,199 @@ fn seed_mhw_melder_recipes(conn: &Connection) -> Result<()> {
             conn.execute(
                 "INSERT OR IGNORE INTO melder_recipes (game_id, result_item_id, research_cost, melding_cost, unlock_condition, melder_type) VALUES (1, ?1, ?2, ?3, ?4, ?5)",
                 rusqlite::params![r.result_item_id, r.research_cost, r.melding_cost, r.unlock_condition, r.melder_type.as_deref().unwrap_or("normal")],
+            )?;
+        }
+    }
+    Ok(())
+}
+
+fn seed_mhw_monsters(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct MhwMonJson {
+        id: i32,
+        name: String,
+        species: String,
+        size: String,
+        description: Option<String>,
+        sort_order: Option<i32>,
+    }
+    let json_data = include_str!("../../data/mhw_monsters.json");
+    let mons: Vec<MhwMonJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for m in &mons {
+        let slug = monster_icon_slug(&m.name);
+        let icon_url = format!("/icons/mhw/monsters/{}.png", slug);
+        let icon_color = monster_icon_color(&m.species);
+        conn.execute(
+            "INSERT OR IGNORE INTO monsters (id, game_id, name, species, size, description, sort_order, icon_name, icon_color, icon_url, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, 'en')",
+            rusqlite::params![m.id, MHW, m.name, m.species, m.size, m.description, m.sort_order, m.name, icon_color, icon_url],
+        )?;
+    }
+    for m in &mons {
+        let slug = monster_icon_slug(&m.name);
+        let icon_url = format!("/icons/mhw/monsters/{}.png", slug);
+        let icon_color = monster_icon_color(&m.species);
+        let _ = conn.execute(
+            "UPDATE monsters SET species = COALESCE(NULLIF(species,'Unknown'), ?1), description = COALESCE(NULLIF(description,''), ?2), sort_order = COALESCE(sort_order, ?3), icon_name = COALESCE(icon_name, ?4), icon_color = COALESCE(icon_color, ?5), icon_url = COALESCE(icon_url, ?6) WHERE id = ?7 AND game_id = 1",
+            rusqlite::params![m.species, m.description, m.sort_order, m.name, icon_color, icon_url, m.id],
+        );
+    }
+    // Fallback for legacy DBs without sort_order: small then large, alphabetical within section
+    let _ = conn.execute(
+        "UPDATE monsters SET sort_order = CASE WHEN size='Small' THEN id ELSE 10000+id END WHERE game_id=1 AND sort_order IS NULL",
+        [],
+    );
+    Ok(())
+}
+
+fn seed_mhw_monster_drops(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct MhwDropJson {
+        monster_id: i32,
+        item_id: i32,
+        method: String,
+        part: Option<String>,
+        rank: Option<String>,
+        quantity: i32,
+        probability: Option<f64>,
+        condition: Option<String>,
+    }
+    let json_data = include_str!("../../data/mhw_monster_drops.json");
+    let drops: Vec<MhwDropJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for d in drops {
+        if item_exists(conn, d.item_id)? {
+            conn.execute(
+                "INSERT OR IGNORE INTO monster_drops (monster_id, item_id, method, part, rank, quantity, probability, condition, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, 'en')",
+                rusqlite::params![d.monster_id, d.item_id, d.method, d.part, d.rank, d.quantity, d.probability, d.condition],
+            )?;
+        }
+    }
+    Ok(())
+}
+
+fn seed_mhw_item_sources_from_drops(conn: &Connection) -> Result<()> {
+    conn.execute(
+        "INSERT OR IGNORE INTO item_sources (item_id, source_type, source_id, quantity_min, quantity_max, probability) SELECT item_id, CASE method WHEN 'carve' THEN 'carve' WHEN 'capture' THEN 'capture' WHEN 'drop' THEN 'drop' WHEN 'break' THEN 'break' WHEN 'reward' THEN 'reward' ELSE method END, monster_id, quantity, quantity, probability FROM monster_drops WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 1)",
+        [],
+    )?;
+    Ok(())
+}
+
+fn seed_mhw_extra_item_sources(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct MhwExtraSrc {
+        item_id: i32,
+        source_type: String,
+        source_id: Option<i32>,
+        location: Option<String>,
+        probability: Option<f64>,
+        conditions: Option<String>,
+        quantity_min: Option<i32>,
+        quantity_max: Option<i32>,
+    }
+    let json_data = include_str!("../../data/mhw_item_sources_extra.json");
+    let sources: Vec<MhwExtraSrc> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for s in sources {
+        if item_exists(conn, s.item_id)? {
+            conn.execute(
+                "INSERT OR IGNORE INTO item_sources (item_id, source_type, source_id, quantity_min, quantity_max, probability, location, conditions) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)",
+                rusqlite::params![s.item_id, s.source_type, s.source_id, s.quantity_min.unwrap_or(1), s.quantity_max.unwrap_or(1), s.probability, s.location, s.conditions],
+            )?;
+        }
+    }
+    Ok(())
+}
+
+fn seed_mhw_extra_item_combine(conn: &Connection) -> Result<()> {
+    let json_data = include_str!("../../data/mhw_item_combine_extra.json");
+    let recs: Vec<MhwCombineJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for rc in recs {
+        if item_exists(conn, rc.result_item_id)? && item_exists(conn, rc.component_item_id)? {
+            conn.execute(
+                "INSERT OR IGNORE INTO item_combine (result_item_id, component_item_id, quantity, result_quantity, combine_type, chance) VALUES (?1, ?2, ?3, ?4, 'normal', NULL)",
+                rusqlite::params![rc.result_item_id, rc.component_item_id, rc.quantity, rc.result_quantity],
+            )?;
+        }
+    }
+    Ok(())
+}
+
+fn seed_mhw_weapons(conn: &Connection) -> Result<()> {
+    // MHWorldData weapon_base.csv -> mhw_weapons.json (MHWorldData order, per-type sort_order)
+    let json_data = include_str!("../../data/mhw_weapons.json");
+    let weapons: Vec<WeaponJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for w in &weapons {
+        let slug = weapon_icon_slug(&w.weapon_type);
+        let (icon_color, color_slug) = weapon_icon_color_mhw(w.rarity);
+        let icon_url = format!("/icons/mhw/weapons/{}-{}.png", slug, color_slug);
+        conn.execute(
+            "INSERT OR IGNORE INTO weapons (id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value, sharpness, slots, skills, status_type, status_value, defense_bonus, crafting_cost, upgrade_path, description, sort_order, icon_name, icon_color, icon_url, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, 'en')",
+            rusqlite::params![w.id, MHW, w.name, w.weapon_type, w.rarity, w.attack, w.affinity, w.element_type, w.element_value, w.sharpness, w.slots, w.skills, w.status_type, w.status_value, w.defense_bonus, w.crafting_cost, w.upgrade_path, w.description, w.sort_order, w.weapon_type, icon_color, icon_url],
+        )?;
+    }
+    for w in &weapons {
+        let slug = weapon_icon_slug(&w.weapon_type);
+        let (icon_color, color_slug) = weapon_icon_color_mhw(w.rarity);
+        let icon_url = format!("/icons/mhw/weapons/{}-{}.png", slug, color_slug);
+        let _ = conn.execute(
+            "UPDATE weapons SET sort_order = COALESCE(sort_order, ?1), icon_name = COALESCE(icon_name, ?2), icon_color = COALESCE(icon_color, ?3), icon_url = COALESCE(icon_url, ?4), description = COALESCE(NULLIF(description,''), ?5) WHERE id = ?6 AND game_id = 1",
+            rusqlite::params![w.sort_order, w.weapon_type, icon_color, icon_url, w.description, w.id],
+        );
+    }
+    // Backfill existing MHW weapons that still have generic icon (without color suffix) to per-rarity variant
+    for w in &weapons {
+        let slug = weapon_icon_slug(&w.weapon_type);
+        let (icon_color, color_slug) = weapon_icon_color_mhw(w.rarity);
+        let icon_url = format!("/icons/mhw/weapons/{}-{}.png", slug, color_slug);
+        let _ = conn.execute(
+            "UPDATE weapons SET icon_url = ?1, icon_color = ?2 WHERE id = ?3 AND game_id = 1 AND (icon_url = ?4 OR icon_url LIKE '%/mhw/weapons/'||?5||'.png')",
+            rusqlite::params![icon_url, icon_color, w.id, format!("/icons/mhw/weapons/{}.png", slug), slug],
+        );
+    }
+    Ok(())
+}
+
+fn seed_mhw_weapon_materials(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct WMat {
+        weapon_id: i32,
+        item_id: i32,
+        quantity: i32,
+    }
+    let json_data = include_str!("../../data/mhw_weapon_materials.json");
+    let mats: Vec<WMat> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for m in mats {
+        if weapon_exists(conn, MHW, m.weapon_id)? && item_exists(conn, m.item_id)? {
+            conn.execute(
+                "INSERT OR IGNORE INTO weapon_materials (weapon_id, item_id, quantity) VALUES (?1, ?2, ?3)",
+                rusqlite::params![m.weapon_id, m.item_id, m.quantity],
+            )?;
+        }
+    }
+    Ok(())
+}
+
+fn seed_mhw_weapon_craft(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct WCraft {
+        weapon_id: i32,
+        craft_kind: String,
+        item_id: i32,
+        quantity: i32,
+    }
+    let json_data = include_str!("../../data/mhw_weapon_craft.json");
+    let recs: Vec<WCraft> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for r in recs {
+        if weapon_exists(conn, MHW, r.weapon_id)? && item_exists(conn, r.item_id)? {
+            conn.execute(
+                "INSERT OR IGNORE INTO weapon_craft (weapon_id, craft_kind, item_id, quantity) VALUES (?1, ?2, ?3, ?4)",
+                rusqlite::params![r.weapon_id, r.craft_kind, r.item_id, r.quantity],
             )?;
         }
     }

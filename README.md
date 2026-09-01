@@ -2,7 +2,7 @@
 
 A comprehensive, cross-platform desktop encyclopedia and toolkit for Monster Hunter games, built with **Tauri v2**, **Rust**, **Svelte 5**, and **SQLite**.
 
-**Current focus: MHP2G (Freedom Unite, DB id 5) is the verified-complete MVP; MHP3rd (Portable 3rd, DB id 4) is fully seeded (1065 items / 378 quests / 60 monsters / 972 weapons / 1111 armor)** — detail views, armor set solver (Athena's A.S.S. port), per-game theming, and per-game global search.
+**Current focus: MHP2G (Freedom Unite, DB id 5) is the verified-complete MVP; MHP3rd (Portable 3rd, DB id 4) and MHW+Iceborne (World, DB id 1) are fully seeded (MHW: 1359 items / 94 monsters / 3544 weapons / 5862 drops) — detail views, armor set solver (Athena's A.S.S. port), per-game theming, and per-game global search. Weapons show per-rarity icons (8 colors) and Smith tree order; items/monsters use Chest (game box) order.**
 
 ---
 
@@ -11,7 +11,8 @@ A comprehensive, cross-platform desktop encyclopedia and toolkit for Monster Hun
 - **Multi-game support** — switch between MHW, MHR, MHWilds, MHP3rd, MH2G
   - **Full MHP2G/MH2G dataset** — 2075 armor pieces, 1083 items (fully sourced: every gathering node, shop, Veggie Elder/Trenya trade, Pokke Farm, small-monster drops verified vs ISO), 83 monsters (54 Large + 25 Small + 4 Giant), 1500 weapons (11 types), 610 quests (Village/Guild/Training/Treasure/Event/Challenge), ~99 skill families (214 abilities), 192 decorations — faithful to the retail UMD (`docs/fidelity-report.md`)
   - **MHP3rd (Portable 3rd) dataset seeded** — 1065 items (Material/Consumable/Ammo), 378 quests (village/guild/event/hot_spring/drink/nyanta/training/challenge, all 378 carry JP `name_original`), 60 monsters, 972 weapons, 1111 armor, 263 combines (202 Normal + 61 Alchemy) — sourced from `MHP3: Item List` + `www.mhp3wiki.info` via Playwright
-- **Complete entity browser** — monsters, weapons, armor, quests, items (with `category • subcategory` + `Charm` + `Ammo/Husk` ISO taxonomy, `Chest` order), skills, decorations, armor sets — all in game-faithful order and hub order
+  - **MHW+Iceborne dataset seeded** — 1359 items (World+Iceborne incl. event/collab, Chest order via `sort_order`, 343 Fandom icons), 94 monsters (Small 23 + Large 71 incl. variants, MHWorldData descriptions), 3544 weapons (14 types, Smith tree order, 8-color per-rarity icons), 5862 monster drops (MHWorldData `monster_rewards.csv` + Fandom), materialized `item_sources` — Fandom `MHWI` wiki + MHWorldData
+- **Complete entity browser** — monsters (Small→Large sections, Chest order), weapons (Smith tree `Great Sword → Bow` with per-rarity icons 8 colors, Charge Blade/Insect Glaive included), armor, quests, items (with `category • subcategory` + `Charm` + `Ammo/Husk` ISO taxonomy, `Chest` order via `sort_order`), skills, decorations, armor sets — all in game-faithful order and hub order
 - **Combinations** — global list `Items → Combinations` (single view, `Normal/Alchemy/Treasure` badge + `success %` + Book order) and clickable recipes in item detail (`Godbug x1 + Wyvern Fang x1 = Life Crystals x1 • 90%`)
 - **Armor Set Solver (Athena's A.S.S. port)** — pick up to 5 skills and find every armor set that activates them, including recommended jewels, spare slots, resists and defense. Full parity: hunter type (Blademaster/Gunner), gender, HR/Elder rank gate, weapon slots, piercings, Torso Inc, bad-skill handling, 1000-result limit and sort-by.
 - **Armor sets view** — armors grouped into faithful sets (full 5/10-piece sets or singletons like Black Legs), grouped by `derive_set_name` to match the game's smith; browser filters: `Both | Male | Female` + `All | Blademaster | Gunner` (head Blademaster = higher defense) + rank
@@ -61,7 +62,7 @@ The app supports multiple titles through dynamic game routing (`[game]`):
 | `mhp3rd`  | MH Portable 3rd         | 2010 |
 | `mh2g`    | MH 2ndG (Freedom Unite) | 2008 |
 
-MH2G is the verified-complete game; MHP3rd is fully seeded (routing + theming + all entity browsers); the remaining titles are wired for routing/theming with data to come.
+MH2G is the verified-complete game; MHP3rd and MHW+Iceborne are fully seeded (routing + theming + all entity browsers, incl. weapons per-rarity icons and Chest/Smith order); the remaining titles are wired for routing/theming with data to come.
 
 ---
 
@@ -180,7 +181,7 @@ mh-aio/
 │   │       ├── schema.rs             # Tables + ALTER TABLE migrations + schema_version + idempotency UNIQUE indexes
 │   │       ├── queries.rs            # List/detail/search queries w/ JOINs; get_global_search via SQLite norm_key LIKE
 │   │       └── seed.rs               # Idempotent seed (MH2G + MHP3rd, 12k+ sources, deduplication) — no clear_game
-│   ├── data/                         # mh2g_*.json (MH2G) + mhp3rd_*.json (MHP3rd)
+│   ├── data/                         # mh2g_*.json (MH2G) + mhp3rd_*.json (MHP3rd) + mhw_*.json (MHW+Iceborne 1359/94/3544)
 │   ├── Cargo.toml                    # rusqlite {bundled, functions}; tauri no shell
 │   ├── capabilities/default.json     # core:default only
 │   ├── tauri.conf.json               # CSP hardened

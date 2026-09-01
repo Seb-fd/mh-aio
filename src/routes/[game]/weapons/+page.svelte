@@ -11,7 +11,7 @@
   let weapons = $state<Weapon[]>([])
   let loading = $state(true)
   let error = $state<string | null>(null)
-  let typeFilter = $state<string>('all')
+  let typeFilter = $state<string>('Great Sword')
   let sortBy = $state<string>('smith') // smith = armorer tree order (weapon_type -> id) faithful to ISO
 
   async function loadWeapons(id: number, attempt = 0) {
@@ -42,6 +42,14 @@
     loadWeapons(dbId)
   })
 
+  // Ensure filter is always a valid weapon type (default Great Sword)
+  $effect(() => {
+    if (weaponTypes.length === 0) return
+    if (!weaponTypes.includes(typeFilter)) {
+      typeFilter = weaponTypes.includes('Great Sword') ? 'Great Sword' : weaponTypes[0]
+    }
+  })
+
   const GAME_WEAPON_ORDER = [
     'Great Sword',
     'Long Sword',
@@ -52,6 +60,8 @@
     'Lance',
     'Gunlance',
     'Switch Axe',
+    'Charge Blade',
+    'Insect Glaive',
     'Light Bowgun',
     'Heavy Bowgun',
     'Bow',
@@ -62,14 +72,13 @@
     if (t === 'Sword and Shield') return 2
     return 99
   }
-  const weaponTypes = $derived([
-    'all',
-    ...Array.from(new Set(weapons.map((w) => w.weapon_type))).sort(
+  const weaponTypes = $derived(
+    Array.from(new Set(weapons.map((w) => w.weapon_type))).sort(
       (a, b) => weaponOrder(a) - weaponOrder(b),
     ),
-  ])
+  )
   const filtered = $derived.by(() => {
-    let arr = typeFilter === 'all' ? weapons : weapons.filter((w) => w.weapon_type === typeFilter)
+    let arr = weapons.filter((w) => w.weapon_type === typeFilter)
     if (sortBy === 'name') arr = [...arr].sort((a, b) => a.name.localeCompare(b.name))
     else if (sortBy === 'rarity') arr = [...arr].sort((a, b) => (b.rarity ?? 0) - (a.rarity ?? 0))
     else if (sortBy === 'attack') arr = [...arr].sort((a, b) => (b.attack ?? 0) - (a.attack ?? 0))
@@ -177,7 +186,7 @@
             ? `background-color: color-mix(in oklab, var(--theme-accent) 12%, transparent); border-color: color-mix(in oklab, var(--theme-accent) 50%, transparent); color: var(--theme-accent);`
             : `background-color: var(--theme-bg-surface); border-color: var(--theme-border); color: rgb(156 163 175);`}
         >
-          {type === 'all' ? 'All' : type}
+          {type}
         </button>
       {/each}
     </div>

@@ -510,6 +510,18 @@ fn apply_migrations(conn: &Connection) -> Result<()> {
     add_column_if_missing(conn, "monsters", "icon_name", "TEXT")?;
     add_column_if_missing(conn, "monsters", "icon_color", "TEXT")?;
     add_column_if_missing(conn, "monsters", "icon_url", "TEXT")?;
+    // Item chest order (MHW+Iceborne bolsa del juego) — faithful to in-game item box order
+    add_column_if_missing(conn, "items", "sort_order", "INTEGER")?;
+    let _ = conn.execute(
+        "CREATE INDEX IF NOT EXISTS idx_items_sort ON items(game_id, sort_order)",
+        [],
+    );
+    // Monster sections (MHW+Iceborne): small then large, faithful to in-game hunter notes / wiki sections
+    add_column_if_missing(conn, "monsters", "sort_order", "INTEGER")?;
+    let _ = conn.execute(
+        "CREATE INDEX IF NOT EXISTS idx_monsters_sort ON monsters(game_id, sort_order)",
+        [],
+    );
     Ok(())
 }
 

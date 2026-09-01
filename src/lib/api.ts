@@ -271,6 +271,7 @@ export interface Item {
   sell_price: number | null
   buy_price: number | null
   carry_limit: number | null
+  sort_order: number | null
   icon_name: string | null
   icon_color: string | null
   icon_url: string | null
@@ -331,6 +332,7 @@ export interface ItemDetail {
   sell_price: number | null
   buy_price: number | null
   carry_limit: number | null
+  sort_order: number | null
   icon_name: string | null
   icon_color: string | null
   icon_url: string | null

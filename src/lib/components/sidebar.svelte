@@ -105,7 +105,7 @@
 </script>
 
 <aside
-  class="w-64 flex flex-col h-full border-r sidebar"
+  class="w-64 flex flex-col h-full lg:h-full border-r sidebar overflow-hidden"
   style="background-color: var(--theme-bg-surface); border-color: var(--theme-border); padding-top: calc(env(safe-area-inset-top) + 2px);"
 >
   {#if game}
@@ -135,7 +135,7 @@
     </div>
   {/if}
 
-  <nav class="flex-1 p-3 space-y-1">
+  <nav class="flex-1 p-3 space-y-1 overflow-y-auto overscroll-contain min-h-0">
     {#each navItems as item}
       {@const active = isActive(item.href)}
       <button

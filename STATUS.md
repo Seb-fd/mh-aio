@@ -1,6 +1,6 @@
 # MH-AIO - Project Status
 
-## Current Version: v0.1.0 (MHP2G 1083 items fully sourced + corrected categories + 432 combines · MHP3rd 1065 items / 378 quests / 60 monsters / 972 weapons / 1111 armor — all seeded)
+## Current Version: v0.1.0 (MHP2G 1083 items fully sourced + corrected categories + 432 combines · MHP3rd 1065 items / 378 quests / 60 monsters / 972 weapons / 1111 armor — all seeded · MHW+Iceborne 1359 items / 94 monsters / 3544 weapons / 5862 drops — Chest/Smith order + per-rarity icons)
 
 ---
 
@@ -72,9 +72,17 @@
 - [x] **1065 items** (`Material 964 / Consumable 55 / Ammo 46`), **291 descriptions** (~28 EN + 263 JP flagged with 🇯🇵 badge), **181 buy prices**; chest-order `id` remapped (0 dangling refs). **263 combines** (202 Normal in `調合リスト` book order + 61 Alchemy) with `chance`.
 - [x] **60 monsters**, **761 drops** (carve/break/capture/drop with rank/part/probability) across all 40 droptable monsters; **monster weaknesses / equipment** seeded.
 - [x] **972 weapons**, **1111 armor pieces** (sets derived via `derive_set_name`), **weapon/armor materials + craft** resolved.
-- [x] **378 quests** (`village 96 · guild_low 88 · guild_high 100 · event 52 · hot_spring 7 · drink 16 · nyanta 3 · training 10 · challenge 6`), all 378 carry `name_original` (JP quest-board title). `quest_rewards` **1867** rows; JP → `item_id` mapping, unresolved logged never orphaned.
+- [x] **378 quests** (`village 96 · guild_low 88 · guild_high 100 · event 52 · hot_spring 7 · drink 16 · nyanta 3 · training 10 · challenge 6`), all 378 carry `name_original` (JP quest-board title = in-game order). Bilingual fields: `location_original`/`objective_original`/`description_original`
 - [x] **Skills / decorations** + `armor_skill_points` / `weapon_skill_points` / `decoration_materials`.
 - [x] **Gather sources** 26 rows (map + area) from `mhp3wiki.info`; shop/trade/farm not yet populated (gather-only). See `docs/fidelity-report.md` § _MH P3rd — Item Catalog & Acquisition_.
+
+### Data — Monster Hunter World + Iceborne (MHW / `mhw`, DB id 1) — Seeded
+
+- [x] **1359 items** (World+Iceborne incl. event/collab, Chest order via `sort_order` 1-1339 MHWorldData + 2000+ extras, 343 Fandom icons offline)
+- [x] **94 monsters** (Small 23 + Large 71 incl. variants Azure/Seething/Blackveil/Ruiner/Fatalis/Alatreon/Safi, species corrected, MHWorldData descriptions, 94 offline icons)
+- [x] **3544 weapons** (14 types Great Sword→Bow incl. Charge Blade/Insect Glaive, Smith tree `sort_order` DFS, 8-color per-rarity icons White/Yellow/Green/Light Blue/Blue/Purple/Orange/Red, sharpness/slots/element/status)
+- [x] **5862 monster drops** (MHWorldData `monster_rewards.csv` 5680 + 182 Fandom extras, `rank` Low/High/Master, `probability` %, `method` carve/break/reward, `part` Horn/Wing) + `item_sources` 107 + `weapon_craft` 10056 / `weapon_materials` 9719
+- [x] **Sidebar** sticky (`h-screen` + `overflow-y-auto`) for long Weapons/Armors lists; **Weapons** filter no longer shows `All` (default `Great Sword`), **Items/Monsters** Chest order `COALESCE(sort_order,id)`
 - [x] Data pipeline scripts: `fetch_mhp3rd_fandom.py` → `fetch_mhp3_wiki_data.py` (Playwright) → `generate_mhp3rd_*` + `reindex_mhp3rd_items.py`.
 
 ### Backend (Rust / Tauri)

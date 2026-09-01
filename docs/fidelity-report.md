@@ -129,10 +129,24 @@ Keep `mh2g_*.json` as the retail-faithful source. Items are now 100% sourced and
 - **Chest order** is derived from the per-game ordered item list (kouryaku.ohuda.com, game category order) — a faithful proxy; ~323/575 box items were matched by JP→EN, the remaining catalog items stay at their prior relative order after the matched block.
 - **Unresolved JP names** are logged (never orphaned): `scripts/mhp3rd_items.log`, `mhp3rd_item_sources.log`, `mhp3rd_monster_drops.log`. Some monster-material JP names lack an EN mapping in the current catalog.
 
+## MHW + Iceborne — Catalog & Order
+
+**Verdict:** MHW+Iceborne in `src-tauri/data/mhw_*.json` is seeded from `MHWorldData` (1339 base items, 93 base monsters, 3544 weapons, 5680 rewards) + Fandom `MHWI` wiki (543 extra rows for icons/how-to-get). All 1359 items have `sort_order` (Chest order `1-1339` MHWorldData + `2000+` extras), 94 monsters have `sort_order` (Small 1-23 then Large 1001-1071, species corrected), 3544 weapons have `sort_order` per-type DFS (Smith tree `Great Sword → Bow` with `Charge Blade`/`Insect Glaive`).
+
+| Aspect   | Count                                       | Source                                                                                 |
+| -------- | ------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Items    | 1359 (World+Iceborne incl. 20 event/collab) | `MHWorldData/item_base.csv:1339` + Fandom `MHWI:_Item_List` 549 + `MHW:_Item_List` 267 |
+| Monsters | 94 (Small 23 + Large 71 incl. variants)     | `MHWorldData/monster_base.csv:93` + `Grimalkyne` (Fandom Lynian)                       |
+| Weapons  | 3544 (14 types, 8-color per-rarity icons)   | `MHWorldData/weapon_base.csv`                                                          |
+| Drops    | 5862                                        | `MHWorldData/monster_rewards.csv:5680` + 182 Fandom                                    |
+| Icons    | 343 item + 94 monster + 112 weapon (8×14)   | Fandom `Category:Weapon_Icons` / `Item_Icons`                                          |
+
+Chest order `COALESCE(sort_order,id)` (`queries.rs:1688` items, `queries.rs:492` monsters) and Smith order (`queries.rs:914` weapons) are faithful to in-game box/tree. Weapons filter no longer shows `All` (`weapons/+page.svelte:14` default `Great Sword`).
+
 ## Verification
 
 `svelte-check` → 0 errors/0 warnings. `cargo test` → 9 tests pass (ASS + `db::queries` idempotency/migration/global_search). `cargo check` → no errors. All seeds deserialize cleanly from the new JSON (items / item_combine / monster_drops / item_sources / quest_rewards structs). `src/lib/utils/norm.ts` mirrors Rust `norm_key` for accent-insensitive list filtering.
 
 ## Source
 
-`www.mhp3wiki.info` is reachable via `index.php?<page-name>` (e.g. `index.php?調合リスト`), but its tables are client-rendered — hence Playwright. The archive.org copies of `/wiki/*` are absent, so live rendering is the only route. Quests are supplemented by `scripts/mhp3rd_quest_rewards.log` for unresolved JP reward names.
+`www.mhp3wiki.info` is reachable via `index.php?<page-name>` (e.g. `index.php?調合リスト`), but its tables are client-rendered — hence Playwright. The archive.org copies of `/wiki/*` are absent, so live rendering is the only route. Quests are supplemented by `scripts/mhp3rd_quest_rewards.log` for unresolved JP reward names. MHW uses `MHWorldData` + Fandom `MHWI` wiki via `api.php` (icons + how-to-get) and `Category:Weapon_Icons` for per-rarity weapon icons.

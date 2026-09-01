@@ -40,13 +40,13 @@
   </div>
 {:else if game}
   <div
-    class="min-h-screen text-gray-100 flex flex-col themed-bg"
+    class="h-screen h-[100dvh] text-gray-100 flex flex-col themed-bg overflow-hidden"
     data-ornament={game.theme.ornament}
     style={themeStyle}
   >
     <Header onMenuClick={() => (sidebarOpen = !sidebarOpen)} />
 
-    <div class="flex flex-1 overflow-hidden">
+    <div class="flex flex-1 min-h-0 overflow-hidden">
       {#if sidebarOpen}
         <button
           type="button"
@@ -57,13 +57,13 @@
       {/if}
 
       <div
-        class="fixed lg:static inset-y-0 left-0 z-50 transform-gpu will-change-transform transition-transform duration-150 ease-out
+        class="fixed lg:static inset-y-0 left-0 z-50 flex flex-col lg:h-full lg:overflow-hidden transform-gpu will-change-transform transition-transform duration-150 ease-out
           {sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}"
       >
         <Sidebar onclose={() => (sidebarOpen = false)} />
       </div>
 
-      <main class="flex-1 overflow-auto p-6">
+      <main class="flex-1 min-h-0 overflow-y-auto overscroll-contain p-6">
         {@render children()}
       </main>
     </div>
