@@ -68,6 +68,12 @@ pub fn seed(conn: &Connection) -> Result<()> {
     seed_mhw_weapons(conn)?;
     seed_mhw_weapon_materials(conn)?;
     seed_mhw_weapon_craft(conn)?;
+    seed_mhw_skills(conn)?;
+    seed_mhw_skill_levels(conn)?;
+    seed_mhw_armor_sets(conn)?;
+    seed_mhw_armor(conn)?;
+    seed_mhw_armor_materials(conn)?;
+    seed_mhw_armor_skill_points(conn)?;
     Ok(())
 }
 
@@ -417,20 +423,63 @@ fn weapon_icon_color(rarity: i32) -> &'static str {
 }
 
 fn weapon_icon_color_mhw(rarity: i32) -> (&'static str, &'static str) {
-    // Returns (display color, file suffix) for 8-color Fandom mapping (White/Yellow/Green/Light Blue/Blue/Purple/Orange/Red)
-    // Faithful to MHWI weapon tree headers: R1 White, R2 White, R3 Yellow, R4 Green, R5 Light Blue, R6 Blue, R7 Purple, R8 Orange, R9 Red, R10 Light Blue, R11 Yellow, R12 White
+    // MHWorld & MHWI faithful rarity colors from Help:Item_Colors (HEX per rarity 1-12)
+    // R1 AAAAAA, R2 DEDEDE, R3 A1C42E, R4 48AB3F, R5 5CAEBB, R6 595CDA, R7 8D59EF, R8 C76D46, R9 B3436A, R10 0AD5FA, R11 FAC81E, R12 B4F5FF
     let (color, slug) = match rarity {
-        1 | 2 | 12 => ("White", "white"),
-        3 | 11 => ("Yellow", "yellow"),
-        4 => ("Green", "green"),
-        5 | 10 => ("Light Blue", "light-blue"),
-        6 => ("Blue", "blue"),
-        7 => ("Purple", "purple"),
-        8 => ("Orange", "orange"),
-        9 => ("Red", "red"),
-        _ => ("White", "white"),
+        1 => ("#AAAAAA", "r1"),
+        2 => ("#DEDEDE", "r2"),
+        3 => ("#A1C42E", "r3"),
+        4 => ("#48AB3F", "r4"),
+        5 => ("#5CAEBB", "r5"),
+        6 => ("#595CDA", "r6"),
+        7 => ("#8D59EF", "r7"),
+        8 => ("#C76D46", "r8"),
+        9 => ("#B3436A", "r9"),
+        10 => ("#0AD5FA", "r10"),
+        11 => ("#FAC81E", "r11"),
+        12 => ("#B4F5FF", "r12"),
+        _ => ("#AAAAAA", "r1"),
     };
     (color, slug)
+}
+
+fn weapon_icon_color_mhf2(rarity: i32) -> (&'static str, &'static str) {
+    // MHF2 & MHFU (MH2G) faithful: R1-3 EFEFEF, R4 73CE8C, R5 EF94A5, R6 94B5FF, R7 FF9C5A, R8 FF5A5A, R9 FFD65A, R10 AC5CC0
+    let (color, slug) = match rarity {
+        1..=3 => ("#EFEFEF", "r1"),
+        4 => ("#73CE8C", "r4"),
+        5 => ("#EF94A5", "r5"),
+        6 => ("#94B5FF", "r6"),
+        7 => ("#FF9C5A", "r7"),
+        8 => ("#FF5A5A", "r8"),
+        9 => ("#FFD65A", "r9"),
+        10 => ("#AC5CC0", "r10"),
+        _ => ("#EFEFEF", "r1"),
+    };
+    (color, slug)
+}
+
+fn weapon_icon_color_mhp3(rarity: i32) -> (&'static str, &'static str) {
+    // MHP3 faithful: R1 F5F5F5, R2 B192F1, R3 DED460, R4 E88E9E, R5 70C674, R6 708EF7, R7 DA565A
+    let (color, slug) = match rarity {
+        1 => ("#F5F5F5", "r1"),
+        2 => ("#B192F1", "r2"),
+        3 => ("#DED460", "r3"),
+        4 => ("#E88E9E", "r4"),
+        5 => ("#70C674", "r5"),
+        6 => ("#708EF7", "r6"),
+        7 => ("#DA565A", "r7"),
+        _ => ("#F5F5F5", "r1"),
+    };
+    (color, slug)
+}
+
+fn armor_icon_color_mhf2(rarity: i32) -> (&'static str, &'static str) {
+    weapon_icon_color_mhf2(rarity)
+}
+
+fn armor_icon_color_mhp3(rarity: i32) -> (&'static str, &'static str) {
+    weapon_icon_color_mhp3(rarity)
 }
 
 #[derive(Deserialize)]
@@ -462,7 +511,7 @@ fn seed_weapons(conn: &Connection) -> Result<()> {
 
     for w in &weapons {
         let slug = weapon_icon_slug(&w.weapon_type);
-        let (icon_color, color_slug) = weapon_icon_color_mhw(w.rarity);
+        let (icon_color, color_slug) = weapon_icon_color_mhf2(w.rarity);
         let icon_url = format!("/icons/mhfu/weapons/{}-{}.png", slug, color_slug);
         conn.execute(
             "INSERT OR IGNORE INTO weapons
@@ -497,17 +546,27 @@ fn seed_weapons(conn: &Connection) -> Result<()> {
     // Backfill for existing DBs where icon was NULL or type changed - migrate generic to per-rarity
     for w in &weapons {
         let slug = weapon_icon_slug(&w.weapon_type);
-        let (icon_color, color_slug) = weapon_icon_color_mhw(w.rarity);
+        let (icon_color, color_slug) = weapon_icon_color_mhf2(w.rarity);
         let icon_url = format!("/icons/mhfu/weapons/{}-{}.png", slug, color_slug);
         let generic_url = format!("/icons/mhfu/weapons/{}.png", slug);
         conn.execute(
             "UPDATE weapons SET icon_name = COALESCE(icon_name, ?1), icon_color = ?2, icon_url = COALESCE(NULLIF(icon_url, ?3), ?4) WHERE id = ?5 AND game_id = 5",
             rusqlite::params![w.weapon_type, icon_color, generic_url, icon_url, w.id],
         )?;
-        // Also ensure existing per-rarity rows get updated if they still have old 4-color Gray/Gold
+        // Also ensure existing per-rarity rows get updated if they still have old 4-color Gray/Gold and old 8-color white/yellow
         let _ = conn.execute(
-            "UPDATE weapons SET icon_color = ?1, icon_url = ?2 WHERE id = ?3 AND game_id = 5 AND (icon_color IN ('Gray','Gold','Green') OR icon_url = ?4)",
+            "UPDATE weapons SET icon_color = ?1, icon_url = ?2 WHERE id = ?3 AND game_id = 5 AND (icon_color IN ('Gray','Gold','Green','White','Yellow','Light Blue','Blue','Purple','Orange','Red') OR icon_url = ?4 OR icon_url LIKE '%-white.png' OR icon_url LIKE '%-yellow.png' OR icon_url LIKE '%-green.png')",
             rusqlite::params![icon_color, icon_url, w.id, generic_url],
+        );
+    }
+    // Migrate old 8-color to faithful MHF2 10-rarity HEX (r1..r10)
+    for w in &weapons {
+        let slug = weapon_icon_slug(&w.weapon_type);
+        let (icon_color, color_slug) = weapon_icon_color_mhf2(w.rarity);
+        let icon_url = format!("/icons/mhfu/weapons/{}-{}.png", slug, color_slug);
+        let _ = conn.execute(
+            "UPDATE weapons SET icon_color = ?1, icon_url = ?2 WHERE id = ?3 AND game_id = 5 AND (icon_color != ?1 OR icon_url != ?2)",
+            rusqlite::params![icon_color, icon_url, w.id],
         );
     }
 
@@ -733,29 +792,43 @@ fn derive_set_name(armor: &ArmorJson) -> String {
 }
 
 fn seed_armor_sets(conn: &Connection) -> Result<()> {
-    let json_data = include_str!("../../data/mh2g_armor.json");
-    let armors: Vec<ArmorJson> = serde_json::from_str(json_data)
+    // Use Fandom sets for MH2G (Low/High/G × Blademaster/Gunner, separate 2 sets faithful)
+    #[derive(Deserialize)]
+    struct FandomSet {
+        display_name: String,
+    }
+    let json_data = include_str!("../../data/mhfu_fandom_sets_final.json");
+    let fandom_sets: Vec<FandomSet> = serde_json::from_str(json_data)
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
 
-    // Assign set ids in order of first appearance using derived set name (faithful to game, fixes singleton D variants)
-    let mut set_id: i32 = 0;
-    let mut seen = Vec::<String>::new();
-    for a in &armors {
-        let set_name = derive_set_name(a);
-        if !seen.contains(&set_name) {
-            seen.push(set_name.clone());
-            set_id += 1;
-            conn.execute(
-                "INSERT OR IGNORE INTO armor_sets (id, game_id, name, bonus_skill, bonus_required, language)
-                 VALUES (?1, ?2, ?3, NULL, NULL, 'en')",
-                rusqlite::params![set_id, MH2G, set_name],
-            )?;
-        }
+    // If already seeded with Fandom count, skip destructive delete (idempotent)
+    let existing: i64 = conn
+        .query_row(
+            "SELECT COUNT(*) FROM armor_sets WHERE game_id = 5",
+            [],
+            |r| r.get(0),
+        )
+        .unwrap_or(0);
+    if existing as usize != fandom_sets.len() {
+        conn.execute("DELETE FROM armor_sets WHERE game_id = 5", [])?;
+    }
+    for (idx, s) in fandom_sets.iter().enumerate() {
+        let id = (idx as i32) + 1;
+        conn.execute(
+            "INSERT OR IGNORE INTO armor_sets (id, game_id, name, bonus_skill, bonus_required, language) VALUES (?1, ?2, ?3, NULL, NULL, 'en')",
+            rusqlite::params![id, MH2G, s.display_name],
+        )?;
+        // Ensure name is up to date (for renames)
+        let _ = conn.execute(
+            "UPDATE armor_sets SET name = ?1 WHERE id = ?2 AND game_id = 5",
+            rusqlite::params![s.display_name, id],
+        );
     }
 
     Ok(())
 }
 
+#[allow(dead_code)]
 fn armor_icon_color(rank: &str) -> &'static str {
     match rank {
         "G" => "Gold",
@@ -889,28 +962,77 @@ fn seed_armor(conn: &Connection) -> Result<()> {
     let armors: Vec<ArmorJson> = serde_json::from_str(json_data)
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
 
-    let mut set_map: Vec<(String, i32)> = Vec::new();
-    let mut set_id: i32 = 0;
-    for a in &armors {
-        let set_name = derive_set_name(a);
-        if !set_map.iter().any(|(s, _)| s == &set_name) {
-            set_id += 1;
-            set_map.push((set_name.clone(), set_id));
+    // Build Fandom set_id map for MH2G (display_name -> id, armor_id -> set_id) + hunter_type for armor_type
+    #[derive(Deserialize)]
+    struct FandomSet {
+        hunter_type: String,
+        pieces: Vec<FandomPiece>,
+    }
+    #[derive(Deserialize)]
+    struct FandomPiece {
+        armor_id: Option<i32>,
+    }
+    let fandom_data = include_str!("../../data/mhfu_fandom_sets_final.json");
+    let fandom_sets: Vec<FandomSet> = serde_json::from_str(fandom_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    let mut armor_to_set: std::collections::HashMap<i32, i32> = std::collections::HashMap::new();
+    let mut armor_to_type: std::collections::HashMap<i32, String> =
+        std::collections::HashMap::new();
+    for (idx, s) in fandom_sets.iter().enumerate() {
+        let set_id = (idx as i32) + 1;
+        let atype = match s.hunter_type.as_str() {
+            "blademaster" => "blade",
+            "gunner" => "gunner",
+            _ => "both",
+        };
+        for p in &s.pieces {
+            if let Some(aid) = p.armor_id {
+                armor_to_set.entry(aid).or_insert(set_id);
+                armor_to_type
+                    .entry(aid)
+                    .or_insert_with(|| atype.to_string());
+            }
         }
     }
-    let set_id_of = |set: &str| -> i32 {
-        set_map
-            .iter()
-            .find(|(s, _)| s == set)
-            .map(|(_, i)| *i)
-            .unwrap_or(0)
+    // Fallback for armors not in Fandom (e.g., some event armors): use derive
+    let mut set_map: Vec<(String, i32)> = Vec::new();
+    let mut set_id_fallback: i32 = fandom_sets.len() as i32;
+    let mut derive_cache: std::collections::HashMap<String, i32> = std::collections::HashMap::new();
+    let get_fallback_set = |armor: &ArmorJson,
+                            map: &mut Vec<(String, i32)>,
+                            cache: &mut std::collections::HashMap<String, i32>,
+                            fallback_id: &mut i32|
+     -> i32 {
+        let name = derive_set_name(armor);
+        if let Some(&id) = cache.get(&name) {
+            return id;
+        }
+        if let Some((_, id)) = map.iter().find(|(s, _)| s == &name) {
+            cache.insert(name.clone(), *id);
+            return *id;
+        }
+        *fallback_id += 1;
+        map.push((name.clone(), *fallback_id));
+        cache.insert(name.clone(), *fallback_id);
+        *fallback_id
     };
-    let set_id_of_armor = |armor: &ArmorJson| -> i32 { set_id_of(&derive_set_name(armor)) };
-
+    // For initial insert we need set_id per armor, but we will compute per armor
     for a in &armors {
         let gender = a.gender.clone().unwrap_or_else(|| "both".to_string());
-        let icon_color = armor_icon_color(&a.rank);
-        let icon_url = format!("/icons/mhfu/armor/{}.png", a.slot_type);
+        let rarity = a.rarity.unwrap_or(1);
+        let (icon_color, color_slug) = armor_icon_color_mhf2(rarity);
+        let icon_url = format!("/icons/mhfu/armor/{}-{}.png", a.slot_type, color_slug);
+        let set_id = if let Some(&sid) = armor_to_set.get(&a.id) {
+            sid
+        } else {
+            // fallback derive (for armors not in Fandom, e.g., some event)
+            get_fallback_set(a, &mut set_map, &mut derive_cache, &mut set_id_fallback)
+        };
+        let armor_type = if let Some(t) = armor_to_type.get(&a.id) {
+            t.clone()
+        } else {
+            a.armor_type.clone().unwrap_or_else(|| "both".to_string())
+        };
         conn.execute(
             "INSERT OR IGNORE INTO armor
                 (id, game_id, name, slot_type, rank, rarity, defense_base, defense_max,
@@ -920,19 +1042,177 @@ fn seed_armor(conn: &Connection) -> Result<()> {
             rusqlite::params![
                 a.id, MH2G, a.name, a.slot_type, a.rank, a.rarity, a.defense_base, a.defense_max,
                 a.resistance_fire, a.resistance_water, a.resistance_thunder, a.resistance_ice, a.resistance_dragon,
-                a.slots, a.skills, set_id_of_armor(a), a.armor_type, gender, a.crafting_cost, a.description,
+                a.slots, a.skills, set_id, armor_type, gender, a.crafting_cost, a.description,
                 a.slot_type, icon_color, icon_url
             ],
         )?;
     }
-    // Backfill existing DBs
+    // Reassign all MH2G armor set_id and armor_type to Fandom grouping (idempotent)
+    // For Leather/Chain, keep Green/Blue Pants independent as per user preference (exclude them from Fandom assignment)
+    let exclude_ids: std::collections::HashSet<i32> = [1662, 1663].iter().cloned().collect(); // Green Pants, Blue Pants
+    for (idx, s) in fandom_sets.iter().enumerate() {
+        let set_id = (idx as i32) + 1;
+        let atype = match s.hunter_type.as_str() {
+            "blademaster" => "blade",
+            "gunner" => "gunner",
+            _ => "both",
+        };
+        for p in &s.pieces {
+            if let Some(aid) = p.armor_id {
+                if exclude_ids.contains(&aid) {
+                    continue;
+                }
+                let _ = conn.execute(
+                    "UPDATE armor SET set_id = ?1, armor_type = ?2 WHERE id = ?3 AND game_id = 5",
+                    rusqlite::params![set_id, atype, aid],
+                );
+            }
+        }
+    }
+    // For any MH2G armor not in Fandom sets, ensure it is not stuck in a wrong Fandom set (e.g., Giaprey Gloves in Bone)
     for a in &armors {
-        let icon_color = armor_icon_color(&a.rank);
-        let icon_url = format!("/icons/mhfu/armor/{}.png", a.slot_type);
-        conn.execute(
-            "UPDATE armor SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(icon_url, ?3) WHERE id = ?4 AND game_id = 5 AND (icon_url IS NULL OR icon_name IS NULL)",
-            rusqlite::params![a.slot_type, icon_color, icon_url, a.id],
-        )?;
+        if !armor_to_set.contains_key(&a.id) && !exclude_ids.contains(&a.id) {
+            let current_set: Option<i32> = conn
+                .query_row(
+                    "SELECT set_id FROM armor WHERE id = ?1 AND game_id = 5",
+                    rusqlite::params![a.id],
+                    |r| r.get(0),
+                )
+                .optional()?
+                .flatten();
+            if let Some(cs) = current_set {
+                // If current set is a Fandom set (id <= fandom_sets.len()), it shouldn't contain this armor
+                if cs <= fandom_sets.len() as i32 {
+                    let fallback =
+                        get_fallback_set(a, &mut set_map, &mut derive_cache, &mut set_id_fallback);
+                    let _ = conn.execute(
+                        "UPDATE armor SET set_id = ?1, armor_type = ?2 WHERE id = ?3 AND game_id = 5",
+                        rusqlite::params![fallback, a.armor_type.clone().unwrap_or_else(|| "both".to_string()), a.id],
+                    );
+                    // Ensure fallback set exists
+                    let set_name = derive_set_name(a);
+                    let exists: Option<i32> = conn
+                        .query_row(
+                            "SELECT id FROM armor_sets WHERE name = ?1 AND game_id = 5",
+                            rusqlite::params![set_name],
+                            |r| r.get(0),
+                        )
+                        .optional()?
+                        .flatten();
+                    if exists.is_none() {
+                        let _ = conn.execute(
+                            "INSERT OR IGNORE INTO armor_sets (id, game_id, name, bonus_skill, bonus_required, language) VALUES (?1, ?2, ?3, NULL, NULL, 'en')",
+                            rusqlite::params![fallback, MH2G, set_name],
+                        );
+                    }
+                }
+            }
+        }
+    }
+    // Ensure Green/Blue Pants remain in their own independent sets (fallback)
+    for aid in exclude_ids {
+        // Find armor for this id
+        if let Some(armor) = armors.iter().find(|x| x.id == aid) {
+            let fallback =
+                get_fallback_set(armor, &mut set_map, &mut derive_cache, &mut set_id_fallback);
+            let _ = conn.execute(
+                "UPDATE armor SET set_id = ?1 WHERE id = ?2 AND game_id = 5",
+                rusqlite::params![fallback, aid],
+            );
+            // Ensure the fallback set exists in armor_sets
+            let set_name = derive_set_name(armor);
+            let exists: Option<i32> = conn
+                .query_row(
+                    "SELECT id FROM armor_sets WHERE name = ?1 AND game_id = 5",
+                    rusqlite::params![set_name],
+                    |r| r.get(0),
+                )
+                .optional()?
+                .flatten();
+            if exists.is_none() {
+                let _ = conn.execute(
+                    "INSERT OR IGNORE INTO armor_sets (id, game_id, name, bonus_skill, bonus_required, language) VALUES (?1, ?2, ?3, NULL, NULL, 'en')",
+                    rusqlite::params![fallback, MH2G, set_name],
+                );
+            }
+        }
+    }
+    // Final validation: ensure no set contains pieces that don't belong (e.g., Bone set should not contain Giaprey)
+    // For each MH2G armor, verify its set's name contains its prefix
+    let all_armor_sets: Vec<(i32, String)> = conn
+        .prepare("SELECT id, name FROM armor_sets WHERE game_id = 5")?
+        .query_map([], |r| Ok((r.get(0)?, r.get(1)?)))?
+        .filter_map(|r| r.ok())
+        .collect();
+    let set_name_map: std::collections::HashMap<i32, String> = all_armor_sets.into_iter().collect();
+    let mut to_fix: Vec<(i32, i32)> = Vec::new(); // (armor_id, correct_set_id)
+    for a in &armors {
+        let current_set: Option<i32> = conn
+            .query_row(
+                "SELECT set_id FROM armor WHERE id = ?1 AND game_id = 5",
+                rusqlite::params![a.id],
+                |r| r.get(0),
+            )
+            .optional()?
+            .flatten();
+        if let Some(cs) = current_set {
+            if let Some(sn) = set_name_map.get(&cs) {
+                // Check if armor name's prefix matches set name's first word
+                let armor_prefix = a
+                    .name
+                    .split_whitespace()
+                    .next()
+                    .unwrap_or("")
+                    .to_lowercase();
+                let set_prefix = sn.split_whitespace().next().unwrap_or("").to_lowercase();
+                // For sets like "Leather Armor Low", prefix is Leather, armor Leather Helm matches
+                // For Bone, armor Giaprey Gloves has prefix Giaprey, set Bone has prefix Bone -> mismatch
+                if !sn.to_lowercase().contains(&armor_prefix)
+                    && !a.name.to_lowercase().contains(&set_prefix)
+                {
+                    // Need to find correct set for this armor via derive or Fandom
+                    let correct = if let Some(&sid) = armor_to_set.get(&a.id) {
+                        sid
+                    } else {
+                        get_fallback_set(a, &mut set_map, &mut derive_cache, &mut set_id_fallback)
+                    };
+                    if correct != cs {
+                        to_fix.push((a.id, correct));
+                    }
+                }
+            }
+        }
+    }
+    for (aid, correct_sid) in to_fix {
+        let _ = conn.execute(
+            "UPDATE armor SET set_id = ?1 WHERE id = ?2 AND game_id = 5",
+            rusqlite::params![correct_sid, aid],
+        );
+    }
+    // Backfill existing DBs - migrate rank-based gray to faithful rarity HEX r1..r10
+    for a in &armors {
+        let rarity = a.rarity.unwrap_or(1);
+        let (icon_color, color_slug) = armor_icon_color_mhf2(rarity);
+        let icon_url = format!("/icons/mhfu/armor/{}-{}.png", a.slot_type, color_slug);
+        let generic = format!("/icons/mhfu/armor/{}.png", a.slot_type);
+        let _ = conn.execute(
+            "UPDATE armor SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(NULLIF(icon_url, ?3), ?4) WHERE id = ?5 AND game_id = 5 AND (icon_url IS NULL OR icon_name IS NULL)",
+            rusqlite::params![a.slot_type, icon_color, generic, icon_url, a.id],
+        );
+        let _ = conn.execute(
+            "UPDATE armor SET icon_color = ?1, icon_url = ?2 WHERE id = ?3 AND game_id = 5 AND (icon_color IN ('Gray','Gold','Blue','White','Yellow','Light Blue','Green','Purple','Orange','Red') OR icon_url = ?4 OR icon_url LIKE '%-white.png')",
+            rusqlite::params![icon_color, icon_url, a.id, generic],
+        );
+    }
+    // Faithful migration: ensure all existing rows get corrected HEX
+    for a in &armors {
+        let rarity = a.rarity.unwrap_or(1);
+        let (icon_color, color_slug) = armor_icon_color_mhf2(rarity);
+        let icon_url = format!("/icons/mhfu/armor/{}-{}.png", a.slot_type, color_slug);
+        let _ = conn.execute(
+            "UPDATE armor SET icon_color = ?1, icon_url = ?2 WHERE id = ?3 AND game_id = 5 AND (icon_color != ?1 OR icon_url != ?2)",
+            rusqlite::params![icon_color, icon_url, a.id],
+        );
     }
 
     Ok(())
@@ -1547,8 +1827,8 @@ fn seed_mhp3rd_weapons(conn: &Connection) -> Result<()> {
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
     for w in &weapons {
         let slug = weapon_icon_slug(&w.weapon_type);
-        let (icon_color, color_slug) = weapon_icon_color_mhw(w.rarity);
-        let icon_url = format!("/icons/mhfu/weapons/{}-{}.png", slug, color_slug);
+        let (icon_color, color_slug) = weapon_icon_color_mhp3(w.rarity);
+        let icon_url = format!("/icons/mhp3rd/weapons/{}-{}.png", slug, color_slug);
         conn.execute(
             "INSERT OR IGNORE INTO weapons (id, game_id, name, weapon_type, rarity, attack, affinity, element_type, element_value, sharpness, slots, skills, status_type, status_value, defense_bonus, crafting_cost, upgrade_path, description, sort_order, icon_name, icon_color, icon_url, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, 'en')",
             rusqlite::params![w.id, MHP3RD, w.name, w.weapon_type, w.rarity, w.attack, w.affinity, w.element_type, w.element_value, w.sharpness, w.slots, w.skills, w.status_type, w.status_value, w.defense_bonus, w.crafting_cost, w.upgrade_path, w.description, w.sort_order, w.weapon_type, icon_color, icon_url],
@@ -1556,16 +1836,26 @@ fn seed_mhp3rd_weapons(conn: &Connection) -> Result<()> {
     }
     for w in &weapons {
         let slug = weapon_icon_slug(&w.weapon_type);
-        let (icon_color, color_slug) = weapon_icon_color_mhw(w.rarity);
-        let icon_url = format!("/icons/mhfu/weapons/{}-{}.png", slug, color_slug);
-        let generic_url = format!("/icons/mhfu/weapons/{}.png", slug);
+        let (icon_color, color_slug) = weapon_icon_color_mhp3(w.rarity);
+        let icon_url = format!("/icons/mhp3rd/weapons/{}-{}.png", slug, color_slug);
+        let generic_url = format!("/icons/mhp3rd/weapons/{}.png", slug);
         conn.execute(
             "UPDATE weapons SET icon_name = COALESCE(icon_name, ?1), icon_color = ?2, icon_url = COALESCE(NULLIF(icon_url, ?3), ?4) WHERE id = ?5 AND game_id = 4",
             rusqlite::params![w.weapon_type, icon_color, generic_url, icon_url, w.id],
         )?;
         let _ = conn.execute(
-            "UPDATE weapons SET icon_color = ?1, icon_url = ?2 WHERE id = ?3 AND game_id = 4 AND (icon_color IN ('Gray','Gold','Green') OR icon_url = ?4)",
+            "UPDATE weapons SET icon_color = ?1, icon_url = ?2 WHERE id = ?3 AND game_id = 4 AND (icon_color IN ('Gray','Gold','Green','White','Yellow','Light Blue','Blue','Purple','Orange','Red') OR icon_url = ?4 OR icon_url LIKE '%mhfu%')",
             rusqlite::params![icon_color, icon_url, w.id, generic_url],
+        );
+    }
+    // Migrate old 8-color to faithful 7-rarity HEX r1..r7
+    for w in &weapons {
+        let slug = weapon_icon_slug(&w.weapon_type);
+        let (icon_color, color_slug) = weapon_icon_color_mhp3(w.rarity);
+        let icon_url = format!("/icons/mhp3rd/weapons/{}-{}.png", slug, color_slug);
+        let _ = conn.execute(
+            "UPDATE weapons SET icon_color = ?1, icon_url = ?2 WHERE id = ?3 AND game_id = 4 AND (icon_color != ?1 OR icon_url != ?2)",
+            rusqlite::params![icon_color, icon_url, w.id],
         );
     }
     Ok(())
@@ -1693,20 +1983,38 @@ fn seed_mhp3rd_armor(conn: &Connection) -> Result<()> {
     let set_id_of_armor = |armor: &ArmorJson| -> i32 { set_id_of(&derive_set_name(armor)) };
     for a in &armors {
         let gender = a.gender.clone().unwrap_or_else(|| "both".to_string());
-        let icon_color = armor_icon_color(&a.rank);
-        let icon_url = format!("/icons/mhfu/armor/{}.png", a.slot_type);
+        let rarity = a.rarity.unwrap_or(1);
+        let (icon_color, color_slug) = armor_icon_color_mhp3(rarity);
+        let icon_url = format!("/icons/mhp3rd/armor/{}-{}.png", a.slot_type, color_slug);
         conn.execute(
             "INSERT OR IGNORE INTO armor (id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, set_id, armor_type, gender, crafting_cost, description, icon_name, icon_color, icon_url, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, ?23, 'en')",
             rusqlite::params![a.id, MHP3RD, a.name, a.slot_type, a.rank, a.rarity, a.defense_base, a.defense_max, a.resistance_fire, a.resistance_water, a.resistance_thunder, a.resistance_ice, a.resistance_dragon, a.slots, a.skills, set_id_of_armor(a), a.armor_type, gender, a.crafting_cost, a.description, a.slot_type, icon_color, icon_url],
         )?;
     }
     for a in &armors {
-        let icon_color = armor_icon_color(&a.rank);
-        let icon_url = format!("/icons/mhfu/armor/{}.png", a.slot_type);
-        conn.execute(
-            "UPDATE armor SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(icon_url, ?3) WHERE id = ?4 AND game_id = 4 AND (icon_url IS NULL OR icon_name IS NULL)",
-            rusqlite::params![a.slot_type, icon_color, icon_url, a.id],
-        )?;
+        let rarity = a.rarity.unwrap_or(1);
+        let (icon_color, color_slug) = armor_icon_color_mhp3(rarity);
+        let icon_url = format!("/icons/mhp3rd/armor/{}-{}.png", a.slot_type, color_slug);
+        let generic = format!("/icons/mhp3rd/armor/{}.png", a.slot_type);
+        let old_generic = format!("/icons/mhfu/armor/{}.png", a.slot_type);
+        let _ = conn.execute(
+            "UPDATE armor SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(NULLIF(icon_url, ?3), COALESCE(NULLIF(icon_url, ?4), ?5)) WHERE id = ?6 AND game_id = 4 AND (icon_url IS NULL OR icon_name IS NULL)",
+            rusqlite::params![a.slot_type, icon_color, generic, old_generic, icon_url, a.id],
+        );
+        let _ = conn.execute(
+            "UPDATE armor SET icon_color = ?1, icon_url = ?2 WHERE id = ?3 AND game_id = 4 AND (icon_url = ?4 OR icon_url = ?5 OR icon_url LIKE '%mhfu%')",
+            rusqlite::params![icon_color, icon_url, a.id, generic, old_generic],
+        );
+    }
+    // Migrate old rank-based gray to faithful MHP3 7-rarity HEX
+    for a in &armors {
+        let rarity = a.rarity.unwrap_or(1);
+        let (icon_color, color_slug) = armor_icon_color_mhp3(rarity);
+        let icon_url = format!("/icons/mhp3rd/armor/{}-{}.png", a.slot_type, color_slug);
+        let _ = conn.execute(
+            "UPDATE armor SET icon_color = ?1, icon_url = ?2 WHERE id = ?3 AND game_id = 4 AND (icon_color != ?1 OR icon_url != ?2)",
+            rusqlite::params![icon_color, icon_url, a.id],
+        );
     }
     Ok(())
 }
@@ -2182,6 +2490,16 @@ fn seed_mhw_weapons(conn: &Connection) -> Result<()> {
             rusqlite::params![icon_url, icon_color, w.id, format!("/icons/mhw/weapons/{}.png", slug), slug],
         );
     }
+    // Migrate old 8-color (white/yellow etc) to faithful 12-HEX r1..r12 for existing DBs
+    for w in &weapons {
+        let slug = weapon_icon_slug(&w.weapon_type);
+        let (icon_color, color_slug) = weapon_icon_color_mhw(w.rarity);
+        let icon_url = format!("/icons/mhw/weapons/{}-{}.png", slug, color_slug);
+        let _ = conn.execute(
+            "UPDATE weapons SET icon_color = ?1, icon_url = ?2 WHERE id = ?3 AND game_id = 1 AND (icon_color != ?1 OR icon_url != ?2)",
+            rusqlite::params![icon_color, icon_url, w.id],
+        );
+    }
     Ok(())
 }
 
@@ -2224,6 +2542,241 @@ fn seed_mhw_weapon_craft(conn: &Connection) -> Result<()> {
                 rusqlite::params![r.weapon_id, r.craft_kind, r.item_id, r.quantity],
             )?;
         }
+    }
+    Ok(())
+}
+
+fn armor_icon_color_mhw(rarity: i32) -> (&'static str, &'static str) {
+    // MHWorld & MHWI faithful 12-hex rarity colors from Help:Item_Colors
+    match rarity {
+        1 => ("#AAAAAA", "r1"),
+        2 => ("#DEDEDE", "r2"),
+        3 => ("#A1C42E", "r3"),
+        4 => ("#48AB3F", "r4"),
+        5 => ("#5CAEBB", "r5"),
+        6 => ("#595CDA", "r6"),
+        7 => ("#8D59EF", "r7"),
+        8 => ("#C76D46", "r8"),
+        9 => ("#B3436A", "r9"),
+        10 => ("#0AD5FA", "r10"),
+        11 => ("#FAC81E", "r11"),
+        12 => ("#B4F5FF", "r12"),
+        _ => ("#AAAAAA", "r1"),
+    }
+}
+
+fn armor_slot_slug(slot: &str) -> &'static str {
+    match slot {
+        "head" => "head",
+        "chest" => "chest",
+        "arms" => "arms",
+        "waist" => "waist",
+        "legs" => "legs",
+        _ => "head",
+    }
+}
+
+fn seed_mhw_skills(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct MhwSkillJson {
+        id: i32,
+        name: String,
+        description: Option<String>,
+        max_level: Option<i32>,
+    }
+    let json_data = include_str!("../../data/mhw_skills.json");
+    let skills: Vec<MhwSkillJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for s in skills {
+        conn.execute(
+            "INSERT OR IGNORE INTO skills (id, game_id, name, description, max_level, language) VALUES (?1, ?2, ?3, ?4, ?5, 'en')",
+            rusqlite::params![s.id, MHW, s.name, s.description, s.max_level],
+        )?;
+    }
+    Ok(())
+}
+
+fn seed_mhw_skill_levels(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct MhwLevelJson {
+        id: i32,
+        skill_id: i32,
+        points: i32,
+        ability_name: String,
+        description: Option<String>,
+    }
+    let json_data = include_str!("../../data/mhw_skill_levels.json");
+    let levels: Vec<MhwLevelJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for l in levels {
+        conn.execute(
+            "INSERT OR IGNORE INTO skill_levels (id, skill_id, points, ability_name, description, language) VALUES (?1, ?2, ?3, ?4, ?5, 'en')",
+            rusqlite::params![l.id, l.skill_id, l.points, l.ability_name, l.description],
+        )?;
+    }
+    Ok(())
+}
+
+fn seed_mhw_armor_sets(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct MhwSetJson {
+        id: i32,
+        name: String,
+        bonus_skill: Option<String>,
+        bonus_required: Option<i32>,
+    }
+    let json_data = include_str!("../../data/mhw_armor_sets.json");
+    let sets: Vec<MhwSetJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for s in sets {
+        conn.execute(
+            "INSERT OR IGNORE INTO armor_sets (id, game_id, name, bonus_skill, bonus_required, language) VALUES (?1, ?2, ?3, ?4, ?5, 'en')",
+            rusqlite::params![s.id, MHW, s.name, s.bonus_skill, s.bonus_required],
+        )?;
+    }
+    Ok(())
+}
+
+fn seed_mhw_armor(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct MhwArmorJson {
+        id: i32,
+        set: String,
+        slot_type: String,
+        name: String,
+        rank: String,
+        rarity: Option<i32>,
+        defense_base: Option<i32>,
+        defense_max: Option<i32>,
+        resistance_fire: Option<i32>,
+        resistance_water: Option<i32>,
+        resistance_thunder: Option<i32>,
+        resistance_ice: Option<i32>,
+        resistance_dragon: Option<i32>,
+        slots: Option<String>,
+        skills: Option<String>,
+        armor_type: Option<String>,
+        gender: Option<String>,
+        crafting_cost: Option<i32>,
+        description: Option<String>,
+    }
+    let json_data = include_str!("../../data/mhw_armor.json");
+    let armors: Vec<MhwArmorJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    // Map set name -> id via mhw_armor_sets.json (authoritative)
+    let sets_data = include_str!("../../data/mhw_armor_sets.json");
+    #[derive(Deserialize)]
+    struct SetMap {
+        id: i32,
+        name: String,
+    }
+    let sets: Vec<SetMap> = serde_json::from_str(sets_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    let mut set_map = std::collections::HashMap::new();
+    for s in &sets {
+        set_map.insert(s.name.clone(), s.id);
+    }
+    for a in &armors {
+        let set_id = set_map.get(&a.set).copied().unwrap_or(0);
+        let rarity = a.rarity.unwrap_or(1);
+        let (icon_color, color_slug) = armor_icon_color_mhw(rarity);
+        let slot = armor_slot_slug(&a.slot_type);
+        let icon_url = format!("/icons/mhw/armor/{}-{}.png", slot, color_slug);
+        let icon_name = a.slot_type.clone();
+        conn.execute(
+            "INSERT OR IGNORE INTO armor (id, game_id, name, slot_type, rank, rarity, defense_base, defense_max, resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon, slots, skills, set_id, armor_type, gender, crafting_cost, description, icon_name, icon_color, icon_url, language) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, ?23, 'en')",
+            rusqlite::params![a.id, MHW, a.name, a.slot_type, a.rank, a.rarity, a.defense_base, a.defense_max, a.resistance_fire, a.resistance_water, a.resistance_thunder, a.resistance_ice, a.resistance_dragon, a.slots, a.skills, set_id, a.armor_type, a.gender.clone().unwrap_or_else(|| "both".to_string()), a.crafting_cost, a.description, icon_name, icon_color, icon_url],
+        )?;
+    }
+    // Backfill per-rarity icons for existing DBs
+    for a in &armors {
+        let rarity = a.rarity.unwrap_or(1);
+        let (icon_color, color_slug) = armor_icon_color_mhw(rarity);
+        let slot = armor_slot_slug(&a.slot_type);
+        let icon_url = format!("/icons/mhw/armor/{}-{}.png", slot, color_slug);
+        let generic = format!("/icons/mhw/armor/{}.png", slot);
+        let _ = conn.execute(
+            "UPDATE armor SET icon_name = COALESCE(icon_name, ?1), icon_color = ?2, icon_url = COALESCE(NULLIF(icon_url, ?3), ?4) WHERE id = ?5 AND game_id = 1",
+            rusqlite::params![a.slot_type, icon_color, generic, icon_url, a.id],
+        );
+        let _ = conn.execute(
+            "UPDATE armor SET icon_color = ?1, icon_url = ?2 WHERE id = ?3 AND game_id = 1 AND (icon_color IN ('Gray','Gold','Green','White','Yellow','Light Blue','Blue','Purple','Orange','Red') OR icon_url = ?4)",
+            rusqlite::params![icon_color, icon_url, a.id, generic],
+        );
+    }
+    // Migrate old 8-color white/yellow... to faithful 12-HEX r1..r12
+    for a in &armors {
+        let rarity = a.rarity.unwrap_or(1);
+        let (icon_color, color_slug) = armor_icon_color_mhw(rarity);
+        let slot = armor_slot_slug(&a.slot_type);
+        let icon_url = format!("/icons/mhw/armor/{}-{}.png", slot, color_slug);
+        let _ = conn.execute(
+            "UPDATE armor SET icon_color = ?1, icon_url = ?2 WHERE id = ?3 AND game_id = 1 AND (icon_color != ?1 OR icon_url != ?2)",
+            rusqlite::params![icon_color, icon_url, a.id],
+        );
+    }
+    Ok(())
+}
+
+fn seed_mhw_armor_materials(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct AMat {
+        armor_id: i32,
+        item_id: i32,
+        quantity: i32,
+    }
+    let json_data = include_str!("../../data/mhw_armor_materials.json");
+    let mats: Vec<AMat> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for m in mats {
+        if item_exists(conn, m.item_id)? {
+            // FK guard: armor must exist
+            let exists: Option<i32> = conn
+                .query_row(
+                    "SELECT id FROM armor WHERE id = ?1 AND game_id = 1",
+                    rusqlite::params![m.armor_id],
+                    |r| r.get(0),
+                )
+                .optional()?;
+            if exists.is_some() {
+                conn.execute(
+                    "INSERT OR IGNORE INTO armor_materials (armor_id, item_id, quantity) VALUES (?1, ?2, ?3)",
+                    rusqlite::params![m.armor_id, m.item_id, m.quantity],
+                )?;
+            }
+        }
+    }
+    Ok(())
+}
+
+fn seed_mhw_armor_skill_points(conn: &Connection) -> Result<()> {
+    // Reuse parse_skill_string logic but for game_id 1 with MHW skill names (trim only, no MH2G aliases)
+    let mut stmt = conn.prepare(
+        "SELECT id, skills FROM armor WHERE game_id = 1 AND skills IS NOT NULL AND skills != ''",
+    )?;
+    let rows = stmt.query_map([], |row| {
+        Ok((row.get::<_, i32>(0)?, row.get::<_, String>(1)?))
+    })?;
+    let mut to_insert: Vec<(i32, i32, i32)> = Vec::new();
+    for r in rows {
+        let (armor_id, skills_str) = r?;
+        for (name, pts) in parse_skill_string(&skills_str) {
+            let normalized = name.trim().to_string();
+            let sid: Option<i32> = conn
+                .query_row(
+                    "SELECT id FROM skills WHERE name = ?1 AND game_id = 1",
+                    rusqlite::params![normalized],
+                    |row| row.get(0),
+                )
+                .optional()?;
+            if let Some(sid) = sid {
+                to_insert.push((armor_id, sid, pts));
+            }
+        }
+    }
+    drop(stmt);
+    for (aid, sid, pts) in to_insert {
+        conn.execute("INSERT OR IGNORE INTO armor_skill_points (armor_id, skill_id, points) VALUES (?1, ?2, ?3)", rusqlite::params![aid, sid, pts])?;
     }
     Ok(())
 }

@@ -1,0 +1,2459 @@
+[
+  {
+    "id": 20001,
+    "name": "Leather",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20002,
+    "name": "Chainmail",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20003,
+    "name": "Hunter's",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20004,
+    "name": "Bone",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20005,
+    "name": "Vespoid",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20006,
+    "name": "Kestodon",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20007,
+    "name": "Gajau",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20008,
+    "name": "Jagras",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20009,
+    "name": "Kulu",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20010,
+    "name": "Alloy",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20011,
+    "name": "Pukei",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20012,
+    "name": "Barroth",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20013,
+    "name": "Jyura",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20014,
+    "name": "Kadachi",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20015,
+    "name": "High Metal",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20016,
+    "name": "King Beetle",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20017,
+    "name": "Shamos",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20018,
+    "name": "Hornetaur",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20019,
+    "name": "Anja",
+    "rank": "Low",
+    "bonus_skill": "Adrenaline",
+    "bonus_required": 3
+  },
+  {
+    "id": 20020,
+    "name": "Rathian",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20021,
+    "name": "Tzitzi",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20022,
+    "name": "Lumu",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20023,
+    "name": "Girros",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20024,
+    "name": "Baan",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20025,
+    "name": "Ingot",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20026,
+    "name": "Death Stench",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20027,
+    "name": "Brigade",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20028,
+    "name": "Legiana",
+    "rank": "Low",
+    "bonus_skill": "Good Luck",
+    "bonus_required": 3
+  },
+  {
+    "id": 20029,
+    "name": "Odogaron",
+    "rank": "Low",
+    "bonus_skill": "Punishing Draw",
+    "bonus_required": 3
+  },
+  {
+    "id": 20030,
+    "name": "Rathalos",
+    "rank": "Low",
+    "bonus_skill": "Critical Element",
+    "bonus_required": 3
+  },
+  {
+    "id": 20031,
+    "name": "Diablos",
+    "rank": "Low",
+    "bonus_skill": "Bludgeoner",
+    "bonus_required": 3
+  },
+  {
+    "id": 20032,
+    "name": "Kirin",
+    "rank": "Low",
+    "bonus_skill": "Capture Master",
+    "bonus_required": 4
+  },
+  {
+    "id": 20033,
+    "name": "Blossom",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20034,
+    "name": "Diver",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20035,
+    "name": "Harvest",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20036,
+    "name": "Orion",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20037,
+    "name": "Gala Suit",
+    "rank": "Low",
+    "bonus_skill": "Great Luck",
+    "bonus_required": 5
+  },
+  {
+    "id": 20038,
+    "name": "Butterfly",
+    "rank": "Low",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20039,
+    "name": "Leather α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20040,
+    "name": "Leather β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20041,
+    "name": "Chainmail α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20042,
+    "name": "Chainmail β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20043,
+    "name": "Hunter's α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20044,
+    "name": "Hunter's β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20045,
+    "name": "Bone α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20046,
+    "name": "Bone β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20047,
+    "name": "Alloy α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20048,
+    "name": "Alloy β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20049,
+    "name": "King Beetle α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20050,
+    "name": "King Beetle β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20051,
+    "name": "Vespoid α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20052,
+    "name": "Vespoid β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20053,
+    "name": "Hornetaur α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20054,
+    "name": "Hornetaur β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20055,
+    "name": "Mosswine Mask α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20056,
+    "name": "Kestodon α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20057,
+    "name": "Kestodon β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20058,
+    "name": "Gajau α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20059,
+    "name": "Gajau β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20060,
+    "name": "Shamos α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20061,
+    "name": "Shamos β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20062,
+    "name": "Jagras α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20063,
+    "name": "Jagras β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20064,
+    "name": "Kulu α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20065,
+    "name": "Kulu β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20066,
+    "name": "Tzitzi α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20067,
+    "name": "Tzitzi β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20068,
+    "name": "Girros α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20069,
+    "name": "Girros β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20070,
+    "name": "Pukei α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20071,
+    "name": "Pukei β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20072,
+    "name": "Barroth α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20073,
+    "name": "Barroth β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20074,
+    "name": "Anja α",
+    "rank": "High",
+    "bonus_skill": "Adrenaline",
+    "bonus_required": 2
+  },
+  {
+    "id": 20075,
+    "name": "Anja β",
+    "rank": "High",
+    "bonus_skill": "Adrenaline",
+    "bonus_required": 2
+  },
+  {
+    "id": 20076,
+    "name": "Jyura α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20077,
+    "name": "Jyura β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20078,
+    "name": "Kadachi α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20079,
+    "name": "Kadachi β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20080,
+    "name": "Lumu α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20081,
+    "name": "Lumu β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20082,
+    "name": "Rathian α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20083,
+    "name": "Rathian β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20084,
+    "name": "Rath Heart α",
+    "rank": "High",
+    "bonus_skill": "Poison Duration Up",
+    "bonus_required": 3
+  },
+  {
+    "id": 20085,
+    "name": "Rath Heart β",
+    "rank": "High",
+    "bonus_skill": "Poison Duration Up",
+    "bonus_required": 3
+  },
+  {
+    "id": 20086,
+    "name": "Baan α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20087,
+    "name": "Baan β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20088,
+    "name": "Gastodon α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20089,
+    "name": "Gastodon β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20090,
+    "name": "Barnos α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20091,
+    "name": "Barnos β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20092,
+    "name": "Dodogama α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20093,
+    "name": "Dodogama β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20094,
+    "name": "Zorah α",
+    "rank": "High",
+    "bonus_skill": "Critical Status",
+    "bonus_required": 3
+  },
+  {
+    "id": 20095,
+    "name": "Zorah β",
+    "rank": "High",
+    "bonus_skill": "Critical Status",
+    "bonus_required": 3
+  },
+  {
+    "id": 20096,
+    "name": "High Metal α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20097,
+    "name": "High Metal β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20098,
+    "name": "Ingot α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20099,
+    "name": "Ingot β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20100,
+    "name": "Brigade α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20101,
+    "name": "Brigade β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20102,
+    "name": "Faux Felyne α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20103,
+    "name": "Strategist α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20104,
+    "name": "Lavasioth α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20105,
+    "name": "Lavasioth β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20106,
+    "name": "Legiana α",
+    "rank": "High",
+    "bonus_skill": "Good Luck",
+    "bonus_required": 2
+  },
+  {
+    "id": 20107,
+    "name": "Legiana β",
+    "rank": "High",
+    "bonus_skill": "Good Luck",
+    "bonus_required": 2
+  },
+  {
+    "id": 20108,
+    "name": "Odogaron α",
+    "rank": "High",
+    "bonus_skill": "Punishing Draw",
+    "bonus_required": 2
+  },
+  {
+    "id": 20109,
+    "name": "Odogaron β",
+    "rank": "High",
+    "bonus_skill": "Punishing Draw",
+    "bonus_required": 2
+  },
+  {
+    "id": 20110,
+    "name": "Rathalos α",
+    "rank": "High",
+    "bonus_skill": "Critical Element",
+    "bonus_required": 2
+  },
+  {
+    "id": 20111,
+    "name": "Rathalos β",
+    "rank": "High",
+    "bonus_skill": "Critical Element",
+    "bonus_required": 2
+  },
+  {
+    "id": 20112,
+    "name": "Rath Soul α",
+    "rank": "High",
+    "bonus_skill": "Critical Element",
+    "bonus_required": 2
+  },
+  {
+    "id": 20113,
+    "name": "Rath Soul β",
+    "rank": "High",
+    "bonus_skill": "Critical Element",
+    "bonus_required": 2
+  },
+  {
+    "id": 20114,
+    "name": "Diablos α",
+    "rank": "High",
+    "bonus_skill": "Bludgeoner",
+    "bonus_required": 2
+  },
+  {
+    "id": 20115,
+    "name": "Diablos β",
+    "rank": "High",
+    "bonus_skill": "Bludgeoner",
+    "bonus_required": 2
+  },
+  {
+    "id": 20116,
+    "name": "Diablos Nero α",
+    "rank": "High",
+    "bonus_skill": "Bludgeoner",
+    "bonus_required": 2
+  },
+  {
+    "id": 20117,
+    "name": "Diablos Nero β",
+    "rank": "High",
+    "bonus_skill": "Bludgeoner",
+    "bonus_required": 2
+  },
+  {
+    "id": 20118,
+    "name": "Uragaan α",
+    "rank": "High",
+    "bonus_skill": "Guard Up",
+    "bonus_required": 3
+  },
+  {
+    "id": 20119,
+    "name": "Uragaan β",
+    "rank": "High",
+    "bonus_skill": "Guard Up",
+    "bonus_required": 3
+  },
+  {
+    "id": 20120,
+    "name": "Bazel α",
+    "rank": "High",
+    "bonus_skill": "Guts",
+    "bonus_required": 3
+  },
+  {
+    "id": 20121,
+    "name": "Bazel β",
+    "rank": "High",
+    "bonus_skill": "Guts",
+    "bonus_required": 3
+  },
+  {
+    "id": 20122,
+    "name": "Damascus α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20123,
+    "name": "Damascus β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20124,
+    "name": "Dober α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20125,
+    "name": "Dober β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20126,
+    "name": "Death Stench α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20127,
+    "name": "Death Stench β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20128,
+    "name": "Skull α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20129,
+    "name": "Nergigante α",
+    "rank": "High",
+    "bonus_skill": "Hasten Recovery",
+    "bonus_required": 3
+  },
+  {
+    "id": 20130,
+    "name": "Nergigante β",
+    "rank": "High",
+    "bonus_skill": "Hasten Recovery",
+    "bonus_required": 3
+  },
+  {
+    "id": 20131,
+    "name": "Teostra α",
+    "rank": "High",
+    "bonus_skill": "Master's Touch",
+    "bonus_required": 3
+  },
+  {
+    "id": 20132,
+    "name": "Teostra β",
+    "rank": "High",
+    "bonus_skill": "Master's Touch",
+    "bonus_required": 3
+  },
+  {
+    "id": 20133,
+    "name": "Kushala α",
+    "rank": "High",
+    "bonus_skill": "Nullify Wind Pressure",
+    "bonus_required": 3
+  },
+  {
+    "id": 20134,
+    "name": "Kushala β",
+    "rank": "High",
+    "bonus_skill": "Nullify Wind Pressure",
+    "bonus_required": 3
+  },
+  {
+    "id": 20135,
+    "name": "Vaal Hazak α",
+    "rank": "High",
+    "bonus_skill": "Super Recovery",
+    "bonus_required": 3
+  },
+  {
+    "id": 20136,
+    "name": "Vaal Hazak β",
+    "rank": "High",
+    "bonus_skill": "Super Recovery",
+    "bonus_required": 3
+  },
+  {
+    "id": 20137,
+    "name": "Kirin α",
+    "rank": "High",
+    "bonus_skill": "Capture Master",
+    "bonus_required": 3
+  },
+  {
+    "id": 20138,
+    "name": "Kirin β",
+    "rank": "High",
+    "bonus_skill": "Capture Master",
+    "bonus_required": 3
+  },
+  {
+    "id": 20139,
+    "name": "Xeno'jiiva α",
+    "rank": "High",
+    "bonus_skill": "Razor Sharp/Spare Shot",
+    "bonus_required": 3
+  },
+  {
+    "id": 20140,
+    "name": "Xeno'jiiva β",
+    "rank": "High",
+    "bonus_skill": "Razor Sharp/Spare Shot",
+    "bonus_required": 3
+  },
+  {
+    "id": 20141,
+    "name": "Guild Cross α",
+    "rank": "High",
+    "bonus_skill": "Great Luck",
+    "bonus_required": 4
+  },
+  {
+    "id": 20142,
+    "name": "Guild Cross β",
+    "rank": "High",
+    "bonus_skill": "Great Luck",
+    "bonus_required": 4
+  },
+  {
+    "id": 20143,
+    "name": "Dragonking α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20144,
+    "name": "Commission α",
+    "rank": "High",
+    "bonus_skill": "Carving Master",
+    "bonus_required": 4
+  },
+  {
+    "id": 20145,
+    "name": "Commission β",
+    "rank": "High",
+    "bonus_skill": "Carving Master",
+    "bonus_required": 4
+  },
+  {
+    "id": 20146,
+    "name": "Deviljho α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20147,
+    "name": "Deviljho β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20148,
+    "name": "Kulve Taroth α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20149,
+    "name": "Kulve Taroth β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20150,
+    "name": "Lunastra α",
+    "rank": "High",
+    "bonus_skill": "Stamina Cap Up",
+    "bonus_required": 2
+  },
+  {
+    "id": 20151,
+    "name": "Lunastra β",
+    "rank": "High",
+    "bonus_skill": "Stamina Cap Up",
+    "bonus_required": 2
+  },
+  {
+    "id": 20152,
+    "name": "Blossom α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20153,
+    "name": "Diver α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20154,
+    "name": "Harvest α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20155,
+    "name": "Orion α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20156,
+    "name": "Gala Suit α",
+    "rank": "High",
+    "bonus_skill": "Great Luck",
+    "bonus_required": 5
+  },
+  {
+    "id": 20157,
+    "name": "Butterfly α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20158,
+    "name": "Butterfly β",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20159,
+    "name": "Vaal Hazak γ",
+    "rank": "High",
+    "bonus_skill": "Super Recovery",
+    "bonus_required": 3
+  },
+  {
+    "id": 20160,
+    "name": "Kirin γ",
+    "rank": "High",
+    "bonus_skill": "Capture Master",
+    "bonus_required": 3
+  },
+  {
+    "id": 20161,
+    "name": "Teostra γ",
+    "rank": "High",
+    "bonus_skill": "Master's Touch",
+    "bonus_required": 3
+  },
+  {
+    "id": 20162,
+    "name": "Kushala γ",
+    "rank": "High",
+    "bonus_skill": "Nullify Wind Pressure",
+    "bonus_required": 3
+  },
+  {
+    "id": 20163,
+    "name": "Nergigante γ",
+    "rank": "High",
+    "bonus_skill": "Hasten Recovery",
+    "bonus_required": 3
+  },
+  {
+    "id": 20164,
+    "name": "Zorah γ",
+    "rank": "High",
+    "bonus_skill": "Critical Status",
+    "bonus_required": 3
+  },
+  {
+    "id": 20165,
+    "name": "Xeno'jiiva γ",
+    "rank": "High",
+    "bonus_skill": "Razor Sharp/Spare Shot",
+    "bonus_required": 3
+  },
+  {
+    "id": 20166,
+    "name": "Lunastra γ",
+    "rank": "High",
+    "bonus_skill": "Stamina Cap Up",
+    "bonus_required": 2
+  },
+  {
+    "id": 20167,
+    "name": "Kulve Taroth γ",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20168,
+    "name": "Azure Starlord α",
+    "rank": "High",
+    "bonus_skill": "Critical Element",
+    "bonus_required": 2
+  },
+  {
+    "id": 20169,
+    "name": "Dante α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20170,
+    "name": "Drachen α",
+    "rank": "High",
+    "bonus_skill": "Elemental Airborne",
+    "bonus_required": 2
+  },
+  {
+    "id": 20171,
+    "name": "Sealed Eyepatch α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20172,
+    "name": "Shadow Shades α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20173,
+    "name": "Kulu-Ya-Ku Head α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20174,
+    "name": "Wiggler Head α",
+    "rank": "High",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20175,
+    "name": "Bone α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20176,
+    "name": "Bone β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20177,
+    "name": "Alloy α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20178,
+    "name": "Alloy β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20179,
+    "name": "Vespoid α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20180,
+    "name": "Vespoid β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20181,
+    "name": "Hornetaur α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20182,
+    "name": "Hornetaur β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20183,
+    "name": "Kestodon α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20184,
+    "name": "Kestodon β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20185,
+    "name": "Gajau α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20186,
+    "name": "Gajau β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20187,
+    "name": "Shamos α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20188,
+    "name": "Shamos β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20189,
+    "name": "Gastodon α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20190,
+    "name": "Gastodon β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20191,
+    "name": "Barnos α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20192,
+    "name": "Barnos β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20193,
+    "name": "Wulg α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20194,
+    "name": "Wulg β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20195,
+    "name": "Cortos α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20196,
+    "name": "Cortos β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20197,
+    "name": "Jagras α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20198,
+    "name": "Jagras β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20199,
+    "name": "Tzitzi α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20200,
+    "name": "Tzitzi β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20201,
+    "name": "Girros α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20202,
+    "name": "Girros β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20203,
+    "name": "Dodogama α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20204,
+    "name": "Dodogama β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20205,
+    "name": "Kulu α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20206,
+    "name": "Kulu β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20207,
+    "name": "Pukei α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20208,
+    "name": "Pukei β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20209,
+    "name": "Coral Pukei α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20210,
+    "name": "Coral Pukei β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20211,
+    "name": "Barroth α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20212,
+    "name": "Barroth β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20213,
+    "name": "Jyura α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20214,
+    "name": "Jyura β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20215,
+    "name": "Beo α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20216,
+    "name": "Beo β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20217,
+    "name": "Kadachi α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20218,
+    "name": "Kadachi β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20219,
+    "name": "Viper Kadachi α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20220,
+    "name": "Viper Kadachi β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20221,
+    "name": "High Metal α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20222,
+    "name": "High Metal β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20223,
+    "name": "Banbaro α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20224,
+    "name": "Banbaro β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20225,
+    "name": "Anja α+",
+    "rank": "Master",
+    "bonus_skill": "Stamina Cap Up",
+    "bonus_required": 2
+  },
+  {
+    "id": 20226,
+    "name": "Anja β+",
+    "rank": "Master",
+    "bonus_skill": "Stamina Cap Up",
+    "bonus_required": 2
+  },
+  {
+    "id": 20227,
+    "name": "Fulgur Anja α+",
+    "rank": "Master",
+    "bonus_skill": "Stamina Cap Up",
+    "bonus_required": 2
+  },
+  {
+    "id": 20228,
+    "name": "Fulgur Anja β+",
+    "rank": "Master",
+    "bonus_skill": "Stamina Cap Up",
+    "bonus_required": 2
+  },
+  {
+    "id": 20229,
+    "name": "Rathian α+",
+    "rank": "Master",
+    "bonus_skill": "Poison Duration Up",
+    "bonus_required": 2
+  },
+  {
+    "id": 20230,
+    "name": "Rathian β+",
+    "rank": "Master",
+    "bonus_skill": "Poison Duration Up",
+    "bonus_required": 2
+  },
+  {
+    "id": 20231,
+    "name": "Rath Heart α+",
+    "rank": "Master",
+    "bonus_skill": "Poison Duration Up",
+    "bonus_required": 2
+  },
+  {
+    "id": 20232,
+    "name": "Rath Heart β+",
+    "rank": "Master",
+    "bonus_skill": "Poison Duration Up",
+    "bonus_required": 2
+  },
+  {
+    "id": 20233,
+    "name": "Lumu α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20234,
+    "name": "Lumu β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20235,
+    "name": "Lumu Phantasm α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20236,
+    "name": "Lumu Phantasm β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20237,
+    "name": "Baan α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20238,
+    "name": "Baan β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20239,
+    "name": "Artian α+",
+    "rank": "Master",
+    "bonus_skill": "Critical Status",
+    "bonus_required": 2
+  },
+  {
+    "id": 20240,
+    "name": "Artian β+",
+    "rank": "Master",
+    "bonus_skill": "Critical Status",
+    "bonus_required": 2
+  },
+  {
+    "id": 20241,
+    "name": "Clockwork α+",
+    "rank": "Master",
+    "bonus_skill": "Bombardier Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20242,
+    "name": "Clockwork β+",
+    "rank": "Master",
+    "bonus_skill": "Bombardier Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20243,
+    "name": "Ingot α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20244,
+    "name": "Ingot β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20245,
+    "name": "Barioth α+",
+    "rank": "Master",
+    "bonus_skill": "Punishing Draw",
+    "bonus_required": 2
+  },
+  {
+    "id": 20246,
+    "name": "Barioth β+",
+    "rank": "Master",
+    "bonus_skill": "Punishing Draw",
+    "bonus_required": 2
+  },
+  {
+    "id": 20247,
+    "name": "Rathalos α+",
+    "rank": "Master",
+    "bonus_skill": "Mind's Eye/Ballistics",
+    "bonus_required": 3
+  },
+  {
+    "id": 20248,
+    "name": "Rathalos β+",
+    "rank": "Master",
+    "bonus_skill": "Mind's Eye/Ballistics",
+    "bonus_required": 3
+  },
+  {
+    "id": 20249,
+    "name": "Rath Soul α+",
+    "rank": "Master",
+    "bonus_skill": "Mind's Eye/Ballistics",
+    "bonus_required": 3
+  },
+  {
+    "id": 20250,
+    "name": "Rath Soul β+",
+    "rank": "Master",
+    "bonus_skill": "Mind's Eye/Ballistics",
+    "bonus_required": 3
+  },
+  {
+    "id": 20251,
+    "name": "Diablos α+",
+    "rank": "Master",
+    "bonus_skill": "Slugger Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20252,
+    "name": "Diablos β+",
+    "rank": "Master",
+    "bonus_skill": "Slugger Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20253,
+    "name": "Diablos Nero α+",
+    "rank": "Master",
+    "bonus_skill": "Slugger Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20254,
+    "name": "Diablos Nero β+",
+    "rank": "Master",
+    "bonus_skill": "Slugger Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20255,
+    "name": "Legiana α+",
+    "rank": "Master",
+    "bonus_skill": "Bow Charge Plus",
+    "bonus_required": 3
+  },
+  {
+    "id": 20256,
+    "name": "Legiana β+",
+    "rank": "Master",
+    "bonus_skill": "Bow Charge Plus",
+    "bonus_required": 3
+  },
+  {
+    "id": 20257,
+    "name": "Shrieking Legia α+",
+    "rank": "Master",
+    "bonus_skill": "Bow Charge Plus",
+    "bonus_required": 3
+  },
+  {
+    "id": 20258,
+    "name": "Shrieking Legia β+",
+    "rank": "Master",
+    "bonus_skill": "Bow Charge Plus",
+    "bonus_required": 3
+  },
+  {
+    "id": 20259,
+    "name": "Odogaron α+",
+    "rank": "Master",
+    "bonus_skill": "Protective Polish",
+    "bonus_required": 3
+  },
+  {
+    "id": 20260,
+    "name": "Odogaron β+",
+    "rank": "Master",
+    "bonus_skill": "Protective Polish",
+    "bonus_required": 3
+  },
+  {
+    "id": 20261,
+    "name": "Death Garon α+",
+    "rank": "Master",
+    "bonus_skill": "Protective Polish",
+    "bonus_required": 3
+  },
+  {
+    "id": 20262,
+    "name": "Death Garon β+",
+    "rank": "Master",
+    "bonus_skill": "Protective Polish",
+    "bonus_required": 3
+  },
+  {
+    "id": 20263,
+    "name": "Lavasioth α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20264,
+    "name": "Lavasioth β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20265,
+    "name": "Uragaan α+",
+    "rank": "Master",
+    "bonus_skill": "Guard Up",
+    "bonus_required": 2
+  },
+  {
+    "id": 20266,
+    "name": "Uragaan β+",
+    "rank": "Master",
+    "bonus_skill": "Guard Up",
+    "bonus_required": 2
+  },
+  {
+    "id": 20267,
+    "name": "Nargacuga α+",
+    "rank": "Master",
+    "bonus_skill": "True Razor Sharp/Spare Shot",
+    "bonus_required": 3
+  },
+  {
+    "id": 20268,
+    "name": "Nargacuga β+",
+    "rank": "Master",
+    "bonus_skill": "True Razor Sharp/Spare Shot",
+    "bonus_required": 3
+  },
+  {
+    "id": 20269,
+    "name": "Glavenus α+",
+    "rank": "Master",
+    "bonus_skill": "Maximum Might Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20270,
+    "name": "Glavenus β+",
+    "rank": "Master",
+    "bonus_skill": "Maximum Might Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20271,
+    "name": "Acidic Glavenus α+",
+    "rank": "Master",
+    "bonus_skill": "Maximum Might Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20272,
+    "name": "Acidic Glavenus β+",
+    "rank": "Master",
+    "bonus_skill": "Maximum Might Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20273,
+    "name": "Brachydios α+",
+    "rank": "Master",
+    "bonus_skill": "Agitator Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20274,
+    "name": "Brachydios β+",
+    "rank": "Master",
+    "bonus_skill": "Agitator Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20275,
+    "name": "Tigrex α+",
+    "rank": "Master",
+    "bonus_skill": "Free Meal Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20276,
+    "name": "Tigrex β+",
+    "rank": "Master",
+    "bonus_skill": "Free Meal Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20277,
+    "name": "Brute Tigrex α+",
+    "rank": "Master",
+    "bonus_skill": "Free Meal Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20278,
+    "name": "Brute Tigrex β+",
+    "rank": "Master",
+    "bonus_skill": "Free Meal Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20279,
+    "name": "Black Belt α+",
+    "rank": "Master",
+    "bonus_skill": "Capture Master",
+    "bonus_required": 2
+  },
+  {
+    "id": 20280,
+    "name": "Black Belt β+",
+    "rank": "Master",
+    "bonus_skill": "Capture Master",
+    "bonus_required": 2
+  },
+  {
+    "id": 20281,
+    "name": "Dober α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20282,
+    "name": "Dober β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20283,
+    "name": "Damascus α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20284,
+    "name": "Damascus β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20285,
+    "name": "Seething Bazel α+",
+    "rank": "Master",
+    "bonus_skill": "Guts",
+    "bonus_required": 2
+  },
+  {
+    "id": 20286,
+    "name": "Seething Bazel β+",
+    "rank": "Master",
+    "bonus_skill": "Guts",
+    "bonus_required": 2
+  },
+  {
+    "id": 20287,
+    "name": "Savage Jho α+",
+    "rank": "Master",
+    "bonus_skill": "Stamina Thief Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20288,
+    "name": "Savage Jho β+",
+    "rank": "Master",
+    "bonus_skill": "Stamina Thief Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20289,
+    "name": "Velkhana α+",
+    "rank": "Master",
+    "bonus_skill": "Critical Element",
+    "bonus_required": 2
+  },
+  {
+    "id": 20290,
+    "name": "Velkhana β+",
+    "rank": "Master",
+    "bonus_skill": "Critical Element",
+    "bonus_required": 2
+  },
+  {
+    "id": 20291,
+    "name": "Blackveil Hazak α+",
+    "rank": "Master",
+    "bonus_skill": "Super Recovery",
+    "bonus_required": 2
+  },
+  {
+    "id": 20292,
+    "name": "Blackveil Hazak β+",
+    "rank": "Master",
+    "bonus_skill": "Super Recovery",
+    "bonus_required": 2
+  },
+  {
+    "id": 20293,
+    "name": "Teostra α+",
+    "rank": "Master",
+    "bonus_skill": "Master's Touch",
+    "bonus_required": 3
+  },
+  {
+    "id": 20294,
+    "name": "Teostra β+",
+    "rank": "Master",
+    "bonus_skill": "Master's Touch",
+    "bonus_required": 3
+  },
+  {
+    "id": 20295,
+    "name": "Kushala α+",
+    "rank": "Master",
+    "bonus_skill": "Nullify Wind Pressure",
+    "bonus_required": 3
+  },
+  {
+    "id": 20296,
+    "name": "Kushala β+",
+    "rank": "Master",
+    "bonus_skill": "Nullify Wind Pressure",
+    "bonus_required": 3
+  },
+  {
+    "id": 20297,
+    "name": "Kirin α+",
+    "rank": "Master",
+    "bonus_skill": "Great Luck",
+    "bonus_required": 3
+  },
+  {
+    "id": 20298,
+    "name": "Kirin β+",
+    "rank": "Master",
+    "bonus_skill": "Great Luck",
+    "bonus_required": 3
+  },
+  {
+    "id": 20299,
+    "name": "Namielle α+",
+    "rank": "Master",
+    "bonus_skill": "Element Acceleration",
+    "bonus_required": 2
+  },
+  {
+    "id": 20300,
+    "name": "Namielle β+",
+    "rank": "Master",
+    "bonus_skill": "Element Acceleration",
+    "bonus_required": 2
+  },
+  {
+    "id": 20301,
+    "name": "Guild Palace α+",
+    "rank": "Master",
+    "bonus_skill": "Good Luck",
+    "bonus_required": 2
+  },
+  {
+    "id": 20302,
+    "name": "Guild Palace β+",
+    "rank": "Master",
+    "bonus_skill": "Good Luck",
+    "bonus_required": 2
+  },
+  {
+    "id": 20303,
+    "name": "Shara Ishvalda α+",
+    "rank": "Master",
+    "bonus_skill": "Gaia's Veil",
+    "bonus_required": 4
+  },
+  {
+    "id": 20304,
+    "name": "Shara Ishvalda β+",
+    "rank": "Master",
+    "bonus_skill": "Gaia's Veil",
+    "bonus_required": 4
+  },
+  {
+    "id": 20305,
+    "name": "Zorah α+",
+    "rank": "Master",
+    "bonus_skill": "Artillery Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20306,
+    "name": "Zorah β+",
+    "rank": "Master",
+    "bonus_skill": "Artillery Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20307,
+    "name": "Yian Garuga α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20308,
+    "name": "Yian Garuga β+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20309,
+    "name": "Zinogre α+",
+    "rank": "Master",
+    "bonus_skill": "Latent Power Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20310,
+    "name": "Zinogre β+",
+    "rank": "Master",
+    "bonus_skill": "Latent Power Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20311,
+    "name": "Golden Lune α+",
+    "rank": "Master",
+    "bonus_skill": "Divine Blessing Secret",
+    "bonus_required": 2
+  },
+  {
+    "id": 20312,
+    "name": "Golden Lune β+",
+    "rank": "Master",
+    "bonus_skill": "Divine Blessing Secret",
+    "bonus_required": 2
+  },
+  {
+    "id": 20313,
+    "name": "Silver Sol α+",
+    "rank": "Master",
+    "bonus_skill": "Slinger Ammo Secret",
+    "bonus_required": 2
+  },
+  {
+    "id": 20314,
+    "name": "Silver Sol β+",
+    "rank": "Master",
+    "bonus_skill": "Slinger Ammo Secret",
+    "bonus_required": 2
+  },
+  {
+    "id": 20315,
+    "name": "Lunastra α+",
+    "rank": "Master",
+    "bonus_skill": "Tool Specialist Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20316,
+    "name": "Lunastra β+",
+    "rank": "Master",
+    "bonus_skill": "Tool Specialist Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20317,
+    "name": "Ruiner Nergi α+",
+    "rank": "Master",
+    "bonus_skill": "Hasten Recovery",
+    "bonus_required": 2
+  },
+  {
+    "id": 20318,
+    "name": "Ruiner Nergi β+",
+    "rank": "Master",
+    "bonus_skill": "Hasten Recovery",
+    "bonus_required": 2
+  },
+  {
+    "id": 20319,
+    "name": "Guildwork α+",
+    "rank": "Master",
+    "bonus_skill": "Good Luck",
+    "bonus_required": 2
+  },
+  {
+    "id": 20320,
+    "name": "Guildwork β+",
+    "rank": "Master",
+    "bonus_skill": "Good Luck",
+    "bonus_required": 2
+  },
+  {
+    "id": 20321,
+    "name": "Rajang α+",
+    "rank": "Master",
+    "bonus_skill": "Mind's Eye/Ballistics",
+    "bonus_required": 2
+  },
+  {
+    "id": 20322,
+    "name": "Rajang β+",
+    "rank": "Master",
+    "bonus_skill": "Mind's Eye/Ballistics",
+    "bonus_required": 2
+  },
+  {
+    "id": 20323,
+    "name": "Furious Rajang α+",
+    "rank": "Master",
+    "bonus_skill": "Maximum Might Secret",
+    "bonus_required": 2
+  },
+  {
+    "id": 20324,
+    "name": "Furious Rajang β+",
+    "rank": "Master",
+    "bonus_skill": "Maximum Might Secret",
+    "bonus_required": 2
+  },
+  {
+    "id": 20325,
+    "name": "Stygian Zin α+",
+    "rank": "Master",
+    "bonus_skill": "Latent Power Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20326,
+    "name": "Stygian Zin β+",
+    "rank": "Master",
+    "bonus_skill": "Latent Power Secret",
+    "bonus_required": 3
+  },
+  {
+    "id": 20327,
+    "name": "Safi'jiiva α+",
+    "rank": "Master",
+    "bonus_skill": "Dragonvein Awakening",
+    "bonus_required": 3
+  },
+  {
+    "id": 20328,
+    "name": "Safi'jiiva β+",
+    "rank": "Master",
+    "bonus_skill": "Dragonvein Awakening",
+    "bonus_required": 3
+  },
+  {
+    "id": 20329,
+    "name": "Raging Brachy α+",
+    "rank": "Master",
+    "bonus_skill": "Agitator Secret",
+    "bonus_required": 2
+  },
+  {
+    "id": 20330,
+    "name": "Raging Brachy β+",
+    "rank": "Master",
+    "bonus_skill": "Agitator Secret",
+    "bonus_required": 2
+  },
+  {
+    "id": 20331,
+    "name": "Frostfang Barioth α+",
+    "rank": "Master",
+    "bonus_skill": "Punishing Draw",
+    "bonus_required": 1
+  },
+  {
+    "id": 20332,
+    "name": "Frostfang Barioth β+",
+    "rank": "Master",
+    "bonus_skill": "Punishing Draw",
+    "bonus_required": 1
+  },
+  {
+    "id": 20333,
+    "name": "Alatreon α+",
+    "rank": "Master",
+    "bonus_skill": "Element Conversion",
+    "bonus_required": 2
+  },
+  {
+    "id": 20334,
+    "name": "Alatreon β+",
+    "rank": "Master",
+    "bonus_skill": "Element Conversion",
+    "bonus_required": 2
+  },
+  {
+    "id": 20335,
+    "name": "Kulve Taroth α+",
+    "rank": "Master",
+    "bonus_skill": "Guts",
+    "bonus_required": 2
+  },
+  {
+    "id": 20336,
+    "name": "Kulve Taroth β+",
+    "rank": "Master",
+    "bonus_skill": "Guts",
+    "bonus_required": 2
+  },
+  {
+    "id": 20337,
+    "name": "Namielle γ+",
+    "rank": "Master",
+    "bonus_skill": "Element Acceleration",
+    "bonus_required": 2
+  },
+  {
+    "id": 20338,
+    "name": "Velkhana γ+",
+    "rank": "Master",
+    "bonus_skill": "Critical Element",
+    "bonus_required": 2
+  },
+  {
+    "id": 20339,
+    "name": "Oolong α+",
+    "rank": "Master",
+    "bonus_skill": "Joy's Gift",
+    "bonus_required": 3
+  },
+  {
+    "id": 20340,
+    "name": "Astral α+",
+    "rank": "Master",
+    "bonus_skill": "Gratitude's Gift",
+    "bonus_required": 3
+  },
+  {
+    "id": 20341,
+    "name": "Rose α+",
+    "rank": "Master",
+    "bonus_skill": "Full Bloom's Gift",
+    "bonus_required": 3
+  },
+  {
+    "id": 20342,
+    "name": "Passionate α+",
+    "rank": "Master",
+    "bonus_skill": "Sizzling Gift",
+    "bonus_required": 3
+  },
+  {
+    "id": 20343,
+    "name": "Demonlord α+",
+    "rank": "Master",
+    "bonus_skill": "Fun Fright's Gift",
+    "bonus_required": 3
+  },
+  {
+    "id": 20344,
+    "name": "Dragon α+",
+    "rank": "Master",
+    "bonus_skill": "Inheritance",
+    "bonus_required": 2
+  },
+  {
+    "id": 20345,
+    "name": "Dragon β+",
+    "rank": "Master",
+    "bonus_skill": "Inheritance",
+    "bonus_required": 2
+  },
+  {
+    "id": 20346,
+    "name": "Azure Age α+",
+    "rank": "Master",
+    "bonus_skill": "Slinger Ammo Secret",
+    "bonus_required": 2
+  },
+  {
+    "id": 20347,
+    "name": "Artemis α+",
+    "rank": "Master",
+    "bonus_skill": "Hasten Recovery",
+    "bonus_required": 2
+  },
+  {
+    "id": 20348,
+    "name": "Pearlspring α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20349,
+    "name": "Duffel Penguin Mask α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20350,
+    "name": "Sealed Dragon Cloth α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 20351,
+    "name": "Wyverian Ears α+",
+    "rank": "Master",
+    "bonus_skill": null,
+    "bonus_required": null
+  }
+]

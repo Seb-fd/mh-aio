@@ -161,6 +161,7 @@
     Low: 'bg-gray-700 text-gray-300',
     High: 'bg-blue-900/40 text-blue-300',
     G: 'bg-yellow-900/40 text-yellow-300',
+    Master: 'bg-red-900/40 text-red-300 ring-1 ring-red-700/50',
   }
 
   function setLabel(s: { piece_count: number }): string {

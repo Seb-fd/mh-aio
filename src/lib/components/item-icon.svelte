@@ -19,6 +19,7 @@
       DarkGreen: '#15803d',
       Blue: '#3b82f6',
       DarkBlue: '#1e40af',
+      'Light Blue': '#7dd3fc',
       LightBeige: '#e7d6b8',
       Beige: '#c8b48a',
       DarkBeige: '#a8936b',
@@ -36,6 +37,7 @@
       Lime: '#84cc16',
     }
     if (!c) return '#9ca3af'
+    if (c.startsWith('#')) return c
     return map[c] ?? '#9ca3af'
   }
 

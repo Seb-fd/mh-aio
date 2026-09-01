@@ -1160,13 +1160,13 @@ fn get_weapon_materials(conn: &Connection, weapon_id: i32) -> Result<Vec<Materia
 pub fn get_armor_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Armor>> {
     // Smith order: faithful to armorer list (rank -> slot -> creation order = id) verified via ISO armor string table order at 37652906
     let mut stmt = conn.prepare(
-        "SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max,
-                resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon,
-                slots, skills, armor_type, set_id, gender, icon_name, icon_color, icon_url, language
-         FROM armor WHERE game_id = ?1 ORDER BY
-            CASE rank WHEN 'Low' THEN 0 WHEN 'High' THEN 1 WHEN 'G' THEN 2 ELSE 3 END,
-            CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END,
-            id",
+         "SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max,
+                 resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon,
+                 slots, skills, armor_type, set_id, gender, icon_name, icon_color, icon_url, language
+          FROM armor WHERE game_id = ?1 ORDER BY
+             CASE rank WHEN 'Low' THEN 0 WHEN 'High' THEN 1 WHEN 'G' THEN 2 WHEN 'Master' THEN 3 ELSE 4 END,
+             CASE slot_type WHEN 'head' THEN 0 WHEN 'chest' THEN 1 WHEN 'arms' THEN 2 WHEN 'waist' THEN 3 WHEN 'legs' THEN 4 ELSE 5 END,
+             id",
     )?;
 
     let armor = stmt

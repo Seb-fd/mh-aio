@@ -1,0 +1,9114 @@
+[
+  {
+    "set_name": "Maofumofu Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Maofumofu Hood"
+      },
+      {
+        "slot": "chest",
+        "name": "Maofumofu Jacket"
+      },
+      {
+        "slot": "arms",
+        "name": "Maofumofu Mittens"
+      },
+      {
+        "slot": "waist",
+        "name": "Maofumofu Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Maofumofu Boots"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Leather Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Leather Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Leather Armor"
+      },
+      {
+        "slot": "arms",
+        "name": "Leather Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Leather Belt"
+      },
+      {
+        "slot": "legs",
+        "name": "Green Pants"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Chain Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Chain Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Chain Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Chain Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Chain Belt"
+      },
+      {
+        "slot": "legs",
+        "name": "Blue Pants"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Hunter's Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hunter's Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Hunter's Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Hunter's Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Hunter's Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Hunter's Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Bone Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Bone Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Bone Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Bone Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Bone Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Bone Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Giaprey Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Giaprey Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Giaprey Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Giaprey Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Giaprey Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Giaprey Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Battle Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Battle Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Battle Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Battle Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Battle Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Battle Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Velociprey Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Velociprey Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Velociprey Mail"
+      },
+      {
+        "slot": "waist",
+        "name": "Velociprey Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Velociprey Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Vespoid Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Vespoid Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Vespoid Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Vespoid Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Vespoid Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Vespoid Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Hi-Metal Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hi-Metal Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Hi-Metal Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Hi-Metal Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Hi-Metal Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Hi-Metal Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Hornet Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hornet Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Hornet Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Hornet Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Hornet Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Hornet Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Genprey Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Genprey Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Genprey Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Genprey Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Genprey Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Genprey Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Steel Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "Steel Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Steel Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Steel Belt"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Ioprey Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ioprey Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Ioprey Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Ioprey Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Ioprey Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Ioprey Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Kut-Ku Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kut-Ku Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Kut-Ku Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Kut-Ku Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Kut-Ku Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Kut-Ku Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Cephalos Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Cephalos Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Cephalos Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Cephalos Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Cephalos Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Cephalos Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Conga Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Conga Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Conga Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Conga Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Conga Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Conga Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Gypceros Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gypceros Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Gypceros Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Gypceros Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Gypceros Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Gypceros Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Khezu Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Khezu Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Khezu Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Khezu Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Khezu Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Khezu Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Hermitaur Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hermitaur Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Hermitaur Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Hermitaur Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Hermitaur Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Hermitaur Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Plesioth Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Plesioth Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Plesioth Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Plesioth Vambraces"
+      },
+      {
+        "slot": "legs",
+        "name": "Plesioth Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Lobster Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Lobster Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Lobster Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Lobster Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Lobster Coil"
+      },
+      {
+        "slot": "legs",
+        "name": "Lobster Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Kut-Ku D Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kut-Ku Helm D"
+      },
+      {
+        "slot": "chest",
+        "name": "Kut-Ku Mail D"
+      },
+      {
+        "slot": "arms",
+        "name": "Kut-Ku Vambraces D"
+      },
+      {
+        "slot": "waist",
+        "name": "Kut-Ku Tasset D"
+      },
+      {
+        "slot": "legs",
+        "name": "Kut-Ku Greaves D"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Gypceros D Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gypceros Helm D"
+      },
+      {
+        "slot": "chest",
+        "name": "Gypceros Mail D"
+      },
+      {
+        "slot": "arms",
+        "name": "Gypceros Vambraces D"
+      },
+      {
+        "slot": "waist",
+        "name": "Gypceros Tasset D"
+      },
+      {
+        "slot": "legs",
+        "name": "Gypceros Greaves D"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Khezu D Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Khezu Helm D"
+      },
+      {
+        "slot": "chest",
+        "name": "Khezu Mail D"
+      },
+      {
+        "slot": "arms",
+        "name": "Khezu Vambraces D"
+      },
+      {
+        "slot": "waist",
+        "name": "Khezu Tasset D"
+      },
+      {
+        "slot": "legs",
+        "name": "Khezu Greaves D"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Plesioth D Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Plesioth Helm D"
+      },
+      {
+        "slot": "chest",
+        "name": "Plesioth Mail D"
+      },
+      {
+        "slot": "arms",
+        "name": "Plesioth Vambraces D"
+      },
+      {
+        "slot": "legs",
+        "name": "Plesioth Greaves D"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Basarios Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Basarios Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Basarios Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Basarios Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Basarios Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Basarios Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Monoblos Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Monoblos Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Monoblos Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Monoblos Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Monoblos Coil"
+      },
+      {
+        "slot": "legs",
+        "name": "Monoblos Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Yian Garuga Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Yian Garuga Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Yian Garuga Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Garuga Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Garuga Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Garuga Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Blango Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Blango Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Blango Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Blango Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Blango Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Blango Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Ceanataur Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ceanataur Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Ceanataur Mail"
+      },
+      {
+        "slot": "waist",
+        "name": "Ceanataur Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Ceanataur Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Rathian Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathian Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathian Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Rathian Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathian Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Rathian Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Tigrex Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Tigrex Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Tigrex Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Tigrex Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Tigrex Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Tigrex Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Rathalos Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathalos Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathalos Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Rathalos Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathalos Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Rathalos Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Diablos Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Diablo Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Diablo Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Diablo Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Diablo Coil"
+      },
+      {
+        "slot": "legs",
+        "name": "Diablo Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Gravios Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gravios Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Gravios Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Gravios Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Gravios Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Gravios Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Diablos D Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Diablo Helm D"
+      },
+      {
+        "slot": "chest",
+        "name": "Diablo Mail D"
+      },
+      {
+        "slot": "arms",
+        "name": "Diablo Vambraces D"
+      },
+      {
+        "slot": "waist",
+        "name": "Diablo Coil D"
+      },
+      {
+        "slot": "legs",
+        "name": "Diablo Greaves D"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Gravios D Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gravios Helm D"
+      },
+      {
+        "slot": "chest",
+        "name": "Gravios Mail D"
+      },
+      {
+        "slot": "waist",
+        "name": "Gravios Tasset D"
+      },
+      {
+        "slot": "legs",
+        "name": "Gravios Greaves D"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Mosswine Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Mosswine Mask"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Giaprey Suit",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Giaprey Mask"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Velociprey Suit",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Velociprey Mask"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Bistro Suit",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Bistro Helm"
+      },
+      {
+        "slot": "waist",
+        "name": "Bistro Coat"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Genprey Suit",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Genprey Mask"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Black Belt Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Black Belt Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Black Belt Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Black Belt Vembraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Black Belt Tasset"
+      },
+      {
+        "slot": "waist",
+        "name": "Black Belt Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Maiden Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "Maiden's Vest"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Private Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "Personal Vest"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Helper Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Helper Hood"
+      },
+      {
+        "slot": "chest",
+        "name": "Helper Vest"
+      },
+      {
+        "slot": "waist",
+        "name": "Lightcrystalx2,Springnight Carpx4,Blackbelt Ticketx2,Cephadrome Coinx3"
+      },
+      {
+        "slot": "waist",
+        "name": "Lightcrystalx2,Great Hornflyx4,Blackbelt Ticketx2,Yian Garuga Coinx3"
+      },
+      {
+        "slot": "waist",
+        "name": "Lightcrystalx2,Great Ladybugx4,Blackbelt Ticketx2,Gravios Coinx3"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Healer Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "waist",
+        "name": "Lightcrystalx2,Dosbiscusx4,Blackbelt Ticketx2,Kut-Ku Coinx3"
+      },
+      {
+        "slot": "chest",
+        "name": "Healer Vest"
+      },
+      {
+        "slot": "waist",
+        "name": "Lightcrystalx2,Springnight Carpx4,Blackbelt Ticketx2,Plesioth Coinx3"
+      },
+      {
+        "slot": "waist",
+        "name": "Lightcrystalx2,Great Hornflyx4,Blackbelt Ticketx2,Blangonga Coinx3"
+      },
+      {
+        "slot": "waist",
+        "name": "Lightcrystalx2,Great Ladybugx4,Blackbelt Ticketx2,Tigrex Coinx3"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Ioprey Suit",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ioprey Mask"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Remobra Suit",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "unknown",
+        "name": "Makluva Suit"
+      },
+      {
+        "slot": "waist",
+        "name": "Remobra Belt"
+      },
+      {
+        "slot": "legs",
+        "name": "Makluva Pants"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Melahoa Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "Melahoa Flower Jacket"
+      },
+      {
+        "slot": "chest",
+        "name": "Dosbiscusx3,Godbugx5,Sleep Herbx2,Armorskinx3"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Makluva Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Makluva Hood"
+      },
+      {
+        "slot": "waist",
+        "name": "Makluva Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Makluva Pants"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Black Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Black Head"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Lava Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Lava Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Lava Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Lava Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Lava Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Lava Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Mizuha Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Mizuha Cap"
+      },
+      {
+        "slot": "arms",
+        "name": "Mizuha Guards"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Kirin Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "Kirin Jacket"
+      },
+      {
+        "slot": "arms",
+        "name": "Kirin Leg Guards"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Guardian Spirit Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Guardian Spirit Mask"
+      },
+      {
+        "slot": "waist",
+        "name": "Guardian Spirit Coil"
+      },
+      {
+        "slot": "legs",
+        "name": "GuardianSpirit Boots"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Auroros Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Auroros Helm"
+      },
+      {
+        "slot": "waist",
+        "name": "Auroros Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Auroros Pants"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Borealis Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "waist",
+        "name": "Borealis Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Borealis Pants"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Empress Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "Empress Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Empress Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Empress Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Empress Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Indra Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Indra Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Indra Vest"
+      },
+      {
+        "slot": "legs",
+        "name": "Indra Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Kaiser Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "Kaiser Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Kaiser Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Kaiser Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Kaiser Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Monodevil Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Monodevil Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Monodevil Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Monodevil Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Monodevil Coil"
+      },
+      {
+        "slot": "legs",
+        "name": "Monodevil Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Rathian Heart Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathian Heart Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathian Heart Mail"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathian Heart Coil"
+      },
+      {
+        "slot": "legs",
+        "name": "Rathian HeartGreaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Rathalos Soul Armor",
+    "rank": "Low",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathalos Soul Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathalos Soul Mail"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathalos Soul Coil"
+      },
+      {
+        "slot": "legs",
+        "name": "Rathalos SoulGreaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Mafumofu Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Mafumofu Hood"
+      },
+      {
+        "slot": "chest",
+        "name": "Mafumofu Jacket"
+      },
+      {
+        "slot": "arms",
+        "name": "Mafumofu Mittens"
+      },
+      {
+        "slot": "waist",
+        "name": "Mafumofu Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Mafumofu Boots"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Leather Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Leather Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Leather Armor"
+      },
+      {
+        "slot": "arms",
+        "name": "Leather Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Leather Belt"
+      },
+      {
+        "slot": "legs",
+        "name": "Green Pants"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Chain Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Chain Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Chain Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Chain Vambraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Chain Belt"
+      },
+      {
+        "slot": "legs",
+        "name": "Blue Pants"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Hunter's Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hunter's Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Hunter's Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Hunter's Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Hunter's Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Hunter's Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Bone Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Bone Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Bone Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Bone Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Bone Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Bone Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Giaprey Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Giaprey Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Giaprey Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Giaprey Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Giaprey Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Giaprey Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Battle Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Battle Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Battle Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Battle Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Battle Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Battle Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Velociprey Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Velociprey Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Velociprey Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Velociprey Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Velociprey Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Velociprey Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Vespoid Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Vespoid Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Vespoid Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Vespoid Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Vespoid Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Vespoid Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Hi-Metal Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hi-Metal Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Hi-Metal Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Hi-Metal Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Hi-Metal Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Hi-Metal Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Hornet Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hornet Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Hornet Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Hornet Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Hornet Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Hornet Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Genprey Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Genprey Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Genprey Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Genprey Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Genprey Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Genprey Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Ioprey Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ioprey Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Ioprey Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Ioprey Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Ioprey Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Ioprey Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Kut-Ku Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kut-Ku Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Kut-Ku Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Kut-Ku Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Kut-Ku Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Kut-Ku Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Cephalos Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Cephalos Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Cephalos Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Cephalos Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Cephalos Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Cephalos Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Conga Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Conga Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Conga Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Conga Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Conga Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Conga Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Gypceros Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gypceros Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Gypceros Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Gypceros Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Gypceros Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Gypceros Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Khezu Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Khezu Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Khezu Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Khezu Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Khezu Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Khezu Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Hermitaur Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hermitaur Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Hermitaur Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Hermitaur Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Hermitaur Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Hermitaur Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Plesioth Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Plesioth Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Plesioth Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Plesioth Guards"
+      },
+      {
+        "slot": "legs",
+        "name": "Plesioth Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Lobster Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Lobster Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Lobster Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Lobster Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Lobster Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Lobster Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Kut-Ku D Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kut-Ku Cap D"
+      },
+      {
+        "slot": "chest",
+        "name": "Kut-Ku Vest D"
+      },
+      {
+        "slot": "arms",
+        "name": "Kut-Ku Guards D"
+      },
+      {
+        "slot": "waist",
+        "name": "Kut-Ku Coat D"
+      },
+      {
+        "slot": "legs",
+        "name": "Kut-Ku Leggings D"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Gypceros D Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gypceros Cap D"
+      },
+      {
+        "slot": "chest",
+        "name": "Gypceros Vest D"
+      },
+      {
+        "slot": "arms",
+        "name": "Gypceros Guards D"
+      },
+      {
+        "slot": "waist",
+        "name": "Gypceros Coat D"
+      },
+      {
+        "slot": "legs",
+        "name": "Gypceros Leggings D"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Khezu D Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Khezu Cap D"
+      },
+      {
+        "slot": "chest",
+        "name": "Khezu Vest D"
+      },
+      {
+        "slot": "arms",
+        "name": "Khezu Guards D"
+      },
+      {
+        "slot": "waist",
+        "name": "Khezu Coat D"
+      },
+      {
+        "slot": "legs",
+        "name": "Khezu Leggings D"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Plesioth D Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Plesioth Cap D"
+      },
+      {
+        "slot": "chest",
+        "name": "Plesioth Vest D"
+      },
+      {
+        "slot": "arms",
+        "name": "Plesioth Guards D"
+      },
+      {
+        "slot": "legs",
+        "name": "Plesioth Leggings D"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Basarios Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Basarios Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Basarios Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Basarios Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Basarios Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Basarios Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Monoblos Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Monoblos Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Monoblos Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Monoblos Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Monoblos Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Monoblos Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Yian Garuga Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Yian Garuga Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Yian Garuga Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Garuga Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Garuga Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Garuga Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Blango Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Blango Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Blango Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Blango Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Blango Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Blango Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Ceanataur Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ceanataur Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Ceanataur Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Ceanataur Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Ceanataur Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Ceanataur Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Rathian Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathian Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathian Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Rathian Guards"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathian Vest"
+      },
+      {
+        "slot": "legs",
+        "name": "Rathian Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Tigrex Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Tigrex Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Tigrex Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Tigrex Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Tigrex Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Tigrex Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Rathalos Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathalos Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathalos Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Rathalos Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathalos Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Rathalos Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Diablos Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Diablo Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Diablo Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Diablo Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Diablo Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Diablo Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Gravios Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gravios Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Gravios Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Gravios Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Gravios Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Gravios Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Diablos D Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Diablo Cap D"
+      },
+      {
+        "slot": "chest",
+        "name": "Diablo Vest D"
+      },
+      {
+        "slot": "arms",
+        "name": "Diablo Guards D"
+      },
+      {
+        "slot": "waist",
+        "name": "Diablo Coat D"
+      },
+      {
+        "slot": "legs",
+        "name": "Diablo Leggings D"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Gravios D Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gravios Cap D"
+      },
+      {
+        "slot": "chest",
+        "name": "Gravios Vest D"
+      },
+      {
+        "slot": "arms",
+        "name": "Gravios Guards D"
+      },
+      {
+        "slot": "waist",
+        "name": "Gravios Coat D"
+      },
+      {
+        "slot": "legs",
+        "name": "Gravios Leggings D"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Mosswine Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Mosswine Mask"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Giaprey Suit",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Giaprey Mask"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Velociprey Suit",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Velociprey Mask"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Bistro Suit",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Bistro Helm"
+      },
+      {
+        "slot": "waist",
+        "name": "Bistro Coat"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Genprey Suit",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Genprey Mask"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Black Belt Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Black Belt Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Black Belt Mail"
+      },
+      {
+        "slot": "arms",
+        "name": "Black Belt Vembraces"
+      },
+      {
+        "slot": "waist",
+        "name": "Black Belt Tasset"
+      },
+      {
+        "slot": "waist",
+        "name": "Black Belt Greaves"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Maiden Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "Maiden's Vest"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Private Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "Personal Vest"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Helper Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Helper Hood"
+      },
+      {
+        "slot": "chest",
+        "name": "Helper Vest"
+      },
+      {
+        "slot": "waist",
+        "name": "Lightcrystalx2,Springnight Carpx4,Blackbelt Ticketx2,Cephadrome Coinx3"
+      },
+      {
+        "slot": "waist",
+        "name": "Lightcrystalx2,Great Hornflyx4,Blackbelt Ticketx2,Yian Garuga Coinx3"
+      },
+      {
+        "slot": "waist",
+        "name": "Lightcrystalx2,Great Ladybugx4,Blackbelt Ticketx2,Gravios Coinx3"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Healer Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "waist",
+        "name": "Lightcrystalx2,Dosbiscusx4,Blackbelt Ticketx2,Kut-Ku Coinx3"
+      },
+      {
+        "slot": "chest",
+        "name": "Healer Vest"
+      },
+      {
+        "slot": "waist",
+        "name": "Lightcrystalx2,Springnight Carpx4,Blackbelt Ticketx2,Plesioth Coinx3"
+      },
+      {
+        "slot": "waist",
+        "name": "Lightcrystalx2,Great Hornflyx4,Blackbelt Ticketx2,Blangonga Coinx3"
+      },
+      {
+        "slot": "waist",
+        "name": "Lightcrystalx2,Great Ladybugx4,Blackbelt Ticketx2,Tigrex Coinx3"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Ioprey Suit",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ioprey Mask"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Remobra Suit",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "unknown",
+        "name": "Makluva Suit"
+      },
+      {
+        "slot": "waist",
+        "name": "Remobra Belt"
+      },
+      {
+        "slot": "legs",
+        "name": "Makluva Pants"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Melahoa Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "Dosbiscusx3,Godbugx5,Sleep Herbx2,Armorskinx3"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Makluva Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "legs",
+        "name": "Makluva Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Butterfly Testa Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Butterfly Caput"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Obituary Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Obituary Caput"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Lava Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Lava Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Lava Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Lava Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Lava Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Lava Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Extravagant Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Extravagant Cap"
+      },
+      {
+        "slot": "waist",
+        "name": "Extravagant Coat"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Kirin Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kirin Cape"
+      },
+      {
+        "slot": "legs",
+        "name": "Kirin Boots"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Carnage Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Carnage Mask"
+      },
+      {
+        "slot": "arms",
+        "name": "Carnage Vambraces"
+      },
+      {
+        "slot": "legs",
+        "name": "Carnage Boots"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Genesis Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Genesis Headpiece"
+      },
+      {
+        "slot": "waist",
+        "name": "Genesis Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Genesis Pants"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Glyph Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "waist",
+        "name": "Glyph Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Glyph Pants"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Empress Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Empress Mask"
+      },
+      {
+        "slot": "chest",
+        "name": "Empress Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Empress Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Empress Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Empress Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Steadfast Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Steadfast Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Steadfast Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Steadfast Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Steadfast Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Steadfast Boots"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Kaiser Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kaiser Mask"
+      },
+      {
+        "slot": "chest",
+        "name": "Kaiser Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Kaiser Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Kaiser Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Kaiser Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Monodevil Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Monodevil Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Monodevil Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Monodevil Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Monodevil Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Monodevil Leggings"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Rathian Heart Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathian Heart Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathian Heart Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Rathian Heart Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathian Heart Coat"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Rathalos Soul Armor",
+    "rank": "Low",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathalos Soul Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathalos Soul Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Rathalos Soul Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathalos Soul Coat"
+      }
+    ],
+    "page": "MHFU:_Low_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Mafumofu S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Mafumofu Hood S"
+      },
+      {
+        "slot": "chest",
+        "name": "Mafumofu Jacket S"
+      },
+      {
+        "slot": "arms",
+        "name": "Mafumofu Mittens S"
+      },
+      {
+        "slot": "waist",
+        "name": "Mafumofu Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Mafumofu Boots S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Leather S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Leather Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Leather Armor S"
+      },
+      {
+        "slot": "arms",
+        "name": "Leather Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Leather Belt S"
+      },
+      {
+        "slot": "legs",
+        "name": "Green Pants S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Chain S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Chain Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Chain Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Chain Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Chain Belt S"
+      },
+      {
+        "slot": "legs",
+        "name": "Blue Pants S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Hunter's S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hunter's Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Hunter's Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Hunter's Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Hunter's Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Hunter's Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Bone S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Bone Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Bone Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Bone Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Bone Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Bone Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Battle S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Battle Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Battle Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Battle Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Battle Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Battle Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Velociprey S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Velociprey Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Velociprey Mail S"
+      },
+      {
+        "slot": "waist",
+        "name": "Velociprey Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Velociprey Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Vespoid S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Vespoid Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Vespoid Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Vespoid Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Vespoid Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Vespoid Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Hi-Metal S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hi-Metal Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Hi-Metal Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Hi-Meatal Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Hi-Metal Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Hi-Metal Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Steel S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "Steel Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Steel Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Steel Belt S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Hornet S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hornet Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Hornet Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Hornet Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Hornet Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Hornet Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Genprey S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Genprey Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Genprey Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Genprey Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Genprey Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Genprey Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Ioprey S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ioprey Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Ioprey Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Ioprey Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Ioprey Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Ioprey Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Kut-Ku S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kut-Ku Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Kut-Ku Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Kut-Ku Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Kut-Ku Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Kut-Ku Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Cephalos S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Cephalos Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Cephalos Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Cephalos Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Cephalos Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Cephalos Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Conga S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Conga Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Conga Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Conga Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Conga Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Conga Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Gypceros S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gypceros Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Gypceros Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Gypceros Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Gypceros Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Gypceros Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Khezu S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Khezu Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Khezu Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Khezu Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Khezu Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Khezu Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Hermitaur S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hermitaur Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Hermitaur Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Hermitaur Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Hermitaur Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Hermitaur Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Hypno S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hypno Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Hypno Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Hypno Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Hypno Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Hypno Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Basarios S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Basarios Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Basarios Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Basarios Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Basarios Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Basarios Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Plesioth S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Plesioth Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Plesioth Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Plesioth Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Plesioth Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Plesioth Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Monoblos S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Monoblos Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Monoblos Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Monoblos Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Monoblos Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Monoblos Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Garuga S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Garuga Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Garuga Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Garuga Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Garuga Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Garuga Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Blango S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Blango Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Blango Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Blango Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Blango Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Blango Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Ceanataur S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ceanataur Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Ceanataur Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Ceanataur Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Ceanataur Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Ceanataur Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Rathian S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathian Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathian Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Rathian Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathian Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Rathian Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Narga S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Narga Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Narga Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Narga Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Narga Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Narga Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Tigrex S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Tigrex Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Tigrex Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Tigrex Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Tigrex Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Tigrex Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Rathalos S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathalos Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathalos Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Rathalos Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathalos Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Rathalos Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Diablos S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Diablo Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Diablo Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Diablo Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Diablo Coil S"
+      },
+      {
+        "slot": "legs",
+        "name": "Diablo Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Gravios S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gravios Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Gravios Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Gravios Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Gravios Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Gravios Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Leather U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Leather Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Leather Armor U"
+      },
+      {
+        "slot": "arms",
+        "name": "Leather Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Leather Belt U"
+      },
+      {
+        "slot": "legs",
+        "name": "Cream Pants U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Chain U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Chain Helm U"
+      },
+      {
+        "slot": "arms",
+        "name": "Chain Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Chain Belt U"
+      },
+      {
+        "slot": "legs",
+        "name": "Coffee Pants U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Hunter's U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hunter's Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Hunter's Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Hunter's Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Hunter's Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Hunter's Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Bone U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Bone Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Bone Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Bone Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Bone Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Bone Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Battle U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Battle Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Battle Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Battle Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Battle Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Battle Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Giaprey U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Giaprey Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Giaprey Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Giaprey Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Giaprey Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Giaprey Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Vespoid U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Vespoid Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Vespoid Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Vespoid Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Vespoid Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Vespoid Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Hi-Metal U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hi-Metal Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Hi-Metal Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Hi-Metal Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Hi-Metal Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Hi-Metal Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Steel U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "Steel Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Steel Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Steel Tasset U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Hornet U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hornet Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Hornet Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Hornet Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Hornet Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Hornet Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Genprey U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Genprey Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Genprey Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Genprey Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Genprey Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Genprey Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Ioprey U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ioprey Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Ioprey Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Ioprey Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Ioprey Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Ioprey Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Kut-Ku U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kut-Ku Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Kut-Ku Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Kut-Ku Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Kut-Ku Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Kut-Ku Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Cephalos U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Cephalos Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Cephalos Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Cephalos Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Cephalos Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Cephalos Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Conga U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Conga Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Conga Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Conga Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Conga Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Conga Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Gypceros U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gypceros Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Gypceros Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Gypceros Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Gypceros Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Gypceros Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Khezu U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Khezu Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Khezu Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Khezu Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Khezu Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Khezu Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Hermitaur U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hermitaur Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Hermitaur Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Hermitaur Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Hermitaur Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Hermitaur Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Basarios U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Basarios Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Bastarios Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Basarios Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Basarios Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Basarios Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Plesioth U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Plesioth Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Plesioth Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Plesioth Vambraces U"
+      },
+      {
+        "slot": "legs",
+        "name": "Plesioth Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Blango U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Blango Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Blango Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Blango Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Blango Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Blango Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Ceanataur U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ceanataur Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Ceanataur Mail U"
+      },
+      {
+        "slot": "waist",
+        "name": "Ceanataur Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Ceanataur Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Diablo U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Diablo Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Diablo Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Diablo Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Diablo Coil U"
+      },
+      {
+        "slot": "legs",
+        "name": "Diablo Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Gravios U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gravios Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Gravios Mail U"
+      },
+      {
+        "slot": "arms",
+        "name": "Gravios Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Gravios Tasset U"
+      },
+      {
+        "slot": "legs",
+        "name": "Gravios Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Black Belt S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Black Belt Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Black Belt Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "BlackBeltVambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Black Belt Tasset S"
+      },
+      {
+        "slot": "waist",
+        "name": "Black Belt Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Supreme Mizuha Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Supreme Mizuha Cap"
+      },
+      {
+        "slot": "arms",
+        "name": "SupremeMizuha Guards"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Kirin S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "Kirin Jacket S"
+      },
+      {
+        "slot": "arms",
+        "name": "Kirin Leg Guards S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Auroros/Borealis Haku Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Auroros Helm Haku"
+      },
+      {
+        "slot": "legs",
+        "name": "Auroros Pants Haku"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Ultimate Indra Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ultimate Indra Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Ultimate Indra Vest"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Kaiser S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "Kaiser Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Kaiser Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Kaiser Tasset S"
+      },
+      {
+        "slot": "legs",
+        "name": "Kaiser Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Dragon S Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Dragonhead S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Dark Akantor Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Dark Akantor Mask"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Guardian U/Helper U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Guardian Helm U"
+      },
+      {
+        "slot": "unknown",
+        "name": "Guardian Suit U"
+      },
+      {
+        "slot": "arms",
+        "name": "Guardian Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Guardian Coil U"
+      },
+      {
+        "slot": "legs",
+        "name": "Guardian Boots U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Guardian U/Healer U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Guardian Mask U"
+      },
+      {
+        "slot": "chest",
+        "name": "Guardian Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Guardian Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Guardian Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Guardian Pants U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Melahoa U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "King Scarabx3,Dosbiscusx4,FlynMealPassPlusx1,Armor Pillx3"
+      },
+      {
+        "slot": "chest",
+        "name": "King Scarabx3,Dosbiscusx4,FlynMealPassPlusx1,Mega Armorskinx5"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Makluva U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Makluva Hood U"
+      },
+      {
+        "slot": "head",
+        "name": "Cephalos Fin+x4,Springnight Caprx5,Gastronome Tunax1,Book of Combos 1x1"
+      },
+      {
+        "slot": "waist",
+        "name": "Makluva Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Makluva Pants U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Monodevil U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Monodevil Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Monodevil Mail U"
+      },
+      {
+        "slot": "waist",
+        "name": "Monodevil Coil U"
+      },
+      {
+        "slot": "legs",
+        "name": "Monodevil Greaves U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Rathian Heart U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathian Heart Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathian Heart Mail U"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathian Heart Coil U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Rathalos Soul U Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathalos Soul Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathalos Soul Mail U"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathalos Soul Coil U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Golden Moon Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Golden Moon Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Golden Moon Mail"
+      },
+      {
+        "slot": "waist",
+        "name": "Golden Moon Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Golden Moon Greaves"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Silver Sol Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Silver Sol Helm"
+      },
+      {
+        "slot": "chest",
+        "name": "Silver Sol Mail"
+      },
+      {
+        "slot": "waist",
+        "name": "Silver Sol Tasset"
+      },
+      {
+        "slot": "legs",
+        "name": "Silver Sol Greaves"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Auroros/Borealis Ten Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Auroros Helm Ten"
+      },
+      {
+        "slot": "waist",
+        "name": "Auroros Tasset Ten"
+      },
+      {
+        "slot": "legs",
+        "name": "Auroros Pants Ten"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Fatalis Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Fatalis Head"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "White Fatalis Armor",
+    "rank": "High",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "White Fatalis Head"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Mafumofu S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Mafumofu Hood S"
+      },
+      {
+        "slot": "chest",
+        "name": "Mafumofu Jacket S"
+      },
+      {
+        "slot": "arms",
+        "name": "Mafumofu Mittens S"
+      },
+      {
+        "slot": "waist",
+        "name": "Mafumofu Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Mafumofu Boots S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Leather S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Leather Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Leather Armor S"
+      },
+      {
+        "slot": "arms",
+        "name": "Leather Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Leather Belt S"
+      },
+      {
+        "slot": "legs",
+        "name": "Green Pants S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Chain S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Chain Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Chain Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "Chain Vambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Chain Belt S"
+      },
+      {
+        "slot": "legs",
+        "name": "Blue Pants S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Hunter's S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hunter's Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Hunter's Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Hunter's Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Hunter's Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Hunter's Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Bone S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Bone Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Bone Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Bone Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Bone Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Bone Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Battle S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Battle Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Battle Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Battle Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Battle Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Battle Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Velociprey S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Velociprey Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Velociprey Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Velociprey Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Velociprey Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Velociprey LeggingsS"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Vespoid S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Vespoid Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Vespoid Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Vespoid Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Vespoid Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Vespoid Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Hi-Metal S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hi-Metal Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Hi-Metal Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Hi-Meatal Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Hi-Metal Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Hi-Metal Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Hornet S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hornet Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Hornet Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Hornet Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Hornet Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Hornet Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Genprey S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Genprey Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Genprey Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Genprey Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Genprey Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Genprey Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Ioprey S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ioprey Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Ioprey Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Ioprey Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Ioprey Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Ioprey Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Kut-Ku S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kut-Ku Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Kut-Ku Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Kut-Ku Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Kut-Ku Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Kut-Ku Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Cephalos S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Cephalos Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Cephalos Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Cephalos Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Cephalos Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Cephalos Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Conga S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Conga Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Conga Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Conga Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Conga Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Conga Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Gypceros S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gypceros Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Gypceros Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Gypceros Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Gypceros Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Gypceros Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Khezu S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Khezu Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Khezu Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Khezu Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Khezu Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Khezu Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Hermitaur S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hermitaur Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Hermitaur Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Hermitaur Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Hermitaur Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Hermitaur Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Hypno S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hypno Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Hypno Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Hypno Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Hypno Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Hypno Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Basarios S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Basarios Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Basarios Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Basarios Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Basarios Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Basarios Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Plesioth S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Plesioth Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Plesioth Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Plesioth Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Plesioth Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Plesioth Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Monoblos S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Monoblos Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Monoblos Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Monoblos Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Monoblos Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Monoblos Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Garuga S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Garuga Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Garuga Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Garuga Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Garuga Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Garuga Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Blango S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Blango Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Blango Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Blango Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Blango Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Blango Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Ceanataur S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ceanataur Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Ceanataur Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Ceanataur Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Ceanataur Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Ceanataur Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Rathian S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathian Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathian Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Rathian Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathian Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Rathian Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Narga S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Narga Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Narga Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Narga Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Narga Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Narga Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Tigrex S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Tigrex Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Tigrex Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Tigrex Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Tigrex Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Tigrex Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Rathalos S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathalos Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathalos Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Rathalos Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathalos Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Rathalos Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Diablos S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Diablo Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Diablo Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Diablo Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Diablo Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Diablo Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Gravios S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gravios Cap S"
+      },
+      {
+        "slot": "chest",
+        "name": "Gravios Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Gravios Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Gravios Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Gravios Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Leather U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Leather Helm U"
+      },
+      {
+        "slot": "chest",
+        "name": "Leather Armor U"
+      },
+      {
+        "slot": "arms",
+        "name": "Leather Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Leather Belt U"
+      },
+      {
+        "slot": "legs",
+        "name": "Cream Pants U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Chain U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Chain Helm U"
+      },
+      {
+        "slot": "arms",
+        "name": "Chain Vambraces U"
+      },
+      {
+        "slot": "waist",
+        "name": "Chain Belt U"
+      },
+      {
+        "slot": "legs",
+        "name": "Cofee Pants U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Hunter's U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hunter's Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Hunter's Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Hunter's Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Hunter's Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Hunter's Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Bone U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Bone Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Bone Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Bone Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Bone Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Bone Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Battle U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Battle Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Battle Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Battle Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Battle Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Battle Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Giaprey U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Giaprey Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Giaprey Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Giaprey Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Giaprey Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Giaprey Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Vespoid U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Vespoid Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Vespoid Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Vespoid Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Vespoid Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Vespoid Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Hi-Metal U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hi-Metal Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Hi-Metal Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Hi-Metal Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Hi-Metal Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Hi-Metal Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Hornet U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hornet Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Hornet Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Hornet Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Hornet Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Hornet Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Genprey U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Genprey Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Genprey Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Genprey Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Genprey Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Genprey Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Ioprey U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ioprey Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Ioprey Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Ioprey Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Ioprey Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Ioprey Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Kut-Ku U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kut-Ku Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Kut-Ku Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Kut-Ku Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Kut-Ku Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Kut-Ku Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Cephalos U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Cephalos Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Cephalos Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Cephalos Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Cephalos Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Cephalos Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Conga U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Conga Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Conga Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Conga Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Conga Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Conga Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Gypceros U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gypceros Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Gypceros Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Gypceros Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Gypceros Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Gypceros Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Khezu U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Khezu Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Khezu Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Khezu Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Khezu Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Khezu Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Hermitaur U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hermitaur Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Hermitaur Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Hermitaur Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Hermitaur Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Hermitaur Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Basarios U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Basarios Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Bastarios Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Basarios Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Basarios Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Basarios Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Plesioth U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Plesioth Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Plesioth Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Plesioth Guards U"
+      },
+      {
+        "slot": "legs",
+        "name": "Plesioth Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Blango U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Blango Helm U"
+      },
+      {
+        "slot": "head",
+        "name": "Blango Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Blango Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Blango Guards U"
+      },
+      {
+        "slot": "legs",
+        "name": "Blango Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Ceanataur U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ceanataur Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Ceanataur Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Ceanataur Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Ceanataur Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Ceanataur Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Diablos U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Diablo Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Diablo Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Diablo Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Diablo Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Diablo Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Gravios U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gravios Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Gravios Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Gravios Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Gravios Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Gravios Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Black Belt S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Black Belt Helm S"
+      },
+      {
+        "slot": "chest",
+        "name": "Black Belt Mail S"
+      },
+      {
+        "slot": "arms",
+        "name": "BlackBeltVambraces S"
+      },
+      {
+        "slot": "waist",
+        "name": "Black Belt Tasset S"
+      },
+      {
+        "slot": "waist",
+        "name": "Black Belt Greaves S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Obituary/Butterfly S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Obituary Caput S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Kirin S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kirin Cape S"
+      },
+      {
+        "slot": "legs",
+        "name": "Kirin Boots S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Genesis/Glyph Haku Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "waist",
+        "name": "Genesis Tasset Haku"
+      },
+      {
+        "slot": "legs",
+        "name": "Genesis Pants Haku"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Sumpreme Steadfast Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "SupremeSteadfastHelm"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Kaiser S Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kaiser Mask S"
+      },
+      {
+        "slot": "chest",
+        "name": "Kaiser Vest S"
+      },
+      {
+        "slot": "arms",
+        "name": "Kaiser Guards S"
+      },
+      {
+        "slot": "waist",
+        "name": "Kaiser Coat S"
+      },
+      {
+        "slot": "legs",
+        "name": "Kaiser Leggings S"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Dark Akantor Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "legs",
+        "name": "Dark Akantor Boots"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Bistro Suit U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Bistro Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Bistro Jacket U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Melahoa U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "King Scarabx3,Dosbiscusx4,FlynMealPassPlusx1,Armor Pillx3"
+      },
+      {
+        "slot": "chest",
+        "name": "King Scarabx3,Dosbiscusx4,FlynMealPassPlusx1,Mega Armorskinx5"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Makluva U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Cephalos Fin+x4,Springnight Caprx5,Gastronome Tunax1,Book of Combos 1x1"
+      },
+      {
+        "slot": "legs",
+        "name": "Makluva Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Monodevil U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Monodevil Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Monodevil Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Monodevil Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Monodevil Coat U"
+      },
+      {
+        "slot": "legs",
+        "name": "Monodevil Leggings U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Rathian Heart U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathian Heart Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathian Heart Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Rathian HeartGuardsU"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathian Heart Coat U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Rathalos Soul U Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathalos Soul Cap U"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathalos Soul Vest U"
+      },
+      {
+        "slot": "arms",
+        "name": "Rthlos Soul Guards U"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathalos Soul Coat U"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Golden Moon Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Golden Moon Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Golden Moon Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Golden Moon Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Golden Moon Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Golden Moon Leggings"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Silver Sol Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Silver Sol Cap"
+      },
+      {
+        "slot": "chest",
+        "name": "Silver Sol Vest"
+      },
+      {
+        "slot": "arms",
+        "name": "Silver Sol Guards"
+      },
+      {
+        "slot": "waist",
+        "name": "Silver Sol Coat"
+      },
+      {
+        "slot": "legs",
+        "name": "Silver Sol Leggings"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Genesis/Glyph Ten Armor",
+    "rank": "High",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Genesis HeadpieceTen"
+      },
+      {
+        "slot": "waist",
+        "name": "Genesis Tasset Ten"
+      },
+      {
+        "slot": "legs",
+        "name": "Genesis Pants Ten"
+      }
+    ],
+    "page": "MHFU:_High_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Kut-Ku X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kut-Ku Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Kut-Ku Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Kut-Ku Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Kut-Ku Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Kut-Ku Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Conga X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Conga Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Conga Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Conga Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Conga Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Conga Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Gypceros X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gypceros Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Gypceros Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Gypceros Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Gypceros Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Gypceros Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Khezu X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Khezu Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Khezu Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Khezu Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Khezu Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Khezu Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Hermitaur X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hermitaur Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Hermitaur Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Hermitaur Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Hermitaur Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Hermitaur Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Hypno X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hypno Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Hypno Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Hypno Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Hypno Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Hypno Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Basarios X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Basarios Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Basarios Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Basarios Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Basarios Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Basarios Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Plesioth X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Plesioth Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Plesioth Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Plesioth Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Plesioth Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Plesioth Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Monoblos X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Monoblos Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Monoblos Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Monoblos Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Monoblos Coil X"
+      },
+      {
+        "slot": "legs",
+        "name": "Monoblos Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Garuga X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Garuga Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Garuga Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Garuga Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Garuga Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Garuga Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Blango X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Blango Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Blango Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Blango Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Blango Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Blango Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Ceanataur X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ceanataur Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Ceanataur Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Ceanataur Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Ceanataur Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Ceanataur Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Rathian X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathian Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathian Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Rathian Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathian Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Rathian Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Narga X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Narga Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Narga Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Narga Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Narga Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Narga Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Lava X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Lava Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Lava Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Lava Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Lava Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Lava Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Tigrex X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Tigrex Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Tigrex Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Tigrex Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Tigrex Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Tigrex Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Rathalos X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathalos Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathalos Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Rathalos Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathalos Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Rathalos Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Diablo X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Diablo Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Diablo Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Diablo Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Diablo Coil X"
+      },
+      {
+        "slot": "legs",
+        "name": "Diablo Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Gravios X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gravios Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Gravios Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Gravios Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Gravios Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Gravios Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Kut-Ku Z Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kut-Ku Helm Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Kut-Ku Mail Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Kut-Ku Vambraces Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Kut-Ku Tasset Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Kut-Ku Greaves Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Conga Z Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Conga Helm Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Conga Mail Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Conga Vambraces Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Conga Tasset Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Conga Greaves Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Gypceros Z Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gypceros Helm Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Gypceros Mail Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Gypceros Vambraces Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Gypceros Tasset Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Gypceros Greaves Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Khezu Z Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Khezu Helm Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Khezu Mail Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Khezu Vambraces Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Khezu Tasset Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Khezu Greaves Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Hermitaur Z Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hermitaur Helm Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Hermitaur Mail Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Hermitaur Vambraces Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Hermitaur Tasset Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Hermitaur Greaves Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Plesioth Z Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Plesioth Helm Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Plesioth Mail Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Plesioth Vambraces Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Plesioth Tasset Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Plesioth Greaves Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Blango Z Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Blango Helm Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Blango Mail Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Blango Vambraces Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Blango Tasset Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Blango Greaves Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Ceanataur Z Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ceanataur Helm Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Ceanataur Mail Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Ceanataur Vambraces Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Ceanataur Tasset Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Ceanataur Greaves Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Diablo Z Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Diablo Helm Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Diablo Mail Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Diablo Vambraces Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Diablo Coil Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Diablo Greaves Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Gravios Z Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gravios Helm Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Gravios Mail Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Gravios Vambraces Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Gravios Tasset Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Gravios Greaves Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Chakra Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "waist",
+        "name": "Chakra Tasset"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Black Belt X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Black Belt Helm X"
+      },
+      {
+        "slot": "chest",
+        "name": "Black Belt Mail X"
+      },
+      {
+        "slot": "waist",
+        "name": "SpecialKirinHidex2,BlackBeltCoinGx8,Legend Coin Gx3,Commendation Sx1"
+      },
+      {
+        "slot": "waist",
+        "name": "Black Belt Tasset X"
+      },
+      {
+        "slot": "waist",
+        "name": "Black Belt Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Mizuha Shin Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Mizuha Cap Shin"
+      },
+      {
+        "slot": "arms",
+        "name": "Mizuha Guards Shin"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Kirin X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "Kirin Jacket X"
+      },
+      {
+        "slot": "arms",
+        "name": "Kirin Leg Guards X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Empress X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "Empress Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Empress Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Empress Coil X"
+      },
+      {
+        "slot": "legs",
+        "name": "Empress Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Indra Shin Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Indra Helm Shin"
+      },
+      {
+        "slot": "chest",
+        "name": "Indra Vest Shin"
+      },
+      {
+        "slot": "legs",
+        "name": "Indra Leggings  Shin"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Kaiser X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "chest",
+        "name": "Kaiser Mail X"
+      },
+      {
+        "slot": "arms",
+        "name": "Kaiser Vambraces X"
+      },
+      {
+        "slot": "waist",
+        "name": "Kaiser Tasset X"
+      },
+      {
+        "slot": "legs",
+        "name": "Kaiser Greaves X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Dragon X Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Dragonhead X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Dark Ukanlos Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Dark Ukanlos Mask"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Makluva Z Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Makluva Hood Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Makluva Coil Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Makluva Pants Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Rathian Heart Z Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathian Heart Helm Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathian Heart Mail Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathian Heart Coil Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Rathalos Soul Z Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathalos Soul Helm Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathalos Soul Mail Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathalos Soul Coil Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Golden Moon Z Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Golden Moon Helm Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Golden Moon Mail Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Golden Moon Coil Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Silver Sol Z Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Silver Sol Helm Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Silver Sol Mail Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Silver Sol Coil Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Silver Sol Greaves Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Auroros/Borealis Goku Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Auroros Helm Goku"
+      },
+      {
+        "slot": "waist",
+        "name": "Auroros Tasset Goku"
+      },
+      {
+        "slot": "legs",
+        "name": "Auroros Pants Goku"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Fatalis Z Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Fatalis Head Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "White Fatalis Z Armor",
+    "rank": "G",
+    "hunter_type": "blademaster",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "White Fatalis Head Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Blademaster_Armors"
+  },
+  {
+    "set_name": "Kut-Ku X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kut-Ku Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Kut-Ku Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Kut-Ku Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Kut-Ku Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Kut-Ku Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Conga X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Conga Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Conga Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Conga Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Conga Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Conga Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Gypceros X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gypceros Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Gypceros Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Gypceros Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Gypceros Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Gypceros Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Khezu X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Khezu Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Khezu Vest X"
+      },
+      {
+        "slot": "waist",
+        "name": "Khezu Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Khezu Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Hermitaur X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hermitaur Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Hermitaur Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Hermitaur Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Hermitaur Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Hermitaur Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Hypno X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hypno Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Hypno Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Hypno Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Hypno Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Hypno Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Basarios X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Basarios Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Basarios Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Basarios Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Basarios Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Basarios Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Plesioth X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Plesioth Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Plesioth Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Plesioth Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Plesioth Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Plesioth Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Monoblos X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Monoblos Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Monoblos Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Monoblos Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Monoblos Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Monoblos Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Garuga X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Garuga Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Garuga Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Garuga Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Garuga Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Garuga Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Blango X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Blango Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Blango Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Blango Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Blango Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Blango Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Ceanataur X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ceanataur Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Ceanataur Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Ceanataur Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Ceanataur Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Ceanataur Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Rathian X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathian Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathian Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Rathian Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathian Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Rathian Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Narga X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Narga Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Narga Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Narga Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Narga Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Narga Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Lava X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Lava Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Lava Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Lava Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Lava Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Lava Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Tigrex X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Tigrex Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Tigrex Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Tigrex Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Tigrex Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Tigrex Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Rathalos X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathalos Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathalos Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Rathalos Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathalos Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Rathalos Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Diablo X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Diablo Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Diablo Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Diablo Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Diablo Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Diablo Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Gravios X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gravios Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Gravios Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Gravios Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Gravios Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Gravios Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Kut-Ku Z Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kut-Ku Cap Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Kut-Ku Vest Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Kut-Ku Guards Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Kut-Ku Coat Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Kut-Ku Leggings Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Conga Z Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Conga Cap Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Conga Vest Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Conga Guards Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Conga Coat Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Conga Leggings Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Gypceros Z Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gypceros Cap Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Gypceros Vest Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Gypceros Guards Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Gypceros Coat Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Gypceros Leggings Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Khezu Z Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Khezu Cap Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Khezu Vest Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Khezu Guards Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Khezu Coat Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Khezu Leggings Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Hermitaur Z Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Hermitaur Cap Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Hermitaur Vest Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Hermitaur Guards Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Hermitaur Coat Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Hermitaur Leggings Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Plesioth Z Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Plesioth Cap Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Plesioth Vest Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Plesioth Guards Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Plesioth Coat Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Plesioth Leggings Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Blango Z Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Blango Cap Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Blango Vest Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Blango Guards Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Blango Coat Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Ceanataur Z Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Ceanataur Cap Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Ceanataur Vest Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Ceanataur Guards Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Ceanataur Coat Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Ceanataur Leggings Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Diablo Z Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Diablo Cap Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Diablo Vest Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Diablo Guards Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Diablo Coat Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Diablo Leggings Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Gravios Z Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Gravios Cap Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Gravios Vest Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Gravios Guards Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Gravios Coat Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Gravios Leggings Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Chakra Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "waist",
+        "name": "Chakra Tasset"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Black Belt X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Black Belt Cap X"
+      },
+      {
+        "slot": "chest",
+        "name": "Black Belt Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Black Belt Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Black Belt Coat X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Obituary/Butterfly X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Obituary Caput X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Extravagant Shin Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Extravagant Cap Shin"
+      },
+      {
+        "slot": "waist",
+        "name": "Extravagant Coat Shin"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Kirin X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kirin Cape X"
+      },
+      {
+        "slot": "legs",
+        "name": "Kirin Boots X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Empress X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Empress Mask X"
+      },
+      {
+        "slot": "chest",
+        "name": "Empress Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Empress Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Empress Coat X"
+      },
+      {
+        "slot": "legs",
+        "name": "Empress Leggings X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Steadfast Shin Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Steadfast Helm Shin"
+      },
+      {
+        "slot": "chest",
+        "name": "Steadvast Vest Shin"
+      },
+      {
+        "slot": "arms",
+        "name": "Steadvast Guards Shin"
+      },
+      {
+        "slot": "waist",
+        "name": "Steadfast Coat Shin"
+      },
+      {
+        "slot": "legs",
+        "name": "Steadfast Boots Shin"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Kaiser X Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Kaiser Mask X"
+      },
+      {
+        "slot": "chest",
+        "name": "Kaiser Vest X"
+      },
+      {
+        "slot": "arms",
+        "name": "Kaiser Guards X"
+      },
+      {
+        "slot": "waist",
+        "name": "Kaiser Coat X"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Carnage Shin Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Carnage Mask Shin"
+      },
+      {
+        "slot": "arms",
+        "name": "Carnage Vambraces Shin"
+      },
+      {
+        "slot": "legs",
+        "name": "Carnage Boots Shin"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Dark Ukanlos Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "legs",
+        "name": "Dark Ukanlos Boots"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Makluva Z Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "legs",
+        "name": "Makluva Leggings Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Rathian Heart Z Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathian Heart Cap Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathian Heart Vest Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathian Heart Coat Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Rathalos Soul Z Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Rathalos Soul Cap Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Rathalos Soul Vest Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Rath Soul Guards Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Rathalos Soul Coat Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Rathalos Soul Leggings Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Golden Moon Z Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Golden Moon Cap Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Golden Moon Vest Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Golden Moon Guards Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Golden Moon Coat Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Golden Moon Leggings Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Silver Sol Z Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Silver Sol Cap Z"
+      },
+      {
+        "slot": "chest",
+        "name": "Silver Sol Vest Z"
+      },
+      {
+        "slot": "arms",
+        "name": "Silver Sol Guards Z"
+      },
+      {
+        "slot": "waist",
+        "name": "Silver Sol Coat Z"
+      },
+      {
+        "slot": "legs",
+        "name": "Silver Sol Leggings Z"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  },
+  {
+    "set_name": "Genenis/Glyph Goku Armor",
+    "rank": "G",
+    "hunter_type": "gunner",
+    "pieces": [
+      {
+        "slot": "waist",
+        "name": "Genesis/Glyph Tasset Goku"
+      },
+      {
+        "slot": "legs",
+        "name": "Genesis/Glyph Pants Goku"
+      }
+    ],
+    "page": "MHFU:_G_Rank_Gunner_Armors"
+  }
+]

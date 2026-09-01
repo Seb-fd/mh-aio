@@ -1,0 +1,1248 @@
+[
+  {
+    "id": 20001,
+    "name": "Poison Resistance",
+    "description": "Reduces damage while poisoned.",
+    "max_level": 3,
+    "icon_color": "Violet"
+  },
+  {
+    "id": 20002,
+    "name": "Paralysis Resistance",
+    "description": "Reduces the duration of paralysis.",
+    "max_level": 3,
+    "icon_color": "Yellow"
+  },
+  {
+    "id": 20003,
+    "name": "Sleep Resistance",
+    "description": "Reduces the duration of sleep.",
+    "max_level": 3,
+    "icon_color": "Cyan"
+  },
+  {
+    "id": 20004,
+    "name": "Stun Resistance",
+    "description": "Reduces stun duration.",
+    "max_level": 3,
+    "icon_color": "Gold"
+  },
+  {
+    "id": 20005,
+    "name": "Muck Resistance",
+    "description": "Reduces impairments to mobility while stuck in monster muck.",
+    "max_level": 1,
+    "icon_color": "Gray"
+  },
+  {
+    "id": 20006,
+    "name": "Blast Resistance",
+    "description": "Grants protection against blastblight.",
+    "max_level": 3,
+    "icon_color": "Orange"
+  },
+  {
+    "id": 20007,
+    "name": "Bleeding Resistance",
+    "description": "Grants protection against bleeding.",
+    "max_level": 3,
+    "icon_color": "Beige"
+  },
+  {
+    "id": 20008,
+    "name": "Iron Skin",
+    "description": "Grants protection against Defense Down.",
+    "max_level": 3,
+    "icon_color": "Beige"
+  },
+  {
+    "id": 20009,
+    "name": "Earplugs",
+    "description": "Grants protection from large monsters' roars.",
+    "max_level": 5,
+    "icon_color": "White"
+  },
+  {
+    "id": 20010,
+    "name": "Windproof",
+    "description": "Grants protection against wind pressure.",
+    "max_level": 5,
+    "icon_color": "White"
+  },
+  {
+    "id": 20011,
+    "name": "Tremor Resistance",
+    "description": "Grants protection against ground tremors.",
+    "max_level": 3,
+    "icon_color": "Gray"
+  },
+  {
+    "id": 20012,
+    "name": "Dungmaster",
+    "description": "Makes monsters hit with slinger dung pods more likely to run.",
+    "max_level": 1,
+    "icon_color": "DarkBeige"
+  },
+  {
+    "id": 20013,
+    "name": "Effluvial Expert",
+    "description": "Nullifies or reduces environmental damage in the Rotten Vale.",
+    "max_level": 1,
+    "icon_color": "DarkBeige"
+  },
+  {
+    "id": 20014,
+    "name": "Heat Guard",
+    "description": "Nullifies damage from heat.",
+    "max_level": 1,
+    "icon_color": "Beige"
+  },
+  {
+    "id": 20015,
+    "name": "Attack Boost",
+    "description": "Increases attack power. Also improves affinity at higher levels.",
+    "max_level": 7,
+    "icon_color": "Red"
+  },
+  {
+    "id": 20016,
+    "name": "Defense Boost",
+    "description": "Increases defense. Level up to improve resistances as well.",
+    "max_level": 7,
+    "icon_color": "Beige"
+  },
+  {
+    "id": 20017,
+    "name": "Health Boost",
+    "description": "Increases health.",
+    "max_level": 3,
+    "icon_color": "Green"
+  },
+  {
+    "id": 20018,
+    "name": "Recovery Up",
+    "description": "Increases the amount recovered when restoring health.",
+    "max_level": 3,
+    "icon_color": "Green"
+  },
+  {
+    "id": 20019,
+    "name": "Recovery Speed",
+    "description": "Speeds healing of recoverable damage (the red portion of the health gauge).",
+    "max_level": 3,
+    "icon_color": "Green"
+  },
+  {
+    "id": 20020,
+    "name": "Fire Resistance",
+    "description": "Increases fire resistance. Also improves defense at higher levels.",
+    "max_level": 3,
+    "icon_color": "Red"
+  },
+  {
+    "id": 20021,
+    "name": "Water Resistance",
+    "description": "Increases water resistance. Also improves defense at higher levels.",
+    "max_level": 3,
+    "icon_color": "Blue"
+  },
+  {
+    "id": 20022,
+    "name": "Ice Resistance",
+    "description": "Increases ice resistance. Also improves defense at higher levels.",
+    "max_level": 3,
+    "icon_color": "White"
+  },
+  {
+    "id": 20023,
+    "name": "Thunder Resistance",
+    "description": "Increases thunder resistance. Also improves defense at higher levels.",
+    "max_level": 3,
+    "icon_color": "Gold"
+  },
+  {
+    "id": 20024,
+    "name": "Dragon Resistance",
+    "description": "Increases dragon resistance. Also improves defense at higher levels.",
+    "max_level": 3,
+    "icon_color": "DarkRed"
+  },
+  {
+    "id": 20025,
+    "name": "Blight Resistance",
+    "description": "Grants protection against all elemental blights.",
+    "max_level": 3,
+    "icon_color": "DarkBlue"
+  },
+  {
+    "id": 20026,
+    "name": "Fire Attack",
+    "description": "Increases fire element attack power. (Elemental attack power has a maximum limit.)",
+    "max_level": 6,
+    "icon_color": "Red"
+  },
+  {
+    "id": 20027,
+    "name": "Water Attack",
+    "description": "Increases water element attack power. (Elemental attack power has a maximum limit.)",
+    "max_level": 6,
+    "icon_color": "Blue"
+  },
+  {
+    "id": 20028,
+    "name": "Ice Attack",
+    "description": "Increases ice element attack power. (Elemental attack power has a maximum limit.)",
+    "max_level": 6,
+    "icon_color": "White"
+  },
+  {
+    "id": 20029,
+    "name": "Thunder Attack",
+    "description": "Increases thunder element attack power. (Elemental attack power has a maximum limit.)",
+    "max_level": 6,
+    "icon_color": "Gold"
+  },
+  {
+    "id": 20030,
+    "name": "Dragon Attack",
+    "description": "Increases dragon element attack power. (Elemental attack power has a maximum limit.)",
+    "max_level": 6,
+    "icon_color": "DarkRed"
+  },
+  {
+    "id": 20031,
+    "name": "Poison Attack",
+    "description": "Increases the rate of poison buildup. (Elemental buildup has a maximum limit.)",
+    "max_level": 4,
+    "icon_color": "Violet"
+  },
+  {
+    "id": 20032,
+    "name": "Paralysis Attack",
+    "description": "Increases the rate of paralysis buildup. (Elemental buildup has a maximum limit.)",
+    "max_level": 4,
+    "icon_color": "Yellow"
+  },
+  {
+    "id": 20033,
+    "name": "Sleep Attack",
+    "description": "Increases the rate of sleep buildup. (Elemental buildup has a maximum limit.)",
+    "max_level": 4,
+    "icon_color": "Cyan"
+  },
+  {
+    "id": 20034,
+    "name": "Blast Attack",
+    "description": "Increases the rate of blast buildup. (Elemental buildup has a maximum limit.)",
+    "max_level": 4,
+    "icon_color": "Orange"
+  },
+  {
+    "id": 20035,
+    "name": "Normal Shots",
+    "description": "Increases the attack power of normal ammo and normal arrows.",
+    "max_level": 2,
+    "icon_color": "White"
+  },
+  {
+    "id": 20036,
+    "name": "Piercing Shots",
+    "description": "Increases the attack power of piercing ammo and Dragon Piercer.",
+    "max_level": 2,
+    "icon_color": "Blue"
+  },
+  {
+    "id": 20037,
+    "name": "Spread/Power Shots",
+    "description": "Increases the attack power of spread ammo, power shot arrows, and Thousand Dragons.",
+    "max_level": 2,
+    "icon_color": "DarkGreen"
+  },
+  {
+    "id": 20038,
+    "name": "Free Elem/Ammo Up",
+    "description": "Unlocks your weapon's hidden element. Also increases bowgun loading capacity. (There is a cap to loading capacity.)",
+    "max_level": 3,
+    "icon_color": "Cyan"
+  },
+  {
+    "id": 20039,
+    "name": "Critical Eye",
+    "description": "Increases affinity.",
+    "max_level": 7,
+    "icon_color": "DarkBlue"
+  },
+  {
+    "id": 20040,
+    "name": "Critical Boost",
+    "description": "Increases the damage of critical hits.",
+    "max_level": 3,
+    "icon_color": "DarkBlue"
+  },
+  {
+    "id": 20041,
+    "name": "Weakness Exploit",
+    "description": "Increases the affinity of attacks that exploit a monster weak spot.",
+    "max_level": 3,
+    "icon_color": "DarkBlue"
+  },
+  {
+    "id": 20042,
+    "name": "Focus",
+    "description": "Increases the fill rate for weapons with gauges and the charge rate for weapons with charge attacks.",
+    "max_level": 3,
+    "icon_color": "LightBeige"
+  },
+  {
+    "id": 20043,
+    "name": "Power Prolonger",
+    "description": "Allows long swords, dual blades, insect glaives, switch axes, and charge blades to stay powered up longer.",
+    "max_level": 3,
+    "icon_color": "LightBeige"
+  },
+  {
+    "id": 20044,
+    "name": "Handicraft",
+    "description": "Extends the weapon sharpness gauge. However, it will not increase the gauge past its maximum.",
+    "max_level": 5,
+    "icon_color": "White"
+  },
+  {
+    "id": 20045,
+    "name": "Critical Draw",
+    "description": "Increases affinity when performing draw attacks.",
+    "max_level": 3,
+    "icon_color": "DarkBlue"
+  },
+  {
+    "id": 20046,
+    "name": "Partbreaker",
+    "description": "Makes it easier to break or sever parts of large monsters.",
+    "max_level": 3,
+    "icon_color": "Gray"
+  },
+  {
+    "id": 20047,
+    "name": "Slugger",
+    "description": "Makes it easier to stun monsters.",
+    "max_level": 5,
+    "icon_color": "Gold"
+  },
+  {
+    "id": 20048,
+    "name": "Stamina Thief",
+    "description": "Increases certain attacks' ability to exhaust monsters.",
+    "max_level": 5,
+    "icon_color": "Cyan"
+  },
+  {
+    "id": 20049,
+    "name": "Master Mounter",
+    "description": "Makes it easier to mount monsters.",
+    "max_level": 1,
+    "icon_color": "Blue"
+  },
+  {
+    "id": 20050,
+    "name": "Airborne",
+    "description": "Increases the damage caused by jumping attacks.",
+    "max_level": 1,
+    "icon_color": "Blue"
+  },
+  {
+    "id": 20051,
+    "name": "Latent Power",
+    "description": "Temporarily increases affinity and reduces stamina depletion when certain conditions are met.",
+    "max_level": 7,
+    "icon_color": "Red"
+  },
+  {
+    "id": 20052,
+    "name": "Agitator",
+    "description": "Increases attack power and affinity when large monsters become enraged.",
+    "max_level": 7,
+    "icon_color": "Red"
+  },
+  {
+    "id": 20053,
+    "name": "Peak Performance",
+    "description": "Increases attack when your health is full.",
+    "max_level": 3,
+    "icon_color": "Red"
+  },
+  {
+    "id": 20054,
+    "name": "Heroics",
+    "description": "Increases attack power and defense when health drops to 35% or lower.",
+    "max_level": 7,
+    "icon_color": "Red"
+  },
+  {
+    "id": 20055,
+    "name": "Fortify",
+    "description": "Temporarily increases your attack and defense every time you faint up to 2 times.",
+    "max_level": 1,
+    "icon_color": "DarkRed"
+  },
+  {
+    "id": 20056,
+    "name": "Resentment",
+    "description": "Increases attack when you have recoverable damage (the red portion of your health gauge).",
+    "max_level": 5,
+    "icon_color": "DarkRed"
+  },
+  {
+    "id": 20057,
+    "name": "Resuscitate",
+    "description": "Improves evasion and reduces stamina depletion when afflicted with abnormal status effects.",
+    "max_level": 1,
+    "icon_color": "Cyan"
+  },
+  {
+    "id": 20058,
+    "name": "Horn Maestro",
+    "description": "Increases the effect duration of hunting horn melodies.",
+    "max_level": 2,
+    "icon_color": "White"
+  },
+  {
+    "id": 20059,
+    "name": "Capacity Boost",
+    "description": "Increases the gunlance's shell capacity and charge blade's phial capacity.",
+    "max_level": 1,
+    "icon_color": "Gray"
+  },
+  {
+    "id": 20060,
+    "name": "Special Ammo Boost",
+    "description": "Increases the power of bowgun special ammo, Dragon Piercer, and Thousand Dragons.",
+    "max_level": 2,
+    "icon_color": "Gray"
+  },
+  {
+    "id": 20061,
+    "name": "Artillery",
+    "description": "Strengthens explosive attacks like gunlance shells, Wyvern's Fire, charge blade phial attacks, and sticky ammo.",
+    "max_level": 5,
+    "icon_color": "Gray"
+  },
+  {
+    "id": 20062,
+    "name": "Heavy Artillery",
+    "description": "Increases the firepower of ballistae and cannons.",
+    "max_level": 2,
+    "icon_color": "Gray"
+  },
+  {
+    "id": 20063,
+    "name": "Marathon Runner",
+    "description": "Slows down stamina depletion for actions which continuously drain stamina (such as dashing).",
+    "max_level": 3,
+    "icon_color": "Beige"
+  },
+  {
+    "id": 20064,
+    "name": "Constitution",
+    "description": "Reduces stamina depletion when performing stamina-draining moves such as evading, etc.",
+    "max_level": 5,
+    "icon_color": "Beige"
+  },
+  {
+    "id": 20065,
+    "name": "Leap of Faith",
+    "description": "Allows you to do a dive-evade when facing towards large monsters, and extends the dive-evade distance.",
+    "max_level": 1,
+    "icon_color": "Cyan"
+  },
+  {
+    "id": 20066,
+    "name": "Stamina Surge",
+    "description": "Speeds up stamina recovery.",
+    "max_level": 3,
+    "icon_color": "Beige"
+  },
+  {
+    "id": 20067,
+    "name": "Hunger Resistance",
+    "description": "Reduces maximum stamina depletion over time. However, does not work against cold environments that reduce stamina.",
+    "max_level": 3,
+    "icon_color": "Beige"
+  },
+  {
+    "id": 20068,
+    "name": "Evade Window",
+    "description": "Extends the invulnerability period when evading.",
+    "max_level": 5,
+    "icon_color": "Cyan"
+  },
+  {
+    "id": 20069,
+    "name": "Evade Extender",
+    "description": "Increases evade distance.",
+    "max_level": 3,
+    "icon_color": "Cyan"
+  },
+  {
+    "id": 20070,
+    "name": "Guard",
+    "description": "Reduces knockbacks and stamina depletion when guarding.",
+    "max_level": 5,
+    "icon_color": "Gray"
+  },
+  {
+    "id": 20071,
+    "name": "Quick Sheath",
+    "description": "Speeds up weapon sheathing.",
+    "max_level": 3,
+    "icon_color": "LightBeige"
+  },
+  {
+    "id": 20072,
+    "name": "Wide-Range",
+    "description": "Allows the effects of certain items to also affect nearby allies.",
+    "max_level": 5,
+    "icon_color": "White"
+  },
+  {
+    "id": 20073,
+    "name": "Item Prolonger",
+    "description": "Extends the duration of some item effects.",
+    "max_level": 3,
+    "icon_color": "LightBeige"
+  },
+  {
+    "id": 20074,
+    "name": "Free Meal",
+    "description": "Gives you a predetermined chance of consuming a food or drink item for free.",
+    "max_level": 3,
+    "icon_color": "LightBeige"
+  },
+  {
+    "id": 20075,
+    "name": "Speed Eating",
+    "description": "Increases meat-eating and item-consumption speed.",
+    "max_level": 3,
+    "icon_color": "Beige"
+  },
+  {
+    "id": 20076,
+    "name": "Speed Sharpening",
+    "description": "Speeds up weapon sharpening when using a whetstone.",
+    "max_level": 3,
+    "icon_color": "Gold"
+  },
+  {
+    "id": 20077,
+    "name": "Bombardier",
+    "description": "Increases the damage of explosive items.",
+    "max_level": 5,
+    "icon_color": "Orange"
+  },
+  {
+    "id": 20078,
+    "name": "Mushroomancer",
+    "description": "Lets you digest mushrooms that would otherwise be inedible and gain their advantageous effects.",
+    "max_level": 3,
+    "icon_color": "Violet"
+  },
+  {
+    "id": 20079,
+    "name": "Master Fisher",
+    "description": "Improves your skill at fishing.",
+    "max_level": 1,
+    "icon_color": "Blue"
+  },
+  {
+    "id": 20080,
+    "name": "Pro Transporter",
+    "description": "Increases your speed while transporting items and decreases the likelihood of dropping them.",
+    "max_level": 1,
+    "icon_color": "LightBeige"
+  },
+  {
+    "id": 20081,
+    "name": "Master Gatherer",
+    "description": "Allows you to gather more quickly, and also prevents attacks from knocking you back while gathering.",
+    "max_level": 1,
+    "icon_color": "Lime"
+  },
+  {
+    "id": 20082,
+    "name": "Honey Hunter",
+    "description": "Increases the quantity of honey you receive when gathering in the field.",
+    "max_level": 1,
+    "icon_color": "Beige"
+  },
+  {
+    "id": 20083,
+    "name": "Carving Pro",
+    "description": "Prevents knockback from attacks while carving.",
+    "max_level": 1,
+    "icon_color": "Gray"
+  },
+  {
+    "id": 20084,
+    "name": "Divine Blessing",
+    "description": "Has a predetermined chance of reducing the damage you take.",
+    "max_level": 5,
+    "icon_color": "Blue"
+  },
+  {
+    "id": 20085,
+    "name": "Palico Rally",
+    "description": "Powers up Palicoes.",
+    "max_level": 5,
+    "icon_color": "LightBeige"
+  },
+  {
+    "id": 20086,
+    "name": "Botanist",
+    "description": "Increases the quantity of herbs and other consumable items you gather.",
+    "max_level": 4,
+    "icon_color": "Lime"
+  },
+  {
+    "id": 20087,
+    "name": "Geologist",
+    "description": "Increases the number of times you can use a gathering point.",
+    "max_level": 3,
+    "icon_color": "LightBeige"
+  },
+  {
+    "id": 20088,
+    "name": "Maximum Might",
+    "description": "Increases affinity as long as stamina is kept full for a period of time.",
+    "max_level": 5,
+    "icon_color": "Red"
+  },
+  {
+    "id": 20089,
+    "name": "Slinger Capacity",
+    "description": "Increases loading capacity for slinger ammo obtained in the field. Limits the amount of ammo used when firing certain shots.",
+    "max_level": 5,
+    "icon_color": "Lime"
+  },
+  {
+    "id": 20090,
+    "name": "Stealth",
+    "description": "Makes it easier for monsters to lose sight of you.",
+    "max_level": 3,
+    "icon_color": "Gray"
+  },
+  {
+    "id": 20091,
+    "name": "Flinch Free",
+    "description": "Prevents knockbacks and other reactions to small damage.",
+    "max_level": 3,
+    "icon_color": "Gray"
+  },
+  {
+    "id": 20092,
+    "name": "Scoutfly Range Up",
+    "description": "Expands your scoutflies' detection range.",
+    "max_level": 1,
+    "icon_color": "Lime"
+  },
+  {
+    "id": 20093,
+    "name": "Speed Crawler",
+    "description": "Increases movement speed while crouching.",
+    "max_level": 1,
+    "icon_color": "White"
+  },
+  {
+    "id": 20094,
+    "name": "Jump Master",
+    "description": "Prevents attacks from knocking you back during a jump.",
+    "max_level": 1,
+    "icon_color": "Blue"
+  },
+  {
+    "id": 20095,
+    "name": "Survival Expert",
+    "description": "Extra health is recovered from environmental interactables like Sporepuffs or Wiggly Litchi.",
+    "max_level": 3,
+    "icon_color": "White"
+  },
+  {
+    "id": 20096,
+    "name": "Aquatic/Polar Mobility",
+    "description": "Lets you move more freely in water. Also prevents you from being slowed down by terrain effects, such as deep snow.",
+    "max_level": 3,
+    "icon_color": "Blue"
+  },
+  {
+    "id": 20097,
+    "name": "Cliffhanger",
+    "description": "Decreases stamina depletion when evading while clinging to walls or ivy, or when moving while grappling onto an enemy.",
+    "max_level": 1,
+    "icon_color": "Beige"
+  },
+  {
+    "id": 20098,
+    "name": "Blindsider",
+    "description": "Improves the effectiveness of flash attacks and items.",
+    "max_level": 1,
+    "icon_color": "Gold"
+  },
+  {
+    "id": 20099,
+    "name": "Scholar",
+    "description": "Speeds up progress on research levels and special investigations. (Effect is applied at the quest results screen.)",
+    "max_level": 1,
+    "icon_color": "Lime"
+  },
+  {
+    "id": 20100,
+    "name": "Entomologist",
+    "description": "Decreases the chances of destroying the bodies of small insect monsters, allowing them to be carved.",
+    "max_level": 3,
+    "icon_color": "Green"
+  },
+  {
+    "id": 20101,
+    "name": "Effluvia Resistance",
+    "description": "Gain a resistance to effluvial buildup.",
+    "max_level": 3,
+    "icon_color": "DarkBeige"
+  },
+  {
+    "id": 20102,
+    "name": "Scenthound",
+    "description": "Increases your scoutflies' gauge fill rate when you find tracks and other traces left by monsters.",
+    "max_level": 1,
+    "icon_color": "Beige"
+  },
+  {
+    "id": 20103,
+    "name": "Forager's Luck",
+    "description": "Increases the chance of finding rare gathering points.",
+    "max_level": 1,
+    "icon_color": "White"
+  },
+  {
+    "id": 20104,
+    "name": "Detector",
+    "description": "Shows rare gathering points on the Wildlife Map.",
+    "max_level": 1,
+    "icon_color": "White"
+  },
+  {
+    "id": 20105,
+    "name": "Tool Specialist",
+    "description": "Reduces the recharge time for specialized tools.",
+    "max_level": 5,
+    "icon_color": "LightBeige"
+  },
+  {
+    "id": 20106,
+    "name": "Affinity Sliding",
+    "description": "Sliding increases your affinity for a short time.",
+    "max_level": 1,
+    "icon_color": "Red"
+  },
+  {
+    "id": 20107,
+    "name": "Intimidator",
+    "description": "Reduces the chances small monsters will attack after spotting you. (No effect on certain monsters.)",
+    "max_level": 3,
+    "icon_color": "White"
+  },
+  {
+    "id": 20108,
+    "name": "Hasten Recovery",
+    "description": "Regenerates your health as you continually attack a monster. Recovery varies by weapon.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20109,
+    "name": "Super Recovery",
+    "description": "Allows recovery to exceed the red portion of the health gauge.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20110,
+    "name": "Poison Duration Up",
+    "description": "Extends the duration of your poison's effect on monsters.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20111,
+    "name": "Adrenaline",
+    "description": "Temporarily reduces stamina depletion when health is at 40% or lower.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20112,
+    "name": "Stamina Cap Up",
+    "description": "Increases stamina cap.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20113,
+    "name": "Critical Element",
+    "description": "Increases elemental damage (fire, water, thunder, ice, dragon) when landing critical hits.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20114,
+    "name": "Mind's Eye/Ballistics",
+    "description": "Prevents attacks from being deflected. Also shortens the distance before ammo and arrows reach maximum power.",
+    "max_level": 1,
+    "icon_color": "Red"
+  },
+  {
+    "id": 20115,
+    "name": "Bludgeoner",
+    "description": "Raises attack as your weapon loses sharpness. Also boosts ranged weapon melee attacks and odds of stunning.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20116,
+    "name": "Non-elemental Boost",
+    "description": "Powers up non-elemental weapons you have equipped.",
+    "max_level": 1,
+    "icon_color": "DarkBeige"
+  },
+  {
+    "id": 20117,
+    "name": "Capture Master",
+    "description": "High chance of increased capture rewards. (No effect when joining mid-quest.)",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20118,
+    "name": "Guard Up",
+    "description": "Allows you to guard against ordinarily unblockable attacks.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20119,
+    "name": "Guts",
+    "description": "Above a certain health threshold, you withstand an attack that would normally cart you (once only).",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20120,
+    "name": "Master's Touch",
+    "description": "Prevents your weapon from losing sharpness during critical hits.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20121,
+    "name": "Nullify Wind Pressure",
+    "description": "Negates all wind pressure.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20122,
+    "name": "Razor Sharp/Spare Shot",
+    "description": "Halves sharpness loss. For bows and bowguns, shots have a chance not to expend coatings or ammo.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20123,
+    "name": "Critical Status",
+    "description": "Increases abnormal status effect damage (paralysis, poison, sleep, blast) when landing critical hits.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20124,
+    "name": "Great Luck",
+    "description": "High chance of increased quest rewards. (No effect when joining mid-quest.)",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20125,
+    "name": "Carving Master",
+    "description": "Lets you carve one additional time. (No effect when joining mid-quest.)",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20126,
+    "name": "Good Luck",
+    "description": "Good chance of increased quest rewards. (No effect when joining mid-quest.)",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20127,
+    "name": "Bow Charge Plus",
+    "description": "Increases max bow charge level by one.",
+    "max_level": 1,
+    "icon_color": "Blue"
+  },
+  {
+    "id": 20128,
+    "name": "Punishing Draw",
+    "description": "Adds a stun effect to draw attacks and slightly increases attack power.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20129,
+    "name": "Protective Polish",
+    "description": "Weapon sharpness does not decrease for a set time after sharpening.",
+    "max_level": 1,
+    "icon_color": "DarkRed"
+  },
+  {
+    "id": 20130,
+    "name": "BBQ Master",
+    "description": "Improves your skill at cooking meat.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20131,
+    "name": "Blast Functionality",
+    "description": "Allows you to apply blast coatings.",
+    "max_level": 1,
+    "icon_color": "Orange"
+  },
+  {
+    "id": 20132,
+    "name": "Elderseal Boost",
+    "description": "Increases the Elderseal of weapons and dragon ammo.",
+    "max_level": 1,
+    "icon_color": "DarkRed"
+  },
+  {
+    "id": 20133,
+    "name": "Para Functionality",
+    "description": "Allows you to apply paralysis coatings.",
+    "max_level": 1,
+    "icon_color": "Yellow"
+  },
+  {
+    "id": 20134,
+    "name": "Poison Functionality",
+    "description": "Allows you to apply poison coatings.",
+    "max_level": 1,
+    "icon_color": "Violet"
+  },
+  {
+    "id": 20135,
+    "name": "Sleep Functionality",
+    "description": "Allows you to apply sleep coatings.",
+    "max_level": 1,
+    "icon_color": "Cyan"
+  },
+  {
+    "id": 20136,
+    "name": "Elemental Airborne",
+    "description": "Elemental damage increased for jumping attacks.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20137,
+    "name": "True Razor Sharp/Spare Shot",
+    "description": "Greatly reduces sharpness loss. Bows and bowguns have a chance not to expend coatings or ammo.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20138,
+    "name": "Offensive Guard",
+    "description": "Temporarily increases attack power after executing a perfectly-timed guard.",
+    "max_level": 3,
+    "icon_color": "White"
+  },
+  {
+    "id": 20139,
+    "name": "Coalescence",
+    "description": "Temporarily enhances attacks after recovering from blights or abnormal status.",
+    "max_level": 3,
+    "icon_color": "Violet"
+  },
+  {
+    "id": 20140,
+    "name": "Frostcraft",
+    "description": "An aura of frost builds when your weapon is sheathed, raising attack. Wanes each melee hit or shot fired.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20141,
+    "name": "Element Acceleration",
+    "description": "Continually attacking a monster activates Free Element/Ammo Up Lv2 and increases elemental damage.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20142,
+    "name": "True Element Acceleration",
+    "description": "Continually attacking a monster activates Free Element/Ammo Up Lv3 and increases elemental damage.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20143,
+    "name": "Gaia's Veil",
+    "description": "While wearing a mantle, gain Windproof Lv3, Earplugs Lv3, Tremor Res Lv3, and Flinch Free.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20144,
+    "name": "True Gaia's Veil",
+    "description": "While wearing a mantle, gain Tremor Resistance Lv3, Earplugs Lv5, max Windproof, and Flinch Free.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20145,
+    "name": "Dragonvein Awakening",
+    "description": "Elem., abnormal status, & affinity up with weapon drawn. Take damage when attacking, but can be recovered by continually attacking.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20146,
+    "name": "True Dragonvein Awakening",
+    "description": "Enhances attacks even more with weapon drawn. Take damage when attacking, but can be recovered by continually attacking.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20147,
+    "name": "Free Meal Secret",
+    "description": "Raises the maximum level of the Free Meal skill.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20148,
+    "name": "Maximum Might Secret",
+    "description": "Raises the maximum level of the Maximum Might skill.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20149,
+    "name": "Bombardier Secret",
+    "description": "Raises the maximum level of the Bombardier skill.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20150,
+    "name": "Slugger Secret",
+    "description": "Raises the maximum level of the Slugger skill.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20151,
+    "name": "Agitator Secret",
+    "description": "Raises the maximum level of the Agitator skill.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20152,
+    "name": "Artillery Secret",
+    "description": "Raises the maximum level of the Artillery skill.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20153,
+    "name": "Stamina Thief Secret",
+    "description": "Raises the maximum level of the Stamina Thief skill.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20154,
+    "name": "Tool Specialist Secret",
+    "description": "Raises the maximum level of the Tool Specialist skill.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20155,
+    "name": "Latent Power Secret",
+    "description": "Raises the maximum level of the Latent Power skill.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20156,
+    "name": "Divine Blessing Secret",
+    "description": "Raises the maximum level of the Divine Blessing skill.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20157,
+    "name": "Slinger Ammo Secret",
+    "description": "Raises the maximum level of the Slinger Capacity skill.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20158,
+    "name": "Heroics Secret",
+    "description": "Raises the maximum level of the Heroics skill.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20159,
+    "name": "True Critical Status",
+    "description": "Greatly increases status effect damage (paralysis, poison, sleep, blast) when landing critical hits.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20160,
+    "name": "True Critical Element",
+    "description": "Greatly increases elemental damage (fire, water, thunder, ice, dragon) when landing critical hits.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20161,
+    "name": "Joy's Gift",
+    "description": "Increases odds of getting special Holiday Joy rewards. (No effect when joining mid-quest.)",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20162,
+    "name": "Joy's Gratitude",
+    "description": "Greatly increases odds of getting special Holiday Joy rewards. (No effect when joining mid-quest.)",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20163,
+    "name": "Gratitude's Gift",
+    "description": "Increases odds of getting special Grand Appreciation rewards. (No effect when joining mid-quest.)",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20164,
+    "name": "Gratitude's Blessing",
+    "description": "Greatly increases odds of getting special Grand Appreciation rewards. (No effect when joining mid-quest.)",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20165,
+    "name": "Full Bloom's Gift",
+    "description": "Increases odds of getting special Full Bloom rewards. (No effect when joining mid-quest.)",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20166,
+    "name": "Full Bloom Gratitude",
+    "description": "Greatly increases odds of getting special Full Bloom rewards. (No effect when joining mid-quest.)",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20167,
+    "name": "Element Conversion",
+    "description": "Equipped weapon's elemental power increases as your armor's elemental resistance increases.",
+    "max_level": 1,
+    "icon_color": "Violet"
+  },
+  {
+    "id": 20168,
+    "name": "All Elemental Resistance",
+    "description": "Increases all elemental resistances +20%.",
+    "max_level": 1,
+    "icon_color": "Violet"
+  },
+  {
+    "id": 20169,
+    "name": "Clutch Claw Boost",
+    "description": "Clutch claw weapon attacks wound monsters easier, and have a better chance of dropping slinger ammo.",
+    "max_level": 1,
+    "icon_color": "Red"
+  },
+  {
+    "id": 20170,
+    "name": "Inheritance",
+    "description": "Removes the skill level cap for the skill secrets.",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20171,
+    "name": "Transcendance",
+    "description": "Grants True Razor Sharp/Spare Shot. Health/Stamina +100 at the start of a quest or after fainting. (Effect doesn't stack.)",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20172,
+    "name": "Fun Fright's Gift",
+    "description": "Increases odds of getting special Fun Fright rewards. (No effect when joining mid-quest.)",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20173,
+    "name": "Fun Fright's Gratitude",
+    "description": "Greatly increases odds of getting special Fun Fright rewards. (No effect when joining mid-quest.)",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20174,
+    "name": "Sizzling Gift",
+    "description": "Increases odds of getting special Sizzling Spice rewards. (No effect when joining mid-quest.)",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20175,
+    "name": "Sizzling Gratitude",
+    "description": "Greatly increases odds of getting special Sizzling Spice rewards. (No effect when joining mid-quest.)",
+    "max_level": 1,
+    "icon_color": ""
+  },
+  {
+    "id": 20176,
+    "name": "Coldproof",
+    "description": "Nullifies the effects of cold weather.",
+    "max_level": 1,
+    "icon_color": "White"
+  },
+  {
+    "id": 20177,
+    "name": "Provoker",
+    "description": "Increases the attention drawn when attacking a monster.",
+    "max_level": 1,
+    "icon_color": "Orange"
+  },
+  {
+    "id": 20178,
+    "name": "Safe Landing",
+    "description": "Allows you to quickly recover from heavy attacks that blow you back when you have your weapon unsheathed.",
+    "max_level": 1,
+    "icon_color": "Blue"
+  }
+]
