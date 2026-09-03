@@ -42,6 +42,10 @@ pub fn run() {
             commands::search_armor_sets,
             commands::get_combinations,
             commands::get_melder_recipes,
+            commands::get_mhw_mantles,
+            commands::get_mhw_mantle_detail,
+            commands::get_palico_gadgets,
+            commands::get_palico_gadget_detail,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

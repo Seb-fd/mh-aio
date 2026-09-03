@@ -2463,6 +2463,245 @@ pub fn get_decoration_detail(conn: &Connection, id: i32) -> Result<Option<Decora
     }))
 }
 
+// ── MHW Mantles / Boosters + Palico Gadgets ──
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct MhwMantle {
+    pub id: i32,
+    pub game_id: i32,
+    pub name: String,
+    pub tool_type: String,
+    pub rarity: Option<i32>,
+    pub description: Option<String>,
+    pub effect: String,
+    pub duration_sec: Option<i32>,
+    pub cooldown_sec: Option<i32>,
+    pub cooldown_upgraded_sec: Option<i32>,
+    pub slots: Option<String>,
+    pub acquisition: Option<String>,
+    pub upgrade_quest: Option<String>,
+    pub upgrade_effect: Option<String>,
+    pub sort_order: Option<i32>,
+    pub icon_name: Option<String>,
+    pub icon_color: Option<String>,
+    pub icon_url: Option<String>,
+    pub icon_name_plus: Option<String>,
+    pub icon_color_plus: Option<String>,
+    pub icon_url_plus: Option<String>,
+    pub language: String,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct PalicoGadget {
+    pub id: i32,
+    pub game_id: i32,
+    pub name: String,
+    pub gadget_type: String,
+    pub tribe: Option<String>,
+    pub description: Option<String>,
+    pub effect: Option<String>,
+    pub acquisition: Option<String>,
+    pub sort_order: Option<i32>,
+    pub icon_name: Option<String>,
+    pub icon_color: Option<String>,
+    pub icon_url: Option<String>,
+    pub language: String,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct PalicoGadgetLevel {
+    pub id: i32,
+    pub proficiency: i32,
+    pub ability_name: String,
+    pub description: Option<String>,
+    pub unlock_condition: Option<String>,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct PalicoGadgetDetail {
+    pub id: i32,
+    pub game_id: i32,
+    pub name: String,
+    pub gadget_type: String,
+    pub tribe: Option<String>,
+    pub description: Option<String>,
+    pub effect: Option<String>,
+    pub acquisition: Option<String>,
+    pub sort_order: Option<i32>,
+    pub icon_name: Option<String>,
+    pub icon_color: Option<String>,
+    pub icon_url: Option<String>,
+    pub language: String,
+    pub levels: Vec<PalicoGadgetLevel>,
+}
+
+pub fn get_mhw_mantles_by_game(conn: &Connection, game_id: i32) -> Result<Vec<MhwMantle>> {
+    let mut stmt = conn.prepare(
+        "SELECT id, game_id, name, tool_type, rarity, description, effect, duration_sec, cooldown_sec, cooldown_upgraded_sec, slots, acquisition, upgrade_quest, upgrade_effect, sort_order, icon_name, icon_color, icon_url, icon_name_plus, icon_color_plus, icon_url_plus, language FROM mhw_mantles WHERE game_id = ?1 ORDER BY COALESCE(sort_order, id)",
+    )?;
+    let rows = stmt
+        .query_map(params![game_id], |row| {
+            Ok(MhwMantle {
+                id: row.get(0)?,
+                game_id: row.get(1)?,
+                name: row.get(2)?,
+                tool_type: row.get(3)?,
+                rarity: row.get(4)?,
+                description: row.get(5)?,
+                effect: row.get(6)?,
+                duration_sec: row.get(7)?,
+                cooldown_sec: row.get(8)?,
+                cooldown_upgraded_sec: row.get(9)?,
+                slots: row.get(10)?,
+                acquisition: row.get(11)?,
+                upgrade_quest: row.get(12)?,
+                upgrade_effect: row.get(13)?,
+                sort_order: row.get(14)?,
+                icon_name: row.get(15)?,
+                icon_color: row.get(16)?,
+                icon_url: row.get(17)?,
+                icon_name_plus: row.get(18)?,
+                icon_color_plus: row.get(19)?,
+                icon_url_plus: row.get(20)?,
+                language: row.get(21)?,
+            })
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+    Ok(rows)
+}
+
+pub fn get_mhw_mantle_detail(conn: &Connection, id: i32) -> Result<Option<MhwMantle>> {
+    let row = conn
+        .query_row(
+            "SELECT id, game_id, name, tool_type, rarity, description, effect, duration_sec, cooldown_sec, cooldown_upgraded_sec, slots, acquisition, upgrade_quest, upgrade_effect, sort_order, icon_name, icon_color, icon_url, icon_name_plus, icon_color_plus, icon_url_plus, language FROM mhw_mantles WHERE id = ?1",
+            params![id],
+            |row| {
+                Ok(MhwMantle {
+                    id: row.get(0)?,
+                    game_id: row.get(1)?,
+                    name: row.get(2)?,
+                    tool_type: row.get(3)?,
+                    rarity: row.get(4)?,
+                    description: row.get(5)?,
+                    effect: row.get(6)?,
+                    duration_sec: row.get(7)?,
+                    cooldown_sec: row.get(8)?,
+                    cooldown_upgraded_sec: row.get(9)?,
+                    slots: row.get(10)?,
+                    acquisition: row.get(11)?,
+                    upgrade_quest: row.get(12)?,
+                    upgrade_effect: row.get(13)?,
+                    sort_order: row.get(14)?,
+                    icon_name: row.get(15)?,
+                    icon_color: row.get(16)?,
+                    icon_url: row.get(17)?,
+                    icon_name_plus: row.get(18)?,
+                    icon_color_plus: row.get(19)?,
+                    icon_url_plus: row.get(20)?,
+                    language: row.get(21)?,
+                })
+            },
+        )
+        .optional()?;
+    Ok(row)
+}
+
+pub fn get_palico_gadgets_by_game(conn: &Connection, game_id: i32) -> Result<Vec<PalicoGadget>> {
+    let mut stmt = conn.prepare(
+        "SELECT id, game_id, name, gadget_type, tribe, description, effect, acquisition, sort_order, icon_name, icon_color, icon_url, language FROM palico_gadgets WHERE game_id = ?1 ORDER BY COALESCE(sort_order, id)",
+    )?;
+    let rows = stmt
+        .query_map(params![game_id], |row| {
+            Ok(PalicoGadget {
+                id: row.get(0)?,
+                game_id: row.get(1)?,
+                name: row.get(2)?,
+                gadget_type: row.get(3)?,
+                tribe: row.get(4)?,
+                description: row.get(5)?,
+                effect: row.get(6)?,
+                acquisition: row.get(7)?,
+                sort_order: row.get(8)?,
+                icon_name: row.get(9)?,
+                icon_color: row.get(10)?,
+                icon_url: row.get(11)?,
+                language: row.get(12)?,
+            })
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+    Ok(rows)
+}
+
+pub fn get_palico_gadget_detail(conn: &Connection, id: i32) -> Result<Option<PalicoGadgetDetail>> {
+    let base: Option<(i32, i32, String, String, Option<String>, Option<String>, Option<String>, Option<String>, Option<i32>, Option<String>, Option<String>, Option<String>, String)> = conn
+        .query_row(
+            "SELECT id, game_id, name, gadget_type, tribe, description, effect, acquisition, sort_order, icon_name, icon_color, icon_url, language FROM palico_gadgets WHERE id = ?1",
+            params![id],
+            |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?, r.get(3)?, r.get(4)?, r.get(5)?, r.get(6)?, r.get(7)?, r.get(8)?, r.get(9)?, r.get(10)?, r.get(11)?, r.get(12)?)),
+        )
+        .optional()?;
+    let Some((
+        id,
+        game_id,
+        name,
+        gadget_type,
+        tribe,
+        description,
+        effect,
+        acquisition,
+        sort_order,
+        icon_name,
+        icon_color,
+        icon_url,
+        language,
+    )) = base
+    else {
+        return Ok(None);
+    };
+    let mut stmt = conn.prepare(
+        "SELECT id, proficiency, ability_name, description, unlock_condition FROM palico_gadget_levels WHERE gadget_id = ?1 ORDER BY proficiency",
+    )?;
+    let levels = stmt
+        .query_map(params![id], |row| {
+            Ok(PalicoGadgetLevel {
+                id: row.get(0)?,
+                proficiency: row.get(1)?,
+                ability_name: row.get(2)?,
+                description: row.get(3)?,
+                unlock_condition: row.get(4)?,
+            })
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+    Ok(Some(PalicoGadgetDetail {
+        id,
+        game_id,
+        name,
+        gadget_type,
+        tribe,
+        description,
+        effect,
+        acquisition,
+        sort_order,
+        icon_name,
+        icon_color,
+        icon_url,
+        language,
+        levels,
+    }))
+}
+
 /// Global accent-insensitive search across all MH2G entities, grouped by kind.
 // Escape LIKE metacharacters so a user query can't act as a wildcard.
 fn escape_like(s: &str) -> String {
@@ -2612,6 +2851,22 @@ pub fn get_global_search(
             extra_where: "",
             route_prefix: "/decorations/",
             fallback_subtitle: "",
+        },
+        SearchTable {
+            table: "mhw_mantles",
+            kind: "mantle",
+            subtitle_cols: "tool_type",
+            extra_where: "",
+            route_prefix: "/tools/mantles/",
+            fallback_subtitle: "Mantle",
+        },
+        SearchTable {
+            table: "palico_gadgets",
+            kind: "palico_gadget",
+            subtitle_cols: "COALESCE(tribe,'')",
+            extra_where: "",
+            route_prefix: "/tools/palico/",
+            fallback_subtitle: "Palico",
         },
     ];
 

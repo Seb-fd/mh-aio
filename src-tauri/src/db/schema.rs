@@ -317,6 +317,58 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             chance INTEGER
         );
 
+        -- Specialized Tools — Mantles & Boosters (MHW/Iceborne exclusive)
+        CREATE TABLE IF NOT EXISTS mhw_mantles (
+            id INTEGER PRIMARY KEY,
+            game_id INTEGER REFERENCES games(id),
+            name TEXT NOT NULL,
+            tool_type TEXT NOT NULL,
+            rarity INTEGER,
+            description TEXT,
+            effect TEXT NOT NULL,
+            duration_sec INTEGER,
+            cooldown_sec INTEGER,
+            cooldown_upgraded_sec INTEGER,
+            slots TEXT,
+            acquisition TEXT,
+            upgrade_quest TEXT,
+            upgrade_effect TEXT,
+            sort_order INTEGER,
+            icon_name TEXT,
+            icon_color TEXT,
+            icon_url TEXT,
+            icon_name_plus TEXT,
+            icon_color_plus TEXT,
+            icon_url_plus TEXT,
+            language TEXT DEFAULT 'en'
+        );
+
+        -- Palico Gadgets + Tailraider/Safari (MHW/Iceborne exclusive)
+        CREATE TABLE IF NOT EXISTS palico_gadgets (
+            id INTEGER PRIMARY KEY,
+            game_id INTEGER REFERENCES games(id),
+            name TEXT NOT NULL,
+            gadget_type TEXT NOT NULL DEFAULT 'gadget',
+            tribe TEXT,
+            description TEXT,
+            effect TEXT,
+            acquisition TEXT,
+            sort_order INTEGER,
+            icon_name TEXT,
+            icon_color TEXT,
+            icon_url TEXT,
+            language TEXT DEFAULT 'en'
+        );
+
+        CREATE TABLE IF NOT EXISTS palico_gadget_levels (
+            id INTEGER PRIMARY KEY,
+            gadget_id INTEGER REFERENCES palico_gadgets(id),
+            proficiency INTEGER NOT NULL,
+            ability_name TEXT NOT NULL,
+            description TEXT,
+            unlock_condition TEXT
+        );
+
         -- Indexes
         CREATE INDEX IF NOT EXISTS idx_weapons_game ON weapons(game_id);
         CREATE INDEX IF NOT EXISTS idx_weapons_type ON weapons(weapon_type);
@@ -351,6 +403,11 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
         CREATE INDEX IF NOT EXISTS idx_decorations_game ON decorations(game_id);
         CREATE INDEX IF NOT EXISTS idx_decoration_mats_deco ON decoration_materials(decoration_id);
         CREATE INDEX IF NOT EXISTS idx_decoration_mats_item ON decoration_materials(item_id);
+        CREATE INDEX IF NOT EXISTS idx_mhw_mantles_game ON mhw_mantles(game_id);
+        CREATE INDEX IF NOT EXISTS idx_mhw_mantles_type ON mhw_mantles(tool_type);
+        CREATE INDEX IF NOT EXISTS idx_palico_gadgets_game ON palico_gadgets(game_id);
+        CREATE INDEX IF NOT EXISTS idx_palico_gadgets_type ON palico_gadgets(gadget_type);
+        CREATE INDEX IF NOT EXISTS idx_palico_levels_gadget ON palico_gadget_levels(gadget_id);
 
         -- Schema/bookkeeping version
         CREATE TABLE IF NOT EXISTS schema_version (
@@ -390,6 +447,8 @@ fn add_idempotency_constraints(conn: &Connection) -> Result<()> {
         "items",
         "skills",
         "decorations",
+        "mhw_mantles",
+        "palico_gadgets",
     ];
     for t in content_tables {
         conn.execute(
@@ -429,6 +488,7 @@ fn add_idempotency_constraints(conn: &Connection) -> Result<()> {
         CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_weaknesses ON monster_weaknesses(monster_id, IFNULL(part_name, ''));
         CREATE UNIQUE INDEX IF NOT EXISTS uq_item_sources ON item_sources(item_id, source_type, IFNULL(source_id, -1), IFNULL(quantity_min, -1), IFNULL(quantity_max, -1), IFNULL(probability, -1), IFNULL(location, ''), IFNULL(conditions, ''));
         CREATE UNIQUE INDEX IF NOT EXISTS uq_melder_recipes ON melder_recipes(game_id, result_item_id);
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_palico_gadget_levels ON palico_gadget_levels(gadget_id, proficiency);
     ")?;
 
     Ok(())
@@ -522,6 +582,10 @@ fn apply_migrations(conn: &Connection) -> Result<()> {
         "CREATE INDEX IF NOT EXISTS idx_monsters_sort ON monsters(game_id, sort_order)",
         [],
     );
+    // Plan B — upgraded mantle icon (base without star vs plus with star)
+    add_column_if_missing(conn, "mhw_mantles", "icon_url_plus", "TEXT")?;
+    add_column_if_missing(conn, "mhw_mantles", "icon_name_plus", "TEXT")?;
+    add_column_if_missing(conn, "mhw_mantles", "icon_color_plus", "TEXT")?;
     Ok(())
 }
 

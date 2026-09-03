@@ -82,6 +82,15 @@
       iconName: 'Forging',
       iconColor: 'Gray',
     },
+    {
+      href: '/tools',
+      label: 'Tools',
+      icon: '🧰',
+      iconUrl: '/icons/mhw/tools/Tools.png',
+      iconName: 'Ghillie Mantle',
+      iconColor: '#3D7F3A',
+      gameOnly: 'mhw',
+    },
   ]
 
   function navigate(href: string) {
@@ -136,7 +145,7 @@
   {/if}
 
   <nav class="flex-1 p-3 space-y-1 overflow-y-auto overscroll-contain min-h-0">
-    {#each navItems as item}
+    {#each navItems.filter((i) => !(i as unknown as Record<string, unknown>).gameOnly || (i as unknown as Record<string, unknown>).gameOnly === game?.id) as item}
       {@const active = isActive(item.href)}
       <button
         onclick={() => navigate(item.href)}

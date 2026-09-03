@@ -6,7 +6,7 @@
 
   const game = $derived($selectedGame)
 
-  const sections = [
+  const allSections = [
     {
       href: '/monsters',
       label: 'Monsters',
@@ -79,7 +79,24 @@
       iconColor: 'Gray',
       desc: 'Suggestions and planner',
     },
+    {
+      href: '/tools',
+      label: 'Tools',
+      icon: '🧰',
+      iconUrl: '/icons/mhw/tools/Tools.png',
+      iconName: 'Ghillie Mantle',
+      iconColor: '#3D7F3A',
+      desc: 'Mantles, Boosters & Palico — World+Iceborne',
+      gameOnly: 'mhw',
+    },
   ]
+  const sections = $derived(
+    allSections.filter(
+      (s) =>
+        !(s as Record<string, unknown>).gameOnly ||
+        (s as Record<string, unknown>).gameOnly === game?.id,
+    ),
+  )
 
   function navigate(href: string) {
     if (!game) return

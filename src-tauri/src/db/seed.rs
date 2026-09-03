@@ -74,6 +74,9 @@ pub fn seed(conn: &Connection) -> Result<()> {
     seed_mhw_armor(conn)?;
     seed_mhw_armor_materials(conn)?;
     seed_mhw_armor_skill_points(conn)?;
+    seed_mhw_mantles(conn)?;
+    seed_palico_gadgets(conn)?;
+    seed_palico_gadget_levels(conn)?;
     Ok(())
 }
 
@@ -2777,6 +2780,181 @@ fn seed_mhw_armor_skill_points(conn: &Connection) -> Result<()> {
     drop(stmt);
     for (aid, sid, pts) in to_insert {
         conn.execute("INSERT OR IGNORE INTO armor_skill_points (armor_id, skill_id, points) VALUES (?1, ?2, ?3)", rusqlite::params![aid, sid, pts])?;
+    }
+    Ok(())
+}
+
+fn seed_mhw_mantles(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct MantleJson {
+        id: i32,
+        name: String,
+        tool_type: String,
+        rarity: Option<i32>,
+        description: Option<String>,
+        effect: String,
+        duration_sec: Option<i32>,
+        cooldown_sec: Option<i32>,
+        cooldown_upgraded_sec: Option<i32>,
+        slots: Option<String>,
+        acquisition: Option<String>,
+        upgrade_quest: Option<String>,
+        upgrade_effect: Option<String>,
+        sort_order: Option<i32>,
+        icon_url: Option<String>,
+        icon_url_plus: Option<String>,
+        icon_name: Option<String>,
+        icon_color: Option<String>,
+        icon_name_plus: Option<String>,
+        icon_color_plus: Option<String>,
+    }
+    let json_data = include_str!("../../data/mhw_mantles.json");
+    let mantles: Vec<MantleJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for m in &mantles {
+        let icon_url = m.icon_url.clone().unwrap_or_else(|| {
+            if m.tool_type == "booster" {
+                "/icons/mhw/boosters/health-booster.png".to_string()
+            } else {
+                "/icons/mhw/mantles/ghillie-mantle.png".to_string()
+            }
+        });
+        let icon_url_plus = m
+            .icon_url_plus
+            .clone()
+            .unwrap_or_else(|| icon_url.replace(".png", "-plus.png"));
+        let icon_name = m.icon_name.clone().unwrap_or_else(|| m.name.clone());
+        let icon_color = m
+            .icon_color
+            .clone()
+            .unwrap_or_else(|| "#595CDA".to_string());
+        let icon_name_plus = m
+            .icon_name_plus
+            .clone()
+            .unwrap_or_else(|| format!("{} +", m.name));
+        let icon_color_plus = m
+            .icon_color_plus
+            .clone()
+            .unwrap_or_else(|| "#FAC81E".to_string());
+        conn.execute(
+            "INSERT OR IGNORE INTO mhw_mantles (id, game_id, name, tool_type, rarity, description, effect, duration_sec, cooldown_sec, cooldown_upgraded_sec, slots, acquisition, upgrade_quest, upgrade_effect, sort_order, icon_name, icon_color, icon_url, icon_name_plus, icon_color_plus, icon_url_plus, language) VALUES (?1,1,?2,?3,?4,?5,?6,?7,?8,?9,?10,?11,?12,?13,?14,?15,?16,?17,?18,?19,?20,'en')",
+            rusqlite::params![m.id, m.name, m.tool_type, m.rarity, m.description, m.effect, m.duration_sec, m.cooldown_sec, m.cooldown_upgraded_sec, m.slots, m.acquisition, m.upgrade_quest, m.upgrade_effect, m.sort_order, icon_name, icon_color, icon_url, icon_name_plus, icon_color_plus, icon_url_plus],
+        )?;
+    }
+    for m in &mantles {
+        let icon_url = m
+            .icon_url
+            .clone()
+            .unwrap_or_else(|| "/icons/mhw/mantles/ghillie-mantle.png".to_string());
+        let icon_url_plus = m
+            .icon_url_plus
+            .clone()
+            .unwrap_or_else(|| icon_url.replace(".png", "-plus.png"));
+        let icon_name = m.icon_name.clone().unwrap_or_else(|| m.name.clone());
+        let icon_color = m
+            .icon_color
+            .clone()
+            .unwrap_or_else(|| "#595CDA".to_string());
+        let icon_name_plus = m
+            .icon_name_plus
+            .clone()
+            .unwrap_or_else(|| format!("{} +", m.name));
+        let icon_color_plus = m
+            .icon_color_plus
+            .clone()
+            .unwrap_or_else(|| "#FAC81E".to_string());
+        conn.execute(
+            "UPDATE mhw_mantles SET description=COALESCE(description,?1), effect=COALESCE(effect,?2), acquisition=COALESCE(acquisition,?3), upgrade_quest=COALESCE(upgrade_quest,?4), upgrade_effect=COALESCE(upgrade_effect,?5), icon_name=COALESCE(icon_name,?6), icon_color=COALESCE(icon_color,?7), icon_url=COALESCE(icon_url,?8), icon_name_plus=COALESCE(icon_name_plus,?9), icon_color_plus=COALESCE(icon_color_plus,?10), icon_url_plus=COALESCE(icon_url_plus,?11) WHERE id=?12 AND game_id=1",
+            rusqlite::params![m.description, m.effect, m.acquisition, m.upgrade_quest, m.upgrade_effect, icon_name, icon_color, icon_url, icon_name_plus, icon_color_plus, icon_url_plus, m.id],
+        )?;
+        // Migrate legacy generic icons to per-item
+        let _ = conn.execute(
+            "UPDATE mhw_mantles SET icon_url=?1, icon_color=?2, icon_name=?3, icon_url_plus=?4, icon_color_plus=?5, icon_name_plus=?6 WHERE id=?7 AND game_id=1 AND (icon_url IN ('/icons/mhw/tools/mantle.png','/icons/mhw/tools/booster.png') OR icon_url IS NULL)",
+            rusqlite::params![icon_url, icon_color, icon_name, icon_url_plus, icon_color_plus, icon_name_plus, m.id],
+        );
+    }
+    Ok(())
+}
+
+fn seed_palico_gadgets(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct GadgetJson {
+        id: i32,
+        name: String,
+        gadget_type: String,
+        tribe: Option<String>,
+        description: Option<String>,
+        effect: Option<String>,
+        acquisition: Option<String>,
+        sort_order: Option<i32>,
+        icon_url: Option<String>,
+        icon_name: Option<String>,
+        icon_color: Option<String>,
+    }
+    let json_data = include_str!("../../data/mhw_palico_gadgets.json");
+    let gadgets: Vec<GadgetJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for g in &gadgets {
+        let fallback_url = format!(
+            "/icons/mhw/palico/{}.png",
+            g.name.to_lowercase().replace(' ', "-").replace('\'', "")
+        );
+        let icon_url = g.icon_url.clone().unwrap_or(fallback_url.clone());
+        let icon_name = g.icon_name.clone().unwrap_or_else(|| g.name.clone());
+        let icon_color = g
+            .icon_color
+            .clone()
+            .unwrap_or_else(|| match g.gadget_type.as_str() {
+                "tailraider" => "#C76D46".to_string(),
+                "safari" => "#48AB3F".to_string(),
+                _ => "#8D59EF".to_string(),
+            });
+        conn.execute(
+            "INSERT OR IGNORE INTO palico_gadgets (id, game_id, name, gadget_type, tribe, description, effect, acquisition, sort_order, icon_name, icon_color, icon_url, language) VALUES (?1,1,?2,?3,?4,?5,?6,?7,?8,?9,?10,?11,'en')",
+            rusqlite::params![g.id, g.name, g.gadget_type, g.tribe, g.description, g.effect, g.acquisition, g.sort_order, icon_name, icon_color, icon_url],
+        )?;
+    }
+    for g in &gadgets {
+        let fallback_url = format!(
+            "/icons/mhw/palico/{}.png",
+            g.name.to_lowercase().replace(' ', "-").replace('\'', "")
+        );
+        let icon_url = g.icon_url.clone().unwrap_or(fallback_url);
+        let icon_name = g.icon_name.clone().unwrap_or_else(|| g.name.clone());
+        let icon_color = g
+            .icon_color
+            .clone()
+            .unwrap_or_else(|| "#8D59EF".to_string());
+        conn.execute(
+            "UPDATE palico_gadgets SET description=COALESCE(description,?1), effect=COALESCE(effect,?2), acquisition=COALESCE(acquisition,?3), icon_name=COALESCE(icon_name,?4), icon_color=COALESCE(icon_color,?5), icon_url=COALESCE(icon_url,?6) WHERE id=?7 AND game_id=1",
+            rusqlite::params![g.description, g.effect, g.acquisition, icon_name, icon_color, icon_url, g.id],
+        )?;
+        let _ = conn.execute(
+            "UPDATE palico_gadgets SET icon_url=?1, icon_color=?2, icon_name=?3 WHERE id=?4 AND game_id=1 AND icon_url IN ('/icons/mhw/palico/gadget.png','/icons/mhw/palico/tailraider.png','/icons/mhw/palico/safari.png')",
+            rusqlite::params![icon_url, icon_color, icon_name, g.id],
+        );
+    }
+    Ok(())
+}
+
+fn seed_palico_gadget_levels(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct LevelJson {
+        id: i32,
+        gadget_id: i32,
+        proficiency: i32,
+        ability_name: String,
+        description: Option<String>,
+        unlock_condition: Option<String>,
+    }
+    let json_data = include_str!("../../data/mhw_palico_gadget_levels.json");
+    let levels: Vec<LevelJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for l in levels {
+        conn.execute(
+            "INSERT OR IGNORE INTO palico_gadget_levels (id, gadget_id, proficiency, ability_name, description, unlock_condition) VALUES (?1,?2,?3,?4,?5,?6)",
+            rusqlite::params![l.id, l.gadget_id, l.proficiency, l.ability_name, l.description, l.unlock_condition],
+        )?;
     }
     Ok(())
 }

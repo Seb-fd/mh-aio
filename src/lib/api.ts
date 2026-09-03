@@ -515,6 +515,72 @@ export interface AssSolutionView {
   slots_spare_detail: number[]
 }
 
+export interface MhwMantle {
+  id: number
+  game_id: number
+  name: string
+  tool_type: string
+  rarity: number | null
+  description: string | null
+  effect: string
+  duration_sec: number | null
+  cooldown_sec: number | null
+  cooldown_upgraded_sec: number | null
+  slots: string | null
+  acquisition: string | null
+  upgrade_quest: string | null
+  upgrade_effect: string | null
+  sort_order: number | null
+  icon_name: string | null
+  icon_color: string | null
+  icon_url: string | null
+  icon_name_plus: string | null
+  icon_color_plus: string | null
+  icon_url_plus: string | null
+  language: string
+}
+
+export interface PalicoGadget {
+  id: number
+  game_id: number
+  name: string
+  gadget_type: string
+  tribe: string | null
+  description: string | null
+  effect: string | null
+  acquisition: string | null
+  sort_order: number | null
+  icon_name: string | null
+  icon_color: string | null
+  icon_url: string | null
+  language: string
+}
+
+export interface PalicoGadgetLevel {
+  id: number
+  proficiency: number
+  ability_name: string
+  description: string | null
+  unlock_condition: string | null
+}
+
+export interface PalicoGadgetDetail {
+  id: number
+  game_id: number
+  name: string
+  gadget_type: string
+  tribe: string | null
+  description: string | null
+  effect: string | null
+  acquisition: string | null
+  sort_order: number | null
+  icon_name: string | null
+  icon_color: string | null
+  icon_url: string | null
+  language: string
+  levels: PalicoGadgetLevel[]
+}
+
 export const api = {
   getMonsters: (gameId: number) => invoke<Monster[]>('get_monsters', { gameId }),
   getWeapons: (gameId: number) => invoke<Weapon[]>('get_weapons', { gameId }),
@@ -541,4 +607,9 @@ export const api = {
     invoke<SearchResult[]>('global_search', { gameId, query }),
   getCombinations: (gameId: number) => invoke<CombineView[]>('get_combinations', { gameId }),
   getMelderRecipes: (gameId: number) => invoke<MelderRecipe[]>('get_melder_recipes', { gameId }),
+  getMhwMantles: (gameId: number) => invoke<MhwMantle[]>('get_mhw_mantles', { gameId }),
+  getMhwMantleDetail: (id: number) => invoke<MhwMantle | null>('get_mhw_mantle_detail', { id }),
+  getPalicoGadgets: (gameId: number) => invoke<PalicoGadget[]>('get_palico_gadgets', { gameId }),
+  getPalicoGadgetDetail: (id: number) =>
+    invoke<PalicoGadgetDetail | null>('get_palico_gadget_detail', { id }),
 }
