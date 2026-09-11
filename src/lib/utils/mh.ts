@@ -69,6 +69,27 @@ export function rankColor(rank: string | null | undefined): string {
   return 'text-gray-400 border-gray-800 bg-gray-900/40'
 }
 
+/**
+ * Canonical rank → Badge tone mapping (single source of truth).
+ * - Low → rankLow (gray), High → rankHigh (blue), G → rankG (yellow),
+ *   Master → rankMaster (purple). Unknown ranks → neutral.
+ */
+export type RankTone = 'rankLow' | 'rankHigh' | 'rankG' | 'rankMaster' | 'neutral'
+
+export function rankTone(rank: string | null | undefined): RankTone {
+  const r = (rank ?? '').trim().toLowerCase()
+  if (r === 'low') return 'rankLow'
+  if (r === 'high') return 'rankHigh'
+  if (r === 'g') return 'rankG'
+  if (r === 'master') return 'rankMaster'
+  return 'neutral'
+}
+
+/** Fallback label for missing data (keeps one spelling for future i18n). */
+export function fallbackLabel(value: string | null | undefined): string {
+  return value ?? 'Unknown'
+}
+
 export function slotLabel(slot: string | null | undefined): string {
   if (!slot) return '—'
   const s = slot.toLowerCase()
@@ -78,25 +99,4 @@ export function slotLabel(slot: string | null | undefined): string {
   if (s === 'waist') return 'Waist'
   if (s === 'legs' || s === 'greaves') return 'Legs'
   return slot
-}
-
-export const HUB_META: Record<string, { label: string; icon: string }> = {
-  elder: { label: 'Village Elder', icon: '🏠' },
-  village: { label: 'Village', icon: '🏠' },
-  village_low: { label: 'Village Low', icon: '🏠' },
-  village_high: { label: 'Village High', icon: '🏠' },
-  nekoto: { label: 'Nekoto', icon: '🐱' },
-  guild_low: { label: 'Guild Low', icon: '⚔️' },
-  guild_high: { label: 'Guild High', icon: '⚔️' },
-  guild_g: { label: 'Guild G', icon: '👑' },
-  event: { label: 'Event', icon: '🎉' },
-  challenge: { label: 'Challenge', icon: '🏆' },
-  training: { label: 'Training', icon: '🎯' },
-  treasure: { label: 'Treasure', icon: '💎' },
-  hot_spring: { label: 'Hot Spring', icon: '♨️' },
-  drink: { label: 'Drink', icon: '🍶' },
-  nyanta: { label: 'Nyanta', icon: '🐱' },
-}
-export function hubMeta(hub: string | null | undefined) {
-  return HUB_META[hub ?? ''] ?? { label: hub ?? 'Other', icon: '📜' }
 }

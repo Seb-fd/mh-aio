@@ -193,6 +193,7 @@ export interface Quest {
   type: string | null
   rank: string | null
   hub: string | null
+  category: string | null
   stars: number | null
   objective: string | null
   objective_original: string | null
@@ -235,6 +236,7 @@ export interface QuestDetail {
   type: string | null
   rank: string | null
   hub: string | null
+  category: string | null
   stars: number | null
   objective: string | null
   objective_original: string | null

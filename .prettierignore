@@ -6,3 +6,5 @@ node_modules
 static
 package-lock.json
 .md
+# Vendored agent skills keep upstream formatting
+.agents/

@@ -1,9 +1,15 @@
 <script lang="ts">
   import { goto } from '$app/navigation'
+  import ErrorState from '$lib/components/ui/error-state.svelte'
   import { page } from '$app/state'
   import { api, type MonsterDetail, type MonsterDrop, type ArmorSetDetail } from '$lib/api'
   import DetailHeader from '$lib/components/detail-header.svelte'
+  import Skeleton from '$lib/components/ui/skeleton.svelte'
+  import EmptyState from '$lib/components/ui/empty-state.svelte'
   import { selectedGame } from '$lib/stores/game'
+  import { fallbackLabel } from '$lib/utils/mh'
+  import type { Component } from 'svelte'
+  import { Swords, Lock, Sparkles, Hammer, CircleHelp } from '@lucide/svelte'
 
   const id = $derived(Number(page.params.id))
   let monster = $state<MonsterDetail | null>(null)
@@ -47,12 +53,19 @@
       })
   })
 
-  const methodLabel: Record<string, { label: string; icon: string; color: string }> = {
-    carve: { label: 'Carve', icon: '⚔️', color: 'text-red-400' },
-    capture: { label: 'Capture', icon: '🪤', color: 'text-emerald-400' },
-    drop: { label: 'Shiny Drop', icon: '✨', color: 'text-yellow-400' },
-    break: { label: 'Break Part', icon: '🔨', color: 'text-orange-400' },
+  interface MethodMeta {
+    label: string
+    Icon: Component
+    color: string
   }
+
+  const methodLabel: Record<string, MethodMeta> = {
+    carve: { label: 'Carve', Icon: Swords, color: 'text-red-400' },
+    capture: { label: 'Capture', Icon: Lock, color: 'text-emerald-400' },
+    drop: { label: 'Shiny Drop', Icon: Sparkles, color: 'text-yellow-400' },
+    break: { label: 'Break Part', Icon: Hammer, color: 'text-orange-400' },
+  }
+  const fallbackMethod: MethodMeta = { label: '', Icon: CircleHelp, color: 'text-gray-400' }
 
   const slotLabel: Record<string, string> = {
     head: 'Helm',
@@ -79,7 +92,8 @@
 
   function weaknessBg(value: number | null): string {
     if (value == null) return 'bg-gray-800/30'
-    if (value >= 25) return 'bg-emerald-900/40'
+    // Top tier pops with the theme ring — best weak point at a glance.
+    if (value >= 25) return 'bg-emerald-900/40 font-bold ring-1 ring-[var(--theme-border-strong)]'
     if (value >= 15) return 'bg-yellow-900/30'
     if (value >= 5) return 'bg-orange-900/30'
     if (value <= -10) return 'bg-red-900/40'
@@ -119,29 +133,24 @@
   )
 </script>
 
-<div class="max-w-5xl mx-auto">
+<div class="max-w-5xl mx-auto numbered-sections">
   {#if loading}
-    <div class="border rounded-lg p-8 text-center themed-card">
-      <p class="text-gray-400">Loading monster...</p>
+    <div class="space-y-3" aria-busy="true">
+      <Skeleton lines={2} />
+      <Skeleton lines={3} />
     </div>
   {:else if error}
-    <div class="bg-red-950/30 border border-red-900 rounded-lg p-8 text-center">
-      <p class="text-red-400">Failed to load monster</p>
-      <p class="text-gray-500 text-sm mt-2">{error}</p>
-    </div>
+    <ErrorState title="Failed to load monster" {error} />
   {:else if !monster}
-    <div class="border rounded-lg p-8 text-center themed-card">
-      <p class="text-gray-400">Monster not found</p>
-    </div>
+    <EmptyState title="Monster not found" hint="It may belong to another game." />
   {:else}
     <DetailHeader
       title={monster.name}
       subtitle={monster.species ?? ''}
-      icon="🐉"
       iconUrl={monster.icon_url}
       tags={[
         {
-          label: monster.size ?? 'Unknown',
+          label: fallbackLabel(monster.size),
           color: 'bg-[var(--theme-bg-elevated)] text-gray-300 border-[var(--theme-border)]',
         },
         {
@@ -154,9 +163,7 @@
 
     {#if monster.description}
       <section class="mb-8">
-        <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
-          Description
-        </h2>
+        <h2 class="section-title mb-3">Description</h2>
         <div class="rounded-lg border themed-card p-5 leading-relaxed text-gray-200 text-[15px]">
           {monster.description}
         </div>
@@ -165,17 +172,16 @@
 
     {#if monster.drops.length > 0}
       <section class="mb-8">
-        <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
-          Material Drops
-        </h2>
+        <h2 class="section-title mb-3">Material Drops</h2>
 
-        <div class="flex gap-2 mb-4 flex-wrap">
+        <div class="flex gap-2 mb-4 flex-wrap" role="group" aria-label="Filter drops by rank">
           {#each rankTabs as rank}
             <button
               onclick={() => (activeRank = rank)}
-              class="px-3 py-1.5 rounded-md text-xs font-medium border transition-all
+              aria-pressed={rank === activeRank}
+              class="px-4 rounded-md text-xs font-medium border transition-colors motion-safe:transition-colors motion-reduce:transition-none min-h-[44px] sm:min-h-[36px] sm:px-3 sm:py-1.5 focus-visible:outline-none focus-visible:ring-2
                 {rank === activeRank
-                ? 'bg-[var(--theme-accent)] text-white border-transparent'
+                ? 'bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)] border-transparent'
                 : 'bg-[var(--theme-bg-elevated)] text-gray-300 border-[var(--theme-border)] hover:border-[var(--theme-border-strong)]'}"
             >
               {rank}
@@ -184,44 +190,39 @@
         </div>
 
         <div class="space-y-3">
-          {#each visibleDrops as drop}
-            {@const meta = methodLabel[drop.method] ?? {
-              label: drop.method,
-              icon: '❓',
-              color: 'text-gray-400',
-            }}
+          {#each visibleDrops as drop, i (drop.method + '|' + drop.item_id + '|' + (drop.part ?? '') + '|' + (drop.rank ?? '') + '|' + i)}
+            {@const raw = methodLabel[drop.method]}
+            {@const meta: MethodMeta = raw ? { ...raw } : { ...fallbackMethod, label: drop.method }}
             <button
               onclick={() => goToItem(drop)}
-              class="w-full block px-4 py-3 rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-elevated)] transition-all text-left group"
+              aria-label="{meta.label}: {drop.item_name} x{drop.quantity}, {Math.round(
+                drop.probability * 100,
+              )} percent"
+              class="w-full block px-4 min-h-[52px] py-3 rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-elevated)] transition-colors motion-safe:transition-colors motion-reduce:transition-none text-left group focus-visible:outline-none focus-visible:ring-2"
             >
               <div class="flex items-center gap-3">
-                <span class="text-lg shrink-0">{meta.icon}</span>
+                <meta.Icon class="h-5 w-5 shrink-0 {meta.color}" aria-hidden="true" />
                 <div class="flex-1 min-w-0">
                   <div class="flex items-center gap-2">
                     <span class="text-xs uppercase tracking-wide {meta.color} font-medium"
                       >{meta.label}</span
                     >
                     {#if drop.part}
-                      <span class="text-xs text-gray-500">· {drop.part}</span>
+                      <span class="text-xs text-gray-400">· {drop.part}</span>
                     {/if}
                     <span
                       class="text-sm text-gray-100 truncate group-hover:text-[var(--theme-text-accent)] transition-colors"
                     >
                       {drop.item_name}
-                      <span class="text-xs text-gray-500"> x{drop.quantity}</span>
+                      <span class="text-xs text-gray-400"> x{drop.quantity}</span>
                     </span>
                   </div>
                   {#if drop.condition}
-                    <p class="text-[11px] text-gray-500 mt-0.5">※ {drop.condition}</p>
+                    <p class="text-[11px] text-gray-400 mt-0.5">※ {drop.condition}</p>
                   {/if}
                   <div class="mt-2 flex items-center gap-2">
-                    <div
-                      class="flex-1 h-1.5 rounded-full bg-[var(--theme-bg-elevated)] overflow-hidden"
-                    >
-                      <div
-                        class="h-full bg-[var(--theme-accent)] rounded-full transition-all"
-                        style="width: {Math.round(drop.probability * 100)}%"
-                      ></div>
+                    <div class="probability-bar" role="presentation">
+                      <span style="--prob: {Math.round(drop.probability * 100)}"></span>
                     </div>
                     <span class="text-[10px] text-gray-400 shrink-0 tabular-nums w-9 text-right">
                       {Math.round(drop.probability * 100)}%
@@ -237,25 +238,33 @@
 
     {#if monster.armor.length > 0 || monster.weapons.length > 0 || dedicatedSets.length > 0}
       <section class="mb-8">
-        <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
+        <h2 class="section-title mb-3">
           Equipment · Rank filter: {activeRank} (unified with drops)
         </h2>
         <!-- Armor: Dedicated (default, 60% score) vs Uses 1 Material (secondary) -->
         {#if monster.armor.length > 0 || dedicatedSets.length > 0}
           <div class="flex items-center gap-2 mb-2">
             <h3 class="text-sm font-semibold text-gray-200">Armor</h3>
-            <div class="flex rounded-full border border-[var(--theme-border)] overflow-hidden ml-2">
+            <div
+              class="flex rounded-full border border-[var(--theme-border)] overflow-hidden ml-2"
+              role="group"
+              aria-label="Armor view"
+            >
               <button
                 onclick={() => (armorViewMode = 'dedicated')}
-                class="px-3 py-1 text-[11px] font-medium {armorViewMode === 'dedicated'
-                  ? 'bg-[var(--theme-primary)] text-white'
+                aria-pressed={armorViewMode === 'dedicated'}
+                class="px-3 min-h-[44px] sm:min-h-[36px] py-1 text-[11px] font-medium focus-visible:outline-none focus-visible:ring-2 {armorViewMode ===
+                'dedicated'
+                  ? 'bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)]'
                   : 'bg-[var(--theme-bg-surface)] text-gray-400'}"
                 >Dedicated ({dedicatedSets.length})</button
               >
               <button
                 onclick={() => (armorViewMode = 'uses')}
-                class="px-3 py-1 text-[11px] font-medium {armorViewMode === 'uses'
-                  ? 'bg-[var(--theme-primary)] text-white'
+                aria-pressed={armorViewMode === 'uses'}
+                class="px-3 min-h-[44px] sm:min-h-[36px] py-1 text-[11px] font-medium focus-visible:outline-none focus-visible:ring-2 {armorViewMode ===
+                'uses'
+                  ? 'bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)]'
                   : 'bg-[var(--theme-bg-surface)] text-gray-400'}"
                 >Uses 1 Material ({monster.armor.length})</button
               >
@@ -263,17 +272,17 @@
           </div>
           {#if armorViewMode === 'dedicated'}
             {#if dedicatedLoading}
-              <p class="text-xs text-gray-500 mb-4">
+              <p class="text-xs text-gray-400 mb-4">
                 Loading dedicated sets (≥60% mats, exact monster, rank {activeRank})…
               </p>
             {:else if dedicatedSets.length === 0}
-              <p class="text-xs text-gray-500 mb-4">
+              <p class="text-xs text-gray-400 mb-4">
                 No dedicated sets for {monster.name} at rank {activeRank} — try another rank or check
                 “Uses 1 Material”.
               </p>
             {:else}
               <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-4">
-                {#each dedicatedSets as set (set.id)}
+                {#each dedicatedSets as set, si (set.id + '-' + si)}
                   <div
                     class="rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] p-3"
                   >
@@ -285,13 +294,13 @@
                       >
                     </div>
                     <div class="flex flex-wrap gap-1">
-                      {#each set.pieces as piece (piece.id)}
+                      {#each set.pieces as piece, pi (piece.id + '-' + pi)}
                         <button
                           onclick={() => goto(`/${$selectedGame?.id ?? ''}/armor/${piece.id}`)}
                           class="text-[11px] px-2 py-1 rounded bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] text-gray-300 hover:border-[var(--theme-border-strong)]"
                         >
                           {piece.name}
-                          <span class="text-gray-500"
+                          <span class="text-gray-400"
                             >[{slotLabel[piece.slot_type] ?? piece.slot_type}]</span
                           >
                         </button>
@@ -303,13 +312,13 @@
             {/if}
           {:else}
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-4">
-              {#each monster.armor as piece (piece.id)}
+              {#each monster.armor as piece, ai (piece.id + '-' + ai)}
                 <button
                   onclick={() => goto(`/${$selectedGame?.id ?? ''}/armor/${piece.id}`)}
-                  class="text-left px-3 py-2 rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-elevated)] transition-all"
+                  class="text-left px-3 py-2 rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-elevated)] transition-colors"
                 >
                   <div class="text-sm text-gray-100 font-medium truncate">{piece.name}</div>
-                  <div class="text-[11px] text-gray-500 mt-0.5">
+                  <div class="text-[11px] text-gray-400 mt-0.5">
                     {slotLabel[piece.slot_type] ?? piece.slot_type} · {piece.rank} · Def {piece.defense_base ??
                       0}
                   </div>
@@ -321,13 +330,13 @@
         {#if monster.weapons.length > 0}
           <h3 class="text-sm font-semibold text-gray-200 mb-2">Weapons</h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-            {#each monster.weapons as w (w.id)}
+            {#each monster.weapons as w, wi (w.id + '-' + wi)}
               <button
                 onclick={() => goto(`/${$selectedGame?.id ?? ''}/weapons/${w.id}`)}
-                class="text-left px-3 py-2 rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-elevated)] transition-all"
+                class="text-left px-3 py-2 rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-elevated)] transition-colors"
               >
                 <div class="text-sm text-gray-100 font-medium truncate">{w.name}</div>
-                <div class="text-[11px] text-gray-500 mt-0.5">
+                <div class="text-[11px] text-gray-400 mt-0.5">
                   {w.weapon_type} · R{w.rarity ?? 1} · Atk {w.attack ?? 0}
                 </div>
               </button>
@@ -339,16 +348,14 @@
 
     {#if monster.weaknesses.length > 0}
       <section class="mb-8">
-        <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
-          Weaknesses
-        </h2>
+        <h2 class="section-title mb-3">Weaknesses</h2>
         <div class="space-y-2">
           {#each monster.weaknesses as w}
             <div class="rounded-lg border themed-card p-4">
               <div class="flex items-center justify-between mb-3">
                 <span class="font-semibold text-gray-100">{w.part_name}</span>
               </div>
-              <div class="grid grid-cols-3 sm:grid-cols-8 gap-2 text-xs">
+              <div class="grid grid-cols-4 sm:grid-cols-4 lg:grid-cols-8 gap-2 text-xs">
                 <div
                   class="px-2 py-1.5 rounded {weaknessBg(w.sever)} {weaknessColor(
                     w.sever,

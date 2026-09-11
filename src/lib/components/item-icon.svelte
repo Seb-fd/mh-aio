@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { Package } from '@lucide/svelte'
+
   let {
     iconUrl,
     iconName,
@@ -61,7 +63,8 @@
     style="width: {size}px; height: {size}px; background-color: {colorCss(
       iconColor,
     )}22; border-color: {colorCss(iconColor)}55;"
-    title={iconName + (iconColor ? ` (${iconColor})` : '')}
+    role="img"
+    aria-label={iconName + (iconColor ? ` (${iconColor})` : '')}
   >
     <span class="text-[9px] font-bold leading-none" style="color: {colorCss(iconColor)}"
       >{iconName.slice(0, 2).toUpperCase()}</span
@@ -71,7 +74,11 @@
   <div
     class="shrink-0 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] flex items-center justify-center"
     style="width: {size}px; height: {size}px;"
+    aria-hidden="true"
   >
-    <span class="text-xs">📦</span>
+    <Package
+      style="width: {Math.max(12, size * 0.55)}px; height: {Math.max(12, size * 0.55)}px;"
+      class="text-gray-400"
+    />
   </div>
 {/if}

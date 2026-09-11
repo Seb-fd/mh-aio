@@ -1,25 +1,69 @@
 @import 'tailwindcss';
+@plugin "tailwindcss-animate";
+
+/* F0: self-hosted offline fonts (Tauri CSP: font-src 'self' data:, no CDN).
+   Files live in static/fonts/ -> served as /fonts/*.woff2 via adapter-static. */
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/cinzel-latin-400-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF;
+}
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/cinzel-latin-700-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF;
+}
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/spectral-latin-400-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF;
+}
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/spectral-latin-500-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF;
+}
 
 @theme {
-  --color-background: #09090b;
+  --font-display: 'Cinzel', 'Times New Roman', serif;
+  --font-body: 'Spectral', Georgia, serif;
+  /* Route shadcn-svelte default sans through the body serif so unthemed
+     primitives inherit the archive voice without per-component edits. */
+  --font-sans: 'Spectral', Georgia, ui-serif, serif;
+  --color-background: var(--theme-bg-base, #09090b);
   --color-foreground: #fafafa;
-  --color-card: #09090b;
+  --color-card: var(--theme-bg-surface, #09090b);
   --color-card-foreground: #fafafa;
-  --color-popover: #09090b;
+  --color-popover: var(--theme-bg-surface, #09090b);
   --color-popover-foreground: #fafafa;
-  --color-primary: #fbbf24;
-  --color-primary-foreground: #18181b;
-  --color-secondary: #27272a;
+  /* F1: single source of truth is --theme-*. shadcn defaults now resolve
+     through the active game theme (zinc fallbacks for unthemed surfaces
+     like the home selector, where no --theme-* vars are set). */
+  --color-primary: var(--theme-primary, #fbbf24);
+  --color-primary-foreground: var(--theme-text-on-primary, #18181b);
+  --color-secondary: var(--theme-bg-elevated, #27272a);
   --color-secondary-foreground: #fafafa;
-  --color-muted: #27272a;
-  --color-muted-foreground: #a1a1aa;
-  --color-accent: #27272a;
+  --color-muted: var(--theme-bg-elevated, #27272a);
+  --color-muted-foreground: var(--theme-text-muted, #a1a1aa);
+  --color-accent: var(--theme-bg-elevated, #27272a);
   --color-accent-foreground: #fafafa;
   --color-destructive: #7f1d1d;
   --color-destructive-foreground: #fafafa;
-  --color-border: #27272a;
-  --color-input: #27272a;
-  --color-ring: #fbbf24;
+  --color-border: var(--theme-border, #27272a);
+  --color-input: var(--theme-border, #27272a);
+  --color-ring: var(--theme-ring, var(--theme-primary, #fbbf24));
   --radius-sm: 0.25rem;
   --radius-md: 0.375rem;
   --radius-lg: 0.5rem;
@@ -30,15 +74,144 @@
   * {
     @apply border-border;
   }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  /* Accessible focus default for all custom themed buttons/links.
+     !important wins over per-component `focus:outline-none` so keyboard
+     focus is never invisible. */
+  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    outline: 2px solid var(--theme-ring, var(--theme-primary, var(--color-ring))) !important;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  /* Prevent iOS auto-zoom: min 16px on form controls (mobile) */
+  @media (max-width: 767px) {
+    input,
+    select,
+    textarea {
+      font-size: 16px !important;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
 @layer components {
+  /* Skip link for keyboard users */
+  .skip-link {
+    position: fixed;
+    top: -100px;
+    left: 1rem;
+    z-index: 100;
+    padding: 0.625rem 1rem;
+    border-radius: 0.5rem;
+    background: var(--theme-bg-elevated, #1e293b);
+    color: var(--theme-text-accent, #fff);
+    border: 1px solid var(--theme-border-strong, #334155);
+    transition: top 0.15s ease;
+  }
+  .skip-link:focus {
+    top: 1rem;
+  }
+
+  /* Min touch target helper (44px WCAG) */
+  .touch-target {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Fluid headings: mobile -> desktop (Guild Archive display voice) */
+  .fluid-h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 4vw + 1rem, 2.25rem);
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+  }
+  .fluid-h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2.5vw + 0.9rem, 1.875rem);
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+  }
+
+  /* F6: one orchestrated entrance. Elements with .reveal fade+rise on mount
+     with a per-index stagger via --i (capped at 12 steps ≈ 660ms so long
+     lists never trail for seconds). Fully inert under reduced-motion. */
+  @keyframes archive-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: archive-reveal 0.45s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+      animation-delay: calc(min(var(--i, 0), 12) * 55ms);
+    }
+  }
+
+  /* Bottom safe-area for Android gesture nav / iOS home bar */
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* F2: strong per-era ornaments ("Guild Archive"). Each ornament is an inline
+     SVG tile in white at low opacity (no color-mix, so old WebViews degrade
+     to plain gradients). The scope exposes --theme-ornament-image/size,
+     consumed by .themed-bg/.themed-hero/.themed-banner. */
+  [data-ornament='medieval'] {
+    --theme-ornament-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='72'><path d='M36 0 72 36 36 72 0 36Z' fill='none' stroke='%23ffffff' stroke-opacity='0.08'/><circle cx='36' cy='36' r='2' fill='%23ffffff' fill-opacity='0.08'/></svg>");
+    --theme-ornament-size: 72px 72px;
+  }
+  [data-ornament='japanese'] {
+    --theme-ornament-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'><rect x='22' width='2' height='48' fill='%23ffffff' fill-opacity='0.07'/><rect x='31' width='1' height='48' fill='%23ffffff' fill-opacity='0.04'/></svg>");
+    --theme-ornament-size: 48px 48px;
+  }
+  [data-ornament='seigaiha'] {
+    --theme-ornament-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='28'><g fill='none' stroke='%23ffffff' stroke-opacity='0.09'><circle cx='0' cy='28' r='26'/><circle cx='0' cy='28' r='19'/><circle cx='0' cy='28' r='12'/><circle cx='56' cy='28' r='26'/><circle cx='56' cy='28' r='19'/><circle cx='56' cy='28' r='12'/><circle cx='28' cy='28' r='26'/><circle cx='28' cy='28' r='19'/><circle cx='28' cy='28' r='12'/><circle cx='28' cy='0' r='26'/><circle cx='28' cy='0' r='19'/><circle cx='28' cy='0' r='12'/></g></svg>");
+    --theme-ornament-size: 56px 28px;
+  }
+  [data-ornament='tribal'] {
+    --theme-ornament-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='24'><path d='M0 24 10 4 20 24 30 4 40 24' fill='none' stroke='%23ffffff' stroke-opacity='0.09' stroke-width='2'/></svg>");
+    --theme-ornament-size: 40px 24px;
+  }
+  [data-ornament='futuristic'] {
+    --theme-ornament-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36'><path d='M36 0H0V36' fill='none' stroke='%23ffffff' stroke-opacity='0.09'/><circle cx='0' cy='0' r='1.6' fill='%23ffffff' fill-opacity='0.14'/></svg>");
+    --theme-ornament-size: 36px 36px;
+  }
+  [data-ornament='hunt'],
+  [data-ornament='default'] {
+    --theme-ornament-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='140' height='140' filter='url(%23n)' opacity='0.06'/></svg>");
+    --theme-ornament-size: 140px 140px;
+  }
+
   .themed-bg {
     background-color: var(--theme-bg-base);
+    /* Fallback first for old WebViews without color-mix (single gradient,
+       default sizing — ornament layer omitted). */
+    background-image: linear-gradient(
+      180deg,
+      var(--theme-bg-base) 0%,
+      var(--theme-bg-surface) 100%
+    );
     background-image:
+      var(--theme-ornament-image, none),
       radial-gradient(ellipse 80% 50% at 50% -10%, var(--theme-glow), transparent),
       radial-gradient(
         ellipse 60% 50% at 100% 100%,
@@ -50,73 +223,137 @@
         var(--theme-bg-base) 0%,
         color-mix(in oklab, var(--theme-bg-base) 95%, var(--theme-primary-dark)) 100%
       );
-    background-attachment: fixed;
   }
-
-  [data-ornament='medieval'] .themed-bg {
-    background-image:
-      radial-gradient(ellipse 80% 50% at 50% -10%, var(--theme-glow), transparent),
-      repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 80px,
-        color-mix(in oklab, var(--theme-primary) 4%, transparent) 80px,
-        color-mix(in oklab, var(--theme-primary) 4%, transparent) 82px
-      ),
-      linear-gradient(180deg, var(--theme-bg-base) 0%, var(--theme-bg-surface) 100%);
-    background-attachment: fixed;
+  /* Per-layer tiling only where color-mix is supported — keeps the fallback
+     single gradient intact on old WebViews. */
+  @supports (color: color-mix(in oklab, red 50%, blue)) {
+    .themed-bg {
+      background-size:
+        var(--theme-ornament-size, 100% 100%),
+        100% 100%,
+        100% 100%,
+        100% 100%;
+    }
+    .themed-hero {
+      background-size:
+        var(--theme-ornament-size, 100% 100%),
+        100% 100%,
+        100% 100%;
+    }
+    .themed-banner {
+      background-size:
+        var(--theme-ornament-size, 100% 100%),
+        100% 100%;
+    }
   }
-
-  [data-ornament='japanese'] .themed-bg {
-    background-image:
-      radial-gradient(ellipse 80% 50% at 50% -10%, var(--theme-glow), transparent),
-      repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 60px,
-        color-mix(in oklab, var(--theme-accent) 3%, transparent) 60px,
-        color-mix(in oklab, var(--theme-accent) 3%, transparent) 61px
-      ),
-      linear-gradient(180deg, var(--theme-bg-base) 0%, var(--theme-bg-surface) 100%);
-    background-attachment: fixed;
-  }
-
-  [data-ornament='tribal'] .themed-bg {
-    background-image:
-      radial-gradient(ellipse 80% 50% at 50% -10%, var(--theme-glow), transparent),
-      repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 40px,
-        color-mix(in oklab, var(--theme-primary) 5%, transparent) 40px,
-        color-mix(in oklab, var(--theme-primary) 5%, transparent) 42px
-      ),
-      linear-gradient(180deg, var(--theme-bg-base) 0%, var(--theme-bg-surface) 100%);
-    background-attachment: fixed;
-  }
-
-  [data-ornament='futuristic'] .themed-bg {
-    background-image:
-      radial-gradient(ellipse 80% 50% at 50% -10%, var(--theme-glow), transparent),
-      linear-gradient(
-        180deg,
-        var(--theme-bg-base) 0%,
-        var(--theme-bg-surface) 50%,
-        var(--theme-bg-base) 100%
-      );
-    background-attachment: fixed;
-  }
-
-  [data-ornament='hunt'] .themed-bg {
-    background-image:
-      radial-gradient(ellipse 80% 50% at 50% -10%, var(--theme-glow), transparent),
-      linear-gradient(180deg, var(--theme-bg-base) 0%, var(--theme-bg-surface) 100%);
-    background-attachment: fixed;
+  /* background-attachment:fixed janks on iOS/mobile WebView -> scroll on touch */
+  @media (hover: hover) and (pointer: fine) {
+    .themed-bg {
+      background-attachment: fixed;
+    }
   }
 
   .themed-banner {
+    background-color: var(--theme-banner-from);
     background-image: linear-gradient(135deg, var(--theme-banner-from), var(--theme-banner-to));
+    background-image:
+      var(--theme-ornament-image, none),
+      linear-gradient(135deg, var(--theme-banner-from), var(--theme-banner-to));
     border-color: var(--theme-border-strong);
+  }
+
+  /* Rich per-game hero: gradient banner + glow + era ornament tile */
+  .themed-hero {
+    background-color: var(--theme-bg-surface);
+    background-image:
+      radial-gradient(ellipse 90% 70% at 50% -20%, var(--theme-glow), transparent),
+      linear-gradient(135deg, var(--theme-banner-from), var(--theme-banner-to));
+    background-image:
+      var(--theme-ornament-image, none),
+      radial-gradient(ellipse 90% 70% at 50% -20%, var(--theme-glow), transparent),
+      linear-gradient(135deg, var(--theme-banner-from), var(--theme-banner-to));
+    border-color: var(--theme-border-strong);
+  }
+
+  /* Section eyebrow title */
+  .section-title {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    color: var(--theme-text-accent);
+  }
+
+  /* F5: editorial section numbering for detail pages. Add
+     .numbered-sections to the page container; each .section-title h2
+     gets a leading 01 / 02 / … marker in the theme primary. */
+  .numbered-sections {
+    counter-reset: archive-section;
+  }
+  .numbered-sections .section-title::before {
+    counter-increment: archive-section;
+    content: counter(archive-section, decimal-leading-zero);
+    color: var(--theme-primary);
+    margin-right: 0.5rem;
+  }
+
+  /* Responsive stat grid: 2 cols mobile -> 4 cols desktop */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+  @media (min-width: 640px) {
+    .stat-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  /* Horizontal scroll container for data tables (tablet/mobile) */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 0.5rem;
+    border: 1px solid var(--theme-border);
+  }
+  .table-responsive table {
+    min-width: 640px;
+    width: 100%;
+  }
+  .table-responsive thead {
+    position: sticky;
+    top: 0;
+    background-color: var(--theme-bg-elevated);
+  }
+
+  /* Probability bar: single track + fill driven by --prob (0-100), 50% tick.
+     ::after is positioned, so it paints above the fill span. */
+  .probability-bar {
+    position: relative;
+    flex: 1;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background-color: var(--theme-bg-elevated);
+    overflow: hidden;
+    min-width: 0;
+  }
+  .probability-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.28);
+    pointer-events: none;
+  }
+  .probability-bar > span {
+    display: block;
+    height: 100%;
+    border-radius: 9999px;
+    background-color: var(--theme-accent);
+    width: calc(var(--prob, 0) * 1%);
   }
 
   .themed-card {
@@ -127,6 +364,22 @@
   .themed-card:hover {
     border-color: var(--theme-border-strong);
     background-color: var(--theme-bg-elevated);
+  }
+
+  /* F4: subtle lift for clickable cards only (plain divs like description
+     boxes stay static). Guarded so reduced-motion users get zero movement. */
+  @media (prefers-reduced-motion: no-preference) {
+    button .themed-card,
+    a .themed-card {
+      transition:
+        transform 0.16s ease-out,
+        background-color 0.15s ease,
+        border-color 0.15s ease;
+    }
+    button .themed-card:hover,
+    a .themed-card:hover {
+      transform: translateY(-1px);
+    }
   }
 
   .themed-divider {

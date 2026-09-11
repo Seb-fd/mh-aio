@@ -1,47 +1,127 @@
 <script lang="ts">
   import { goto } from '$app/navigation'
+  import ErrorState from '$lib/components/ui/error-state.svelte'
   import { selectedGame } from '$lib/stores/game'
   import { api, type Armor, type ArmorSet } from '$lib/api'
+  import { normKey } from '$lib/utils/norm'
+  import { rankTone } from '$lib/utils/mh'
   import Card from '$lib/components/ui/card.svelte'
+  import Button from '$lib/components/ui/button.svelte'
+  import Badge from '$lib/components/ui/badge.svelte'
+  import FilterChip from '$lib/components/ui/filter-chip.svelte'
+  import Skeleton from '$lib/components/ui/skeleton.svelte'
+  import EmptyState from '$lib/components/ui/empty-state.svelte'
+  import SearchField from '$lib/components/ui/search-field.svelte'
   import ItemIcon from '$lib/components/item-icon.svelte'
+  import { toolbarTarget } from '$lib/stores/toolbar'
+  import { toolbarPortal } from '$lib/actions/toolbar-portal'
+  import { captureScrollY, restoreScrollY } from '$lib/utils/scroll-restore'
+  import type { Snapshot } from './$types.js'
+  import { createQuery } from '@tanstack/svelte-query'
+  import { dbCache, dbRetry, dbRetryDelay, dbPreparing } from '$lib/query'
+
+  interface ArmorSnapshot {
+    searchTerm: string
+    rankFilter: string
+    genderFilter: string
+    typeFilter: string
+    sortBy: string
+    viewMode: 'sets' | 'pieces'
+    visibleCount: number
+    scrollY: number
+  }
+
+  export const snapshot: Snapshot<ArmorSnapshot> = {
+    capture: () => ({
+      searchTerm,
+      rankFilter,
+      genderFilter,
+      typeFilter,
+      sortBy,
+      viewMode,
+      visibleCount,
+      scrollY: captureScrollY(),
+    }),
+    restore: (s) => {
+      searchTerm = s.searchTerm
+      rankFilter = s.rankFilter
+      genderFilter = s.genderFilter
+      typeFilter = s.typeFilter
+      sortBy = s.sortBy
+      viewMode = s.viewMode
+      visibleCount = s.visibleCount
+      skipReset = true
+      pendingScrollY = s.scrollY
+    },
+  }
+
+  let pendingScrollY = $state<number | null>(null)
+  $effect(() => {
+    if (!loading && pendingScrollY != null) {
+      const y = pendingScrollY
+      pendingScrollY = null
+      restoreScrollY(y)
+    }
+  })
 
   const game = $derived($selectedGame)
   const dbId = $derived(game?.dbId)
 
-  let armors = $state<Armor[]>([])
-  let armorSets = $state<ArmorSet[]>([])
-  let loading = $state(true)
-  let error = $state<string | null>(null)
+  const PAGE_SIZE = 100
+
+  const armorQuery = createQuery(() => ({
+    queryKey: ['armor', dbId ?? 0],
+    queryFn: () => api.getArmor(dbId!),
+    enabled: dbId != null,
+    ...dbCache,
+    retry: dbRetry,
+    retryDelay: dbRetryDelay,
+  }))
+  const armorSetsQuery = createQuery(() => ({
+    queryKey: ['armor-sets', dbId ?? 0],
+    queryFn: () => api.getArmorSets(dbId!),
+    enabled: dbId != null,
+    ...dbCache,
+    retry: dbRetry,
+    retryDelay: dbRetryDelay,
+  }))
+
+  const armors = $derived<Armor[]>(armorQuery.data ?? [])
+  const armorSets = $derived<ArmorSet[]>(armorSetsQuery.data ?? [])
+  const loading = $derived(armorQuery.isPending || armorSetsQuery.isPending)
+  const error = $derived.by<string | null>(() => {
+    const preparing =
+      dbPreparing(armorQuery.isPending, armorQuery.failureCount) ||
+      dbPreparing(armorSetsQuery.isPending, armorSetsQuery.failureCount)
+    if (preparing) return 'Preparing database...'
+    const e = armorQuery.error ?? armorSetsQuery.error
+    if (loading || e == null) return null
+    return e instanceof Error ? e.message : String(e)
+  })
   let rankFilter = $state<string>('all')
   let genderFilter = $state<string>('both') // both (show all) | male | female
   let typeFilter = $state<string>('all') // all | blade | gunner
   let sortBy = $state<string>('smith') // smith = armorer list (rank -> slot -> id) faithful to ISO 37652906 string table
   let viewMode = $state<'sets' | 'pieces'>('sets')
+  let searchTerm = $state('')
+  let visibleCount = $state(PAGE_SIZE)
+  // Skipped once after a snapshot restore (back navigation keeps its depth).
+  let skipReset = $state(false)
 
-  async function loadAll(id: number, attempt = 0) {
-    try {
-      const [a, s] = await Promise.all([api.getArmor(id), api.getArmorSets(id)])
-      armors = a
-      armorSets = s
-      error = null
-    } catch (e) {
-      const msg = String(e)
-      if (msg.includes('state not managed') && attempt < 6) {
-        error = 'Preparing database...'
-        setTimeout(() => loadAll(id, attempt + 1), 400 * (attempt + 1))
-        return
-      }
-      error = msg
-    } finally {
-      if (error !== 'Preparing database...') loading = false
-    }
-  }
-
+  // Reset pagination on game change or new criteria (data itself comes from cache)
   $effect(() => {
-    if (dbId == null) return
-    loading = true
-    error = null
-    loadAll(dbId)
+    void dbId
+    void rankFilter
+    void genderFilter
+    void typeFilter
+    void sortBy
+    void searchTerm
+    void viewMode
+    if (skipReset) {
+      skipReset = false
+      return
+    }
+    visibleCount = PAGE_SIZE
   })
 
   const ranks = $derived(['all', ...Array.from(new Set(armors.map((a) => a.rank)))])
@@ -111,7 +191,11 @@
 
   const filtered = $derived.by(() => {
     let arr = armors.filter(
-      (a) => (rankFilter === 'all' || a.rank === rankFilter) && matchesGender(a) && matchesType(a),
+      (a) =>
+        (rankFilter === 'all' || a.rank === rankFilter) &&
+        matchesGender(a) &&
+        matchesType(a) &&
+        (searchTerm === '' || normKey(a.name).includes(normKey(searchTerm))),
     )
     if (sortBy === 'name') arr = [...arr].sort((a, b) => a.name.localeCompare(b.name))
     else if (sortBy === 'rarity') arr = [...arr].sort((a, b) => (b.rarity ?? 0) - (a.rarity ?? 0))
@@ -133,12 +217,17 @@
         .map((a) => a.set_id)
         .filter((x): x is number => x != null),
     )
-    let arr = armorSets.filter((s) => setIds.has(s.id))
+    let arr = armorSets
+      .filter((s) => setIds.has(s.id))
+      .filter((s) => searchTerm === '' || normKey(s.name).includes(normKey(searchTerm)))
     if (sortBy === 'name') arr = [...arr].sort((a, b) => a.name.localeCompare(b.name))
     else if (sortBy === 'rarity') arr = [...arr].sort((a, b) => (b.rarity ?? 0) - (a.rarity ?? 0))
     else if (sortBy === 'defense') arr = [...arr].sort((a, b) => (b.rarity ?? 0) - (a.rarity ?? 0))
     return arr
   })
+
+  const visibleSets = $derived(filteredSets.slice(0, visibleCount))
+  const visiblePieces = $derived(filtered.slice(0, visibleCount))
 
   function open(id: number) {
     if (!game) return
@@ -157,13 +246,6 @@
     legs: 'Greaves',
   }
 
-  const rankColor: Record<string, string> = {
-    Low: 'bg-gray-700 text-gray-300',
-    High: 'bg-blue-900/40 text-blue-300',
-    G: 'bg-yellow-900/40 text-yellow-300',
-    Master: 'bg-red-900/40 text-red-300 ring-1 ring-red-700/50',
-  }
-
   function setLabel(s: { piece_count: number }): string {
     if (s.piece_count === 1) return 'Singleton — e.g., Black Legs (no full set)'
     if (s.piece_count >= 10) return 'Full set (Blade + Gunner, 10)'
@@ -173,9 +255,9 @@
 </script>
 
 <div class="max-w-6xl mx-auto">
-  <div class="mb-6">
-    <h1 class="text-2xl font-bold text-gray-100">Armor</h1>
-    <p class="text-sm text-gray-500 mt-1">
+  <div class="mb-4 md:mb-6">
+    <h1 class="fluid-h2 font-bold text-gray-100">Armor</h1>
+    <p class="text-sm text-gray-400 mt-1">
       {#if game}
         {game.shortName} · {armors.length} pieces · {armorSets.length} sets
       {:else}
@@ -185,107 +267,153 @@
   </div>
 
   {#if loading}
-    <div class="border rounded-lg p-8 text-center themed-card">
-      <p class="text-gray-400">Loading armor...</p>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-3" aria-busy="true">
+      {#each Array(6) as _}
+        <Skeleton lines={3} />
+      {/each}
     </div>
   {:else if error}
-    <div class="bg-red-950/30 border border-red-900 rounded-lg p-8 text-center">
-      <p class="text-red-400">Failed to load armor</p>
-      <p class="text-gray-500 text-sm mt-2">{error}</p>
-    </div>
+    <ErrorState title="Failed to load armor" {error} />
   {:else if armors.length === 0}
-    <div class="border rounded-lg p-8 text-center themed-card">
-      <p class="text-gray-400">No armor found for {game?.shortName ?? 'this game'}</p>
-    </div>
+    <EmptyState
+      title="No armor found"
+      hint={game ? `No armor seeded for ${game.shortName}.` : 'Select a game first.'}
+    />
   {:else}
-    <div class="flex flex-wrap gap-2 mb-4 items-center">
-      <div class="flex rounded-full border border-[var(--theme-border)] overflow-hidden">
-        <button
-          onclick={() => (viewMode = 'sets')}
-          class="px-4 py-1.5 text-xs font-medium {viewMode === 'sets'
-            ? 'bg-[var(--theme-primary)] text-white'
-            : 'bg-[var(--theme-bg-surface)] text-gray-400'}">Sets ({armorSets.length})</button
+    <div use:toolbarPortal={$toolbarTarget} class="flex flex-col gap-2">
+      <div class="flex flex-wrap gap-2 items-center">
+        <div
+          class="flex rounded-full border border-[var(--theme-border)] overflow-hidden"
+          role="group"
+          aria-label="Change view"
         >
-        <button
-          onclick={() => (viewMode = 'pieces')}
-          class="px-4 py-1.5 text-xs font-medium {viewMode === 'pieces'
-            ? 'bg-[var(--theme-primary)] text-white'
-            : 'bg-[var(--theme-bg-surface)] text-gray-400'}">Pieces ({filtered.length})</button
+          <button
+            type="button"
+            onclick={() => (viewMode = 'sets')}
+            aria-pressed={viewMode === 'sets'}
+            class="px-4 min-h-[44px] sm:min-h-[36px] text-xs font-medium focus-visible:outline-none focus-visible:ring-2 {viewMode ===
+            'sets'
+              ? 'text-[var(--theme-text-on-primary)]'
+              : 'text-gray-400 hover:text-gray-200'}"
+            style={viewMode === 'sets'
+              ? 'background-color: var(--theme-primary);'
+              : 'background-color: var(--theme-bg-surface);'}>Sets ({armorSets.length})</button
+          >
+          <button
+            type="button"
+            onclick={() => (viewMode = 'pieces')}
+            aria-pressed={viewMode === 'pieces'}
+            class="px-4 min-h-[44px] sm:min-h-[36px] text-xs font-medium focus-visible:outline-none focus-visible:ring-2 {viewMode ===
+            'pieces'
+              ? 'text-[var(--theme-text-on-primary)]'
+              : 'text-gray-400 hover:text-gray-200'}"
+            style={viewMode === 'pieces'
+              ? 'background-color: var(--theme-primary);'
+              : 'background-color: var(--theme-bg-surface);'}>Pieces ({filtered.length})</button
+          >
+        </div>
+        <SearchField
+          bind:value={searchTerm}
+          placeholder="Search armor..."
+          label="Search armor"
+          class="sm:w-48"
+        />
+        <select
+          bind:value={sortBy}
+          aria-label="Sort armor"
+          class="px-3 rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-gray-300 focus:outline-none min-h-[44px] sm:min-h-[36px] text-base sm:text-xs"
         >
+          <option value="smith">Smith (Game Order)</option>
+          <option value="name">Name A-Z</option>
+          <option value="rarity">Rarity ↓</option>
+          <option value="defense">Defense ↓</option>
+          <option value="slots">Slots ↓</option>
+        </select>
+        <span
+          class="flex rounded-full border border-[var(--theme-border)] overflow-hidden text-xs"
+          role="group"
+          aria-label="Filter by gender"
+        >
+          {#each ['both', 'male', 'female'] as g}
+            <button
+              type="button"
+              onclick={() => (genderFilter = g)}
+              aria-pressed={genderFilter === g}
+              class="px-3 min-h-[44px] sm:min-h-[36px] transition-colors motion-safe:transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 {genderFilter ===
+              g
+                ? 'text-[var(--theme-text-on-primary)]'
+                : 'text-gray-400 hover:text-gray-200'}"
+              style={genderFilter === g
+                ? 'background-color: var(--theme-primary);'
+                : 'background-color: var(--theme-bg-surface);'}
+            >
+              {g === 'both' ? 'Both' : g === 'male' ? 'Male' : 'Female'}
+            </button>
+          {/each}
+        </span>
+        <span
+          class="flex rounded-full border border-[var(--theme-border)] overflow-hidden text-xs"
+          role="group"
+          aria-label="Filter by weapon class"
+        >
+          {#each ['all', 'blade', 'gunner'] as t}
+            <button
+              type="button"
+              onclick={() => (typeFilter = t)}
+              aria-pressed={typeFilter === t}
+              class="px-3 min-h-[44px] sm:min-h-[36px] transition-colors motion-safe:transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 {typeFilter ===
+              t
+                ? 'text-[var(--theme-text-on-primary)]'
+                : 'text-gray-400 hover:text-gray-200'}"
+              style={typeFilter === t
+                ? 'background-color: var(--theme-primary);'
+                : 'background-color: var(--theme-bg-surface);'}
+            >
+              {t === 'all' ? 'All' : t === 'blade' ? 'Blademaster' : 'Gunner'}
+            </button>
+          {/each}
+        </span>
       </div>
-      <select
-        bind:value={sortBy}
-        class="px-3 py-1.5 text-xs bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-full text-gray-300 focus:outline-none"
-      >
-        <option value="smith">Smith (Game Order)</option>
-        <option value="name">Name A-Z</option>
-        <option value="rarity">Rarity ↓</option>
-        <option value="defense">Defense ↓</option>
-        <option value="slots">Slots ↓</option>
-      </select>
-      <span class="flex rounded-full border border-[var(--theme-border)] overflow-hidden text-xs">
-        {#each ['both', 'male', 'female'] as g}
-          <button
-            onclick={() => (genderFilter = g)}
-            class="px-3 py-1.5 transition-colors {genderFilter === g
-              ? 'bg-[var(--theme-primary)] text-white'
-              : 'bg-[var(--theme-bg-surface)] text-gray-400'}"
+      <div class="flex gap-2 overflow-x-auto pb-1 -mb-1" role="group" aria-label="Filter by rank">
+        {#each ranks as rank}
+          <FilterChip
+            active={rankFilter === rank}
+            onclick={() => (rankFilter = rank)}
+            label={rank === 'all' ? 'All ranks' : `${rank} rank`}
           >
-            {g === 'both' ? 'Both' : g === 'male' ? 'Male' : 'Female'}
-          </button>
+            {rank === 'all' ? 'All' : rank}
+          </FilterChip>
         {/each}
-      </span>
-      <span class="flex rounded-full border border-[var(--theme-border)] overflow-hidden text-xs">
-        {#each ['all', 'blade', 'gunner'] as t}
-          <button
-            onclick={() => (typeFilter = t)}
-            class="px-3 py-1.5 transition-colors {typeFilter === t
-              ? 'bg-[var(--theme-primary)] text-white'
-              : 'bg-[var(--theme-bg-surface)] text-gray-400'}"
-          >
-            {t === 'all' ? 'All' : t === 'blade' ? 'Blademaster' : 'Gunner'}
-          </button>
-        {/each}
-      </span>
-      {#each ranks as rank}
-        <button
-          onclick={() => (rankFilter = rank)}
-          class="px-3 py-1.5 text-xs rounded-full border transition-colors"
-          style={rankFilter === rank
-            ? `background-color: color-mix(in oklab, var(--theme-accent) 12%, transparent); border-color: color-mix(in oklab, var(--theme-accent) 50%, transparent); color: var(--theme-accent);`
-            : `background-color: var(--theme-bg-surface); border-color: var(--theme-border); color: rgb(156 163 175);`}
-        >
-          {rank === 'all' ? 'All' : rank}
-        </button>
-      {/each}
+      </div>
     </div>
 
     {#if viewMode === 'sets'}
       {#if filteredSets.length === 0}
-        <div class="border rounded-lg p-8 text-center themed-card">
-          <p class="text-gray-400">No sets match current filters</p>
+        <div class="mt-4">
+          <EmptyState
+            title="No sets match current filters"
+            hint="Try widening rank, gender or class filters."
+          />
         </div>
       {:else}
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
-          {#each filteredSets as set}
+        <div class="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-3">
+          {#each visibleSets as set (set.id)}
             {@const pieces = armors
               .filter((a) => a.set_id === set.id && matchesGender(a) && matchesType(a))
               .slice(0, 6)}
-            <button onclick={() => openSet(set.id)} class="text-left">
-              <Card
-                class="p-4 border themed-card hover:border-[var(--theme-border-strong)] transition-colors"
-              >
+            <button
+              onclick={() => openSet(set.id)}
+              aria-label="Open {set.name} set"
+              class="text-left rounded-lg min-h-[44px] focus-visible:outline-none focus-visible:ring-2"
+            >
+              <Card variant="themed" class="p-4">
                 <div class="flex items-start justify-between gap-2 mb-2">
                   <h3 class="font-semibold text-gray-100 truncate">{set.name}</h3>
-                  <span
-                    class="text-[10px] uppercase tracking-wide px-2 py-0.5 rounded shrink-0 {rankColor[
-                      set.rank ?? 'Low'
-                    ] ?? 'bg-gray-800 text-gray-400'}"
-                  >
+                  <Badge tone={rankTone(set.rank)}>
                     {set.rank ?? 'Low'} · {set.piece_count} pcs
-                  </span>
+                  </Badge>
                 </div>
-                <p class="text-xs text-gray-500 mb-2">
+                <p class="text-xs text-gray-400 mb-2">
                   {setLabel(set)} · R{set.rarity ?? 1}
                 </p>
                 <div class="flex flex-wrap gap-1">
@@ -297,14 +425,14 @@
                         iconName={p.icon_name}
                         iconColor={p.icon_color}
                         size={14}
-                        alt={p.slot_type}
+                        alt=""
                       />{p.name}
-                      <span class="text-gray-500">[{slotLabel[p.slot_type] ?? p.slot_type}]</span
+                      <span class="text-gray-400">[{slotLabel[p.slot_type] ?? p.slot_type}]</span
                       ></span
                     >
                   {/each}
                   {#if set.piece_count > pieces.length}
-                    <span class="text-[10px] px-2 py-1 rounded bg-gray-800 text-gray-500"
+                    <span class="text-[10px] px-2 py-1 rounded bg-gray-800 text-gray-400"
                       >+{set.piece_count - pieces.length} more</span
                     >
                   {/if}
@@ -313,73 +441,113 @@
             </button>
           {/each}
         </div>
+        {#if filteredSets.length > visibleSets.length}
+          <div class="mt-6 flex flex-col items-center gap-2">
+            <p class="text-xs text-gray-400" role="status">
+              Showing {visibleSets.length} of {filteredSets.length}
+            </p>
+            <Button
+              variant="themedPrimary"
+              size="lg"
+              class="rounded-full px-6"
+              onclick={() => (visibleCount += PAGE_SIZE)}
+            >
+              Show more
+            </Button>
+          </div>
+        {/if}
       {/if}
     {:else}
       {#if filtered.length === 0}
-        <div class="border rounded-lg p-8 text-center themed-card">
-          <p class="text-gray-400">No armor pieces match current filters</p>
+        <div class="mt-4">
+          <EmptyState
+            title="No armor pieces match current filters"
+            hint="Try widening your filters."
+          />
         </div>
       {:else}
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {#each filtered as piece}
-            <button onclick={() => open(piece.id)} class="text-left">
-              <Card class="p-4 border transition-all cursor-pointer hover:scale-[1.02] themed-card">
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {#each visiblePieces as piece (piece.id)}
+            <button
+              onclick={() => open(piece.id)}
+              aria-label="Open {piece.name}"
+              class="text-left rounded-lg min-h-[44px] focus-visible:outline-none focus-visible:ring-2"
+            >
+              <Card variant="themed" class="p-4 cursor-pointer">
                 <div class="flex items-center gap-2 mb-2">
                   <ItemIcon
                     iconUrl={piece.icon_url}
                     iconName={piece.icon_name}
                     iconColor={piece.icon_color}
                     size={28}
-                    alt={piece.slot_type}
+                    alt=""
                   />
                   <h3 class="font-semibold text-gray-100 truncate flex-1">{piece.name}</h3>
-                  <span
-                    class="text-[10px] uppercase tracking-wide px-2 py-0.5 rounded shrink-0 {rankColor[
-                      piece.rank
-                    ] ?? 'bg-gray-800 text-gray-400'}"
-                  >
+                  <Badge tone={rankTone(piece.rank)}>
                     {piece.rank}
-                  </span>
+                  </Badge>
                 </div>
-                <p class="text-xs text-gray-500 mb-3">
+                <p class="text-xs text-gray-400 mb-3">
                   {slotLabel[piece.slot_type] ?? piece.slot_type}
                 </p>
                 <div class="grid grid-cols-2 gap-x-3 gap-y-1 text-xs">
                   <div>
-                    <span class="text-gray-500">DEF</span>
-                    <span class="text-gray-100 font-medium ml-1">
+                    <span class="text-gray-400">DEF</span>
+                    <span class="text-gray-100 font-medium ml-1 tabular-nums">
                       {piece.defense_base ?? 0}-{piece.defense_max ?? 0}
                     </span>
                   </div>
                   <div>
-                    <span class="text-gray-500">Rarity</span>
+                    <span class="text-gray-400">Rarity</span>
                     <span class="text-gray-100 font-medium ml-1">{piece.rarity ?? 1}</span>
                   </div>
                   <div>
                     <span class="text-orange-400">Fire</span>
-                    <span class="text-gray-100 ml-1">{piece.resistance_fire ?? 0}</span>
+                    <span class="text-gray-100 ml-1 tabular-nums">{piece.resistance_fire ?? 0}</span
+                    >
                   </div>
                   <div>
                     <span class="text-blue-400">Water</span>
-                    <span class="text-gray-100 ml-1">{piece.resistance_water ?? 0}</span>
+                    <span class="text-gray-100 ml-1 tabular-nums"
+                      >{piece.resistance_water ?? 0}</span
+                    >
                   </div>
                   <div>
                     <span class="text-yellow-400">Thunder</span>
-                    <span class="text-gray-100 ml-1">{piece.resistance_thunder ?? 0}</span>
+                    <span class="text-gray-100 ml-1 tabular-nums"
+                      >{piece.resistance_thunder ?? 0}</span
+                    >
                   </div>
                   <div>
                     <span class="text-cyan-400">Ice</span>
-                    <span class="text-gray-100 ml-1">{piece.resistance_ice ?? 0}</span>
+                    <span class="text-gray-100 ml-1 tabular-nums">{piece.resistance_ice ?? 0}</span>
                   </div>
                   <div class="col-span-2">
                     <span class="text-purple-400">Dragon</span>
-                    <span class="text-gray-100 ml-1">{piece.resistance_dragon ?? 0}</span>
+                    <span class="text-gray-100 ml-1 tabular-nums"
+                      >{piece.resistance_dragon ?? 0}</span
+                    >
                   </div>
                 </div>
               </Card>
             </button>
           {/each}
         </div>
+        {#if filtered.length > visiblePieces.length}
+          <div class="mt-6 flex flex-col items-center gap-2">
+            <p class="text-xs text-gray-400" role="status">
+              Showing {visiblePieces.length} of {filtered.length}
+            </p>
+            <Button
+              variant="themedPrimary"
+              size="lg"
+              class="rounded-full px-6"
+              onclick={() => (visibleCount += PAGE_SIZE)}
+            >
+              Show more
+            </Button>
+          </div>
+        {/if}
       {/if}
     {/if}
   {/if}

@@ -586,6 +586,12 @@ fn apply_migrations(conn: &Connection) -> Result<()> {
     add_column_if_missing(conn, "mhw_mantles", "icon_url_plus", "TEXT")?;
     add_column_if_missing(conn, "mhw_mantles", "icon_name_plus", "TEXT")?;
     add_column_if_missing(conn, "mhw_mantles", "icon_color_plus", "TEXT")?;
+    // MHW quest category (assigned/optional/event/arena/challenge/special/siege) — sub-section inside hub
+    add_column_if_missing(conn, "quests", "category", "TEXT")?;
+    let _ = conn.execute(
+        "CREATE INDEX IF NOT EXISTS idx_quests_category ON quests(category)",
+        [],
+    );
     Ok(())
 }
 

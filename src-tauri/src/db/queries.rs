@@ -253,6 +253,7 @@ pub struct Quest {
     pub r#type: Option<String>,
     pub rank: Option<String>,
     pub hub: Option<String>,
+    pub category: Option<String>,
     pub stars: Option<i32>,
     pub objective: Option<String>,
     pub objective_original: Option<String>,
@@ -297,6 +298,7 @@ pub struct QuestDetail {
     pub r#type: Option<String>,
     pub rank: Option<String>,
     pub hub: Option<String>,
+    pub category: Option<String>,
     pub stars: Option<i32>,
     pub objective: Option<String>,
     pub objective_original: Option<String>,
@@ -1470,9 +1472,10 @@ fn get_armor_materials(conn: &Connection, armor_id: i32) -> Result<Vec<MaterialR
 
 pub fn get_quests_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Quest>> {
     let mut stmt = conn.prepare(
-        "SELECT id, game_id, name, name_original, type, rank, hub, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, client, requirements, reward_money, contract_fee, main_monsters, description, description_original, icon_name, icon_color, icon_url, hub_icon_name, hub_icon_color, hub_icon_url, language
+         "SELECT id, game_id, name, name_original, type, rank, hub, category, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, client, requirements, reward_money, contract_fee, main_monsters, description, description_original, icon_name, icon_color, icon_url, hub_icon_name, hub_icon_color, hub_icon_url, language
          FROM quests WHERE game_id = ?1 ORDER BY
-            CASE hub WHEN 'elder' THEN 0 WHEN 'nekoto' THEN 1 WHEN 'village' THEN 2 WHEN 'village_low' THEN 2 WHEN 'village_high' THEN 3 WHEN 'guild_low' THEN 4 WHEN 'guild_high' THEN 5 WHEN 'guild_g' THEN 6 WHEN 'event' THEN 7 WHEN 'challenge' THEN 8 WHEN 'training' THEN 9 WHEN 'treasure' THEN 10 WHEN 'hot_spring' THEN 11 WHEN 'drink' THEN 12 WHEN 'nyanta' THEN 13 ELSE 14 END,
+            CASE hub WHEN 'low_high' THEN 0 WHEN 'master' THEN 1 WHEN 'siege' THEN 2 WHEN 'elder' THEN 3 WHEN 'nekoto' THEN 4 WHEN 'village' THEN 5 WHEN 'village_low' THEN 5 WHEN 'village_high' THEN 6 WHEN 'guild_low' THEN 7 WHEN 'guild_high' THEN 8 WHEN 'guild_g' THEN 9 WHEN 'event' THEN 10 WHEN 'challenge' THEN 11 WHEN 'training' THEN 12 WHEN 'treasure' THEN 13 WHEN 'hot_spring' THEN 14 WHEN 'drink' THEN 15 WHEN 'nyanta' THEN 16 ELSE 17 END,
+            CASE category WHEN 'assigned' THEN 0 WHEN 'optional' THEN 1 WHEN 'event' THEN 2 WHEN 'arena' THEN 3 WHEN 'challenge' THEN 4 WHEN 'special' THEN 5 WHEN 'siege' THEN 6 ELSE 7 END,
             stars, id",
     )?;
 
@@ -1486,29 +1489,30 @@ pub fn get_quests_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Quest>>
                 r#type: row.get(4)?,
                 rank: row.get(5)?,
                 hub: row.get(6)?,
-                stars: row.get(7)?,
-                objective: row.get(8)?,
-                objective_original: row.get(9)?,
-                location: row.get(10)?,
-                location_original: row.get(11)?,
-                time_limit: row.get(12)?,
-                faints_allowed: row.get(13)?,
-                is_key_quest: row.get(14)?,
-                is_urgent: row.get(15)?,
-                client: row.get(16)?,
-                requirements: row.get(17)?,
-                reward_money: row.get(18)?,
-                contract_fee: row.get(19)?,
-                main_monsters: row.get(20)?,
-                description: row.get(21)?,
-                description_original: row.get(22)?,
-                icon_name: row.get(23)?,
-                icon_color: row.get(24)?,
-                icon_url: row.get(25)?,
-                hub_icon_name: row.get(26)?,
-                hub_icon_color: row.get(27)?,
-                hub_icon_url: row.get(28)?,
-                language: row.get(29)?,
+                category: row.get(7)?,
+                stars: row.get(8)?,
+                objective: row.get(9)?,
+                objective_original: row.get(10)?,
+                location: row.get(11)?,
+                location_original: row.get(12)?,
+                time_limit: row.get(13)?,
+                faints_allowed: row.get(14)?,
+                is_key_quest: row.get(15)?,
+                is_urgent: row.get(16)?,
+                client: row.get(17)?,
+                requirements: row.get(18)?,
+                reward_money: row.get(19)?,
+                contract_fee: row.get(20)?,
+                main_monsters: row.get(21)?,
+                description: row.get(22)?,
+                description_original: row.get(23)?,
+                icon_name: row.get(24)?,
+                icon_color: row.get(25)?,
+                icon_url: row.get(26)?,
+                hub_icon_name: row.get(27)?,
+                hub_icon_color: row.get(28)?,
+                hub_icon_url: row.get(29)?,
+                language: row.get(30)?,
             })
         })?
         .filter_map(|r| {
@@ -1553,6 +1557,7 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
         Option<String>,
         Option<String>,
         Option<String>,
+        Option<String>,
         Option<i32>,
         Option<String>,
         Option<String>,
@@ -1578,7 +1583,7 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
         String,
     )> = conn
         .query_row(
-            "SELECT id, game_id, name, name_original, type, rank, hub, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, description, description_original, client, requirements, reward_money, contract_fee, main_monsters, icon_name, icon_color, icon_url, hub_icon_name, hub_icon_color, hub_icon_url, language
+            "SELECT id, game_id, name, name_original, type, rank, hub, category, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, description, description_original, client, requirements, reward_money, contract_fee, main_monsters, icon_name, icon_color, icon_url, hub_icon_name, hub_icon_color, hub_icon_url, language
              FROM quests WHERE id = ?1",
             params![id],
             |row| {
@@ -1613,6 +1618,7 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
                     row.get(27)?,
                     row.get(28)?,
                     row.get(29)?,
+                    row.get(30)?,
                 ))
             },
         )
@@ -1626,6 +1632,7 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
         r#type,
         rank,
         hub,
+        category,
         stars,
         objective,
         objective_original,
@@ -1664,6 +1671,7 @@ pub fn get_quest_detail(conn: &Connection, id: i32) -> Result<Option<QuestDetail
         r#type,
         rank,
         hub,
+        category,
         stars,
         objective,
         objective_original,
@@ -3034,5 +3042,242 @@ mod tests {
                 t, first[i], after
             );
         }
+    }
+
+    #[test]
+    fn mhw_quests_survive_cross_game_id_ranges() {
+        // Regression: MHWorldData canonical ids (101..67841) overlap MH2G quest ids
+        // (1..610) on the single-column PK; the seed offsets MHW quest ids (+100000)
+        // so INSERT OR IGNORE drops nothing (258 low_high, not 191).
+        let c = conn();
+        let json: Vec<serde_json::Value> =
+            serde_json::from_str(include_str!("../../data/mhw_quests.json")).unwrap();
+
+        let db_count: i64 = c
+            .query_row("SELECT COUNT(*) FROM quests WHERE game_id = 1", [], |r| {
+                r.get(0)
+            })
+            .unwrap();
+        assert_eq!(
+            db_count,
+            json.len() as i64,
+            "MHW quest count must match JSON (rows were PK-dropped)"
+        );
+
+        for (hub, category) in [("low_high", None), ("low_high", Some("assigned"))] {
+            let (sql, params): (String, Vec<&str>) = match category {
+                None => (
+                    "SELECT COUNT(*) FROM quests WHERE game_id = 1 AND hub = 'low_high'"
+                        .to_string(),
+                    vec![],
+                ),
+                Some(cat) => (
+                    "SELECT COUNT(*) FROM quests WHERE game_id = 1 AND hub = 'low_high' AND category = ?1"
+                        .to_string(),
+                    vec![cat],
+                ),
+            };
+            let db_n: i64 = c
+                .query_row(&sql, rusqlite::params_from_iter(params), |r| r.get(0))
+                .unwrap();
+            let expected = json
+                .iter()
+                .filter(|q| {
+                    q["hub"] == hub && category.map(|cat| q["category"] == cat).unwrap_or(true)
+                })
+                .count();
+            assert_eq!(
+                db_n, expected as i64,
+                "MHW {hub}/{category:?} lost rows to PK collision"
+            );
+        }
+
+        // A quest whose canonical id collides with MH2G must exist under the offset.
+        let colliding = json
+            .iter()
+            .find(|q| q["id"].as_i64().unwrap() < 611)
+            .expect("JSON should contain a colliding id");
+        let offset_id = colliding["id"].as_i64().unwrap() + 100_000;
+        let name: String = c
+            .query_row(
+                "SELECT name FROM quests WHERE game_id = 1 AND id = ?1",
+                [offset_id],
+                |r| r.get(0),
+            )
+            .expect("colliding quest missing under offset id");
+        assert_eq!(name, colliding["name"].as_str().unwrap());
+
+        // No id may exist in two games at once.
+        let overlap: i64 = c
+            .query_row(
+                "SELECT COUNT(*) FROM quests q1 JOIN quests q2 ON q1.id = q2.id AND q1.game_id < q2.game_id",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(overlap, 0, "cross-game quest id overlap");
+
+        // Every MHW reward must point at an MHW quest (no orphans on other games).
+        let orphans: i64 = c
+            .query_row(
+                "SELECT COUNT(*) FROM quest_rewards qr LEFT JOIN quests q ON q.id = qr.quest_id AND q.game_id = 1 WHERE qr.id BETWEEN 800001 AND 899999 AND q.id IS NULL",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(orphans, 0, "MHW rewards pointing outside MHW quests");
+    }
+
+    #[test]
+    fn pre_offset_db_migrates_mhw_quest_ids() {
+        // Simulates a DB seeded before the offset: MH2G owns id 150 and an MHW
+        // reward for the dropped quest 150 hangs off the MH2G row. Full seed must
+        // heal it: MH2G row untouched, MHW quest at 100150, reward repointed.
+        let c = rusqlite::Connection::open_in_memory().unwrap();
+        crate::db::register_functions(&c).unwrap();
+        crate::db::schema::create_tables(&c).unwrap();
+        c.execute_batch(
+            "INSERT INTO games (id, name, abbreviation) VALUES (1, 'MHW', 'MHW'), (5, 'MH2G', 'MH2G');",
+        )
+        .unwrap();
+        // Use a REAL colliding id from the MHW JSON (canonical ids are sparse).
+        let mhw_json: Vec<serde_json::Value> =
+            serde_json::from_str(include_str!("../../data/mhw_quests.json")).unwrap();
+        let cid = mhw_json
+            .iter()
+            .find(|q| q["id"].as_i64().unwrap() < 611)
+            .expect("JSON should contain a colliding id")["id"]
+            .as_i64()
+            .unwrap();
+        c.execute(
+            "INSERT INTO quests (id, game_id, name, hub, language) VALUES (?1, 5, 'MH2G Q', 'elder', 'en')",
+            [cid],
+        )
+        .unwrap();
+        c.execute_batch("INSERT INTO items (id, game_id, name) VALUES (20001, 1, 'stub');")
+            .unwrap();
+        c.execute(
+            "INSERT INTO quest_rewards (id, quest_id, item_id, quantity, probability, condition) VALUES (800001, ?1, 20001, 1, 1.0, 'A')",
+            [cid],
+        )
+        .unwrap();
+
+        crate::db::seed::seed(&c).unwrap();
+
+        let mh2g_name: String = c
+            .query_row(
+                "SELECT name FROM quests WHERE game_id = 5 AND id = ?1",
+                [cid],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(mh2g_name, "MH2G Q", "MH2G row must survive migration");
+        let mhw_count: i64 = c
+            .query_row(
+                "SELECT COUNT(*) FROM quests WHERE game_id = 1 AND id = ?1",
+                [cid + 100_000],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(
+            mhw_count, 1,
+            "colliding MHW quest must be re-inserted under offset"
+        );
+        let reward_target: i64 = c
+            .query_row(
+                "SELECT quest_id FROM quest_rewards WHERE id = 800001",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(
+            reward_target,
+            cid + 100_000,
+            "MHW reward must be repointed to the offset quest"
+        );
+
+        // Second boot: migration guards must make this a no-op.
+        crate::db::seed::seed(&c).unwrap();
+        let reward_target_again: i64 = c
+            .query_row(
+                "SELECT quest_id FROM quest_rewards WHERE id = 800001",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(
+            reward_target_again,
+            cid + 100_000,
+            "migration must be idempotent"
+        );
+    }
+
+    #[test]
+    fn seed_inside_transaction_with_fk_on_like_production() {
+        // Mirrors db/mod.rs: PRAGMA foreign_keys = ON, BEGIN IMMEDIATE, seed, COMMIT.
+        // The pre-offset migration must survive this path (deferred FK checks);
+        // without deferral the re-id UPDATEs fail exactly like the startup crash.
+        let c = rusqlite::Connection::open_in_memory().unwrap();
+        crate::db::register_functions(&c).unwrap();
+        crate::db::schema::create_tables(&c).unwrap();
+        c.execute_batch("PRAGMA foreign_keys = ON;").unwrap();
+        c.execute_batch(
+            "INSERT INTO games (id, name, abbreviation) VALUES (1, 'MHW', 'MHW'), (5, 'MH2G', 'MH2G');",
+        )
+        .unwrap();
+        let mhw_json: Vec<serde_json::Value> =
+            serde_json::from_str(include_str!("../../data/mhw_quests.json")).unwrap();
+        let cid = mhw_json
+            .iter()
+            .find(|q| q["id"].as_i64().unwrap() < 611)
+            .expect("JSON should contain a colliding id")["id"]
+            .as_i64()
+            .unwrap();
+        c.execute(
+            "INSERT INTO quests (id, game_id, name, hub, language) VALUES (?1, 5, 'MH2G Q', 'elder', 'en')",
+            [cid],
+        )
+        .unwrap();
+        c.execute_batch("INSERT INTO items (id, game_id, name) VALUES (20001, 1, 'stub');")
+            .unwrap();
+        c.execute(
+            "INSERT INTO quest_rewards (id, quest_id, item_id, quantity, probability, condition) VALUES (800001, ?1, 20001, 1, 1.0, 'A')",
+            [cid],
+        )
+        .unwrap();
+
+        c.execute_batch("BEGIN IMMEDIATE;").unwrap();
+        crate::db::seed::seed(&c).unwrap();
+        c.execute_batch("COMMIT;").unwrap();
+
+        let mhw_count: i64 = c
+            .query_row(
+                "SELECT COUNT(*) FROM quests WHERE game_id = 1 AND id = ?1",
+                [cid + 100_000],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(
+            mhw_count, 1,
+            "MHW quest must exist under offset after COMMIT"
+        );
+        let reward_target: i64 = c
+            .query_row(
+                "SELECT quest_id FROM quest_rewards WHERE id = 800001",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(
+            reward_target,
+            cid + 100_000,
+            "reward must be repointed after COMMIT"
+        );
+        let total: i64 = c
+            .query_row("SELECT COUNT(*) FROM quests WHERE game_id = 1", [], |r| {
+                r.get(0)
+            })
+            .unwrap();
+        assert_eq!(total, mhw_json.len() as i64, "full MHW set present");
     }
 }

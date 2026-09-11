@@ -1,19 +1,28 @@
 <script lang="ts">
   import { page } from '$app/state'
+  import ErrorState from '$lib/components/ui/error-state.svelte'
   import { goto } from '$app/navigation'
   import { api, type SkillDetail } from '$lib/api'
   import DetailHeader from '$lib/components/detail-header.svelte'
+  import Button from '$lib/components/ui/button.svelte'
+  import Skeleton from '$lib/components/ui/skeleton.svelte'
+  import EmptyState from '$lib/components/ui/empty-state.svelte'
 
   const id = $derived(Number(page.params.id))
   const game = $derived(page.params.game)
   let skill = $state<SkillDetail | null>(null)
   let loading = $state(true)
   let error = $state<string | null>(null)
+  let armorLimit = $state(30)
+  let weaponLimit = $state(30)
+  const LIST_PAGE = 30
 
   $effect(() => {
     if (!id || Number.isNaN(id)) return
     loading = true
     error = null
+    armorLimit = LIST_PAGE
+    weaponLimit = LIST_PAGE
     api
       .getSkillDetail(id)
       .then((data) => {
@@ -45,25 +54,20 @@
   }
 </script>
 
-<div class="max-w-5xl mx-auto">
+<div class="max-w-5xl mx-auto numbered-sections">
   {#if loading}
-    <div class="border rounded-lg p-8 text-center themed-card">
-      <p class="text-gray-400">Loading skill...</p>
+    <div class="space-y-3" aria-busy="true">
+      <Skeleton lines={2} />
+      <Skeleton lines={3} />
     </div>
   {:else if error}
-    <div class="bg-red-950/30 border border-red-900 rounded-lg p-8 text-center">
-      <p class="text-red-400">Failed to load skill</p>
-      <p class="text-gray-500 text-sm mt-2">{error}</p>
-    </div>
+    <ErrorState title="Failed to load skill" {error} />
   {:else if !skill}
-    <div class="border rounded-lg p-8 text-center themed-card">
-      <p class="text-gray-400">Skill not found</p>
-    </div>
+    <EmptyState title="Skill not found" hint="It may belong to another game." />
   {:else}
     <DetailHeader
       title={skill.name}
       subtitle={skill.description ?? ''}
-      icon="✨"
       tags={[
         {
           label: `${skill.levels.length} abilities`,
@@ -90,9 +94,7 @@
 
     {#if skill.description}
       <section class="mb-8">
-        <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
-          Description
-        </h2>
+        <h2 class="section-title mb-3">Description</h2>
         <div class="rounded-lg border themed-card p-5 leading-relaxed text-gray-200 text-[15px]">
           {skill.description}
         </div>
@@ -101,11 +103,9 @@
 
     <!-- Levels / Abilities -->
     <section class="mb-8">
-      <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
-        Skill Levels & Abilities
-      </h2>
+      <h2 class="section-title mb-3">Skill Levels & Abilities</h2>
       {#if skill.levels.length === 0}
-        <div class="rounded-lg border themed-card p-5 text-center text-gray-500 text-sm">
+        <div class="rounded-lg border themed-card p-5 text-center text-gray-400 text-sm">
           No ability data available.
         </div>
       {:else}
@@ -122,7 +122,7 @@
               >
             </div>
             {#if positive.length === 0}
-              <p class="p-4 text-center text-gray-500 text-sm">No positive levels</p>
+              <p class="p-4 text-center text-gray-400 text-sm">No positive levels</p>
             {:else}
               <div class="divide-y divide-gray-800">
                 {#each positive as lvl}
@@ -153,7 +153,7 @@
               >
             </div>
             {#if negative.length === 0}
-              <p class="p-4 text-center text-gray-500 text-sm">
+              <p class="p-4 text-center text-gray-400 text-sm">
                 No negative levels — safe to stack
               </p>
             {:else}
@@ -176,7 +176,7 @@
             {/if}
           </div>
         </div>
-        <p class="text-[11px] text-gray-500 mt-2">
+        <p class="text-[11px] text-gray-400 mt-2">
           Points accumulate from armor and jewels. Reach the threshold to activate the ability.
           Negative abilities trigger when below 0.
         </p>
@@ -186,23 +186,24 @@
     <!-- Decorations / Jewels - enriched with materials & unlock -->
     <section class="mb-8">
       <div class="flex items-center justify-between mb-3">
-        <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold">
+        <h2 class="text-xs uppercase tracking-wider text-gray-400 font-semibold">
           Decorations & Jewels ({skill.decorations.length})
         </h2>
         {#if skill.decorations.length > 0}
           <a
             href="/{game}/decorations"
-            class="text-xs text-[var(--theme-text-accent)] hover:underline">View all jewels →</a
+            class="inline-flex items-center text-xs text-[var(--theme-text-accent)] hover:underline min-h-[44px] px-2 -mr-2 rounded focus-visible:outline-none focus-visible:ring-2"
+            >View all jewels →</a
           >
         {/if}
       </div>
       {#if skill.decorations.length === 0}
-        <div class="rounded-lg border themed-card p-5 text-center text-gray-500 text-sm">
+        <div class="rounded-lg border themed-card p-5 text-center text-gray-400 text-sm">
           No jewels grant points for this skill. Data is faithful to MHFU - some skills have no
           jewel.
         </div>
       {:else}
-        <div class="grid grid-cols-1 gap-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {#each skill.decorations as deco}
             <div
               class="rounded-lg border themed-card overflow-hidden hover:border-[var(--theme-border-strong)] transition-colors"
@@ -260,16 +261,16 @@
                       >{deco.price ? `${deco.price}z` : '—'}</span
                     >
                   </div>
-                  <p class="text-[11px] text-gray-500 mt-1.5">
+                  <p class="text-[11px] text-gray-400 mt-1.5">
                     {deco.acquisition} · Slot {deco.slot_size} jewel · Tap to view full detail
                   </p>
                 </div>
-                <span class="shrink-0 text-gray-500 text-xs">›</span>
+                <span class="shrink-0 text-gray-400 text-xs">›</span>
               </button>
 
               <!-- Materials -->
               <div class="px-4 pb-3">
-                <p class="text-[11px] uppercase tracking-wide text-gray-500 font-semibold mb-2">
+                <p class="text-[11px] uppercase tracking-wide text-gray-400 font-semibold mb-2">
                   Crafting Materials · 100% faithful
                 </p>
                 {#if deco.materials.length === 0}
@@ -296,7 +297,7 @@
                     {/each}
                   </div>
                 {/if}
-                <p class="text-[10px] text-gray-500 mt-2 leading-relaxed">
+                <p class="text-[10px] text-gray-400 mt-2 leading-relaxed">
                   Faithful to MHFU game data (mhfu-db / mhfu-blacksmith). Materials are consumed at
                   the Smith. Base jewels: <span class="text-gray-300">Suiko Jewel</span> (Low),
                   <span class="text-gray-300">Akito Jewel</span>
@@ -313,30 +314,31 @@
 
     <!-- Armor pieces -->
     <section class="mb-8">
-      <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
+      <h2 class="section-title mb-3">
         Armor Pieces ({skill.armors.length})
       </h2>
       {#if skill.armors.length === 0}
-        <div class="rounded-lg border themed-card p-5 text-center text-gray-500 text-sm">
+        <div class="rounded-lg border themed-card p-5 text-center text-gray-400 text-sm">
           No armor grants points for this skill.
         </div>
       {:else}
         <div class="rounded-lg border themed-card overflow-hidden">
-          <div class="divide-y divide-gray-800 max-h-[420px] overflow-y-auto">
-            {#each skill.armors as armor}
+          <div class="divide-y divide-gray-800">
+            {#each skill.armors.slice(0, armorLimit) as armor}
               <button
                 onclick={() => openArmor(armor.id)}
-                class="w-full text-left px-4 py-3 flex items-center justify-between gap-3 hover:bg-[var(--theme-bg-elevated)]/50 transition-colors"
+                aria-label="Open {armor.name}"
+                class="w-full text-left px-4 min-h-[52px] py-3 flex items-center justify-between gap-3 hover:bg-[var(--theme-bg-elevated)]/50 transition-colors motion-safe:transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset"
               >
                 <div class="min-w-0">
                   <p class="text-sm font-medium text-gray-100 truncate">{armor.name}</p>
-                  <p class="text-xs text-gray-500">
+                  <p class="text-xs text-gray-400">
                     {armor.slot_type} · {armor.rank} · Rarity {armor.rarity ?? 1}
                     {armor.slots ? `· Slots ${armor.slots}` : ''}
                   </p>
                 </div>
                 <span
-                  class="shrink-0 text-xs font-bold px-2.5 py-1 rounded-full border {armor.points >=
+                  class="shrink-0 text-xs font-bold px-2.5 py-1 rounded-full border tabular-nums {armor.points >=
                   0
                     ? 'bg-emerald-900/30 text-emerald-300 border-emerald-800'
                     : 'bg-red-900/30 text-red-300 border-red-800'}"
@@ -347,9 +349,18 @@
             {/each}
           </div>
         </div>
-        {#if skill.armors.length >= 200}
-          <p class="text-[11px] text-gray-500 mt-1">
-            Showing first 200 results — all pieces provide points for {skill.name}.
+        {#if skill.armors.length > armorLimit}
+          <Button
+            variant="themed"
+            size="lg"
+            class="mt-3 w-full rounded-lg"
+            onclick={() => (armorLimit += LIST_PAGE)}
+          >
+            Show more ({skill.armors.length - armorLimit} remaining)
+          </Button>
+        {:else}
+          <p class="text-[11px] text-gray-400 mt-2" role="status">
+            Showing all {skill.armors.length} pieces that provide points for {skill.name}.
           </p>
         {/if}
       {/if}
@@ -357,30 +368,32 @@
 
     <!-- Weapons -->
     <section class="mb-8">
-      <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
+      <h2 class="section-title mb-3">
         Weapons ({skill.weapons.length})
       </h2>
       {#if skill.weapons.length === 0}
-        <div class="rounded-lg border themed-card p-5 text-center text-gray-500 text-sm">
+        <div class="rounded-lg border themed-card p-5 text-center text-gray-400 text-sm">
           No weapons grant points for this skill in current data.
         </div>
       {:else}
         <div class="rounded-lg border themed-card overflow-hidden">
-          <div class="divide-y divide-gray-800 max-h-[420px] overflow-y-auto">
-            {#each skill.weapons as wp}
+          <div class="divide-y divide-gray-800">
+            {#each skill.weapons.slice(0, weaponLimit) as wp}
               <button
                 onclick={() => openWeapon(wp.id)}
-                class="w-full text-left px-4 py-3 flex items-center justify-between gap-3 hover:bg-[var(--theme-bg-elevated)]/50 transition-colors"
+                aria-label="Open {wp.name}"
+                class="w-full text-left px-4 min-h-[52px] py-3 flex items-center justify-between gap-3 hover:bg-[var(--theme-bg-elevated)]/50 transition-colors motion-safe:transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset"
               >
                 <div class="min-w-0">
                   <p class="text-sm font-medium text-gray-100 truncate">{wp.name}</p>
-                  <p class="text-xs text-gray-500">
+                  <p class="text-xs text-gray-400">
                     {wp.weapon_type} · Rarity {wp.rarity ?? 1} · ATK {wp.attack ?? 0}
                     {wp.slots ? `· Slots ${wp.slots}` : ''}
                   </p>
                 </div>
                 <span
-                  class="shrink-0 text-xs font-bold px-2.5 py-1 rounded-full border {wp.points >= 0
+                  class="shrink-0 text-xs font-bold px-2.5 py-1 rounded-full border tabular-nums {wp.points >=
+                  0
                     ? 'bg-emerald-900/30 text-emerald-300 border-emerald-800'
                     : 'bg-red-900/30 text-red-300 border-red-800'}"
                 >
@@ -390,6 +403,16 @@
             {/each}
           </div>
         </div>
+        {#if skill.weapons.length > weaponLimit}
+          <Button
+            variant="themed"
+            size="lg"
+            class="mt-3 w-full rounded-lg"
+            onclick={() => (weaponLimit += LIST_PAGE)}
+          >
+            Show more ({skill.weapons.length - weaponLimit} remaining)
+          </Button>
+        {/if}
       {/if}
     </section>
   {/if}

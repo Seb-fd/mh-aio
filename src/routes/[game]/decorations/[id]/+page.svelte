@@ -1,9 +1,13 @@
 <script lang="ts">
   import { page } from '$app/state'
+  import ErrorState from '$lib/components/ui/error-state.svelte'
   import { goto } from '$app/navigation'
   import { api, type DecorationDetail } from '$lib/api'
   import DetailHeader from '$lib/components/detail-header.svelte'
   import ItemIcon from '$lib/components/item-icon.svelte'
+  import Skeleton from '$lib/components/ui/skeleton.svelte'
+  import EmptyState from '$lib/components/ui/empty-state.svelte'
+  import { Package, Lock, ChevronRight } from '@lucide/svelte'
 
   const id = $derived(Number(page.params.id))
   const game = $derived(page.params.game)
@@ -38,25 +42,20 @@
   }
 </script>
 
-<div class="max-w-5xl mx-auto">
+<div class="max-w-5xl mx-auto numbered-sections">
   {#if loading}
-    <div class="border rounded-lg p-8 text-center themed-card">
-      <p class="text-gray-400">Loading jewel...</p>
+    <div class="space-y-3" aria-busy="true">
+      <Skeleton lines={2} />
+      <Skeleton lines={3} />
     </div>
   {:else if error}
-    <div class="bg-red-950/30 border border-red-900 rounded-lg p-8 text-center">
-      <p class="text-red-400">Failed to load jewel</p>
-      <p class="text-gray-500 text-sm mt-2">{error}</p>
-    </div>
+    <ErrorState title="Failed to load jewel" {error} />
   {:else if !deco}
-    <div class="border rounded-lg p-8 text-center themed-card">
-      <p class="text-gray-400">Jewel not found</p>
-    </div>
+    <EmptyState title="Jewel not found" hint="It may belong to another game." />
   {:else}
     <DetailHeader
       title={deco.name}
       subtitle="Jewel · Decoration"
-      icon="💎"
       iconUrl={deco.icon_url}
       tags={[
         {
@@ -84,38 +83,39 @@
       ]}
     />
 
-    <div class="grid grid-cols-2 gap-3 mb-8">
+    <div class="stat-grid gap-3 mb-8">
       <div class="rounded-lg border themed-card p-3 text-center flex flex-col items-center">
-        <p class="text-[10px] uppercase tracking-wide text-gray-500">Slot Size</p>
+        <p class="text-[10px] uppercase tracking-wide text-gray-400">Slot Size</p>
         <div class="mt-1">
           <ItemIcon
             iconUrl={deco.icon_url}
             iconName={deco.icon_name}
             iconColor={deco.icon_color}
             size={28}
-            alt={deco.name}
+            alt=""
           />
         </div>
-        <p class="text-xl font-bold text-gray-100 mt-1">{deco.slot_size ?? '-'}</p>
-        <p class="text-[11px] text-gray-500 mt-1">Requires armor/weapon slot of >= size</p>
+        <p class="text-xl font-bold text-gray-100 mt-1 tabular-nums">{deco.slot_size ?? '-'}</p>
+        <p class="text-[11px] text-gray-400 mt-1">Requires slot of >= size</p>
       </div>
       <div class="rounded-lg border themed-card p-3 text-center">
-        <p class="text-[10px] uppercase tracking-wide text-gray-500">Crafting Cost</p>
-        <p class="text-xl font-bold mt-1" style="color: var(--theme-accent);">{deco.price ?? 0}z</p>
-        <p class="text-[11px] text-gray-500 mt-1">Plus materials below</p>
+        <p class="text-[10px] uppercase tracking-wide text-gray-400">Crafting Cost</p>
+        <p class="text-xl font-bold mt-1 tabular-nums" style="color: var(--theme-accent);">
+          {deco.price ?? 0}z
+        </p>
+        <p class="text-[11px] text-gray-400 mt-1">Plus materials below</p>
       </div>
     </div>
 
     <!-- Skills granted -->
     <section class="mb-8">
-      <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
-        Skills Granted
-      </h2>
+      <h2 class="section-title mb-3">Skills Granted</h2>
       <div class="flex flex-wrap gap-2">
         {#if deco && deco.skill_name}
           <button
             onclick={() => gotoSkill(deco!.skill_id)}
-            class="px-3 py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] flex items-center gap-2 hover:border-[var(--theme-border-strong)] transition-colors"
+            aria-label="Open skill {deco!.skill_name}"
+            class="px-3 min-h-[44px] py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] flex items-center gap-2 hover:border-[var(--theme-border-strong)] transition-colors motion-safe:transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2"
           >
             <span class="text-sm text-gray-200">{deco!.skill_name}</span>
             <span
@@ -129,7 +129,8 @@
         {#if deco && deco.secondary_skill_name}
           <button
             onclick={() => gotoSkill(deco!.secondary_skill_id)}
-            class="px-3 py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] flex items-center gap-2 hover:border-[var(--theme-border-strong)] transition-colors"
+            aria-label="Open skill {deco!.secondary_skill_name}"
+            class="px-3 min-h-[44px] py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] flex items-center gap-2 hover:border-[var(--theme-border-strong)] transition-colors motion-safe:transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2"
           >
             <span class="text-sm text-gray-200">{deco!.secondary_skill_name}</span>
             <span
@@ -141,7 +142,7 @@
           </button>
         {/if}
       </div>
-      <p class="text-[11px] text-gray-500 mt-2">
+      <p class="text-[11px] text-gray-400 mt-2">
         Equip the jewel into armor/weapon with sufficient slots. Points accumulate toward the skill
         thresholds (positive and negative). Faithful to MHFU.
       </p>
@@ -150,11 +151,13 @@
     <!-- Unlock & Acquisition -->
     <section class="mb-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
       <div class="rounded-lg border themed-card p-4">
-        <h3 class="text-xs uppercase tracking-wide text-gray-500 font-semibold mb-2">
-          🔓 Unlock Method
+        <h3
+          class="text-xs uppercase tracking-wide text-gray-400 font-semibold mb-2 inline-flex items-center gap-1.5"
+        >
+          <Lock class="h-3.5 w-3.5" aria-hidden="true" /> Unlock Method
         </h3>
         <p class="text-sm text-gray-200 leading-relaxed">{deco.unlock}</p>
-        <p class="text-xs text-gray-500 mt-2">
+        <p class="text-xs text-gray-400 mt-2">
           Base jewels: <span class="text-gray-300">Suiko Jewel</span> (Low),
           <span class="text-gray-300">Akito Jewel</span>
           (High), <span class="text-gray-300">Battlefield/Lapis Jewel</span> (G). Obtain base jewels from
@@ -162,11 +165,13 @@
         </p>
       </div>
       <div class="rounded-lg border themed-card p-4">
-        <h3 class="text-xs uppercase tracking-wide text-gray-500 font-semibold mb-2">
-          📦 Acquisition
+        <h3
+          class="text-xs uppercase tracking-wide text-gray-400 font-semibold mb-2 inline-flex items-center gap-1.5"
+        >
+          <Package class="h-3.5 w-3.5" aria-hidden="true" /> Acquisition
         </h3>
         <p class="text-sm text-gray-200 leading-relaxed">{deco.acquisition}</p>
-        <p class="text-xs text-gray-500 mt-2">
+        <p class="text-xs text-gray-400 mt-2">
           Craft at <span class="text-gray-300">Equipment Smith</span> · Requires zenny + materials below
           · 100% faithful to game
         </p>
@@ -175,53 +180,39 @@
 
     <!-- Crafting Materials - 100% faithful -->
     <section>
-      <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
-        Crafting Materials · 100% Faithful
-      </h2>
+      <h2 class="section-title mb-3">Crafting Materials · 100% Faithful</h2>
       {#if deco.materials.length === 0}
-        <div class="rounded-lg border themed-card p-5 text-center text-gray-500 text-sm">
+        <div class="rounded-lg border themed-card p-5 text-center text-gray-400 text-sm">
           No materials data
         </div>
       {:else}
         <div class="space-y-1.5">
-          {#each deco.materials as mat}
+          {#each deco.materials as mat, mi (mat.item_id + '-' + mi)}
             <button
               onclick={() => openItem(mat.item_id)}
               disabled={!mat.item_id}
-              class="w-full flex items-center justify-between gap-3 px-4 py-2.5 rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-elevated)] transition-all group text-left disabled:cursor-default disabled:opacity-60"
+              aria-label={mat.item_id ? `Open ${mat.item_name} sources` : mat.item_name}
+              class="w-full flex items-center justify-between gap-3 px-4 min-h-[52px] py-2.5 rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-elevated)] transition-colors motion-safe:transition-colors motion-reduce:transition-none group text-left disabled:cursor-default disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2"
             >
               <div class="flex items-center gap-3 min-w-0">
                 <span
                   class="w-8 h-8 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] flex items-center justify-center shrink-0"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-4 w-4 text-[var(--theme-text-accent)]"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                    />
-                  </svg>
+                  <Package class="h-4 w-4 text-[var(--theme-text-accent)]" aria-hidden="true" />
                 </span>
                 <span
-                  class="text-sm text-gray-100 group-hover:text-[var(--theme-text-accent)] transition-colors truncate"
+                  class="text-sm text-gray-100 group-hover:text-[var(--theme-text-accent)] transition-colors motion-safe:transition-colors motion-reduce:transition-none truncate"
                 >
                   {mat.item_name}
                 </span>
                 {#if mat.item_id}
                   <span
-                    class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-900/20 text-emerald-300 border border-emerald-800 hidden sm:inline"
-                    >tap for sources »</span
+                    class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-900/20 text-emerald-300 border border-emerald-800 inline-flex items-center gap-0.5 shrink-0"
+                    >sources <ChevronRight class="h-3 w-3" aria-hidden="true" /></span
                   >
                 {/if}
               </div>
-              <span class="text-sm font-semibold text-[var(--theme-accent)] shrink-0"
+              <span class="text-sm font-semibold text-[var(--theme-accent)] shrink-0 tabular-nums"
                 >x{mat.quantity}</span
               >
             </button>

@@ -1,10 +1,14 @@
 <script lang="ts">
   import { page } from '$app/state'
+  import ErrorState from '$lib/components/ui/error-state.svelte'
   import { goto } from '$app/navigation'
   import { api, type ItemDetail } from '$lib/api'
   import DetailHeader from '$lib/components/detail-header.svelte'
   import DropTable from '$lib/components/drop-table.svelte'
   import ItemIcon from '$lib/components/item-icon.svelte'
+  import Skeleton from '$lib/components/ui/skeleton.svelte'
+  import EmptyState from '$lib/components/ui/empty-state.svelte'
+  import { fallbackLabel } from '$lib/utils/mh'
   import { selectedGame } from '$lib/stores/game'
 
   const id = $derived(Number(page.params.id))
@@ -49,37 +53,26 @@
   )
 </script>
 
-<div class="max-w-5xl mx-auto">
+<div class="max-w-5xl mx-auto numbered-sections">
   {#if loading}
-    <div class="border rounded-lg p-8 text-center themed-card">
-      <p class="text-gray-400">Loading item...</p>
+    <div class="space-y-3" aria-busy="true">
+      <Skeleton lines={2} />
+      <Skeleton lines={3} />
     </div>
   {:else if error}
-    <div class="bg-red-950/30 border border-red-900 rounded-lg p-8 text-center">
-      <p class="text-red-400">Failed to load item</p>
-      <p class="text-gray-500 text-sm mt-2">{error}</p>
-    </div>
+    <ErrorState title="Failed to load item" {error} />
   {:else if !item}
-    <div class="border rounded-lg p-8 text-center themed-card">
-      <p class="text-gray-400">Item not found</p>
-    </div>
+    <EmptyState title="Item not found" hint="It may belong to another game." />
   {:else}
     <DetailHeader
       title={item.name}
       subtitle={item.subcategory
         ? `${item.category ?? ''} • ${item.subcategory}`
         : (item.category ?? '')}
-      icon={item.category === 'Ammo'
-        ? '🏹'
-        : item.category === 'Consumable'
-          ? '🧪'
-          : item.subcategory === 'Charm'
-            ? '✨'
-            : '📦'}
       iconUrl={item.icon_url}
       tags={[
         {
-          label: item.category ?? 'Unknown',
+          label: fallbackLabel(item.category),
           color: categoryColor[item.category ?? ''] ?? 'bg-gray-800 text-gray-300',
         },
         ...(item.subcategory && item.subcategory !== item.category
@@ -100,7 +93,7 @@
     <div class="mb-6 flex flex-wrap gap-2">
       {#if item.sell_price !== null && item.sell_price !== undefined}
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border themed-card">
-          <span class="text-xs uppercase tracking-wide text-gray-500">Sell</span>
+          <span class="text-xs uppercase tracking-wide text-gray-400">Sell</span>
           <span class="text-sm font-semibold" style="color: var(--theme-accent);"
             >{item.sell_price}z</span
           >
@@ -108,7 +101,7 @@
       {/if}
       {#if item.buy_price !== null && item.buy_price !== undefined}
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border themed-card">
-          <span class="text-xs uppercase tracking-wide text-gray-500">Buy</span>
+          <span class="text-xs uppercase tracking-wide text-gray-400">Buy</span>
           <span class="text-sm font-semibold" style="color: var(--theme-accent);"
             >{item.buy_price}z</span
           >
@@ -116,7 +109,7 @@
       {/if}
       {#if item.carry_limit !== null && item.carry_limit !== undefined}
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border themed-card">
-          <span class="text-xs uppercase tracking-wide text-gray-500">Carry</span>
+          <span class="text-xs uppercase tracking-wide text-gray-400">Carry</span>
           <span class="text-sm font-semibold text-gray-200">x{item.carry_limit}</span>
         </div>
       {/if}
@@ -127,9 +120,9 @@
             iconName={item.icon_name}
             iconColor={item.icon_color}
             size={24}
-            alt={item.name}
+            alt=""
           />
-          <span class="text-xs text-gray-500">{item.icon_name ?? 'Icon'}</span>
+          <span class="text-xs text-gray-400">{item.icon_name ?? 'Icon'}</span>
           {#if item.icon_color}
             <span class="text-xs text-gray-600">· {item.icon_color}</span>
           {/if}
@@ -140,11 +133,12 @@
     {#if item.description}
       <section class="mb-8">
         <div class="flex items-center gap-2 mb-3">
-          <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Description</h2>
+          <h2 class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Description</h2>
           {#if hasCJK}
             <span
               class="text-[10px] px-2 py-0.5 rounded-full border border-amber-800 bg-amber-900/30 text-amber-300 font-semibold"
-              title="Source text is in Japanese (Monster Item List)">🇯🇵 JP</span
+              role="note"
+              aria-label="Source text is in Japanese (Monster Item List)">JP</span
             >
           {/if}
         </div>
@@ -157,7 +151,7 @@
     {#if item.recipes.length > 0}
       <section class="mb-8">
         <div class="flex items-center gap-2 mb-3">
-          <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold">
+          <h2 class="text-xs uppercase tracking-wider text-gray-400 font-semibold">
             Combination Recipe
           </h2>
           {#if item.recipes[0]}
@@ -170,10 +164,10 @@
                   : 'bg-sky-900/30 text-sky-300 border-sky-800'}"
             >
               {item.recipes[0].combine_type === 'alchemy'
-                ? '⚗️ Alchemy'
+                ? 'Alchemy'
                 : item.recipes[0].combine_type === 'treasure'
-                  ? '💎 Treasure'
-                  : '🧪 Normal'}
+                  ? 'Treasure'
+                  : 'Normal'}
             </span>
             {#if item.recipes[0].chance != null}
               <span
@@ -191,8 +185,8 @@
               {/if}
               <button
                 onclick={() => goToItem(recipe.component_item_id)}
-                class="px-3 py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] flex items-center gap-2 hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-surface)] transition-colors cursor-pointer text-left"
-                title="Go to {recipe.component_name}"
+                aria-label="Go to {recipe.component_name}"
+                class="px-3 min-h-[44px] py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] flex items-center gap-2 hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-surface)] transition-colors motion-safe:transition-colors motion-reduce:transition-none cursor-pointer text-left focus-visible:outline-none focus-visible:ring-2"
               >
                 <span
                   class="text-sm text-gray-200 hover:text-[var(--theme-accent)] transition-colors"
@@ -226,14 +220,12 @@
 
     {#if item.melder}
       <section class="mb-8">
-        <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
-          Elder Melder
-        </h2>
+        <h2 class="section-title mb-3">Elder Melder</h2>
         <div class="rounded-lg border themed-card p-4 flex flex-wrap items-center gap-3">
           <div
             class="px-3 py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)]"
           >
-            <span class="text-xs text-gray-500">Research</span>
+            <span class="text-xs text-gray-400">Research</span>
             <span class="ml-2 text-sm font-semibold" style="color: var(--theme-accent);"
               >{item.melder.research_cost} RP</span
             >
@@ -241,7 +233,7 @@
           <div
             class="px-3 py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)]"
           >
-            <span class="text-xs text-gray-500">Melding</span>
+            <span class="text-xs text-gray-400">Melding</span>
             <span class="ml-2 text-sm font-semibold" style="color: var(--theme-accent);"
               >{item.melder.melding_cost} MP</span
             >
@@ -261,23 +253,23 @@
                       : 'bg-sky-900/30 text-sky-300 border-sky-800'}"
           >
             {item.melder.melder_type === 'celestial'
-              ? '✨ Celestial'
+              ? 'Celestial'
               : item.melder.melder_type === 'gold'
-                ? '🥇 Gold'
+                ? 'Gold'
                 : item.melder.melder_type === 'silver'
-                  ? '🥈 Silver'
+                  ? 'Silver'
                   : item.melder.melder_type === 'steel'
-                    ? '🔩 Steel'
+                    ? 'Steel'
                     : item.melder.melder_type === 'guiding'
-                      ? '🗺️ Guiding'
-                      : '⚗️ Normal'}
+                      ? 'Guiding'
+                      : 'Normal'}
             {item.melder.melder_type}
           </span>
           {#if item.melder.unlock_condition}
-            <span class="text-xs text-gray-500">Unlock: {item.melder.unlock_condition}</span>
+            <span class="text-xs text-gray-400">Unlock: {item.melder.unlock_condition}</span>
           {/if}
         </div>
-        <p class="text-[11px] text-gray-500 mt-2">
+        <p class="text-[11px] text-gray-400 mt-2">
           Meld at the Elder Melder in Astera/Seliana. Requires Research Points + materials for
           Melding Points.
         </p>
@@ -285,9 +277,7 @@
     {/if}
 
     <section>
-      <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
-        How to Obtain
-      </h2>
+      <h2 class="section-title mb-3">How to Obtain</h2>
       <DropTable sources={item.sources} />
     </section>
   {/if}

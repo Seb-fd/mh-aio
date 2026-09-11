@@ -18,7 +18,8 @@
 
 <button
   onclick={goBack}
-  class="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-[var(--theme-text-accent)] transition-colors group"
+  aria-label="Go back"
+  class="inline-flex items-center gap-1.5 rounded-md text-sm text-gray-300 hover:text-[var(--theme-text-accent)] transition-colors motion-safe:transition-colors motion-reduce:transition-none group min-h-[44px] px-2 -ml-2 focus-visible:outline-none focus-visible:ring-2"
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"

@@ -1,46 +1,95 @@
 <script lang="ts">
   import { goto } from '$app/navigation'
+  import ErrorState from '$lib/components/ui/error-state.svelte'
   import { selectedGame } from '$lib/stores/game'
   import { api, type Weapon } from '$lib/api'
   import ItemIcon from '$lib/components/item-icon.svelte'
+  import Button from '$lib/components/ui/button.svelte'
+  import Skeleton from '$lib/components/ui/skeleton.svelte'
+  import EmptyState from '$lib/components/ui/empty-state.svelte'
+  import { toolbarTarget } from '$lib/stores/toolbar'
+  import { toolbarPortal } from '$lib/actions/toolbar-portal'
+  import { captureScrollY, restoreScrollY } from '$lib/utils/scroll-restore'
+  import type { Snapshot } from './$types.js'
+
+  interface WeaponsSnapshot {
+    typeFilter: string
+    sortBy: string
+    collapsed: number[]
+    rootLimit: number
+    typeMemory: Record<string, { scrollY: number; rootLimit: number }>
+    scrollY: number
+  }
+
+  export const snapshot: Snapshot<WeaponsSnapshot> = {
+    capture: () => ({
+      typeFilter,
+      sortBy,
+      collapsed: [...collapsed],
+      rootLimit,
+      typeMemory,
+      scrollY: captureScrollY(),
+    }),
+    restore: (s) => {
+      typeFilter = s.typeFilter
+      sortBy = s.sortBy
+      collapsed = new Set(s.collapsed)
+      rootLimit = s.rootLimit
+      typeMemory = s.typeMemory
+      prevType = s.typeFilter
+      prevSort = s.sortBy
+      pendingScrollY = s.scrollY
+    },
+  }
+
+  let pendingScrollY = $state<number | null>(null)
+  $effect(() => {
+    if (!loading && pendingScrollY != null) {
+      const y = pendingScrollY
+      pendingScrollY = null
+      restoreScrollY(y)
+    }
+  })
   import { elementColor, sharpnessValues, SHARP_COLORS_ARR as SHARP_COLORS } from '$lib/utils/mh'
+  import { ChevronRight, Hammer } from '@lucide/svelte'
+  import { tick } from 'svelte'
+  import { createQuery } from '@tanstack/svelte-query'
+  import { dbCache, dbRetry, dbRetryDelay, dbErrorText } from '$lib/query'
 
   const game = $derived($selectedGame)
   const dbId = $derived(game?.dbId)
 
-  let weapons = $state<Weapon[]>([])
-  let loading = $state(true)
-  let error = $state<string | null>(null)
+  const weaponsQuery = createQuery(() => ({
+    queryKey: ['weapons', dbId ?? 0],
+    queryFn: () => api.getWeapons(dbId!),
+    enabled: dbId != null,
+    ...dbCache,
+    retry: dbRetry,
+    retryDelay: dbRetryDelay,
+  }))
+
+  const weapons = $derived<Weapon[]>(weaponsQuery.data ?? [])
+  const loading = $derived(weaponsQuery.isPending)
+  const error = $derived(
+    dbErrorText(weaponsQuery.isPending, weaponsQuery.failureCount, weaponsQuery.error),
+  )
   let typeFilter = $state<string>('Great Sword')
   let sortBy = $state<string>('smith') // smith = armorer tree order (weapon_type -> id) faithful to ISO
+  let collapsed = $state<Set<number>>(new Set())
+  let rootLimit = $state(30)
+  const ROOT_PAGE = 30
+  // Per-type memory: depth + scroll position, so switching types restores each
+  // type where you left it (also persisted in the snapshot for back navigation).
+  let typeMemory = $state<Record<string, { scrollY: number; rootLimit: number }>>({})
+  let prevType = $state<string | null>(null)
+  let prevSort = $state<string | null>(null)
 
-  async function loadWeapons(id: number, attempt = 0) {
-    try {
-      const data = await api.getWeapons(id)
-      console.log('[weapons] loaded', data.length)
-      weapons = data
-      error = null
-    } catch (e) {
-      const msg = String(e)
-      console.error('[weapons] failed', msg)
-      if (msg.includes('state not managed') && attempt < 6) {
-        error = 'Preparing database...'
-        setTimeout(() => loadWeapons(id, attempt + 1), 400 * (attempt + 1))
-        return
-      }
-      error = msg
-    } finally {
-      if (error !== 'Preparing database...') loading = false
-    }
+  function switchType(next: string) {
+    if (next === typeFilter) return
+    const main = document.getElementById('main-content')
+    typeMemory = { ...typeMemory, [typeFilter]: { scrollY: main?.scrollTop ?? 0, rootLimit } }
+    typeFilter = next
   }
-
-  $effect(() => {
-    if (dbId == null) return
-    console.log('[weapons] loading gameId', dbId)
-    loading = true
-    error = null
-    loadWeapons(dbId)
-  })
 
   // Ensure filter is always a valid weapon type (default Great Sword)
   $effect(() => {
@@ -49,6 +98,40 @@
       typeFilter = weaponTypes.includes('Great Sword') ? 'Great Sword' : weaponTypes[0]
     }
   })
+
+  // Type switch restores that type's depth + position; sort change resets the
+  // current type to the top (new order, new view). Mount/snapshot-restore syncs
+  // prev markers without acting (pendingScrollY owns the initial scroll).
+  $effect(() => {
+    const t = typeFilter
+    const s = sortBy
+    if (prevType === null || prevSort === null) {
+      prevType = t
+      prevSort = s
+      return
+    }
+    if (t !== prevType) {
+      prevType = t
+      prevSort = s
+      const mem = typeMemory[t]
+      rootLimit = mem?.rootLimit ?? ROOT_PAGE
+      const y = mem?.scrollY ?? 0
+      const main = document.getElementById('main-content')
+      tick().then(() => main?.scrollTo(0, y))
+    } else if (s !== prevSort) {
+      prevSort = s
+      rootLimit = ROOT_PAGE
+      typeMemory = { ...typeMemory, [t]: { scrollY: 0, rootLimit: ROOT_PAGE } }
+      document.getElementById('main-content')?.scrollTo(0, 0)
+    }
+  })
+
+  function toggleNode(id: number) {
+    const next = new Set(collapsed)
+    if (next.has(id)) next.delete(id)
+    else next.add(id)
+    collapsed = next
+  }
 
   const GAME_WEAPON_ORDER = [
     'Great Sword',
@@ -71,6 +154,12 @@
     if (i !== -1) return i
     if (t === 'Sword and Shield') return 2
     return 99
+  }
+  // Base type icons live in static/icons/mhfu/weapons/ ({slug}.png). ItemIcon
+  // falls back to initials if a future type has no file (no visible 404).
+  function weaponTypeIcon(type: string): string {
+    const slug = type.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-').replace(/-+/g, '-')
+    return `/icons/mhfu/weapons/${slug}.png`
   }
   const weaponTypes = $derived(
     Array.from(new Set(weapons.map((w) => w.weapon_type))).sort(
@@ -143,9 +232,9 @@
 </script>
 
 <div class="max-w-6xl mx-auto">
-  <div class="mb-6">
-    <h1 class="text-2xl font-bold text-gray-100">Weapon Trees</h1>
-    <p class="text-sm text-gray-500 mt-1">
+  <div class="mb-4 md:mb-6">
+    <h1 class="fluid-h2 font-bold text-gray-100">Weapon Trees</h1>
+    <p class="text-sm text-gray-400 mt-1">
       {#if game}
         {game.shortName} · {weapons.length} weapons · craft + upgrade tree
       {:else}
@@ -155,48 +244,72 @@
   </div>
 
   {#if loading}
-    <div class="border rounded-lg p-8 text-center themed-card">
-      <p class="text-gray-400">Loading weapons...</p>
-    </div>
-  {:else if error}
-    <div class="bg-red-950/30 border border-red-900 rounded-lg p-8 text-center">
-      <p class="text-red-400">Failed to load weapons</p>
-      <p class="text-gray-500 text-sm mt-2">{error}</p>
-    </div>
-  {:else if weapons.length === 0}
-    <div class="border rounded-lg p-8 text-center themed-card">
-      <p class="text-gray-400">No weapons found for {game?.shortName ?? 'this game'}</p>
-    </div>
-  {:else}
-    <div class="flex flex-wrap gap-2 mb-6 items-center">
-      <select
-        bind:value={sortBy}
-        class="px-3 py-1.5 text-xs bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-full text-gray-300 focus:outline-none"
-      >
-        <option value="smith">Smith (Game Order)</option>
-        <option value="name">Name A-Z</option>
-        <option value="rarity">Rarity ↓</option>
-        <option value="attack">Attack ↓</option>
-      </select>
-      {#each weaponTypes as type}
-        <button
-          onclick={() => (typeFilter = type)}
-          class="px-3 py-1.5 text-xs rounded-full border transition-colors"
-          style={typeFilter === type
-            ? `background-color: color-mix(in oklab, var(--theme-accent) 12%, transparent); border-color: color-mix(in oklab, var(--theme-accent) 50%, transparent); color: var(--theme-accent);`
-            : `background-color: var(--theme-bg-surface); border-color: var(--theme-border); color: rgb(156 163 175);`}
-        >
-          {type}
-        </button>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-2" aria-busy="true">
+      {#each Array(6) as _}
+        <Skeleton lines={2} />
       {/each}
     </div>
+  {:else if error}
+    <ErrorState title="Failed to load weapons" {error} />
+  {:else if weapons.length === 0}
+    <EmptyState
+      title="No weapons found"
+      hint={game ? `No weapons for ${game.shortName ?? 'this game'}.` : 'Select a game first.'}
+    />
+  {:else}
+    <div use:toolbarPortal={$toolbarTarget} class="flex flex-col gap-2">
+      <div class="flex items-center gap-2">
+        <select
+          bind:value={sortBy}
+          aria-label="Sort weapons"
+          class="px-3 rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-gray-300 focus:outline-none min-h-[44px] sm:min-h-[36px] text-base sm:text-xs"
+        >
+          <option value="smith">Smith (Game Order)</option>
+          <option value="name">Name A-Z</option>
+          <option value="rarity">Rarity ↓</option>
+          <option value="attack">Attack ↓</option>
+        </select>
+        <span class="text-xs text-gray-400 ml-auto" role="status">{filtered.length} shown</span>
+      </div>
+      <div
+        class="flex gap-2 overflow-x-auto pb-1 -mb-1"
+        role="group"
+        aria-label="Filter by weapon type"
+      >
+        {#each weaponTypes as type}
+          {@const typeActive = typeFilter === type}
+          <button
+            type="button"
+            onclick={() => switchType(type)}
+            aria-pressed={typeActive}
+            aria-label="Show {type} weapons"
+            title={type}
+            class="shrink-0 flex items-center justify-center rounded-xl border transition-all motion-safe:transition-all motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 {typeActive
+              ? 'border-[var(--theme-primary)]'
+              : 'border-[var(--theme-border)] bg-[var(--theme-bg-surface)] opacity-55 hover:opacity-100 hover:border-[var(--theme-border-strong)]'}"
+            style={typeActive
+              ? 'background-color: color-mix(in oklab, var(--theme-primary) 15%, transparent); min-width:44px;min-height:44px;'
+              : 'min-width:44px;min-height:44px;'}
+          >
+            <ItemIcon
+              iconUrl={weaponTypeIcon(type)}
+              iconName={type}
+              iconColor="Gray"
+              size={28}
+              alt=""
+            />
+          </button>
+        {/each}
+      </div>
+    </div>
 
-    <div class="overflow-x-auto -mx-2 px-2">
+    <div class="mt-4 min-w-0">
       {#each tree as group}
         {@const groupIcon = group.forests[0]?.weapon}
-        <section class="mb-10 min-w-[320px]">
+        {@const limited = group.forests.slice(0, rootLimit)}
+        <section class="mb-8 min-w-0">
           <h2
-            class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4 flex items-center gap-2"
+            class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-3 flex items-center gap-2"
           >
             {#if groupIcon}
               <ItemIcon
@@ -204,26 +317,65 @@
                 iconName={groupIcon.icon_name}
                 iconColor={groupIcon.icon_color}
                 size={20}
-                alt={group.type}
+                alt=""
               />
             {/if}
             {group.type}
+            <span class="text-[11px] font-normal normal-case text-gray-400"
+              >· {group.forests.length}</span
+            >
           </h2>
-          {#each group.forests as node}
-            {@render treeNode(node, 0)}
+          {#each limited as node (node.weapon.id)}
+            {@render treeNode(node)}
           {/each}
+          {#if group.forests.length > limited.length}
+            <div class="mt-3 flex flex-col items-center gap-2">
+              <p class="text-xs text-gray-400" role="status">
+                Showing {limited.length} of {group.forests.length} trees
+              </p>
+              <Button
+                variant="themedPrimary"
+                size="lg"
+                class="rounded-full px-6"
+                onclick={() => (rootLimit += ROOT_PAGE)}
+              >
+                Show more trees
+              </Button>
+            </div>
+          {/if}
         </section>
       {/each}
     </div>
   {/if}
 </div>
 
-{#snippet treeNode(node: TreeNode, depth: number)}
-  <div class="mb-1.5 min-w-0" style="margin-left: {depth * 18}px">
-    <div class="flex items-center gap-2">
+{#snippet treeNode(node: TreeNode)}
+  {@const isCollapsed = collapsed.has(node.weapon.id)}
+  {@const hasKids = node.children.length > 0}
+  <div class="mb-1.5 min-w-0">
+    <div class="flex items-stretch gap-1.5 min-w-0">
+      {#if hasKids}
+        <button
+          type="button"
+          onclick={() => toggleNode(node.weapon.id)}
+          aria-expanded={!isCollapsed}
+          aria-label={isCollapsed
+            ? `Expand upgrades of ${node.weapon.name}`
+            : `Collapse upgrades of ${node.weapon.name}`}
+          class="shrink-0 self-center flex items-center justify-center rounded-md border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] text-gray-400 hover:text-gray-200 hover:border-[var(--theme-border-strong)] focus-visible:outline-none focus-visible:ring-2"
+          style="min-width:44px;min-height:44px;"
+        >
+          <ChevronRight
+            class="h-4 w-4 transition-transform motion-safe:transition-transform motion-reduce:transition-none {isCollapsed
+              ? ''
+              : 'rotate-90'}"
+            aria-hidden="true"
+          />
+        </button>
+      {/if}
       <button
         onclick={() => open(node.weapon.id)}
-        class="flex-1 text-left px-3 py-2 rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-elevated)] transition-all"
+        class="flex-1 min-w-0 text-left px-3 py-2.5 rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-elevated)] transition-colors motion-safe:transition-colors motion-reduce:transition-none min-h-[44px] focus-visible:outline-none focus-visible:ring-2"
       >
         <div class="flex items-center gap-2 min-w-0">
           <ItemIcon
@@ -231,43 +383,53 @@
             iconName={node.weapon.icon_name}
             iconColor={node.weapon.icon_color}
             size={22}
-            alt={node.weapon.weapon_type}
+            alt=""
           />
           {#if node.weapon.is_forgeable}
-            <span class="text-[12px] shrink-0" title="Crafted directly from materials">🛠️</span>
+            <Hammer
+              class="h-3.5 w-3.5 shrink-0 text-gray-400"
+              aria-label="Crafted directly from materials"
+            />
           {/if}
           <span
-            class="text-[10px] text-gray-500 shrink-0 w-10 text-center rounded bg-[var(--theme-bg-elevated)] py-0.5 border border-[var(--theme-border)]"
+            class="text-[10px] text-gray-400 shrink-0 w-10 text-center rounded bg-[var(--theme-bg-elevated)] py-0.5 border border-[var(--theme-border)]"
             >R{node.weapon.rarity ?? 1}</span
           >
-          <span class="text-sm text-gray-100 font-medium truncate">{node.weapon.name}</span>
-          {#if node.weapon.element_type}
-            <span class="text-[11px] {elementColor(node.weapon.element_type)} shrink-0"
-              >{node.weapon.element_type} {node.weapon.element_value ?? 0}</span
-            >
-          {/if}
-          <span class="text-[11px] text-gray-500 ml-auto shrink-0"
+          <span class="text-sm text-gray-100 font-medium truncate min-w-0">{node.weapon.name}</span>
+          <span class="text-[11px] text-gray-400 ml-auto shrink-0 tabular-nums"
             >ATK {node.weapon.attack ?? 0}</span
           >
         </div>
-        {#if sharpnessSegments(node.weapon.sharpness).length > 0}
-          <div class="flex items-center gap-[1px] mt-1.5 h-1.5">
-            {#each sharpnessSegments(node.weapon.sharpness) as seg, i}
-              {#if seg > 0}
-                <div
-                  class="rounded-[1px]"
-                  style="height: 6px; width: {seg}px; background: {SHARP_COLORS[i] ?? '#666'};"
-                ></div>
-              {/if}
-            {/each}
-          </div>
-        {/if}
+        <div class="mt-1 flex items-center gap-2 min-w-0">
+          {#if node.weapon.element_type}
+            <span class="text-[11px] {elementColor(node.weapon.element_type)} shrink-0 truncate"
+              >{node.weapon.element_type} {node.weapon.element_value ?? 0}</span
+            >
+          {/if}
+          {#if sharpnessSegments(node.weapon.sharpness).length > 0}
+            <div
+              class="flex items-center gap-[1px] h-1.5 min-w-0 overflow-hidden ml-auto"
+              aria-hidden="true"
+            >
+              {#each sharpnessSegments(node.weapon.sharpness) as seg, i}
+                {#if seg > 0}
+                  <div
+                    class="rounded-[1px] shrink-0"
+                    style="height: 6px; width: {Math.min(seg, 48)}px; background: {SHARP_COLORS[
+                      i
+                    ] ?? '#666'};"
+                  ></div>
+                {/if}
+              {/each}
+            </div>
+          {/if}
+        </div>
       </button>
     </div>
-    {#if node.children.length > 0}
-      <div class="border-l border-[var(--theme-border)] ml-4 mt-1.5 pl-2">
-        {#each node.children as child}
-          {@render treeNode(child, 0)}
+    {#if hasKids && !isCollapsed}
+      <div class="border-l border-[var(--theme-border)] ml-5 sm:ml-6 mt-1.5 pl-1.5 sm:pl-2 min-w-0">
+        {#each node.children as child (child.weapon.id)}
+          {@render treeNode(child)}
         {/each}
       </div>
     {/if}

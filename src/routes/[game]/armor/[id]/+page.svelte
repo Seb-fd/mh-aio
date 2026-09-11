@@ -1,8 +1,12 @@
 <script lang="ts">
   import { page } from '$app/state'
+  import ErrorState from '$lib/components/ui/error-state.svelte'
   import { api, type ArmorDetail } from '$lib/api'
   import DetailHeader from '$lib/components/detail-header.svelte'
   import MaterialList from '$lib/components/material-list.svelte'
+  import Skeleton from '$lib/components/ui/skeleton.svelte'
+  import EmptyState from '$lib/components/ui/empty-state.svelte'
+  import { rankTone } from '$lib/utils/mh'
 
   const id = $derived(Number(page.params.id))
   let armor = $state<ArmorDetail | null>(null)
@@ -33,36 +37,25 @@
     waist: 'Coil',
     legs: 'Greaves',
   }
-
-  const rankColor: Record<string, string> = {
-    Low: 'bg-gray-700 text-gray-300',
-    High: 'bg-blue-900/40 text-blue-300',
-    G: 'bg-yellow-900/40 text-yellow-300',
-  }
 </script>
 
-<div class="max-w-5xl mx-auto">
+<div class="max-w-5xl mx-auto numbered-sections">
   {#if loading}
-    <div class="border rounded-lg p-8 text-center themed-card">
-      <p class="text-gray-400">Loading armor...</p>
+    <div class="space-y-3" aria-busy="true">
+      <Skeleton lines={2} />
+      <Skeleton lines={3} />
     </div>
   {:else if error}
-    <div class="bg-red-950/30 border border-red-900 rounded-lg p-8 text-center">
-      <p class="text-red-400">Failed to load armor</p>
-      <p class="text-gray-500 text-sm mt-2">{error}</p>
-    </div>
+    <ErrorState title="Failed to load armor" {error} />
   {:else if !armor}
-    <div class="border rounded-lg p-8 text-center themed-card">
-      <p class="text-gray-400">Armor not found</p>
-    </div>
+    <EmptyState title="Armor not found" hint="It may belong to another game." />
   {:else}
     <DetailHeader
       title={armor.name}
       subtitle={slotLabel[armor.slot_type] ?? armor.slot_type}
-      icon="🛡️"
       iconUrl={armor.icon_url}
       tags={[
-        { label: armor.rank, color: rankColor[armor.rank] ?? 'bg-gray-800 text-gray-300' },
+        { label: armor.rank, tone: rankTone(armor.rank) },
         {
           label: `Rarity ${armor.rarity ?? 1}`,
           color: 'bg-[var(--theme-bg-elevated)] text-gray-300 border-[var(--theme-border)]',
@@ -86,26 +79,26 @@
 
     <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
       <div class="rounded-lg border themed-card p-3 text-center">
-        <p class="text-[10px] uppercase tracking-wide text-gray-500">Defense</p>
+        <p class="text-[10px] uppercase tracking-wide text-gray-400">Defense</p>
         <p class="text-xl font-bold text-gray-100 mt-1">
           {armor.defense_base ?? 0}-{armor.defense_max ?? 0}
         </p>
       </div>
       <div class="rounded-lg border themed-card p-3 text-center">
-        <p class="text-[10px] uppercase tracking-wide text-gray-500">Crafting Cost</p>
+        <p class="text-[10px] uppercase tracking-wide text-gray-400">Crafting Cost</p>
         <p class="text-xl font-bold mt-1" style="color: var(--theme-accent);">
           {armor.crafting_cost ?? 0}z
         </p>
       </div>
       <div class="rounded-lg border themed-card p-3 text-center">
-        <p class="text-[10px] uppercase tracking-wide text-gray-500">Slots</p>
+        <p class="text-[10px] uppercase tracking-wide text-gray-400">Slots</p>
         <p class="text-xl font-bold text-gray-100 mt-1">{armor.slots ?? '0'}</p>
       </div>
     </div>
 
     {#if armor.skills}
       <section class="mb-8">
-        <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">Skills</h2>
+        <h2 class="section-title mb-3">Skills</h2>
         <div class="flex flex-wrap gap-2">
           {#each armor.skills
             .split(',')
@@ -113,7 +106,7 @@
             .filter(Boolean) as skill}
             {@const parts = skill.trim().split(/\s+(?=[+-]\d)/)}
             <div
-              class="px-3 py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] flex items-center gap-2"
+              class="px-3 min-h-[44px] py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] flex items-center gap-2"
             >
               <span class="text-sm text-gray-200">{parts[0]}</span>
               {#if parts[1]}
@@ -130,30 +123,44 @@
     {/if}
 
     <section class="mb-8">
-      <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
-        Elemental Resistances
-      </h2>
+      <h2 class="section-title mb-3">Elemental Resistances</h2>
       <div class="rounded-lg border themed-card p-4">
-        <div class="grid grid-cols-5 gap-3 text-center text-xs">
-          <div>
+        <div class="stat-grid text-center text-xs">
+          <div
+            class="rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] py-2"
+          >
             <p class="text-orange-300 font-semibold mb-1">Fire</p>
-            <p class="text-lg font-bold text-gray-100">{armor.resistance_fire ?? 0}</p>
+            <p class="text-lg font-bold text-gray-100 tabular-nums">{armor.resistance_fire ?? 0}</p>
           </div>
-          <div>
+          <div
+            class="rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] py-2"
+          >
             <p class="text-blue-300 font-semibold mb-1">Water</p>
-            <p class="text-lg font-bold text-gray-100">{armor.resistance_water ?? 0}</p>
+            <p class="text-lg font-bold text-gray-100 tabular-nums">
+              {armor.resistance_water ?? 0}
+            </p>
           </div>
-          <div>
+          <div
+            class="rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] py-2"
+          >
             <p class="text-yellow-300 font-semibold mb-1">Thunder</p>
-            <p class="text-lg font-bold text-gray-100">{armor.resistance_thunder ?? 0}</p>
+            <p class="text-lg font-bold text-gray-100 tabular-nums">
+              {armor.resistance_thunder ?? 0}
+            </p>
           </div>
-          <div>
+          <div
+            class="rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] py-2"
+          >
             <p class="text-cyan-300 font-semibold mb-1">Ice</p>
-            <p class="text-lg font-bold text-gray-100">{armor.resistance_ice ?? 0}</p>
+            <p class="text-lg font-bold text-gray-100 tabular-nums">{armor.resistance_ice ?? 0}</p>
           </div>
-          <div>
+          <div
+            class="rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] py-2 col-span-2 sm:col-span-1"
+          >
             <p class="text-purple-300 font-semibold mb-1">Dragon</p>
-            <p class="text-lg font-bold text-gray-100">{armor.resistance_dragon ?? 0}</p>
+            <p class="text-lg font-bold text-gray-100 tabular-nums">
+              {armor.resistance_dragon ?? 0}
+            </p>
           </div>
         </div>
       </div>
@@ -161,9 +168,7 @@
 
     {#if armor.description}
       <section class="mb-8">
-        <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
-          Description
-        </h2>
+        <h2 class="section-title mb-3">Description</h2>
         <div class="rounded-lg border themed-card p-5 leading-relaxed text-gray-200 text-[15px]">
           {armor.description}
         </div>
@@ -171,9 +176,7 @@
     {/if}
 
     <section>
-      <h2 class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
-        Crafting Materials
-      </h2>
+      <h2 class="section-title mb-3">Crafting Materials</h2>
       <MaterialList materials={armor.materials} />
     </section>
   {/if}

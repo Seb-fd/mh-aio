@@ -5,6 +5,15 @@ const MHW: i32 = 1;
 const MH2G: i32 = 5;
 const MHP3RD: i32 = 4;
 
+/// Offset added to MHW quest ids (and quest_rewards.quest_id): MHWorldData canonical
+/// ids (101..67841) overlap MH2G quest ids (1..610) on the single-column PK, so 67
+/// rows were silently dropped by INSERT OR IGNORE (258 low_high -> 191). Offset ids
+/// live in 100101+, clear of every game's ranges (MH2G 1..610, MHP3rd 10001..10382).
+const MHW_QUEST_ID_OFFSET: i32 = 100_000;
+/// MHW quest_reward rows are namespaced by their own PK ids (600001.. are MHP3rd's).
+const MHW_QUEST_REWARD_ID_MIN: i32 = 800_001;
+const MHW_QUEST_REWARD_ID_MAX: i32 = 899_999;
+
 pub fn seed(conn: &Connection) -> Result<()> {
     seed_games(conn)?;
     seed_monsters(conn)?;
@@ -77,6 +86,8 @@ pub fn seed(conn: &Connection) -> Result<()> {
     seed_mhw_mantles(conn)?;
     seed_palico_gadgets(conn)?;
     seed_palico_gadget_levels(conn)?;
+    seed_mhw_quests(conn)?;
+    seed_mhw_quest_rewards(conn)?;
     Ok(())
 }
 
@@ -1252,6 +1263,7 @@ struct QuestJson {
     qtype: String,
     rank: String,
     hub: Option<String>,
+    category: Option<String>,
     stars: Option<i32>,
     objective: String,
     objective_original: Option<String>,
@@ -2955,6 +2967,180 @@ fn seed_palico_gadget_levels(conn: &Connection) -> Result<()> {
             "INSERT OR IGNORE INTO palico_gadget_levels (id, gadget_id, proficiency, ability_name, description, unlock_condition) VALUES (?1,?2,?3,?4,?5,?6)",
             rusqlite::params![l.id, l.gadget_id, l.proficiency, l.ability_name, l.description, l.unlock_condition],
         )?;
+    }
+    Ok(())
+}
+
+fn seed_mhw_quests(conn: &Connection) -> Result<()> {
+    // MHW + Iceborne v3: 521 quests — hub = low_high (LR/HR ★1-9) / master (MR ★1-6) / siege (3) flat
+    // category = assigned/optional/event/arena/challenge/special/siege (sub-section inside hub, category before stars)
+    // Source: MHWorldData quest_base.csv + quest_base_translations.csv (EN objective/description)
+    // Ids are MHWorldData canonical (101..67841) PLUS MHW_QUEST_ID_OFFSET (stored 100101+)
+    // so they never collide with MH2G ids (1..610) on the single-column PK.
+    migrate_mhw_quest_ids(conn)?;
+    let json_data = include_str!("../../data/mhw_quests.json");
+    let quests: Vec<QuestJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for q in &quests {
+        let main_monsters_json = q
+            .main_monsters
+            .as_ref()
+            .map(|v| serde_json::to_string(v).unwrap_or_else(|_| "[]".to_string()));
+        let type_slug = quest_type_slug(&q.qtype);
+        let icon_url = format!("/icons/mhw/quests/{}.png", type_slug);
+        let icon_color = quest_type_color(&q.qtype);
+        let hub_slug = q
+            .hub
+            .as_deref()
+            .map(quest_hub_slug)
+            .unwrap_or_else(|| "unknown".to_string());
+        let hub_icon_url = format!("/icons/mhw/quests/hubs/{}.png", hub_slug);
+        conn.execute(
+            "INSERT OR IGNORE INTO quests (id, game_id, name, name_original, type, rank, hub, category, stars, objective, objective_original, location, location_original, time_limit, faints_allowed, is_key_quest, is_urgent, description, description_original, client, requirements, reward_money, contract_fee, main_monsters, icon_name, icon_color, icon_url, hub_icon_name, hub_icon_color, hub_icon_url, language)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, ?23, ?24, ?25, ?26, ?27, ?28, ?29, ?30, 'en')",
+            rusqlite::params![
+                q.id + MHW_QUEST_ID_OFFSET,
+                MHW,
+                q.name,
+                q.name_original,
+                q.qtype,
+                q.rank,
+                q.hub,
+                q.category,
+                q.stars,
+                q.objective,
+                q.objective_original.as_deref().unwrap_or(&q.objective),
+                q.location,
+                q.location_original.as_deref().unwrap_or(&q.location),
+                q.time_limit.unwrap_or(50),
+                q.faints_allowed.unwrap_or(3),
+                q.is_key_quest.unwrap_or(false),
+                q.is_urgent.unwrap_or(false),
+                q.description,
+                q.description_original.as_deref().unwrap_or(q.description.as_deref().unwrap_or("")),
+                q.client,
+                q.requirements,
+                q.reward_money,
+                q.contract_fee,
+                main_monsters_json,
+                q.qtype,
+                icon_color,
+                icon_url,
+                q.hub.clone().unwrap_or_else(|| "unknown".to_string()),
+                "Gray",
+                hub_icon_url
+            ],
+        )?;
+    }
+    // Backfill existing DBs — migrate hubs (event/arena/challenge/special -> low_high/master) + category
+    let backfill: Vec<QuestJson> =
+        match serde_json::from_str(include_str!("../../data/mhw_quests.json")) {
+            Ok(v) => v,
+            Err(e) => {
+                eprintln!("[seed] mhw_quests backfill parse failed: {}", e);
+                Vec::new()
+            }
+        };
+    for q in backfill {
+        let _ = conn.execute(
+            "UPDATE quests SET objective = ?1, location = ?2, description = COALESCE(?, description), client = COALESCE(?, client), requirements = COALESCE(?, requirements), type = COALESCE(?, type), rank = ?3, hub = ?4, category = COALESCE(?, category), stars = COALESCE(?, stars) WHERE id = ?5 AND game_id = 1",
+            rusqlite::params![q.objective, q.location, q.description, q.client, q.requirements, q.qtype, q.rank, q.hub, q.category, q.stars, q.id + MHW_QUEST_ID_OFFSET],
+        );
+    }
+    // Backfill icons
+    for q in &quests {
+        let type_slug = quest_type_slug(&q.qtype);
+        let icon_url = format!("/icons/mhw/quests/{}.png", type_slug);
+        let icon_color = quest_type_color(&q.qtype);
+        let hub_slug = q
+            .hub
+            .as_deref()
+            .map(quest_hub_slug)
+            .unwrap_or_else(|| "unknown".to_string());
+        let hub_icon_url = format!("/icons/mhw/quests/hubs/{}.png", hub_slug);
+        let _ = conn.execute(
+            "UPDATE quests SET icon_name = COALESCE(icon_name, ?1), icon_color = COALESCE(icon_color, ?2), icon_url = COALESCE(icon_url, ?3), hub_icon_name = COALESCE(hub_icon_name, ?4), hub_icon_color = COALESCE(hub_icon_color, 'Gray'), hub_icon_url = COALESCE(hub_icon_url, ?5), category = COALESCE(category, ?6) WHERE id = ?7 AND game_id = 1",
+            rusqlite::params![q.qtype, icon_color, icon_url, q.hub.clone().unwrap_or_else(|| "unknown".to_string()), hub_icon_url, q.category, q.id + MHW_QUEST_ID_OFFSET],
+        );
+    }
+    // Migrate legacy 6-hub schema to 3-hub (for DBs created before v3) — technically best: single source of truth hub=low_high/master/siege, category preserves sub-section
+    let _ = conn.execute(
+        "UPDATE quests SET hub = CASE WHEN rank IN ('Low','High') THEN 'low_high' WHEN rank='Master' THEN 'master' ELSE hub END WHERE game_id=1 AND hub IN ('event','arena','challenge','special')",
+        [],
+    );
+    // Ensure every MHW quest has a category (old DBs had NULL) — derive from original hub if still NULL
+    let _ = conn.execute(
+        "UPDATE quests SET category = COALESCE(category,
+            CASE hub
+                WHEN 'siege' THEN 'siege'
+                WHEN 'low_high' THEN 'optional'
+                WHEN 'master' THEN 'optional'
+                ELSE 'event' END)
+         WHERE game_id=1 AND category IS NULL",
+        [],
+    );
+    // Force hub/category to canonical JSON values for all MHW quests (idempotent).
+    // NOTE: this UPDATE cannot resurrect rows dropped by the pre-offset PK collision;
+    // that is what migrate_mhw_quest_ids + the offset INSERT above are for.
+    // This overwrites any stale hub (event->low_high etc.) to match generated JSON, without touching mhp3rd/mh2g (game_id 4/5)
+    let json_for_canonical: Vec<QuestJson> =
+        serde_json::from_str(include_str!("../../data/mhw_quests.json"))
+            .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for q in json_for_canonical {
+        let _ = conn.execute(
+            "UPDATE quests SET hub = ?1, category = ?2, rank = ?3, stars = ?4 WHERE id = ?5 AND game_id=1 AND (hub IS NULL OR hub != ?1 OR category IS NULL OR category != ?2)",
+            rusqlite::params![q.hub, q.category, q.rank, q.stars, q.id + MHW_QUEST_ID_OFFSET],
+        );
+    }
+    Ok(())
+}
+
+/// One-time, idempotent migration for DBs seeded before the quest-id offset:
+/// re-ids existing MHW quests (+OFFSET) and repoints their rewards — including the
+/// rewards of the 67 dropped quests, which FK rules had attached to MH2G quests
+/// with the same id. Guards skip already-migrated rows on every boot.
+/// FK handling must work in BOTH contexts, because each pragma is inert in one.
+/// Production runs inside BEGIN IMMEDIATE (see db/mod.rs), where
+/// `PRAGMA foreign_keys = OFF` is a silent no-op, so defer_foreign_keys (checked
+/// at COMMIT, when everything is consistent again) does the job. Tests and tools
+/// run in autocommit, where defer_foreign_keys is the no-op and the OFF/ON
+/// toggle covers the intermediate dangling state.
+/// Enforcement is restored before any further write and before errors propagate.
+fn migrate_mhw_quest_ids(conn: &Connection) -> Result<()> {
+    conn.execute_batch("PRAGMA defer_foreign_keys = ON;")?;
+    conn.execute_batch("PRAGMA foreign_keys = OFF;")?;
+    let result = (|| -> Result<()> {
+        conn.execute(
+            "UPDATE quests SET id = id + ?1 WHERE game_id = ?2 AND id < ?1",
+            rusqlite::params![MHW_QUEST_ID_OFFSET, MHW],
+        )?;
+        conn.execute(
+            "UPDATE quest_rewards SET quest_id = quest_id + ?1 WHERE id BETWEEN ?2 AND ?3 AND quest_id < ?1",
+            rusqlite::params![
+                MHW_QUEST_ID_OFFSET,
+                MHW_QUEST_REWARD_ID_MIN,
+                MHW_QUEST_REWARD_ID_MAX
+            ],
+        )?;
+        Ok(())
+    })();
+    conn.execute_batch("PRAGMA foreign_keys = ON;")?;
+    result?;
+    Ok(())
+}
+
+fn seed_mhw_quest_rewards(conn: &Connection) -> Result<()> {
+    let json_data = include_str!("../../data/mhw_quest_rewards.json");
+    let rewards: Vec<QuestRewardJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for r in rewards {
+        // FK guards: quest must exist (already inserted) and item must exist
+        if item_exists(conn, r.item_id)? {
+            conn.execute(
+                "INSERT OR IGNORE INTO quest_rewards (id, quest_id, item_id, quantity, probability, condition) VALUES (?1, ?2, ?3, ?4, ?5, ?6)",
+                rusqlite::params![r.id, r.quest_id + MHW_QUEST_ID_OFFSET, r.item_id, r.quantity, r.probability, r.condition],
+            )?;
+        }
     }
     Ok(())
 }

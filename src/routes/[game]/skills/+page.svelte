@@ -1,52 +1,77 @@
 <script lang="ts">
   import { goto } from '$app/navigation'
+  import ErrorState from '$lib/components/ui/error-state.svelte'
   import { selectedGame } from '$lib/stores/game'
   import { api, type Skill } from '$lib/api'
+  import { normKey } from '$lib/utils/norm'
   import Card from '$lib/components/ui/card.svelte'
+  import Badge from '$lib/components/ui/badge.svelte'
+  import Skeleton from '$lib/components/ui/skeleton.svelte'
+  import EmptyState from '$lib/components/ui/empty-state.svelte'
+  import SearchField from '$lib/components/ui/search-field.svelte'
+  import { toolbarTarget } from '$lib/stores/toolbar'
+  import { toolbarPortal } from '$lib/actions/toolbar-portal'
+  import { captureScrollY, restoreScrollY } from '$lib/utils/scroll-restore'
+  import { createQuery } from '@tanstack/svelte-query'
+  import { dbCache, dbRetry, dbRetryDelay, dbErrorText } from '$lib/query'
+  import type { Snapshot } from './$types.js'
 
+  interface SkillsSnapshot {
+    searchTerm: string
+    scrollY: number
+  }
+
+  export const snapshot: Snapshot<SkillsSnapshot> = {
+    capture: () => ({ searchTerm, scrollY: captureScrollY() }),
+    restore: (s) => {
+      searchTerm = s.searchTerm
+      pendingScrollY = s.scrollY
+    },
+  }
+
+  let pendingScrollY = $state<number | null>(null)
+  $effect(() => {
+    if (!loading && pendingScrollY != null) {
+      const y = pendingScrollY
+      pendingScrollY = null
+      restoreScrollY(y)
+    }
+  })
   const game = $derived($selectedGame)
   const dbId = $derived(game?.dbId)
 
-  let skills = $state<Skill[]>([])
-  let loading = $state(true)
-  let error = $state<string | null>(null)
+  const skillsQuery = createQuery(() => ({
+    queryKey: ['skills', dbId ?? 0],
+    queryFn: () => api.getSkills(dbId!),
+    enabled: dbId != null,
+    ...dbCache,
+    retry: dbRetry,
+    retryDelay: dbRetryDelay,
+  }))
 
-  async function loadSkillsData(id: number, attempt = 0) {
-    try {
-      const data = await api.getSkills(id)
-      skills = data
-      error = null
-    } catch (e) {
-      const msg = String(e)
-      if (msg.includes('state not managed') && attempt < 6) {
-        error = 'Preparing database...'
-        setTimeout(() => loadSkillsData(id, attempt + 1), 400 * (attempt + 1))
-        return
-      }
-      error = msg
-    } finally {
-      if (error !== 'Preparing database...') loading = false
-    }
-  }
-  $effect(() => {
-    if (dbId == null) return
-    loading = true
-    error = null
-    loadSkillsData(dbId)
-  })
+  const skills = $derived<Skill[]>(skillsQuery.data ?? [])
+  const loading = $derived(skillsQuery.isPending)
+  const error = $derived(
+    dbErrorText(skillsQuery.isPending, skillsQuery.failureCount, skillsQuery.error),
+  )
+  let searchTerm = $state('')
 
   function open(id: number) {
     if (!game) return
     goto(`/${game.id}/skills/${id}`)
   }
+
+  const filtered = $derived(
+    skills.filter((s) => searchTerm === '' || normKey(s.name).includes(normKey(searchTerm))),
+  )
 </script>
 
 <div class="max-w-6xl mx-auto">
-  <div class="mb-6">
-    <h1 class="text-2xl font-bold text-gray-100">Skills</h1>
-    <p class="text-sm text-gray-500 mt-1">
+  <div class="mb-4 md:mb-6">
+    <h1 class="fluid-h2 font-bold text-gray-100">Skills</h1>
+    <p class="text-sm text-gray-400 mt-1">
       {#if game}
-        {game.shortName} · {skills.length} skills · Effects per level and synergies
+        {game.shortName} · {filtered.length} / {skills.length} skills · Effects per level and synergies
       {:else}
         Select a game first
       {/if}
@@ -54,39 +79,62 @@
   </div>
 
   {#if loading}
-    <div class="border rounded-lg p-8 text-center themed-card">
-      <p class="text-gray-400">Loading skills...</p>
-    </div>
-  {:else if error}
-    <div class="bg-red-950/30 border border-red-900 rounded-lg p-8 text-center">
-      <p class="text-red-400">Failed to load skills</p>
-      <p class="text-gray-500 text-sm mt-2">{error}</p>
-    </div>
-  {:else if skills.length === 0}
-    <div class="border rounded-lg p-8 text-center themed-card">
-      <p class="text-gray-400">No skills found for {game?.shortName ?? 'this game'}</p>
-    </div>
-  {:else}
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-      {#each skills as skill}
-        <button onclick={() => open(skill.id)} class="text-left">
-          <Card class="p-4 border transition-all cursor-pointer themed-card">
-            <div class="flex items-start justify-between gap-2 mb-1">
-              <h3 class="font-semibold text-gray-100">{skill.name}</h3>
-              {#if skill.max_level}
-                <span
-                  class="text-[10px] uppercase tracking-wide text-gray-500 bg-[var(--theme-bg-elevated)] px-2 py-0.5 rounded shrink-0 border border-[var(--theme-border)]"
-                >
-                  Lv 1-{skill.max_level}
-                </span>
-              {/if}
-            </div>
-            {#if skill.description}
-              <p class="text-xs text-gray-500 mt-2">{skill.description}</p>
-            {/if}
-          </Card>
-        </button>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" aria-busy="true">
+      {#each Array(6) as _}
+        <Skeleton lines={2} />
       {/each}
     </div>
+  {:else if error}
+    <ErrorState title="Failed to load skills" {error} />
+  {:else if skills.length === 0}
+    <EmptyState
+      title="No skills found"
+      hint={game ? `No skills seeded for ${game.shortName}.` : 'Select a game first.'}
+    />
+  {:else}
+    <div use:toolbarPortal={$toolbarTarget}>
+      <SearchField
+        bind:value={searchTerm}
+        placeholder="Search skills..."
+        label="Search skills"
+        class="sm:w-64"
+      />
+    </div>
+
+    {#if filtered.length === 0}
+      <div class="mt-4">
+        <EmptyState title="No matches" hint="Try another search term.">
+          <button
+            type="button"
+            onclick={() => (searchTerm = '')}
+            class="text-xs px-4 min-h-[44px] rounded-full border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] text-gray-200 hover:border-[var(--theme-border-strong)]"
+          >
+            Clear search
+          </button>
+        </EmptyState>
+      </div>
+    {:else}
+      <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {#each filtered as skill (skill.id)}
+          <button
+            onclick={() => open(skill.id)}
+            aria-label="Open {skill.name}"
+            class="text-left rounded-lg min-h-[44px] focus-visible:outline-none focus-visible:ring-2"
+          >
+            <Card variant="themed" class="p-4 cursor-pointer">
+              <div class="flex items-start justify-between gap-2 mb-1">
+                <h3 class="font-semibold text-gray-100">{skill.name}</h3>
+                {#if skill.max_level}
+                  <Badge tone="neutral">Lv 1-{skill.max_level}</Badge>
+                {/if}
+              </div>
+              {#if skill.description}
+                <p class="text-xs text-gray-400 mt-2 line-clamp-2">{skill.description}</p>
+              {/if}
+            </Card>
+          </button>
+        {/each}
+      </div>
+    {/if}
   {/if}
 </div>
