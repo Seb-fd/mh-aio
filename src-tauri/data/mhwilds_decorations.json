@@ -1,0 +1,5748 @@
+[
+  {
+    "id": 30082,
+    "name": "Adapt Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Adaptability",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30282,
+    "name": "Ambush Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Ambush",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30285,
+    "name": "Antiblast Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Blast Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30134,
+    "name": "Antidote Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Poison Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30090,
+    "name": "Antipara Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Paralysis Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30151,
+    "name": "Artillery Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Artillery",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30289,
+    "name": "Artillery Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Artillery",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30251,
+    "name": "Artillery Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Artillery",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30015,
+    "name": "Attack Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Attack Boost",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30263,
+    "name": "Attack Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Attack Boost",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30255,
+    "name": "Attack Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30118,
+    "name": "Bandolier Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Tetrad Shot",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30012,
+    "name": "Bandolier Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Tetrad Shot",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30316,
+    "name": "Bandolier Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Tetrad Shot",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30167,
+    "name": "Bandolier/Blaze Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 1
+      },
+      {
+        "name": "Tetrad Shot",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30211,
+    "name": "Bandolier/Bolt Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Thunder Attack",
+        "points": 1
+      },
+      {
+        "name": "Tetrad Shot",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30230,
+    "name": "Bandolier/Dragon Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 1
+      },
+      {
+        "name": "Tetrad Shot",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30198,
+    "name": "Bandolier/Frost Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Ice Attack",
+        "points": 1
+      },
+      {
+        "name": "Tetrad Shot",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30016,
+    "name": "Bandolier/Ironwall Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Tetrad Shot",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30252,
+    "name": "Bandolier/Precise Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Ballistics",
+        "points": 1
+      },
+      {
+        "name": "Tetrad Shot",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30197,
+    "name": "Bandolier/Stream Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 1
+      },
+      {
+        "name": "Tetrad Shot",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30097,
+    "name": "Blast Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Blast Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30344,
+    "name": "Blast Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Blast Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30091,
+    "name": "Blast Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Blast Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30109,
+    "name": "Blastcoat Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Blast Functionality",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30154,
+    "name": "Blaze Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30294,
+    "name": "Blaze Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30155,
+    "name": "Blaze Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30225,
+    "name": "Blaze/Bandolier Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 3
+      },
+      {
+        "name": "Tetrad Shot",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30204,
+    "name": "Blaze/Crit Elem Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 3
+      },
+      {
+        "name": "Critical Element",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30094,
+    "name": "Blaze/Enhancer Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 3
+      },
+      {
+        "name": "Power Prolonger",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30113,
+    "name": "Blaze/Focus Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 3
+      },
+      {
+        "name": "Focus",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30036,
+    "name": "Blaze/Guardian Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 3
+      },
+      {
+        "name": "Offensive Guard",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30100,
+    "name": "Blaze/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 3
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30065,
+    "name": "Blaze/Ironwall Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 3
+      },
+      {
+        "name": "Guard",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30138,
+    "name": "Blaze/KO Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      },
+      {
+        "name": "Fire Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30169,
+    "name": "Blaze/Opener Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 3
+      },
+      {
+        "name": "Opening Shot",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30017,
+    "name": "Blaze/Precise Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 3
+      },
+      {
+        "name": "Ballistics",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30298,
+    "name": "Blaze/Quickswitch Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 1
+      },
+      {
+        "name": "Fire Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30307,
+    "name": "Blaze/Rzr Sharp Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 3
+      },
+      {
+        "name": "Razor Sharp",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30150,
+    "name": "Blaze/Shield Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 1
+      },
+      {
+        "name": "Fire Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30311,
+    "name": "Blunt Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Bludgeoner",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30076,
+    "name": "Blunt Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Bludgeoner",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30317,
+    "name": "Blunt Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Bludgeoner",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30035,
+    "name": "Bolt Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Thunder Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30050,
+    "name": "Bolt Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Thunder Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30018,
+    "name": "Bolt Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Thunder Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30214,
+    "name": "Bolt/Bandolier Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Thunder Attack",
+        "points": 3
+      },
+      {
+        "name": "Tetrad Shot",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30200,
+    "name": "Bolt/Crit Elem Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Critical Element",
+        "points": 1
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30237,
+    "name": "Bolt/Enhancer Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Power Prolonger",
+        "points": 1
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30170,
+    "name": "Bolt/Focus Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 1
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30208,
+    "name": "Bolt/Guardian Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 1
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30025,
+    "name": "Bolt/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Handicraft",
+        "points": 1
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30099,
+    "name": "Bolt/Ironwall Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30053,
+    "name": "Bolt/KO Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30157,
+    "name": "Bolt/Opener Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Thunder Attack",
+        "points": 3
+      },
+      {
+        "name": "Opening Shot",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30007,
+    "name": "Bolt/Precise Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Ballistics",
+        "points": 1
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30181,
+    "name": "Bolt/Quickswitch Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 1
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30173,
+    "name": "Bolt/Rzr Sharp Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Razor Sharp",
+        "points": 1
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30196,
+    "name": "Bolt/Shield Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 1
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30135,
+    "name": "Bomber Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Bombardier",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30351,
+    "name": "Botany Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Botanist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30131,
+    "name": "Brace Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Flinch Free",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30129,
+    "name": "Chain Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Burst",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30352,
+    "name": "Challenger Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Agitator",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30140,
+    "name": "Charge Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Charge Master",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30271,
+    "name": "Charge Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Charge Master",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30014,
+    "name": "Charge Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Charge Master",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30290,
+    "name": "Charge Up Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Charge Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30045,
+    "name": "Charge Up/Attack Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Attack Boost",
+        "points": 1
+      },
+      {
+        "name": "Charge Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30348,
+    "name": "Charge Up/Draw Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Charge Up",
+        "points": 1
+      },
+      {
+        "name": "Critical Draw",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30300,
+    "name": "Charge Up/Expert Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Critical Eye",
+        "points": 1
+      },
+      {
+        "name": "Charge Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30292,
+    "name": "Charge Up/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Charge Up",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30114,
+    "name": "Charge Up/KO Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      },
+      {
+        "name": "Charge Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30253,
+    "name": "Charge/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Charge Master",
+        "points": 3
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30101,
+    "name": "Charge/KO Jewel [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Charge Master",
+        "points": 3
+      },
+      {
+        "name": "Slugger",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30349,
+    "name": "Climber Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Cliffhanger",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30323,
+    "name": "Counter Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Counterstrike",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30337,
+    "name": "Counterattack Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Adrenaline Rush",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30343,
+    "name": "Crit Elem Jwl III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Critical Element",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30160,
+    "name": "Crit Elem/Blaze Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 1
+      },
+      {
+        "name": "Critical Element",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30175,
+    "name": "Crit Elem/Bolt Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Critical Element",
+        "points": 3
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30232,
+    "name": "Crit Elem/Dragon Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 1
+      },
+      {
+        "name": "Critical Element",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30182,
+    "name": "Crit Elem/Frost Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Critical Element",
+        "points": 3
+      },
+      {
+        "name": "Ice Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30079,
+    "name": "Crit Elem/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Critical Element",
+        "points": 3
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30297,
+    "name": "Crit Elem/Ironwall Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Critical Element",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30088,
+    "name": "Crit Elem/KO Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      },
+      {
+        "name": "Critical Element",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30172,
+    "name": "Crit Elem/Stream Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Critical Element",
+        "points": 3
+      },
+      {
+        "name": "Water Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30320,
+    "name": "Crit Element Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Critical Element",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30103,
+    "name": "Crit Element Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Critical Element",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30301,
+    "name": "Crit Element/Precise Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Ballistics",
+        "points": 1
+      },
+      {
+        "name": "Critical Element",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30034,
+    "name": "Crit Stat Jwl III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Critical Status",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30004,
+    "name": "Crit Stat/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Critical Status",
+        "points": 3
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30083,
+    "name": "Crit Stat/Ironwall Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Critical Status",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30275,
+    "name": "Crit Stat/Precise Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Ballistics",
+        "points": 1
+      },
+      {
+        "name": "Critical Status",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30329,
+    "name": "Crit Status Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Critical Status",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30254,
+    "name": "Crit Status Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Critical Status",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30327,
+    "name": "Crit Status/KO Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      },
+      {
+        "name": "Critical Status",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30098,
+    "name": "Critical Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Critical Boost",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30305,
+    "name": "Critical Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Critical Boost",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30312,
+    "name": "Critical Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Critical Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30041,
+    "name": "Def Lock Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Iron Skin",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30241,
+    "name": "Defense Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Defense Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30011,
+    "name": "Destroyer Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Partbreaker",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30132,
+    "name": "Dive Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Leap of Faith",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30144,
+    "name": "Dragon Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30032,
+    "name": "Dragon Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30357,
+    "name": "Dragon Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30058,
+    "name": "Dragon Res Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Dragon Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30207,
+    "name": "Dragon/Bandolier Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 3
+      },
+      {
+        "name": "Tetrad Shot",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30176,
+    "name": "Dragon/Crit Elem Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 3
+      },
+      {
+        "name": "Critical Element",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30189,
+    "name": "Dragon/Enhancer Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 3
+      },
+      {
+        "name": "Power Prolonger",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30159,
+    "name": "Dragon/Focus Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 3
+      },
+      {
+        "name": "Focus",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30158,
+    "name": "Dragon/Guardian Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 3
+      },
+      {
+        "name": "Offensive Guard",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30296,
+    "name": "Dragon/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 3
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30126,
+    "name": "Dragon/Ironwall Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 3
+      },
+      {
+        "name": "Guard",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30042,
+    "name": "Dragon/KO Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      },
+      {
+        "name": "Dragon Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30164,
+    "name": "Dragon/Opener Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 3
+      },
+      {
+        "name": "Opening Shot",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30261,
+    "name": "Dragon/Precise Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 3
+      },
+      {
+        "name": "Ballistics",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30201,
+    "name": "Dragon/Quickswitch Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 1
+      },
+      {
+        "name": "Dragon Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30215,
+    "name": "Dragon/Rzr Sharp Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 3
+      },
+      {
+        "name": "Razor Sharp",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30178,
+    "name": "Dragon/Shield Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 1
+      },
+      {
+        "name": "Dragon Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30038,
+    "name": "Drain Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Stamina Thief",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30010,
+    "name": "Drain Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Stamina Thief",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30286,
+    "name": "Drain Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Stamina Thief",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30308,
+    "name": "Draincoat Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Exhaust Functionality",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30336,
+    "name": "Draw Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Critical Draw",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30070,
+    "name": "Draw Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Critical Draw",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30139,
+    "name": "Draw Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Critical Draw",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30062,
+    "name": "Earplugs Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Earplugs",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30356,
+    "name": "Enduring Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Item Prolonger",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30137,
+    "name": "Enhancer Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Power Prolonger",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30269,
+    "name": "Enhancer Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Power Prolonger",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30024,
+    "name": "Enhancer Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Power Prolonger",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30171,
+    "name": "Enhancer/Blaze Jewel [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 1
+      },
+      {
+        "name": "Power Prolonger",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30226,
+    "name": "Enhancer/Bolt Jewel [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Power Prolonger",
+        "points": 3
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30228,
+    "name": "Enhancer/Dragon Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 1
+      },
+      {
+        "name": "Power Prolonger",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30174,
+    "name": "Enhancer/Frost Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Power Prolonger",
+        "points": 3
+      },
+      {
+        "name": "Ice Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30346,
+    "name": "Enhancer/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Power Prolonger",
+        "points": 3
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30213,
+    "name": "Enhancer/Stream Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 1
+      },
+      {
+        "name": "Power Prolonger",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30013,
+    "name": "Escape Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Bind Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30332,
+    "name": "Evasion Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30262,
+    "name": "Expert Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Critical Eye",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30085,
+    "name": "Expert Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Critical Eye",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30128,
+    "name": "Expert Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30020,
+    "name": "Fire Res Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Fire Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30321,
+    "name": "Flash Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Blindsider",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30260,
+    "name": "Flawless Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Peak Performance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30003,
+    "name": "Flayer Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Flayer",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30074,
+    "name": "Flight Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Airborne",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30108,
+    "name": "Flight/Attack Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Attack Boost",
+        "points": 1
+      },
+      {
+        "name": "Airborne",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30096,
+    "name": "Flight/Draw Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Airborne",
+        "points": 1
+      },
+      {
+        "name": "Critical Draw",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30272,
+    "name": "Flight/Expert Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Critical Eye",
+        "points": 1
+      },
+      {
+        "name": "Airborne",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30322,
+    "name": "Flight/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Airborne",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30291,
+    "name": "Focus Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30106,
+    "name": "Focus Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30347,
+    "name": "Focus Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30216,
+    "name": "Focus/Blaze Jewel [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 1
+      },
+      {
+        "name": "Focus",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30193,
+    "name": "Focus/Bolt Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 3
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30195,
+    "name": "Focus/Dragon Jewel [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 1
+      },
+      {
+        "name": "Focus",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30162,
+    "name": "Focus/Frost Jewel [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 3
+      },
+      {
+        "name": "Ice Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30115,
+    "name": "Focus/Handicraft Jewel [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 3
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30248,
+    "name": "Focus/KO Jewel [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      },
+      {
+        "name": "Focus",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30314,
+    "name": "Focus/Precise Jewel [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Ballistics",
+        "points": 1
+      },
+      {
+        "name": "Focus",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30165,
+    "name": "Focus/Stream Jewel [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 3
+      },
+      {
+        "name": "Water Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30359,
+    "name": "Footing Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Tremor Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30039,
+    "name": "Foray Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Foray",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30318,
+    "name": "Forceshot Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Normal Shots",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30341,
+    "name": "Friendship Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Wide-Range",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30295,
+    "name": "Frost Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Ice Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30266,
+    "name": "Frost Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Ice Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30259,
+    "name": "Frost Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Ice Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30177,
+    "name": "Frost/Bandolier Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Ice Attack",
+        "points": 3
+      },
+      {
+        "name": "Tetrad Shot",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30205,
+    "name": "Frost/Crit Elem Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Critical Element",
+        "points": 1
+      },
+      {
+        "name": "Ice Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30194,
+    "name": "Frost/Enhancer Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Power Prolonger",
+        "points": 1
+      },
+      {
+        "name": "Ice Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30186,
+    "name": "Frost/Focus Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 1
+      },
+      {
+        "name": "Ice Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30203,
+    "name": "Frost/Guardian Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 1
+      },
+      {
+        "name": "Ice Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30333,
+    "name": "Frost/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Handicraft",
+        "points": 1
+      },
+      {
+        "name": "Ice Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30335,
+    "name": "Frost/Ironwall Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Ice Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30326,
+    "name": "Frost/KO Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      },
+      {
+        "name": "Ice Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30233,
+    "name": "Frost/Opener Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Ice Attack",
+        "points": 3
+      },
+      {
+        "name": "Opening Shot",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30306,
+    "name": "Frost/Precise Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Ballistics",
+        "points": 1
+      },
+      {
+        "name": "Ice Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30219,
+    "name": "Frost/Quickswitch Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 1
+      },
+      {
+        "name": "Ice Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30161,
+    "name": "Frost/Rzr Sharp Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Razor Sharp",
+        "points": 1
+      },
+      {
+        "name": "Ice Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30236,
+    "name": "Frost/Shield Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 1
+      },
+      {
+        "name": "Ice Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30152,
+    "name": "Fungiform Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Mushroomancer",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30274,
+    "name": "Furor Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Resentment",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30315,
+    "name": "Gambit Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Punishing Draw",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30244,
+    "name": "Gambit Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Punishing Draw",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30089,
+    "name": "Gambit Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Punishing Draw",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30087,
+    "name": "Gambit/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Punishing Draw",
+        "points": 3
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30095,
+    "name": "Gambit/Ironwall Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Punishing Draw",
+        "points": 3
+      },
+      {
+        "name": "Guard",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30067,
+    "name": "Gambit/KO Jewel [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Punishing Draw",
+        "points": 3
+      },
+      {
+        "name": "Slugger",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30136,
+    "name": "Geology Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Geologist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30280,
+    "name": "Gobbler Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Speed Eating",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30240,
+    "name": "Grinder Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Speed Sharpening",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30242,
+    "name": "Grinder Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Speed Sharpening",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30310,
+    "name": "Grinder/Attack Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Attack Boost",
+        "points": 1
+      },
+      {
+        "name": "Speed Sharpening",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30043,
+    "name": "Grinder/Draw Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Critical Draw",
+        "points": 1
+      },
+      {
+        "name": "Speed Sharpening",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30110,
+    "name": "Grinder/Expert Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Critical Eye",
+        "points": 1
+      },
+      {
+        "name": "Speed Sharpening",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30021,
+    "name": "Grinder/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Handicraft",
+        "points": 1
+      },
+      {
+        "name": "Speed Sharpening",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30040,
+    "name": "Grinder/Ironwall Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Speed Sharpening",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30148,
+    "name": "Grinder/KO Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      },
+      {
+        "name": "Speed Sharpening",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30117,
+    "name": "Growth Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Self-Improvement",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30102,
+    "name": "Guardian Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30071,
+    "name": "Guardian Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30048,
+    "name": "Guardian Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30192,
+    "name": "Guardian/Blaze Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 1
+      },
+      {
+        "name": "Offensive Guard",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30217,
+    "name": "Guardian/Bolt Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 3
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30206,
+    "name": "Guardian/Dragon Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 1
+      },
+      {
+        "name": "Offensive Guard",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30220,
+    "name": "Guardian/Frost Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 3
+      },
+      {
+        "name": "Ice Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30127,
+    "name": "Guardian/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 3
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30051,
+    "name": "Guardian/Ironwall Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Offensive Guard",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30212,
+    "name": "Guardian/Stream Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 3
+      },
+      {
+        "name": "Water Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30002,
+    "name": "Handicraft Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Handicraft",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30268,
+    "name": "Handicraft Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30256,
+    "name": "Handicraft Jwl III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Handicraft",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30023,
+    "name": "Hungerless Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Hunger Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30086,
+    "name": "Ice Res Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Ice Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30361,
+    "name": "Intimidator Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Intimidator",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30350,
+    "name": "Ironwall Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30354,
+    "name": "Ironwall Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30149,
+    "name": "Ironwall Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30052,
+    "name": "Jumping Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Evade Extender",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30247,
+    "name": "KO Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30277,
+    "name": "KO Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30093,
+    "name": "KO Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30080,
+    "name": "Leap Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Jump Master",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30029,
+    "name": "Magazine Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Load Shells",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30264,
+    "name": "Magazine Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Load Shells",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30353,
+    "name": "Magazine/Attack Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Attack Boost",
+        "points": 1
+      },
+      {
+        "name": "Load Shells",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30111,
+    "name": "Magazine/Draw Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Critical Draw",
+        "points": 1
+      },
+      {
+        "name": "Load Shells",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30084,
+    "name": "Magazine/Expert Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Critical Eye",
+        "points": 1
+      },
+      {
+        "name": "Load Shells",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30130,
+    "name": "Magazine/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Load Shells",
+        "points": 2
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30278,
+    "name": "Magazine/Ironwall Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Load Shells",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30304,
+    "name": "Maintenance Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30066,
+    "name": "Mastery Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Master's Touch",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30270,
+    "name": "Medicine Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30047,
+    "name": "Mighty Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Maximum Might",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30287,
+    "name": "Mind's Eye Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Mind's Eye",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30054,
+    "name": "Mind's Eye Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Mind's Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30276,
+    "name": "Mind's Eye Jwl III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Mind's Eye",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30028,
+    "name": "Mirewalker Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Aquatic/Oilsilt Mobility",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30044,
+    "name": "Opener Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Opening Shot",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30064,
+    "name": "Opener Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Opening Shot",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30358,
+    "name": "Opener Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Opening Shot",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30224,
+    "name": "Opener/Blaze Jewel [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 1
+      },
+      {
+        "name": "Opening Shot",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30188,
+    "name": "Opener/Bolt Jewel [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Thunder Attack",
+        "points": 1
+      },
+      {
+        "name": "Opening Shot",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30231,
+    "name": "Opener/Dragon Jewel [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 1
+      },
+      {
+        "name": "Opening Shot",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30221,
+    "name": "Opener/Frost Jewel [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Ice Attack",
+        "points": 1
+      },
+      {
+        "name": "Opening Shot",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30257,
+    "name": "Opener/Ironwall Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Opening Shot",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30153,
+    "name": "Opener/Precise Jewel [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Ballistics",
+        "points": 1
+      },
+      {
+        "name": "Opening Shot",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30191,
+    "name": "Opener/Stream Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 1
+      },
+      {
+        "name": "Opening Shot",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30092,
+    "name": "Paracoat Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Para Functionality",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30279,
+    "name": "Paralyzer Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Paralysis Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30105,
+    "name": "Paralyzer Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Paralysis Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30121,
+    "name": "Paralyzer Jwl III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Paralysis Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30057,
+    "name": "Pep Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Sleep Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30303,
+    "name": "Perfume Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Stench Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30283,
+    "name": "Phoenix Jewel [2]",
+    "slot_size": 2,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Coalescence",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30063,
+    "name": "Physique Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30340,
+    "name": "Pierce Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Piercing Shots",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30022,
+    "name": "Poison Jewel [2]",
+    "slot_size": 2,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Poison Duration Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30360,
+    "name": "Poison/Attack Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Poison Duration Up",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30147,
+    "name": "Poison/Draw Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Poison Duration Up",
+        "points": 1
+      },
+      {
+        "name": "Critical Draw",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30265,
+    "name": "Poison/Expert Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Critical Eye",
+        "points": 1
+      },
+      {
+        "name": "Poison Duration Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30267,
+    "name": "Poison/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Poison Duration Up",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30133,
+    "name": "Poison/Ironwall Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Poison Duration Up",
+        "points": 1
+      },
+      {
+        "name": "Guard",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30107,
+    "name": "Poison/KO Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Poison Duration Up",
+        "points": 1
+      },
+      {
+        "name": "Slugger",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30243,
+    "name": "Poison/Precise Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Poison Duration Up",
+        "points": 1
+      },
+      {
+        "name": "Ballistics",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30077,
+    "name": "Poisoncoat Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Poison Functionality",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30328,
+    "name": "Potential Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Heroics",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30006,
+    "name": "Precise Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Ballistics",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30324,
+    "name": "Precise Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Ballistics",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30075,
+    "name": "Precise Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Ballistics",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30120,
+    "name": "Protection Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30258,
+    "name": "Quickswitch Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30046,
+    "name": "Quickswitch Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30319,
+    "name": "Quickswitch Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30179,
+    "name": "Quickswitch/Blaze Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 3
+      },
+      {
+        "name": "Fire Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30218,
+    "name": "Quickswitch/Bolt Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 3
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30166,
+    "name": "Quickswitch/Dragon Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 3
+      },
+      {
+        "name": "Dragon Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30199,
+    "name": "Quickswitch/Frost Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 3
+      },
+      {
+        "name": "Ice Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30072,
+    "name": "Quickswitch/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 3
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30125,
+    "name": "Quickswitch/Ironwall Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 3
+      },
+      {
+        "name": "Guard",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30338,
+    "name": "Quickswitch/KO Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 3
+      },
+      {
+        "name": "Slugger",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30229,
+    "name": "Quickswitch/Stream Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 3
+      },
+      {
+        "name": "Water Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30250,
+    "name": "Ranger Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Outdoorsman",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30145,
+    "name": "Razor Sharp Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Razor Sharp",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30124,
+    "name": "Razor Sharp Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Razor Sharp",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30245,
+    "name": "Razor Sharp/KO Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      },
+      {
+        "name": "Razor Sharp",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30056,
+    "name": "Recovery Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Recovery Speed",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30112,
+    "name": "Refresh Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Stamina Surge",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30030,
+    "name": "Rzr Sharp Jwl III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Razor Sharp",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30190,
+    "name": "Rzr Sharp/Blaze Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 1
+      },
+      {
+        "name": "Razor Sharp",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30234,
+    "name": "Rzr Sharp/Bolt Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Razor Sharp",
+        "points": 3
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30223,
+    "name": "Rzr Sharp/Dragon Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 1
+      },
+      {
+        "name": "Razor Sharp",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30163,
+    "name": "Rzr Sharp/Frost Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Razor Sharp",
+        "points": 3
+      },
+      {
+        "name": "Ice Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30339,
+    "name": "Rzr Sharp/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Razor Sharp",
+        "points": 3
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30055,
+    "name": "Rzr Sharp/Ironwall Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Razor Sharp",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30168,
+    "name": "Rzr Sharp/Stream Jwl [3]",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": 350,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 1
+      },
+      {
+        "name": "Razor Sharp",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30027,
+    "name": "Salvo Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Rapid Fire Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30059,
+    "name": "Sane Jewel [1]",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Antivirus",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30143,
+    "name": "Satiated Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Free Meal",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30049,
+    "name": "Sharp Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Protective Polish",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30313,
+    "name": "Sharp Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Protective Polish",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30249,
+    "name": "Sharp Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Protective Polish",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30141,
+    "name": "Sheath Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Quick Sheathe",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30142,
+    "name": "Shield Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30309,
+    "name": "Shield Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30331,
+    "name": "Shield Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30227,
+    "name": "Shield/Blaze Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 3
+      },
+      {
+        "name": "Fire Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30183,
+    "name": "Shield/Bolt Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 3
+      },
+      {
+        "name": "Thunder Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30202,
+    "name": "Shield/Dragon Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 3
+      },
+      {
+        "name": "Dragon Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30180,
+    "name": "Shield/Frost Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 3
+      },
+      {
+        "name": "Ice Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30119,
+    "name": "Shield/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 3
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30330,
+    "name": "Shield/Ironwall Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 3
+      },
+      {
+        "name": "Guard",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30156,
+    "name": "Shield/Stream Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 3
+      },
+      {
+        "name": "Water Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30293,
+    "name": "Shockproof Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Shock Absorber",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30009,
+    "name": "Sleep Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Sleep Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30031,
+    "name": "Sleep Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Sleep Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30005,
+    "name": "Sleep Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Sleep Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30078,
+    "name": "Sleepcoat Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Sleep Functionality",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30123,
+    "name": "Sonorous Jewel [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Horn Maestro",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30033,
+    "name": "Sonorous/Attack Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Horn Maestro",
+        "points": 2
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30273,
+    "name": "Sonorous/Draw Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Horn Maestro",
+        "points": 2
+      },
+      {
+        "name": "Critical Draw",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30146,
+    "name": "Sonorous/Expert Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Critical Eye",
+        "points": 1
+      },
+      {
+        "name": "Horn Maestro",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30355,
+    "name": "Sonorous/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Horn Maestro",
+        "points": 2
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30116,
+    "name": "Sonorous/KO Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Horn Maestro",
+        "points": 2
+      },
+      {
+        "name": "Slugger",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30026,
+    "name": "Specimen Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Entomologist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30246,
+    "name": "Spread Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Spread/Power Shots",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30342,
+    "name": "Sprinter Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Marathon Runner",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30284,
+    "name": "Steadfast Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Stun Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30073,
+    "name": "Stream Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30334,
+    "name": "Stream Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30061,
+    "name": "Stream Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30222,
+    "name": "Stream/Bandolier Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 3
+      },
+      {
+        "name": "Tetrad Shot",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30187,
+    "name": "Stream/Crit Elem Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Critical Element",
+        "points": 1
+      },
+      {
+        "name": "Water Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30209,
+    "name": "Stream/Enhancer Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 3
+      },
+      {
+        "name": "Power Prolonger",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30238,
+    "name": "Stream/Focus Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 1
+      },
+      {
+        "name": "Water Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30210,
+    "name": "Stream/Guardian Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 1
+      },
+      {
+        "name": "Water Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30299,
+    "name": "Stream/Handicraft Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 3
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30281,
+    "name": "Stream/Ironwall Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Water Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30122,
+    "name": "Stream/KO Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      },
+      {
+        "name": "Water Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30239,
+    "name": "Stream/Opener Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 3
+      },
+      {
+        "name": "Opening Shot",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30345,
+    "name": "Stream/Precise Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Ballistics",
+        "points": 1
+      },
+      {
+        "name": "Water Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30235,
+    "name": "Stream/Quickswitch Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 1
+      },
+      {
+        "name": "Water Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30184,
+    "name": "Stream/Rzr Sharp Jwl [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 3
+      },
+      {
+        "name": "Razor Sharp",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30185,
+    "name": "Stream/Shield Jewel [3]",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": 300,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 1
+      },
+      {
+        "name": "Water Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30068,
+    "name": "Survival Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Survival Expert",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30019,
+    "name": "Suture Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Bleeding Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30288,
+    "name": "Tenderizer Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Weakness Exploit",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30302,
+    "name": "Throttle Jewel [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Latent Power",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30069,
+    "name": "Thunder Res Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Thunder Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30060,
+    "name": "Trueshot Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Special Ammo Boost",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30325,
+    "name": "Trueshot Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Special Ammo Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30037,
+    "name": "Venom Jewel II [2]",
+    "slot_size": 2,
+    "rarity": 4,
+    "price": 200,
+    "skill_points": [
+      {
+        "name": "Poison Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30081,
+    "name": "Venom Jewel III [3]",
+    "slot_size": 3,
+    "rarity": 5,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Poison Attack",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30001,
+    "name": "Venom Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Poison Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30008,
+    "name": "Water Res Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Water Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 30104,
+    "name": "Wind Resist Jewel [1]",
+    "slot_size": 1,
+    "rarity": 3,
+    "price": 150,
+    "skill_points": [
+      {
+        "name": "Windproof",
+        "points": 1
+      }
+    ],
+    "materials": []
+  }
+]

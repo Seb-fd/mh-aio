@@ -1,0 +1,849 @@
+[
+  {
+    "id": 900001,
+    "result_item_id": 30001,
+    "component_item_id": 30024,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900002,
+    "result_item_id": 30002,
+    "component_item_id": 30001,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900003,
+    "result_item_id": 30002,
+    "component_item_id": 30026,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900004,
+    "result_item_id": 30003,
+    "component_item_id": 30025,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900005,
+    "result_item_id": 30004,
+    "component_item_id": 30061,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900006,
+    "result_item_id": 30004,
+    "component_item_id": 30581,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900007,
+    "result_item_id": 30005,
+    "component_item_id": 30141,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900008,
+    "result_item_id": 30005,
+    "component_item_id": 30403,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900009,
+    "result_item_id": 30011,
+    "component_item_id": 30029,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900010,
+    "result_item_id": 30011,
+    "component_item_id": 30062,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900011,
+    "result_item_id": 30013,
+    "component_item_id": 30101,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900012,
+    "result_item_id": 30013,
+    "component_item_id": 30583,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900013,
+    "result_item_id": 30014,
+    "component_item_id": 30582,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900014,
+    "result_item_id": 30014,
+    "component_item_id": 30584,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900015,
+    "result_item_id": 30015,
+    "component_item_id": 30028,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900016,
+    "result_item_id": 30018,
+    "component_item_id": 30067,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900017,
+    "result_item_id": 30018,
+    "component_item_id": 30586,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900018,
+    "result_item_id": 30019,
+    "component_item_id": 30030,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900019,
+    "result_item_id": 30019,
+    "component_item_id": 30067,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900020,
+    "result_item_id": 30039,
+    "component_item_id": 30115,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900021,
+    "result_item_id": 30039,
+    "component_item_id": 30036,
+    "quantity": 1,
+    "result_quantity": 3
+  },
+  {
+    "id": 900022,
+    "result_item_id": 30039,
+    "component_item_id": 30589,
+    "quantity": 1,
+    "result_quantity": 3
+  },
+  {
+    "id": 900023,
+    "result_item_id": 30040,
+    "component_item_id": 30258,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900024,
+    "result_item_id": 30041,
+    "component_item_id": 30036,
+    "quantity": 1,
+    "result_quantity": 6
+  },
+  {
+    "id": 900025,
+    "result_item_id": 30041,
+    "component_item_id": 30101,
+    "quantity": 1,
+    "result_quantity": 6
+  },
+  {
+    "id": 900026,
+    "result_item_id": 30042,
+    "component_item_id": 30036,
+    "quantity": 1,
+    "result_quantity": 6
+  },
+  {
+    "id": 900027,
+    "result_item_id": 30042,
+    "component_item_id": 30102,
+    "quantity": 1,
+    "result_quantity": 6
+  },
+  {
+    "id": 900028,
+    "result_item_id": 30043,
+    "component_item_id": 30030,
+    "quantity": 1,
+    "result_quantity": 12
+  },
+  {
+    "id": 900029,
+    "result_item_id": 30043,
+    "component_item_id": 30036,
+    "quantity": 1,
+    "result_quantity": 12
+  },
+  {
+    "id": 900030,
+    "result_item_id": 30044,
+    "component_item_id": 30036,
+    "quantity": 1,
+    "result_quantity": 6
+  },
+  {
+    "id": 900031,
+    "result_item_id": 30044,
+    "component_item_id": 30103,
+    "quantity": 1,
+    "result_quantity": 6
+  },
+  {
+    "id": 900032,
+    "result_item_id": 30045,
+    "component_item_id": 30036,
+    "quantity": 1,
+    "result_quantity": 2
+  },
+  {
+    "id": 900033,
+    "result_item_id": 30045,
+    "component_item_id": 30104,
+    "quantity": 1,
+    "result_quantity": 2
+  },
+  {
+    "id": 900034,
+    "result_item_id": 30046,
+    "component_item_id": 30036,
+    "quantity": 1,
+    "result_quantity": 2
+  },
+  {
+    "id": 900035,
+    "result_item_id": 30046,
+    "component_item_id": 30098,
+    "quantity": 1,
+    "result_quantity": 2
+  },
+  {
+    "id": 900036,
+    "result_item_id": 30047,
+    "component_item_id": 30036,
+    "quantity": 1,
+    "result_quantity": 2
+  },
+  {
+    "id": 900037,
+    "result_item_id": 30047,
+    "component_item_id": 30099,
+    "quantity": 1,
+    "result_quantity": 2
+  },
+  {
+    "id": 900038,
+    "result_item_id": 30048,
+    "component_item_id": 30036,
+    "quantity": 1,
+    "result_quantity": 2
+  },
+  {
+    "id": 900039,
+    "result_item_id": 30048,
+    "component_item_id": 30100,
+    "quantity": 1,
+    "result_quantity": 2
+  },
+  {
+    "id": 900040,
+    "result_item_id": 30049,
+    "component_item_id": 30116,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900041,
+    "result_item_id": 30049,
+    "component_item_id": 30036,
+    "quantity": 1,
+    "result_quantity": 3
+  },
+  {
+    "id": 900042,
+    "result_item_id": 30049,
+    "component_item_id": 30588,
+    "quantity": 1,
+    "result_quantity": 3
+  },
+  {
+    "id": 900043,
+    "result_item_id": 30066,
+    "component_item_id": 30091,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900044,
+    "result_item_id": 30066,
+    "component_item_id": 30092,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900045,
+    "result_item_id": 30071,
+    "component_item_id": 30068,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900046,
+    "result_item_id": 30071,
+    "component_item_id": 30069,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900047,
+    "result_item_id": 30123,
+    "component_item_id": 30157,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900048,
+    "result_item_id": 30123,
+    "component_item_id": 30158,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900049,
+    "result_item_id": 30127,
+    "component_item_id": 30069,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900050,
+    "result_item_id": 30127,
+    "component_item_id": 30070,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900051,
+    "result_item_id": 30130,
+    "component_item_id": 30257,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900052,
+    "result_item_id": 30139,
+    "component_item_id": 30026,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900053,
+    "result_item_id": 30139,
+    "component_item_id": 30113,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900054,
+    "result_item_id": 30140,
+    "component_item_id": 30493,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900055,
+    "result_item_id": 30140,
+    "component_item_id": 30581,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900056,
+    "result_item_id": 30141,
+    "component_item_id": 30027,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900057,
+    "result_item_id": 30141,
+    "component_item_id": 30061,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900058,
+    "result_item_id": 30142,
+    "component_item_id": 30438,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900059,
+    "result_item_id": 30143,
+    "component_item_id": 30439,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900060,
+    "result_item_id": 30144,
+    "component_item_id": 30111,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900061,
+    "result_item_id": 30144,
+    "component_item_id": 30581,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900062,
+    "result_item_id": 30145,
+    "component_item_id": 30111,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900063,
+    "result_item_id": 30145,
+    "component_item_id": 30141,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900064,
+    "result_item_id": 30146,
+    "component_item_id": 30144,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900065,
+    "result_item_id": 30146,
+    "component_item_id": 30403,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900066,
+    "result_item_id": 30147,
+    "component_item_id": 30112,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900067,
+    "result_item_id": 30147,
+    "component_item_id": 30581,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900068,
+    "result_item_id": 30148,
+    "component_item_id": 30112,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900069,
+    "result_item_id": 30148,
+    "component_item_id": 30141,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900070,
+    "result_item_id": 30149,
+    "component_item_id": 30147,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900071,
+    "result_item_id": 30149,
+    "component_item_id": 30403,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900072,
+    "result_item_id": 30150,
+    "component_item_id": 30003,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900073,
+    "result_item_id": 30150,
+    "component_item_id": 30062,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900074,
+    "result_item_id": 30151,
+    "component_item_id": 30029,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900075,
+    "result_item_id": 30151,
+    "component_item_id": 30150,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900076,
+    "result_item_id": 30152,
+    "component_item_id": 30029,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900077,
+    "result_item_id": 30152,
+    "component_item_id": 30111,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900078,
+    "result_item_id": 30153,
+    "component_item_id": 30029,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900079,
+    "result_item_id": 30153,
+    "component_item_id": 30112,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900080,
+    "result_item_id": 30154,
+    "component_item_id": 30029,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900081,
+    "result_item_id": 30154,
+    "component_item_id": 30110,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900082,
+    "result_item_id": 30155,
+    "component_item_id": 30029,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900083,
+    "result_item_id": 30155,
+    "component_item_id": 30101,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900084,
+    "result_item_id": 30156,
+    "component_item_id": 30069,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900085,
+    "result_item_id": 30156,
+    "component_item_id": 30098,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900086,
+    "result_item_id": 30157,
+    "component_item_id": 30099,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900087,
+    "result_item_id": 30157,
+    "component_item_id": 30100,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900088,
+    "result_item_id": 30161,
+    "component_item_id": 30012,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900089,
+    "result_item_id": 30161,
+    "component_item_id": 30100,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900090,
+    "result_item_id": 30168,
+    "component_item_id": 30027,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900091,
+    "result_item_id": 30168,
+    "component_item_id": 30068,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900092,
+    "result_item_id": 30169,
+    "component_item_id": 30014,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900093,
+    "result_item_id": 30169,
+    "component_item_id": 30114,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900094,
+    "result_item_id": 30169,
+    "component_item_id": 30014,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900095,
+    "result_item_id": 30169,
+    "component_item_id": 30587,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900096,
+    "result_item_id": 30170,
+    "component_item_id": 30026,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900097,
+    "result_item_id": 30170,
+    "component_item_id": 30105,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900098,
+    "result_item_id": 30180,
+    "component_item_id": 30012,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900099,
+    "result_item_id": 30180,
+    "component_item_id": 30099,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900100,
+    "result_item_id": 30183,
+    "component_item_id": 30012,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900101,
+    "result_item_id": 30183,
+    "component_item_id": 30098,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900102,
+    "result_item_id": 30184,
+    "component_item_id": 30027,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900103,
+    "result_item_id": 30184,
+    "component_item_id": 30069,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900104,
+    "result_item_id": 30377,
+    "component_item_id": 30036,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900105,
+    "result_item_id": 30377,
+    "component_item_id": 30111,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900106,
+    "result_item_id": 30378,
+    "component_item_id": 30036,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900107,
+    "result_item_id": 30378,
+    "component_item_id": 30112,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900108,
+    "result_item_id": 30379,
+    "component_item_id": 30036,
+    "quantity": 1,
+    "result_quantity": 2
+  },
+  {
+    "id": 900109,
+    "result_item_id": 30379,
+    "component_item_id": 30062,
+    "quantity": 1,
+    "result_quantity": 2
+  },
+  {
+    "id": 900110,
+    "result_item_id": 30380,
+    "component_item_id": 30036,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900111,
+    "result_item_id": 30380,
+    "component_item_id": 30157,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900112,
+    "result_item_id": 30381,
+    "component_item_id": 30036,
+    "quantity": 1,
+    "result_quantity": 2
+  },
+  {
+    "id": 900113,
+    "result_item_id": 30381,
+    "component_item_id": 30068,
+    "quantity": 1,
+    "result_quantity": 2
+  },
+  {
+    "id": 900114,
+    "result_item_id": 30420,
+    "component_item_id": 30066,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900115,
+    "result_item_id": 30420,
+    "component_item_id": 30113,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900116,
+    "result_item_id": 30581,
+    "component_item_id": 30026,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900117,
+    "result_item_id": 30581,
+    "component_item_id": 30027,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900118,
+    "result_item_id": 30582,
+    "component_item_id": 30101,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900119,
+    "result_item_id": 30582,
+    "component_item_id": 30113,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900120,
+    "result_item_id": 30586,
+    "component_item_id": 30070,
+    "quantity": 1,
+    "result_quantity": 1
+  },
+  {
+    "id": 900121,
+    "result_item_id": 30586,
+    "component_item_id": 30585,
+    "quantity": 1,
+    "result_quantity": 1
+  }
+]

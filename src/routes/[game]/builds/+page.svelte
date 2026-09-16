@@ -6,8 +6,23 @@
     type SkillLevel,
     type AssSolutionView,
     type AssQueryInput,
+    type SavedBuild,
   } from '$lib/api'
-  import { Swords, Crosshair, Sparkles, Search, Shield, Gem, X } from '@lucide/svelte'
+  import {
+    Swords,
+    Crosshair,
+    Sparkles,
+    Search,
+    Shield,
+    Gem,
+    X,
+    Save,
+    Trash2,
+    Download,
+    Upload,
+    Copy,
+    Check,
+  } from '@lucide/svelte'
 
   const slotCode: Record<string, string> = {
     head: 'HE',
@@ -76,7 +91,10 @@
   }
 
   $effect(() => {
-    if (game) loadSkills()
+    if (game) {
+      loadSkills()
+      loadSaved()
+    }
   })
 
   function filteredSkills(filter: string) {
@@ -183,6 +201,177 @@
   ]
 
   const activeCount = $derived(skillSlots.filter((s) => s.skillId !== null).length)
+
+  // ── Saved builds (app-data via Tauri commands, spec 005) ──
+  let savedBuilds = $state<SavedBuild[]>([])
+  let buildName = $state('')
+  let savedLoading = $state(false)
+  let savedError = $state<string | null>(null)
+  let showSaved = $state(false)
+  let showImport = $state(false)
+  let importText = $state('')
+  let copiedId = $state<string | null>(null)
+
+  async function loadSaved() {
+    if (!game) return
+    savedLoading = true
+    savedError = null
+    try {
+      savedBuilds = await api.listBuilds(game.dbId)
+    } catch (e: unknown) {
+      savedError = e instanceof Error ? e.message : String(e ?? 'Could not load saved builds.')
+    } finally {
+      savedLoading = false
+    }
+  }
+
+  function lastQuery(): AssQueryInput | null {
+    if (!game) return null
+    const reqSkills = skillSlots
+      .filter((s) => s.skillId !== null)
+      .map((s) => ({ skill_id: s.skillId!, points_required: s.points }))
+    if (reqSkills.length === 0) return null
+    return {
+      game_id: game.dbId,
+      skills: reqSkills,
+      hunter_type: hunterType,
+      gender,
+      hr,
+      elder_star: elderStar,
+      weapon_slots: weaponSlots,
+      include_piercings: includePiercings,
+      allow_bad: allowBad,
+      allow_torso_inc: allowTorsoInc,
+      sort_by: sortBy === 'none' ? null : sortBy,
+    }
+  }
+
+  async function saveSolution(sol: AssSolutionView, idx: number) {
+    if (!game) return
+    const query = lastQuery()
+    if (!query) {
+      savedError = 'Run a search first — there is no query to save yet.'
+      showSaved = true
+      return
+    }
+    const skillNames = skillSlots
+      .filter((s) => s.skillId !== null)
+      .map((s) => s.skillName)
+      .join(' + ')
+    const name = buildName.trim() || `Set #${idx + 1} — ${skillNames}`.slice(0, 80)
+    savedError = null
+    try {
+      await api.saveBuild(name, game.dbId, query, sol)
+      buildName = ''
+      await loadSaved()
+      showSaved = true
+    } catch (e: unknown) {
+      savedError = e instanceof Error ? e.message : String(e ?? 'Could not save build.')
+      showSaved = true
+    }
+  }
+
+  function loadBuild(b: SavedBuild) {
+    const q = b.query
+    hunterType = q.hunter_type === 'gunner' ? 'gunner' : 'blade'
+    gender = q.gender === 'female' ? 'female' : 'male'
+    hr = q.hr
+    elderStar = q.elder_star
+    weaponSlots = q.weapon_slots
+    includePiercings = q.include_piercings
+    allowBad = q.allow_bad
+    allowTorsoInc = q.allow_torso_inc
+    sortBy = q.sort_by ?? 'none'
+    skillSlots = Array.from({ length: 5 }, (_, i) => {
+      const req = q.skills[i]
+      if (!req) return { skillId: null, skillName: '', points: 10, filter: '', open: false }
+      const found = allSkills.find((s) => s.id === req.skill_id)
+      const label = found?.name ?? `Skill #${req.skill_id}`
+      return {
+        skillId: req.skill_id,
+        skillName: label,
+        points: req.points_required,
+        filter: label,
+        open: false,
+      }
+    })
+    results = [b.solution]
+    resultsCountText = `Loaded saved build “${b.name}”`
+    error = null
+  }
+
+  async function deleteSaved(id: string) {
+    savedError = null
+    try {
+      await api.deleteBuild(id)
+      await loadSaved()
+    } catch (e: unknown) {
+      savedError = e instanceof Error ? e.message : String(e ?? 'Could not delete build.')
+    }
+  }
+
+  function downloadJson(filename: string, text: string) {
+    const blob = new Blob([text], { type: 'application/json' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = filename
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
+    URL.revokeObjectURL(url)
+  }
+
+  function exportSaved(b: SavedBuild) {
+    downloadJson(`mh-aio-build-${b.id}.json`, JSON.stringify(b, null, 2))
+  }
+
+  function toShareCode(b: SavedBuild): string {
+    const bytes = new TextEncoder().encode(JSON.stringify(b))
+    let bin = ''
+    for (const byte of bytes) bin += String.fromCharCode(byte)
+    return btoa(bin).replaceAll('+', '-').replaceAll('/', '_').replaceAll('=', '')
+  }
+
+  function fromShareCode(code: string): string {
+    const b64 = code.replaceAll('-', '+').replaceAll('_', '/')
+    const bin = atob(b64)
+    const bytes = Uint8Array.from(bin, (c) => c.charCodeAt(0))
+    return new TextDecoder().decode(bytes)
+  }
+
+  async function copyShare(b: SavedBuild) {
+    const code = toShareCode(b)
+    try {
+      await navigator.clipboard.writeText(code)
+      copiedId = b.id
+      setTimeout(() => {
+        if (copiedId === b.id) copiedId = null
+      }, 2000)
+    } catch {
+      importText = code
+      showImport = true
+    }
+  }
+
+  async function importFromText() {
+    const text = importText.trim()
+    if (!text) {
+      savedError = 'Paste a share code or JSON first.'
+      return
+    }
+    savedError = null
+    try {
+      const json = text.startsWith('{') ? text : fromShareCode(text)
+      const imported = await api.importBuild(json)
+      importText = ''
+      showImport = false
+      await loadSaved()
+      if (game && imported.game_id === game.dbId) loadBuild(imported)
+    } catch (e: unknown) {
+      savedError = e instanceof Error ? e.message : String(e ?? 'Could not import build.')
+    }
+  }
 </script>
 
 <div class="max-w-7xl mx-auto">
@@ -521,6 +710,124 @@
           >
             {error}
           </p>{/if}
+
+        <!-- Step 4: Saved builds (app-data, spec 005) -->
+        <div class="themed-card rounded-xl border p-4">
+          <button
+            onclick={() => (showSaved = !showSaved)}
+            aria-expanded={showSaved}
+            class="w-full flex items-center gap-2 min-h-[44px] rounded focus-visible:outline-none focus-visible:ring-2"
+          >
+            <span
+              class="w-6 h-6 rounded-full bg-[var(--theme-bg-elevated)] text-gray-400 flex items-center justify-center text-xs font-bold"
+              >4</span
+            >
+            <h2 class="text-sm font-semibold text-gray-200">Saved builds</h2>
+            <span
+              class="text-xs px-2 py-0.5 rounded-full bg-[var(--theme-bg-elevated)] text-gray-400"
+              >{savedBuilds.length}</span
+            >
+            <span class="text-[10px] text-gray-400 ml-auto">{showSaved ? '▲' : '▼'}</span>
+          </button>
+          {#if showSaved}
+            <div class="mt-3 space-y-2">
+              <label class="text-xs text-gray-400"
+                >Name for the next save
+                <input
+                  placeholder="e.g. Earplug dancer"
+                  aria-label="Name for the next saved build"
+                  class="mt-1 w-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-lg px-3 py-2 text-sm text-gray-200 placeholder-gray-600 focus:outline-none focus:border-[var(--theme-primary)]/50 min-h-[44px]"
+                  bind:value={buildName}
+                  maxlength={80}
+                />
+              </label>
+              {#if savedLoading}
+                <p class="text-xs text-gray-400">Loading saved builds…</p>
+              {:else if savedBuilds.length === 0}
+                <p class="text-xs text-gray-400">
+                  Nothing saved yet. Run a search, then tap the save icon on any result.
+                </p>
+              {:else}
+                {#each savedBuilds as b}
+                  <div
+                    class="rounded-xl border border-[var(--theme-border)] bg-[var(--theme-bg-base)] p-2.5"
+                  >
+                    <button
+                      onclick={() => loadBuild(b)}
+                      class="w-full text-left rounded focus-visible:outline-none focus-visible:ring-2"
+                    >
+                      <div class="text-sm font-medium text-gray-100 truncate">{b.name}</div>
+                      <div class="text-xs text-gray-400">
+                        {b.solution.armors.length} pieces · DEF {b.solution.defense} · {b.solution
+                          .decorations.length} jewels
+                      </div>
+                    </button>
+                    <div class="mt-2 flex flex-wrap gap-1.5">
+                      <button
+                        onclick={() => loadBuild(b)}
+                        class="text-xs px-2.5 min-h-[36px] rounded-full bg-[var(--theme-primary)]/10 border border-[var(--theme-primary)]/20 text-[var(--theme-primary)]"
+                        >Load</button
+                      >
+                      <button
+                        onclick={() => exportSaved(b)}
+                        aria-label="Export {b.name} as JSON"
+                        title="Download JSON"
+                        class="inline-flex items-center gap-1 text-xs px-2.5 min-h-[36px] rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-gray-300"
+                        ><Download class="h-3.5 w-3.5" aria-hidden="true" />JSON</button
+                      >
+                      <button
+                        onclick={() => copyShare(b)}
+                        aria-label="Copy share code for {b.name}"
+                        title="Copy share code"
+                        class="inline-flex items-center gap-1 text-xs px-2.5 min-h-[36px] rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-gray-300"
+                      >
+                        {#if copiedId === b.id}<Check
+                            class="h-3.5 w-3.5 text-emerald-400"
+                            aria-hidden="true"
+                          />Copied{:else}<Copy
+                            class="h-3.5 w-3.5"
+                            aria-hidden="true"
+                          />Share{/if}</button
+                      >
+                      <button
+                        onclick={() => deleteSaved(b.id)}
+                        aria-label="Delete {b.name}"
+                        title="Delete"
+                        class="inline-flex items-center gap-1 text-xs px-2.5 min-h-[36px] rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-gray-400 hover:text-red-300"
+                        ><Trash2 class="h-3.5 w-3.5" aria-hidden="true" />Delete</button
+                      >
+                    </div>
+                  </div>
+                {/each}
+              {/if}
+              <button
+                onclick={() => (showImport = !showImport)}
+                class="w-full inline-flex items-center justify-center gap-1.5 text-xs text-gray-400 hover:text-gray-300 min-h-[44px] rounded focus-visible:outline-none focus-visible:ring-2"
+              >
+                <Upload class="h-3.5 w-3.5" aria-hidden="true" />
+                {showImport ? 'Hide import' : 'Import from JSON / share code'}
+              </button>
+              {#if showImport}
+                <textarea
+                  placeholder="Paste a share code or exported JSON…"
+                  aria-label="Share code or exported JSON to import"
+                  class="w-full min-h-[88px] bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-lg px-3 py-2 text-xs text-gray-200 placeholder-gray-600 focus:outline-none focus:border-[var(--theme-primary)]/50 font-mono"
+                  bind:value={importText}></textarea>
+                <button
+                  onclick={importFromText}
+                  disabled={importText.trim().length === 0}
+                  class="w-full min-h-[44px] py-2 rounded-lg text-xs font-bold bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)] hover:opacity-90 disabled:opacity-40"
+                  >Import build</button
+                >
+              {/if}
+              {#if savedError}<p
+                  class="text-xs text-center text-red-400 bg-red-950/30 border border-red-900 rounded-lg px-3 py-2"
+                >
+                  {savedError}
+                </p>{/if}
+            </div>
+          {/if}
+        </div>
       </div>
 
       <!-- Results -->
@@ -593,15 +900,24 @@
                   class="text-xs font-bold px-2.5 py-1 rounded-full bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)]"
                   >#{i + 1}</span
                 >
-                <div class="flex items-center gap-1.5 text-[11px]">
-                  <span
-                    class="px-2 py-1 rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-gray-400"
-                    >DEF {sol.defense}</span
+                <div class="flex items-center gap-1.5">
+                  <button
+                    onclick={() => saveSolution(sol, i)}
+                    aria-label="Save set #{i + 1}"
+                    title="Save this set"
+                    class="min-w-[36px] min-h-[36px] px-2 rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-gray-400 hover:text-gray-200 inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-2"
+                    ><Save class="h-4 w-4" aria-hidden="true" /></button
                   >
-                  <span
-                    class="px-2 py-1 rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-emerald-400"
-                    >{sol.slots_spare} spare</span
-                  >
+                  <div class="flex items-center gap-1.5 text-[11px]">
+                    <span
+                      class="px-2 py-1 rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-gray-400"
+                      >DEF {sol.defense}</span
+                    >
+                    <span
+                      class="px-2 py-1 rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-emerald-400"
+                      >{sol.slots_spare} spare</span
+                    >
+                  </div>
                 </div>
               </div>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">

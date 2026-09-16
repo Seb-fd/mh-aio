@@ -5,16 +5,19 @@
  * visits — including back navigation — render instantly with zero IPC.
  */
 
-/** Retry preserving the boot-time 'Preparing database…' backoff (max ~8s). */
+/** Retry while the backend is still seeding ('state not managed').
+/// Cold boots (fresh install / data update) run the full seed in setup(),
+/// which can take a minute on slower disks — keep showing
+/// 'Preparing database…' instead of erroring out. */
 export function dbRetry(failureCount: number, err: unknown): boolean {
-  if (failureCount >= 6) return false
+  if (failureCount >= 40) return false
   const msg = err instanceof Error ? err.message : String(err)
   return msg.includes('state not managed')
 }
 
-/** 400ms, 800ms, … linear backoff matching the legacy manual retry loop. */
+/** 400ms, 800ms, … capped at 2s (≈70s total window over 40 attempts). */
 export function dbRetryDelay(attempt: number): number {
-  return 400 * (attempt + 1)
+  return Math.min(400 * (attempt + 1), 2000)
 }
 
 /** 'Preparing database…' while seed-blocked retries are still in flight. */

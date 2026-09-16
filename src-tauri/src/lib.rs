@@ -1,6 +1,9 @@
 mod ass;
+mod builds;
 mod commands;
 pub mod db;
+mod favorites;
+mod import;
 
 use tauri::Manager;
 
@@ -46,6 +49,16 @@ pub fn run() {
             commands::get_mhw_mantle_detail,
             commands::get_palico_gadgets,
             commands::get_palico_gadget_detail,
+            commands::list_builds,
+            commands::save_build,
+            commands::get_build,
+            commands::delete_build,
+            commands::import_build,
+            commands::list_favorites,
+            commands::toggle_favorite,
+            commands::remove_favorite,
+            commands::preview_import,
+            commands::apply_import,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

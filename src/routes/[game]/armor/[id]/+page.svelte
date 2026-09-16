@@ -54,6 +54,8 @@
       title={armor.name}
       subtitle={slotLabel[armor.slot_type] ?? armor.slot_type}
       iconUrl={armor.icon_url}
+      favKind="armor"
+      favId={armor.id}
       tags={[
         { label: armor.rank, tone: rankTone(armor.rank) },
         {

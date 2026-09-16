@@ -12,6 +12,8 @@
   import EmptyState from '$lib/components/ui/empty-state.svelte'
   import SearchField from '$lib/components/ui/search-field.svelte'
   import ItemIcon from '$lib/components/item-icon.svelte'
+  import FavoriteButton from '$lib/components/favorite-button.svelte'
+  import { favorites } from '$lib/stores/favorites'
   import { browser } from '$app/environment'
   import { toolbarTarget } from '$lib/stores/toolbar'
   import { toolbarPortal } from '$lib/actions/toolbar-portal'
@@ -57,7 +59,7 @@
       restoreScrollY(y)
     }
   })
-  import { LayoutGrid, Table2, FlaskConical } from '@lucide/svelte'
+  import { LayoutGrid, Table2, FlaskConical, Star } from '@lucide/svelte'
 
   const game = $derived($selectedGame)
   const dbId = $derived(game?.dbId)
@@ -80,6 +82,13 @@
   )
   let categoryFilter = $state<string>('all')
   let searchTerm = $state('')
+  let showFavsOnly = $state(false)
+
+  $effect(() => {
+    if (game) void favorites.ensure(game.dbId)
+  })
+
+  const favKeys = $derived(new Set(game ? [...($favorites.get(game.dbId)?.keys() ?? [])] : []))
   let sortBy = $state<string>('chest') // chest = game box (id) faithful to ISO DATA.BIN file 15
   // View preference: cards by default, last selection persisted (global, not per-game).
   const ITEMS_VIEW_KEY = 'mh-aio:items-view'
@@ -102,6 +111,7 @@
     void categoryFilter
     void searchTerm
     void sortBy
+    void showFavsOnly
     if (skipReset) {
       skipReset = false
       return
@@ -117,6 +127,7 @@
     let arr = items
       .filter((i) => categoryFilter === 'all' || i.category === categoryFilter)
       .filter((i) => searchTerm === '' || normKey(i.name).includes(normKey(searchTerm)))
+      .filter((i) => !showFavsOnly || favKeys.has(`item:${i.id}`))
     // Sorting: chest is already id order from DB, keep stable; other sorts client-side
     if (sortBy === 'name') arr = [...arr].sort((a, b) => a.name.localeCompare(b.name))
     else if (sortBy === 'rarity') arr = [...arr].sort((a, b) => (b.rarity ?? 0) - (a.rarity ?? 0))
@@ -199,6 +210,21 @@
           <option value="price">Sell Price ↓</option>
           <option value="category">Category</option>
         </select>
+        <button
+          type="button"
+          onclick={() => (showFavsOnly = !showFavsOnly)}
+          aria-pressed={showFavsOnly}
+          title="Show favorites only"
+          class="inline-flex items-center gap-1.5 px-4 min-h-[44px] sm:min-h-[36px] rounded-full border text-xs font-medium focus-visible:outline-none focus-visible:ring-2 {showFavsOnly
+            ? 'border-[var(--theme-accent)]/50 bg-[var(--theme-accent)]/10 text-[var(--theme-accent)]'
+            : 'border-[var(--theme-border)] bg-[var(--theme-bg-surface)] text-gray-400 hover:text-gray-200'}"
+        >
+          <Star
+            class="h-3.5 w-3.5 {showFavsOnly ? 'fill-[var(--theme-accent)]' : ''}"
+            aria-hidden="true"
+          />
+          Favorites
+        </button>
         <div
           class="hidden md:inline-flex rounded-full border border-[var(--theme-border)] overflow-hidden ml-auto"
           role="group"
@@ -313,6 +339,9 @@
                 >
                   {item.sell_price ?? '—'}{item.sell_price != null ? 'z' : ''}
                 </td>
+                <td class="px-2 py-2 w-12">
+                  <FavoriteButton kind="item" id={item.id} name={item.name} size="sm" />
+                </td>
               </tr>
             {/each}
           </tbody>
@@ -321,35 +350,41 @@
     {:else}
       <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
         {#each visible as item (item.id)}
-          <button onclick={() => open(item.id)} class="text-left rounded-lg min-h-[44px]">
-            <Card variant="themed" class="p-3 cursor-pointer">
-              <div class="flex items-center gap-3">
-                <ItemIcon
-                  iconUrl={item.icon_url}
-                  iconName={item.icon_name}
-                  iconColor={item.icon_color}
-                  size={36}
-                  alt=""
-                />
-                <div class="min-w-0 flex-1">
-                  <p class="font-medium text-sm text-gray-100 truncate">{item.name}</p>
-                  <p class="text-[10px] uppercase tracking-wide text-gray-400 mt-0.5">
-                    {fallbackLabel(item.category)}{item.subcategory ? ` • ${item.subcategory}` : ''} ·
-                    R{item.rarity ?? 1}
-                    {#if item.carry_limit}
-                      · x{item.carry_limit}
-                    {/if}
-                  </p>
+          <div class="relative">
+            <button onclick={() => open(item.id)} class="text-left rounded-lg min-h-[44px] w-full">
+              <Card variant="themed" class="p-3 cursor-pointer">
+                <div class="flex items-center gap-3">
+                  <ItemIcon
+                    iconUrl={item.icon_url}
+                    iconName={item.icon_name}
+                    iconColor={item.icon_color}
+                    size={36}
+                    alt=""
+                  />
+                  <div class="min-w-0 flex-1">
+                    <p class="font-medium text-sm text-gray-100 truncate">{item.name}</p>
+                    <p class="text-[10px] uppercase tracking-wide text-gray-400 mt-0.5">
+                      {fallbackLabel(item.category)}{item.subcategory
+                        ? ` • ${item.subcategory}`
+                        : ''} · R{item.rarity ?? 1}
+                      {#if item.carry_limit}
+                        · x{item.carry_limit}
+                      {/if}
+                    </p>
+                  </div>
+                  {#if item.sell_price !== null && item.sell_price !== undefined}
+                    <span
+                      class="text-xs font-medium tabular-nums shrink-0"
+                      style="color: var(--theme-accent);">{item.sell_price}z</span
+                    >
+                  {/if}
                 </div>
-                {#if item.sell_price !== null && item.sell_price !== undefined}
-                  <span
-                    class="text-xs font-medium tabular-nums shrink-0"
-                    style="color: var(--theme-accent);">{item.sell_price}z</span
-                  >
-                {/if}
-              </div>
-            </Card>
-          </button>
+              </Card>
+            </button>
+            <div class="absolute top-2 right-2">
+              <FavoriteButton kind="item" id={item.id} name={item.name} size="sm" />
+            </div>
+          </div>
         {/each}
       </div>
     {/if}

@@ -61,6 +61,8 @@
     <DetailHeader
       title={set.name}
       subtitle="{set.pieces.length} pieces · {set.pieces[0]?.rank ?? ''}"
+      favKind="armor_set"
+      favId={set.id}
       tags={[
         {
           label: `${set.pieces.length} pcs`,

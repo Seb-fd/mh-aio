@@ -57,6 +57,8 @@
       title={deco.name}
       subtitle="Jewel · Decoration"
       iconUrl={deco.icon_url}
+      favKind="decoration"
+      favId={deco.id}
       tags={[
         {
           label: `Slot ${deco.slot_size ?? '-'}`,

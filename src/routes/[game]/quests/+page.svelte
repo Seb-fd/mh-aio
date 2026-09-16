@@ -11,7 +11,9 @@
   import EmptyState from '$lib/components/ui/empty-state.svelte'
   import ItemIcon from '$lib/components/item-icon.svelte'
   import SearchField from '$lib/components/ui/search-field.svelte'
-  import { ChevronRight } from '@lucide/svelte'
+  import FavoriteButton from '$lib/components/favorite-button.svelte'
+  import { favorites } from '$lib/stores/favorites'
+  import { ChevronRight, Star } from '@lucide/svelte'
   import { toolbarTarget } from '$lib/stores/toolbar'
   import { toolbarPortal } from '$lib/actions/toolbar-portal'
   import { captureScrollY, restoreScrollY } from '$lib/utils/scroll-restore'
@@ -75,6 +77,13 @@
   )
   let hubFilter = $state<string>('elder')
   let searchTerm = $state('')
+  let showFavsOnly = $state(false)
+
+  $effect(() => {
+    if (game) void favorites.ensure(game.dbId)
+  })
+
+  const favKeys = $derived(new Set(game ? [...($favorites.get(game.dbId)?.keys() ?? [])] : []))
 
   const hubMeta: Record<string, { label: string; sub: string }> = {
     low_high: { label: 'Low / High Rank', sub: '★1-9 · All quests' },
@@ -151,7 +160,8 @@
   const filtered = $derived(
     quests
       .filter((q) => q.hub === hubFilter)
-      .filter((q) => searchTerm === '' || normKey(q.name).includes(normKey(searchTerm))),
+      .filter((q) => searchTerm === '' || normKey(q.name).includes(normKey(searchTerm)))
+      .filter((q) => !showFavsOnly || favKeys.has(`quest:${q.id}`)),
   )
 
   // Quest categories (assigned/optional/...) only exist for MHW. MH2G/MHP3rd
@@ -403,46 +413,66 @@
           <option value={hub}>{meta.label} ({hubCounts[hub] ?? 0})</option>
         {/each}
       </select>
+      <button
+        type="button"
+        onclick={() => (showFavsOnly = !showFavsOnly)}
+        aria-pressed={showFavsOnly}
+        title="Show favorites only"
+        class="inline-flex items-center gap-1.5 px-4 min-h-[44px] sm:min-h-[36px] rounded-full border text-xs font-medium focus-visible:outline-none focus-visible:ring-2 {showFavsOnly
+          ? 'border-[var(--theme-accent)]/50 bg-[var(--theme-accent)]/10 text-[var(--theme-accent)]'
+          : 'border-[var(--theme-border)] bg-[var(--theme-bg-surface)] text-gray-400 hover:text-gray-200'}"
+      >
+        <Star
+          class="h-3.5 w-3.5 {showFavsOnly ? 'fill-[var(--theme-accent)]' : ''}"
+          aria-hidden="true"
+        />
+        Favorites
+      </button>
     </div>
 
     {@const meta = hubMeta[hubFilter] ?? { label: fallbackLabel(hubFilter), sub: '' }}
 
     {#snippet questRow(quest: Quest, i: number)}
-      <button
-        onclick={() => open(quest.id)}
-        aria-label="Open {quest.name}"
-        class="group w-full text-left rounded-lg focus-visible:outline-none focus-visible:ring-2"
-        style="--i: {i};"
-      >
-        <Card variant="themed" class="p-3 cursor-pointer">
-          <div class="flex items-center gap-3">
-            <ItemIcon
-              iconUrl={quest.icon_url}
-              iconName={quest.icon_name}
-              iconColor={quest.icon_color}
-              size={32}
-              alt=""
-            />
-            <div class="min-w-0 flex-1">
-              <h3 class="font-semibold text-gray-100 text-sm truncate">{quest.name}</h3>
-              <p class="text-[11px] text-[var(--theme-text-muted)] mt-0.5 truncate">
-                {[starsLabel(quest), quest.type ?? '', quest.category ?? '']
-                  .filter((s) => s !== '')
-                  .join(' · ')}
-              </p>
+      <div class="relative">
+        <button
+          onclick={() => open(quest.id)}
+          aria-label="Open {quest.name}"
+          class="group w-full text-left rounded-lg focus-visible:outline-none focus-visible:ring-2"
+          style="--i: {i};"
+        >
+          <Card variant="themed" class="p-3 cursor-pointer">
+            <div class="flex items-center gap-3">
+              <ItemIcon
+                iconUrl={quest.icon_url}
+                iconName={quest.icon_name}
+                iconColor={quest.icon_color}
+                size={32}
+                alt=""
+              />
+              <div class="min-w-0 flex-1">
+                <h3 class="font-semibold text-gray-100 text-sm truncate">{quest.name}</h3>
+                <p class="text-[11px] text-[var(--theme-text-muted)] mt-0.5 truncate">
+                  {[starsLabel(quest), quest.type ?? '', quest.category ?? '']
+                    .filter((s) => s !== '')
+                    .join(' · ')}
+                </p>
+              </div>
+              {#if quest.is_key_quest}<Badge tone="key">Key</Badge>{/if}
+              {#if quest.is_urgent}<Badge tone="urgent">Urgent</Badge>{/if}
+              {#if quest.rank}
+                <Badge tone={rankTone(quest.rank)}>{quest.rank}</Badge>
+              {/if}
+              <ChevronRight
+                class="h-4 w-4 shrink-0 text-[var(--theme-text-muted)] opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100"
+                aria-hidden="true"
+              />
             </div>
-            {#if quest.is_key_quest}<Badge tone="key">Key</Badge>{/if}
-            {#if quest.is_urgent}<Badge tone="urgent">Urgent</Badge>{/if}
-            {#if quest.rank}
-              <Badge tone={rankTone(quest.rank)}>{quest.rank}</Badge>
-            {/if}
-            <ChevronRight
-              class="h-4 w-4 shrink-0 text-[var(--theme-text-muted)] opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100"
-              aria-hidden="true"
-            />
-          </div>
-        </Card>
-      </button>
+          </Card>
+        </button>
+        <div class="absolute top-2 right-2">
+          <FavoriteButton kind="quest" id={quest.id} name={quest.name} size="sm" />
+        </div>
+      </div>
     {/snippet}
 
     <div class="mb-6">

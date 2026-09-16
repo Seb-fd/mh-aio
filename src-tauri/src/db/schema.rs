@@ -90,6 +90,7 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             icon_name TEXT,
             icon_color TEXT,
             icon_url TEXT,
+            icon_url_lg TEXT,
             language TEXT DEFAULT 'en'
         );
 
@@ -415,6 +416,14 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             version INTEGER NOT NULL,
             applied_at TEXT NOT NULL DEFAULT (datetime('now'))
         );
+
+        -- Applied data patches: targeted backfills (see seed::apply_data_patches).
+        -- Unlike a DATA_VERSION bump (full re-seed), each patch runs once and
+        -- costs a single PK lookup per boot afterwards.
+        CREATE TABLE IF NOT EXISTS data_patches (
+            name TEXT PRIMARY KEY,
+            applied_at TEXT NOT NULL DEFAULT (datetime('now'))
+        );
     ",
     )?;
 
@@ -464,18 +473,32 @@ fn add_idempotency_constraints(conn: &Connection) -> Result<()> {
     // guarantee), so `CREATE UNIQUE INDEX` would fail. Deduplicate first (keep
     // the lowest rowid), then create the index. This is idempotent — after the
     // first pass there are no duplicates left.
-    conn.execute_batch("
-        DELETE FROM monster_equipment WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_equipment GROUP BY game_id, monster_id, equipment_kind, equipment_id);
-        DELETE FROM item_combine WHERE rowid NOT IN (SELECT MIN(rowid) FROM item_combine GROUP BY result_item_id, component_item_id, combine_type);
-        DELETE FROM weapon_craft WHERE rowid NOT IN (SELECT MIN(rowid) FROM weapon_craft GROUP BY weapon_id, craft_kind, item_id);
-        DELETE FROM weapon_materials WHERE rowid NOT IN (SELECT MIN(rowid) FROM weapon_materials GROUP BY weapon_id, item_id);
-        DELETE FROM armor_materials WHERE rowid NOT IN (SELECT MIN(rowid) FROM armor_materials GROUP BY armor_id, item_id);
-        DELETE FROM quest_rewards WHERE rowid NOT IN (SELECT MIN(rowid) FROM quest_rewards GROUP BY quest_id, item_id, IFNULL(condition, ''));
-        DELETE FROM monster_drops WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_drops GROUP BY monster_id, item_id, method, IFNULL(part, ''), IFNULL(rank, ''), IFNULL(condition, ''));
-        DELETE FROM monster_weaknesses WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_weaknesses GROUP BY monster_id, IFNULL(part_name, ''));
-        DELETE FROM item_sources WHERE rowid NOT IN (SELECT MIN(rowid) FROM item_sources GROUP BY item_id, source_type, IFNULL(source_id, -1), IFNULL(quantity_min, -1), IFNULL(quantity_max, -1), IFNULL(probability, -1), IFNULL(location, ''), IFNULL(conditions, ''));
-        DELETE FROM melder_recipes WHERE rowid NOT IN (SELECT MIN(rowid) FROM melder_recipes GROUP BY game_id, result_item_id);
-    ")?;
+    //
+    // Warm-boot fast path: the dedupe DELETEs are full-table GROUP BY scans
+    // over the largest junction tables. Once the UNIQUE index exists,
+    // duplicates are impossible by construction, so the scan is provably a
+    // no-op and is skipped (checked via sqlite_master, microseconds).
+    let existing: std::collections::HashSet<String> = conn
+        .prepare("SELECT name FROM sqlite_master WHERE type = 'index'")?
+        .query_map([], |r| r.get(0))?
+        .collect::<std::result::Result<_, _>>()?;
+    let dedupes = [
+        ("uq_monster_equipment", "DELETE FROM monster_equipment WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_equipment GROUP BY game_id, monster_id, equipment_kind, equipment_id);"),
+        ("uq_item_combine", "DELETE FROM item_combine WHERE rowid NOT IN (SELECT MIN(rowid) FROM item_combine GROUP BY result_item_id, component_item_id, combine_type);"),
+        ("uq_weapon_craft", "DELETE FROM weapon_craft WHERE rowid NOT IN (SELECT MIN(rowid) FROM weapon_craft GROUP BY weapon_id, craft_kind, item_id);"),
+        ("uq_weapon_materials", "DELETE FROM weapon_materials WHERE rowid NOT IN (SELECT MIN(rowid) FROM weapon_materials GROUP BY weapon_id, item_id);"),
+        ("uq_armor_materials", "DELETE FROM armor_materials WHERE rowid NOT IN (SELECT MIN(rowid) FROM armor_materials GROUP BY armor_id, item_id);"),
+        ("uq_quest_rewards", "DELETE FROM quest_rewards WHERE rowid NOT IN (SELECT MIN(rowid) FROM quest_rewards GROUP BY quest_id, item_id, IFNULL(condition, ''));"),
+        ("uq_monster_drops", "DELETE FROM monster_drops WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_drops GROUP BY monster_id, item_id, method, IFNULL(part, ''), IFNULL(rank, ''), IFNULL(condition, ''));"),
+        ("uq_monster_weaknesses", "DELETE FROM monster_weaknesses WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_weaknesses GROUP BY monster_id, IFNULL(part_name, ''));"),
+        ("uq_item_sources", "DELETE FROM item_sources WHERE rowid NOT IN (SELECT MIN(rowid) FROM item_sources GROUP BY item_id, source_type, IFNULL(source_id, -1), IFNULL(quantity_min, -1), IFNULL(quantity_max, -1), IFNULL(probability, -1), IFNULL(location, ''), IFNULL(conditions, ''));"),
+        ("uq_melder_recipes", "DELETE FROM melder_recipes WHERE rowid NOT IN (SELECT MIN(rowid) FROM melder_recipes GROUP BY game_id, result_item_id);"),
+    ];
+    for (index, sql) in dedupes {
+        if !existing.contains(index) {
+            conn.execute_batch(sql)?;
+        }
+    }
 
     conn.execute_batch("
         CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_equipment ON monster_equipment(game_id, monster_id, equipment_kind, equipment_id);
@@ -570,6 +593,9 @@ fn apply_migrations(conn: &Connection) -> Result<()> {
     add_column_if_missing(conn, "monsters", "icon_name", "TEXT")?;
     add_column_if_missing(conn, "monsters", "icon_color", "TEXT")?;
     add_column_if_missing(conn, "monsters", "icon_url", "TEXT")?;
+    // Large monster portrait (256px masters for Rise/Wilds) — lists render the
+    // 96px `-sm` variant in icon_url; detail pages use icon_url_lg when set.
+    add_column_if_missing(conn, "monsters", "icon_url_lg", "TEXT")?;
     // Item chest order (MHW+Iceborne bolsa del juego) — faithful to in-game item box order
     add_column_if_missing(conn, "items", "sort_order", "INTEGER")?;
     let _ = conn.execute(

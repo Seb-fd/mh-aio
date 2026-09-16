@@ -14,6 +14,8 @@
     sharpnessValues,
     SHARP_COLORS_ARR as SHARP_COLORS,
     SHARP_LABELS,
+    parseUpgradeParent,
+    buildWeaponForest,
   } from '$lib/utils/mh'
   import { Hammer, ArrowUp, CornerDownRight } from '@lucide/svelte'
 
@@ -54,46 +56,67 @@
     }
   })
 
-  const byName = $derived(new Map(allWeapons.map((w) => [w.name, w])))
-
-  const baseWeapon = $derived<Weapon | null>(
-    weapon?.upgrade_path ? (byName.get(weapon.upgrade_path) ?? null) : null,
+  // ID-keyed forest shared by the walk-up and the subtree (names repeat
+  // across variants, e.g. Wilds Artian x3 — see mh.ts buildWeaponForest).
+  const forest = $derived(
+    buildWeaponForest(allWeapons, (a, b) => (a.attack ?? 0) - (b.attack ?? 0)),
   )
 
-  interface TreeNode {
+  const parentName = $derived(parseUpgradeParent(weapon?.upgrade_path))
+
+  const baseWeapon = $derived<Weapon | null>(
+    weapon ? (forest.byId.get(forest.parentOf.get(weapon.id) ?? -1) ?? null) : null,
+  )
+
+  // Flat rows, built iteratively — the subtree from the furthest ancestor
+  // is rendered without recursion (no call-stack overflow at any depth).
+  interface DetailRow {
     weapon: Weapon
-    children: TreeNode[]
+    depth: number
   }
 
+  const MAX_INDENT = 8
+
   // Full subtree rooted at the current weapon's furthest ancestor (tree-style like weapon trees)
-  const treeRoots = $derived.by<TreeNode[]>(() => {
+  const treeRows = $derived.by<DetailRow[]>(() => {
     if (!weapon) return []
-    // walk up to the root
+    // walk up to the root (visited-set + step cap: stale rows can form cycles)
     let root: Weapon = weapon
+    const seenUp = new Set<number>([weapon.id])
     let guard = 0
-    while (root.upgrade_path && guard++ < 40) {
-      const parent = byName.get(root.upgrade_path)
-      if (!parent) break
+    while (guard++ < 40) {
+      const pid = forest.parentOf.get(root.id)
+      if (pid == null) break
+      const parent = forest.byId.get(pid)
+      if (!parent || seenUp.has(parent.id)) break
+      seenUp.add(parent.id)
       root = parent
     }
-    // build tree from root
-    const childrenOf = new Map<string, Weapon[]>()
-    for (const w of allWeapons) {
-      if (!w.upgrade_path) continue
-      const arr = childrenOf.get(w.upgrade_path) ?? []
-      arr.push(w)
-      childrenOf.set(w.upgrade_path, arr)
+    // iterative DFS from root (no recursion anywhere)
+    const rows: DetailRow[] = []
+    const emitted = new Set<number>()
+    const stack: { w: Weapon; depth: number; childIdx: number; kids: Weapon[] }[] = []
+    const push = (w: Weapon, depth: number) => {
+      const kids = (forest.childrenOf.get(w.id) ?? []).filter((c) => !emitted.has(c.id))
+      emitted.add(w.id)
+      rows.push({ weapon: w, depth })
+      stack.push({ w, depth, childIdx: 0, kids })
     }
-    const build = (w: Weapon): TreeNode => ({
-      weapon: w,
-      children: (childrenOf.get(w.name) ?? [])
-        .sort((a, b) => (a.attack ?? 0) - (b.attack ?? 0))
-        .map(build),
-    })
-    return [build(root)]
+    push(root, 0)
+    while (stack.length > 0) {
+      const top = stack[stack.length - 1]
+      if (top.childIdx >= top.kids.length) {
+        stack.pop()
+        continue
+      }
+      const child = top.kids[top.childIdx++]
+      if (emitted.has(child.id)) continue
+      push(child, top.depth + 1)
+    }
+    return rows
   })
 
-  const isUpgrade = $derived(!!weapon?.upgrade_path)
+  const isUpgrade = $derived(parentName != null)
 
   // Helpers now from $lib/utils/mh (DRY)
   const sharpnessSegments = sharpnessValues
@@ -127,6 +150,8 @@
       title={weapon.name}
       subtitle={weapon.weapon_type}
       iconUrl={weapon.icon_url}
+      favKind="weapon"
+      favId={weapon.id}
       tags={[
         {
           label: `Rarity ${weapon.rarity ?? 1}`,
@@ -190,13 +215,13 @@
         <p class="text-[10px] uppercase tracking-wide text-gray-400">Defense Bonus</p>
         <p class="text-lg font-bold text-gray-100 mt-1">{weapon.defense_bonus ?? 0}</p>
       </div>
-      {#if weapon.upgrade_path}
+      {#if parentName}
         <div
           class="rounded-lg border themed-card p-3 text-center col-span-2 sm:col-span-1 flex flex-col justify-center overflow-hidden"
         >
           <p class="text-[10px] uppercase tracking-wide text-gray-400">Upgraded From</p>
           <p class="text-xs font-semibold text-gray-200 mt-1 truncate px-2">
-            {weapon.upgrade_path}
+            {parentName}
           </p>
         </div>
       {/if}
@@ -221,13 +246,13 @@
               style="background-color: color-mix(in oklab, var(--theme-accent) 16%, var(--theme-bg-elevated)); border-color: color-mix(in oklab, var(--theme-accent) 45%, transparent); color: var(--theme-accent);"
             >
               <ArrowUp class="h-3.5 w-3.5" aria-hidden="true" /> Crafted from {baseWeapon?.name ??
-                weapon.upgrade_path ??
+                parentName ??
                 ''}
             </button>
           {/if}
         </div>
-        {#each treeRoots as rootNode}
-          {@render treeNode(rootNode, 0)}
+        {#each treeRows as row (row.weapon.id)}
+          {@render detailRow(row)}
         {/each}
       </div>
     </section>
@@ -290,7 +315,7 @@
       <section class="mb-8">
         <h2 class="section-title mb-3">
           Upgrade Materials {isUpgrade
-            ? '(from ' + (baseWeapon?.name ?? weapon.upgrade_path ?? '') + ')'
+            ? '(from ' + (baseWeapon?.name ?? parentName ?? '') + ')'
             : ''}
         </h2>
         <div class="rounded-lg border themed-card p-4">
@@ -308,51 +333,49 @@
   {/if}
 </div>
 
-{#snippet treeNode(node: TreeNode, depth: number)}
-  <div class="min-w-0 {depth > 0 ? 'ml-3 sm:ml-4 pl-2 border-l border-[var(--theme-border)]' : ''}">
+{#snippet detailRow(row: DetailRow)}
+  {@const w = row.weapon}
+  <div
+    class="min-w-0 {row.depth > 0 ? 'ml-3 sm:ml-4 pl-2 border-l border-[var(--theme-border)]' : ''}"
+    style={row.depth > 1
+      ? `margin-left: calc(0.75rem + ${(Math.min(row.depth, MAX_INDENT) - 1) * 0.5}rem);`
+      : ''}
+  >
     <div class="flex items-center gap-1.5 mb-1.5 min-w-0">
-      {#if depth > 0}
+      {#if row.depth > 0}
         <CornerDownRight class="h-3.5 w-3.5 shrink-0 text-gray-600" aria-hidden="true" />
       {/if}
       <button
-        onclick={() => openWeapon(node.weapon.id)}
-        aria-current={node.weapon.id === weapon?.id ? 'page' : undefined}
+        onclick={() => openWeapon(w.id)}
+        aria-current={w.id === weapon?.id ? 'page' : undefined}
         class="flex-1 min-w-0 text-left px-3 min-h-[48px] py-2 rounded-lg border transition-colors motion-safe:transition-colors motion-reduce:transition-none cursor-pointer focus-visible:outline-none focus-visible:ring-2"
-        style={node.weapon.id === weapon?.id
+        style={w.id === weapon?.id
           ? 'background-color: color-mix(in oklab, var(--theme-accent) 20%, var(--theme-bg-elevated)); border-color: color-mix(in oklab, var(--theme-accent) 60%, transparent); color: var(--theme-accent); font-weight: 600;'
           : 'border-color: var(--theme-border); background-color: var(--theme-bg-surface); color: rgb(209 213 219);'}
       >
         <div class="flex items-center gap-2 min-w-0">
           <ItemIcon
-            iconUrl={node.weapon.icon_url}
-            iconName={node.weapon.icon_name}
-            iconColor={node.weapon.icon_color}
+            iconUrl={w.icon_url}
+            iconName={w.icon_name}
+            iconColor={w.icon_color}
             size={20}
             alt=""
           />
           <span
             class="text-[10px] shrink-0 w-9 text-center rounded py-0.5 border border-[var(--theme-border)] tabular-nums"
-            style="color: rgb(156 163 175);">R{node.weapon.rarity ?? 1}</span
+            style="color: rgb(156 163 175);">R{w.rarity ?? 1}</span
           >
-          {#if node.weapon.is_forgeable}
+          {#if w.is_forgeable}
             <Hammer class="h-3 w-3 shrink-0 text-gray-400" aria-label="Forgeable directly" />
           {/if}
-          <span class="text-sm font-medium truncate min-w-0"
-            >{node.weapon.attack ?? 0} · {node.weapon.name}</span
-          >
-          {#if node.weapon.element_type}
-            <span
-              class="text-[11px] {elementColor(node.weapon.element_type)} shrink-0 hidden sm:inline"
-              >{node.weapon.element_type} {node.weapon.element_value ?? 0}</span
+          <span class="text-sm font-medium truncate min-w-0">{w.attack ?? 0} · {w.name}</span>
+          {#if w.element_type}
+            <span class="text-[11px] {elementColor(w.element_type)} shrink-0 hidden sm:inline"
+              >{w.element_type} {w.element_value ?? 0}</span
             >
           {/if}
         </div>
       </button>
     </div>
   </div>
-  {#if node.children.length > 0}
-    {#each node.children as child}
-      {@render treeNode(child, depth + 1)}
-    {/each}
-  {/if}
 {/snippet}

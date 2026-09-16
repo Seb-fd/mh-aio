@@ -9,6 +9,9 @@
   import Skeleton from '$lib/components/ui/skeleton.svelte'
   import EmptyState from '$lib/components/ui/empty-state.svelte'
   import SearchField from '$lib/components/ui/search-field.svelte'
+  import FavoriteButton from '$lib/components/favorite-button.svelte'
+  import { favorites } from '$lib/stores/favorites'
+  import { Star } from '@lucide/svelte'
   import { toolbarTarget } from '$lib/stores/toolbar'
   import { toolbarPortal } from '$lib/actions/toolbar-portal'
   import { captureScrollY, restoreScrollY } from '$lib/utils/scroll-restore'
@@ -55,6 +58,13 @@
     dbErrorText(skillsQuery.isPending, skillsQuery.failureCount, skillsQuery.error),
   )
   let searchTerm = $state('')
+  let showFavsOnly = $state(false)
+
+  $effect(() => {
+    if (game) void favorites.ensure(game.dbId)
+  })
+
+  const favKeys = $derived(new Set(game ? [...($favorites.get(game.dbId)?.keys() ?? [])] : []))
 
   function open(id: number) {
     if (!game) return
@@ -62,7 +72,9 @@
   }
 
   const filtered = $derived(
-    skills.filter((s) => searchTerm === '' || normKey(s.name).includes(normKey(searchTerm))),
+    skills
+      .filter((s) => searchTerm === '' || normKey(s.name).includes(normKey(searchTerm)))
+      .filter((s) => !showFavsOnly || favKeys.has(`skill:${s.id}`)),
   )
 </script>
 
@@ -92,13 +104,30 @@
       hint={game ? `No skills seeded for ${game.shortName}.` : 'Select a game first.'}
     />
   {:else}
-    <div use:toolbarPortal={$toolbarTarget}>
-      <SearchField
-        bind:value={searchTerm}
-        placeholder="Search skills..."
-        label="Search skills"
-        class="sm:w-64"
-      />
+    <div use:toolbarPortal={$toolbarTarget} class="flex flex-col gap-2">
+      <div class="flex flex-wrap gap-2 items-center">
+        <SearchField
+          bind:value={searchTerm}
+          placeholder="Search skills..."
+          label="Search skills"
+          class="sm:w-64"
+        />
+        <button
+          type="button"
+          onclick={() => (showFavsOnly = !showFavsOnly)}
+          aria-pressed={showFavsOnly}
+          title="Show favorites only"
+          class="inline-flex items-center gap-1.5 px-4 min-h-[44px] sm:min-h-[36px] rounded-full border text-xs font-medium focus-visible:outline-none focus-visible:ring-2 {showFavsOnly
+            ? 'border-[var(--theme-accent)]/50 bg-[var(--theme-accent)]/10 text-[var(--theme-accent)]'
+            : 'border-[var(--theme-border)] bg-[var(--theme-bg-surface)] text-gray-400 hover:text-gray-200'}"
+        >
+          <Star
+            class="h-3.5 w-3.5 {showFavsOnly ? 'fill-[var(--theme-accent)]' : ''}"
+            aria-hidden="true"
+          />
+          Favorites
+        </button>
+      </div>
     </div>
 
     {#if filtered.length === 0}
@@ -116,23 +145,28 @@
     {:else}
       <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
         {#each filtered as skill (skill.id)}
-          <button
-            onclick={() => open(skill.id)}
-            aria-label="Open {skill.name}"
-            class="text-left rounded-lg min-h-[44px] focus-visible:outline-none focus-visible:ring-2"
-          >
-            <Card variant="themed" class="p-4 cursor-pointer">
-              <div class="flex items-start justify-between gap-2 mb-1">
-                <h3 class="font-semibold text-gray-100">{skill.name}</h3>
-                {#if skill.max_level}
-                  <Badge tone="neutral">Lv 1-{skill.max_level}</Badge>
+          <div class="relative">
+            <button
+              onclick={() => open(skill.id)}
+              aria-label="Open {skill.name}"
+              class="text-left rounded-lg min-h-[44px] w-full focus-visible:outline-none focus-visible:ring-2"
+            >
+              <Card variant="themed" class="p-4 cursor-pointer">
+                <div class="flex items-start justify-between gap-2 mb-1">
+                  <h3 class="font-semibold text-gray-100">{skill.name}</h3>
+                  {#if skill.max_level}
+                    <Badge tone="neutral">Lv 1-{skill.max_level}</Badge>
+                  {/if}
+                </div>
+                {#if skill.description}
+                  <p class="text-xs text-gray-400 mt-2 line-clamp-2">{skill.description}</p>
                 {/if}
-              </div>
-              {#if skill.description}
-                <p class="text-xs text-gray-400 mt-2 line-clamp-2">{skill.description}</p>
-              {/if}
-            </Card>
-          </button>
+              </Card>
+            </button>
+            <div class="absolute top-2 right-2">
+              <FavoriteButton kind="skill" id={skill.id} name={skill.name} size="sm" />
+            </div>
+          </div>
         {/each}
       </div>
     {/if}

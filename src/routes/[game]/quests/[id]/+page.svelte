@@ -95,6 +95,8 @@
         ? `${quest.name_original} · ${quest.client ?? quest.type ?? ''}`
         : (quest.client ?? quest.type ?? '')}
       iconUrl={quest.icon_url}
+      favKind="quest"
+      favId={quest.id}
       tags={[
         {
           label: fallbackLabel(quest.rank),

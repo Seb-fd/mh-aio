@@ -1,0 +1,6594 @@
+[
+  {
+    "id": 20001,
+    "name": "Antidote Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Poison Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20002,
+    "name": "Geology Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Geologist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20003,
+    "name": "Heavy Artillery Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Heavy Artillery",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20004,
+    "name": "Hungerless Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Hunger Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20005,
+    "name": "Satiated Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Free Meal",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20006,
+    "name": "Protection Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20007,
+    "name": "Meowster Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Palico Rally",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20008,
+    "name": "Botany Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Botanist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20009,
+    "name": "Tip Toe Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stealth",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20010,
+    "name": "Flight Jewel 2",
+    "slot_size": 2,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Airborne",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20012,
+    "name": "Mirewalker Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Aquatic/Polar Mobility",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20013,
+    "name": "Specimen Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Entomologist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20014,
+    "name": "Miasma Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Effluvia Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20015,
+    "name": "Scent Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Scenthound",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20016,
+    "name": "Intimidator Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Intimidator",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20017,
+    "name": "Crisis Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Resuscitate",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20018,
+    "name": "Antipara Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Paralysis Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20019,
+    "name": "Fortitude Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Fortify",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20020,
+    "name": "Water Res Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Water Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20021,
+    "name": "Suture Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Bleeding Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20022,
+    "name": "Dragon Res Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Dragon Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20023,
+    "name": "Fire Res Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Fire Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20024,
+    "name": "Ice Res Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Ice Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20025,
+    "name": "Def Lock Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Iron Skin",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20026,
+    "name": "Thunder Res Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Thunder Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20027,
+    "name": "Pep Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Sleep Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20028,
+    "name": "Antiblast Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Blast Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20029,
+    "name": "Maintenance Jewel 1",
+    "slot_size": 1,
+    "rarity": 5,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20030,
+    "name": "Gobbler Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Speed Eating",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20031,
+    "name": "Physique Jewel 2",
+    "slot_size": 2,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20032,
+    "name": "Blaze Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20033,
+    "name": "Evasion Jewel 2",
+    "slot_size": 2,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20034,
+    "name": "Jumping Jewel 2",
+    "slot_size": 2,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Evade Extender",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20035,
+    "name": "Sheath Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Quick Sheath",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20036,
+    "name": "Friendship Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Wide-Range",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20037,
+    "name": "Enduring Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Item Prolonger",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20038,
+    "name": "Medicine Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20039,
+    "name": "Grinder Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Speed Sharpening",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20040,
+    "name": "Steadfast Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stun Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20041,
+    "name": "Bomber Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Bombardier",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20042,
+    "name": "Recovery Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Recovery Speed",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20043,
+    "name": "Slider Jewel 2",
+    "slot_size": 2,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Affinity Sliding",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20044,
+    "name": "Defense Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Defense Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20045,
+    "name": "Stonethrower Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Slinger Capacity",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20046,
+    "name": "Footing Jewel 2",
+    "slot_size": 2,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Tremor Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20047,
+    "name": "Brace Jewel 3",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Flinch Free",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20048,
+    "name": "Wind Resist Jewel 2",
+    "slot_size": 2,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Windproof",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20049,
+    "name": "Earplug Jewel 3",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Earplugs",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20050,
+    "name": "Vitality Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20051,
+    "name": "Resistor Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Blight Resistance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20052,
+    "name": "Sonorous Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Horn Maestro",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20053,
+    "name": "KO Jewel 2",
+    "slot_size": 2,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20054,
+    "name": "Stream Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20055,
+    "name": "Frost Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Ice Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20056,
+    "name": "Bolt Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Thunder Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20057,
+    "name": "Dragon Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20058,
+    "name": "Venom Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Poison Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20059,
+    "name": "Poisoncoat Jewel 3",
+    "slot_size": 3,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Poison Functionality",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20060,
+    "name": "Expert Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20061,
+    "name": "Tenderizer Jewel 2",
+    "slot_size": 2,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Weakness Exploit",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20062,
+    "name": "Destroyer Jewel 2",
+    "slot_size": 2,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Partbreaker",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20063,
+    "name": "Elementless Jewel 2",
+    "slot_size": 2,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Non-elemental Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20064,
+    "name": "Drain Jewel 1",
+    "slot_size": 1,
+    "rarity": 6,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stamina Thief",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20065,
+    "name": "Paracoat Jewel 3",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Para Functionality",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20066,
+    "name": "Sharp Jewel 2",
+    "slot_size": 2,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Protective Polish",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20067,
+    "name": "Shield Jewel 2",
+    "slot_size": 2,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20068,
+    "name": "Dragonseal Jewel 3",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Elderseal Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20069,
+    "name": "Trueshot Jewel 1",
+    "slot_size": 1,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Special Ammo Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20070,
+    "name": "Enhancer Jewel 2",
+    "slot_size": 2,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Power Prolonger",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20071,
+    "name": "Forceshot Jewel 3",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Normal Shots",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20072,
+    "name": "Furor Jewel 2",
+    "slot_size": 2,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Resentment",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20073,
+    "name": "Potential Jewel 2",
+    "slot_size": 2,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Heroics",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20074,
+    "name": "Paralyzer Jewel 1",
+    "slot_size": 1,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Paralysis Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20075,
+    "name": "Sleep Jewel 1",
+    "slot_size": 1,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Sleep Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20076,
+    "name": "Ironwall Jewel 1",
+    "slot_size": 1,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20077,
+    "name": "Refresh Jewel 2",
+    "slot_size": 2,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stamina Surge",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20078,
+    "name": "Blast Jewel 1",
+    "slot_size": 1,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Blast Attack",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20079,
+    "name": "Sleepcoat Jewel 3",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Sleep Functionality",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20080,
+    "name": "Blastcoat Jewel 3",
+    "slot_size": 3,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Blast Functionality",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20081,
+    "name": "Throttle Jewel 2",
+    "slot_size": 2,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Latent Power",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20082,
+    "name": "Challenger Jewel 2",
+    "slot_size": 2,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Agitator",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20083,
+    "name": "Attack Jewel 1",
+    "slot_size": 1,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20084,
+    "name": "Flawless Jewel 2",
+    "slot_size": 2,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Peak Performance",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20085,
+    "name": "Magazine Jewel 2",
+    "slot_size": 2,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Capacity Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20086,
+    "name": "Mighty Jewel 2",
+    "slot_size": 2,
+    "rarity": 7,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Maximum Might",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20087,
+    "name": "Sprinter Jewel 2",
+    "slot_size": 2,
+    "rarity": 8,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Marathon Runner",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20088,
+    "name": "Critical Jewel 2",
+    "slot_size": 2,
+    "rarity": 8,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Critical Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20089,
+    "name": "Artillery Jewel 1",
+    "slot_size": 1,
+    "rarity": 8,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Artillery",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20090,
+    "name": "Fungiform Jewel 1",
+    "slot_size": 1,
+    "rarity": 8,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Mushroomancer",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20091,
+    "name": "Release Jewel 3",
+    "slot_size": 3,
+    "rarity": 8,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20092,
+    "name": "Spread Jewel 3",
+    "slot_size": 3,
+    "rarity": 8,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Spread/Power Shots",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20093,
+    "name": "Charger Jewel 2",
+    "slot_size": 2,
+    "rarity": 8,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20094,
+    "name": "Handicraft Jewel 3",
+    "slot_size": 3,
+    "rarity": 8,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20095,
+    "name": "Mighty Bow Jewel 2",
+    "slot_size": 2,
+    "rarity": 8,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Bow Charge Plus",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20096,
+    "name": "Mind's Eye Jewel 2",
+    "slot_size": 2,
+    "rarity": 8,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Mind's Eye/Ballistics",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20097,
+    "name": "Draw Jewel 2",
+    "slot_size": 2,
+    "rarity": 8,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Critical Draw",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20098,
+    "name": "Pierce Jewel 3",
+    "slot_size": 3,
+    "rarity": 8,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Piercing Shots",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20099,
+    "name": "Phoenix Jewel 3",
+    "slot_size": 3,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Coalescence",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20100,
+    "name": "Fire Res Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Fire Resistance",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20101,
+    "name": "Water Res Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Water Resistance",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20102,
+    "name": "Ice Res Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Ice Resistance",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20103,
+    "name": "Thunder Res Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Thunder Resistance",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20104,
+    "name": "Dragon Res Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Dragon Resistance",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20105,
+    "name": "Blaze Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20106,
+    "name": "Stream Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20107,
+    "name": "Frost Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Ice Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20108,
+    "name": "Bolt Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Thunder Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20109,
+    "name": "Dragon Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20110,
+    "name": "Venom Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Poison Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20111,
+    "name": "Paralyzer Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Paralysis Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20112,
+    "name": "Sleep Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Sleep Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20113,
+    "name": "Blast Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Blast Attack",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20114,
+    "name": "Hard Fire Res Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Fire Resistance",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20115,
+    "name": "Hard Water Res Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Water Resistance",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20116,
+    "name": "Hard Ice Res Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Ice Resistance",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20117,
+    "name": "Hard Thunder Res Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Thunder Resistance",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20118,
+    "name": "Hard Dragon Res Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Dragon Resistance",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20119,
+    "name": "Antidote Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Poison Resistance",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20120,
+    "name": "Antipara Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Paralysis Resistance",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20121,
+    "name": "Pep Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Sleep Resistance",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20122,
+    "name": "Steadfast Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stun Resistance",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20123,
+    "name": "Antiblast Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Blast Resistance",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20124,
+    "name": "Suture Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Bleeding Resistance",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20125,
+    "name": "Def Lock Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Iron Skin",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20126,
+    "name": "Miasma Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Effluvia Resistance",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20127,
+    "name": "Hungerless Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Hunger Resistance",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20128,
+    "name": "Recovery Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Recovery Speed",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20129,
+    "name": "Tip Toe Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stealth",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20130,
+    "name": "Intimidator Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Intimidator",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20131,
+    "name": "Meowster Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Palico Rally",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20132,
+    "name": "Hard Tip Toe Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stealth",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20133,
+    "name": "Hard Intimidator Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Intimidator",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20134,
+    "name": "Hard Meowster Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Palico Rally",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20135,
+    "name": "Trueshot Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Special Ammo Boost",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20136,
+    "name": "Heavy Artillery Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Heavy Artillery",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20137,
+    "name": "Botany Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Botanist",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20138,
+    "name": "Geology Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Geologist",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20139,
+    "name": "Survival Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Survival Expert",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20140,
+    "name": "Mirewalker Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Aquatic/Polar Mobility",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20141,
+    "name": "Specimen Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Entomologist",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20142,
+    "name": "Sonorous Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Horn Maestro",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20143,
+    "name": "Hard Botany Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Botanist",
+        "points": 4
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20144,
+    "name": "Hard Geology Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Geologist",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20145,
+    "name": "Hard Survival Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Survival Expert",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20146,
+    "name": "Hard Specimen Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Entomologist",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20147,
+    "name": "Enduring Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Item Prolonger",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20148,
+    "name": "Defense Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Defense Boost",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20149,
+    "name": "Hard Enduring Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Item Prolonger",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20150,
+    "name": "Hard Defense Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Defense Boost",
+        "points": 3
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20151,
+    "name": "Artillery Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Artillery",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20152,
+    "name": "Earplug Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Earplugs",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20153,
+    "name": "Wind Resist Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Windproof",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20154,
+    "name": "Attack Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Attack Boost",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20155,
+    "name": "Expert Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Critical Eye",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20156,
+    "name": "Handicraft Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Handicraft",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20157,
+    "name": "Throttle Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Latent Power",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20158,
+    "name": "Challenger Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Agitator",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20159,
+    "name": "Potential Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Heroics",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20160,
+    "name": "Furor Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Resentment",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20161,
+    "name": "Physique Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Constitution",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20162,
+    "name": "Evasion Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Evade Window",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20163,
+    "name": "Ironwall Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20164,
+    "name": "Friendship Jewel+ 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Wide-Range",
+        "points": 2
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20165,
+    "name": "Drain/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stamina Thief",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20166,
+    "name": "Fortitude/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Fortify",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20167,
+    "name": "Crisis/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Resuscitate",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20168,
+    "name": "Ironwall/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20169,
+    "name": "Friendship/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Wide-Range",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20170,
+    "name": "Satiated/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Free Meal",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20171,
+    "name": "Stonethrower/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Slinger Capacity",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20172,
+    "name": "Resistor/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Blight Resistance",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20173,
+    "name": "Flight/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Airborne",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20174,
+    "name": "Sprinter/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Marathon Runner",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20175,
+    "name": "Refresh/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stamina Surge",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20176,
+    "name": "Jumping/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Evade Extender",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20177,
+    "name": "Sheath/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Quick Sheath",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20178,
+    "name": "Gobbler/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Speed Eating",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20179,
+    "name": "Grinder/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Speed Sharpening",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20180,
+    "name": "Bomber/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Bombardier",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20181,
+    "name": "Fungiform/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Mushroomancer",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20182,
+    "name": "Slider/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Affinity Sliding",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20183,
+    "name": "Guardian/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20184,
+    "name": "Drain/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stamina Thief",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20185,
+    "name": "Fortitude/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Fortify",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20186,
+    "name": "Crisis/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Resuscitate",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20187,
+    "name": "Ironwall/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20188,
+    "name": "Friendship/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Wide-Range",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20189,
+    "name": "Satiated/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Free Meal",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20190,
+    "name": "Stonethrower/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Slinger Capacity",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20191,
+    "name": "Resistor/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Blight Resistance",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20192,
+    "name": "Flight/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Airborne",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20193,
+    "name": "Sprinter/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Marathon Runner",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20194,
+    "name": "Refresh/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stamina Surge",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20195,
+    "name": "Jumping/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Evade Extender",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20196,
+    "name": "Sheath/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Quick Sheath",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20197,
+    "name": "Gobbler/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Speed Eating",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20198,
+    "name": "Grinder/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Speed Sharpening",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20199,
+    "name": "Bomber/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Bombardier",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20200,
+    "name": "Fungiform/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Mushroomancer",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20201,
+    "name": "Slider/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Affinity Sliding",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20202,
+    "name": "Guardian/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20203,
+    "name": "Drain/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stamina Thief",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20204,
+    "name": "Fortitude/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Fortify",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20205,
+    "name": "Crisis/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Resuscitate",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20206,
+    "name": "Ironwall/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20207,
+    "name": "Friendship/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Wide-Range",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20208,
+    "name": "Satiated/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Free Meal",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20209,
+    "name": "Stonethrower/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Slinger Capacity",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20210,
+    "name": "Resistor/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Blight Resistance",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20211,
+    "name": "Flight/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Airborne",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20212,
+    "name": "Sprinter/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Marathon Runner",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20213,
+    "name": "Refresh/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stamina Surge",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20214,
+    "name": "Jumping/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Evade Extender",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20215,
+    "name": "Sheath/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Quick Sheath",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20216,
+    "name": "Gobbler/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Speed Eating",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20217,
+    "name": "Grinder/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Speed Sharpening",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20218,
+    "name": "Bomber/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Bombardier",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20219,
+    "name": "Fungiform/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Mushroomancer",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20220,
+    "name": "Slider/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Affinity Sliding",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20221,
+    "name": "Guardian/Attack Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 1
+      },
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20222,
+    "name": "Drain/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stamina Thief",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20223,
+    "name": "Fortitude/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Fortify",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20224,
+    "name": "Crisis/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Resuscitate",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20225,
+    "name": "Ironwall/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20226,
+    "name": "Friendship/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Wide-Range",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20227,
+    "name": "Satiated/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Free Meal",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20228,
+    "name": "Stonethrower/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Slinger Capacity",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20229,
+    "name": "Resistor/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Blight Resistance",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20230,
+    "name": "Flight/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Airborne",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20231,
+    "name": "Sprinter/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Marathon Runner",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20232,
+    "name": "Refresh/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stamina Surge",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20233,
+    "name": "Jumping/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Evade Extender",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20234,
+    "name": "Sheath/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Quick Sheath",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20235,
+    "name": "Gobbler/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Speed Eating",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20236,
+    "name": "Grinder/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Speed Sharpening",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20237,
+    "name": "Bomber/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Bombardier",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20238,
+    "name": "Fungiform/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Mushroomancer",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20239,
+    "name": "Slider/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Affinity Sliding",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20240,
+    "name": "Guardian/Expert Jewel 4",
+    "slot_size": 4,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 1
+      },
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20241,
+    "name": "Drain/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stamina Thief",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20242,
+    "name": "Fortitude/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Fortify",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20243,
+    "name": "Crisis/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Resuscitate",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20244,
+    "name": "Ironwall/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20245,
+    "name": "Friendship/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Wide-Range",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20246,
+    "name": "Satiated/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Free Meal",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20247,
+    "name": "Stonethrower/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Slinger Capacity",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20248,
+    "name": "Resistor/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Blight Resistance",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20249,
+    "name": "Flight/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Airborne",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20250,
+    "name": "Sprinter/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Marathon Runner",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20251,
+    "name": "Refresh/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stamina Surge",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20252,
+    "name": "Jumping/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Evade Extender",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20253,
+    "name": "Sheath/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Quick Sheath",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20254,
+    "name": "Gobbler/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Speed Eating",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20255,
+    "name": "Grinder/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Speed Sharpening",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20256,
+    "name": "Bomber/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Bombardier",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20257,
+    "name": "Fungiform/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Mushroomancer",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20258,
+    "name": "Slider/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Affinity Sliding",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20259,
+    "name": "Guardian/Release Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 1
+      },
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20260,
+    "name": "Drain/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stamina Thief",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20261,
+    "name": "Fortitude/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Fortify",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20262,
+    "name": "Crisis/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Resuscitate",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20263,
+    "name": "Ironwall/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20264,
+    "name": "Friendship/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Wide-Range",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20265,
+    "name": "Satiated/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Free Meal",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20266,
+    "name": "Stonethrower/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Slinger Capacity",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20267,
+    "name": "Resistor/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Blight Resistance",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20268,
+    "name": "Flight/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Airborne",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20269,
+    "name": "Sprinter/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Marathon Runner",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20270,
+    "name": "Refresh/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Stamina Surge",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20271,
+    "name": "Jumping/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Evade Extender",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20272,
+    "name": "Sheath/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Quick Sheath",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20273,
+    "name": "Gobbler/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Speed Eating",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20274,
+    "name": "Grinder/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Speed Sharpening",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20275,
+    "name": "Bomber/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Bombardier",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20276,
+    "name": "Fungiform/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Mushroomancer",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20277,
+    "name": "Slider/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Affinity Sliding",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20278,
+    "name": "Guardian/Handicraft Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 1
+      },
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20279,
+    "name": "Footing/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Tremor Resistance",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20280,
+    "name": "Charger/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20281,
+    "name": "Enhancer/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Power Prolonger",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20282,
+    "name": "Destroyer/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Partbreaker",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20283,
+    "name": "KO/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20284,
+    "name": "Potential/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Heroics",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20285,
+    "name": "Wind Resist/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Windproof",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20286,
+    "name": "Draw/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Critical Draw",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20287,
+    "name": "Throttle/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Latent Power",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20288,
+    "name": "Challenger/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Agitator",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20289,
+    "name": "Flawless/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Peak Performance",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20290,
+    "name": "Furor/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Resentment",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20291,
+    "name": "Mighty/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Maximum Might",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20292,
+    "name": "Brace/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Flinch Free",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20293,
+    "name": "Phoenix/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Coalescence",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20294,
+    "name": "Earplug/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Earplugs",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20295,
+    "name": "Critical/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Critical Boost",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20296,
+    "name": "Tenderizer/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Weakness Exploit",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20297,
+    "name": "Handicraft/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Handicraft",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20298,
+    "name": "Release/Protection Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      },
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20299,
+    "name": "Footing/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Tremor Resistance",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20300,
+    "name": "Charger/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20301,
+    "name": "Enhancer/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Power Prolonger",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20302,
+    "name": "Destroyer/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Partbreaker",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20303,
+    "name": "KO/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20304,
+    "name": "Potential/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Heroics",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20305,
+    "name": "Wind Resist/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Windproof",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20306,
+    "name": "Draw/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Critical Draw",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20307,
+    "name": "Throttle/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Latent Power",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20308,
+    "name": "Challenger/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Agitator",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20309,
+    "name": "Flawless/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Peak Performance",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20310,
+    "name": "Furor/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Resentment",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20311,
+    "name": "Mighty/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Maximum Might",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20312,
+    "name": "Brace/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Flinch Free",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20313,
+    "name": "Phoenix/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Coalescence",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20314,
+    "name": "Earplug/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Earplugs",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20315,
+    "name": "Critical/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Critical Boost",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20316,
+    "name": "Tenderizer/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Weakness Exploit",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20317,
+    "name": "Handicraft/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Handicraft",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20318,
+    "name": "Release/Medicine Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      },
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20319,
+    "name": "Footing/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Tremor Resistance",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20320,
+    "name": "Charger/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20321,
+    "name": "Enhancer/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Power Prolonger",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20322,
+    "name": "Destroyer/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Partbreaker",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20323,
+    "name": "KO/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20324,
+    "name": "Potential/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Heroics",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20325,
+    "name": "Wind Resist/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Windproof",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20326,
+    "name": "Draw/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Critical Draw",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20327,
+    "name": "Throttle/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Latent Power",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20328,
+    "name": "Challenger/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Agitator",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20329,
+    "name": "Flawless/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Peak Performance",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20330,
+    "name": "Furor/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Resentment",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20331,
+    "name": "Mighty/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Maximum Might",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20332,
+    "name": "Brace/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Flinch Free",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20333,
+    "name": "Phoenix/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Coalescence",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20334,
+    "name": "Earplug/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Earplugs",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20335,
+    "name": "Critical/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Critical Boost",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20336,
+    "name": "Tenderizer/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Weakness Exploit",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20337,
+    "name": "Handicraft/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Handicraft",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20338,
+    "name": "Release/Vitality Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      },
+      {
+        "name": "Health Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20339,
+    "name": "Footing/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Tremor Resistance",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20340,
+    "name": "Charger/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20341,
+    "name": "Enhancer/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Power Prolonger",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20342,
+    "name": "Destroyer/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Partbreaker",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20343,
+    "name": "KO/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20344,
+    "name": "Potential/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Heroics",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20345,
+    "name": "Wind Resist/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Windproof",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20346,
+    "name": "Draw/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Critical Draw",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20347,
+    "name": "Throttle/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Latent Power",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20348,
+    "name": "Challenger/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Agitator",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20349,
+    "name": "Flawless/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Peak Performance",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20350,
+    "name": "Furor/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Resentment",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20351,
+    "name": "Mighty/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Maximum Might",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20352,
+    "name": "Brace/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Flinch Free",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20353,
+    "name": "Phoenix/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Coalescence",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20354,
+    "name": "Earplug/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Earplugs",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20355,
+    "name": "Critical/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Critical Boost",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20356,
+    "name": "Tenderizer/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Weakness Exploit",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20357,
+    "name": "Handicraft/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Handicraft",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20358,
+    "name": "Release/Maintenance Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      },
+      {
+        "name": "Tool Specialist",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20359,
+    "name": "Footing/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Tremor Resistance",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20360,
+    "name": "Charger/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20361,
+    "name": "Enhancer/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Power Prolonger",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20362,
+    "name": "Destroyer/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Partbreaker",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20363,
+    "name": "KO/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20364,
+    "name": "Potential/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Heroics",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20365,
+    "name": "Wind Resist/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Windproof",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20366,
+    "name": "Draw/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Critical Draw",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20367,
+    "name": "Throttle/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Latent Power",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20368,
+    "name": "Challenger/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Agitator",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20369,
+    "name": "Flawless/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Peak Performance",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20370,
+    "name": "Furor/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Resentment",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20371,
+    "name": "Mighty/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Maximum Might",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20372,
+    "name": "Brace/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Flinch Free",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20373,
+    "name": "Phoenix/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Coalescence",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20374,
+    "name": "Earplug/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Earplugs",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20375,
+    "name": "Critical/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Critical Boost",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20376,
+    "name": "Tenderizer/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Weakness Exploit",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20377,
+    "name": "Handicraft/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Handicraft",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20378,
+    "name": "Release/Physique Jewel 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      },
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20379,
+    "name": "Footing/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Tremor Resistance",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20380,
+    "name": "Charger/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20381,
+    "name": "Enhancer/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Power Prolonger",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20382,
+    "name": "Destroyer/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Partbreaker",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20383,
+    "name": "KO/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20384,
+    "name": "Potential/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Heroics",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20385,
+    "name": "Wind Resist/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Windproof",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20386,
+    "name": "Draw/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Critical Draw",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20387,
+    "name": "Throttle/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Latent Power",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20388,
+    "name": "Challenger/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Agitator",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20389,
+    "name": "Flawless/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Peak Performance",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20390,
+    "name": "Furor/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Resentment",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20391,
+    "name": "Mighty/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Maximum Might",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20392,
+    "name": "Brace/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Flinch Free",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20393,
+    "name": "Phoenix/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Coalescence",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20394,
+    "name": "Earplug/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Earplugs",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20395,
+    "name": "Critical/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Critical Boost",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20396,
+    "name": "Tenderizer/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Weakness Exploit",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20397,
+    "name": "Handicraft/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Handicraft",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20398,
+    "name": "Release/Evasion Jewel 4",
+    "slot_size": 4,
+    "rarity": 12,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Free Elem/Ammo Up",
+        "points": 1
+      },
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20399,
+    "name": "Survival Jewel 1",
+    "slot_size": 1,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Survival Expert",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20400,
+    "name": "Guardian Jewel 2",
+    "slot_size": 2,
+    "rarity": 10,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20402,
+    "name": "Cooling Jewel 2",
+    "slot_size": 2,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Heat Guard",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20403,
+    "name": "Warming Jewel 2",
+    "slot_size": 2,
+    "rarity": 9,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Coldproof",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20404,
+    "name": "Diversion Jewel 3",
+    "slot_size": 3,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Provoker",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20405,
+    "name": "Acrobat Jewel 3",
+    "slot_size": 3,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Safe Landing",
+        "points": 1
+      }
+    ],
+    "materials": []
+  },
+  {
+    "id": 20406,
+    "name": "Shaver Jewel 3",
+    "slot_size": 3,
+    "rarity": 11,
+    "price": null,
+    "skill_points": [
+      {
+        "name": "Clutch Claw Boost",
+        "points": 1
+      }
+    ],
+    "materials": []
+  }
+]

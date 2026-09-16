@@ -15,6 +15,10 @@
   let monster = $state<MonsterDetail | null>(null)
   let loading = $state(true)
   let error = $state<string | null>(null)
+  // Large portrait (256px masters for Rise/Wilds) with fallback chain:
+  // master -> `-sm` variant -> hidden.
+  let portraitFailedLg = $state(false)
+  let portraitFailedAll = $state(false)
   let dedicatedSets = $state<ArmorSetDetail[]>([])
   let dedicatedLoading = $state(false)
   let armorViewMode = $state<'dedicated' | 'uses'>('dedicated') // dedicated default (60% score), uses secondary
@@ -23,6 +27,8 @@
     if (!id || Number.isNaN(id)) return
     loading = true
     error = null
+    portraitFailedLg = false
+    portraitFailedAll = false
     api
       .getMonsterDetail(id)
       .then((data) => {
@@ -148,6 +154,8 @@
       title={monster.name}
       subtitle={monster.species ?? ''}
       iconUrl={monster.icon_url}
+      favKind="monster"
+      favId={monster.id}
       tags={[
         {
           label: fallbackLabel(monster.size),
@@ -160,6 +168,29 @@
         },
       ]}
     />
+
+    {#if !portraitFailedAll && (monster.icon_url_lg ?? monster.icon_url)}
+      <div class="mb-8 flex justify-center">
+        <div
+          class="rounded-2xl border border-[var(--theme-border-strong)] bg-[var(--theme-bg-elevated)] p-3 shadow-lg"
+          style="box-shadow: 0 0 30px var(--theme-glow);"
+        >
+          <img
+            src={portraitFailedLg ? monster.icon_url : (monster.icon_url_lg ?? monster.icon_url)}
+            alt={monster.name}
+            width="160"
+            height="160"
+            class="h-40 w-40 object-contain"
+            loading="lazy"
+            decoding="async"
+            onerror={() => {
+              if (!portraitFailedLg && monster?.icon_url_lg) portraitFailedLg = true
+              else portraitFailedAll = true
+            }}
+          />
+        </div>
+      </div>
+    {/if}
 
     {#if monster.description}
       <section class="mb-8">

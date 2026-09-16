@@ -94,6 +94,7 @@ pub struct MonsterDetail {
     pub icon_name: Option<String>,
     pub icon_color: Option<String>,
     pub icon_url: Option<String>,
+    pub icon_url_lg: Option<String>,
     pub language: String,
 }
 
@@ -520,11 +521,11 @@ pub fn get_monsters_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Monst
 }
 
 pub fn get_monster_detail(conn: &Connection, id: i32) -> Result<Option<MonsterDetail>> {
-    let monster: Option<(i32, i32, String, Option<String>, Option<String>, Option<String>, Option<String>, Option<String>, Option<String>, String)> = conn
+    let monster: Option<(i32, i32, String, Option<String>, Option<String>, Option<String>, Option<String>, Option<String>, Option<String>, Option<String>, String)> = conn
         .query_row(
-            "SELECT id, game_id, name, species, size, description, icon_name, icon_color, icon_url, language FROM monsters WHERE id = ?1",
+            "SELECT id, game_id, name, species, size, description, icon_name, icon_color, icon_url, icon_url_lg, language FROM monsters WHERE id = ?1",
             params![id],
-            |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?, row.get(4)?, row.get(5)?, row.get(6)?, row.get(7)?, row.get(8)?, row.get(9)?)),
+            |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?, row.get(4)?, row.get(5)?, row.get(6)?, row.get(7)?, row.get(8)?, row.get(9)?, row.get(10)?)),
         )
         .optional()?;
 
@@ -538,6 +539,7 @@ pub fn get_monster_detail(conn: &Connection, id: i32) -> Result<Option<MonsterDe
         icon_name,
         icon_color,
         icon_url,
+        icon_url_lg,
         language,
     )) = monster
     else {
@@ -563,6 +565,7 @@ pub fn get_monster_detail(conn: &Connection, id: i32) -> Result<Option<MonsterDe
         icon_name,
         icon_color,
         icon_url,
+        icon_url_lg,
         language,
     }))
 }
@@ -1884,8 +1887,11 @@ pub fn get_melder_recipes_by_game(conn: &Connection, game_id: i32) -> Result<Vec
 
 fn get_item_sources(conn: &Connection, item_id: i32) -> Result<Vec<ItemSource>> {
     // Unified sources: monster_drops (carve/capture/break/drop) + quest_rewards + gathering (item_sources)
-    // item_sources rows of type carve/capture/drop/break/quest_reward are filtered out to avoid
-    // duplication with the two authoritative tables above.
+    // item_sources rows of type carve/capture/drop/break/quest_reward WITH a source_id are filtered
+    // out to avoid duplication with the two authoritative tables above (the seed mirrors
+    // monster_drops into item_sources). Rows with source_id IS NULL are small-monster
+    // carve/drop/capture text rows (location like 'Conga - carving') with no counterpart
+    // in monster_drops, so they stay visible.
     let mut stmt = conn.prepare(
         "SELECT id, source_type, source_id, source_name, quantity_min, quantity_max, probability, location, rank, part, condition FROM (
             SELECT md.id as id, md.method as source_type, md.monster_id as source_id, m.name as source_name,
@@ -1909,7 +1915,7 @@ fn get_item_sources(conn: &Connection, item_id: i32) -> Result<Vec<ItemSource>> 
             FROM item_sources s
             LEFT JOIN monsters m2 ON s.source_type IN ('carve', 'capture', 'drop', 'break') AND m2.id = s.source_id
             LEFT JOIN quests q2 ON s.source_type = 'quest_reward' AND q2.id = s.source_id
-            WHERE s.item_id = ?1 AND s.source_type NOT IN ('carve', 'capture', 'drop', 'break', 'quest_reward')
+            WHERE s.item_id = ?1 AND (s.source_type NOT IN ('carve', 'capture', 'drop', 'break', 'quest_reward') OR s.source_id IS NULL)
         ) ORDER BY
             CASE rank WHEN 'Low' THEN 0 WHEN 'High' THEN 1 WHEN 'G' THEN 2 ELSE 3 END,
             probability DESC"
@@ -3045,6 +3051,31 @@ mod tests {
     }
 
     #[test]
+    fn seed_records_data_version_and_skips_when_current() {
+        // Boot gate: the first seed stamps schema_version; repeat boots
+        // must skip the seed body (warm boots stay instant) while leaving
+        // all rows untouched.
+        let c = rusqlite::Connection::open_in_memory().unwrap();
+        crate::db::register_functions(&c).unwrap();
+        crate::db::schema::create_tables(&c).unwrap();
+        assert_eq!(crate::db::schema::get_schema_version(&c).unwrap(), 0);
+        crate::db::seed::seed(&c).unwrap();
+        assert_eq!(
+            crate::db::schema::get_schema_version(&c).unwrap(),
+            crate::db::seed::DATA_VERSION
+        );
+        let weapons: i64 = c
+            .query_row("SELECT COUNT(*) FROM weapons", [], |r| r.get(0))
+            .unwrap();
+        assert!(weapons > 10000, "seed must populate all games");
+        crate::db::seed::seed(&c).unwrap();
+        let again: i64 = c
+            .query_row("SELECT COUNT(*) FROM weapons", [], |r| r.get(0))
+            .unwrap();
+        assert_eq!(weapons, again, "re-seed of a current DB must be a no-op");
+    }
+
+    #[test]
     fn mhw_quests_survive_cross_game_id_ranges() {
         // Regression: MHWorldData canonical ids (101..67841) overlap MH2G quest ids
         // (1..610) on the single-column PK; the seed offsets MHW quest ids (+100000)
@@ -3279,5 +3310,796 @@ mod tests {
             })
             .unwrap();
         assert_eq!(total, mhw_json.len() as i64, "full MHW set present");
+    }
+
+    #[test]
+    fn small_monster_sources_are_visible_without_duplicates() {
+        // SDD 001 T3-T4: small-monster carve/drop/capture rows live in item_sources
+        // with source_id NULL (location like 'Conga - carving'); the method-type
+        // exclusion in get_item_sources must not hide them, while mirrored
+        // monster_drops rows (source_id NOT NULL) must stay excluded.
+        let c = conn();
+        // MHP3rd Potion (10009): shop row + small-monster drop rows, zero monster_drops.
+        let potion = get_item_sources(&c, 10009).unwrap();
+        assert!(
+            potion.iter().any(|s| s.source_type == "shop"),
+            "potion shop row missing"
+        );
+        let small: Vec<_> = potion
+            .iter()
+            .filter(|s| {
+                ["carve", "capture", "drop", "break"].contains(&s.source_type.as_str())
+                    && s.source_id.is_none()
+            })
+            .collect();
+        assert!(
+            !small.is_empty(),
+            "small-monster rows (source_id NULL) must be visible"
+        );
+        assert!(
+            small.iter().all(|s| s.location.is_some()),
+            "small-monster rows carry location text"
+        );
+        // Potion has no monster_drops, so any source_id-bearing method row is a leak.
+        assert!(
+            potion
+                .iter()
+                .filter(|s| {
+                    ["carve", "capture", "drop", "break", "quest_reward"]
+                        .contains(&s.source_type.as_str())
+                        && s.source_id.is_some()
+                })
+                .count()
+                == 0,
+            "mirrored junction rows must stay excluded"
+        );
+
+        // Item with real large-monster drops (10385 = break @10021): break rows
+        // must come only from the monster_drops branch (no junction dupes).
+        let db_breaks: i64 = c
+            .query_row(
+                "SELECT COUNT(*) FROM monster_drops WHERE item_id = 10385 AND method = 'break'",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert!(db_breaks > 0, "fixture needs a large-monster break row");
+        let shown = get_item_sources(&c, 10385)
+            .unwrap()
+            .iter()
+            .filter(|s| s.source_type == "break")
+            .count() as i64;
+        assert_eq!(
+            shown, db_breaks,
+            "break rows must come only from monster_drops (no junction dupes)"
+        );
+    }
+
+    #[test]
+    fn mhw_002b_coverage_decorations_weaknesses_skills_equipment() {
+        // 002b T9: MHW gaps closed — decorations + per-part weaknesses +
+        // weapon skill points + derived monster equipment.
+        let c = conn();
+        let decos: i64 = c
+            .query_row(
+                "SELECT COUNT(*) FROM decorations WHERE game_id = 1",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert!(decos >= 300, "expected 300+ MHW decorations, got {}", decos);
+        // No decoration may carry a NULL skill FK.
+        let null_skill: i64 = c
+            .query_row(
+                "SELECT COUNT(*) FROM decorations WHERE game_id = 1 AND skill_id IS NULL",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(null_skill, 0, "decorations must always resolve a skill");
+        let wmons: i64 = c
+            .query_row(
+                "SELECT COUNT(DISTINCT mw.monster_id) FROM monster_weaknesses mw
+                 JOIN monsters m ON m.id = mw.monster_id AND m.game_id = 1",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert!(
+            wmons >= 80,
+            "expected 80+ MHW monsters with weaknesses, got {}",
+            wmons
+        );
+        let wsp: i64 = c
+            .query_row(
+                "SELECT COUNT(*) FROM weapon_skill_points wsp
+                 JOIN weapons w ON w.id = wsp.weapon_id AND w.game_id = 1",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert!(wsp > 0, "expected MHW weapon_skill_points, got 0");
+        let eq_armor: i64 = c
+            .query_row(
+                "SELECT COUNT(*) FROM monster_equipment WHERE game_id = 1 AND equipment_kind = 'armor'",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        let eq_weapon: i64 = c
+            .query_row(
+                "SELECT COUNT(*) FROM monster_equipment WHERE game_id = 1 AND equipment_kind = 'weapon'",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert!(
+            eq_armor > 1000,
+            "expected 1000+ MHW armor links, got {}",
+            eq_armor
+        );
+        assert!(
+            eq_weapon > 1000,
+            "expected 1000+ MHW weapon links, got {}",
+            eq_weapon
+        );
+        // List + detail smoke through the public queries.
+        let list = get_decorations_by_game(&c, 1).unwrap();
+        assert!(
+            !list.is_empty(),
+            "get_decorations_by_game(1) must not be empty"
+        );
+        let gather: i64 = c
+            .query_row(
+                "SELECT COUNT(*) FROM item_sources s
+                 JOIN items i ON i.id = s.item_id AND i.game_id = 1
+                 WHERE s.source_type = 'gather'",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert!(
+            gather >= 800,
+            "expected 800+ MHW gather rows, got {}",
+            gather
+        );
+        let mid: i32 = c
+            .query_row(
+                "SELECT monster_id FROM monster_weaknesses GROUP BY monster_id
+                 ORDER BY COUNT(*) DESC LIMIT 1",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        let detail = get_monster_detail(&c, mid)
+            .unwrap()
+            .expect("monster detail");
+        assert!(
+            !detail.weaknesses.is_empty(),
+            "MHW monster detail must show weaknesses"
+        );
+        assert!(
+            !detail.armor.is_empty() || !detail.weapons.is_empty(),
+            "MHW monster detail must show derived equipment"
+        );
+    }
+
+    #[test]
+    fn mhwilds_004_coverage_lists_details_and_junctions() {
+        // 004: Wilds core (MHDB API) — every list non-empty, junctions wired.
+        let c = conn();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        assert!(count("SELECT COUNT(*) FROM monsters WHERE game_id = 3") >= 30);
+        assert!(count("SELECT COUNT(*) FROM items WHERE game_id = 3") >= 700);
+        assert!(count("SELECT COUNT(*) FROM weapons WHERE game_id = 3") >= 1000);
+        assert!(count("SELECT COUNT(*) FROM armor WHERE game_id = 3") >= 700);
+        assert!(count("SELECT COUNT(*) FROM armor_sets WHERE game_id = 3") >= 150);
+        assert!(count("SELECT COUNT(*) FROM skills WHERE game_id = 3") >= 150);
+        assert!(count("SELECT COUNT(*) FROM decorations WHERE game_id = 3") >= 300);
+        assert!(count("SELECT COUNT(*) FROM monster_drops WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 3)") > 1000);
+        assert!(count("SELECT COUNT(*) FROM weapon_materials WHERE weapon_id IN (SELECT id FROM weapons WHERE game_id = 3)") > 2000);
+        assert!(count("SELECT COUNT(*) FROM armor_materials WHERE armor_id IN (SELECT id FROM armor WHERE game_id = 3)") > 1500);
+        assert!(count("SELECT COUNT(*) FROM monster_weaknesses WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 3)") >= 200);
+        assert!(count("SELECT COUNT(*) FROM monster_equipment WHERE game_id = 3") > 1000);
+        assert!(count("SELECT COUNT(*) FROM armor_skill_points WHERE armor_id IN (SELECT id FROM armor WHERE game_id = 3)") > 500);
+        assert!(count("SELECT COUNT(*) FROM item_combine WHERE result_item_id IN (SELECT id FROM items WHERE game_id = 3)") > 50);
+        // Every monster/weapon/armor/skill/deco/item row must be reachable by id (no PK collision with other games).
+        for table in [
+            "monsters",
+            "items",
+            "weapons",
+            "armor",
+            "skills",
+            "decorations",
+        ] {
+            let orphans: i64 = c
+                .query_row(
+                    &format!("SELECT COUNT(*) FROM {table} WHERE game_id = 3 AND id IS NULL"),
+                    [],
+                    |r| r.get(0),
+                )
+                .unwrap();
+            assert_eq!(orphans, 0, "{table} has NULL ids");
+        }
+        // Detail smoke: monster with most weakness rows shows weaknesses + drops + equipment.
+        let mid: i32 = c
+            .query_row(
+                "SELECT mw.monster_id FROM monster_weaknesses mw
+                 JOIN monsters m ON m.id = mw.monster_id AND m.game_id = 3
+                 GROUP BY mw.monster_id ORDER BY COUNT(*) DESC LIMIT 1",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        let detail = get_monster_detail(&c, mid)
+            .unwrap()
+            .expect("wilds monster detail");
+        assert_eq!(detail.game_id, 3);
+        assert!(!detail.weaknesses.is_empty());
+        assert!(!detail.drops.is_empty());
+        assert!(!detail.armor.is_empty() || !detail.weapons.is_empty());
+        // Weapon detail shows materials; item detail shows sources.
+        let wid: i32 = c
+            .query_row(
+                "SELECT weapon_id FROM weapon_materials GROUP BY weapon_id ORDER BY COUNT(*) DESC LIMIT 1",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        let wdetail = get_weapon_detail(&c, wid)
+            .unwrap()
+            .expect("wilds weapon detail");
+        assert!(
+            !wdetail.materials.is_empty()
+                || !wdetail.forge_materials.is_empty()
+                || !wdetail.upgrade_materials.is_empty()
+        );
+        assert!(!get_decorations_by_game(&c, 3).unwrap().is_empty());
+        assert!(!get_combinations_by_game(&c, 3).unwrap().is_empty());
+    }
+
+    #[test]
+    fn mhwilds_weapon_smith_order() {
+        // Wilds sort_order is the Kiranico Smith DFS sequence
+        // (scripts/reorder_mhwilds_weapons.py), not rarity+alphabetical.
+        let c = conn();
+        // Smith head: the Expedition/Hope line opens Great Sword.
+        let head: Vec<String> = c
+            .prepare(
+                "SELECT name FROM weapons WHERE game_id = 3 AND weapon_type = 'Great Sword'
+                 ORDER BY COALESCE(sort_order, id) LIMIT 8",
+            )
+            .unwrap()
+            .query_map([], |r| r.get(0))
+            .unwrap()
+            .map(|r| r.unwrap())
+            .collect();
+        assert_eq!(
+            head,
+            vec![
+                "Hope Blade I",
+                "Hope Blade II",
+                "Hope Blade III",
+                "Hope Blade IV",
+                "Hope Blade V",
+                "Valkyrie Blade I",
+                "Valkyrie Blade II",
+                "Sieglinde",
+            ]
+        );
+        // Tree-link integrity: every upgrade parent resolves to a same-type
+        // weapon (the frontend builds trees by parent name), and every
+        // declared branch reciprocates (child.previous == parent).
+        // NOTE: no parent-before-child sort assert — Wilds lists forge lines
+        // (e.g. Immane, Nihil) as their own Smith rows ahead of the Bone
+        // line they upgrade from; cross-line branches legitimately sort
+        // before their MHDB parent.
+        let rows: Vec<(String, String, Option<String>)> = c
+            .prepare("SELECT weapon_type, name, upgrade_path FROM weapons WHERE game_id = 3")
+            .unwrap()
+            .query_map([], |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?)))
+            .unwrap()
+            .map(|r| r.unwrap())
+            .collect();
+        let known: std::collections::HashSet<(String, String)> = rows
+            .iter()
+            .map(|(t, n, _)| (t.clone(), n.clone()))
+            .collect();
+        let prev_of: std::collections::HashMap<(String, String), Option<String>> = rows
+            .iter()
+            .map(|(t, n, upath)| {
+                let prev = upath.as_deref().and_then(|up| {
+                    match serde_json::from_str::<serde_json::Value>(up) {
+                        Ok(v) => v
+                            .get("previous")
+                            .and_then(|p| p.as_str())
+                            .map(str::to_string),
+                        Err(_) => Some(up.to_string()),
+                    }
+                });
+                ((t.clone(), n.clone()), prev)
+            })
+            .collect();
+        let mut orphans = Vec::new();
+        let mut nonrecip = Vec::new();
+        for (t, n, upath) in &rows {
+            let Some(up) = upath.as_deref() else { continue };
+            let parsed: Option<(Option<String>, Vec<String>)> =
+                match serde_json::from_str::<serde_json::Value>(up) {
+                    Ok(v) => Some((
+                        v.get("previous")
+                            .and_then(|p| p.as_str())
+                            .map(str::to_string),
+                        v.get("branches")
+                            .and_then(|b| b.as_array())
+                            .map(|a| {
+                                a.iter()
+                                    .filter_map(|x| x.as_str().map(str::to_string))
+                                    .collect()
+                            })
+                            .unwrap_or_default(),
+                    )),
+                    Err(_) => Some((Some(up.to_string()), Vec::new())),
+                };
+            let (prev, branches) = parsed.unwrap();
+            if let Some(p) = prev {
+                if p != *n && !known.contains(&(t.clone(), p.clone())) {
+                    orphans.push(format!("{t}: {p} -> {n}"));
+                }
+            }
+            for b in branches {
+                match prev_of.get(&(t.clone(), b.clone())) {
+                    Some(Some(p)) if p == n => {}
+                    _ => nonrecip.push(format!("{t}: {n} -> {b}")),
+                }
+            }
+        }
+        assert!(
+            orphans.is_empty(),
+            "Wilds upgrade parents must resolve: {orphans:?}"
+        );
+        assert!(
+            nonrecip.is_empty(),
+            "Wilds branches must reciprocate: {nonrecip:?}"
+        );
+    }
+
+    #[test]
+    fn mhr_003a_coverage_bulk_base_rise() {
+        // 003 Phase A: bulk base-Rise (Badge87 + CrimsonNynja) — every list
+        // non-empty, materials resolve, quests present, no PK collisions.
+        let c = conn();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        assert!(count("SELECT COUNT(*) FROM monsters WHERE game_id = 2") >= 100);
+        assert!(count("SELECT COUNT(*) FROM items WHERE game_id = 2") >= 900);
+        assert!(count("SELECT COUNT(*) FROM weapons WHERE game_id = 2") >= 1800);
+        assert!(count("SELECT COUNT(*) FROM armor WHERE game_id = 2") >= 600);
+        assert!(count("SELECT COUNT(*) FROM armor_sets WHERE game_id = 2") >= 80);
+        assert!(count("SELECT COUNT(*) FROM skills WHERE game_id = 2") >= 100);
+        assert!(count("SELECT COUNT(*) FROM decorations WHERE game_id = 2") >= 90);
+        assert!(count("SELECT COUNT(*) FROM quests WHERE game_id = 2") >= 300);
+        assert!(count("SELECT COUNT(*) FROM weapon_materials WHERE weapon_id IN (SELECT id FROM weapons WHERE game_id = 2)") > 5000);
+        assert!(count("SELECT COUNT(*) FROM armor_materials WHERE armor_id IN (SELECT id FROM armor WHERE game_id = 2)") > 2000);
+        assert!(count("SELECT COUNT(*) FROM armor_skill_points WHERE armor_id IN (SELECT id FROM armor WHERE game_id = 2)") > 500);
+        // Every content row carries a distinct in-game id (offsets hold).
+        let dupes: i64 = c
+            .query_row(
+                "SELECT COUNT(*) FROM (SELECT id FROM monsters WHERE game_id = 2 GROUP BY id HAVING COUNT(*) > 1)",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(dupes, 0, "MHR monster ids must be unique");
+        // Detail smoke: weapon with materials, armor with materials, quest, decoration.
+        let wid: i32 = c
+            .query_row(
+                "SELECT weapon_id FROM weapon_materials GROUP BY weapon_id ORDER BY COUNT(*) DESC LIMIT 1",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        let g2: i32 = c
+            .query_row("SELECT game_id FROM weapons WHERE id = ?1", [wid], |r| {
+                r.get(0)
+            })
+            .unwrap();
+        if g2 == 2 {
+            let wdetail = get_weapon_detail(&c, wid)
+                .unwrap()
+                .expect("mhr weapon detail");
+            assert!(
+                !wdetail.materials.is_empty()
+                    || !wdetail.forge_materials.is_empty()
+                    || !wdetail.upgrade_materials.is_empty()
+            );
+        }
+        let mid: i32 = c
+            .query_row(
+                "SELECT id FROM monsters WHERE game_id = 2 LIMIT 1",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        let mdetail = get_monster_detail(&c, mid)
+            .unwrap()
+            .expect("mhr monster detail");
+        assert_eq!(mdetail.game_id, 2);
+        assert!(!get_decorations_by_game(&c, 2).unwrap().is_empty());
+    }
+
+    #[test]
+    fn mhr_003b_kiranico_monster_data() {
+        // 003 Phase B (part 1): Kiranico hitzones + drops merged — weaknesses,
+        // drops, sources and derived equipment are now non-empty for game 2.
+        let c = conn();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        assert!(count("SELECT COUNT(*) FROM monster_weaknesses WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 2)") >= 500);
+        assert!(count("SELECT COUNT(*) FROM monster_drops WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 2)") > 5000);
+        assert!(count("SELECT COUNT(*) FROM item_sources s JOIN items i ON i.id = s.item_id AND i.game_id = 2") > 5000);
+        assert!(count("SELECT COUNT(*) FROM monster_equipment WHERE game_id = 2") > 500);
+        assert!(count("SELECT COUNT(*) FROM items WHERE game_id = 2") >= 1400);
+        assert!(count("SELECT COUNT(*) FROM quests WHERE game_id = 2") >= 900);
+        assert!(count("SELECT COUNT(*) FROM quest_rewards WHERE quest_id IN (SELECT id FROM quests WHERE game_id = 2)") > 5000);
+        // Phase B (weapons/armor): full Sunbreak v16 trees with stats + materials.
+        assert!(count("SELECT COUNT(*) FROM weapons WHERE game_id = 2") >= 3900);
+        assert!(count("SELECT COUNT(*) FROM weapon_materials WHERE weapon_id IN (SELECT id FROM weapons WHERE game_id = 2)") > 10000);
+        assert!(count("SELECT COUNT(*) FROM armor WHERE game_id = 2") >= 1500);
+        assert!(count("SELECT COUNT(*) FROM armor_sets WHERE game_id = 2") >= 300);
+        assert!(count("SELECT COUNT(*) FROM skills WHERE game_id = 2") >= 140);
+        assert!(count("SELECT COUNT(*) FROM decorations WHERE game_id = 2") >= 200);
+        // Every drop references a real item (no orphans from the merge).
+        let orphans: i64 = c
+            .query_row(
+                "SELECT COUNT(*) FROM monster_drops md WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 2)
+                 AND NOT EXISTS (SELECT 1 FROM items i WHERE i.id = md.item_id AND i.game_id = 2)",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(orphans, 0, "MHR drops must not reference missing items");
+        // Detail smoke: monster shows weaknesses + drops + equipment.
+        let mid: i32 = c
+            .query_row(
+                "SELECT mw.monster_id FROM monster_weaknesses mw
+                 JOIN monsters m ON m.id = mw.monster_id AND m.game_id = 2
+                 GROUP BY mw.monster_id ORDER BY COUNT(*) DESC LIMIT 1",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        let detail = get_monster_detail(&c, mid)
+            .unwrap()
+            .expect("mhr monster detail");
+        assert!(!detail.weaknesses.is_empty());
+        assert!(!detail.drops.is_empty());
+        assert!(!detail.armor.is_empty() || !detail.weapons.is_empty());
+    }
+
+    #[test]
+    fn mhr_weapon_trees_game8_edges() {
+        // Weapon-trees fix: Rise upgrade_path is Game8 tree edges (the old
+        // Kiranico-pagination chain is gone), Bow/LBG labels are corrected,
+        // sort_order is Smith DFS, slots are backfilled.
+        let c = conn();
+        let rows: Vec<(String, String, Option<String>)> = c
+            .prepare("SELECT weapon_type, name, upgrade_path FROM weapons WHERE game_id = 2")
+            .unwrap()
+            .query_map([], |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?)))
+            .unwrap()
+            .map(|r| r.unwrap())
+            .collect();
+        assert!(rows.len() >= 3900, "Rise catalog intact");
+        let known: std::collections::HashSet<(String, String)> = rows
+            .iter()
+            .map(|(t, n, _)| (t.clone(), n.clone()))
+            .collect();
+        let prev_of: std::collections::HashMap<(String, String), Option<String>> = rows
+            .iter()
+            .map(|(t, n, upath)| {
+                let prev = upath.as_deref().and_then(|up| {
+                    match serde_json::from_str::<serde_json::Value>(up) {
+                        Ok(v) => v
+                            .get("previous")
+                            .and_then(|p| p.as_str())
+                            .map(str::to_string),
+                        Err(_) => Some(up.to_string()),
+                    }
+                });
+                ((t.clone(), n.clone()), prev)
+            })
+            .collect();
+        // No cross-type parents, no orphans, branches reciprocate.
+        let mut orphans = Vec::new();
+        let mut nonrecip = Vec::new();
+        let mut roots_per_type: std::collections::HashMap<String, usize> =
+            std::collections::HashMap::new();
+        for (t, n, upath) in &rows {
+            let Some(up) = upath.as_deref() else {
+                *roots_per_type.entry(t.clone()).or_default() += 1;
+                continue;
+            };
+            let (prev, branches): (Option<String>, Vec<String>) =
+                match serde_json::from_str::<serde_json::Value>(up) {
+                    Ok(v) => (
+                        v.get("previous")
+                            .and_then(|p| p.as_str())
+                            .map(str::to_string),
+                        v.get("branches")
+                            .and_then(|b| b.as_array())
+                            .map(|a| {
+                                a.iter()
+                                    .filter_map(|x| x.as_str().map(str::to_string))
+                                    .collect()
+                            })
+                            .unwrap_or_default(),
+                    ),
+                    Err(_) => (Some(up.to_string()), Vec::new()),
+                };
+            match prev {
+                None => *roots_per_type.entry(t.clone()).or_default() += 1,
+                Some(p) if p == *n => *roots_per_type.entry(t.clone()).or_default() += 1,
+                Some(p) => {
+                    if !known.contains(&(t.clone(), p.clone())) {
+                        orphans.push(format!("{t}: {p} -> {n}"));
+                    }
+                }
+            }
+            for b in branches {
+                match prev_of.get(&(t.clone(), b.clone())) {
+                    Some(Some(p)) if p == n => {}
+                    _ => nonrecip.push(format!("{t}: {n} -> {b}")),
+                }
+            }
+        }
+        assert!(
+            orphans.is_empty(),
+            "Rise upgrade parents must resolve: {orphans:?}"
+        );
+        assert!(
+            nonrecip.is_empty(),
+            "Rise branches must reciprocate: {nonrecip:?}"
+        );
+        // Branching, not one chain: every type has many roots.
+        assert_eq!(roots_per_type.len(), 14, "all 14 types present");
+        for (t, roots) in &roots_per_type {
+            assert!(*roots >= 15, "{t} must branch ({roots} roots)");
+        }
+        // Depth is tree-like (the pagination chain ran ~300 deep per type),
+        // and every walk-up must terminate at a root (no cycles — e.g. the
+        // Game8 Bow duplicate that once linked Sinister Soulpiercer <-> +).
+        let mut max_depth = 0;
+        let mut unterminated = Vec::new();
+        for (t, n, _) in &rows {
+            let mut depth = 0;
+            let mut cur = (t.clone(), n.clone());
+            let mut seen = std::collections::HashSet::new();
+            loop {
+                let next = prev_of.get(&cur).cloned().flatten();
+                let Some(p) = next else { break };
+                if p == cur.1 || !seen.insert(cur.clone()) || depth > 100 {
+                    break;
+                }
+                cur = (cur.0.clone(), p);
+                depth += 1;
+            }
+            max_depth = max_depth.max(depth);
+            // Terminated at a root (no previous, or a self-parent which the
+            // UI treats as root) — anything else is a cycle (orphans were
+            // already asserted empty above).
+            match prev_of.get(&cur).cloned().flatten() {
+                None => {}
+                Some(p) if p == cur.1 => {}
+                Some(_) => unterminated.push(format!("{}: {}", cur.0, cur.1)),
+            }
+        }
+        assert!(
+            max_depth < 40,
+            "Rise tree depth must be tree-like, got {max_depth}"
+        );
+        assert!(
+            unterminated.is_empty(),
+            "Rise walk-ups must reach roots: {unterminated:?}"
+        );
+        // Spot-checks: linear Kamura chain, Ninja branch, cross-branch Goss.
+        let prev = |t: &str, n: &str| -> Option<String> {
+            prev_of
+                .get(&(t.to_string(), n.to_string()))
+                .cloned()
+                .flatten()
+        };
+        assert_eq!(
+            prev("Great Sword", "Kamura Cleaver II"),
+            Some("Kamura Cleaver I".to_string())
+        );
+        assert_eq!(
+            prev("Great Sword", "Kamura Warrior Cleaver"),
+            Some("Kamura Ninja Cleaver".to_string())
+        );
+        assert_eq!(
+            prev("Great Sword", "Duke's Claymore"),
+            Some("Kamura Ninja Cleaver".to_string())
+        );
+        assert_eq!(
+            prev("Great Sword", "Gossblade I"),
+            Some("Kamura Cleaver III".to_string())
+        );
+        assert_eq!(
+            prev("Great Sword", "Abominable Frostblade"),
+            Some("Abominable Snowblade+".to_string())
+        );
+        // Bow/LBG relabel: Kiranico views are 11=Bow, 13=LBG.
+        let wtype: String = c
+            .query_row(
+                "SELECT weapon_type FROM weapons WHERE game_id = 2 AND name = 'Defender Bow I'",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(wtype, "Bow");
+        let wtype: String = c
+            .query_row(
+                "SELECT weapon_type FROM weapons WHERE game_id = 2 AND name = 'Defender Light Bowgun I'",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(wtype, "Light Bowgun");
+        // Smith head + slots backfill.
+        let head: String = c
+            .query_row(
+                "SELECT name FROM weapons WHERE game_id = 2 AND weapon_type = 'Great Sword'
+                 ORDER BY COALESCE(sort_order, id) LIMIT 1",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(head, "Defender Great Sword I");
+        let slotted: i64 = c
+            .query_row(
+                "SELECT COUNT(*) FROM weapons WHERE game_id = 2 AND slots IS NOT NULL",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert!(slotted > 2000, "Rise slots backfilled, got {slotted}");
+    }
+
+    #[test]
+    fn icons_have_no_nulls() {
+        // Icon reuse (mhfu sets) + Kiranico/game8 monster portraits: every
+        // icon-bearing row must resolve to a URL — the UI fallback (Package
+        // glyph) should only ever trigger on a missing *file*, never NULL.
+        let c = conn();
+        let nulls = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        for game_id in [1, 2, 3, 4, 5] {
+            assert_eq!(
+                nulls(&format!(
+                    "SELECT COUNT(*) FROM items WHERE game_id = {game_id} AND icon_url IS NULL"
+                )),
+                0,
+                "game {game_id} items must all have icon_url"
+            );
+            assert_eq!(
+                nulls(&format!(
+                    "SELECT COUNT(*) FROM monsters WHERE game_id = {game_id} AND icon_url IS NULL"
+                )),
+                0,
+                "game {game_id} monsters must all have icon_url"
+            );
+            assert_eq!(
+                nulls(&format!(
+                    "SELECT COUNT(*) FROM weapons WHERE game_id = {game_id} AND icon_url IS NULL"
+                )),
+                0,
+                "game {game_id} weapons must all have icon_url"
+            );
+            assert_eq!(
+                nulls(&format!(
+                    "SELECT COUNT(*) FROM armor WHERE game_id = {game_id} AND icon_url IS NULL"
+                )),
+                0,
+                "game {game_id} armor must all have icon_url"
+            );
+            assert_eq!(
+                nulls(&format!(
+                    "SELECT COUNT(*) FROM decorations WHERE game_id = {game_id} AND icon_url IS NULL"
+                )),
+                0,
+                "game {game_id} decorations must all have icon_url"
+            );
+        }
+        // Quests: every game with quest rows has both type + hub icons.
+        // (Wilds ships no quests upstream — nothing to assert for game 3.)
+        for game_id in [1, 2, 4, 5] {
+            assert_eq!(
+                nulls(&format!(
+                    "SELECT COUNT(*) FROM quests WHERE game_id = {game_id} AND (icon_url IS NULL OR hub_icon_url IS NULL)"
+                )),
+                0,
+                "game {game_id} quests must all have icon_url + hub_icon_url"
+            );
+        }
+        // Per-game monster dirs (no more mhw fallback for Rise/Wilds).
+        // Lists render the 96px `-sm` variant; detail pages use the master.
+        let (url, url_lg): (String, Option<String>) = c
+            .query_row(
+                "SELECT icon_url, icon_url_lg FROM monsters WHERE game_id = 2 AND name = 'Magnamalo'",
+                [],
+                |r| Ok((r.get(0)?, r.get(1)?)),
+            )
+            .unwrap();
+        assert_eq!(url, "/icons/mhr/monsters/magnamalo-sm.png");
+        assert_eq!(url_lg.as_deref(), Some("/icons/mhr/monsters/magnamalo.png"));
+        let (url, url_lg): (String, Option<String>) = c
+            .query_row(
+                "SELECT icon_url, icon_url_lg FROM monsters WHERE game_id = 3 AND name = 'Arkveld'",
+                [],
+                |r| Ok((r.get(0)?, r.get(1)?)),
+            )
+            .unwrap();
+        assert_eq!(url, "/icons/mhwilds/monsters/arkveld-sm.png");
+        assert_eq!(
+            url_lg.as_deref(),
+            Some("/icons/mhwilds/monsters/arkveld.png")
+        );
+        // Older games have no large masters: detail falls back to icon_url.
+        let lg_nulls: i64 = c
+            .query_row(
+                "SELECT COUNT(*) FROM monsters WHERE game_id IN (1, 4, 5) AND icon_url_lg IS NOT NULL",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(lg_nulls, 0, "only Rise/Wilds carry icon_url_lg");
+    }
+
+    #[test]
+    fn data_patches_backfill_without_full_reseed() {
+        // Simulates a pre-patch install: full seed ran, then icons regressed
+        // to NULL / legacy dirs with no patch rows recorded. Patches must
+        // refill everything, record themselves, and be a no-op on re-run —
+        // all without touching row counts (no full re-seed).
+        let c = conn();
+        c.execute_batch(
+            "DELETE FROM data_patches;
+             UPDATE items SET icon_url = NULL, icon_name = NULL WHERE game_id IN (2, 3, 4);
+             UPDATE quests SET icon_url = NULL, hub_icon_url = NULL WHERE game_id = 2;
+             UPDATE monsters SET icon_url = REPLACE(icon_url, '/icons/mhr/monsters/', '/icons/mhw/monsters/') WHERE game_id = 2;
+             UPDATE monsters SET icon_url = REPLACE(icon_url, '/icons/mhwilds/monsters/', '/icons/mhw/monsters/') WHERE game_id = 3;",
+        )
+        .unwrap();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        let items_before = count("SELECT COUNT(*) FROM items");
+        assert!(
+            count("SELECT COUNT(*) FROM items WHERE game_id IN (2,3,4) AND icon_url IS NULL")
+                > 3000
+        );
+
+        crate::db::seed::apply_data_patches(&c).unwrap();
+
+        assert_eq!(
+            count("SELECT COUNT(*) FROM items"),
+            items_before,
+            "patches must not add rows"
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM items WHERE icon_url IS NULL"),
+            0
+        );
+        assert_eq!(count("SELECT COUNT(*) FROM quests WHERE game_id = 2 AND (icon_url IS NULL OR hub_icon_url IS NULL)"), 0);
+        assert_eq!(count("SELECT COUNT(*) FROM monsters WHERE game_id = 2 AND icon_url LIKE '/icons/mhw/monsters/%'"), 0);
+        assert_eq!(count("SELECT COUNT(*) FROM monsters WHERE game_id = 3 AND icon_url LIKE '/icons/mhw/monsters/%'"), 0);
+        // Thumbs patch: lists on `-sm` variants, masters in icon_url_lg.
+        assert_eq!(count("SELECT COUNT(*) FROM monsters WHERE game_id IN (2, 3) AND icon_url NOT LIKE '%-sm.png'"), 0);
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monsters WHERE game_id IN (2, 3) AND icon_url_lg IS NULL"),
+            0
+        );
+        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 5);
+
+        // Second run: pure no-op (5 PK lookups, warm-boot fast path).
+        crate::db::seed::apply_data_patches(&c).unwrap();
+        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 5);
+        assert_eq!(count("SELECT COUNT(*) FROM items"), items_before);
     }
 }

@@ -56,6 +56,7 @@ impl Database {
         // Android. If BEGIN fails we fall back to auto-commit per statement; the
         // seed is safe either way because every write is INSERT OR IGNORE.
         let in_txn = conn.execute_batch("BEGIN IMMEDIATE;").is_ok();
+        let seed_start = std::time::Instant::now();
         let setup: Result<()> = (|| {
             schema::create_tables(&conn)?;
             seed::seed(&conn)?;
@@ -67,6 +68,11 @@ impl Database {
                     // Never swallow a failed COMMIT: leave the DB in a consistent state.
                     conn.execute_batch("COMMIT;")?;
                 }
+                eprintln!(
+                    "[db] ready in {:.1}s (data v{})",
+                    seed_start.elapsed().as_secs_f32(),
+                    schema::get_schema_version(&conn).unwrap_or(0)
+                );
             }
             Err(e) => {
                 if in_txn {

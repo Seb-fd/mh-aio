@@ -2924,5 +2924,12 @@
     "points": 1,
     "ability_name": "Safe Landing Lv1",
     "description": "Allows you to quickly recover from heavy attacks that blow you back when you have your weapon unsheathed."
+  },
+  {
+    "id": 20419,
+    "skill_id": 20179,
+    "points": 1,
+    "ability_name": "Kulve Taroth Essence",
+    "description": "Counts toward the Kulve Taroth armor set bonus."
   }
 ]

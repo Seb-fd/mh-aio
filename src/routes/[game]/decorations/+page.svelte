@@ -11,6 +11,9 @@
   import EmptyState from '$lib/components/ui/empty-state.svelte'
   import SearchField from '$lib/components/ui/search-field.svelte'
   import ItemIcon from '$lib/components/item-icon.svelte'
+  import FavoriteButton from '$lib/components/favorite-button.svelte'
+  import { favorites } from '$lib/stores/favorites'
+  import { Star } from '@lucide/svelte'
   import { toolbarTarget } from '$lib/stores/toolbar'
   import { toolbarPortal } from '$lib/actions/toolbar-portal'
   import { captureScrollY, restoreScrollY } from '$lib/utils/scroll-restore'
@@ -64,6 +67,13 @@
   let searchTerm = $state('')
   let slotFilter = $state<string>('all')
   let skillFilter = $state<string>('all')
+  let showFavsOnly = $state(false)
+
+  $effect(() => {
+    if (game) void favorites.ensure(game.dbId)
+  })
+
+  const favKeys = $derived(new Set(game ? [...($favorites.get(game.dbId)?.keys() ?? [])] : []))
 
   const skills = $derived([
     'all',
@@ -86,7 +96,8 @@
           d.skill_name === skillFilter ||
           d.secondary_skill_name === skillFilter,
       )
-      .filter((d) => searchTerm === '' || normKey(d.name).includes(normKey(searchTerm))),
+      .filter((d) => searchTerm === '' || normKey(d.name).includes(normKey(searchTerm)))
+      .filter((d) => !showFavsOnly || favKeys.has(`decoration:${d.id}`)),
   )
 
   function open(id: number) {
@@ -138,6 +149,21 @@
             <option value={sk}>{sk === 'all' ? 'All Skills' : sk}</option>
           {/each}
         </select>
+        <button
+          type="button"
+          onclick={() => (showFavsOnly = !showFavsOnly)}
+          aria-pressed={showFavsOnly}
+          title="Show favorites only"
+          class="inline-flex items-center gap-1.5 px-4 min-h-[44px] sm:min-h-[36px] rounded-full border text-xs font-medium focus-visible:outline-none focus-visible:ring-2 {showFavsOnly
+            ? 'border-[var(--theme-accent)]/50 bg-[var(--theme-accent)]/10 text-[var(--theme-accent)]'
+            : 'border-[var(--theme-border)] bg-[var(--theme-bg-surface)] text-gray-400 hover:text-gray-200'}"
+        >
+          <Star
+            class="h-3.5 w-3.5 {showFavsOnly ? 'fill-[var(--theme-accent)]' : ''}"
+            aria-hidden="true"
+          />
+          Favorites
+        </button>
       </div>
       <div
         class="flex gap-2 overflow-x-auto pb-1 -mb-1"
@@ -175,51 +201,58 @@
     {:else}
       <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
         {#each filtered as deco (deco.id)}
-          <button
-            onclick={() => open(deco.id)}
-            aria-label="Open {deco.name}"
-            class="text-left rounded-lg min-h-[44px] focus-visible:outline-none focus-visible:ring-2"
-          >
-            <Card variant="themed" class="p-3 cursor-pointer h-full">
-              <div class="flex items-start gap-2">
-                <ItemIcon
-                  iconUrl={deco.icon_url}
-                  iconName={deco.icon_name}
-                  iconColor={deco.icon_color}
-                  size={32}
-                  alt=""
-                />
-                <div class="min-w-0 flex-1">
-                  <p class="font-medium text-sm text-gray-100 truncate">{deco.name}</p>
-                  <p class="text-[11px] text-gray-400 mt-0.5 truncate">
-                    {#if deco.skill_name}
-                      <span
-                        class={(deco.skill_points ?? 0) >= 0 ? 'text-emerald-300' : 'text-red-300'}
-                        >{deco.skill_name}
-                        {(deco.skill_points ?? 0) > 0 ? '+' : ''}{deco.skill_points}</span
-                      >
-                    {/if}
-                    {#if deco.secondary_skill_name}
-                      <span class="text-gray-600"> · </span>
-                      <span
-                        class={(deco.secondary_points ?? 0) >= 0
-                          ? 'text-emerald-300'
-                          : 'text-red-300'}
-                        >{deco.secondary_skill_name}
-                        {(deco.secondary_points ?? 0) > 0 ? '+' : ''}{deco.secondary_points}</span
-                      >
-                    {/if}
-                  </p>
+          <div class="relative">
+            <button
+              onclick={() => open(deco.id)}
+              aria-label="Open {deco.name}"
+              class="text-left rounded-lg min-h-[44px] w-full focus-visible:outline-none focus-visible:ring-2"
+            >
+              <Card variant="themed" class="p-3 cursor-pointer h-full">
+                <div class="flex items-start gap-2">
+                  <ItemIcon
+                    iconUrl={deco.icon_url}
+                    iconName={deco.icon_name}
+                    iconColor={deco.icon_color}
+                    size={32}
+                    alt=""
+                  />
+                  <div class="min-w-0 flex-1">
+                    <p class="font-medium text-sm text-gray-100 truncate">{deco.name}</p>
+                    <p class="text-[11px] text-gray-400 mt-0.5 truncate">
+                      {#if deco.skill_name}
+                        <span
+                          class={(deco.skill_points ?? 0) >= 0
+                            ? 'text-emerald-300'
+                            : 'text-red-300'}
+                          >{deco.skill_name}
+                          {(deco.skill_points ?? 0) > 0 ? '+' : ''}{deco.skill_points}</span
+                        >
+                      {/if}
+                      {#if deco.secondary_skill_name}
+                        <span class="text-gray-600"> · </span>
+                        <span
+                          class={(deco.secondary_points ?? 0) >= 0
+                            ? 'text-emerald-300'
+                            : 'text-red-300'}
+                          >{deco.secondary_skill_name}
+                          {(deco.secondary_points ?? 0) > 0 ? '+' : ''}{deco.secondary_points}</span
+                        >
+                      {/if}
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="flex items-center justify-between mt-2">
-                <Badge tone="neutral">Slot {deco.slot_size}</Badge>
-                <span class="text-xs font-medium tabular-nums" style="color: var(--theme-accent);"
-                  >{deco.price ?? 0}z</span
-                >
-              </div>
-            </Card>
-          </button>
+                <div class="flex items-center justify-between mt-2">
+                  <Badge tone="neutral">Slot {deco.slot_size}</Badge>
+                  <span class="text-xs font-medium tabular-nums" style="color: var(--theme-accent);"
+                    >{deco.price ?? 0}z</span
+                  >
+                </div>
+              </Card>
+            </button>
+            <div class="absolute top-2 right-2">
+              <FavoriteButton kind="decoration" id={deco.id} name={deco.name} size="sm" />
+            </div>
+          </div>
         {/each}
       </div>
     {/if}

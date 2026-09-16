@@ -13,6 +13,9 @@
   import EmptyState from '$lib/components/ui/empty-state.svelte'
   import SearchField from '$lib/components/ui/search-field.svelte'
   import ItemIcon from '$lib/components/item-icon.svelte'
+  import FavoriteButton from '$lib/components/favorite-button.svelte'
+  import { favorites } from '$lib/stores/favorites'
+  import { Star } from '@lucide/svelte'
   import { toolbarTarget } from '$lib/stores/toolbar'
   import { toolbarPortal } from '$lib/actions/toolbar-portal'
   import { captureScrollY, restoreScrollY } from '$lib/utils/scroll-restore'
@@ -67,6 +70,12 @@
   const game = $derived($selectedGame)
   const dbId = $derived(game?.dbId)
 
+  $effect(() => {
+    if (game) void favorites.ensure(game.dbId)
+  })
+
+  const favKeys = $derived(new Set(game ? [...($favorites.get(game.dbId)?.keys() ?? [])] : []))
+
   const PAGE_SIZE = 100
 
   const armorQuery = createQuery(() => ({
@@ -104,6 +113,7 @@
   let sortBy = $state<string>('smith') // smith = armorer list (rank -> slot -> id) faithful to ISO 37652906 string table
   let viewMode = $state<'sets' | 'pieces'>('sets')
   let searchTerm = $state('')
+  let showFavsOnly = $state(false)
   let visibleCount = $state(PAGE_SIZE)
   // Skipped once after a snapshot restore (back navigation keeps its depth).
   let skipReset = $state(false)
@@ -195,7 +205,8 @@
         (rankFilter === 'all' || a.rank === rankFilter) &&
         matchesGender(a) &&
         matchesType(a) &&
-        (searchTerm === '' || normKey(a.name).includes(normKey(searchTerm))),
+        (searchTerm === '' || normKey(a.name).includes(normKey(searchTerm))) &&
+        (!showFavsOnly || favKeys.has(`armor:${a.id}`)),
     )
     if (sortBy === 'name') arr = [...arr].sort((a, b) => a.name.localeCompare(b.name))
     else if (sortBy === 'rarity') arr = [...arr].sort((a, b) => (b.rarity ?? 0) - (a.rarity ?? 0))
@@ -220,6 +231,7 @@
     let arr = armorSets
       .filter((s) => setIds.has(s.id))
       .filter((s) => searchTerm === '' || normKey(s.name).includes(normKey(searchTerm)))
+      .filter((s) => !showFavsOnly || favKeys.has(`armor_set:${s.id}`))
     if (sortBy === 'name') arr = [...arr].sort((a, b) => a.name.localeCompare(b.name))
     else if (sortBy === 'rarity') arr = [...arr].sort((a, b) => (b.rarity ?? 0) - (a.rarity ?? 0))
     else if (sortBy === 'defense') arr = [...arr].sort((a, b) => (b.rarity ?? 0) - (a.rarity ?? 0))
@@ -373,6 +385,21 @@
             </button>
           {/each}
         </span>
+        <button
+          type="button"
+          onclick={() => (showFavsOnly = !showFavsOnly)}
+          aria-pressed={showFavsOnly}
+          title="Show favorites only"
+          class="inline-flex items-center gap-1.5 px-4 min-h-[44px] sm:min-h-[36px] rounded-full border text-xs font-medium focus-visible:outline-none focus-visible:ring-2 {showFavsOnly
+            ? 'border-[var(--theme-accent)]/50 bg-[var(--theme-accent)]/10 text-[var(--theme-accent)]'
+            : 'border-[var(--theme-border)] bg-[var(--theme-bg-surface)] text-gray-400 hover:text-gray-200'}"
+        >
+          <Star
+            class="h-3.5 w-3.5 {showFavsOnly ? 'fill-[var(--theme-accent)]' : ''}"
+            aria-hidden="true"
+          />
+          Favorites
+        </button>
       </div>
       <div class="flex gap-2 overflow-x-auto pb-1 -mb-1" role="group" aria-label="Filter by rank">
         {#each ranks as rank}
@@ -401,44 +428,49 @@
             {@const pieces = armors
               .filter((a) => a.set_id === set.id && matchesGender(a) && matchesType(a))
               .slice(0, 6)}
-            <button
-              onclick={() => openSet(set.id)}
-              aria-label="Open {set.name} set"
-              class="text-left rounded-lg min-h-[44px] focus-visible:outline-none focus-visible:ring-2"
-            >
-              <Card variant="themed" class="p-4">
-                <div class="flex items-start justify-between gap-2 mb-2">
-                  <h3 class="font-semibold text-gray-100 truncate">{set.name}</h3>
-                  <Badge tone={rankTone(set.rank)}>
-                    {set.rank ?? 'Low'} · {set.piece_count} pcs
-                  </Badge>
-                </div>
-                <p class="text-xs text-gray-400 mb-2">
-                  {setLabel(set)} · R{set.rarity ?? 1}
-                </p>
-                <div class="flex flex-wrap gap-1">
-                  {#each pieces as p}
-                    <span
-                      class="text-[10px] px-2 py-1 rounded bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] text-gray-300 inline-flex items-center gap-1"
-                      ><ItemIcon
-                        iconUrl={p.icon_url}
-                        iconName={p.icon_name}
-                        iconColor={p.icon_color}
-                        size={14}
-                        alt=""
-                      />{p.name}
-                      <span class="text-gray-400">[{slotLabel[p.slot_type] ?? p.slot_type}]</span
-                      ></span
-                    >
-                  {/each}
-                  {#if set.piece_count > pieces.length}
-                    <span class="text-[10px] px-2 py-1 rounded bg-gray-800 text-gray-400"
-                      >+{set.piece_count - pieces.length} more</span
-                    >
-                  {/if}
-                </div>
-              </Card>
-            </button>
+            <div class="relative">
+              <button
+                onclick={() => openSet(set.id)}
+                aria-label="Open {set.name} set"
+                class="text-left rounded-lg min-h-[44px] w-full focus-visible:outline-none focus-visible:ring-2"
+              >
+                <Card variant="themed" class="p-4">
+                  <div class="flex items-start justify-between gap-2 mb-2">
+                    <h3 class="font-semibold text-gray-100 truncate">{set.name}</h3>
+                    <Badge tone={rankTone(set.rank)}>
+                      {set.rank ?? 'Low'} · {set.piece_count} pcs
+                    </Badge>
+                  </div>
+                  <p class="text-xs text-gray-400 mb-2">
+                    {setLabel(set)} · R{set.rarity ?? 1}
+                  </p>
+                  <div class="flex flex-wrap gap-1">
+                    {#each pieces as p}
+                      <span
+                        class="text-[10px] px-2 py-1 rounded bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] text-gray-300 inline-flex items-center gap-1"
+                        ><ItemIcon
+                          iconUrl={p.icon_url}
+                          iconName={p.icon_name}
+                          iconColor={p.icon_color}
+                          size={14}
+                          alt=""
+                        />{p.name}
+                        <span class="text-gray-400">[{slotLabel[p.slot_type] ?? p.slot_type}]</span
+                        ></span
+                      >
+                    {/each}
+                    {#if set.piece_count > pieces.length}
+                      <span class="text-[10px] px-2 py-1 rounded bg-gray-800 text-gray-400"
+                        >+{set.piece_count - pieces.length} more</span
+                      >
+                    {/if}
+                  </div>
+                </Card>
+              </button>
+              <div class="absolute top-2 right-2">
+                <FavoriteButton kind="armor_set" id={set.id} name={set.name} size="sm" />
+              </div>
+            </div>
           {/each}
         </div>
         {#if filteredSets.length > visibleSets.length}
@@ -468,69 +500,77 @@
       {:else}
         <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {#each visiblePieces as piece (piece.id)}
-            <button
-              onclick={() => open(piece.id)}
-              aria-label="Open {piece.name}"
-              class="text-left rounded-lg min-h-[44px] focus-visible:outline-none focus-visible:ring-2"
-            >
-              <Card variant="themed" class="p-4 cursor-pointer">
-                <div class="flex items-center gap-2 mb-2">
-                  <ItemIcon
-                    iconUrl={piece.icon_url}
-                    iconName={piece.icon_name}
-                    iconColor={piece.icon_color}
-                    size={28}
-                    alt=""
-                  />
-                  <h3 class="font-semibold text-gray-100 truncate flex-1">{piece.name}</h3>
-                  <Badge tone={rankTone(piece.rank)}>
-                    {piece.rank}
-                  </Badge>
-                </div>
-                <p class="text-xs text-gray-400 mb-3">
-                  {slotLabel[piece.slot_type] ?? piece.slot_type}
-                </p>
-                <div class="grid grid-cols-2 gap-x-3 gap-y-1 text-xs">
-                  <div>
-                    <span class="text-gray-400">DEF</span>
-                    <span class="text-gray-100 font-medium ml-1 tabular-nums">
-                      {piece.defense_base ?? 0}-{piece.defense_max ?? 0}
-                    </span>
+            <div class="relative">
+              <button
+                onclick={() => open(piece.id)}
+                aria-label="Open {piece.name}"
+                class="text-left rounded-lg min-h-[44px] w-full focus-visible:outline-none focus-visible:ring-2"
+              >
+                <Card variant="themed" class="p-4 cursor-pointer">
+                  <div class="flex items-center gap-2 mb-2">
+                    <ItemIcon
+                      iconUrl={piece.icon_url}
+                      iconName={piece.icon_name}
+                      iconColor={piece.icon_color}
+                      size={28}
+                      alt=""
+                    />
+                    <h3 class="font-semibold text-gray-100 truncate flex-1">{piece.name}</h3>
+                    <Badge tone={rankTone(piece.rank)}>
+                      {piece.rank}
+                    </Badge>
                   </div>
-                  <div>
-                    <span class="text-gray-400">Rarity</span>
-                    <span class="text-gray-100 font-medium ml-1">{piece.rarity ?? 1}</span>
+                  <p class="text-xs text-gray-400 mb-3">
+                    {slotLabel[piece.slot_type] ?? piece.slot_type}
+                  </p>
+                  <div class="grid grid-cols-2 gap-x-3 gap-y-1 text-xs">
+                    <div>
+                      <span class="text-gray-400">DEF</span>
+                      <span class="text-gray-100 font-medium ml-1 tabular-nums">
+                        {piece.defense_base ?? 0}-{piece.defense_max ?? 0}
+                      </span>
+                    </div>
+                    <div>
+                      <span class="text-gray-400">Rarity</span>
+                      <span class="text-gray-100 font-medium ml-1">{piece.rarity ?? 1}</span>
+                    </div>
+                    <div>
+                      <span class="text-orange-400">Fire</span>
+                      <span class="text-gray-100 ml-1 tabular-nums"
+                        >{piece.resistance_fire ?? 0}</span
+                      >
+                    </div>
+                    <div>
+                      <span class="text-blue-400">Water</span>
+                      <span class="text-gray-100 ml-1 tabular-nums"
+                        >{piece.resistance_water ?? 0}</span
+                      >
+                    </div>
+                    <div>
+                      <span class="text-yellow-400">Thunder</span>
+                      <span class="text-gray-100 ml-1 tabular-nums"
+                        >{piece.resistance_thunder ?? 0}</span
+                      >
+                    </div>
+                    <div>
+                      <span class="text-cyan-400">Ice</span>
+                      <span class="text-gray-100 ml-1 tabular-nums"
+                        >{piece.resistance_ice ?? 0}</span
+                      >
+                    </div>
+                    <div class="col-span-2">
+                      <span class="text-purple-400">Dragon</span>
+                      <span class="text-gray-100 ml-1 tabular-nums"
+                        >{piece.resistance_dragon ?? 0}</span
+                      >
+                    </div>
                   </div>
-                  <div>
-                    <span class="text-orange-400">Fire</span>
-                    <span class="text-gray-100 ml-1 tabular-nums">{piece.resistance_fire ?? 0}</span
-                    >
-                  </div>
-                  <div>
-                    <span class="text-blue-400">Water</span>
-                    <span class="text-gray-100 ml-1 tabular-nums"
-                      >{piece.resistance_water ?? 0}</span
-                    >
-                  </div>
-                  <div>
-                    <span class="text-yellow-400">Thunder</span>
-                    <span class="text-gray-100 ml-1 tabular-nums"
-                      >{piece.resistance_thunder ?? 0}</span
-                    >
-                  </div>
-                  <div>
-                    <span class="text-cyan-400">Ice</span>
-                    <span class="text-gray-100 ml-1 tabular-nums">{piece.resistance_ice ?? 0}</span>
-                  </div>
-                  <div class="col-span-2">
-                    <span class="text-purple-400">Dragon</span>
-                    <span class="text-gray-100 ml-1 tabular-nums"
-                      >{piece.resistance_dragon ?? 0}</span
-                    >
-                  </div>
-                </div>
-              </Card>
-            </button>
+                </Card>
+              </button>
+              <div class="absolute top-2 right-2">
+                <FavoriteButton kind="armor" id={piece.id} name={piece.name} size="sm" />
+              </div>
+            </div>
           {/each}
         </div>
         {#if filtered.length > visiblePieces.length}

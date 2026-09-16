@@ -1,6 +1,8 @@
 <script lang="ts">
   import BackButton from './back-button.svelte'
   import Badge from './ui/badge.svelte'
+  import FavoriteButton from './favorite-button.svelte'
+  import type { FavoriteKind } from '$lib/api'
   import type { ComponentProps } from 'svelte'
 
   type BadgeTone = ComponentProps<typeof Badge>['tone']
@@ -11,12 +13,16 @@
     icon,
     iconUrl,
     tags = [],
+    favKind,
+    favId,
   }: {
     title: string
     subtitle?: string
     icon?: string
     iconUrl?: string | null
     tags?: { label: string; color?: string; tone?: BadgeTone }[]
+    favKind?: FavoriteKind
+    favId?: number
   } = $props()
 
   let imgFailed = $state(false)
@@ -38,6 +44,7 @@
           alt=""
           class="w-9 h-9 md:w-10 md:h-10 object-contain"
           loading="lazy"
+          decoding="async"
           onerror={() => (imgFailed = true)}
         />
       </div>
@@ -51,7 +58,14 @@
       </div>
     {/if}
     <div class="min-w-0 flex-1">
-      <h1 class="fluid-h1 font-bold text-gray-100 break-words">{title}</h1>
+      <div class="flex items-start gap-2">
+        <h1 class="fluid-h1 font-bold text-gray-100 break-words flex-1">{title}</h1>
+        {#if favKind && favId != null}
+          <div class="pt-1 shrink-0">
+            <FavoriteButton kind={favKind} id={favId} name={title} />
+          </div>
+        {/if}
+      </div>
       {#if subtitle}
         <p class="text-sm text-[var(--theme-text-muted)] mt-1 break-words">{subtitle}</p>
       {/if}

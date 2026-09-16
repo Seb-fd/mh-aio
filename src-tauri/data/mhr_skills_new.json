@@ -1,0 +1,884 @@
+[
+  {
+    "id": 40112,
+    "name": "Adrenaline Rush",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Affinity Sliding",
+    "description": "Sliding increases your affinity for a short time.",
+    "id": 40001,
+    "max_level": 1
+  },
+  {
+    "name": "Agitator",
+    "description": "Increases attack power and affinity when large monsters become enraged.",
+    "id": 40002,
+    "max_level": 5
+  },
+  {
+    "name": "Ammo Up",
+    "description": "Increases bowgun loading capacity. (There is a cap to loading capacity.)",
+    "id": 40003,
+    "max_level": 3
+  },
+  {
+    "name": "Artillery",
+    "description": "Strengthens explosive attacks like shells, Wyvern's Fire, charge blade phial attacks, and Sticky Ammo.",
+    "id": 40004,
+    "max_level": 3
+  },
+  {
+    "name": "Attack Boost",
+    "description": "Increases attack power.",
+    "id": 40005,
+    "max_level": 7
+  },
+  {
+    "name": "Ballistics",
+    "description": "Extends the range in which ammo and arrows have maximum power.",
+    "id": 40006,
+    "max_level": 3
+  },
+  {
+    "id": 40113,
+    "name": "Berserk",
+    "description": null,
+    "max_level": 2
+  },
+  {
+    "id": 40114,
+    "name": "Bladescale Hone",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Blast Attack",
+    "description": "Increases the rate of blast buildup. (Blast buildup has a maximum limit.)",
+    "id": 40007,
+    "max_level": 3
+  },
+  {
+    "name": "Blast Resistance",
+    "description": "Grants protection against blastblight.",
+    "id": 40008,
+    "max_level": 3
+  },
+  {
+    "name": "Blight Resistance",
+    "description": "Grants protection against all elemental blights.",
+    "id": 40009,
+    "max_level": 3
+  },
+  {
+    "id": 40115,
+    "name": "Blood Awakening",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "id": 40116,
+    "name": "Blood Rite",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "id": 40117,
+    "name": "Bloodlust",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Bludgeoner",
+    "description": "Increases attack power when your weapon sharpness is low.",
+    "id": 40010,
+    "max_level": 3
+  },
+  {
+    "name": "Bombardier",
+    "description": "Increases the damage of explosive items.",
+    "id": 40011,
+    "max_level": 3
+  },
+  {
+    "name": "Botanist",
+    "description": "Increases the quantity of herbs and other consumable items you gather.",
+    "id": 40012,
+    "max_level": 4
+  },
+  {
+    "name": "Bow Charge Plus",
+    "description": "Increases max bow charge level by one.",
+    "id": 40013,
+    "max_level": 1
+  },
+  {
+    "name": "Bubbly Dance",
+    "description": "Reduces bubbleblight and grants increased evasion when afflicted.",
+    "id": 40014,
+    "max_level": 3
+  },
+  {
+    "id": 40118,
+    "name": "Buildup Boost",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "id": 40119,
+    "name": "Burst",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Capture Master",
+    "description": "High chance of increased capture rewards. (No effect when joining mid-quest.)",
+    "id": 40015,
+    "max_level": 1
+  },
+  {
+    "name": "Carving Master",
+    "description": "Lets you carve one additional time. (No effect when joining mid-quest.)",
+    "id": 40016,
+    "max_level": 1
+  },
+  {
+    "name": "Carving Pro",
+    "description": "Prevents knockback from attacks while carving.",
+    "id": 40017,
+    "max_level": 1
+  },
+  {
+    "name": "Chameleos Blessing",
+    "description": "Gain the power of the elder dragon Chameleos.",
+    "id": 40018,
+    "max_level": 4
+  },
+  {
+    "id": 40120,
+    "name": "Charge Master",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "id": 40121,
+    "name": "Coalescence",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Constitution",
+    "description": "Reduces stamina depletion when evading, blocking, or doing certain other actions.",
+    "id": 40019,
+    "max_level": 5
+  },
+  {
+    "name": "Counterstrike",
+    "description": "Temporarily increases attack power after being knocked back.",
+    "id": 40020,
+    "max_level": 3
+  },
+  {
+    "name": "Critical Boost",
+    "description": "Increases the damage of critical hits.",
+    "id": 40021,
+    "max_level": 3
+  },
+  {
+    "name": "Critical Draw",
+    "description": "Increases affinity for a short time after performing a draw attack. (Does not include Silkbind attacks.)",
+    "id": 40022,
+    "max_level": 3
+  },
+  {
+    "name": "Critical Element",
+    "description": "Increases elemental damage (fire, water, thunder, ice, dragon) when landing critical hits.",
+    "id": 40023,
+    "max_level": 3
+  },
+  {
+    "name": "Critical Eye",
+    "description": "Increases affinity.",
+    "id": 40024,
+    "max_level": 7
+  },
+  {
+    "name": "Defense Boost",
+    "description": "Increases defense. Resistances will also improve as the level increases.",
+    "id": 40025,
+    "max_level": 7
+  },
+  {
+    "id": 40122,
+    "name": "Defiance",
+    "description": null,
+    "max_level": 5
+  },
+  {
+    "id": 40123,
+    "name": "Dereliction",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Diversion",
+    "description": "Increases the attention drawn when attacking a monster.",
+    "id": 40026,
+    "max_level": 1
+  },
+  {
+    "name": "Divine Blessing",
+    "description": "Has a predetermined chance of reducing the damage you take.",
+    "id": 40027,
+    "max_level": 3
+  },
+  {
+    "name": "Dragon Attack",
+    "description": "Increases dragon element attack power. (Elemental attack power has a maximum limit.)",
+    "id": 40028,
+    "max_level": 5
+  },
+  {
+    "id": 40124,
+    "name": "Dragon Conversion",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Dragon Resistance",
+    "description": "Increases dragon resistance. Also improves defense at higher levels.",
+    "id": 40029,
+    "max_level": 3
+  },
+  {
+    "name": "Dragonheart",
+    "description": "Draconic energy fills you after losing a certain amount of health. Weapons lose all non-dragon effects.",
+    "id": 40030,
+    "max_level": 5
+  },
+  {
+    "name": "Earplugs",
+    "description": "Grants protection from large monsters' roars.",
+    "id": 40031,
+    "max_level": 5
+  },
+  {
+    "id": 40125,
+    "name": "Element Exploit",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "id": 40126,
+    "name": "Embolden",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Evade Extender",
+    "description": "Increases evade distance.",
+    "id": 40032,
+    "max_level": 3
+  },
+  {
+    "name": "Evade Window",
+    "description": "Extends the invulnerability period when evading.",
+    "id": 40033,
+    "max_level": 5
+  },
+  {
+    "name": "Fire Attack",
+    "description": "Increases fire element attack power. (Elemental attack power has a maximum limit.)",
+    "id": 40034,
+    "max_level": 5
+  },
+  {
+    "name": "Fire Resistance",
+    "description": "Increases fire resistance. Also improves defense at higher levels.",
+    "id": 40035,
+    "max_level": 3
+  },
+  {
+    "name": "Flinch Free",
+    "description": "Prevents knockbacks and other reactions to small damage.",
+    "id": 40036,
+    "max_level": 3
+  },
+  {
+    "name": "Focus",
+    "description": "Increases the fill rate for weapons with gauges and the charge rate for weapons with charge attacks.",
+    "id": 40037,
+    "max_level": 3
+  },
+  {
+    "id": 40127,
+    "name": "Foray",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Fortify",
+    "description": "Increases your attack and defense when you fall in battle. (Disabled for some quests. Can be activated twice.)",
+    "id": 40038,
+    "max_level": 1
+  },
+  {
+    "name": "Free Meal",
+    "description": "Gives you a predetermined chance of consuming a food or drink item for free.",
+    "id": 40039,
+    "max_level": 3
+  },
+  {
+    "id": 40128,
+    "name": "Frenzied Bloodlust",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "id": 40129,
+    "name": "Frostcraft",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "id": 40130,
+    "name": "Furious",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Geologist",
+    "description": "Increases the number of times you can use a gathering point.",
+    "id": 40040,
+    "max_level": 3
+  },
+  {
+    "name": "Good Luck",
+    "description": "Good chance of increased quest rewards. (No effect when joining mid-quest.)",
+    "id": 40041,
+    "max_level": 3
+  },
+  {
+    "id": 40131,
+    "name": "Grinder (S)",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Guard",
+    "description": "Reduces knockbacks and stamina depletion when guarding.",
+    "id": 40042,
+    "max_level": 5
+  },
+  {
+    "name": "Guard Up",
+    "description": "Allows you to guard against ordinarily unblockable attacks.",
+    "id": 40043,
+    "max_level": 3
+  },
+  {
+    "id": 40132,
+    "name": "Guts",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Handicraft",
+    "description": "Extends the weapon sharpness gauge. However, it will not increase the gauge past its maximum.",
+    "id": 40044,
+    "max_level": 5
+  },
+  {
+    "id": 40133,
+    "name": "Heaven-Sent",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Hellfire Cloak",
+    "description": "Grants hellfire resistance and confers explosive hellfire power to your attacks after fulfilling certain conditions.",
+    "id": 40045,
+    "max_level": 4
+  },
+  {
+    "name": "Heroics",
+    "description": "Increases attack power and defense when health drops to 35% or lower.",
+    "id": 40046,
+    "max_level": 5
+  },
+  {
+    "name": "Horn Maestro",
+    "description": "Increases overall performance speed and shockwave damage.",
+    "id": 40047,
+    "max_level": 1
+  },
+  {
+    "name": "Hunger Resistance",
+    "description": "Reduces maximum stamina depletion over time.",
+    "id": 40048,
+    "max_level": 3
+  },
+  {
+    "name": "Ice Attack",
+    "description": "Increases ice element attack power. (Elemental attack power has a maximum limit.)",
+    "id": 40049,
+    "max_level": 5
+  },
+  {
+    "name": "Ice Resistance",
+    "description": "Increases ice resistance. Also improves defense at higher levels.",
+    "id": 40050,
+    "max_level": 3
+  },
+  {
+    "id": 40134,
+    "name": "Inspiration",
+    "description": null,
+    "max_level": 1
+  },
+  {
+    "id": 40135,
+    "name": "Intrepid Heart",
+    "description": null,
+    "max_level": 2
+  },
+  {
+    "name": "Item Prolonger",
+    "description": "Extends the duration of some item effects.",
+    "id": 40051,
+    "max_level": 3
+  },
+  {
+    "name": "Jump Master",
+    "description": "Prevents attacks from knocking you back during a jump.",
+    "id": 40052,
+    "max_level": 1
+  },
+  {
+    "name": "Kushala Blessing",
+    "description": "Gain the power of the elder dragon Kushala Daora.",
+    "id": 40053,
+    "max_level": 4
+  },
+  {
+    "name": "Latent Power",
+    "description": "Temporarily increases affinity and reduces stamina depletion when certain conditions are met.",
+    "id": 40054,
+    "max_level": 5
+  },
+  {
+    "name": "Leap of Faith",
+    "description": "Allows you to do a dive-evade when facing towards large monsters, and extends the dive-evade distance.",
+    "id": 40055,
+    "max_level": 1
+  },
+  {
+    "name": "Load Shells",
+    "description": "Improves reloading, and increases the gunlance's shell capacity and charge blade's phial capacity.",
+    "id": 40056,
+    "max_level": 2
+  },
+  {
+    "id": 40136,
+    "name": "Mail of Hellfire",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Marathon Runner",
+    "description": "Slows down stamina depletion for actions which continuously drain stamina (such as dashing).",
+    "id": 40057,
+    "max_level": 3
+  },
+  {
+    "name": "Master Mounter",
+    "description": "Improves your Wyvern Riding skills.",
+    "id": 40058,
+    "max_level": 1
+  },
+  {
+    "name": "Master's Touch",
+    "description": "Prevents your weapon from losing sharpness during critical hits.",
+    "id": 40059,
+    "max_level": 3
+  },
+  {
+    "name": "Maximum Might",
+    "description": "Increases affinity if stamina is kept full for a period of time.",
+    "id": 40060,
+    "max_level": 3
+  },
+  {
+    "name": "Mind's Eye",
+    "description": "Your attacks are deflected less and deal more damage to hard targets.",
+    "id": 40061,
+    "max_level": 3
+  },
+  {
+    "name": "Muck Resistance",
+    "description": "Reduces impairments to mobility while stuck in monster muck or deep snow.",
+    "id": 40062,
+    "max_level": 2
+  },
+  {
+    "name": "Mushroomancer",
+    "description": "Lets you digest mushrooms that would otherwise be inedible and gain their advantageous effects.",
+    "id": 40063,
+    "max_level": 3
+  },
+  {
+    "name": "Normal/Rapid Up",
+    "description": "Increases the attack power of Normal Ammo and Rapid-type arrows.",
+    "id": 40064,
+    "max_level": 3
+  },
+  {
+    "name": "Offensive Guard",
+    "description": "Temporarily increases attack power after executing a perfectly-timed guard.",
+    "id": 40065,
+    "max_level": 3
+  },
+  {
+    "name": "Paralysis Attack",
+    "description": "Increases the rate of paralysis buildup. (Paralysis buildup has a maximum limit.)",
+    "id": 40066,
+    "max_level": 3
+  },
+  {
+    "name": "Paralysis Resistance",
+    "description": "Reduces the duration of paralysis.",
+    "id": 40067,
+    "max_level": 3
+  },
+  {
+    "name": "Partbreaker",
+    "description": "Makes it easier to break or sever parts of monsters.",
+    "id": 40068,
+    "max_level": 3
+  },
+  {
+    "name": "Peak Performance",
+    "description": "Increases attack when your health is full.",
+    "id": 40069,
+    "max_level": 3
+  },
+  {
+    "name": "Pierce Up",
+    "description": "Increases the attack power of Piercing Ammo and Piercing-type arrows.",
+    "id": 40070,
+    "max_level": 3
+  },
+  {
+    "name": "Poison Attack",
+    "description": "Increases the rate of poison buildup. (Poison buildup has a maximum limit.)",
+    "id": 40071,
+    "max_level": 3
+  },
+  {
+    "name": "Poison Resistance",
+    "description": "Reduces damage while poisoned.",
+    "id": 40072,
+    "max_level": 3
+  },
+  {
+    "id": 40137,
+    "name": "Powder Mantle",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Power Prolonger",
+    "description": "Long swords, dual blades, insect glaives, switch axes, and charge blades stay powered up longer.",
+    "id": 40073,
+    "max_level": 3
+  },
+  {
+    "name": "Protective Polish",
+    "description": "Weapon sharpness does not decrease for a set time after sharpening.",
+    "id": 40074,
+    "max_level": 3
+  },
+  {
+    "name": "Punishing Draw",
+    "description": "Adds a stun effect to draw attacks and slightly increases attack power. (Does not include Silkbind attacks.)",
+    "id": 40075,
+    "max_level": 3
+  },
+  {
+    "id": 40138,
+    "name": "Quick Breath",
+    "description": null,
+    "max_level": 1
+  },
+  {
+    "name": "Quick Sheathe",
+    "description": "Speeds up weapon sheathing.",
+    "id": 40076,
+    "max_level": 3
+  },
+  {
+    "name": "Rapid Fire Up",
+    "description": "Improves light bowgun rapid fire.",
+    "id": 40077,
+    "max_level": 3
+  },
+  {
+    "name": "Rapid Morph",
+    "description": "Increases switch speed and power for switch axes and charge blades.",
+    "id": 40078,
+    "max_level": 3
+  },
+  {
+    "name": "Razor Sharp",
+    "description": "Prevents your weapon from losing sharpness.",
+    "id": 40079,
+    "max_level": 3
+  },
+  {
+    "name": "Recoil Down",
+    "description": "Reduces recoil when firing bowgun ammo.",
+    "id": 40080,
+    "max_level": 3
+  },
+  {
+    "name": "Recovery Speed",
+    "description": "Speeds healing of recoverable damage (the red portion of the health gauge).",
+    "id": 40081,
+    "max_level": 3
+  },
+  {
+    "name": "Recovery Up",
+    "description": "Increases the amount recovered when restoring health.",
+    "id": 40082,
+    "max_level": 3
+  },
+  {
+    "id": 40139,
+    "name": "Redirection",
+    "description": null,
+    "max_level": 2
+  },
+  {
+    "name": "Reload Speed",
+    "description": "Increases bowgun reloading and bow coating loading speed.",
+    "id": 40083,
+    "max_level": 3
+  },
+  {
+    "name": "Resentment",
+    "description": "Increases attack when you have recoverable damage (the red portion of your health gauge).",
+    "id": 40084,
+    "max_level": 5
+  },
+  {
+    "name": "Resuscitate",
+    "description": "Increases attack power when you are suffering from an abnormal status.",
+    "id": 40085,
+    "max_level": 3
+  },
+  {
+    "id": 40140,
+    "name": "Shock Absorber",
+    "description": null,
+    "max_level": 1
+  },
+  {
+    "name": "Sleep Attack",
+    "description": "Increases the rate of sleep buildup. (Sleep buildup has a maximum limit.)",
+    "id": 40086,
+    "max_level": 3
+  },
+  {
+    "name": "Sleep Resistance",
+    "description": "Reduces the duration of sleep.",
+    "id": 40087,
+    "max_level": 3
+  },
+  {
+    "name": "Slugger",
+    "description": "Makes it easier to stun monsters.",
+    "id": 40088,
+    "max_level": 3
+  },
+  {
+    "id": 40141,
+    "name": "Sneak Attack",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Spare Shot",
+    "description": "Bow and bowgun shots have a chance not to expend coatings or ammo.",
+    "id": 40089,
+    "max_level": 3
+  },
+  {
+    "name": "Special Ammo Boost",
+    "description": "Increases the power of bowgun special ammo and Dragon Piercer.",
+    "id": 40090,
+    "max_level": 2
+  },
+  {
+    "name": "Speed Eating",
+    "description": "Increases meat-eating and item-consumption speed.",
+    "id": 40091,
+    "max_level": 3
+  },
+  {
+    "name": "Speed Sharpening",
+    "description": "Speeds up weapon sharpening when using a whetstone.",
+    "id": 40092,
+    "max_level": 3
+  },
+  {
+    "id": 40142,
+    "name": "Spiribird's Call",
+    "description": null,
+    "max_level": 1
+  },
+  {
+    "name": "Spread Up",
+    "description": "Increases the attack power of Spread Ammo and Spread- type arrows",
+    "id": 40093,
+    "max_level": 3
+  },
+  {
+    "name": "Stamina Surge",
+    "description": "Speeds up stamina recovery.",
+    "id": 40094,
+    "max_level": 3
+  },
+  {
+    "name": "Stamina Thief",
+    "description": "Increases certain attacks' ability to exhaust monsters.",
+    "id": 40095,
+    "max_level": 3
+  },
+  {
+    "id": 40143,
+    "name": "Status Trigger",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Steadiness",
+    "description": "Suppresses the deviation of bowgun shots.",
+    "id": 40096,
+    "max_level": 3
+  },
+  {
+    "name": "Stormsoul",
+    "description": "Strengthens thunder and dragon power and improves skills of the same elements.",
+    "id": 40097,
+    "max_level": 5
+  },
+  {
+    "id": 40144,
+    "name": "Strife",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Stun Resistance",
+    "description": "Reduces stun duration.",
+    "id": 40098,
+    "max_level": 3
+  },
+  {
+    "name": "Teostra Blessing",
+    "description": "Gain the power of the elder dragon Teostra.",
+    "id": 40099,
+    "max_level": 4
+  },
+  {
+    "name": "Thunder Alignment",
+    "description": "Gain the power of the elder dragon Thunder Serpent Narwa.",
+    "id": 40100,
+    "max_level": 5
+  },
+  {
+    "name": "Thunder Attack",
+    "description": "Increases thunder element attack power. (Elemental attack power has a maximum limit.)",
+    "id": 40101,
+    "max_level": 5
+  },
+  {
+    "name": "Thunder Resistance",
+    "description": "Increases thunder resistance. Also improves defense at higher levels.",
+    "id": 40102,
+    "max_level": 3
+  },
+  {
+    "name": "Tremor Resistance",
+    "description": "Grants protection against ground tremors.",
+    "id": 40103,
+    "max_level": 3
+  },
+  {
+    "id": 40145,
+    "name": "Tune-Up",
+    "description": null,
+    "max_level": 2
+  },
+  {
+    "name": "Wall Runner",
+    "description": "Reduces stamina consumption when running on walls.",
+    "id": 40104,
+    "max_level": 3
+  },
+  {
+    "id": 40146,
+    "name": "Wall Runner (Boost)",
+    "description": null,
+    "max_level": 1
+  },
+  {
+    "name": "Water Attack",
+    "description": "Increases water element attack power. (Elemental attack power has a maximum limit.)",
+    "id": 40105,
+    "max_level": 5
+  },
+  {
+    "name": "Water Resistance",
+    "description": "Increases water resistance. Also improves defense at higher levels.",
+    "id": 40106,
+    "max_level": 3
+  },
+  {
+    "name": "Weakness Exploit",
+    "description": "Increases the affinity of attacks that exploit a monster weak spot.",
+    "id": 40107,
+    "max_level": 3
+  },
+  {
+    "name": "Wide-Range",
+    "description": "Allows the effects of certain items to also affect nearby allies.",
+    "id": 40108,
+    "max_level": 5
+  },
+  {
+    "name": "Wind Alignment",
+    "description": "Gain the power of the elder dragon Wind Serpent Ibushi.",
+    "id": 40109,
+    "max_level": 5
+  },
+  {
+    "id": 40147,
+    "name": "Wind Mantle",
+    "description": null,
+    "max_level": 3
+  },
+  {
+    "name": "Windproof",
+    "description": "Grants protection against wind pressure.",
+    "id": 40110,
+    "max_level": 3
+  },
+  {
+    "name": "Wirebug Whisperer",
+    "description": "Improves your handling of Wirebugs.",
+    "id": 40111,
+    "max_level": 3
+  }
+]

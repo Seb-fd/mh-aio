@@ -70,6 +70,8 @@
         ? `${item.category ?? ''} • ${item.subcategory}`
         : (item.category ?? '')}
       iconUrl={item.icon_url}
+      favKind="item"
+      favId={item.id}
       tags={[
         {
           label: fallbackLabel(item.category),

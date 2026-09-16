@@ -1244,5 +1244,12 @@
     "description": "Allows you to quickly recover from heavy attacks that blow you back when you have your weapon unsheathed.",
     "max_level": 1,
     "icon_color": "Blue"
+  },
+  {
+    "id": 20179,
+    "name": "Kulve Taroth Essence",
+    "description": "Set bonus: counts toward the Kulve Taroth armor set bonus.",
+    "max_level": 1,
+    "icon_color": "Yellow"
   }
 ]

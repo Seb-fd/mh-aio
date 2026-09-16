@@ -68,6 +68,8 @@
     <DetailHeader
       title={skill.name}
       subtitle={skill.description ?? ''}
+      favKind="skill"
+      favId={skill.id}
       tags={[
         {
           label: `${skill.levels.length} abilities`,

@@ -101,18 +101,18 @@ Keep `mh2g_*.json` as the retail-faithful source. Items are now 100% sourced and
 
 | Aspect                | State                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Items                 | **1065** — real names, rarity, sell price; 0 duplicate names                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Categories            | `Consumable 55 / Material 964 / Ammo 46`; subcategories from section taxonomy + name heuristics (`Recovery, Buff, Food, Charm, Coating, Husk, Ore, Bone, Sac, Monster Material, …`)                                                                                                                                                                                                                                                                                    |
-| Descriptions          | **291** (274 with CJK) — ~28 EN + ~263 **Japanese** (kept faithfully, flagged with a **🇯🇵 JP badge** in the detail UI via CJK detection `[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]`)                                                                                                                                                                                                                                                                                   |
-| Buy prices            | **181 items** have `buy_price`; sell/rarity corrected against the wiki                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Items                 | **1044** — real names, rarity, sell price; 0 duplicate names                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Categories            | `Consumable 55 / Material 943 / Ammo 46`; subcategories from section taxonomy + name heuristics (`Recovery, Buff, Food, Charm, Coating, Husk, Ore, Bone, Sac, Monster Material, …`)                                                                                                                                                                                                                                                                                    |
+| Descriptions          | **291** (274 with CJK) — 17 EN + 274 **Japanese** (kept faithfully, flagged with a **🇯🇵 JP badge** in the detail UI via CJK detection `[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]`); 753 catalog items have no description (genuinely missing source text, not a seed bug)                                                                                                                                                                                                     |
+| Buy prices            | **150 items** have `buy_price`; sell/rarity corrected against the wiki                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Combine list          | **263 recipes** (202 Normal in `調合リスト` book order + 61 Alchemy) with `chance`; verified #1 Potion = Herb + Blue Mushroom 95%                                                                                                                                                                                                                                                                                                                                      |
-| Monster drops         | **761 rows** (carve 238 / break 189 / capture 191 / drop 143, Low 378 / High 383) across **40 droptable monsters** with rank/part/quantity/probability — per-monster carve/break/capture tables                                                                                                                                                                                                                                                                        |
+| Monster drops         | **1679 rows** (carve 556 / capture 517 / break 329 / drop 277) across **40 droptable monsters** with rank/part/quantity/probability — per-monster carve/break/capture tables                                                                                                                                                                                                                                                                                        |
 | Item ids              | Re-indexed to the MHP3rd **item-box (chest) order** (`scripts/reindex_mhp3rd_items.py`): matched against the per-game ordered list (books → consumables → plants/tools/baits/insects/ores/bones → ammo → tickets → monster materials), then all `item_id`/`result_item_id`/`component_item_id` references remapped. **0 dangling references** across weapon/armor materials, craft, combine, monster_drops, quest_rewards, item_sources; 0 duplicate ids (10001–11065) |
 | Monsters              | **60** (Large + Small) with weaknesses / equipment links                                                                                                                                                                                                                                                                                                                                                                                                               |
 | Weapons / Armor       | **972 weapons** / **1111 armor pieces** (sets via `derive_set_name`) + forge/upgrade materials                                                                                                                                                                                                                                                                                                                                                                         |
 | Quests                | **378** (`village 96 · guild_low 88 · guild_high 100 · event 52 · hot_spring 7 · drink 16 · nyanta 3 · training 10 · challenge 6`); all 378 carry `name_original` (JP quest-board title = in-game order). Bilingual fields: `location_original`/`objective_original`/`description_original`                                                                                                                                                                            |
 | Quest rewards         | **1867 rows** — JP reward material → `item_id` (Fandom `MHP3: Item List` + curated monster-material map); unresolved logged never orphaned                                                                                                                                                                                                                                                                                                                             |
-| Item sources (gather) | **26 rows** — `gather` map + area per item (EN map names, `conditions: "Areas: …"`); shop/trade/farm not yet populated                                                                                                                                                                                                                                                                                                                                                 |
+| Item sources (extra)  | **2016 rows** — `trade` 528 / `drop` 515 / `carve` 374 / `farm` 120 / `gather` 110 / `shop` 102 (`Yukumo Village Shop`) / `mining` 100 / `capture` 98 / `bug` 36 / `fish` 30 / `other` 3; shop/trade/farm fully populated (SDD 001 verified — earlier "gather-only" state is resolved)                                                                                                                                                                                          |
 | Seed / schema         | Idempotent (`add_idempotency_constraints` dedup + UNIQUE indexes, `clear_game` removed; `schema_version` table); `norm_key` registered as SQLite scalar for `get_global_search`                                                                                                                                                                                                                                                                                        |
 
 ## Pipeline
@@ -125,7 +125,7 @@ Keep `mh2g_*.json` as the retail-faithful source. Items are now 100% sourced and
 
 ## Known gaps
 
-- **Shop/trade/farm source rows** (`item_sources` type shop/trade/farm) not yet generated; gather (`mining`) is populated. Small-monster carves are in the wiki `小型モンスター` page but not yet absorbed.
+- **Shop/trade/farm source rows** were seeded all along (`mhp3rd_item_sources_extra.json`, 2016 rows) — SDD 001 verified coverage and fixed the real gap, which was visibility: `get_item_sources` (`queries.rs`) excluded all `carve/capture/drop/break` junction rows, hiding 987 small-monster rows (`source_id NULL`, e.g. `Conga - carving`). The exclusion now applies only with `source_id NOT NULL` (mirrored `monster_drops` dupes stay excluded); covered by `small_monster_sources_are_visible_without_duplicates` test. Small-monster carves from the wiki `小型モンスター` page are absorbed.
 - **Chest order** is derived from the per-game ordered item list (kouryaku.ohuda.com, game category order) — a faithful proxy; ~323/575 box items were matched by JP→EN, the remaining catalog items stay at their prior relative order after the matched block.
 - **Unresolved JP names** are logged (never orphaned): `scripts/mhp3rd_items.log`, `mhp3rd_item_sources.log`, `mhp3rd_monster_drops.log`. Some monster-material JP names lack an EN mapping in the current catalog.
 
@@ -137,15 +137,70 @@ Keep `mh2g_*.json` as the retail-faithful source. Items are now 100% sourced and
 | -------- | ------------------------------------------- | -------------------------------------------------------------------------------------- |
 | Items    | 1359 (World+Iceborne incl. 20 event/collab) | `MHWorldData/item_base.csv:1339` + Fandom `MHWI:_Item_List` 549 + `MHW:_Item_List` 267 |
 | Monsters | 94 (Small 23 + Large 71 incl. variants)     | `MHWorldData/monster_base.csv:93` + `Grimalkyne` (Fandom Lynian)                       |
-| Weapons  | 3544 (14 types, 8-color per-rarity icons)   | `MHWorldData/weapon_base.csv`                                                          |
+| Weapons  | 3544 (14 types, 12-HEX per-rarity icons r1..r12)   | `MHWorldData/weapon_base.csv`                                                          |
 | Drops    | 5862                                        | `MHWorldData/monster_rewards.csv:5680` + 182 Fandom                                    |
-| Icons    | 343 item + 94 monster + 112 weapon (8×14)   | Fandom `Category:Weapon_Icons` / `Item_Icons`                                          |
+| Icons    | 343 item + 94 monster + 294 weapon (12 rarities × types, incl. blue variants) + 36 mantles + 9 palico + 100 armor | Fandom `Category:Weapon_Icons` / `Item_Icons` |
+| Decorations | 404 (slot, rarity, skill1+2 with levels, skill icons) | MHWorldData `decorations/decoration_base.csv` via `scripts/generate_mhw_decorations_weaknesses.py` |
+| Weaknesses | 788 rows / 88 monsters (per-part cut/impact/shot + fire/water/thunder/ice/dragon; ailments dropped — no column) | MHWorldData `monsters/monster_hitzones.csv` (not the 0-3 star summary) |
+| Equipment | ~6461 armor + ~13923 weapon links, derived from material drops | seed derivation (`armor/weapon_materials` ⨝ `monster_drops`) |
+| Gather sources | 911 rows (Ancient Forest / Wildspire / Coral / Rotten / Elder's Recess; area + rank in conditions; no Hoarfrost/Guiding Lands upstream) | MHWorldData `locations/location_items.csv` |
+| Skills | 179 (+`Kulve Taroth Essence`) / 419 levels; `weapon_skill_points` for 638 special-skill weapons (bare-name fallback, points = max_level) | seed derivation from `weapons.skills` |
 
-Chest order `COALESCE(sort_order,id)` (`queries.rs:1688` items, `queries.rs:492` monsters) and Smith order (`queries.rs:914` weapons) are faithful to in-game box/tree. Weapons filter no longer shows `All` (`weapons/+page.svelte:14` default `Great Sword`).
+Chest order `COALESCE(sort_order,id)` (`queries.rs:1702` items, `queries.rs:494` monsters) and Smith order (`queries.rs:916` weapons) are faithful to in-game box/tree. Weapons filter no longer shows `All` (`weapons/+page.svelte:76` default `Great Sword`).
+
+> MHW remaining notes: combine is Normal-only by design (crafting + Melder model, see spec `009`); deco crafting materials don't exist upstream (`decoration_materials` empty for MHW).
+
+## MH Wilds — Catalog (spec 004 DONE)
+
+**Verdict:** Wilds core seeded from the MHDB Wilds API (`scripts/generate_mhwilds_from_mhdb.py`, browser UA — the API 403s the default python UA). 14 curated files, dedicated PK offsets (monsters 20001+, items/skills/decos 30001+, weapons 40001+, armor 50001+, sets 30000+, combine 900000+).
+
+| Aspect   | Count                                                                 | Source |
+| -------- | --------------------------------------------------------------------- | ------ |
+| Monsters | 34 Large (descriptions; no smalls upstream)                           | `/en/monsters` |
+| Weaknesses | 340 rows / 34 monsters (per-part multipliers ×100, mh2g scale)      | monster detail `parts[]` |
+| Drops    | 1775 (carve 583 / break 431 / reward 761; Low 477 / High 1298)        | monster detail `rewards[]` (carve-*/wound-*/broken-* mapped) |
+| Items    | 773 (Material + descriptions; no categories upstream)                 | `/en/items` |
+| Combines | 121 (crafting recipes, Normal)                                        | item detail `recipes[]` |
+| Skills   | 179 / 442 levels (armor/weapon/set/group kinds)                       | `/en/skills` (+ ranks) |
+| Decorations | 361 (slot/rarity/skills; no materials upstream)                    | `/en/decorations` |
+| Weapons  | 1188 (14 types, per-type sort, sharpness/slots/elements/status/skills, forge+upgrade materials; elements from `specials[]`) | `/en/weapons` (edges) + Kiranico Wilds list order (Smith sequence) |
+| Armor    | 714 (183 sets, resistances/skills/materials)                          | `/en/armor` |
+| Equipment | ~1273 armor + ~2499 weapon links derived from material drops         | seed derivation (002b pattern) |
+
+Ordering: Chest `sort_order` is an alphabetical proxy (no retail box order published); weapons follow the Kiranico Wilds Smith DFS sequence (scripts/reorder_mhwilds_weapons.py Playwright tab scrape; MHDB previous/branches kept as the edge source, 0 orphans); monsters alphabetical. Icons: no Wilds sets offline — monsters reuse mhw slug paths (UI fallback), weapons/armor reuse the mhw rarity scheme, items NULL, decos mhfu path.
+
+Gaps (no upstream data, not seed bugs): quests (empty list), charms (64 upstream, no table), small monsters.
+
+## MH Rise — Base catalog (spec 003 Phase A bulk)
+
+Phase A content was fully superseded by the Phase B Sunbreak v16 Kiranico scrape (see below); the bulk scripts remain as provenance (`scripts/generate_mhrise_bulk.py`).
+
+## MH Rise: Sunbreak — Full catalog (spec 003 Phase B DONE)
+
+**Verdict:** full Sunbreak v16 from Kiranico (`scripts/fetch_mhrise_kiranico.py` — cached, throttled, resumable; ~6900 detail pages) merged by `scripts/merge_mhrise_phaseb.py`. Dedicated PK offsets (monsters 30001+, items/skills/decos 40001+, weapons 50001+, armor 60001+, sets 40001+, quests 200001+, rewards 900001+).
+
+| Aspect   | Count | Source |
+| -------- | ----- | ------ |
+| Monsters | 112 (78 Large + 34 Small, descriptions) | CrimsonNynja (names) — Kiranico physiology/drops keyed by exact name match (112/112) |
+| Weaknesses | 629 rows / 112 monsters (state-0 hitzones: slash/strike/shell + elements, mh2g scale) | Kiranico monster `Physiology` table |
+| Drops | 7092 (carve/break/reward/drop/palico/capture, Low/High/Master with %) | Kiranico monster drop tables (shape-detected, no headers) |
+| Items | 1642 (taxonomy + descriptions backfilled + 74 gather rows) | Badge87 + 554 Sunbreak materials from drops/quests/mats |
+| Quests | 946 (UNION CrimsonNynja 327 incl. retired Rampage + Kiranico 619; all hubs incl. Anomaly/Follower; 7508 rewards) | CrimsonNynja + Kiranico quest reward tables |
+| Skills | 147 / 459 levels (Kiranico level text; Badge87 fallback) | Badge87 + Kiranico skill pages (+ deco price cross-ref) |
+| Decorations | 243 (slot, Kiranico skill levels, materials, prices) | Kiranico deco pages (union by name) |
+| Weapons | 3953 (14 types, Smith sort, attack/affinity/element/status/sharpness/rarity/defense/materials/tree/slots (2508 backfilled from Kiranico list decoN badges)) | Kiranico weapon pages for stats/materials (element codes anchored: Rathalos→1 Fire … Magnamalo→9 Blast) + Game8 tree pages for upgrade edges (scripts/parse_game8_rise_trees.py, scripts/rebuild_mhr_weapons.py) |
+| Armor | 1591 (410 stem-derived sets, defense/res/slots/skill-levels/materials; Low ≤R3 < High ≤R7 < Master) | Kiranico armor pages (slots from `decoN.png`, skills `Name Lv N`) |
+| Equipment | derived from material drops (002b pattern; runs AFTER drops in seed order) | seed derivation |
+
+Ordering: alphabetical proxy for non-weapon lists (no retail order published); weapons follow the Game8 Smith DFS sequence (matches the Kiranico list order except single-node Primordial/event trees). Icons: no Rise sets offline — same fallback scheme as Wilds.
+
+Gaps (documented, not seed bugs): talismans (no table), weapon descriptions (not on Kiranico detail). Lost Code / Stuffed event weapons (30) have no tree upstream and stay roots; one Game8/Kiranico order quirk (Sinister Soulpiercer pair) keeps the Game8 edge.
+
+Lesson learned (FK failure during merge): NEVER layer merges on previously-merged files — name cleanup can collapse rows and orphan FK children. Skills/levels regenerate deterministically from source with an orphan-level self-check assert.
 
 ## Verification
 
-`svelte-check` → 0 errors/0 warnings. `cargo test` → 9 tests pass (ASS + `db::queries` idempotency/migration/global_search). `cargo check` → no errors. All seeds deserialize cleanly from the new JSON (items / item_combine / monster_drops / item_sources / quest_rewards structs). `src/lib/utils/norm.ts` mirrors Rust `norm_key` for accent-insensitive list filtering.
+`svelte-check` → 0 errors/0 warnings. `cargo test` → 13 tests pass (ASS + `db::queries` idempotency/migration/global_search/small-monster-visibility). `cargo build` → clean. All seeds deserialize cleanly from the new JSON (items / item_combine / monster_drops / item_sources / quest_rewards structs). `src/lib/utils/norm.ts` mirrors Rust `norm_key` for accent-insensitive list filtering.
 
 ## Source
 

@@ -1,0 +1,898 @@
+[
+  {
+    "id": 30001,
+    "name": "Aknosom",
+    "species": "Bird Wyvern",
+    "size": "Large",
+    "description": "When this huge Bird Wyvern stands on one leg, its peculiar collar gives it the appearance of a monstrous parasol. It is fiercely territorial, and whenever it finds intruders, it spreads its wings and unfolds the eye-like crest on its head to terrifying effect.",
+    "sort_order": 1
+  },
+  {
+    "id": 30002,
+    "name": "Almudron",
+    "species": "Leviathan",
+    "size": "Large",
+    "description": "As its name implies, Almudron spends a great deal of time lurking in mud - at least until it emerges to smother approaching prey. From its tail oozes a strange golden fluid, which Almudron uses to dissolve the ground beneath its prey, arresting them in a mire so that it can drag them under. When enraged, it produces more fluid, turning the mud golden. When you see gold, watch out!",
+    "sort_order": 2
+  },
+  {
+    "id": 30003,
+    "name": "Altaroth",
+    "species": "Neopteron",
+    "size": "Small",
+    "description": "Insects that widely inhabit many areas. They absorb fruit, mushrooms, and honey, and then carry them back to their nest. Materials can thus be collected from their swollen abdomens, whose color is related to what they're carrying.",
+    "sort_order": 3
+  },
+  {
+    "id": 30004,
+    "name": "Amatsu",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "Elder dragons that can manipulate the weather and are able to conjure up unrelenting gales. Amatsu glide through the air on currents they create using their wing membrane, making it look as if they're dancing in the sky. The storms they summon are extremely destructive and can lay entire cities to waste, thus they are known as the \"Looming Calamity.\" When enraged, their storms become even more violent, enveloping the area with unrelenting lighting strikes.",
+    "sort_order": 4
+  },
+  {
+    "id": 30005,
+    "name": "Anjanath",
+    "species": "Brute Wyvern",
+    "size": "Large",
+    "description": "This belligerent monster will attack anything without the hesitation. The membrane along its tail fans out when its provoked - a behavior theorized to be either an act of intimiation or thermoregulation, as it has been known to do so when it breathes fire.",
+    "sort_order": 5
+  },
+  {
+    "id": 30006,
+    "name": "Anteka",
+    "species": "Herbivore",
+    "size": "Small",
+    "description": "Herbivores of the tundra that are slightly more aggressive than Kelbi, using their horns to fend off any attacker.",
+    "sort_order": 6
+  },
+  {
+    "id": 30007,
+    "name": "Apex Arzuros",
+    "species": "Fanged Beast",
+    "size": "Large",
+    "description": "An Arzuros so mighty, it was crowned an Apex. It is eternally possessed by wrath and terror, possibly due to the myriad wounds that cover its body. Its forelegs are massive, deft removers of any who'd stand in their way. The call of an Apex unleashes its tortured anger on nearby beasts, driving them into a frenzy.",
+    "sort_order": 7
+  },
+  {
+    "id": 30008,
+    "name": "Apex Diablos",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "A Diablos so mighty, it was crowned an Apex. It is eternally possessed by wrath and terror, possibly due to the myriad wounds that cover its body. Its supremely developed horns add to the lethality of its charge. The call of an Apex unleashes its tortured anger on nearby beasts, driving them into a frenzy.",
+    "sort_order": 8
+  },
+  {
+    "id": 30009,
+    "name": "Apex Mizutsune",
+    "species": "Leviathan",
+    "size": "Large",
+    "description": "A Mizutsune so mighty, it was crowned an Apex. It is eternally possessed by wrath and terror, possibly due to the myriad wounds that cover its body. Its bubbles and huge tail have no trouble sending foes packing. The call of an Apex unleashes its tortured anger on nearby beasts, driving them into a frenzy.",
+    "sort_order": 9
+  },
+  {
+    "id": 30010,
+    "name": "Apex Rathalos",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "A Rathalos so mighty, it was crowned an Apex. It is eternally possessed by wrath and terror, possibly due to the myriad wounds that cover its body. Its every breath releases flaming jets that singe the very air. The call of an Apex unleashes its tortured anger on nearby beasts, driving them into a frenzy.",
+    "sort_order": 10
+  },
+  {
+    "id": 30011,
+    "name": "Apex Rathian",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "A Rathian so mighty, it was crowned an Apex. It is eternally possessed by wrath and terror, possibly due to the myriad wounds that cover its body. Its tail oozes a venom far deadlier than any of a normal monster. The call of an Apex unleashes its tortured anger on nearby beasts, driving them into a frenzy.",
+    "sort_order": 11
+  },
+  {
+    "id": 30012,
+    "name": "Apex Zinogre",
+    "species": "Fanged Wyvern",
+    "size": "Large",
+    "description": "A Zinogre so mighty, it was crowned an Apex. Its body is covered in scars and wounds as if it had been caught in a storm, and it's seemingly always dominated by wrath and terror. Its forelegs - and their every strike - brim with ferocious sparks. The call of an Apex unleashes its tortured anger on nearby beasts, driving them into a frenzy.",
+    "sort_order": 12
+  },
+  {
+    "id": 30013,
+    "name": "Arzuros",
+    "species": "Fanged Beast",
+    "size": "Large",
+    "description": "Beasts known to dwell in humid forest and mountain regions. Though known more for fishing and standing upright to collect honey, their thick claws and heavy forearm plating allow them to deliver powerful blows to any aggressor.",
+    "sort_order": 13
+  },
+  {
+    "id": 30014,
+    "name": "Astalos",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "Large Flying Wyverns with crest-shaped organs that let them control vast amounts of electricity. Astalos vibrate these organs on their head, forked tail, and brilliant wings to charge the respective body part with electricity, yielding tremendous strength and an amplified attack range. Violent to a fault, witnesses have observed them using all their might to drive intruders from their territory.",
+    "sort_order": 14
+  },
+  {
+    "id": 30015,
+    "name": "Aurora Somnacanth",
+    "species": "Leviathan",
+    "size": "Large",
+    "description": "Light illuminates the dust scattered around this subspecies, making their fantastical appearance shimmer softly. Aurora Somnacanth sprays icy blasts in place of sleeping powder, attacking all who dare enter their territory. They use the permanent cold emanating from their bodies to freeze the vicinity, and then the frozen surface to move around swiftly.",
+    "sort_order": 15
+  },
+  {
+    "id": 30016,
+    "name": "Baggi",
+    "species": "Bird Wyvern",
+    "size": "Small",
+    "description": "Highly intelligent, carnivorous bird wyverns that hunt in packs. Noted for their blue scales and sharp glare. Baggi are feared for their ability to release a tranquilizing fluid; even a grown man can be put to sleep in seconds.",
+    "sort_order": 16
+  },
+  {
+    "id": 30017,
+    "name": "Barioth",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "Wyverns that rule the eternally frozen Tundra. Barioth use their forelegs, tail and their spiked scales to traverse the slippery ice with ease; this makes them very difficult to keep up with.",
+    "sort_order": 17
+  },
+  {
+    "id": 30018,
+    "name": "Barroth",
+    "species": "Brute Wyvern",
+    "size": "Large",
+    "description": "Barroth usually remain beneath the mud, perhaps to shield themselves from heat; they are even known to attack by flinging mud. They will charge in a frenzy at anything that disturbs their bogs.",
+    "sort_order": 18
+  },
+  {
+    "id": 30019,
+    "name": "Basarios",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "These juvenile Gravios are famous for their rock-hard carapaces. They often borrow underground, mimicking rocks and savaging oblivious miners. Because their carapaces are tougher than that of a full-grown Gravios, they'll attack a threat by charging at it. They are also known to emit a poisonous gas.",
+    "sort_order": 19
+  },
+  {
+    "id": 30020,
+    "name": "Bazelgeuse",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "A nefarious flying wyvern that travels the world in search of prey. It scatters its own explosive scales over a wide area to prey on whatever gets caught in the blast. In some places, this has earned it the nickname \"Bomber Wyvern.\"",
+    "sort_order": 20
+  },
+  {
+    "id": 30021,
+    "name": "Bishaten",
+    "species": "Fanged Beast",
+    "size": "Large",
+    "description": "A monster with a distinctive tail. While it is omnivorous, it has a preference for fruit, and keeps various fruits with all kinds of effects in its belly pouch. An incredibly curious beast, it enjoys playing tricks on people, and has been seen to bat fruit at its prey using its tail.",
+    "sort_order": 21
+  },
+  {
+    "id": 30022,
+    "name": "Blood Orange Bishaten",
+    "species": "Fanged Beast",
+    "size": "Large",
+    "description": "A subspecies named for their auburn fur. Inquisitive by nature, Blood Orange Bishaten can even appear near human habitats. Their belly pouch is stuffed with combustible pinecones, and this subspecies has a distinct and focused fire breath. The breath itself isn't as dangerous as the pinecones it ignites. Reports indicate that it's possible to topple these monsters while they balance on their tails.",
+    "sort_order": 22
+  },
+  {
+    "id": 30023,
+    "name": "Bnahabra",
+    "species": "Leviathan",
+    "size": "Small",
+    "description": "Pervasive flying insects that attack invaders with paralyzing venom and lay eggs in carrion along with a fluid that hastens decomposition. It is best to kill them with poison so that their parts are left ripe for the carving.",
+    "sort_order": 23
+  },
+  {
+    "id": 30024,
+    "name": "Boggi",
+    "species": "Bird Wyvern",
+    "size": "Small",
+    "description": "Bird Wyverns living in the highlands of the Citadel. These calculating creatures hunt their prey with cunning, often waiting for them to grow weak before striking. They're dangerous creatures that surround their prey in packs with their sizeable claws ready to strike, so don't approach them carelessly.",
+    "sort_order": 24
+  },
+  {
+    "id": 30025,
+    "name": "Bombadgy",
+    "species": "Fanged Beast",
+    "size": "Small",
+    "description": "An omnivorous small monster with a distinct round shape. Its whole body courses with flammable gas, which it expels in defense when threatened. Once expelled, this gas has explosive properties. This trait has led to Bombadgy being used in combat by many crafty hunters throughout history.",
+    "sort_order": 25
+  },
+  {
+    "id": 30026,
+    "name": "Bullfango",
+    "species": "Fanged Beast",
+    "size": "Small",
+    "description": "Large, wild boars with a foul temper. Fertile and wide-ranging, they have been known to form large herds. They are so aggressive that they will attack other members of their own herd if they don't recognize them. Those without a particular reason to hunt them are better off keeping their distance.",
+    "sort_order": 26
+  },
+  {
+    "id": 30027,
+    "name": "Ceanataur",
+    "species": "Carapaceon",
+    "size": "Small",
+    "description": "The juvenile form of Shogun Ceanataur, these small Carapaceons live around volcanoes and in the Flooded Forest. Like Hermitaurs, Ceanataurs usually hide underground, surfacing to attack intruders with a discharge of toxic fluids. Their quick little legs make these critters a real pain in a hunter's coil. Carapaceon Brains from Ceanataurs are also in high demand.",
+    "sort_order": 27
+  },
+  {
+    "id": 30028,
+    "name": "Chameleos",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "Precious few sightings of this elder dragon have been recorded, leading to claims it can vanish into its environment like a chameleon -- hence its name. Witnesses report that, when enraged, it can spew a fog-like breath, which seems to come out of nowhere, and enhance its strength by licking the pollen from Petalaces.",
+    "sort_order": 28
+  },
+  {
+    "id": 30029,
+    "name": "Chaotic Gore Magala",
+    "species": "???",
+    "size": "Large",
+    "description": "Gore Magala that have fallen into chaos, having been denied their evolution into Shagaru Magala. They maintain their original power, while possessing the potential of Shagaru Magala, making them incredibly unstable. Sometimes this leads them to fall into a state of anguish and violence. When attacking their prey, they repeatedly fold and unfurl their wings, as if to show their internal struggle with their own form.",
+    "sort_order": 29
+  },
+  {
+    "id": 30030,
+    "name": "Crimson Glow Valstrax",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "A mutant Valstrax fearsomely dubbed the \"Crimson Glow\". This elder dragon typically secludes itself in the upper atmosphere, but it has been driven mad by its own rampant energy, causing to lash out at anything in its sight. Once it sights its prey, it swoops down, trampling them beneath its shifting wingblades. Several have been sighted all over, so be prepared to encounter one at any time.",
+    "sort_order": 30
+  },
+  {
+    "id": 30031,
+    "name": "Daimyo Hermitaur",
+    "species": "Carapaceon",
+    "size": "Large",
+    "description": "Large Carapaceons that live in coastal regions and sandy soil. Daimyo Hermitaurs use their massive claws to guard themselves against enemy attacks. These creatures wear wyvern skulls on their backs, unlike the shells carried in their infancy. These shells serve not only as protection, but also as a method of attacking prey. They are highly valued for their materials-their brains in particular.",
+    "sort_order": 31
+  },
+  {
+    "id": 30032,
+    "name": "Delex",
+    "species": "Piscine Wyvern",
+    "size": "Small",
+    "description": "Carnivorous desert monsters that travel in schools of four or five. Delex often follow large predators in the hope of scavenging leftovers. They are extremely sensitive to sound.",
+    "sort_order": 32
+  },
+  {
+    "id": 30033,
+    "name": "Diablos",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "Known as the \"Tyrant of the Desert\". The Diablos is extremely territorial and will use its massive horns to charge at invaders, Diablos have the ability to borrow underground and use this ability to strike from below, however, their sensitive ears make them susceptible to Sonic Bombs. Despite their predatory appearance, they are herbivorous and mostly feed on cactus.",
+    "sort_order": 33
+  },
+  {
+    "id": 30034,
+    "name": "Espinas",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "Flying Wyverns known for the red spikes on their tough green frame, forming both a means of attack and defense, thus generally keeping foes at bay. As a result, they are often seen sprawled out and relaxing in their domain. Once they sense danger, however, they expand their blood vessels to turn their hide and wing membranes a bright red, and they will run riot with noteworthy brutality.",
+    "sort_order": 34
+  },
+  {
+    "id": 30035,
+    "name": "Felyne",
+    "species": "Lynian",
+    "size": "Small",
+    "description": "Bipedal creatures resembling cats, known for their light hair. Though usually docile, they will attack viciously if provoked. Naturally curious, some try to enter human society, and are often hired by the Guild to cook for and otherwise assist hunters.",
+    "sort_order": 35
+  },
+  {
+    "id": 30036,
+    "name": "Flaming Espinas",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "An Espinas subspecies with a slightly more muted body color. The boldness of the standard Espinas remains: run-of-the-mill attacks won't rouse Flaming Espinas from their slumber. Their breath attack contains a powerful poison, and a dense acid that deteriorates armor. Take this attack head-on, and you won't stand a chance...",
+    "sort_order": 36
+  },
+  {
+    "id": 30037,
+    "name": "Furious Rajang",
+    "species": "Fanged Beast",
+    "size": "Large",
+    "description": "Furious Rajang are Rajang variants that are covered in golden fur. Normally Rajang return to their black-furred state after being agitated for a time to conserve energy, but these beasts have lost the ability to curb their anger. Outclassing the standard Rajang's attack power, they assault with seething rage. At the apex of their fury they become enraged and turn into destructive demons with electrified manes.",
+    "sort_order": 37
+  },
+  {
+    "id": 30038,
+    "name": "Gaismagorm",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "A gargantuan monster living in the darkest depths since ancient times. Gaismagorm's rock-like forearms boast tenacious strength which allows it to burrow underground. It has a symbiotic relationship with the Qurio, and feeds on their life force for energy. Once it has chosen a place to nest, it collapses the surrounding rock bed to create an opening to the surface. The opening forms a massive crater in which it releases the Qurio through.",
+    "sort_order": 38
+  },
+  {
+    "id": 30039,
+    "name": "Gajau",
+    "species": "Fish",
+    "size": "Small",
+    "description": "Vicious piscine that forms groups to defend their territory from intruders. Though primarily aquatic creatures, they have been known to chase their prey onto land, before wriggling back to the banks and into the water. Be sure not to venture too closely to their habitat!",
+    "sort_order": 39
+  },
+  {
+    "id": 30040,
+    "name": "Garangolm",
+    "species": "Fanged Beast",
+    "size": "Large",
+    "description": "A monster characterized by its massive and rigid body. Garangolm are generally placid, living in regions with fertile soil. Their sap-like fluids can promote plant growth, gorging a symbiotic relationship with flora that grows in their bodies. They can also use that sap to harden plants or the surrounding soil, outfitting their bodies and enhancing their attacks.",
+    "sort_order": 40
+  },
+  {
+    "id": 30041,
+    "name": "Gargwa",
+    "species": "Bird Wyvern",
+    "size": "Small",
+    "description": "Flightless bird wyverns with vestigial wings, known to inhabit the Jurassic Frontier. Quite timid, Gargwa have been known to lay eggs when other creatures surprise them from behind. They are raised as livestock in numerous villages.",
+    "sort_order": 41
+  },
+  {
+    "id": 30042,
+    "name": "Gold Rathian",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "A rare species of Rathian covered in shimmering golden scales. Known as the Gold Fire Wyvern, or alternatively the Golden Moon, as inspired by their divine appearance. These wyverns are infamous for their strong scales and attacks with their reinforced tails, giving these beasts exceptional combat ability. In battle, their attacks grow only more intense when in their Incandescent state.",
+    "sort_order": 42
+  },
+  {
+    "id": 30043,
+    "name": "Gore Magala",
+    "species": "Demi Elder",
+    "size": "Large",
+    "description": "Gore Magala possess wings with black, shroud-like membrane. They lack visual receptors, heightening their senses by scattering scales from their wings to ascertain the locations of lifeforms. At the peak of their senses, feelers extend from their head, their wings unfurl, and they become frenzied. They're feared not only for their sinister appearance but also for the mysterious Frenzy virus they carry.",
+    "sort_order": 43
+  },
+  {
+    "id": 30044,
+    "name": "Goss Harag",
+    "species": "Fanged Beast",
+    "size": "Large",
+    "description": "A Fanged Beast roaming snowy plains in search of prey. Its body is covered in fur so thick it keeps out the harsh frost. It can inhale the cold air to freeze its own bodily fluids and then spit them out to create icy blades on its arms. When riled up, it turns red and becomes exceedingly dangerous.",
+    "sort_order": 44
+  },
+  {
+    "id": 30045,
+    "name": "Gowngoat",
+    "species": "Herbivore",
+    "size": "Small",
+    "description": "Herbivorous monsters with fluffy tails. Their tails are mostly composed of slate gray hair; some scholars surmise that this trait lets them roll into balls to disguise themselves as rocks. Others believe their tails serve to hide and protect newborn offspring. Gentle by nature, they tend to live in herds. They are easily frightened, and the entire group will flee when attacked.",
+    "sort_order": 45
+  },
+  {
+    "id": 30046,
+    "name": "Great Baggi",
+    "species": "Bird Wyvern",
+    "size": "Large",
+    "description": "A carnivorous bird wyvern. Noted for their projecting cranial crests and bluish-white skin that's adapted to snowy climates. Great Baggi craftily command other Baggi to surround their prey and stun them with a tranquilizing fluid.",
+    "sort_order": 46
+  },
+  {
+    "id": 30047,
+    "name": "Great Izuchi",
+    "species": "Bird Wyvern",
+    "size": "Large",
+    "description": "The alpha Izuchi of its pack, identified by its larger build, upended white fur and scythe-like tail. A Great Izuchi forms a herd of many smaller Izuchi and selects two from the group to accompany it on territory patrols. Once it spots prey or senses danger, the Great Izuchi issues commands to their fellow Izuchi, and coordinates their movements. Take care that you don't get overwhelmed.",
+    "sort_order": 47
+  },
+  {
+    "id": 30048,
+    "name": "Great Wroggi",
+    "species": "Bird Wyvern",
+    "size": "Large",
+    "description": "Wroggi are bird wyverns that travel in packs that are led by largest and most toxic member. Be careful when one raises its head and its poison sac expands—that signals that it's about to spit a cloud of poisonous mist.",
+    "sort_order": 48
+  },
+  {
+    "id": 30049,
+    "name": "Hermitaur",
+    "species": "Carapaceon",
+    "size": "Small",
+    "description": "The juvenile form of Daimyo Hermitaur, these small Carapaceons live around coastal areas and sandy soil. They often hide in sand, popping out of their hidey-holes only to claw at nearby intruders. The sizable shells they carry protect their vitals; as they grow in size, they'll move to larger dwellings to accomomodate, such as monster skulls. The Carapaceon Brains they yield are quite the delicacy.",
+    "sort_order": 49
+  },
+  {
+    "id": 30050,
+    "name": "Hornetaur",
+    "species": "Neopteron",
+    "size": "Small",
+    "description": "Small Neopterons found primarily on land, featuring two developed horns and legs peppered with sharp thorns. Extremely territorial, Hornetaurs attack any who approach without mercy. When processed, the shells around their bodies boast impressive strength; in their current state, however, too much \"uhmph\" when attacking can easily obliterate them, rendering them useless. Collect those materials with care!",
+    "sort_order": 50
+  },
+  {
+    "id": 30051,
+    "name": "Izuchi",
+    "species": "Bird Wyvern",
+    "size": "Small",
+    "description": "An omnivorous bird wyvern that has a characteristic scythe-shaped tail. It uses this tail to attack, but also to climb trees and chop down fruit. Most Izuchi fall into herd led by a Great Izuchi; in each herd, the two best fighters are selected by the leader to help it hunt prey.",
+    "sort_order": 51
+  },
+  {
+    "id": 30052,
+    "name": "Jaggi",
+    "species": "Bird Wyvern",
+    "size": "Small",
+    "description": "Highly social, carnivorous bird wyverns that live in large packs. Young Jaggi males hunt in groups when attacking larger animals. Research suggests they operate under orders from a single aplha male.",
+    "sort_order": 52
+  },
+  {
+    "id": 30053,
+    "name": "Jaggia",
+    "species": "Bird Wyvern",
+    "size": "Small",
+    "description": "Female Jaggi that stay in packs, Jaggia generally live near the nest and are responsible for defending it and raising young. Smaller than mature males, but larger and tougher than the pack's countless young males. They also operate under orders from the alpha.",
+    "sort_order": 53
+  },
+  {
+    "id": 30054,
+    "name": "Jagras",
+    "species": "Fanged Wyvern",
+    "size": "Small",
+    "description": "A smaller monster that travels and hunts in packs. Its hide blends in with its forest environment, and it has characteristic spikes on its back. If you chase a few away, the rest will usually follow suit. They tend to keep their distance when large monsters enter their territory, but sometimes the entire group will attack if they feel particularly threatened.",
+    "sort_order": 54
+  },
+  {
+    "id": 30055,
+    "name": "Jyuratodus",
+    "species": "Piscine Wyvern",
+    "size": "Large",
+    "description": "A piscine wyvern that inhabits swamps, utilizing the mud there to hunt and survive. It wallows in the mire to maximize cutaneous respiration and preserve the toughness of its scales. The sludge it spits is highly viscous, so watch where you step, lest you get stuck in it.",
+    "sort_order": 55
+  },
+  {
+    "id": 30056,
+    "name": "Kelbi",
+    "species": "Herbivore",
+    "size": "Small",
+    "description": "Small herbivores known for their gentle demeanor as well as medicinal properties of their horns. Those wishing to harvest a horn should aim for the head when attacking them.",
+    "sort_order": 56
+  },
+  {
+    "id": 30057,
+    "name": "Kestodon",
+    "species": "Herbivore",
+    "size": "Small",
+    "description": "Female Kestodon will alert the pack of danger, while the males will violently charge would-be threats. Their rushing charges can be blocked, however, leaving them open to attacks. Males are blessed with a stronger physique, and they can easily be told apart from the females by their coloring and head shape.",
+    "sort_order": 57
+  },
+  {
+    "id": 30058,
+    "name": "Khezu",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "Its long, elastic neck stretching out while it clings to a wall or the ceiling is a sight straight out of a nightmare. Make sure you do not get overwhelmed by its horrific appearance.",
+    "sort_order": 58
+  },
+  {
+    "id": 30059,
+    "name": "Kulu-Ya-Ku",
+    "species": "Bird Wyvern",
+    "size": "Large",
+    "description": "A bird wyvern that has developed limbs capable of carrying objects. It has been spotted stealing eggs from nests. If attacked while carrying an egg, it will drop the egg in fright and flee. When engaged, a Kulu-Ya-Ku will dig up a small boulder to shield itself against threats or use it in its attacks.",
+    "sort_order": 59
+  },
+  {
+    "id": 30060,
+    "name": "Kushala Daora",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "It's difficult to even get close to one of these metallic elder dragons, but some claim better odds if the creature is weakened with poison, or has its horn broken, limiting the amount of wind pressure it can muster.",
+    "sort_order": 60
+  },
+  {
+    "id": 30061,
+    "name": "Lagombi",
+    "species": "Fanged Beast",
+    "size": "Large",
+    "description": "Fanged, long-eared beasts whose warm pelts and thick layers of fat help them survive in cold climates. Though mainly herbivores, Lagombi occasionally make use of their exceptional hearing and ability to glide on ice to sneak up on prey.",
+    "sort_order": 61
+  },
+  {
+    "id": 30062,
+    "name": "Lucent Nargacuga",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "Nargacuga clad in radiant fur that live in fog-shrouded lands. Lucent Nargacuga hide in the night's fog and moonlight, springing assaults with neither shape nor shadow. Astounding agility and marvelous mobility make them difficult to capture with the naked eye. The throng of toxic tailspikes they launch make these wyverns perilous beasts indeed.",
+    "sort_order": 62
+  },
+  {
+    "id": 30063,
+    "name": "Ludroth",
+    "species": "Leviathan",
+    "size": "Small",
+    "description": "Aquatic female monsters. Ludroth form \"harems\" around large males, gathering in territories designated as breeding grounds. They're known to be extremely aggressive towards outsiders, so caution is advised when treading in their territory.",
+    "sort_order": 63
+  },
+  {
+    "id": 30064,
+    "name": "Lunagaron",
+    "species": "Fanged Wyvern",
+    "size": "Large",
+    "description": "Lunagaron have an organ that chills the air they inhale, circulating it throughout their body in a unique form of thermoregulation. They can travel long distances and endure environmental changes, allowing them to occupy a wide range of habitats. They usually walk on all fours, but can stand on two legs by shutting down their cooling mechanism, spiking their body temp to expand their muscles.",
+    "sort_order": 64
+  },
+  {
+    "id": 30065,
+    "name": "Magma Almudron",
+    "species": "Leviathan",
+    "size": "Large",
+    "description": "Unlike normal Almudron, Magma Almudron live in the Lava Caverns, and can manipulate magma instead of mud. They secrete a special liquid that melts the ground, allowing them to move freely through the earth. Known for their aggressive nature, they become extremely agitated when trespassers set foot on their turf, attacking them relentlessly.",
+    "sort_order": 65
+  },
+  {
+    "id": 30066,
+    "name": "Magnamalo",
+    "species": "Fanged Wyvern",
+    "size": "Large",
+    "description": "A monster with a carapace like tempered steel armor. The vapor around it is actually the expelling of trapped gases from the hordes of monsters Magnamalo has consumed. This has earned it the moniker \"Wyvern of Malice.\" Its shrouded swings can inflict hellfireblight, which causes one to combust either spontaneously or when hit. Use a Deodorant or a Wirebug to rid yourself of hellfire.",
+    "sort_order": 66
+  },
+  {
+    "id": 30067,
+    "name": "Malzeno",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "A dragon covered with elegant silver scales. It uses the Qurio to drain the life energy of other living creatures, creeping around at night and attacking its prey from behind. It appears almost regal to start with, but after draining enough energy, it can turn a violent, fresh-blood crimson. This form is known as the \"Bloodening\" and is widely feared.",
+    "sort_order": 67
+  },
+  {
+    "id": 30068,
+    "name": "Melynx",
+    "species": "Lynian",
+    "size": "Small",
+    "description": "Bipedal creatures resembling cats, known for their dark hair. More curious than Felynes and possessed by kleptomania, Melynxes take what they steal back to their dens.",
+    "sort_order": 68
+  },
+  {
+    "id": 30069,
+    "name": "Mizutsune",
+    "species": "Leviathan",
+    "size": "Large",
+    "description": "A specially evolved Leviathan with a sleek, lithe body. Mizutsune can secrete a peculiar fluid that covers its foes in immobilizing bubbles. Once its foe's movement is impaired, it closes in with spry, dance-like movements.",
+    "sort_order": 69
+  },
+  {
+    "id": 30070,
+    "name": "Nargacuga",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "Flying wyverns that have evolved to live in thickly wooded areas. Covered in jet black fur, these cunning predators stalk their prey from the shadows with ferocious speed. Their massive tails are as dexterous as they are deadly, and powerful enough to slay smaller monsters with one strike.",
+    "sort_order": 70
+  },
+  {
+    "id": 30071,
+    "name": "Narwa the Allmother",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "Having absorbed the lifeforce of her \"king\", Narwa has transformed and become imbued with new power. She now possesses Ibushi's mastery over wind as well as her own control over thunder, and lusts for utter annihilation.",
+    "sort_order": 71
+  },
+  {
+    "id": 30072,
+    "name": "Popo",
+    "species": "Herbivore",
+    "size": "Small",
+    "description": "Herd-forming herbivores covered in thick fur to endure the cold. Popo are gentle by nature, so if they are attacke the whole herd will turn tail and run. Popo meat is very nutritious; the tongue is said to be especially palatable.",
+    "sort_order": 72
+  },
+  {
+    "id": 30073,
+    "name": "Primordial Malzeno",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "Malzeno's original form before it was tainted by the Qurio. Ordinarily, it uses its wings and tail with the elegance of a knight, but under the Qurio's influence, it uses underhanded means of cornering its prey, and in its \"Bloodlust\" state it wields tremendous power. Because of the explosive energy corrupting its body, it sometimes shows behavior as if its struggling against an overwhelming force.",
+    "sort_order": 73
+  },
+  {
+    "id": 30074,
+    "name": "Pukei-Pukei",
+    "species": "Bird Wyvern",
+    "size": "Large",
+    "description": "A bird wyvern known to possess poisonous toxins in its body. It uses its toungue like a whip and can stretch or shrink it at will, allowing it to grab up food. As a defense against threats, Pukei-Pukei have numerous toxic attacks. Keep and eye on both its mouth and tail!",
+    "sort_order": 74
+  },
+  {
+    "id": 30075,
+    "name": "Pyrantula",
+    "species": "Temnoceran",
+    "size": "Small",
+    "description": "Offspring of the Pyre Rakna-Kadaki. Pyrantula usually stay put, relying on their progenitor for almost all movement. On the other hand, they treat all who approach as threats, eagerly attacking all invaders they detect. Their bodies contain explosive gasses that the Pyre Rakna-Kadaki can detonate through webs, generating small explosions.",
+    "sort_order": 75
+  },
+  {
+    "id": 30076,
+    "name": "Pyre Rakna-Kadaki",
+    "species": "Temnoceran",
+    "size": "Large",
+    "description": "A subspecies of Rakna-Kadaki filled with explosive material, their bodies are covered in a dark red, explosion-resistant webbing. An advanced chain of command lets them direct their offspring with a special sound-producing organ. On offense, they strike their forelimbs like flints to induce explosions. Connecting special detonation threads to offspring in the area lets them expand the explosive area to their positions.",
+    "sort_order": 76
+  },
+  {
+    "id": 30077,
+    "name": "Rachnoid",
+    "species": "Temnoceran",
+    "size": "Small",
+    "description": "The infant form of Rakna-Kadaki. At this stage in their life cycle, they cling to their mother's abdomen, feeding on scraps of her regurgitated prey. From birth, they are instantly able to spit webs that are just as strong as their mother's, which they use to bind prey or swiftly move about at her command.",
+    "sort_order": 77
+  },
+  {
+    "id": 30078,
+    "name": "Rajang",
+    "species": "Fanged Beast",
+    "size": "Large",
+    "description": "An ultra-aggressive creature that is rarely sighted and seldom survived. Those that have survived report that it exhibits a strange attack. Rajang are said to be loners, and this isolated life has made it difficult to pin down its territorial leanings. When angered, part of its pelt turns a golden color.",
+    "sort_order": 78
+  },
+  {
+    "id": 30079,
+    "name": "Rakna-Kadaki",
+    "species": "Temnoceran",
+    "size": "Large",
+    "description": "A Rakna-Kadaki is usually seen covered in sticky webbing. Clinging to its abdomen are its offspring, known as Rachnoid, which it controls using the flammable gas that builds up there. Rachnoid spit fire, capture prey, and support the Rakna-Kadaki's massive body. As their numbers dwindle, the beast will hatch more, at which point it is extremely dangerous.",
+    "sort_order": 79
+  },
+  {
+    "id": 30080,
+    "name": "Rathalos",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "Terrible wyverns called the 'Kings of the Skies'. Along with Rathians, they stake wide territories centered around their nests. Rathalos descend on invaders from the sky, attacking with poison claws and breath of fire.",
+    "sort_order": 80
+  },
+  {
+    "id": 30081,
+    "name": "Rathian",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "Fire-breathing female wyverns, also known as the \"Queens of the Land\". With powerful legs and poison-secreting tails, they hunt mainly on the ground. Sometimes seen preying as a couple, Rathians and Rathalos cooperate well.",
+    "sort_order": 81
+  },
+  {
+    "id": 30082,
+    "name": "Remobra",
+    "species": "Snake Wyvern",
+    "size": "Small",
+    "description": "Small but agile flying wyverns that seek out weakened creatures to attack. Often seen near elder dragons, they're considered a portent of disaster. Originally classified as flying wyverns, after further research they were reclassified as snake wyverns.",
+    "sort_order": 82
+  },
+  {
+    "id": 30083,
+    "name": "Rhenoplos",
+    "species": "Herbivore",
+    "size": "Small",
+    "description": "Extremely territorial herbivores with poor vision but acute hearing, Rhenoplos will doggedly pursue any target they sense. They cannot easily stop once they break into a run, a fact confirmed by hunters who foolishly thought they could stop them using a buckler or a shield.",
+    "sort_order": 83
+  },
+  {
+    "id": 30084,
+    "name": "Risen Chameleos",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "Risen Chameleos are elder dragons that have found a way to overcome their affliction. By suppressing the Qurio virus, they have gained great strength and new abilities. They now boast superior poison and physicality, sending you off into a toxic nightmare if you lose sight of them. When their anger reaches its peak, they'll enter into their Risen state and their body will begin to glow.",
+    "sort_order": 84
+  },
+  {
+    "id": 30085,
+    "name": "Risen Crimson Glow Valstrax",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "Risen Crimson Glow Valstrax are elder dragons that have found a way to overcome their affliction. By suppressing the Qurio virus, they have gained great strength and new abilities. Their abundance of dragon energy has granted them greater agility, and even more devastating explosive powers. Very few will be able to withstand their ferocious attacks. When their anger reaches its peak, they'll enter into their Risen state and their body will begin to glow.",
+    "sort_order": 85
+  },
+  {
+    "id": 30086,
+    "name": "Risen Kushala Daora",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "Risen Kushala Daora are elder dragons that have found a way to overcome their affliction. By suppressing the Qurio virus, they have gained great strength and new abilities. They command destructive storms easily cornering their prey with a more varied arsenal of attacks than their regular counterparts. When their anger reaches its peak, they'll enter into their Risen state and their body will begin to glow.",
+    "sort_order": 86
+  },
+  {
+    "id": 30087,
+    "name": "Risen Shagaru Magala",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "Risen Shagaru Magala are elder dragons that have found a way to overcome their affliction. By suppressing the Qurio virus, they have gained great strength and new abilities. They release larger quantities of the Frenzy virus, resulting in viral explosions with increased radius. Anything that gets in their way will fall prey to their powerful wingarms. When their anger reaches its peak, they'll enter into their Risen state and their body will begin to glow.",
+    "sort_order": 87
+  },
+  {
+    "id": 30088,
+    "name": "Risen Teostra",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "Risen Teostra are elder dragons that have found a way to overcome their affliction. By suppressing the Qurio virus, they have gained great strength and new abilities. While clad in flame, Risen Teostra unleash more dust creating a non-stop barrage of explosions until everything in the vicinity has been turned to ashes. When their anger reaches its peak, they'll enter into their Risen state and their body will begin to glow.",
+    "sort_order": 88
+  },
+  {
+    "id": 30089,
+    "name": "Royal Ludroth",
+    "species": "Leviathan",
+    "size": "Large",
+    "description": "Larger than regular Ludroth, Royal Ludroth use their sponge-like mane to absorb water and keep from drying out on land. Once the sponge loses moisture, they will seek out water to recover. They also spew mucus to trip their prey.",
+    "sort_order": 89
+  },
+  {
+    "id": 30090,
+    "name": "Scorned Magnamalo",
+    "species": "Fanged Wyvern",
+    "size": "Large",
+    "description": "A Magnamalo variant that achieves an even more twisted, malevolent form. Filled with hatred, they are known as \"Scorned Magnamalo.\" Shrouded in Hellfire at all times, they also boast larger arm blades and harder armor plating. During battles, they have been spotted focusing their Hellfire and swinging it like a blade.",
+    "sort_order": 90
+  },
+  {
+    "id": 30091,
+    "name": "Seething Bazelgeuse",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "A Bazelgeuse variant whose body seems to smolder, like it could go critical at any moment. The heat of their explosive scales have grown, their pale blue glow worthy of the \"Seething\" moniker. Their scales are blisteringly hot in this state, capable of scorching the very earth with their volatile force.",
+    "sort_order": 91
+  },
+  {
+    "id": 30092,
+    "name": "Seregios",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "Large Flying Wyverns with sharp, blade-like scales covering their body. Seregios are well-known as extremely territorial and belligerent creatures, wielding their mobility and powerful hind leg attacks in intense combat against other large monsters. Reports have confirmed that Seregios have the ability to launch the scales from their body, inflicting their victims with the Bleeding status.",
+    "sort_order": 92
+  },
+  {
+    "id": 30093,
+    "name": "Shagaru Magala",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "The form taken by Gore Magala once they mature and molt. Gorgeous, glittering scales cover Shagaru Magala, and their divine wings are large enough to wrap around their entire body. According to records, one was once said to have scattered its black scales over an area the size of a mountain, annhiliating any and all lifeforms inhabiting that region.",
+    "sort_order": 93
+  },
+  {
+    "id": 30094,
+    "name": "Shogun Ceanataur",
+    "species": "Carapaceon",
+    "size": "Large",
+    "description": "These large Carapaceons can be found around volcanoes and in the Flooded Forest. Shogun Ceanataur wield long, developed claws that are usually folded away, but unfurl into terrifying blades when enraged. Shogun Ceanataur, like the Daimyo Hermitaur, are also known to use wyvern skulls as shells. Specimens that do, have been observed using a water jet-like attack.",
+    "sort_order": 94
+  },
+  {
+    "id": 30095,
+    "name": "Silver Rathalos",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "A rare species of Rathalos covered in shimmering silver scales. Known as the Silver Fire Wyvern, or alternatively the Silver Sun, as inspired by their majestic appearance. These wyverns are known for their fierce breath and even fiercer claws, giving these threatening beasts exceptional combat ability. In battle, their attacks grow only more intense when in their Incandescent state.",
+    "sort_order": 95
+  },
+  {
+    "id": 30096,
+    "name": "Slagtoth",
+    "species": "Herbivore",
+    "size": "Small",
+    "description": "Highly territorial herbivores that live in coastal areas. Their heavy, sagging hides store nutrients and are prized for their heat and water resistance.",
+    "sort_order": 96
+  },
+  {
+    "id": 30097,
+    "name": "Somnacanth",
+    "species": "Leviathan",
+    "size": "Large",
+    "description": "A formidable aquatic serpent that crests on moonlit nights—likely why it has often been mistaken for a mermaid. Despite its appearance, it is extremely aggressive, and tolerates no trespassers on its turf. It expels an intoxicating sleep powder from an organ on its neck, knocking out prey before it can resist.",
+    "sort_order": 97
+  },
+  {
+    "id": 30098,
+    "name": "Teostra",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "Brutal elder dragons wreathed in flames that spew blazing fire. Teostra are of such a fierce and deadly nature that the Guild closely monitors their movements.",
+    "sort_order": 98
+  },
+  {
+    "id": 30099,
+    "name": "Tetranadon",
+    "species": "Amphibian",
+    "size": "Large",
+    "description": "An amphibian easily recognized by its gigantic, rotund body. It is extremely gluttonous and swallows everything that moves whole, gravel and all. Once it's done eating, its stomach swells and it becomes slower, but its attacks also become heavier and much more destructive.",
+    "sort_order": 99
+  },
+  {
+    "id": 30100,
+    "name": "Thunder Serpent Narwa",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "An elder dragon and Wind Serpent Ibushi's \"queen.\" Its thundersacs glow with accumulated electrical charge; it is thought that these organs therefore generate the powerful magnetic field that lifts the creature and anything around it high into the air.",
+    "sort_order": 100
+  },
+  {
+    "id": 30101,
+    "name": "Tigrex",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "A Flying Wyvern whose primitive origins are obvious. It displays incredible ferocity with its claws, jaws, and developed limbs. Be wary of its thunderous roar!",
+    "sort_order": 101
+  },
+  {
+    "id": 30102,
+    "name": "Tobi-Kadachi",
+    "species": "Fanged Wyvern",
+    "size": "Large",
+    "description": "A fanged wyvern that flies among the treetops. Its penchant to brush against the ground and the trees as it moves around builds up static electricity within its fur. This action allows it to reach a charged state - identified by its glowing fur - in which its head and tail attacks are said to be particularly lethal.",
+    "sort_order": 102
+  },
+  {
+    "id": 30103,
+    "name": "Uroktor",
+    "species": "Leviathan",
+    "size": "Small",
+    "description": "Leviathans that inhabit volcanoes. Noted for swarming around larger monsters' kills in order to feed. Uroktor rarely hunt for themselves, but stab upward at prey from the ground when they do. Known for being highly aggressive.",
+    "sort_order": 103
+  },
+  {
+    "id": 30104,
+    "name": "Velkhana",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "Known as the \"Ice Dragons that Freeze All\" or the \"Iceborne Wyvern,\" there exist few records of Velkhana, as such, they remain shrouded in mystery. Their icy breath is so cold it can form massive spires and walls of ice out of nowhere, and is even powerful enough to freeze other monsters. Some reports indicate that Velkhana will freeze their rivals in order to establish their domain.",
+    "sort_order": 104
+  },
+  {
+    "id": 30105,
+    "name": "Velociprey",
+    "species": "Bird Wyvern",
+    "size": "Small",
+    "description": "Small Bird Wyverns inhabiting the jungle. Velociprey are well-known for their yellow beaks, accenting bodies of black and blue stripes. They form packs, often engaging in communal behavior. These slender creatures can and will attack with sharp movements and sharper claws, so best be on your guard to avoid the pointy ends.",
+    "sort_order": 105
+  },
+  {
+    "id": 30106,
+    "name": "Vespoid",
+    "species": "Neopteron",
+    "size": "Small",
+    "description": "Neopterons with paralyzing poison stingers on their abdomen. Vespoids adapt to almost any environment, and have been observed in many regions. Their sharp stingers are powerful enough to let them relentlessly jab any outsiders with a paralytic agent. They are delicate, weak to impacts, and make great materials for toxic weaponry.",
+    "sort_order": 106
+  },
+  {
+    "id": 30107,
+    "name": "Violet Mizutsune",
+    "species": "Leviathan",
+    "size": "Large",
+    "description": "Violet Mizutsune are leviathans known for their beautiful lilac-colored fur. They use the fluid they secrete to slide around, targeting their prey with gas-filled bubbles. Though they appear graceful creatures, the facade quickly fades as they envelop themselves in pale flames and bathe their surroundings in a beautiful, but deadly, inferno of white-hot flame.",
+    "sort_order": 107
+  },
+  {
+    "id": 30108,
+    "name": "Volvidon",
+    "species": "Fanged Beast",
+    "size": "Large",
+    "description": "Fanged beasts with thick red carapaces that are resistant to lava. Their rounded bodies are perfect for rolling across hot surfaces, and their long tongues are ideal for capturing insect prey. Their saliva emits a paralyzing toxin that should be avoided.",
+    "sort_order": 108
+  },
+  {
+    "id": 30109,
+    "name": "Wind Serpent Ibushi",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "A male elder dragon that exhibits inexplicable behaviors such as floating upside down midair. Research indicates that the emission of a special gas from all over its body, and the modulation of this gas, is what allows it to move freely. It shows air from gills on its arms and tail to fly, creating its own turbulence and soaring to great heights.",
+    "sort_order": 109
+  },
+  {
+    "id": 30110,
+    "name": "Wroggi",
+    "species": "Bird Wyvern",
+    "size": "Small",
+    "description": "Small, carnivorous bird wyverns with poison-generating organs that run from their mouths to their throats. They run in packs, often led by a large alpha male. Lesser members of the order are fiercely loyal, and will eagerly lay down their lives to protect the alpha.",
+    "sort_order": 110
+  },
+  {
+    "id": 30111,
+    "name": "Zamite",
+    "species": "Amphibian",
+    "size": "Small",
+    "description": "Juvenile Zamtrios that use their sharp teeth to pierce the hide of their prey and then burrow inside to consume them from within; those who are attacked must roll around vigorously to shake the monster off. They can also use a Wirebug or a kunai to help them get free. Zamite grow rapidly after even a single feeding.",
+    "sort_order": 111
+  },
+  {
+    "id": 30112,
+    "name": "Zinogre",
+    "species": "Fanged Wyvern",
+    "size": "Large",
+    "description": "Fanged wyverns whose bodies are streaked with electricity. Sharp claws and strong limbs allow them to thrive in mountainous terrain. During hunts, they gather numerous Thunderbugs to boost their power and enter a supercharged state.",
+    "sort_order": 112
+  }
+]

@@ -7,6 +7,8 @@
   import Button from '$lib/components/ui/button.svelte'
   import Skeleton from '$lib/components/ui/skeleton.svelte'
   import EmptyState from '$lib/components/ui/empty-state.svelte'
+  import FavoriteButton from '$lib/components/favorite-button.svelte'
+  import { favorites } from '$lib/stores/favorites'
   import { toolbarTarget } from '$lib/stores/toolbar'
   import { toolbarPortal } from '$lib/actions/toolbar-portal'
   import { captureScrollY, restoreScrollY } from '$lib/utils/scroll-restore'
@@ -50,8 +52,13 @@
       restoreScrollY(y)
     }
   })
-  import { elementColor, sharpnessValues, SHARP_COLORS_ARR as SHARP_COLORS } from '$lib/utils/mh'
-  import { ChevronRight, Hammer } from '@lucide/svelte'
+  import {
+    elementColor,
+    sharpnessValues,
+    SHARP_COLORS_ARR as SHARP_COLORS,
+    buildWeaponForest,
+  } from '$lib/utils/mh'
+  import { ChevronRight, Hammer, Star } from '@lucide/svelte'
   import { tick } from 'svelte'
   import { createQuery } from '@tanstack/svelte-query'
   import { dbCache, dbRetry, dbRetryDelay, dbErrorText } from '$lib/query'
@@ -83,6 +90,13 @@
   let typeMemory = $state<Record<string, { scrollY: number; rootLimit: number }>>({})
   let prevType = $state<string | null>(null)
   let prevSort = $state<string | null>(null)
+  let showFavsOnly = $state(false)
+
+  $effect(() => {
+    if (game) void favorites.ensure(game.dbId)
+  })
+
+  const favKeys = $derived(new Set(game ? [...($favorites.get(game.dbId)?.keys() ?? [])] : []))
 
   function switchType(next: string) {
     if (next === typeFilter) return
@@ -167,7 +181,9 @@
     ),
   )
   const filtered = $derived.by(() => {
-    let arr = weapons.filter((w) => w.weapon_type === typeFilter)
+    let arr = weapons
+      .filter((w) => w.weapon_type === typeFilter)
+      .filter((w) => !showFavsOnly || favKeys.has(`weapon:${w.id}`))
     if (sortBy === 'name') arr = [...arr].sort((a, b) => a.name.localeCompare(b.name))
     else if (sortBy === 'rarity') arr = [...arr].sort((a, b) => (b.rarity ?? 0) - (a.rarity ?? 0))
     else if (sortBy === 'attack') arr = [...arr].sort((a, b) => (b.attack ?? 0) - (a.attack ?? 0))
@@ -175,21 +191,25 @@
     return arr
   })
 
-  interface TreeNode {
+  // Flat render rows — the tree is NEVER rendered recursively (iterative
+  // DFS keeps depth unbounded without overflowing the call stack inside
+  // Svelte's recursive {@render}).
+  interface TreeRow {
     weapon: Weapon
-    children: TreeNode[]
+    depth: number
+    hasKids: boolean
   }
 
-  function buildForest(typeWeapons: Weapon[]): TreeNode[] {
-    const set = new Set(typeWeapons.map((w) => w.name))
-    const childrenOf = new Map<string, Weapon[]>()
-    for (const w of typeWeapons) {
-      if (!w.upgrade_path) continue
-      const arr = childrenOf.get(w.upgrade_path) ?? []
-      arr.push(w)
-      childrenOf.set(w.upgrade_path, arr)
-    }
-    const roots = typeWeapons.filter((w) => !w.upgrade_path || !set.has(w.upgrade_path))
+  interface WeaponTree {
+    root: Weapon
+    rows: TreeRow[]
+  }
+
+  // Max visual nesting: a 300-deep chain at full indent would squeeze content
+  // to zero width. DOM order still preserves the parent → child sequence.
+  const MAX_INDENT = 8
+
+  function buildTrees(typeWeapons: Weapon[]): WeaponTree[] {
     const sortFn = (a: Weapon, b: Weapon) => {
       if (sortBy === 'name') return a.name.localeCompare(b.name)
       if (sortBy === 'rarity') return (b.rarity ?? 0) - (a.rarity ?? 0)
@@ -198,14 +218,41 @@
       // otherwise fall back to creation order (id) — faithful to the ISO tree.
       return (a.sort_order ?? a.id) - (b.sort_order ?? b.id)
     }
-    const build = (w: Weapon): TreeNode => ({
-      weapon: w,
-      children: (childrenOf.get(w.name) ?? []).sort(sortFn).map(build),
-    })
-    return roots.sort(sortFn).map(build)
+    // ID-keyed forest: names repeat across variants (Wilds Artian x3), so
+    // name-keyed maps would merge distinct subtrees (see mh.ts).
+    const forest = buildWeaponForest(typeWeapons, sortFn)
+    const trees: WeaponTree[] = []
+    // emitted: each weapon id renders at most once per type group. A weapon
+    // has a single parent so it belongs under exactly one branch — the only
+    // way to revisit an id is a stale/duplicate name-cycle, which is dropped.
+    const emitted = new Set<number>()
+    for (const root of forest.roots) {
+      if (emitted.has(root.id)) continue
+      const rows: TreeRow[] = []
+      const stack: { w: Weapon; depth: number; childIdx: number; kids: Weapon[] }[] = []
+      const push = (w: Weapon, depth: number) => {
+        const kids = (forest.childrenOf.get(w.id) ?? []).filter((c) => !emitted.has(c.id))
+        emitted.add(w.id)
+        rows.push({ weapon: w, depth, hasKids: kids.length > 0 })
+        stack.push({ w, depth, childIdx: 0, kids: collapsed.has(w.id) ? [] : kids })
+      }
+      push(root, 0)
+      while (stack.length > 0) {
+        const top = stack[stack.length - 1]
+        if (top.childIdx >= top.kids.length) {
+          stack.pop()
+          continue
+        }
+        const child = top.kids[top.childIdx++]
+        if (emitted.has(child.id)) continue
+        push(child, top.depth + 1)
+      }
+      trees.push({ root, rows })
+    }
+    return trees
   }
 
-  const tree = $derived.by<{ type: string; forests: TreeNode[] }[]>(() => {
+  const tree = $derived.by<{ type: string; trees: WeaponTree[] }[]>(() => {
     const byType = new Map<string, Weapon[]>()
     for (const w of filtered) {
       const arr = byType.get(w.weapon_type) ?? []
@@ -214,13 +261,8 @@
     }
     return [...byType.entries()]
       .sort((a, b) => weaponOrder(a[0]) - weaponOrder(b[0]))
-      .map(([type, ws]) => ({ type, forests: buildForest(ws) }))
+      .map(([type, ws]) => ({ type, trees: buildTrees(ws) }))
   })
-
-  const _allCount = $derived(tree.reduce((n, t) => n + _countForests(t.forests), 0))
-  function _countForests(f: TreeNode[]): number {
-    return f.reduce((n, node) => n + 1 + _countForests(node.children), 0)
-  }
 
   function open(id: number) {
     if (!game) return
@@ -269,6 +311,21 @@
           <option value="rarity">Rarity ↓</option>
           <option value="attack">Attack ↓</option>
         </select>
+        <button
+          type="button"
+          onclick={() => (showFavsOnly = !showFavsOnly)}
+          aria-pressed={showFavsOnly}
+          title="Show favorites only"
+          class="inline-flex items-center gap-1.5 px-4 min-h-[44px] sm:min-h-[36px] rounded-full border text-xs font-medium focus-visible:outline-none focus-visible:ring-2 {showFavsOnly
+            ? 'border-[var(--theme-accent)]/50 bg-[var(--theme-accent)]/10 text-[var(--theme-accent)]'
+            : 'border-[var(--theme-border)] bg-[var(--theme-bg-surface)] text-gray-400 hover:text-gray-200'}"
+        >
+          <Star
+            class="h-3.5 w-3.5 {showFavsOnly ? 'fill-[var(--theme-accent)]' : ''}"
+            aria-hidden="true"
+          />
+          Favorites
+        </button>
         <span class="text-xs text-gray-400 ml-auto" role="status">{filtered.length} shown</span>
       </div>
       <div
@@ -305,8 +362,8 @@
 
     <div class="mt-4 min-w-0">
       {#each tree as group}
-        {@const groupIcon = group.forests[0]?.weapon}
-        {@const limited = group.forests.slice(0, rootLimit)}
+        {@const groupIcon = group.trees[0]?.root}
+        {@const limited = group.trees.slice(0, rootLimit)}
         <section class="mb-8 min-w-0">
           <h2
             class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-3 flex items-center gap-2"
@@ -322,16 +379,18 @@
             {/if}
             {group.type}
             <span class="text-[11px] font-normal normal-case text-gray-400"
-              >· {group.forests.length}</span
+              >· {group.trees.length}</span
             >
           </h2>
-          {#each limited as node (node.weapon.id)}
-            {@render treeNode(node)}
+          {#each limited as t}
+            {#each t.rows as row (row.weapon.id)}
+              {@render weaponRow(row)}
+            {/each}
           {/each}
-          {#if group.forests.length > limited.length}
+          {#if group.trees.length > limited.length}
             <div class="mt-3 flex flex-col items-center gap-2">
               <p class="text-xs text-gray-400" role="status">
-                Showing {limited.length} of {group.forests.length} trees
+                Showing {limited.length} of {group.trees.length} trees
               </p>
               <Button
                 variant="themedPrimary"
@@ -349,19 +408,26 @@
   {/if}
 </div>
 
-{#snippet treeNode(node: TreeNode)}
-  {@const isCollapsed = collapsed.has(node.weapon.id)}
-  {@const hasKids = node.children.length > 0}
-  <div class="mb-1.5 min-w-0">
+{#snippet weaponRow(row: TreeRow)}
+  {@const w = row.weapon}
+  {@const isCollapsed = collapsed.has(w.id)}
+  <div
+    class="mb-1.5 min-w-0 {row.depth > 0
+      ? 'border-l border-[var(--theme-border)] ml-5 sm:ml-6 pl-1.5 sm:pl-2'
+      : ''}"
+    style={row.depth > 1
+      ? `margin-left: calc(1.25rem + ${(Math.min(row.depth, MAX_INDENT) - 1) * 0.5}rem);`
+      : ''}
+  >
     <div class="flex items-stretch gap-1.5 min-w-0">
-      {#if hasKids}
+      {#if row.hasKids}
         <button
           type="button"
-          onclick={() => toggleNode(node.weapon.id)}
+          onclick={() => toggleNode(w.id)}
           aria-expanded={!isCollapsed}
           aria-label={isCollapsed
-            ? `Expand upgrades of ${node.weapon.name}`
-            : `Collapse upgrades of ${node.weapon.name}`}
+            ? `Expand upgrades of ${w.name}`
+            : `Collapse upgrades of ${w.name}`}
           class="shrink-0 self-center flex items-center justify-center rounded-md border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] text-gray-400 hover:text-gray-200 hover:border-[var(--theme-border-strong)] focus-visible:outline-none focus-visible:ring-2"
           style="min-width:44px;min-height:44px;"
         >
@@ -374,18 +440,18 @@
         </button>
       {/if}
       <button
-        onclick={() => open(node.weapon.id)}
+        onclick={() => open(w.id)}
         class="flex-1 min-w-0 text-left px-3 py-2.5 rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-elevated)] transition-colors motion-safe:transition-colors motion-reduce:transition-none min-h-[44px] focus-visible:outline-none focus-visible:ring-2"
       >
         <div class="flex items-center gap-2 min-w-0">
           <ItemIcon
-            iconUrl={node.weapon.icon_url}
-            iconName={node.weapon.icon_name}
-            iconColor={node.weapon.icon_color}
+            iconUrl={w.icon_url}
+            iconName={w.icon_name}
+            iconColor={w.icon_color}
             size={22}
             alt=""
           />
-          {#if node.weapon.is_forgeable}
+          {#if w.is_forgeable}
             <Hammer
               class="h-3.5 w-3.5 shrink-0 text-gray-400"
               aria-label="Crafted directly from materials"
@@ -393,25 +459,25 @@
           {/if}
           <span
             class="text-[10px] text-gray-400 shrink-0 w-10 text-center rounded bg-[var(--theme-bg-elevated)] py-0.5 border border-[var(--theme-border)]"
-            >R{node.weapon.rarity ?? 1}</span
+            >R{w.rarity ?? 1}</span
           >
-          <span class="text-sm text-gray-100 font-medium truncate min-w-0">{node.weapon.name}</span>
+          <span class="text-sm text-gray-100 font-medium truncate min-w-0">{w.name}</span>
           <span class="text-[11px] text-gray-400 ml-auto shrink-0 tabular-nums"
-            >ATK {node.weapon.attack ?? 0}</span
+            >ATK {w.attack ?? 0}</span
           >
         </div>
         <div class="mt-1 flex items-center gap-2 min-w-0">
-          {#if node.weapon.element_type}
-            <span class="text-[11px] {elementColor(node.weapon.element_type)} shrink-0 truncate"
-              >{node.weapon.element_type} {node.weapon.element_value ?? 0}</span
+          {#if w.element_type}
+            <span class="text-[11px] {elementColor(w.element_type)} shrink-0 truncate"
+              >{w.element_type} {w.element_value ?? 0}</span
             >
           {/if}
-          {#if sharpnessSegments(node.weapon.sharpness).length > 0}
+          {#if sharpnessSegments(w.sharpness).length > 0}
             <div
               class="flex items-center gap-[1px] h-1.5 min-w-0 overflow-hidden ml-auto"
               aria-hidden="true"
             >
-              {#each sharpnessSegments(node.weapon.sharpness) as seg, i}
+              {#each sharpnessSegments(w.sharpness) as seg, i}
                 {#if seg > 0}
                   <div
                     class="rounded-[1px] shrink-0"
@@ -425,13 +491,9 @@
           {/if}
         </div>
       </button>
-    </div>
-    {#if hasKids && !isCollapsed}
-      <div class="border-l border-[var(--theme-border)] ml-5 sm:ml-6 mt-1.5 pl-1.5 sm:pl-2 min-w-0">
-        {#each node.children as child (child.weapon.id)}
-          {@render treeNode(child)}
-        {/each}
+      <div class="self-center shrink-0">
+        <FavoriteButton kind="weapon" id={w.id} name={w.name} size="sm" />
       </div>
-    {/if}
+    </div>
   </div>
 {/snippet}

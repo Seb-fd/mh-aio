@@ -1,0 +1,2462 @@
+[
+  {
+    "id": 40001,
+    "name": "Aelucanth Brachia",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40002,
+    "name": "Aelucanth Crura",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40003,
+    "name": "Aelucanth Elytra",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40004,
+    "name": "Aelucanth Thorax",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40005,
+    "name": "Aelucanth Vertex",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40006,
+    "name": "Aknosom",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40007,
+    "name": "Akuma's",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40008,
+    "name": "Alice",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40009,
+    "name": "Alloy",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40010,
+    "name": "Almudron",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40011,
+    "name": "Anjanath",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40012,
+    "name": "Arc",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40013,
+    "name": "Archfiend Armor",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40014,
+    "name": "Arlow",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40015,
+    "name": "Arthur's",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40016,
+    "name": "Artian",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40017,
+    "name": "Artillery Corps",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40018,
+    "name": "Arzuros",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40019,
+    "name": "Astalos",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40020,
+    "name": "Auroracanth",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40021,
+    "name": "Azure",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40022,
+    "name": "Azure Age",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40023,
+    "name": "Baggi",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40024,
+    "name": "Barbania",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40025,
+    "name": "Barioth",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40026,
+    "name": "Barroth",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40027,
+    "name": "Basarios",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40028,
+    "name": "Bazelgeuse",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40029,
+    "name": "Benevolent",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40030,
+    "name": "Bishaten",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40031,
+    "name": "Black",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40032,
+    "name": "Black Leather",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40033,
+    "name": "Black Wing",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40034,
+    "name": "Blessed Feather",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40035,
+    "name": "Blossom",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40036,
+    "name": "Blossom Cuffs",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40037,
+    "name": "Bnahabra",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40038,
+    "name": "Bnahabra Hat",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40039,
+    "name": "Bombadgy",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40040,
+    "name": "Bone",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40041,
+    "name": "Bow Necklace",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40042,
+    "name": "Brigade",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40043,
+    "name": "Brigade Lobos",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40044,
+    "name": "Buff",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40045,
+    "name": "Bullfango",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40046,
+    "name": "Bunny Dango",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40047,
+    "name": "Canyne",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40048,
+    "name": "Ceanataur",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40049,
+    "name": "Chainmail",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40050,
+    "name": "Channeler's",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40051,
+    "name": "Channeler's Hair-tie",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40052,
+    "name": "Channeler's Hope",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40053,
+    "name": "Channeler's Robe",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40054,
+    "name": "Chaos Archbun",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40055,
+    "name": "Chaos Archplate",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40056,
+    "name": "Chaos Plate",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40057,
+    "name": "Chaoshroom",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40058,
+    "name": "Chaotic",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40059,
+    "name": "Charité",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40060,
+    "name": "Charité Barrette",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40061,
+    "name": "Charité Skirt",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40062,
+    "name": "Chrome Metal",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40063,
+    "name": "Cielo",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40064,
+    "name": "Clockwork",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40065,
+    "name": "Cohoot",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40066,
+    "name": "Commission",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40067,
+    "name": "Commission Gorget",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40068,
+    "name": "Commission Trousers",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40069,
+    "name": "Cunning Specs",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40070,
+    "name": "Damascus",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40071,
+    "name": "Death Stench Bowels",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40072,
+    "name": "Death Stench Brain",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40073,
+    "name": "Death Stench Grip",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40074,
+    "name": "Death Stench Heel",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40075,
+    "name": "Death Stench Muscle",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40076,
+    "name": "Diablos",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40077,
+    "name": "Dignified",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40078,
+    "name": "Dignified Cuisse",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40079,
+    "name": "Diver's",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40080,
+    "name": "Divine Ire",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40081,
+    "name": "Divine Ire Kote",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40082,
+    "name": "Dober",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40083,
+    "name": "Dragonsbane",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40084,
+    "name": "Dragonsbane Headwear",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40085,
+    "name": "Droth",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40086,
+    "name": "Dusk",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40087,
+    "name": "Edel Creeper",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40088,
+    "name": "Edel Folia",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40089,
+    "name": "Edel Ribplate",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40090,
+    "name": "Edel Roots",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40091,
+    "name": "Edel Vizor",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40092,
+    "name": "Elfin Crown",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40093,
+    "name": "Elgado",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40094,
+    "name": "Espinas",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40095,
+    "name": "Espinas Bowels",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40096,
+    "name": "Espinas Brain",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40097,
+    "name": "Espinas Heel",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40098,
+    "name": "Espinas Muscle",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40099,
+    "name": "Ethereal",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40100,
+    "name": "Face",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40101,
+    "name": "Fall",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40102,
+    "name": "Feather of Mastery",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40103,
+    "name": "Felyne Stealth",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40104,
+    "name": "Fiorayne",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40105,
+    "name": "Five Element",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40106,
+    "name": "Five Element Legwear",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40107,
+    "name": "Flame Seal",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40108,
+    "name": "Flaming Espinas Bowels",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40109,
+    "name": "Flaming Espinas Brain",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40110,
+    "name": "Flaming Espinas Grip",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40111,
+    "name": "Flaming Espinas Heel",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40112,
+    "name": "Flaming Espinas Muscle",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40113,
+    "name": "Floral",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40114,
+    "name": "Floral Yukata",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40115,
+    "name": "Floral Zori",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40116,
+    "name": "Fluffy Fur",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40117,
+    "name": "Fluffy Fur Hat",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40118,
+    "name": "Fluffy Fur Robe",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40119,
+    "name": "Formal Dragon",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40120,
+    "name": "Formal Dragon Barrette",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40121,
+    "name": "Fox",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40122,
+    "name": "Frilled Choker",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40123,
+    "name": "Gala",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40124,
+    "name": "Gala Suit Cuffs",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40125,
+    "name": "Gala Suit Slacks",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40126,
+    "name": "Gala Suit Top Hat",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40127,
+    "name": "Gargwa",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40128,
+    "name": "Golden",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40129,
+    "name": "Golden Headdress",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40130,
+    "name": "Golden Kote",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40131,
+    "name": "Golden Lunebraces",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40132,
+    "name": "Golden Lunecoil",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40133,
+    "name": "Golden Lunegreaves",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40134,
+    "name": "Golden Lunehelm",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40135,
+    "name": "Golden Lunemail",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40136,
+    "name": "Golm",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40137,
+    "name": "Gore",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40138,
+    "name": "Gorgeous",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40139,
+    "name": "Goss Harag",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40140,
+    "name": "Grand Chaos Plate",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40141,
+    "name": "Grand Chaoshroom",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40142,
+    "name": "Grand God's Peer",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40143,
+    "name": "Grand God's Peer Feet",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40144,
+    "name": "Grand God's Peer Robe",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40145,
+    "name": "Grand Mizuha",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40146,
+    "name": "Grand Mizuha Guards",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40147,
+    "name": "Grand Mizuha Leg Wrap",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40148,
+    "name": "Guardian",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40149,
+    "name": "Guild Bard",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40150,
+    "name": "Guild Bard Bolero",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40151,
+    "name": "Guild Bard Lobos",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40152,
+    "name": "Guild Cross",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40153,
+    "name": "Guild Palace",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40154,
+    "name": "Harp Crown",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40155,
+    "name": "Hawk",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40156,
+    "name": "Hawkboots",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40157,
+    "name": "Hawkcoil",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40158,
+    "name": "Hawkhat",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40159,
+    "name": "Hawksuit",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40160,
+    "name": "Hermitaur",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40161,
+    "name": "Hinoa",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40162,
+    "name": "Holy Ire",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40163,
+    "name": "Hoplite's",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40164,
+    "name": "Hoplite's Armor",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40165,
+    "name": "Hornetaur",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40166,
+    "name": "Hunter's",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40167,
+    "name": "Ibushi's",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40168,
+    "name": "Ibushi's Breastplate",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40169,
+    "name": "Ibushi's Fauld",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40170,
+    "name": "Ibushi's Foot",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40171,
+    "name": "Ibushi's Pauldrons",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40172,
+    "name": "Ibushi's Pure",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40173,
+    "name": "Ibushi's Pure Breastplate",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40174,
+    "name": "Ibushi's Pure Fauld",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40175,
+    "name": "Ibushi's Pure Foot",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40176,
+    "name": "Ibushi's Pure Pauldrons",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40177,
+    "name": "Ingot",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40178,
+    "name": "Izuchi",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40179,
+    "name": "Jaggi",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40180,
+    "name": "Jaggi Shinguards",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40181,
+    "name": "Jelly",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40182,
+    "name": "Jelly Hat",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40183,
+    "name": "Jyuratodus",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40184,
+    "name": "Kadachi",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40185,
+    "name": "Kaiser",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40186,
+    "name": "Kaiser Crown",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40187,
+    "name": "Kamura",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40188,
+    "name": "Kamura Cloak",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40189,
+    "name": "Kamura Legacy",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40190,
+    "name": "Kamurai",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40191,
+    "name": "Kamurai Hat",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40192,
+    "name": "Khezu",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40193,
+    "name": "Kulu-Ya-Ku",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40194,
+    "name": "Kunai",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40195,
+    "name": "Kushala Cista",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40196,
+    "name": "Kushala Cocoon",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40197,
+    "name": "Kushala Crus",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40198,
+    "name": "Kushala Glare",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40199,
+    "name": "Kushala Grip",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40200,
+    "name": "Lagombi",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40201,
+    "name": "Lambent",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40202,
+    "name": "Lambent Casque",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40203,
+    "name": "Lambent Gaiters",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40204,
+    "name": "Lambent Hauberk",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40205,
+    "name": "Lambent Wristrays",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40206,
+    "name": "Lance Gunn",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40207,
+    "name": "Leather",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40208,
+    "name": "Leather Choker",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40209,
+    "name": "Leather Trousers",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40210,
+    "name": "Lecturer",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40211,
+    "name": "Lecturer's",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40212,
+    "name": "Lecturer's Skirt",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40213,
+    "name": "Lennigan",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40214,
+    "name": "Lien",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40215,
+    "name": "Ludroth",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40216,
+    "name": "Lunagaron",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40217,
+    "name": "Magmadron",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40218,
+    "name": "Makluva",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40219,
+    "name": "Makluva Cover",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40220,
+    "name": "Malzeno",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40221,
+    "name": "Marine",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40222,
+    "name": "Medium's",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40223,
+    "name": "Medium's Hair-tie",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40224,
+    "name": "Medium's Prayer",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40225,
+    "name": "Medium's Robe",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40226,
+    "name": "Melahoa",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40227,
+    "name": "Melahoa Branch",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40228,
+    "name": "Melahoa Folia",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40229,
+    "name": "Melahoa Hat",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40230,
+    "name": "Melahoa Roots",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40231,
+    "name": "Mighty Bow Feather",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40232,
+    "name": "Minoto",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40233,
+    "name": "Mizuha",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40234,
+    "name": "Mizuha Gaiters",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40235,
+    "name": "Mizuha Guards",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40236,
+    "name": "Mizutsune",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40237,
+    "name": "Monksnail Hat",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40238,
+    "name": "Monocle of Clarity",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40239,
+    "name": "Mosgharl Creeper",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40240,
+    "name": "Mosgharl Folia",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40241,
+    "name": "Mosgharl Ribplate",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40242,
+    "name": "Mosgharl Roots",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40243,
+    "name": "Mosgharl Vizor",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40244,
+    "name": "Nargacuga",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40245,
+    "name": "Narwa's",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40246,
+    "name": "Narwa's Breastplate",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40247,
+    "name": "Narwa's Fauld",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40248,
+    "name": "Narwa's Foot",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40249,
+    "name": "Narwa's Pauldrons",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40250,
+    "name": "Narwa's Pure",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40251,
+    "name": "Narwa's Pure Breastplate",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40252,
+    "name": "Narwa's Pure Fauld",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40253,
+    "name": "Narwa's Pure Foot",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40254,
+    "name": "Narwa's Pure Pauldrons",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40255,
+    "name": "Nephilim",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40256,
+    "name": "Onmyo Ateobi",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40257,
+    "name": "Onmyo Kariginu",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40258,
+    "name": "Onmyo Sashiko",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40259,
+    "name": "Onmyo Tekkou",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40260,
+    "name": "Onmyo Toukan",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40261,
+    "name": "Orangaten",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40262,
+    "name": "Origin",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40263,
+    "name": "Orion",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40264,
+    "name": "Outpost HQ",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40265,
+    "name": "Outpost HQ Armor",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40266,
+    "name": "Palamask",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40267,
+    "name": "Pride",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40268,
+    "name": "Primordial",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40269,
+    "name": "Professor's",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40270,
+    "name": "Professor's Bottoms",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40271,
+    "name": "Professor's Goggles",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40272,
+    "name": "Professor's Mittens",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40273,
+    "name": "Prudence",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40274,
+    "name": "Pukei",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40275,
+    "name": "Pukei-Pukei",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40276,
+    "name": "Pyre-Kadaki",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40277,
+    "name": "Qurio Crown",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40278,
+    "name": "Rakna",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40279,
+    "name": "Rakna Armguards",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40280,
+    "name": "Ran Page",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40281,
+    "name": "Rathalos",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40282,
+    "name": "Rathian",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40283,
+    "name": "Reflet",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40284,
+    "name": "Regios",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40285,
+    "name": "Relunea",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40286,
+    "name": "Relunea Bottom",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40287,
+    "name": "Relunea Glasses",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40288,
+    "name": "Remobra",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40289,
+    "name": "Remobra Feet",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40290,
+    "name": "Reverent Wrap",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40291,
+    "name": "Rhenoplos",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40292,
+    "name": "Rhopessa Brachia",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40293,
+    "name": "Rhopessa Crura",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40294,
+    "name": "Rhopessa Elytra",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40295,
+    "name": "Rhopessa Thorax",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40296,
+    "name": "Rhopessa Vertex",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40297,
+    "name": "Rider",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40298,
+    "name": "Rimeguard",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40299,
+    "name": "Risen Kaiser",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40300,
+    "name": "Risen Kaiser Cuisse",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40301,
+    "name": "Risen Kaiser Horns",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40302,
+    "name": "Risen Kushala Cocoon",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40303,
+    "name": "Risen Kushala Crus",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40304,
+    "name": "Risen Kushala Glare",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40305,
+    "name": "Risen Kushala Grande",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40306,
+    "name": "Risen Kushala Iram",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40307,
+    "name": "Risen Mizuha",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40308,
+    "name": "Risen Mizuha Gaiters",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40309,
+    "name": "Risen Mizuha Headdress",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40310,
+    "name": "Risen Mizuha Robes",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40311,
+    "name": "S. Studded",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40312,
+    "name": "S. Studded Hat",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40313,
+    "name": "Sailor",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40314,
+    "name": "Sailor Hat",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40315,
+    "name": "Sailor Skirt",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40316,
+    "name": "Sailor Socks",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40317,
+    "name": "Scholar's",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40318,
+    "name": "Scholar's Beret",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40319,
+    "name": "Scholar's Blouse",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40320,
+    "name": "Scholar's Skirt",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40321,
+    "name": "Scholar's Socks",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40322,
+    "name": "Scholarly",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40323,
+    "name": "Scholarly Strongarm",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40324,
+    "name": "Shadow Shades",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40325,
+    "name": "Shui",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40326,
+    "name": "Silver Solbraces",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40327,
+    "name": "Silver Solcoil",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40328,
+    "name": "Silver Solgreaves",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40329,
+    "name": "Silver Solhelm",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40330,
+    "name": "Silver Solmail",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40331,
+    "name": "Sinister",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40332,
+    "name": "Sinister Demon",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40333,
+    "name": "Sinister Grudge",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40334,
+    "name": "Sinister Seal",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40335,
+    "name": "Skalda Brachia",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40336,
+    "name": "Skalda Crura",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40337,
+    "name": "Skalda Elytra",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40338,
+    "name": "Skalda Thorax",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40339,
+    "name": "Skalda Vertex",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40340,
+    "name": "Skull Visage",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40341,
+    "name": "Slagtoth",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40342,
+    "name": "Slagtoth Cloak",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40343,
+    "name": "Snowshear",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40344,
+    "name": "Snowy Cohoot Earmuffs",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40345,
+    "name": "Soaring Feather",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40346,
+    "name": "Somnacanth",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40347,
+    "name": "Sonic",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40348,
+    "name": "Sonic Jersey",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40349,
+    "name": "Sonic Shoes",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40350,
+    "name": "Spio Brachia",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40351,
+    "name": "Spio Crura",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40352,
+    "name": "Spio Elytra",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40353,
+    "name": "Spio Thorax",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40354,
+    "name": "Spio Vertex",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40355,
+    "name": "Spiribird",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40356,
+    "name": "Squire's",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40357,
+    "name": "Squire's Cuirass",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40358,
+    "name": "Storge",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40359,
+    "name": "Summer",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40360,
+    "name": "Summer Bracelets",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40361,
+    "name": "Summer Hat",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40362,
+    "name": "Summer Top",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40363,
+    "name": "Swallow",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40364,
+    "name": "Swallow Shirt",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40365,
+    "name": "Tempest",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40366,
+    "name": "Tempest Crown",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40367,
+    "name": "Tempest Robe",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40368,
+    "name": "Tetranadon",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40369,
+    "name": "Tetranadon Greaves x",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40370,
+    "name": "Theater Wig",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40371,
+    "name": "Tigrex",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40372,
+    "name": "Tobi-Kadachi",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40373,
+    "name": "Uroktor",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40374,
+    "name": "Uroktor Torso",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40375,
+    "name": "Utsushi",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40376,
+    "name": "Utsushi Braces (H)",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40377,
+    "name": "Utsushi Braces (V)",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40378,
+    "name": "Utsushi Chest (H)",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40379,
+    "name": "Utsushi Chest (V)",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40380,
+    "name": "Utsushi Greaves (H)",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40381,
+    "name": "Utsushi Greaves (V)",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40382,
+    "name": "Utsushi Mask (H)",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40383,
+    "name": "Utsushi Mask (V)",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40384,
+    "name": "Utsushi Tassets (H)",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40385,
+    "name": "Utsushi Tassets (V)",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40386,
+    "name": "Utsushi True",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40387,
+    "name": "Vaik",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40388,
+    "name": "Valstrax",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40389,
+    "name": "Valstrax Braces - Eclipse",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40390,
+    "name": "Valstrax Braces - Epoch",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40391,
+    "name": "Valstrax Coil - Eclipse",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40392,
+    "name": "Valstrax Coil - Epoch",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40393,
+    "name": "Valstrax Greaves - Eclipse",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40394,
+    "name": "Valstrax Greaves - Epoch",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40395,
+    "name": "Valstrax Helm - Eclipse",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40396,
+    "name": "Valstrax Helm - Epoch",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40397,
+    "name": "Valstrax Mail - Eclipse",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40398,
+    "name": "Valstrax Mail - Epoch",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40399,
+    "name": "Velociprey",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40400,
+    "name": "Vespoid",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40401,
+    "name": "Virtue",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40402,
+    "name": "Volvidon",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40403,
+    "name": "Wild",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40404,
+    "name": "Woofpurr",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40405,
+    "name": "Wroggi",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40406,
+    "name": "Yukumo Sky",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40407,
+    "name": "Yukumo Sky Dogi",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40408,
+    "name": "Yukumo Sky Kasa",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40409,
+    "name": "Yukumo Sky Kote",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 40410,
+    "name": "Zinogre",
+    "bonus_skill": null,
+    "bonus_required": null
+  }
+]

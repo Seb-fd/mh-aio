@@ -1,0 +1,3096 @@
+[
+  {
+    "id": 30001,
+    "skill_id": 30088,
+    "points": 1,
+    "ability_name": "Adaptability Lv1",
+    "description": "Negates the effects of heat and cold."
+  },
+  {
+    "id": 30002,
+    "skill_id": 30088,
+    "points": 2,
+    "ability_name": "Adaptability Lv2",
+    "description": "Negates environmental damage."
+  },
+  {
+    "id": 30003,
+    "skill_id": 30120,
+    "points": 1,
+    "ability_name": "Adrenaline Rush Lv1",
+    "description": "Attack +10 while active."
+  },
+  {
+    "id": 30004,
+    "skill_id": 30120,
+    "points": 2,
+    "ability_name": "Adrenaline Rush Lv2",
+    "description": "Attack +15 while active."
+  },
+  {
+    "id": 30005,
+    "skill_id": 30120,
+    "points": 3,
+    "ability_name": "Adrenaline Rush Lv3",
+    "description": "Attack +20 while active."
+  },
+  {
+    "id": 30006,
+    "skill_id": 30120,
+    "points": 4,
+    "ability_name": "Adrenaline Rush Lv4",
+    "description": "Attack +25 while active."
+  },
+  {
+    "id": 30007,
+    "skill_id": 30120,
+    "points": 5,
+    "ability_name": "Adrenaline Rush Lv5",
+    "description": "Attack +30 while active."
+  },
+  {
+    "id": 30008,
+    "skill_id": 30144,
+    "points": 1,
+    "ability_name": "Agitator Lv1",
+    "description": "Attack +4 and affinity +3% while active."
+  },
+  {
+    "id": 30009,
+    "skill_id": 30144,
+    "points": 2,
+    "ability_name": "Agitator Lv2",
+    "description": "Attack +8 and affinity +5% while active."
+  },
+  {
+    "id": 30010,
+    "skill_id": 30144,
+    "points": 3,
+    "ability_name": "Agitator Lv3",
+    "description": "Attack +12 and affinity +7% while active."
+  },
+  {
+    "id": 30011,
+    "skill_id": 30144,
+    "points": 4,
+    "ability_name": "Agitator Lv4",
+    "description": "Attack +16 and affinity +10% while active."
+  },
+  {
+    "id": 30012,
+    "skill_id": 30144,
+    "points": 5,
+    "ability_name": "Agitator Lv5",
+    "description": "Attack +20 and affinity +15% while active."
+  },
+  {
+    "id": 30013,
+    "skill_id": 30086,
+    "points": 1,
+    "ability_name": "Airborne Lv1",
+    "description": "Jumping attack power +10%"
+  },
+  {
+    "id": 30014,
+    "skill_id": 30097,
+    "points": 1,
+    "ability_name": "Diversion",
+    "description": "Increases the attention drawn to you when attacking a monster."
+  },
+  {
+    "id": 30015,
+    "skill_id": 30067,
+    "points": 1,
+    "ability_name": "Ambush Lv1",
+    "description": "Attack +5% while active."
+  },
+  {
+    "id": 30016,
+    "skill_id": 30067,
+    "points": 2,
+    "ability_name": "Ambush Lv2",
+    "description": "Attack +10% while active."
+  },
+  {
+    "id": 30017,
+    "skill_id": 30067,
+    "points": 3,
+    "ability_name": "Ambush Lv3",
+    "description": "Attack +15% while active."
+  },
+  {
+    "id": 30018,
+    "skill_id": 30018,
+    "points": 1,
+    "ability_name": "Antivirus Lv1",
+    "description": "Slightly increases recovery rate after contracting the Frenzy. Affinity +3% if cured."
+  },
+  {
+    "id": 30019,
+    "skill_id": 30018,
+    "points": 2,
+    "ability_name": "Antivirus Lv2",
+    "description": "Increases recovery rate after contracting the Frenzy. Affinity +6% if cured."
+  },
+  {
+    "id": 30020,
+    "skill_id": 30018,
+    "points": 3,
+    "ability_name": "Antivirus Lv3",
+    "description": "Greatly increases recovery rate after contracting the Frenzy. Affinity +10% if cured."
+  },
+  {
+    "id": 30021,
+    "skill_id": 30063,
+    "points": 1,
+    "ability_name": "Aquatic/Oilsilt Mobility Lv1",
+    "description": "Negates the effects of muddy streams, nullifies slowing from water and oilsilt, and reduces slowing from drakesbone oil."
+  },
+  {
+    "id": 30022,
+    "skill_id": 30063,
+    "points": 2,
+    "ability_name": "Aquatic/Oilsilt Mobility Lv2",
+    "description": "Also negates the effects of waves."
+  },
+  {
+    "id": 30023,
+    "skill_id": 30033,
+    "points": 1,
+    "ability_name": "Hasten Recovery I",
+    "description": "Regenerates a small amount of your health as you continually attack a monster. Recovery varies by weapon."
+  },
+  {
+    "id": 30024,
+    "skill_id": 30033,
+    "points": 2,
+    "ability_name": "Hasten Recovery II",
+    "description": "Regenerates your health as you continually attack a monster. Recovery varies by weapon."
+  },
+  {
+    "id": 30025,
+    "skill_id": 30047,
+    "points": 1,
+    "ability_name": "Artillery Lv1",
+    "description": "Moderately increases each attack and Wyvern's Fire firing speed. Shelling fire attack +30."
+  },
+  {
+    "id": 30026,
+    "skill_id": 30047,
+    "points": 2,
+    "ability_name": "Artillery Lv2",
+    "description": "Increases each attack and Wyvern's Fire firing speed. Shelling fire attack +60."
+  },
+  {
+    "id": 30027,
+    "skill_id": 30047,
+    "points": 3,
+    "ability_name": "Artillery Lv3",
+    "description": "Greatly increases each attack and Wyvern's Fire firing speed. Shelling fire attack +90."
+  },
+  {
+    "id": 30028,
+    "skill_id": 30072,
+    "points": 1,
+    "ability_name": "Attack Boost Lv1",
+    "description": "Attack +3"
+  },
+  {
+    "id": 30029,
+    "skill_id": 30072,
+    "points": 2,
+    "ability_name": "Attack Boost Lv2",
+    "description": "Attack +5"
+  },
+  {
+    "id": 30030,
+    "skill_id": 30072,
+    "points": 3,
+    "ability_name": "Attack Boost Lv3",
+    "description": "Attack +7"
+  },
+  {
+    "id": 30031,
+    "skill_id": 30072,
+    "points": 4,
+    "ability_name": "Attack Boost Lv4",
+    "description": "Attack +2% Bonus: +8"
+  },
+  {
+    "id": 30032,
+    "skill_id": 30072,
+    "points": 5,
+    "ability_name": "Attack Boost Lv5",
+    "description": "Attack +4% Bonus: +9"
+  },
+  {
+    "id": 30033,
+    "skill_id": 30053,
+    "points": 1,
+    "ability_name": "Ballistics Lv1",
+    "description": "Slightly extends range."
+  },
+  {
+    "id": 30034,
+    "skill_id": 30053,
+    "points": 2,
+    "ability_name": "Ballistics Lv2",
+    "description": "Extends range."
+  },
+  {
+    "id": 30035,
+    "skill_id": 30053,
+    "points": 3,
+    "ability_name": "Ballistics Lv3",
+    "description": "Greatly extends critical range, and boosts the power of attacks made within critical range."
+  },
+  {
+    "id": 30036,
+    "skill_id": 30147,
+    "points": 1,
+    "ability_name": "Bind Resistance Lv1",
+    "description": "Allows you to quickly recover from webbed status or frostblight."
+  },
+  {
+    "id": 30037,
+    "skill_id": 30147,
+    "points": 2,
+    "ability_name": "Bind Resistance Lv2",
+    "description": "Allows you to very quickly recover from webbed status or frostblight."
+  },
+  {
+    "id": 30038,
+    "skill_id": 30147,
+    "points": 3,
+    "ability_name": "Bind Resistance Lv3",
+    "description": "Prevents webbed status and frostblight."
+  },
+  {
+    "id": 30039,
+    "skill_id": 30163,
+    "points": 1,
+    "ability_name": "Bladescale Honing Lv1",
+    "description": "Activates skill effect."
+  },
+  {
+    "id": 30040,
+    "skill_id": 30160,
+    "points": 1,
+    "ability_name": "Bladescale Loading Lv1",
+    "description": "Activates skill effect."
+  },
+  {
+    "id": 30041,
+    "skill_id": 30107,
+    "points": 1,
+    "ability_name": "War Cry I",
+    "description": "Using the To Victory! gesture moderately  increases attack temporarily to nearby allies. Greatly effects Palicoes and Support Hunters."
+  },
+  {
+    "id": 30042,
+    "skill_id": 30107,
+    "points": 2,
+    "ability_name": "War Cry II",
+    "description": "Using the To Victory! gesture increases attack temporarily to nearby allies. Greatly effects Palicoes and Support Hunters."
+  },
+  {
+    "id": 30043,
+    "skill_id": 30040,
+    "points": 1,
+    "ability_name": "Blast Attack Lv1",
+    "description": "Blast buildup +5% Bonus: +10"
+  },
+  {
+    "id": 30044,
+    "skill_id": 30040,
+    "points": 2,
+    "ability_name": "Blast Attack Lv2",
+    "description": "Blast buildup +10% Bonus: +20"
+  },
+  {
+    "id": 30045,
+    "skill_id": 30040,
+    "points": 3,
+    "ability_name": "Blast Attack Lv3",
+    "description": "Blast buildup +20% Bonus: +50"
+  },
+  {
+    "id": 30046,
+    "skill_id": 30005,
+    "points": 1,
+    "ability_name": "Blast Functionality Lv1",
+    "description": "Lets you use blast coatings."
+  },
+  {
+    "id": 30047,
+    "skill_id": 30110,
+    "points": 1,
+    "ability_name": "Blast Resistance Lv1",
+    "description": "Delays blastblight and reduces blast damage."
+  },
+  {
+    "id": 30048,
+    "skill_id": 30110,
+    "points": 2,
+    "ability_name": "Blast Resistance Lv2",
+    "description": "Greatly delays blastblight and greatly reduces blast damage."
+  },
+  {
+    "id": 30049,
+    "skill_id": 30110,
+    "points": 3,
+    "ability_name": "Blast Resistance Lv3",
+    "description": "Prevents blastblight."
+  },
+  {
+    "id": 30050,
+    "skill_id": 30146,
+    "points": 1,
+    "ability_name": "Bleeding Resistance Lv1",
+    "description": "Reduces damage while bleeding."
+  },
+  {
+    "id": 30051,
+    "skill_id": 30146,
+    "points": 2,
+    "ability_name": "Bleeding Resistance Lv2",
+    "description": "Greatly reduces damage while bleeding."
+  },
+  {
+    "id": 30052,
+    "skill_id": 30146,
+    "points": 3,
+    "ability_name": "Bleeding Resistance Lv3",
+    "description": "Prevents bleeding."
+  },
+  {
+    "id": 30053,
+    "skill_id": 30049,
+    "points": 1,
+    "ability_name": "Blight Resistance Lv1",
+    "description": "Reduces the duration of all elemental blights by 50%."
+  },
+  {
+    "id": 30054,
+    "skill_id": 30049,
+    "points": 2,
+    "ability_name": "Blight Resistance Lv2",
+    "description": "Reduces the duration of all elemental blights by 75%."
+  },
+  {
+    "id": 30055,
+    "skill_id": 30049,
+    "points": 3,
+    "ability_name": "Blight Resistance Lv3",
+    "description": "Nullifies all elemental blights."
+  },
+  {
+    "id": 30056,
+    "skill_id": 30061,
+    "points": 1,
+    "ability_name": "Blindsider Lv1",
+    "description": "Improves the effectiveness of flash attacks and items."
+  },
+  {
+    "id": 30057,
+    "skill_id": 30034,
+    "points": 1,
+    "ability_name": "Blossomdance Boon I",
+    "description": "During Blossomdance, adds special items to quest rewards. (No effect when joining mid-quest.)"
+  },
+  {
+    "id": 30058,
+    "skill_id": 30034,
+    "points": 2,
+    "ability_name": "Blossomdance Boon II",
+    "description": "During Blossomdance, adds special items to quest rewards, and greatly boosts attack and defense."
+  },
+  {
+    "id": 30059,
+    "skill_id": 30085,
+    "points": 1,
+    "ability_name": "Bludgeoner Lv1",
+    "description": "+5% damage dealt when your sharpness gauge is yellow or lower."
+  },
+  {
+    "id": 30060,
+    "skill_id": 30085,
+    "points": 2,
+    "ability_name": "Bludgeoner Lv2",
+    "description": "+10% damage dealt when your sharpness gauge is yellow or lower."
+  },
+  {
+    "id": 30061,
+    "skill_id": 30085,
+    "points": 3,
+    "ability_name": "Bludgeoner Lv3",
+    "description": "+10% damage dealt when your sharpness gauge is green or lower."
+  },
+  {
+    "id": 30062,
+    "skill_id": 30037,
+    "points": 1,
+    "ability_name": "Bombardier Lv1",
+    "description": "Explosive power +10%"
+  },
+  {
+    "id": 30063,
+    "skill_id": 30037,
+    "points": 2,
+    "ability_name": "Bombardier Lv2",
+    "description": "Explosive power +20%"
+  },
+  {
+    "id": 30064,
+    "skill_id": 30037,
+    "points": 3,
+    "ability_name": "Bombardier Lv3",
+    "description": "Explosive power +30%"
+  },
+  {
+    "id": 30065,
+    "skill_id": 30112,
+    "points": 1,
+    "ability_name": "Botanist Lv1",
+    "description": "One extra consumable herb item per gather."
+  },
+  {
+    "id": 30066,
+    "skill_id": 30112,
+    "points": 2,
+    "ability_name": "Botanist Lv2",
+    "description": "Additionally adds one extra consumable fruit, nut, or seed item per gather."
+  },
+  {
+    "id": 30067,
+    "skill_id": 30112,
+    "points": 3,
+    "ability_name": "Botanist Lv3",
+    "description": "Additionally adds one extra consumable insect item per gather."
+  },
+  {
+    "id": 30068,
+    "skill_id": 30112,
+    "points": 4,
+    "ability_name": "Botanist Lv4",
+    "description": "Additionally adds one extra consumable mushroom item per gather."
+  },
+  {
+    "id": 30069,
+    "skill_id": 30095,
+    "points": 1,
+    "ability_name": "Burst Lv1",
+    "description": "On first hit, gain a small temporary attack and element boost, replaced by a larger boost after the fifth hit."
+  },
+  {
+    "id": 30070,
+    "skill_id": 30095,
+    "points": 2,
+    "ability_name": "Burst Lv2",
+    "description": "Hit 5 successive times for a moderate stat boost."
+  },
+  {
+    "id": 30071,
+    "skill_id": 30095,
+    "points": 3,
+    "ability_name": "Burst Lv3",
+    "description": "Hit 5 successive times for a bigger stat boost."
+  },
+  {
+    "id": 30072,
+    "skill_id": 30095,
+    "points": 4,
+    "ability_name": "Burst Lv4",
+    "description": "Hit 5 successive times for an even bigger stat boost."
+  },
+  {
+    "id": 30073,
+    "skill_id": 30095,
+    "points": 5,
+    "ability_name": "Burst Lv5",
+    "description": "Hit 5 successive times for a huge stat boost."
+  },
+  {
+    "id": 30074,
+    "skill_id": 30089,
+    "points": 1,
+    "ability_name": "Affinity Sliding",
+    "description": "Increases your affinity temporarily when sliding on terrain."
+  },
+  {
+    "id": 30075,
+    "skill_id": 30179,
+    "points": 1,
+    "ability_name": "Catburglar Lv1",
+    "description": "Activates skill effect."
+  },
+  {
+    "id": 30076,
+    "skill_id": 30024,
+    "points": 1,
+    "ability_name": "Charge Master Lv1",
+    "description": "Slightly increases elemental attack and status buildup for charged attacks."
+  },
+  {
+    "id": 30077,
+    "skill_id": 30024,
+    "points": 2,
+    "ability_name": "Charge Master Lv2",
+    "description": "Increases elemental attack and status buildup for charged attacks."
+  },
+  {
+    "id": 30078,
+    "skill_id": 30024,
+    "points": 3,
+    "ability_name": "Charge Master Lv3",
+    "description": "Greatly increases elemental attack and status buildup for charged attacks."
+  },
+  {
+    "id": 30079,
+    "skill_id": 30083,
+    "points": 1,
+    "ability_name": "Charge Up Lv1",
+    "description": "Activates skill effect."
+  },
+  {
+    "id": 30080,
+    "skill_id": 30042,
+    "points": 1,
+    "ability_name": "Cliffhanger Lv1",
+    "description": "Reduces stamina depletion while climbing by 50%."
+  },
+  {
+    "id": 30081,
+    "skill_id": 30013,
+    "points": 1,
+    "ability_name": "Coalescence Lv1",
+    "description": "When active, grants a slight increase to elemental attack and status buildup."
+  },
+  {
+    "id": 30082,
+    "skill_id": 30013,
+    "points": 2,
+    "ability_name": "Coalescence Lv2",
+    "description": "When active, grants an increase to elemental attack and status buildup."
+  },
+  {
+    "id": 30083,
+    "skill_id": 30013,
+    "points": 3,
+    "ability_name": "Coalescence Lv3",
+    "description": "When active, grants a large increase to elemental attack and status buildup."
+  },
+  {
+    "id": 30084,
+    "skill_id": 30014,
+    "points": 1,
+    "ability_name": "Constitution Lv1",
+    "description": "Reduces fixed stamina depletion by 10%."
+  },
+  {
+    "id": 30085,
+    "skill_id": 30014,
+    "points": 2,
+    "ability_name": "Constitution Lv2",
+    "description": "Reduces fixed stamina depletion by 20%."
+  },
+  {
+    "id": 30086,
+    "skill_id": 30014,
+    "points": 3,
+    "ability_name": "Constitution Lv3",
+    "description": "Reduces fixed stamina depletion by 30%."
+  },
+  {
+    "id": 30087,
+    "skill_id": 30014,
+    "points": 4,
+    "ability_name": "Constitution Lv4",
+    "description": "Reduces fixed stamina depletion by 40%."
+  },
+  {
+    "id": 30088,
+    "skill_id": 30014,
+    "points": 5,
+    "ability_name": "Constitution Lv5",
+    "description": "Reduces fixed stamina depletion by 50%."
+  },
+  {
+    "id": 30089,
+    "skill_id": 30152,
+    "points": 1,
+    "ability_name": "Convert Element Lv1",
+    "description": "While active, deals extra dragon damage after dealing enough elemental damage. Slightly increases dragon attack."
+  },
+  {
+    "id": 30090,
+    "skill_id": 30152,
+    "points": 2,
+    "ability_name": "Convert Element Lv2",
+    "description": "Increases additional dragon damage and increases dragon attack."
+  },
+  {
+    "id": 30091,
+    "skill_id": 30152,
+    "points": 3,
+    "ability_name": "Convert Element Lv3",
+    "description": "Further increases additional dragon damage and greatly increases dragon attack."
+  },
+  {
+    "id": 30092,
+    "skill_id": 30165,
+    "points": 1,
+    "ability_name": "Convert Thunder Resistance Lv1",
+    "description": "Activates skill effect."
+  },
+  {
+    "id": 30093,
+    "skill_id": 30181,
+    "points": 1,
+    "ability_name": "Convert Water Resistance Lv1",
+    "description": "Activates skill effect."
+  },
+  {
+    "id": 30094,
+    "skill_id": 30081,
+    "points": 1,
+    "ability_name": "Counterstrike Lv1",
+    "description": "Attack +10 while active."
+  },
+  {
+    "id": 30095,
+    "skill_id": 30081,
+    "points": 2,
+    "ability_name": "Counterstrike Lv2",
+    "description": "Attack +15 while active. Moderately extends effect time."
+  },
+  {
+    "id": 30096,
+    "skill_id": 30081,
+    "points": 3,
+    "ability_name": "Counterstrike Lv3",
+    "description": "Attack +25 while active. Extends effect time."
+  },
+  {
+    "id": 30097,
+    "skill_id": 30159,
+    "points": 1,
+    "ability_name": "Crackling Cornpopper Lv1",
+    "description": "Activates skill effect."
+  },
+  {
+    "id": 30098,
+    "skill_id": 30022,
+    "points": 1,
+    "ability_name": "Critical Boost Lv1",
+    "description": "Increases damage dealt by critical hits to 28%."
+  },
+  {
+    "id": 30099,
+    "skill_id": 30022,
+    "points": 2,
+    "ability_name": "Critical Boost Lv2",
+    "description": "Increases damage dealt by critical hits to 31%."
+  },
+  {
+    "id": 30100,
+    "skill_id": 30022,
+    "points": 3,
+    "ability_name": "Critical Boost Lv3",
+    "description": "Increases damage dealt by critical hits to 34%."
+  },
+  {
+    "id": 30101,
+    "skill_id": 30022,
+    "points": 4,
+    "ability_name": "Critical Boost Lv4",
+    "description": "Increases damage dealt by critical hits to 37%."
+  },
+  {
+    "id": 30102,
+    "skill_id": 30022,
+    "points": 5,
+    "ability_name": "Critical Boost Lv5",
+    "description": "Increases damage dealt by critical hits to 40%."
+  },
+  {
+    "id": 30103,
+    "skill_id": 30103,
+    "points": 1,
+    "ability_name": "Critical Draw Lv1",
+    "description": "Affinity +50%"
+  },
+  {
+    "id": 30104,
+    "skill_id": 30103,
+    "points": 2,
+    "ability_name": "Critical Draw Lv2",
+    "description": "Affinity +75%"
+  },
+  {
+    "id": 30105,
+    "skill_id": 30103,
+    "points": 3,
+    "ability_name": "Critical Draw Lv3",
+    "description": "Affinity +100%"
+  },
+  {
+    "id": 30106,
+    "skill_id": 30082,
+    "points": 1,
+    "ability_name": "Critical Element Lv1",
+    "description": "Slightly increases elemental damage while active."
+  },
+  {
+    "id": 30107,
+    "skill_id": 30082,
+    "points": 2,
+    "ability_name": "Critical Element Lv2",
+    "description": "Increases elemental damage while active."
+  },
+  {
+    "id": 30108,
+    "skill_id": 30082,
+    "points": 3,
+    "ability_name": "Critical Element Lv3",
+    "description": "Greatly increases elemental damage while active."
+  },
+  {
+    "id": 30109,
+    "skill_id": 30003,
+    "points": 1,
+    "ability_name": "Critical Eye Lv1",
+    "description": "Affinity +4%"
+  },
+  {
+    "id": 30110,
+    "skill_id": 30003,
+    "points": 2,
+    "ability_name": "Critical Eye Lv2",
+    "description": "Affinity +8%"
+  },
+  {
+    "id": 30111,
+    "skill_id": 30003,
+    "points": 3,
+    "ability_name": "Critical Eye Lv3",
+    "description": "Affinity +12%"
+  },
+  {
+    "id": 30112,
+    "skill_id": 30003,
+    "points": 4,
+    "ability_name": "Critical Eye Lv4",
+    "description": "Affinity +16%"
+  },
+  {
+    "id": 30113,
+    "skill_id": 30003,
+    "points": 5,
+    "ability_name": "Critical Eye Lv5",
+    "description": "Affinity +20%"
+  },
+  {
+    "id": 30114,
+    "skill_id": 30068,
+    "points": 1,
+    "ability_name": "Critical Status Lv1",
+    "description": "Slightly increases abnormal status effects when landing critical hits."
+  },
+  {
+    "id": 30115,
+    "skill_id": 30068,
+    "points": 2,
+    "ability_name": "Critical Status Lv2",
+    "description": "Increases abnormal status effects when landing critical hits."
+  },
+  {
+    "id": 30116,
+    "skill_id": 30068,
+    "points": 3,
+    "ability_name": "Critical Status Lv3",
+    "description": "Greatly increases abnormal status effects when landing critical hits."
+  },
+  {
+    "id": 30117,
+    "skill_id": 30168,
+    "points": 1,
+    "ability_name": "Darkside Lv1",
+    "description": "Activates skill effect. (Requires activation cooldown, but self-damage still occurs.)"
+  },
+  {
+    "id": 30118,
+    "skill_id": 30118,
+    "points": 1,
+    "ability_name": "Defense Boost Lv1",
+    "description": "Defense +5"
+  },
+  {
+    "id": 30119,
+    "skill_id": 30118,
+    "points": 2,
+    "ability_name": "Defense Boost Lv2",
+    "description": "Defense +10"
+  },
+  {
+    "id": 30120,
+    "skill_id": 30118,
+    "points": 3,
+    "ability_name": "Defense Boost Lv3",
+    "description": "Defense +5% Bonus: +10"
+  },
+  {
+    "id": 30121,
+    "skill_id": 30118,
+    "points": 4,
+    "ability_name": "Defense Boost Lv4",
+    "description": "Defense +5% Bonus: +20 All elemental resistances +3"
+  },
+  {
+    "id": 30122,
+    "skill_id": 30118,
+    "points": 5,
+    "ability_name": "Defense Boost Lv5",
+    "description": "Defense +8% Bonus: +20 All elemental resistances +3"
+  },
+  {
+    "id": 30123,
+    "skill_id": 30118,
+    "points": 6,
+    "ability_name": "Defense Boost Lv6",
+    "description": "Defense +8% Bonus: +35 All elemental resistances +5"
+  },
+  {
+    "id": 30124,
+    "skill_id": 30118,
+    "points": 7,
+    "ability_name": "Defense Boost Lv7",
+    "description": "Defense +10% Bonus: +35 All elemental resistances +5"
+  },
+  {
+    "id": 30125,
+    "skill_id": 30122,
+    "points": 1,
+    "ability_name": "Divine Blessing Lv1",
+    "description": "While active, reduces damage taken by 15%."
+  },
+  {
+    "id": 30126,
+    "skill_id": 30122,
+    "points": 2,
+    "ability_name": "Divine Blessing Lv2",
+    "description": "While active, reduces damage taken by 30%."
+  },
+  {
+    "id": 30127,
+    "skill_id": 30122,
+    "points": 3,
+    "ability_name": "Divine Blessing Lv3",
+    "description": "While active, reduces damage taken by 50%."
+  },
+  {
+    "id": 30128,
+    "skill_id": 30070,
+    "points": 1,
+    "ability_name": "Powerhouse I",
+    "description": "Temporarily grants attack +10 after a successful Power Clash or Offset attack"
+  },
+  {
+    "id": 30129,
+    "skill_id": 30070,
+    "points": 2,
+    "ability_name": "Powerhouse II",
+    "description": "Temporarily grants attack +25 after a successful Power Clash or Offset attack"
+  },
+  {
+    "id": 30130,
+    "skill_id": 30041,
+    "points": 1,
+    "ability_name": "Dragon Attack Lv1",
+    "description": "Dragon attack +40"
+  },
+  {
+    "id": 30131,
+    "skill_id": 30041,
+    "points": 2,
+    "ability_name": "Dragon Attack Lv2",
+    "description": "Dragon attack +10% Bonus: +50"
+  },
+  {
+    "id": 30132,
+    "skill_id": 30041,
+    "points": 3,
+    "ability_name": "Dragon Attack Lv3",
+    "description": "Dragon attack +20% Bonus: +60"
+  },
+  {
+    "id": 30133,
+    "skill_id": 30001,
+    "points": 1,
+    "ability_name": "Dragon Resistance Lv1",
+    "description": "Dragon resistance +6"
+  },
+  {
+    "id": 30134,
+    "skill_id": 30001,
+    "points": 2,
+    "ability_name": "Dragon Resistance Lv2",
+    "description": "Dragon resistance +12"
+  },
+  {
+    "id": 30135,
+    "skill_id": 30001,
+    "points": 3,
+    "ability_name": "Dragon Resistance Lv3",
+    "description": "Dragon resistance +20 Defense +10"
+  },
+  {
+    "id": 30136,
+    "skill_id": 30170,
+    "points": 1,
+    "ability_name": "Dreamspell Boon I",
+    "description": "During Dreamspell, adds special items to quest rewards. (No effect when joining mid-quest.)"
+  },
+  {
+    "id": 30137,
+    "skill_id": 30170,
+    "points": 2,
+    "ability_name": "Dreamspell Boon II",
+    "description": "During Dreamspell, adds special items to quest rewards, and greatly boosts attack and defense."
+  },
+  {
+    "id": 30138,
+    "skill_id": 30080,
+    "points": 1,
+    "ability_name": "Earplugs Lv1",
+    "description": "Reduces the effects of weak monster roars."
+  },
+  {
+    "id": 30139,
+    "skill_id": 30080,
+    "points": 2,
+    "ability_name": "Earplugs Lv2",
+    "description": "Nullifies weak monster roars and reduces the effects of strong monster roars."
+  },
+  {
+    "id": 30140,
+    "skill_id": 30080,
+    "points": 3,
+    "ability_name": "Earplugs Lv3",
+    "description": "Nullifies weak and strong monster roars."
+  },
+  {
+    "id": 30141,
+    "skill_id": 30115,
+    "points": 1,
+    "ability_name": "Burst Boost I",
+    "description": "Extends the duration of the Burst skill and grants attack +8 while Burst is active."
+  },
+  {
+    "id": 30142,
+    "skill_id": 30115,
+    "points": 2,
+    "ability_name": "Burst Boost II",
+    "description": "Further extends the duration of the Burst skill and grants attack +18 while Burst is active."
+  },
+  {
+    "id": 30143,
+    "skill_id": 30133,
+    "points": 1,
+    "ability_name": "Elemental Absorption Lv1",
+    "description": "While active, slightly increases elemental attack, and resistance to element taken at activation by 4."
+  },
+  {
+    "id": 30144,
+    "skill_id": 30133,
+    "points": 2,
+    "ability_name": "Elemental Absorption Lv2",
+    "description": "While active, moderately increases elemental attack, and resistance to element taken at activation by 6."
+  },
+  {
+    "id": 30145,
+    "skill_id": 30133,
+    "points": 3,
+    "ability_name": "Elemental Absorption Lv3",
+    "description": "While active, increases elemental attack, and resistance to element taken at activation by 8."
+  },
+  {
+    "id": 30146,
+    "skill_id": 30114,
+    "points": 1,
+    "ability_name": "Entomologist Lv1",
+    "description": "Activates skill effect."
+  },
+  {
+    "id": 30147,
+    "skill_id": 30102,
+    "points": 1,
+    "ability_name": "Evade Extender Lv1",
+    "description": "Slightly extends evasion distance."
+  },
+  {
+    "id": 30148,
+    "skill_id": 30102,
+    "points": 2,
+    "ability_name": "Evade Extender Lv2",
+    "description": "Extends evasion distance."
+  },
+  {
+    "id": 30149,
+    "skill_id": 30102,
+    "points": 3,
+    "ability_name": "Evade Extender Lv3",
+    "description": "Greatly extends evasion distance."
+  },
+  {
+    "id": 30150,
+    "skill_id": 30077,
+    "points": 1,
+    "ability_name": "Evade Window Lv1",
+    "description": "Very slightly increases invulnerability window."
+  },
+  {
+    "id": 30151,
+    "skill_id": 30077,
+    "points": 2,
+    "ability_name": "Evade Window Lv2",
+    "description": "Slightly increases invulnerability window."
+  },
+  {
+    "id": 30152,
+    "skill_id": 30077,
+    "points": 3,
+    "ability_name": "Evade Window Lv3",
+    "description": "Increases invulnerability window."
+  },
+  {
+    "id": 30153,
+    "skill_id": 30077,
+    "points": 4,
+    "ability_name": "Evade Window Lv4",
+    "description": "Greatly increases invulnerability window."
+  },
+  {
+    "id": 30154,
+    "skill_id": 30077,
+    "points": 5,
+    "ability_name": "Evade Window Lv5",
+    "description": "Massively increases invulnerability window."
+  },
+  {
+    "id": 30155,
+    "skill_id": 30166,
+    "points": 1,
+    "ability_name": "Evading Reload Lv1",
+    "description": "Activates skill effect."
+  },
+  {
+    "id": 30156,
+    "skill_id": 30065,
+    "points": 1,
+    "ability_name": "Exhaust Functionality Lv1",
+    "description": "Lets you use exhaust coatings."
+  },
+  {
+    "id": 30157,
+    "skill_id": 30074,
+    "points": 1,
+    "ability_name": "Carving Master",
+    "description": "Lets you carve one additional time from carcasses during quests. (No effect when joining mid-quest.)"
+  },
+  {
+    "id": 30158,
+    "skill_id": 30050,
+    "points": 1,
+    "ability_name": "Fire Attack Lv1",
+    "description": "Fire attack +40"
+  },
+  {
+    "id": 30159,
+    "skill_id": 30050,
+    "points": 2,
+    "ability_name": "Fire Attack Lv2",
+    "description": "Fire attack +10% Bonus: +50"
+  },
+  {
+    "id": 30160,
+    "skill_id": 30050,
+    "points": 3,
+    "ability_name": "Fire Attack Lv3",
+    "description": "Fire attack +20% Bonus: +60"
+  },
+  {
+    "id": 30161,
+    "skill_id": 30125,
+    "points": 1,
+    "ability_name": "Fire Resistance Lv1",
+    "description": "Fire resistance +6"
+  },
+  {
+    "id": 30162,
+    "skill_id": 30125,
+    "points": 2,
+    "ability_name": "Fire Resistance Lv2",
+    "description": "Fire resistance +12"
+  },
+  {
+    "id": 30163,
+    "skill_id": 30125,
+    "points": 3,
+    "ability_name": "Fire Resistance Lv3",
+    "description": "Fire resistance +20 Defense +10"
+  },
+  {
+    "id": 30164,
+    "skill_id": 30161,
+    "points": 1,
+    "ability_name": "Flamefete Boon I",
+    "description": "During Flamefete, adds special items to quest rewards. (No effect when joining mid-quest.)"
+  },
+  {
+    "id": 30165,
+    "skill_id": 30161,
+    "points": 2,
+    "ability_name": "Flamefete Boon II",
+    "description": "During Flamefete, adds special items to quest rewards, and greatly boosts attack and defense."
+  },
+  {
+    "id": 30166,
+    "skill_id": 30038,
+    "points": 1,
+    "ability_name": "Flayer Lv1",
+    "description": "Makes it ever so slightly easier to inflict wounds. Also deals additional non-elemental damage."
+  },
+  {
+    "id": 30167,
+    "skill_id": 30038,
+    "points": 2,
+    "ability_name": "Flayer Lv2",
+    "description": "Makes it moderately easier to inflict wounds. Also deals slightly more additional non-elemental damage."
+  },
+  {
+    "id": 30168,
+    "skill_id": 30038,
+    "points": 3,
+    "ability_name": "Flayer Lv3",
+    "description": "Makes it easier to inflict wounds. Also deals moderately more additional non-elemental damage."
+  },
+  {
+    "id": 30169,
+    "skill_id": 30038,
+    "points": 4,
+    "ability_name": "Flayer Lv4",
+    "description": "Makes it much easier to inflict wounds. Also deals more additional non-elemental damage."
+  },
+  {
+    "id": 30170,
+    "skill_id": 30038,
+    "points": 5,
+    "ability_name": "Flayer Lv5",
+    "description": "Makes it significantly easier to inflict wounds. Also deals much more additional non-elemental damage."
+  },
+  {
+    "id": 30171,
+    "skill_id": 30019,
+    "points": 1,
+    "ability_name": "Hunter Gatherer",
+    "description": "Increases gathering speed, and prevents knock back when gathering or carving."
+  },
+  {
+    "id": 30172,
+    "skill_id": 30108,
+    "points": 1,
+    "ability_name": "Flinch Free Lv1",
+    "description": "Prevents knockbacks."
+  },
+  {
+    "id": 30173,
+    "skill_id": 30108,
+    "points": 2,
+    "ability_name": "Flinch Free Lv2",
+    "description": "Prevents knockbacks. Tripping is reduced to a knockback instead."
+  },
+  {
+    "id": 30174,
+    "skill_id": 30108,
+    "points": 3,
+    "ability_name": "Flinch Free Lv3",
+    "description": "Prevents knockbacks and tripping."
+  },
+  {
+    "id": 30175,
+    "skill_id": 30060,
+    "points": 1,
+    "ability_name": "Focus Lv1",
+    "description": "Slightly increases gauge fill rate and reduces charge times by 5%."
+  },
+  {
+    "id": 30176,
+    "skill_id": 30060,
+    "points": 2,
+    "ability_name": "Focus Lv2",
+    "description": "Moderately increases gauge fill rate and reduces charge times by 10%."
+  },
+  {
+    "id": 30177,
+    "skill_id": 30060,
+    "points": 3,
+    "ability_name": "Focus Lv3",
+    "description": "Increases gauge fill rate and reduces charge times by 15%."
+  },
+  {
+    "id": 30178,
+    "skill_id": 30075,
+    "points": 1,
+    "ability_name": "Foray Lv1",
+    "description": "Attack +6 against large monsters affected by poison or paralysis."
+  },
+  {
+    "id": 30179,
+    "skill_id": 30075,
+    "points": 2,
+    "ability_name": "Foray Lv2",
+    "description": "Attack +8 and affinity +5% against large monsters affected by poison or paralysis."
+  },
+  {
+    "id": 30180,
+    "skill_id": 30075,
+    "points": 3,
+    "ability_name": "Foray Lv3",
+    "description": "Attack +10 and affinity +10% against large monsters affected by poison or paralysis."
+  },
+  {
+    "id": 30181,
+    "skill_id": 30075,
+    "points": 4,
+    "ability_name": "Foray Lv4",
+    "description": "Attack +12 and affinity +15% against large monsters affected by poison or paralysis."
+  },
+  {
+    "id": 30182,
+    "skill_id": 30075,
+    "points": 5,
+    "ability_name": "Foray Lv5",
+    "description": "Attack +15 and affinity +20% against large monsters affected by poison or paralysis."
+  },
+  {
+    "id": 30183,
+    "skill_id": 30150,
+    "points": 1,
+    "ability_name": "Fortify",
+    "description": "Increases attack and defense after fainting during a quest. (Can be used twice.)"
+  },
+  {
+    "id": 30184,
+    "skill_id": 30111,
+    "points": 1,
+    "ability_name": "Free Meal Lv1",
+    "description": "Activates 10% of the time."
+  },
+  {
+    "id": 30185,
+    "skill_id": 30111,
+    "points": 2,
+    "ability_name": "Free Meal Lv2",
+    "description": "Activates 25% of the time."
+  },
+  {
+    "id": 30186,
+    "skill_id": 30111,
+    "points": 3,
+    "ability_name": "Free Meal Lv3",
+    "description": "Activates 45% of the time."
+  },
+  {
+    "id": 30187,
+    "skill_id": 30011,
+    "points": 1,
+    "ability_name": "Second Wind I",
+    "description": "Grants an additional Stamina Gauge."
+  },
+  {
+    "id": 30188,
+    "skill_id": 30011,
+    "points": 2,
+    "ability_name": "Second Wind II",
+    "description": "Grants an additional long Stamina Gauge."
+  },
+  {
+    "id": 30189,
+    "skill_id": 30098,
+    "points": 1,
+    "ability_name": "Geologist Lv1",
+    "description": "One extra item when gathering from bonepiles."
+  },
+  {
+    "id": 30190,
+    "skill_id": 30098,
+    "points": 2,
+    "ability_name": "Geologist Lv2",
+    "description": "Additionally adds one extra item when gathering special items."
+  },
+  {
+    "id": 30191,
+    "skill_id": 30098,
+    "points": 3,
+    "ability_name": "Geologist Lv3",
+    "description": "Additionally adds one extra item when gathering from mining outcrops."
+  },
+  {
+    "id": 30192,
+    "skill_id": 30073,
+    "points": 1,
+    "ability_name": "Luck",
+    "description": "Increases quest target rewards. (No effect when joining mid-quest.)"
+  },
+  {
+    "id": 30193,
+    "skill_id": 30178,
+    "points": 1,
+    "ability_name": "Mutual Hostility I",
+    "description": "Increases elemental attack when large monsters become enraged."
+  },
+  {
+    "id": 30194,
+    "skill_id": 30178,
+    "points": 2,
+    "ability_name": "Mutual Hostility II",
+    "description": "Level I effect is increased, and you gain a temporary damage barrier. (Barrier reactivates after cooldown.)"
+  },
+  {
+    "id": 30195,
+    "skill_id": 30106,
+    "points": 1,
+    "ability_name": "Black Eclipse I",
+    "description": "Infects you with Frenzy when against large monsters."
+  },
+  {
+    "id": 30196,
+    "skill_id": 30106,
+    "points": 2,
+    "ability_name": "Black Eclipse II",
+    "description": "Infects you with Frenzy and raises attack when against large monsters. Attack power increases upon recovery."
+  },
+  {
+    "id": 30197,
+    "skill_id": 30054,
+    "points": 1,
+    "ability_name": "Flawless Armor I",
+    "description": "Reduces the damage you take by 20% when your health is full."
+  },
+  {
+    "id": 30198,
+    "skill_id": 30054,
+    "points": 2,
+    "ability_name": "Flawless Armor II",
+    "description": "Reduces the damage you take by 35% when your health is full."
+  },
+  {
+    "id": 30199,
+    "skill_id": 30171,
+    "points": 1,
+    "ability_name": "Grillmaster Lv1",
+    "description": "Activates skill effect."
+  },
+  {
+    "id": 30200,
+    "skill_id": 30059,
+    "points": 1,
+    "ability_name": "Guard Lv1",
+    "description": "Slightly decreases the impact of attacks and reduces stamina depletion by 15%."
+  },
+  {
+    "id": 30201,
+    "skill_id": 30059,
+    "points": 2,
+    "ability_name": "Guard Lv2",
+    "description": "Decreases the impact of attacks and reduces stamina depletion by 30%."
+  },
+  {
+    "id": 30202,
+    "skill_id": 30059,
+    "points": 3,
+    "ability_name": "Guard Lv3",
+    "description": "Greatly decreases the impact of attacks and reduces stamina depletion by 50%."
+  },
+  {
+    "id": 30203,
+    "skill_id": 30016,
+    "points": 1,
+    "ability_name": "Guard Up Lv1",
+    "description": "Reduces damage taken by 10%, plus an additional 20% when conditions are met."
+  },
+  {
+    "id": 30204,
+    "skill_id": 30016,
+    "points": 2,
+    "ability_name": "Guard Up Lv2",
+    "description": "Reduces damage taken by 20%, plus an additional 30% when conditions are met."
+  },
+  {
+    "id": 30205,
+    "skill_id": 30016,
+    "points": 3,
+    "ability_name": "Guard Up Lv3",
+    "description": "Reduces damage taken by 30%, plus an additional 50% when conditions are met."
+  },
+  {
+    "id": 30206,
+    "skill_id": 30026,
+    "points": 1,
+    "ability_name": "Decimator I",
+    "description": "Restores a moderate amount of health when destroying a wound on a large monster."
+  },
+  {
+    "id": 30207,
+    "skill_id": 30026,
+    "points": 2,
+    "ability_name": "Decimator II",
+    "description": "Restores health when destroying a wound on a large monster."
+  },
+  {
+    "id": 30208,
+    "skill_id": 30004,
+    "points": 1,
+    "ability_name": "Ward of Wyveria",
+    "description": "Reduces elemental and unique damage while in the Ruins of Wyveria."
+  },
+  {
+    "id": 30209,
+    "skill_id": 30027,
+    "points": 1,
+    "ability_name": "Wylk Burst",
+    "description": "Increases recovery speed of stamina and red gauge when near Wylkrystals."
+  },
+  {
+    "id": 30210,
+    "skill_id": 30119,
+    "points": 1,
+    "ability_name": "Handicraft Lv1",
+    "description": "Weapon sharpness +10"
+  },
+  {
+    "id": 30211,
+    "skill_id": 30119,
+    "points": 2,
+    "ability_name": "Handicraft Lv2",
+    "description": "Weapon sharpness +20"
+  },
+  {
+    "id": 30212,
+    "skill_id": 30119,
+    "points": 3,
+    "ability_name": "Handicraft Lv3",
+    "description": "Weapon sharpness +30"
+  },
+  {
+    "id": 30213,
+    "skill_id": 30119,
+    "points": 4,
+    "ability_name": "Handicraft Lv4",
+    "description": "Weapon sharpness +40"
+  },
+  {
+    "id": 30214,
+    "skill_id": 30119,
+    "points": 5,
+    "ability_name": "Handicraft Lv5",
+    "description": "Weapon sharpness +50"
+  },
+  {
+    "id": 30215,
+    "skill_id": 30087,
+    "points": 1,
+    "ability_name": "Heroics Lv1",
+    "description": "Defense +50 while active."
+  },
+  {
+    "id": 30216,
+    "skill_id": 30087,
+    "points": 2,
+    "ability_name": "Heroics Lv2",
+    "description": "Attack +5% and defense +50 while active."
+  },
+  {
+    "id": 30217,
+    "skill_id": 30087,
+    "points": 3,
+    "ability_name": "Heroics Lv3",
+    "description": "Attack +5% and defense +100 while active."
+  },
+  {
+    "id": 30218,
+    "skill_id": 30087,
+    "points": 4,
+    "ability_name": "Heroics Lv4",
+    "description": "Attack +10% and defense +100 while active."
+  },
+  {
+    "id": 30219,
+    "skill_id": 30087,
+    "points": 5,
+    "ability_name": "Heroics Lv5",
+    "description": "Attack +30% and defense-increasing effects are negated while active."
+  },
+  {
+    "id": 30220,
+    "skill_id": 30029,
+    "points": 1,
+    "ability_name": "Horn Maestro Lv1",
+    "description": "Extends Melody Effect duration and increases the chance of larger heals from healing melodies."
+  },
+  {
+    "id": 30221,
+    "skill_id": 30029,
+    "points": 2,
+    "ability_name": "Horn Maestro Lv2",
+    "description": "Greatly increases the effect duration of hunting horn melodies."
+  },
+  {
+    "id": 30222,
+    "skill_id": 30151,
+    "points": 1,
+    "ability_name": "Hunger Resistance Lv1",
+    "description": "Extends the time until your stamina cap reduces by 50%."
+  },
+  {
+    "id": 30223,
+    "skill_id": 30151,
+    "points": 2,
+    "ability_name": "Hunger Resistance Lv2",
+    "description": "Extends the time until your stamina cap reduces by 100%."
+  },
+  {
+    "id": 30224,
+    "skill_id": 30151,
+    "points": 3,
+    "ability_name": "Hunger Resistance Lv3",
+    "description": "Prevents your stamina cap from decreasing."
+  },
+  {
+    "id": 30225,
+    "skill_id": 30121,
+    "points": 1,
+    "ability_name": "Ice Attack Lv1",
+    "description": "Ice attack +40"
+  },
+  {
+    "id": 30226,
+    "skill_id": 30121,
+    "points": 2,
+    "ability_name": "Ice Attack Lv2",
+    "description": "Ice attack +10% Bonus: +50"
+  },
+  {
+    "id": 30227,
+    "skill_id": 30121,
+    "points": 3,
+    "ability_name": "Ice Attack Lv3",
+    "description": "Ice attack +20% Bonus: +60"
+  },
+  {
+    "id": 30228,
+    "skill_id": 30101,
+    "points": 1,
+    "ability_name": "Ice Resistance Lv1",
+    "description": "Ice resistance +6"
+  },
+  {
+    "id": 30229,
+    "skill_id": 30101,
+    "points": 2,
+    "ability_name": "Ice Resistance Lv2",
+    "description": "Ice resistance +12"
+  },
+  {
+    "id": 30230,
+    "skill_id": 30101,
+    "points": 3,
+    "ability_name": "Ice Resistance Lv3",
+    "description": "Ice resistance +20 Defense +10"
+  },
+  {
+    "id": 30231,
+    "skill_id": 30020,
+    "points": 1,
+    "ability_name": "Forager's Luck",
+    "description": "Increases the chance of finding rare gathering points."
+  },
+  {
+    "id": 30232,
+    "skill_id": 30130,
+    "points": 1,
+    "ability_name": "Intimidator Lv1",
+    "description": "Discourages monsters from engaging you even if you've been spotted."
+  },
+  {
+    "id": 30233,
+    "skill_id": 30130,
+    "points": 2,
+    "ability_name": "Intimidator Lv2",
+    "description": "Highly discourages monsters from engaging you even if you've been spotted."
+  },
+  {
+    "id": 30234,
+    "skill_id": 30130,
+    "points": 3,
+    "ability_name": "Intimidator Lv3",
+    "description": "Prevents monsters from engaging you even if you've been spotted."
+  },
+  {
+    "id": 30235,
+    "skill_id": 30135,
+    "points": 1,
+    "ability_name": "Iron Skin Lv1",
+    "description": "Reduces the duration of defense down by 50%."
+  },
+  {
+    "id": 30236,
+    "skill_id": 30135,
+    "points": 2,
+    "ability_name": "Iron Skin Lv2",
+    "description": "Reduces the duration of defense down by 75%."
+  },
+  {
+    "id": 30237,
+    "skill_id": 30135,
+    "points": 3,
+    "ability_name": "Iron Skin Lv3",
+    "description": "Prevents defense down."
+  },
+  {
+    "id": 30238,
+    "skill_id": 30015,
+    "points": 1,
+    "ability_name": "Item Prolonger Lv1",
+    "description": "Item effect duration +10%"
+  },
+  {
+    "id": 30239,
+    "skill_id": 30015,
+    "points": 2,
+    "ability_name": "Item Prolonger Lv2",
+    "description": "Item effect duration +25%"
+  },
+  {
+    "id": 30240,
+    "skill_id": 30015,
+    "points": 3,
+    "ability_name": "Item Prolonger Lv3",
+    "description": "Item effect duration +50%"
+  },
+  {
+    "id": 30241,
+    "skill_id": 30062,
+    "points": 1,
+    "ability_name": "Binding Counter I",
+    "description": "Increases attack after recovering from webbed status, frostblight, being pinned, or a Power Clash."
+  },
+  {
+    "id": 30242,
+    "skill_id": 30062,
+    "points": 2,
+    "ability_name": "Binding Counter II",
+    "description": "Greatly increases attack after recovering from webbed status, frostblight, being pinned, or a Power Clash."
+  },
+  {
+    "id": 30243,
+    "skill_id": 30076,
+    "points": 1,
+    "ability_name": "Jump Master Lv1",
+    "description": "Negates knockback during jumps."
+  },
+  {
+    "id": 30244,
+    "skill_id": 30142,
+    "points": 1,
+    "ability_name": "Latent Power Lv1",
+    "description": "While active, affinity +10% and reduces stamina depletion by 30%."
+  },
+  {
+    "id": 30245,
+    "skill_id": 30142,
+    "points": 2,
+    "ability_name": "Latent Power Lv2",
+    "description": "While active, affinity +20% and reduces stamina depletion by 30%."
+  },
+  {
+    "id": 30246,
+    "skill_id": 30142,
+    "points": 3,
+    "ability_name": "Latent Power Lv3",
+    "description": "While active, affinity +30% and reduces stamina depletion by 50%."
+  },
+  {
+    "id": 30247,
+    "skill_id": 30142,
+    "points": 4,
+    "ability_name": "Latent Power Lv4",
+    "description": "While active, affinity +40% and reduces stamina depletion by 50%."
+  },
+  {
+    "id": 30248,
+    "skill_id": 30142,
+    "points": 5,
+    "ability_name": "Latent Power Lv5",
+    "description": "While active, affinity +50% and reduces stamina depletion by 50%."
+  },
+  {
+    "id": 30249,
+    "skill_id": 30028,
+    "points": 1,
+    "ability_name": "Leap of Faith Lv1",
+    "description": "Enables skill use."
+  },
+  {
+    "id": 30250,
+    "skill_id": 30162,
+    "points": 1,
+    "ability_name": "Azure Bolt I",
+    "description": "Temporarily increases affinity and can deal extra thunder damage upon buildup. (Excludes some attacks.)"
+  },
+  {
+    "id": 30251,
+    "skill_id": 30162,
+    "points": 2,
+    "ability_name": "Azure Bolt II",
+    "description": "Further increases additional thunder damage and moderately extends the duration affinity is increased."
+  },
+  {
+    "id": 30252,
+    "skill_id": 30109,
+    "points": 1,
+    "ability_name": "Load Shells Lv1",
+    "description": "Increases shell and phial reloading speed."
+  },
+  {
+    "id": 30253,
+    "skill_id": 30109,
+    "points": 2,
+    "ability_name": "Load Shells Lv2",
+    "description": "Increases shell/phial reloading speed. Gunlance loading capacity +1. Charge blade charges 5 phials on yellow gauge."
+  },
+  {
+    "id": 30254,
+    "skill_id": 30010,
+    "points": 1,
+    "ability_name": "Inspiration",
+    "description": "Temporarily increases attack power when using effects like Melody Effects that affect companions in range."
+  },
+  {
+    "id": 30255,
+    "skill_id": 30155,
+    "points": 1,
+    "ability_name": "Resuscitate",
+    "description": "Increases attack when inflicted with ailments."
+  },
+  {
+    "id": 30256,
+    "skill_id": 30131,
+    "points": 1,
+    "ability_name": "Guts (Tenacity)",
+    "description": "Boosts attack and lowers defense but lets you survive one lethal hit. Afterwards, boosts defense and res."
+  },
+  {
+    "id": 30257,
+    "skill_id": 30180,
+    "points": 1,
+    "ability_name": "Lumenhymn Boon I",
+    "description": "During Lumenhymn, adds special items to quest rewards. (No effect when joining mid-quest.)"
+  },
+  {
+    "id": 30258,
+    "skill_id": 30180,
+    "points": 2,
+    "ability_name": "Lumenhymn Boon II",
+    "description": "During Lumenhymn, adds special items to quest rewards, and greatly boosts attack and defense."
+  },
+  {
+    "id": 30259,
+    "skill_id": 30043,
+    "points": 1,
+    "ability_name": "Marathon Runner Lv1",
+    "description": "Reduces continuous stamina depletion by 15%."
+  },
+  {
+    "id": 30260,
+    "skill_id": 30043,
+    "points": 2,
+    "ability_name": "Marathon Runner Lv2",
+    "description": "Reduces continuous stamina depletion by 30%."
+  },
+  {
+    "id": 30261,
+    "skill_id": 30043,
+    "points": 3,
+    "ability_name": "Marathon Runner Lv3",
+    "description": "Reduces continuous stamina depletion by 50%."
+  },
+  {
+    "id": 30262,
+    "skill_id": 30157,
+    "points": 1,
+    "ability_name": "Satsui no Hado",
+    "description": "Increases power of special actions. Drive Impacts can trigger offset attacks. Further increases power of offset attacks."
+  },
+  {
+    "id": 30263,
+    "skill_id": 30124,
+    "points": 1,
+    "ability_name": "Master's Touch Lv1",
+    "description": "Grants an 80% chance of no sharpness loss while active."
+  },
+  {
+    "id": 30264,
+    "skill_id": 30099,
+    "points": 1,
+    "ability_name": "Maximum Might Lv1",
+    "description": "Affinity +10% while active"
+  },
+  {
+    "id": 30265,
+    "skill_id": 30099,
+    "points": 2,
+    "ability_name": "Maximum Might Lv2",
+    "description": "Affinity +20% while active"
+  },
+  {
+    "id": 30266,
+    "skill_id": 30099,
+    "points": 3,
+    "ability_name": "Maximum Might Lv3",
+    "description": "Affinity +30% while active"
+  },
+  {
+    "id": 30267,
+    "skill_id": 30136,
+    "points": 1,
+    "ability_name": "Mind's Eye Lv1",
+    "description": "50% chance of your attacks not being deflected, +10% attack power against hard targets."
+  },
+  {
+    "id": 30268,
+    "skill_id": 30136,
+    "points": 2,
+    "ability_name": "Mind's Eye Lv2",
+    "description": "100% chance of your attacks not being deflected, +15% attack power against hard targets."
+  },
+  {
+    "id": 30269,
+    "skill_id": 30136,
+    "points": 3,
+    "ability_name": "Mind's Eye Lv3",
+    "description": "100% chance of your attacks not being deflected, +30% attack power against hard targets."
+  },
+  {
+    "id": 30270,
+    "skill_id": 30056,
+    "points": 1,
+    "ability_name": "Bubbly Dance I",
+    "description": "Prevents major bubbleblight and grants you minor bubbleblight after evading several times."
+  },
+  {
+    "id": 30271,
+    "skill_id": 30056,
+    "points": 2,
+    "ability_name": "Bubbly Dance II",
+    "description": "In addition to previous effects, also increases evasion while afflicted with bubbleblight."
+  },
+  {
+    "id": 30272,
+    "skill_id": 30052,
+    "points": 1,
+    "ability_name": "Mushroomancer Lv1",
+    "description": "Lets you digest blue mushrooms and toadstools."
+  },
+  {
+    "id": 30273,
+    "skill_id": 30052,
+    "points": 2,
+    "ability_name": "Mushroomancer Lv2",
+    "description": "Additionally lets you digest nitroshrooms and parashrooms."
+  },
+  {
+    "id": 30274,
+    "skill_id": 30052,
+    "points": 3,
+    "ability_name": "Mushroomancer Lv3",
+    "description": "Additionally lets you digest mandragoras, devil's blight, and exciteshrooms."
+  },
+  {
+    "id": 30275,
+    "skill_id": 30148,
+    "points": 1,
+    "ability_name": "Honey Hunter",
+    "description": "Increases the amount of honey you gain from gathering points."
+  },
+  {
+    "id": 30276,
+    "skill_id": 30139,
+    "points": 1,
+    "ability_name": "Fleetfoot",
+    "description": "Increases movement speed while crouching, and makes it easier to escape large monsters' detection."
+  },
+  {
+    "id": 30277,
+    "skill_id": 30006,
+    "points": 1,
+    "ability_name": "Normal Shots Lv1",
+    "description": "Slightly increases the power of specified ammo and arrows."
+  },
+  {
+    "id": 30278,
+    "skill_id": 30149,
+    "points": 1,
+    "ability_name": "Bad Blood I",
+    "description": "Deals moderate additional damage while the Resentment skill is active."
+  },
+  {
+    "id": 30279,
+    "skill_id": 30149,
+    "points": 2,
+    "ability_name": "Bad Blood II",
+    "description": "Deals additional damage while the Resentment skill is active."
+  },
+  {
+    "id": 30280,
+    "skill_id": 30066,
+    "points": 1,
+    "ability_name": "Offensive Guard Lv1",
+    "description": "Attack +5% while active."
+  },
+  {
+    "id": 30281,
+    "skill_id": 30066,
+    "points": 2,
+    "ability_name": "Offensive Guard Lv2",
+    "description": "Attack +10% while active."
+  },
+  {
+    "id": 30282,
+    "skill_id": 30066,
+    "points": 3,
+    "ability_name": "Offensive Guard Lv3",
+    "description": "Attack +15% while active."
+  },
+  {
+    "id": 30283,
+    "skill_id": 30173,
+    "points": 1,
+    "ability_name": "Resonance I",
+    "description": "(When quest starts) Local and Remote Resonance alternate, increasing attack or affinity when conditions are met."
+  },
+  {
+    "id": 30284,
+    "skill_id": 30173,
+    "points": 2,
+    "ability_name": "Resonance II",
+    "description": "Increases the effect of Resonance I, and the effect of the weapon skill Synthetic Shield or the effect of Synergy."
+  },
+  {
+    "id": 30285,
+    "skill_id": 30140,
+    "points": 1,
+    "ability_name": "Opening Shot Lv1",
+    "description": "Moderately increases bowgun reload speed and attack power of ammo when certain conditions are met."
+  },
+  {
+    "id": 30286,
+    "skill_id": 30140,
+    "points": 2,
+    "ability_name": "Opening Shot Lv2",
+    "description": "Increases bowgun reload speed and attack power of ammo when certain conditions are met."
+  },
+  {
+    "id": 30287,
+    "skill_id": 30140,
+    "points": 3,
+    "ability_name": "Opening Shot Lv3",
+    "description": "Greatly increases bowgun reload speed and attack power of ammo when certain conditions are met."
+  },
+  {
+    "id": 30288,
+    "skill_id": 30143,
+    "points": 1,
+    "ability_name": "Outdoorsman Lv1",
+    "description": "Improves fishing, grilling, and transporting abilities."
+  },
+  {
+    "id": 30289,
+    "skill_id": 30145,
+    "points": 1,
+    "ability_name": "Palico Rally Lv1",
+    "description": "Increases Palico attack power and defense by 5%."
+  },
+  {
+    "id": 30290,
+    "skill_id": 30145,
+    "points": 2,
+    "ability_name": "Palico Rally Lv2",
+    "description": "Increases Palico attack power and defense by 10%."
+  },
+  {
+    "id": 30291,
+    "skill_id": 30145,
+    "points": 3,
+    "ability_name": "Palico Rally Lv3",
+    "description": "Increases Palico attack power and defense by 15%."
+  },
+  {
+    "id": 30292,
+    "skill_id": 30145,
+    "points": 4,
+    "ability_name": "Palico Rally Lv4",
+    "description": "Increases Palico attack power and defense by 20%."
+  },
+  {
+    "id": 30293,
+    "skill_id": 30145,
+    "points": 5,
+    "ability_name": "Palico Rally Lv5",
+    "description": "Increases Palico attack power and defense by 25%."
+  },
+  {
+    "id": 30294,
+    "skill_id": 30044,
+    "points": 1,
+    "ability_name": "Para Functionality Lv1",
+    "description": "Lets you use paralysis coatings."
+  },
+  {
+    "id": 30295,
+    "skill_id": 30009,
+    "points": 1,
+    "ability_name": "Paralysis Attack Lv1",
+    "description": "Paralysis buildup +5% Bonus: +10"
+  },
+  {
+    "id": 30296,
+    "skill_id": 30009,
+    "points": 2,
+    "ability_name": "Paralysis Attack Lv2",
+    "description": "Paralysis buildup +10% Bonus: +20"
+  },
+  {
+    "id": 30297,
+    "skill_id": 30009,
+    "points": 3,
+    "ability_name": "Paralysis Attack Lv3",
+    "description": "Paralysis buildup +20% Bonus: +50"
+  },
+  {
+    "id": 30298,
+    "skill_id": 30092,
+    "points": 1,
+    "ability_name": "Paralysis Resistance Lv1",
+    "description": "Reduces the duration of paralysis by 30%."
+  },
+  {
+    "id": 30299,
+    "skill_id": 30092,
+    "points": 2,
+    "ability_name": "Paralysis Resistance Lv2",
+    "description": "Reduces the duration of paralysis by 60%."
+  },
+  {
+    "id": 30300,
+    "skill_id": 30092,
+    "points": 3,
+    "ability_name": "Paralysis Resistance Lv3",
+    "description": "Prevents paralysis."
+  },
+  {
+    "id": 30301,
+    "skill_id": 30129,
+    "points": 1,
+    "ability_name": "Partbreaker Lv1",
+    "description": "Increases part damage and damage dealt when conditions are met by 10%."
+  },
+  {
+    "id": 30302,
+    "skill_id": 30129,
+    "points": 2,
+    "ability_name": "Partbreaker Lv2",
+    "description": "Increases part damage and damage dealt when conditions are met by 20%."
+  },
+  {
+    "id": 30303,
+    "skill_id": 30129,
+    "points": 3,
+    "ability_name": "Partbreaker Lv3",
+    "description": "Increases part damage and damage dealt when conditions are met by 30%."
+  },
+  {
+    "id": 30304,
+    "skill_id": 30154,
+    "points": 1,
+    "ability_name": "Peak Performance Lv1",
+    "description": "Attack +3 while active."
+  },
+  {
+    "id": 30305,
+    "skill_id": 30154,
+    "points": 2,
+    "ability_name": "Peak Performance Lv2",
+    "description": "Attack +6 while active."
+  },
+  {
+    "id": 30306,
+    "skill_id": 30154,
+    "points": 3,
+    "ability_name": "Peak Performance Lv3",
+    "description": "Attack +10 while active."
+  },
+  {
+    "id": 30307,
+    "skill_id": 30154,
+    "points": 4,
+    "ability_name": "Peak Performance Lv4",
+    "description": "Attack +15 while active."
+  },
+  {
+    "id": 30308,
+    "skill_id": 30154,
+    "points": 5,
+    "ability_name": "Peak Performance Lv5",
+    "description": "Attack +20 while active."
+  },
+  {
+    "id": 30309,
+    "skill_id": 30094,
+    "points": 1,
+    "ability_name": "Piercing Shots Lv1",
+    "description": "Slightly increases the power of specified ammo and arrows."
+  },
+  {
+    "id": 30310,
+    "skill_id": 30012,
+    "points": 1,
+    "ability_name": "Poison Attack Lv1",
+    "description": "Poison buildup +5% Bonus: +10"
+  },
+  {
+    "id": 30311,
+    "skill_id": 30012,
+    "points": 2,
+    "ability_name": "Poison Attack Lv2",
+    "description": "Poison buildup +10% Bonus: +20"
+  },
+  {
+    "id": 30312,
+    "skill_id": 30012,
+    "points": 3,
+    "ability_name": "Poison Attack Lv3",
+    "description": "Poison buildup +20% Bonus: +50"
+  },
+  {
+    "id": 30313,
+    "skill_id": 30021,
+    "points": 1,
+    "ability_name": "Poison Duration Up Lv1",
+    "description": "Extends the duration of your poison's effect by 20%."
+  },
+  {
+    "id": 30314,
+    "skill_id": 30116,
+    "points": 1,
+    "ability_name": "Poison Functionality Lv1",
+    "description": "Lets you use poison coatings."
+  },
+  {
+    "id": 30315,
+    "skill_id": 30128,
+    "points": 1,
+    "ability_name": "Poison Resistance Lv1",
+    "description": "Reduces the number of times you take poison damage."
+  },
+  {
+    "id": 30316,
+    "skill_id": 30128,
+    "points": 2,
+    "ability_name": "Poison Resistance Lv2",
+    "description": "Greatly reduces the number of times you take poison damage."
+  },
+  {
+    "id": 30317,
+    "skill_id": 30128,
+    "points": 3,
+    "ability_name": "Poison Resistance Lv3",
+    "description": "Prevents poison."
+  },
+  {
+    "id": 30318,
+    "skill_id": 30104,
+    "points": 1,
+    "ability_name": "Power Prolonger Lv1",
+    "description": "Moderately boosts the duration weapons are powered up."
+  },
+  {
+    "id": 30319,
+    "skill_id": 30104,
+    "points": 2,
+    "ability_name": "Power Prolonger Lv2",
+    "description": "Boosts the duration weapons are powered up."
+  },
+  {
+    "id": 30320,
+    "skill_id": 30104,
+    "points": 3,
+    "ability_name": "Power Prolonger Lv3",
+    "description": "Greatly boosts the duration weapons are powered up."
+  },
+  {
+    "id": 30321,
+    "skill_id": 30164,
+    "points": 1,
+    "ability_name": "Power Stone Lv1",
+    "description": "Mining particularly rare materials greatly increases attack. (Attack increase has a maximum limit.)"
+  },
+  {
+    "id": 30322,
+    "skill_id": 30134,
+    "points": 1,
+    "ability_name": "Protective Polish Lv1",
+    "description": "Grants no sharpness loss for 30 seconds after activation."
+  },
+  {
+    "id": 30323,
+    "skill_id": 30134,
+    "points": 2,
+    "ability_name": "Protective Polish Lv2",
+    "description": "Grants no sharpness loss for 60 seconds after activation."
+  },
+  {
+    "id": 30324,
+    "skill_id": 30134,
+    "points": 3,
+    "ability_name": "Protective Polish Lv3",
+    "description": "Grants no sharpness loss for 90 seconds after activation."
+  },
+  {
+    "id": 30325,
+    "skill_id": 30008,
+    "points": 1,
+    "ability_name": "Punishing Draw Lv1",
+    "description": "Draw attacks deal a small amount of stun damage and gain attack +3."
+  },
+  {
+    "id": 30326,
+    "skill_id": 30008,
+    "points": 2,
+    "ability_name": "Punishing Draw Lv2",
+    "description": "Draw attacks deal a medium amount of stun damage and gain attack +5."
+  },
+  {
+    "id": 30327,
+    "skill_id": 30008,
+    "points": 3,
+    "ability_name": "Punishing Draw Lv3",
+    "description": "Draw attacks deal a large amount of stun damage and gain attack +7."
+  },
+  {
+    "id": 30328,
+    "skill_id": 30032,
+    "points": 1,
+    "ability_name": "Quick Sheathe Lv1",
+    "description": "Slightly increases sheathing speed."
+  },
+  {
+    "id": 30329,
+    "skill_id": 30032,
+    "points": 2,
+    "ability_name": "Quick Sheathe Lv2",
+    "description": "Increases sheathing speed."
+  },
+  {
+    "id": 30330,
+    "skill_id": 30032,
+    "points": 3,
+    "ability_name": "Quick Sheathe Lv3",
+    "description": "Greatly increases sheathing speed."
+  },
+  {
+    "id": 30331,
+    "skill_id": 30023,
+    "points": 1,
+    "ability_name": "Rapid Fire Up Lv1",
+    "description": "Rapid fire power +5%"
+  },
+  {
+    "id": 30332,
+    "skill_id": 30007,
+    "points": 1,
+    "ability_name": "Rapid Morph Lv1",
+    "description": "Speed +10%"
+  },
+  {
+    "id": 30333,
+    "skill_id": 30007,
+    "points": 2,
+    "ability_name": "Rapid Morph Lv2",
+    "description": "Speed +20% Morph attack power +10%"
+  },
+  {
+    "id": 30334,
+    "skill_id": 30007,
+    "points": 3,
+    "ability_name": "Rapid Morph Lv3",
+    "description": "Speed +30% Morph attack power +20%"
+  },
+  {
+    "id": 30335,
+    "skill_id": 30071,
+    "points": 1,
+    "ability_name": "Scorcher I",
+    "description": "Chance to deal additional fire damage after landing an attack."
+  },
+  {
+    "id": 30336,
+    "skill_id": 30071,
+    "points": 2,
+    "ability_name": "Scorcher II",
+    "description": "Increases additional fire damage after landing an attack."
+  },
+  {
+    "id": 30337,
+    "skill_id": 30117,
+    "points": 1,
+    "ability_name": "Razor Sharp Lv1",
+    "description": "Grants a 10% chance of no sharpness loss."
+  },
+  {
+    "id": 30338,
+    "skill_id": 30117,
+    "points": 2,
+    "ability_name": "Razor Sharp Lv2",
+    "description": "Grants a 25% chance of no sharpness loss."
+  },
+  {
+    "id": 30339,
+    "skill_id": 30117,
+    "points": 3,
+    "ability_name": "Razor Sharp Lv3",
+    "description": "Grants a 50% chance of no sharpness loss."
+  },
+  {
+    "id": 30340,
+    "skill_id": 30031,
+    "points": 1,
+    "ability_name": "Recovery Speed Lv1",
+    "description": "Doubles the speed at which you heal recoverable damage."
+  },
+  {
+    "id": 30341,
+    "skill_id": 30031,
+    "points": 2,
+    "ability_name": "Recovery Speed Lv2",
+    "description": "Triples the speed at which you heal recoverable damage."
+  },
+  {
+    "id": 30342,
+    "skill_id": 30031,
+    "points": 3,
+    "ability_name": "Recovery Speed Lv3",
+    "description": "Quadruples the speed at which you heal recoverable damage."
+  },
+  {
+    "id": 30343,
+    "skill_id": 30030,
+    "points": 1,
+    "ability_name": "Recovery Up Lv1",
+    "description": "Slightly increases recovery."
+  },
+  {
+    "id": 30344,
+    "skill_id": 30030,
+    "points": 2,
+    "ability_name": "Recovery Up Lv2",
+    "description": "Moderately increases recovery."
+  },
+  {
+    "id": 30345,
+    "skill_id": 30030,
+    "points": 3,
+    "ability_name": "Recovery Up Lv3",
+    "description": "Greatly increases recovery."
+  },
+  {
+    "id": 30346,
+    "skill_id": 30123,
+    "points": 1,
+    "ability_name": "Resentment Lv1",
+    "description": "Attack +5 while active."
+  },
+  {
+    "id": 30347,
+    "skill_id": 30123,
+    "points": 2,
+    "ability_name": "Resentment Lv2",
+    "description": "Attack +10 while active."
+  },
+  {
+    "id": 30348,
+    "skill_id": 30123,
+    "points": 3,
+    "ability_name": "Resentment Lv3",
+    "description": "Attack +15 while active."
+  },
+  {
+    "id": 30349,
+    "skill_id": 30123,
+    "points": 4,
+    "ability_name": "Resentment Lv4",
+    "description": "Attack +20 while active."
+  },
+  {
+    "id": 30350,
+    "skill_id": 30123,
+    "points": 5,
+    "ability_name": "Resentment Lv5",
+    "description": "Attack +25 while active."
+  },
+  {
+    "id": 30351,
+    "skill_id": 30093,
+    "points": 1,
+    "ability_name": "Thunderous Roar I",
+    "description": "Moderately extends the activation time of the Latent Power skill."
+  },
+  {
+    "id": 30352,
+    "skill_id": 30093,
+    "points": 2,
+    "ability_name": "Thunderous Roar II",
+    "description": "Extends the activation time of the Latent Power skill."
+  },
+  {
+    "id": 30353,
+    "skill_id": 30158,
+    "points": 1,
+    "ability_name": "Rice Ball Lv1",
+    "description": "Activates skill effect."
+  },
+  {
+    "id": 30354,
+    "skill_id": 30017,
+    "points": 1,
+    "ability_name": "Adrenaline",
+    "description": "Temporarily reduces stamina depletion when health is at 40% or lower."
+  },
+  {
+    "id": 30355,
+    "skill_id": 30132,
+    "points": 1,
+    "ability_name": "Master Mounter",
+    "description": "Makes it easier to mount monsters and to wound them once mounted."
+  },
+  {
+    "id": 30356,
+    "skill_id": 30138,
+    "points": 1,
+    "ability_name": "Self-Improvement Lv1",
+    "description": "Activates skill effect."
+  },
+  {
+    "id": 30357,
+    "skill_id": 30167,
+    "points": 1,
+    "ability_name": "Razor's Edge I",
+    "description": "Extends the duration of Adrenaline Rush. If triggered again while the skill is active, extends the effect duration once."
+  },
+  {
+    "id": 30358,
+    "skill_id": 30167,
+    "points": 2,
+    "ability_name": "Razor's Edge II",
+    "description": "Additionally, if triggered again while the skill is active, further increases attack."
+  },
+  {
+    "id": 30359,
+    "skill_id": 30182,
+    "points": 1,
+    "ability_name": "Shattering Reflection Lv1",
+    "description": "Activates skill effect."
+  },
+  {
+    "id": 30360,
+    "skill_id": 30045,
+    "points": 1,
+    "ability_name": "Shock Absorber Lv1",
+    "description": "Activates skill effect."
+  },
+  {
+    "id": 30361,
+    "skill_id": 30078,
+    "points": 1,
+    "ability_name": "Sleep Attack Lv1",
+    "description": "Sleep buildup +5% Bonus: +10"
+  },
+  {
+    "id": 30362,
+    "skill_id": 30078,
+    "points": 2,
+    "ability_name": "Sleep Attack Lv2",
+    "description": "Sleep buildup +10% Bonus: +20"
+  },
+  {
+    "id": 30363,
+    "skill_id": 30078,
+    "points": 3,
+    "ability_name": "Sleep Attack Lv3",
+    "description": "Sleep buildup +20% Bonus: +50"
+  },
+  {
+    "id": 30364,
+    "skill_id": 30079,
+    "points": 1,
+    "ability_name": "Sleep Functionality Lv1",
+    "description": "Lets you use sleep coatings."
+  },
+  {
+    "id": 30365,
+    "skill_id": 30064,
+    "points": 1,
+    "ability_name": "Sleep Resistance Lv1",
+    "description": "Reduces the duration of sleep by 30%."
+  },
+  {
+    "id": 30366,
+    "skill_id": 30064,
+    "points": 2,
+    "ability_name": "Sleep Resistance Lv2",
+    "description": "Reduces the duration of sleep by 60%."
+  },
+  {
+    "id": 30367,
+    "skill_id": 30064,
+    "points": 3,
+    "ability_name": "Sleep Resistance Lv3",
+    "description": "Prevents sleep."
+  },
+  {
+    "id": 30368,
+    "skill_id": 30039,
+    "points": 1,
+    "ability_name": "Slicked Blade Lv1",
+    "description": "Affinity +3% when wet, and +7% while afflicted with bubbleblight."
+  },
+  {
+    "id": 30369,
+    "skill_id": 30039,
+    "points": 2,
+    "ability_name": "Slicked Blade Lv2",
+    "description": "Affinity +6% when wet, and +14% while afflicted with bubbleblight."
+  },
+  {
+    "id": 30370,
+    "skill_id": 30039,
+    "points": 3,
+    "ability_name": "Slicked Blade Lv3",
+    "description": "Affinity +9% when wet, and +21% while afflicted with bubbleblight."
+  },
+  {
+    "id": 30371,
+    "skill_id": 30036,
+    "points": 1,
+    "ability_name": "Slugger Lv1",
+    "description": "Stun power +20%"
+  },
+  {
+    "id": 30372,
+    "skill_id": 30036,
+    "points": 2,
+    "ability_name": "Slugger Lv2",
+    "description": "Stun power +30%"
+  },
+  {
+    "id": 30373,
+    "skill_id": 30036,
+    "points": 3,
+    "ability_name": "Slugger Lv3",
+    "description": "Stun power +40%"
+  },
+  {
+    "id": 30374,
+    "skill_id": 30172,
+    "points": 1,
+    "ability_name": "Dark Arts",
+    "description": "Having recoverable damage increases elemental attack, and some great sword Lvl 3 charged slashes are strengthened."
+  },
+  {
+    "id": 30375,
+    "skill_id": 30172,
+    "points": 2,
+    "ability_name": "The Blackest Night",
+    "description": "Allows you to perform the special action: The Blackest Night."
+  },
+  {
+    "id": 30376,
+    "skill_id": 30069,
+    "points": 1,
+    "ability_name": "Special Ammo Boost Lv1",
+    "description": "Moderately increases the power of specified ammo and arrows."
+  },
+  {
+    "id": 30377,
+    "skill_id": 30069,
+    "points": 2,
+    "ability_name": "Special Ammo Boost Lv2",
+    "description": "Increases the power of specified ammo and arrows."
+  },
+  {
+    "id": 30378,
+    "skill_id": 30100,
+    "points": 1,
+    "ability_name": "Speed Eating Lv1",
+    "description": "Moderately increases eating speed."
+  },
+  {
+    "id": 30379,
+    "skill_id": 30100,
+    "points": 2,
+    "ability_name": "Speed Eating Lv2",
+    "description": "Increases eating speed."
+  },
+  {
+    "id": 30380,
+    "skill_id": 30100,
+    "points": 3,
+    "ability_name": "Speed Eating Lv3",
+    "description": "Greatly increases eating speed."
+  },
+  {
+    "id": 30381,
+    "skill_id": 30126,
+    "points": 1,
+    "ability_name": "Speed Sharpening Lv1",
+    "description": "Removes one cycle from the sharpening process."
+  },
+  {
+    "id": 30382,
+    "skill_id": 30126,
+    "points": 2,
+    "ability_name": "Speed Sharpening Lv2",
+    "description": "Removes two cycles from the sharpening process."
+  },
+  {
+    "id": 30383,
+    "skill_id": 30002,
+    "points": 1,
+    "ability_name": "Spread/Power Shots Lv1",
+    "description": "Slightly increases the power of specified ammo and arrows."
+  },
+  {
+    "id": 30384,
+    "skill_id": 30058,
+    "points": 1,
+    "ability_name": "Stamina Surge Lv1",
+    "description": "Stamina recovery speed +10%"
+  },
+  {
+    "id": 30385,
+    "skill_id": 30058,
+    "points": 2,
+    "ability_name": "Stamina Surge Lv2",
+    "description": "Stamina recovery speed +30%"
+  },
+  {
+    "id": 30386,
+    "skill_id": 30058,
+    "points": 3,
+    "ability_name": "Stamina Surge Lv3",
+    "description": "Stamina recovery speed +50%"
+  },
+  {
+    "id": 30387,
+    "skill_id": 30141,
+    "points": 1,
+    "ability_name": "Stamina Thief Lv1",
+    "description": "Exhaust power +20%"
+  },
+  {
+    "id": 30388,
+    "skill_id": 30141,
+    "points": 2,
+    "ability_name": "Stamina Thief Lv2",
+    "description": "Exhaust power +30%"
+  },
+  {
+    "id": 30389,
+    "skill_id": 30141,
+    "points": 3,
+    "ability_name": "Stamina Thief Lv3",
+    "description": "Exhaust power +40%"
+  },
+  {
+    "id": 30390,
+    "skill_id": 30055,
+    "points": 1,
+    "ability_name": "Stench Resistance Lv1",
+    "description": "Reduces stench duration by 50%."
+  },
+  {
+    "id": 30391,
+    "skill_id": 30055,
+    "points": 2,
+    "ability_name": "Stench Resistance Lv2",
+    "description": "Prevents stench."
+  },
+  {
+    "id": 30392,
+    "skill_id": 30105,
+    "points": 1,
+    "ability_name": "Stun Resistance Lv1",
+    "description": "Reduces the duration of stun by 30%."
+  },
+  {
+    "id": 30393,
+    "skill_id": 30105,
+    "points": 2,
+    "ability_name": "Stun Resistance Lv2",
+    "description": "Reduces the duration of stun by 60%."
+  },
+  {
+    "id": 30394,
+    "skill_id": 30105,
+    "points": 3,
+    "ability_name": "Stun Resistance Lv3",
+    "description": "Prevents stun."
+  },
+  {
+    "id": 30395,
+    "skill_id": 30048,
+    "points": 1,
+    "ability_name": "Survival Expert Lv1",
+    "description": "Restores 50 health."
+  },
+  {
+    "id": 30396,
+    "skill_id": 30048,
+    "points": 2,
+    "ability_name": "Survival Expert Lv2",
+    "description": "Restores 80 health."
+  },
+  {
+    "id": 30397,
+    "skill_id": 30048,
+    "points": 3,
+    "ability_name": "Survival Expert Lv3",
+    "description": "Restores 100 health."
+  },
+  {
+    "id": 30398,
+    "skill_id": 30174,
+    "points": 1,
+    "ability_name": "Synergy Lv1",
+    "description": "Activates skill effect."
+  },
+  {
+    "id": 30399,
+    "skill_id": 30169,
+    "points": 1,
+    "ability_name": "Synthetic Shield Lv1",
+    "description": "Activates skill effect."
+  },
+  {
+    "id": 30400,
+    "skill_id": 30137,
+    "points": 1,
+    "ability_name": "Tetrad Shot Lv1",
+    "description": "Slightly increases the attack power and affinity of ammo after certain conditions are met."
+  },
+  {
+    "id": 30401,
+    "skill_id": 30137,
+    "points": 2,
+    "ability_name": "Tetrad Shot Lv2",
+    "description": "Moderately increases attack power and affinity of ammo after certain conditions are met."
+  },
+  {
+    "id": 30402,
+    "skill_id": 30137,
+    "points": 3,
+    "ability_name": "Tetrad Shot Lv3",
+    "description": "Increases the attack power and affinity of ammo after certain conditions are met."
+  },
+  {
+    "id": 30403,
+    "skill_id": 30127,
+    "points": 1,
+    "ability_name": "Thunder Attack Lv1",
+    "description": "Thunder attack +40"
+  },
+  {
+    "id": 30404,
+    "skill_id": 30127,
+    "points": 2,
+    "ability_name": "Thunder Attack Lv2",
+    "description": "Thunder attack +10% Bonus: +50"
+  },
+  {
+    "id": 30405,
+    "skill_id": 30127,
+    "points": 3,
+    "ability_name": "Thunder Attack Lv3",
+    "description": "Thunder attack +20% Bonus: +60"
+  },
+  {
+    "id": 30406,
+    "skill_id": 30156,
+    "points": 1,
+    "ability_name": "Thunder Resistance Lv1",
+    "description": "Thunder resistance +6"
+  },
+  {
+    "id": 30407,
+    "skill_id": 30156,
+    "points": 2,
+    "ability_name": "Thunder Resistance Lv2",
+    "description": "Thunder resistance +12"
+  },
+  {
+    "id": 30408,
+    "skill_id": 30156,
+    "points": 3,
+    "ability_name": "Thunder Resistance Lv3",
+    "description": "Thunder resistance +20 Defense +10"
+  },
+  {
+    "id": 30409,
+    "skill_id": 30090,
+    "points": 1,
+    "ability_name": "Tool Specialist Lv1",
+    "description": "Shortens recharge time by 10%."
+  },
+  {
+    "id": 30410,
+    "skill_id": 30090,
+    "points": 2,
+    "ability_name": "Tool Specialist Lv2",
+    "description": "Shortens recharge time by 20%."
+  },
+  {
+    "id": 30411,
+    "skill_id": 30090,
+    "points": 3,
+    "ability_name": "Tool Specialist Lv3",
+    "description": "Shortens recharge time by 30%."
+  },
+  {
+    "id": 30412,
+    "skill_id": 30090,
+    "points": 4,
+    "ability_name": "Tool Specialist Lv4",
+    "description": "Shortens recharge time by 40%."
+  },
+  {
+    "id": 30413,
+    "skill_id": 30090,
+    "points": 5,
+    "ability_name": "Tool Specialist Lv5",
+    "description": "Shortens recharge time by 50%."
+  },
+  {
+    "id": 30414,
+    "skill_id": 30046,
+    "points": 1,
+    "ability_name": "Tremor Resistance Lv1",
+    "description": "Nullifies very minor ground tremors and halves effects of minor ground tremors."
+  },
+  {
+    "id": 30415,
+    "skill_id": 30046,
+    "points": 2,
+    "ability_name": "Tremor Resistance Lv2",
+    "description": "Nullifies up to minor ground tremors and greatly reduces the effects of major ground tremors."
+  },
+  {
+    "id": 30416,
+    "skill_id": 30046,
+    "points": 3,
+    "ability_name": "Tremor Resistance Lv3",
+    "description": "Nullifies all ground tremors."
+  },
+  {
+    "id": 30417,
+    "skill_id": 30153,
+    "points": 1,
+    "ability_name": "Protective Veil I",
+    "description": "Increases defense temporarily when using a specialized tool."
+  },
+  {
+    "id": 30418,
+    "skill_id": 30153,
+    "points": 2,
+    "ability_name": "Protective Veil II",
+    "description": "Greatly increases defense and resistance temporarily when using a specialized tool."
+  },
+  {
+    "id": 30419,
+    "skill_id": 30091,
+    "points": 1,
+    "ability_name": "Water Attack Lv1",
+    "description": "Water attack +40"
+  },
+  {
+    "id": 30420,
+    "skill_id": 30091,
+    "points": 2,
+    "ability_name": "Water Attack Lv2",
+    "description": "Water attack +10% Bonus: +50"
+  },
+  {
+    "id": 30421,
+    "skill_id": 30091,
+    "points": 3,
+    "ability_name": "Water Attack Lv3",
+    "description": "Water attack +20% Bonus: +60"
+  },
+  {
+    "id": 30422,
+    "skill_id": 30084,
+    "points": 1,
+    "ability_name": "Water Resistance Lv1",
+    "description": "Water resistance +6"
+  },
+  {
+    "id": 30423,
+    "skill_id": 30084,
+    "points": 2,
+    "ability_name": "Water Resistance Lv2",
+    "description": "Water resistance +12"
+  },
+  {
+    "id": 30424,
+    "skill_id": 30084,
+    "points": 3,
+    "ability_name": "Water Resistance Lv3",
+    "description": "Water resistance +20 Defense +10"
+  },
+  {
+    "id": 30425,
+    "skill_id": 30057,
+    "points": 1,
+    "ability_name": "Weakness Exploit Lv1",
+    "description": "Attacks that hit weak points gain affinity +5%, with an extra 3% on wounds."
+  },
+  {
+    "id": 30426,
+    "skill_id": 30057,
+    "points": 2,
+    "ability_name": "Weakness Exploit Lv2",
+    "description": "Attacks that hit weak points gain affinity +10%, with an extra 5% on wounds."
+  },
+  {
+    "id": 30427,
+    "skill_id": 30057,
+    "points": 3,
+    "ability_name": "Weakness Exploit Lv3",
+    "description": "Attacks that hit weak points gain affinity +15%, with an extra 10% on wounds."
+  },
+  {
+    "id": 30428,
+    "skill_id": 30057,
+    "points": 4,
+    "ability_name": "Weakness Exploit Lv4",
+    "description": "Attacks that hit weak points have 20% increased affinity, with an extra 15% on wounds."
+  },
+  {
+    "id": 30429,
+    "skill_id": 30057,
+    "points": 5,
+    "ability_name": "Weakness Exploit Lv5",
+    "description": "Attacks that hit weak points have 30% increased affinity, with an extra 20% on wounds."
+  },
+  {
+    "id": 30430,
+    "skill_id": 30096,
+    "points": 1,
+    "ability_name": "Whiteflame Torrent Lv1",
+    "description": "Activates skill effect. (When used with Scorcher, does not stack but adds extra fire damage.)"
+  },
+  {
+    "id": 30431,
+    "skill_id": 30113,
+    "points": 1,
+    "ability_name": "Wide-Range Lv1",
+    "description": "Items affect nearby allies with 33% of their efficacy."
+  },
+  {
+    "id": 30432,
+    "skill_id": 30113,
+    "points": 2,
+    "ability_name": "Wide-Range Lv2",
+    "description": "Items affect nearby allies in a wider radius with 33% of their efficacy."
+  },
+  {
+    "id": 30433,
+    "skill_id": 30113,
+    "points": 3,
+    "ability_name": "Wide-Range Lv3",
+    "description": "Items affect nearby allies in a wider radius with 66% of their efficacy."
+  },
+  {
+    "id": 30434,
+    "skill_id": 30113,
+    "points": 4,
+    "ability_name": "Wide-Range Lv4",
+    "description": "Items affect nearby allies in a much wider radius with 66% of their efficacy."
+  },
+  {
+    "id": 30435,
+    "skill_id": 30113,
+    "points": 5,
+    "ability_name": "Wide-Range Lv5",
+    "description": "Items affect nearby allies in a much wider radius with full efficacy."
+  },
+  {
+    "id": 30436,
+    "skill_id": 30035,
+    "points": 1,
+    "ability_name": "Windproof Lv1",
+    "description": "Negates minor wind pressure and halves the effects of major wind pressure."
+  },
+  {
+    "id": 30437,
+    "skill_id": 30035,
+    "points": 2,
+    "ability_name": "Windproof Lv2",
+    "description": "Negates minor and major wind pressure and halves the effects of dragon wind pressure."
+  },
+  {
+    "id": 30438,
+    "skill_id": 30035,
+    "points": 3,
+    "ability_name": "Windproof Lv3",
+    "description": "Negates all kinds of wind pressure."
+  },
+  {
+    "id": 30439,
+    "skill_id": 30025,
+    "points": 1,
+    "ability_name": "Protein Fiend I",
+    "description": "Temporarily grants attack +15 after eating items such as well-done steak."
+  },
+  {
+    "id": 30440,
+    "skill_id": 30025,
+    "points": 2,
+    "ability_name": "Protein Fiend II",
+    "description": "Temporarily grants attack +30 after eating items such as well-done steak."
+  },
+  {
+    "id": 30441,
+    "skill_id": 30051,
+    "points": 1,
+    "ability_name": "Super Recovery I",
+    "description": "Allows the Health Gauge to continue to slowly recover up to the max value, even if there is no red portion."
+  },
+  {
+    "id": 30442,
+    "skill_id": 30051,
+    "points": 2,
+    "ability_name": "Super Recovery II",
+    "description": "Allows the Health Gauge to continue to recover up to the max value, even if there is no red portion."
+  }
+]

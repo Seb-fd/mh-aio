@@ -1,0 +1,1100 @@
+[
+  {
+    "id": 30001,
+    "name": "Afi α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30002,
+    "name": "Ajarakan",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30003,
+    "name": "Ajarakan α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30004,
+    "name": "Ajarakan β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30005,
+    "name": "Akuma α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30006,
+    "name": "Alloy",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30007,
+    "name": "Alloy α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30008,
+    "name": "Amstrigian α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30009,
+    "name": "Analytic E.Y.E. α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30010,
+    "name": "Arkveld α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30011,
+    "name": "Arkveld β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30012,
+    "name": "Arkveld γ",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30013,
+    "name": "Artian α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30014,
+    "name": "Aviator Shades α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30015,
+    "name": "Azure Age α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30016,
+    "name": "Azuz α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30017,
+    "name": "Balahara",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30018,
+    "name": "Balahara α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30019,
+    "name": "Balahara β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30020,
+    "name": "Bale Armor α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30021,
+    "name": "Battle α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30022,
+    "name": "Blango α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30023,
+    "name": "Blango β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30024,
+    "name": "Blessed Waistchain α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30025,
+    "name": "Blossom α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30026,
+    "name": "Bone",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30027,
+    "name": "Bone α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30028,
+    "name": "Bulaqchi",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30029,
+    "name": "Bulaqchi α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30030,
+    "name": "Bulaqchi β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30031,
+    "name": "Butterfly α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30032,
+    "name": "Ceremonial α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30033,
+    "name": "Chainmail",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30034,
+    "name": "Chainmail α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30035,
+    "name": "Chatacabra",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30036,
+    "name": "Chatacabra α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30037,
+    "name": "Chatacabra β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30038,
+    "name": "Clerk α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30039,
+    "name": "Comaqchi",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30040,
+    "name": "Comaqchi α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30041,
+    "name": "Comaqchi β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30042,
+    "name": "Commission α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30043,
+    "name": "Conga",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30044,
+    "name": "Conga α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30045,
+    "name": "Conga β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30046,
+    "name": "Dahaad α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30047,
+    "name": "Dahaad β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30048,
+    "name": "Dahaad γ",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30049,
+    "name": "Damascus α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30050,
+    "name": "Death Stench α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30051,
+    "name": "Diver α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30052,
+    "name": "Dober α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30053,
+    "name": "Doshaguma",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30054,
+    "name": "Doshaguma α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30055,
+    "name": "Doshaguma β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30056,
+    "name": "Doshagumask α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30057,
+    "name": "Dragonking α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30058,
+    "name": "Dreamwalker α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30059,
+    "name": "Eager Wudwud α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30060,
+    "name": "Earrings of Dedication α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30061,
+    "name": "Expedition Headgear α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30062,
+    "name": "Faux Felyne α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30063,
+    "name": "Gajau",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30064,
+    "name": "Gajau α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30065,
+    "name": "Gala Suit α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30066,
+    "name": "Gelidron α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30067,
+    "name": "Gogmazios α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30068,
+    "name": "Gogmazios β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30069,
+    "name": "Gore α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30070,
+    "name": "Gore β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30071,
+    "name": "Gourmand's Earring α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30072,
+    "name": "Gravios α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30073,
+    "name": "Gravios β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30074,
+    "name": "Guardian Arkveld",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30075,
+    "name": "Guardian Arkveld α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30076,
+    "name": "Guardian Arkveld β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30077,
+    "name": "Guardian Doshaguma",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30078,
+    "name": "Guardian Doshaguma α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30079,
+    "name": "Guardian Doshaguma β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30080,
+    "name": "Guardian Ebony",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30081,
+    "name": "Guardian Ebony α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30082,
+    "name": "Guardian Ebony β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30083,
+    "name": "Guardian Fulgur α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30084,
+    "name": "Guardian Fulgur β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30085,
+    "name": "Guardian Rathalos",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30086,
+    "name": "Guardian Rathalos α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30087,
+    "name": "Guardian Rathalos β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30088,
+    "name": "Guardian Seikret",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30089,
+    "name": "Guardian Seikret α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30090,
+    "name": "Guardian Seikret β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30091,
+    "name": "Guild Ace α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30092,
+    "name": "Guild Cross α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30093,
+    "name": "Gypceros α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30094,
+    "name": "Gypceros β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30095,
+    "name": "Half Rim Glasses α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30096,
+    "name": "Harvest α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30097,
+    "name": "Hawkheart Jacket α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30098,
+    "name": "High Metal α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30099,
+    "name": "Hirabami",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30100,
+    "name": "Hirabami α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30101,
+    "name": "Hirabami β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30102,
+    "name": "Hope",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30103,
+    "name": "Hope α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30104,
+    "name": "Ingot",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30105,
+    "name": "Ingot α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30106,
+    "name": "King Beetle α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30107,
+    "name": "Kitten Frames α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30108,
+    "name": "Kranodath",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30109,
+    "name": "Kranodath α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30110,
+    "name": "Kranodath β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30111,
+    "name": "Kunafa α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30112,
+    "name": "Kut-Ku α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30113,
+    "name": "Kut-Ku β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30114,
+    "name": "Lagiacrus α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30115,
+    "name": "Lagiacrus β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30116,
+    "name": "Lala Barina",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30117,
+    "name": "Lala Barina α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30118,
+    "name": "Lala Barina β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30119,
+    "name": "Leather",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30120,
+    "name": "Leather α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30121,
+    "name": "Lovely Shades α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30122,
+    "name": "Melahoa α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30123,
+    "name": "Mimiphyta α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30124,
+    "name": "Mirror Visor α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30125,
+    "name": "Mizutsune α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30126,
+    "name": "Mizutsune β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30127,
+    "name": "Nerscylla",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30128,
+    "name": "Nerscylla α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30129,
+    "name": "Nerscylla β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30130,
+    "name": "Nu Udra",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30131,
+    "name": "Nu Udra α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30132,
+    "name": "Nu Udra β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30133,
+    "name": "Nu Udra γ",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30134,
+    "name": "Numinous α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30135,
+    "name": "Numinous β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30136,
+    "name": "Omega Attire α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30137,
+    "name": "Orion α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30138,
+    "name": "Pinion Necklace α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30139,
+    "name": "Piragill",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30140,
+    "name": "Piragill α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30141,
+    "name": "Piragill β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30142,
+    "name": "Quematrice",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30143,
+    "name": "Quematrice α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30144,
+    "name": "Quematrice β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30145,
+    "name": "Rathalos α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30146,
+    "name": "Rathalos β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30147,
+    "name": "Rathian α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30148,
+    "name": "Rathian β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30149,
+    "name": "Rey Dau",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30150,
+    "name": "Rey Dau α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30151,
+    "name": "Rey Dau β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30152,
+    "name": "Rey Dau γ",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30153,
+    "name": "Rompomask α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30154,
+    "name": "Rompopolo",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30155,
+    "name": "Rompopolo α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30156,
+    "name": "Rompopolo β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30157,
+    "name": "Round Glasses α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30158,
+    "name": "Sakuratide α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30159,
+    "name": "Sealed Dragon Cloth α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30160,
+    "name": "Sealed Eyepatch α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30161,
+    "name": "Seregios α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30162,
+    "name": "Seregios β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30163,
+    "name": "Shadow Shades α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30164,
+    "name": "Sild α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30165,
+    "name": "Skull Mask α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30166,
+    "name": "Sororal α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30167,
+    "name": "Square Glasses α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30168,
+    "name": "Strategist Spectacles α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30169,
+    "name": "Suja α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30170,
+    "name": "Talioth",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30171,
+    "name": "Talioth α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30172,
+    "name": "Talioth β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30173,
+    "name": "Toe Bean Mittens α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30174,
+    "name": "Uth Duna",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30175,
+    "name": "Uth Duna α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30176,
+    "name": "Uth Duna β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30177,
+    "name": "Uth Duna γ",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30178,
+    "name": "Vespoid",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30179,
+    "name": "Vespoid α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30180,
+    "name": "Vespoid β",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30181,
+    "name": "Xu Wu",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30182,
+    "name": "Xu Wu α",
+    "bonus_skill": null,
+    "bonus_required": null
+  },
+  {
+    "id": 30183,
+    "name": "Xu Wu β",
+    "bonus_skill": null,
+    "bonus_required": null
+  }
+]

@@ -1,0 +1,6851 @@
+[
+  {
+    "id": 40001,
+    "name": "Absorber Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 1000,
+    "skill_points": [
+      {
+        "name": "Recoil Down",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Rakna-Kadaki Sharpclaw",
+        "amount": 2
+      },
+      {
+        "name": "Anjanath Nosebone+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40002,
+    "name": "Antiblast Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Blast Resistance",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Inferno Sac",
+        "amount": 2
+      },
+      {
+        "name": "Bombadgy Igniter",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40003,
+    "name": "Antidote Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Poison Resistance",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Great Wroggi Hide+",
+        "amount": 2
+      },
+      {
+        "name": "Wroggi Scale+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40004,
+    "name": "Antipara Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Paralysis Resistance",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Bnahabra Carapace",
+        "amount": 3
+      },
+      {
+        "name": "Bnahabra Stinger",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40005,
+    "name": "Artillery Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Artillery",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Magnamalo Scale+",
+        "amount": 4
+      },
+      {
+        "name": "Pukei-Pukei Sac+",
+        "amount": 2
+      },
+      {
+        "name": "Tetranadon Beak+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40171,
+    "name": "Artillery Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Artillery",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Distilled Blast Fluid",
+        "amount": 2
+      },
+      {
+        "name": "Magnamalo Shard",
+        "amount": 2
+      },
+      {
+        "name": "Allfire Stone",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40006,
+    "name": "Attack Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Attack Boost",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Rajang Blackfur",
+        "amount": 3
+      },
+      {
+        "name": "Goss Harag Claw+",
+        "amount": 3
+      },
+      {
+        "name": "Magnamalo Plate",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40240,
+    "name": "Attack Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Attack Boost",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Abyssal Dragonsphire",
+        "amount": 1
+      },
+      {
+        "name": "Risen Dragon Thickblood",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40214,
+    "name": "Backstab Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Sneak Attack",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Lucent Narga Razor",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Dire Fang+",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Dire Wing+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40225,
+    "name": "Backstab Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Sneak Attack",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Cloudy Moonshard",
+        "amount": 1
+      },
+      {
+        "name": "Afflicted Dire Hardfang",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40162,
+    "name": "Bladescale Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Bladescale Hone",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Adamant Jewel",
+        "amount": 3
+      },
+      {
+        "name": "Seregios Airblade+",
+        "amount": 3
+      },
+      {
+        "name": "Archdemon Tailhook",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40232,
+    "name": "Bladescale Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Bladescale Hone",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Amatsu Cortex",
+        "amount": 3
+      },
+      {
+        "name": "Seregios Lens",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40007,
+    "name": "Blast Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Blast Attack",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Bazelgeuse Fuse",
+        "amount": 2
+      },
+      {
+        "name": "Bazelgeuse Carapace",
+        "amount": 1
+      },
+      {
+        "name": "Magna Soulprism",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40191,
+    "name": "Blast Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Blast Attack",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Flaming Espinas Shard",
+        "amount": 3
+      },
+      {
+        "name": "Bazelgeuse Glandflux",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40008,
+    "name": "Blaze Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Rathian Scale+",
+        "amount": 2
+      },
+      {
+        "name": "Inferno Sac",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40113,
+    "name": "Blaze Jewel+ 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Conflagrant Sac",
+        "amount": 3
+      },
+      {
+        "name": "Awegite",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40218,
+    "name": "Bloodening Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Blood Rite",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Malzeno Bloodstone",
+        "amount": 1
+      },
+      {
+        "name": "Afflicted Dire Hardclaw",
+        "amount": 4
+      }
+    ]
+  },
+  {
+    "id": 40242,
+    "name": "Bloodening Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Blood Rite",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Rajang Heart",
+        "amount": 1
+      },
+      {
+        "name": "Malzeno Beautifang",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40235,
+    "name": "Bloodlust Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Bloodlust",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Shagaru Risegem",
+        "amount": 1
+      },
+      {
+        "name": "Rouge Lancewing+",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40009,
+    "name": "Blunt Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1000,
+    "skill_points": [
+      {
+        "name": "Bludgeoner",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Goss Harag Brace+",
+        "amount": 3
+      },
+      {
+        "name": "Diablos Ridge+",
+        "amount": 2
+      },
+      {
+        "name": "Rajang Tail",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40010,
+    "name": "Bolt Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Thunder Attack",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Pearl Hide",
+        "amount": 2
+      },
+      {
+        "name": "Thunder Sac",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40119,
+    "name": "Bolt Jewel+ 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Thunder Attack",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Lightning Sac",
+        "amount": 3
+      },
+      {
+        "name": "Sapphiron Ore",
+        "amount": 4
+      }
+    ]
+  },
+  {
+    "id": 40011,
+    "name": "Bomber Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Bombardier",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Inferno Sac",
+        "amount": 1
+      },
+      {
+        "name": "Magna Ghostprism",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40012,
+    "name": "Botany Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Botanist",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Great Izuchi Pelt+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40013,
+    "name": "Brace Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 750,
+    "skill_points": [
+      {
+        "name": "Flinch Free",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Zinogre Carapace",
+        "amount": 2
+      },
+      {
+        "name": "Mizutsune Claw+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40161,
+    "name": "Breath Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Quick Breath",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Adamant Jewel",
+        "amount": 3
+      },
+      {
+        "name": "Espinas Mantle",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40014,
+    "name": "Bubble Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 750,
+    "skill_points": [
+      {
+        "name": "Bubbly Dance",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Bubblefoam+",
+        "amount": 2
+      },
+      {
+        "name": "Torrent Sac",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40141,
+    "name": "Bubble Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Bubbly Dance",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Distilled Bubblefoam",
+        "amount": 2
+      },
+      {
+        "name": "Fine Black Pearl",
+        "amount": 1
+      },
+      {
+        "name": "Afflicted Scale",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40015,
+    "name": "Capacity Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Ammo Up",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Ibushi Windsac",
+        "amount": 3
+      },
+      {
+        "name": "Nargacuga Fang+",
+        "amount": 3
+      },
+      {
+        "name": "Jyuratodus Fang+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40234,
+    "name": "Capacity Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Ammo Up",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Heavenly Dragonsphire",
+        "amount": 1
+      },
+      {
+        "name": "Velkhana Fellwing",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40016,
+    "name": "Carver Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Carving Pro",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Tetra Carapace+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40194,
+    "name": "Chain Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Burst",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "White Synovial Fluid",
+        "amount": 2
+      },
+      {
+        "name": "Astalos Wingripper",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40230,
+    "name": "Chain Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Burst",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Astalos Mantle",
+        "amount": 1
+      },
+      {
+        "name": "Risen Dragonbone+",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40017,
+    "name": "Challenger Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Agitator",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Anjanath Scale+",
+        "amount": 2
+      },
+      {
+        "name": "Almudron Scale+",
+        "amount": 3
+      },
+      {
+        "name": "Beast Gem",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40233,
+    "name": "Challenger Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Agitator",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Amatsu Hardclaw",
+        "amount": 3
+      },
+      {
+        "name": "Zinogre Skymerald",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40172,
+    "name": "Charge Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Charge Master",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Distilled Blast Fluid",
+        "amount": 2
+      },
+      {
+        "name": "Golm Ploughtail",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40212,
+    "name": "Charge Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Charge Master",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 3
+      },
+      {
+        "name": "Flaming Espinas Cortex",
+        "amount": 3
+      },
+      {
+        "name": "Afflicted Dire Blood",
+        "amount": 3
+      },
+      {
+        "name": "Afflicted Dire Wing",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40018,
+    "name": "Charger Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Ibushi Windsac",
+        "amount": 3
+      },
+      {
+        "name": "Magnamalo Scute+",
+        "amount": 3
+      },
+      {
+        "name": "Rath Medulla",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40150,
+    "name": "Charger Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Focus",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Large Volvi Rickrack",
+        "amount": 2
+      },
+      {
+        "name": "Dragonbone Artifact",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40019,
+    "name": "Counter Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 750,
+    "skill_points": [
+      {
+        "name": "Counterstrike",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Rathalos Scale+",
+        "amount": 3
+      },
+      {
+        "name": "Ibushi Horn+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40176,
+    "name": "Counter Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Counterstrike",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Gold Rathian Surspike",
+        "amount": 2
+      },
+      {
+        "name": "Rathian Mantle",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40215,
+    "name": "Counterattack Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Adrenaline Rush",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Violet Mizu Fin",
+        "amount": 2
+      },
+      {
+        "name": "White Synovial Fluid",
+        "amount": 1
+      },
+      {
+        "name": "Afflicted Dire Hardhorn",
+        "amount": 4
+      }
+    ]
+  },
+  {
+    "id": 40227,
+    "name": "Counterattack Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Adrenaline Rush",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Seregios Lens",
+        "amount": 1
+      },
+      {
+        "name": "Afflicted Dire Darkblood",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40020,
+    "name": "Crisis Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Resuscitate",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Nargacuga Pelt+",
+        "amount": 3
+      },
+      {
+        "name": "Tigrex Carapace",
+        "amount": 2
+      },
+      {
+        "name": "Beast Gem",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40174,
+    "name": "Crisis Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Resuscitate",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Gold Rathian Shard",
+        "amount": 3
+      },
+      {
+        "name": "Tigrex Cortex",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40021,
+    "name": "Crit Element Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Critical Element",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Elder Dragon Blood",
+        "amount": 2
+      },
+      {
+        "name": "Block of Ice+",
+        "amount": 2
+      },
+      {
+        "name": "Tobi-Kadachi Electrode+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40149,
+    "name": "Crit Element Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Critical Element",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Pure Dragon Blood",
+        "amount": 2
+      },
+      {
+        "name": "Large Wyvern Gem",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40022,
+    "name": "Critical Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Critical Boost",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Apex Blaze Sac",
+        "amount": 2
+      },
+      {
+        "name": "Magnamalo Horn+",
+        "amount": 2
+      },
+      {
+        "name": "Almudron Plate",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40023,
+    "name": "Defense Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Defense Boost",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Basarios Carapace",
+        "amount": 2
+      },
+      {
+        "name": "Barroth Ridge+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40123,
+    "name": "Defense Jewel+ 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Defense Boost",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Barroth Chine",
+        "amount": 2
+      },
+      {
+        "name": "Massive Monster Bone",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40024,
+    "name": "Destroyer Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 750,
+    "skill_points": [
+      {
+        "name": "Partbreaker",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Zinogre Claw+",
+        "amount": 2
+      },
+      {
+        "name": "Amber Fang+",
+        "amount": 1
+      },
+      {
+        "name": "Diablos Tailcase",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40175,
+    "name": "Destroyer Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Partbreaker",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Silver Rathalos Cortex",
+        "amount": 2
+      },
+      {
+        "name": "Zinogre Hardclaw",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40025,
+    "name": "Dive Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Leap of Faith",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Bullfango Pelt+",
+        "amount": 2
+      },
+      {
+        "name": "Stoutbone",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40026,
+    "name": "Diversion Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Diversion",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Remobra Hide+",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40027,
+    "name": "Dragon Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Rathian Carapace",
+        "amount": 2
+      },
+      {
+        "name": "Dragonbone Relic",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40121,
+    "name": "Dragon Jewel+ 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Rathian Cortex",
+        "amount": 2
+      },
+      {
+        "name": "Eroded Elder Skeleton",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40028,
+    "name": "Dragon Res Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Dragon Resistance",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Monster Keenbone",
+        "amount": 2
+      },
+      {
+        "name": "Dragonhusk Shard",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40221,
+    "name": "Dragon Spirit Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Dragonheart",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Valstrax Risegem",
+        "amount": 1
+      },
+      {
+        "name": "Ibushi Windsac+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40029,
+    "name": "Drain Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Stamina Thief",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Barroth Claw+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40030,
+    "name": "Draw Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Critical Draw",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Ibushi Claw+",
+        "amount": 3
+      },
+      {
+        "name": "Majestic Horn",
+        "amount": 2
+      },
+      {
+        "name": "Amber Fang+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40152,
+    "name": "Draw Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Critical Draw",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Twisted Stouthorn",
+        "amount": 3
+      },
+      {
+        "name": "Amber Hardfang",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Claw",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40031,
+    "name": "Earplug Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 1000,
+    "skill_points": [
+      {
+        "name": "Earplugs",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Magnamalo Shell+",
+        "amount": 4
+      },
+      {
+        "name": "Tigrex Maw",
+        "amount": 1
+      },
+      {
+        "name": "Lagombi Ear+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40156,
+    "name": "Earplug Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Earplugs",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Magnamalo Cortex",
+        "amount": 3
+      },
+      {
+        "name": "Lagombi Auricle",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Fang",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40213,
+    "name": "Element Exploit Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Element Exploit",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Rath Gleam",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Dire Dragon Blood",
+        "amount": 4
+      }
+    ]
+  },
+  {
+    "id": 40222,
+    "name": "Element Exploit Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Element Exploit",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Valstrax Risegem",
+        "amount": 1
+      },
+      {
+        "name": "Silver Rathalos Fellwing",
+        "amount": 2
+      },
+      {
+        "name": "Large Elder Dragon Gem",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40219,
+    "name": "Embolden Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Embolden",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 3
+      },
+      {
+        "name": "Velkhana Hardclaw",
+        "amount": 2
+      },
+      {
+        "name": "Violet Mizu Whitefell",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40236,
+    "name": "Embolden Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Embolden",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Violet Mizu Hardclaw",
+        "amount": 2
+      },
+      {
+        "name": "Risen Dragon Blood",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40032,
+    "name": "Enduring Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Item Prolonger",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Royal Ludroth Scale+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40033,
+    "name": "Enhancer Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Power Prolonger",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Block of Ice+",
+        "amount": 2
+      },
+      {
+        "name": "Golden Sludge",
+        "amount": 2
+      },
+      {
+        "name": "Wyvern Gem",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40157,
+    "name": "Enhancer Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Power Prolonger",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Orangaten Fur+",
+        "amount": 3
+      },
+      {
+        "name": "Inferno Lava Mud",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Fang",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40034,
+    "name": "Evasion Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 750,
+    "skill_points": [
+      {
+        "name": "Evade Window",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Barioth Claw+",
+        "amount": 2
+      },
+      {
+        "name": "Tobi-Kadachi Pelt+",
+        "amount": 2
+      },
+      {
+        "name": "Rathalos Carapace",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40138,
+    "name": "Evasion Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Evade Window",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 8
+      },
+      {
+        "name": "Tobi-Kadachi Thickfur",
+        "amount": 3
+      },
+      {
+        "name": "Fey Wyvern Gem",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40035,
+    "name": "Expert Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Critical Eye",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Elder Dragon Blood",
+        "amount": 3
+      },
+      {
+        "name": "Rajang Blackfur",
+        "amount": 3
+      },
+      {
+        "name": "Ibushi Bluespike",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40239,
+    "name": "Expert Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Critical Eye",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Velkhana Crystal",
+        "amount": 1
+      },
+      {
+        "name": "Risen Dragon Thickblood",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40036,
+    "name": "Fate Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 2000,
+    "skill_points": [
+      {
+        "name": "Good Luck",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 8
+      },
+      {
+        "name": "Chameleos Hide+",
+        "amount": 6
+      },
+      {
+        "name": "Chameleos Wing",
+        "amount": 4
+      },
+      {
+        "name": "Golden Almudron Orb",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40160,
+    "name": "Fate Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Good Luck",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Chameleos Finehide",
+        "amount": 5
+      },
+      {
+        "name": "Almudron Mantle",
+        "amount": 1
+      },
+      {
+        "name": "Afflicted Fang",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40037,
+    "name": "Fire Res Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Fire Resistance",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Aknosom Scale+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40207,
+    "name": "Flamescale Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Teostra Blessing",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Teostra Risegem",
+        "amount": 1
+      },
+      {
+        "name": "Pyre-Kadaki Dull Glowgut",
+        "amount": 2
+      },
+      {
+        "name": "Teostra Cortex",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40038,
+    "name": "Flawless Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Peak Performance",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Apex Bubblefoam",
+        "amount": 2
+      },
+      {
+        "name": "Ibushi Claw+",
+        "amount": 3
+      },
+      {
+        "name": "Basarios Tears",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40210,
+    "name": "Flawless Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Peak Performance",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Daora Risegem",
+        "amount": 1
+      },
+      {
+        "name": "Tigrex Hardfang",
+        "amount": 3
+      },
+      {
+        "name": "Large Elder Dragon Gem",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40164,
+    "name": "Flywall Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Wall Runner (Boost)",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Adamant Jewel",
+        "amount": 3
+      },
+      {
+        "name": "Seregios Carver+",
+        "amount": 2
+      },
+      {
+        "name": "Archdemon Wingtalon",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40180,
+    "name": "Foil Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Tune-Up",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Lucent Narga Dapple",
+        "amount": 4
+      },
+      {
+        "name": "Rakna-Kadaki Cortex",
+        "amount": 1
+      },
+      {
+        "name": "Tiny Hermitaur Shell",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40217,
+    "name": "Foil Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Tune-Up",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Rakna-Kadaki Spike+",
+        "amount": 2
+      },
+      {
+        "name": "Flaming Espinas Surspike",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Dire Cortex",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40039,
+    "name": "Footing Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1000,
+    "skill_points": [
+      {
+        "name": "Tremor Resistance",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Diablos Ridge+",
+        "amount": 2
+      },
+      {
+        "name": "Great Stoutbone",
+        "amount": 1
+      },
+      {
+        "name": "Tetra Carapace+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40158,
+    "name": "Footing Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Tremor Resistance",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Adamant Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Solid Bone",
+        "amount": 3
+      },
+      {
+        "name": "Heavy Tetra Carapace",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Monster Bone",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40192,
+    "name": "Foray Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Foray",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Flaming Espinas Sulfur",
+        "amount": 2
+      },
+      {
+        "name": "Teostra Hardhorn",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40226,
+    "name": "Foray Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Foray",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Espinas Surspike",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Dire Hardfang",
+        "amount": 3
+      },
+      {
+        "name": "Afflicted Dire Fellwing",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40040,
+    "name": "Forceshot Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Normal/Rapid Up",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Majestic Horn",
+        "amount": 2
+      },
+      {
+        "name": "Goss Harag Horn+",
+        "amount": 2
+      },
+      {
+        "name": "Wyvern Gem",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40197,
+    "name": "Forceshot Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Normal/Rapid Up",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Flickering Silvershell",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Dire Shell",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40041,
+    "name": "Fortitude Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Fortify",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Arzuros Carapace",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40042,
+    "name": "Friendship Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 750,
+    "skill_points": [
+      {
+        "name": "Wide-Range",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Mizutsune Claw+",
+        "amount": 1
+      },
+      {
+        "name": "Nargacuga Scale+",
+        "amount": 2
+      },
+      {
+        "name": "Lifepowder",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40043,
+    "name": "Frost Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Ice Attack",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Lagombi Pelt+",
+        "amount": 2
+      },
+      {
+        "name": "Great Baggi Claw+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40117,
+    "name": "Frost Jewel+ 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Ice Attack",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Lagombi Fur",
+        "amount": 2
+      },
+      {
+        "name": "Frozen Stiffbone",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40044,
+    "name": "Fungiform Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Mushroomancer",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Tigrex Maw",
+        "amount": 1
+      },
+      {
+        "name": "Anjanath Fang+",
+        "amount": 3
+      },
+      {
+        "name": "Mandragora",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40153,
+    "name": "Fungiform Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Mushroomancer",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Tigrex Hardfang",
+        "amount": 4
+      },
+      {
+        "name": "Rainbowshrooms",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Claw",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40045,
+    "name": "Furor Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Resentment",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Tigrex Claw+",
+        "amount": 2
+      },
+      {
+        "name": "Barioth Pelt+",
+        "amount": 3
+      },
+      {
+        "name": "Ibushi Carapace",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40220,
+    "name": "Furor Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Resentment",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Velkhana Crownhorn",
+        "amount": 2
+      },
+      {
+        "name": "Archdemon Piercetalon",
+        "amount": 2
+      },
+      {
+        "name": "Pyre-Kadaki Spike+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40046,
+    "name": "Gambit Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 750,
+    "skill_points": [
+      {
+        "name": "Punishing Draw",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Zinogre Horn+",
+        "amount": 1
+      },
+      {
+        "name": "Somnacanth Shell+",
+        "amount": 2
+      },
+      {
+        "name": "Goss Harag Claw",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40139,
+    "name": "Gambit Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Punishing Draw",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 8
+      },
+      {
+        "name": "Somnacanth Cortex",
+        "amount": 2
+      },
+      {
+        "name": "Large Wyvern Gem",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40047,
+    "name": "Geology Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Geologist",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Kulu-Ya-Ku Scale+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40048,
+    "name": "Gobbler Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 750,
+    "skill_points": [
+      {
+        "name": "Speed Eating",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Anjanath Fang+",
+        "amount": 2
+      },
+      {
+        "name": "Tetranadon Beak+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40134,
+    "name": "Gobbler Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Speed Eating",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Tetranadon Greatbeak",
+        "amount": 1
+      },
+      {
+        "name": "Velociprey Shard",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40049,
+    "name": "Grinder Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Speed Sharpening",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Rath Wingtalon+",
+        "amount": 2
+      },
+      {
+        "name": "Great Izuchi Tail+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40050,
+    "name": "Guardian Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Ibushi Hide+",
+        "amount": 3
+      },
+      {
+        "name": "Volvidon Claw+",
+        "amount": 3
+      },
+      {
+        "name": "Diablos Medulla",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40216,
+    "name": "Guardian Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Offensive Guard",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Flickering Silvershell",
+        "amount": 5
+      },
+      {
+        "name": "Afflicted Dire Shard",
+        "amount": 3
+      },
+      {
+        "name": "Afflicted Dire Slogbone",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40051,
+    "name": "Handicraft Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 2000,
+    "skill_points": [
+      {
+        "name": "Handicraft",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 8
+      },
+      {
+        "name": "Daora Dragon Scale+",
+        "amount": 6
+      },
+      {
+        "name": "Daora Horn+",
+        "amount": 3
+      },
+      {
+        "name": "Purple Magna Orb",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40200,
+    "name": "Handicraft Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Handicraft",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Daora Hardclaw",
+        "amount": 3
+      },
+      {
+        "name": "Afflicted Dire Claw",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40184,
+    "name": "Hard Antiblast Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Blast Resistance",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 3
+      },
+      {
+        "name": "Orangaten Feather+",
+        "amount": 3
+      },
+      {
+        "name": "Afflicted Dire Horn",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40181,
+    "name": "Hard Antidote Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Poison Resistance",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 3
+      },
+      {
+        "name": "Rathian Shard",
+        "amount": 3
+      },
+      {
+        "name": "Afflicted Dire Scale",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40182,
+    "name": "Hard Antipara Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Paralysis Resistance",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 3
+      },
+      {
+        "name": "Pearl Glosshide",
+        "amount": 3
+      },
+      {
+        "name": "Afflicted Dire Horn",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40114,
+    "name": "Hard Blaze Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Adamant Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Pyre-Kadaki Dull Glowgut",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Pelt",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40205,
+    "name": "Hard Blaze Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Fire Attack",
+        "points": 4
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Rathalos Mantle",
+        "amount": 1
+      },
+      {
+        "name": "Afflicted Thickhide",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40120,
+    "name": "Hard Bolt Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Thunder Attack",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Adamant Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Pearl Glosshide",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Bone",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40202,
+    "name": "Hard Bolt Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Thunder Attack",
+        "points": 4
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Zinogre Skymerald",
+        "amount": 1
+      },
+      {
+        "name": "Afflicted Hardfang",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40126,
+    "name": "Hard Bomber Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Bombardier",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Bombadgy Activator",
+        "amount": 1
+      },
+      {
+        "name": "Conflagrant Sac",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40107,
+    "name": "Hard Botany Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Botanist",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Great Izuchi Thickfur",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40140,
+    "name": "Hard Brace Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Flinch Free",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Adamant Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Garangolm Shard",
+        "amount": 2
+      },
+      {
+        "name": "Luna Vermilion Hardclaw",
+        "amount": 1
+      },
+      {
+        "name": "Afflicted Monster Bone",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40224,
+    "name": "Hard Cornerstone Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Defiance",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Gold Rathian Surspike",
+        "amount": 3
+      },
+      {
+        "name": "Afflicted Dire Fellwing",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40124,
+    "name": "Hard Defense Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Defense Boost",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Adamant Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Monster Slogbone",
+        "amount": 3
+      },
+      {
+        "name": "Basarios Cortex",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40125,
+    "name": "Hard Defense Jewel++ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Defense Boost",
+        "points": 5
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 3
+      },
+      {
+        "name": "Large Elder Dragon Bone",
+        "amount": 3
+      },
+      {
+        "name": "Diablos Chine",
+        "amount": 2
+      },
+      {
+        "name": "Conqueror's Seal",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40122,
+    "name": "Hard Dragon Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Adamant Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Gore Magala Cortex",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Bone",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40201,
+    "name": "Hard Dragon Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Dragon Attack",
+        "points": 4
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Gore Magala Mantle",
+        "amount": 1
+      },
+      {
+        "name": "Afflicted Dire Hardbone",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40106,
+    "name": "Hard Dragon Res Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Dragon Resistance",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Hornetaur Cortex",
+        "amount": 2
+      },
+      {
+        "name": "Massive Monster Bone",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "id": 40110,
+    "name": "Hard Drain Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Stamina Thief",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 3
+      },
+      {
+        "name": "Barroth Hardclaw",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Monster Bone",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40111,
+    "name": "Hard Enduring Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Item Prolonger",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Royal Ludroth Shard",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40102,
+    "name": "Hard Fire Res Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Fire Resistance",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Large Kulu-Ya-Ku Plume",
+        "amount": 1
+      },
+      {
+        "name": "Monster Toughbone",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40136,
+    "name": "Hard Friendship Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Wide-Range",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Arzuros Allbrace",
+        "amount": 2
+      },
+      {
+        "name": "Gargwa Finefeather",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40137,
+    "name": "Hard Friendship Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Wide-Range",
+        "points": 4
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Auroracanth Iceclaw",
+        "amount": 2
+      },
+      {
+        "name": "Nargacuga Shard",
+        "amount": 4
+      },
+      {
+        "name": "Monster Slogbone",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40118,
+    "name": "Hard Frost Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Ice Attack",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Adamant Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Auroracanth Icescale",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Pelt",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40203,
+    "name": "Hard Frost Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Ice Attack",
+        "points": 4
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Lunagaron Frost Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Afflicted Shard",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40108,
+    "name": "Hard Geology Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Geologist",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Kulu-Ya-Ku Shard",
+        "amount": 3
+      },
+      {
+        "name": "Eroded Elder Skeleton",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40127,
+    "name": "Hard Grinder Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Speed Sharpening",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 3
+      },
+      {
+        "name": "Seregios Breacher+",
+        "amount": 1
+      },
+      {
+        "name": "Great Izuchi Grindtail",
+        "amount": 1
+      },
+      {
+        "name": "Afflicted Blood",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40112,
+    "name": "Hard Hungerless Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Hunger Resistance",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Tetranadon Greatbeak",
+        "amount": 1
+      },
+      {
+        "name": "Tiny Hermitaur Shell",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "id": 40104,
+    "name": "Hard Ice Res Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Ice Resistance",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Glorious Crest",
+        "amount": 1
+      },
+      {
+        "name": "Prized Pelt",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40183,
+    "name": "Hard Pep Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Sleep Resistance",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 3
+      },
+      {
+        "name": "Somnacanth Shard",
+        "amount": 3
+      },
+      {
+        "name": "Afflicted Dire Bone",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40132,
+    "name": "Hard Recovery Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Recovery Speed",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Barroth Chine",
+        "amount": 3
+      },
+      {
+        "name": "Gajau Thickhide",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40109,
+    "name": "Hard Satiated Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Free Meal",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 8
+      },
+      {
+        "name": "Mystic Hardfang",
+        "amount": 2
+      },
+      {
+        "name": "Colossal Drill Beak",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40167,
+    "name": "Hard Sniper Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Steadiness",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 3
+      },
+      {
+        "name": "Flickering Silvershell",
+        "amount": 2
+      },
+      {
+        "name": "Rathalos Fellwing",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40154,
+    "name": "Hard Steadfast Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Stun Resistance",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 8
+      },
+      {
+        "name": "Pukei-Pukei Fellwing",
+        "amount": 3
+      },
+      {
+        "name": "Kestodon Husk",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40116,
+    "name": "Hard Stream Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Adamant Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Jyuratodus Cortex",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Pelt",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40204,
+    "name": "Hard Stream Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 4
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Mizutsune Mantle",
+        "amount": 1
+      },
+      {
+        "name": "Afflicted Pure Blood",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40105,
+    "name": "Hard Thunder Res Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Thunder Resistance",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Vespoid Razorwing",
+        "amount": 2
+      },
+      {
+        "name": "Monster Essence",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40178,
+    "name": "Hard Venom Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Poison Attack",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Lucent Narga Tailspear",
+        "amount": 2
+      },
+      {
+        "name": "Pukei-Pukei Shard",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40131,
+    "name": "Hard Wall Run Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Wall Runner",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 8
+      },
+      {
+        "name": "Mystic Hardfang",
+        "amount": 2
+      },
+      {
+        "name": "Prized Stomach",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40103,
+    "name": "Hard Water Res Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Water Resistance",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Imperial Beak",
+        "amount": 1
+      },
+      {
+        "name": "Spongy Piel",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40144,
+    "name": "Hard Wind Res Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Windproof",
+        "points": 3
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Heavy Tetra Carapace",
+        "amount": 2
+      },
+      {
+        "name": "Vespoid Razorwing",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40196,
+    "name": "Haze Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Chameleos Blessing",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Chameleos Risegem",
+        "amount": 1
+      },
+      {
+        "name": "Chameleos Finehide",
+        "amount": 3
+      },
+      {
+        "name": "Large Pukei-Pukei Sac",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40052,
+    "name": "Hellfire Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Hellfire Cloak",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Magna Soulprism",
+        "amount": 3
+      },
+      {
+        "name": "Rathalos Scale+",
+        "amount": 2
+      },
+      {
+        "name": "Rakna-Kadaki Glowgut",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40159,
+    "name": "Hellfire Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Hellfire Cloak",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Magnamalo Soulprism+",
+        "amount": 3
+      },
+      {
+        "name": "Rakna-Kadaki Glowgut+",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Fang",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40053,
+    "name": "Hungerless Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Hunger Resistance",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Tetranadon Beak+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40054,
+    "name": "Ice Res Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Ice Resistance",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Lagombi Frozenclaw",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40241,
+    "name": "Inspiration Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Inspiration",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Primordial Scale",
+        "amount": 1
+      },
+      {
+        "name": "Malzeno Pureplate",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40223,
+    "name": "Intrepid Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Intrepid Heart",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 3
+      },
+      {
+        "name": "Flaming Espinas Hardhorn",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Dire Darkblood",
+        "amount": 4
+      }
+    ]
+  },
+  {
+    "id": 40237,
+    "name": "Intrepid Jewel+ 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Intrepid Heart",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Flaming Espinas Mantle",
+        "amount": 1
+      },
+      {
+        "name": "Risen Dragon Blood",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40209,
+    "name": "Ironshell Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Kushala Blessing",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Daora Risegem",
+        "amount": 1
+      },
+      {
+        "name": "Barioth Greatspike",
+        "amount": 2
+      },
+      {
+        "name": "Daora Cortex",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40055,
+    "name": "Ironwall Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Narwa Sparksac",
+        "amount": 3
+      },
+      {
+        "name": "Almudron Fin+",
+        "amount": 3
+      },
+      {
+        "name": "Tetranadon Disc+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40146,
+    "name": "Ironwall Jewel+ 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Guard",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 8
+      },
+      {
+        "name": "Jyuratodus Grandfin",
+        "amount": 2
+      },
+      {
+        "name": "Basarios Lash",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40056,
+    "name": "Jumping Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 750,
+    "skill_points": [
+      {
+        "name": "Evade Extender",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Zinogre Shocker+",
+        "amount": 4
+      },
+      {
+        "name": "Tobi-Kadachi Scale+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40143,
+    "name": "Jumping Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Evade Extender",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 8
+      },
+      {
+        "name": "Bishaten Glidefeather",
+        "amount": 2
+      },
+      {
+        "name": "Large Beast Gem",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40057,
+    "name": "KO Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 750,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Anjanath Nosebone+",
+        "amount": 2
+      },
+      {
+        "name": "Barroth Scalp",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40142,
+    "name": "KO Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Slugger",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Heavy Anjanath Nosebone",
+        "amount": 2
+      },
+      {
+        "name": "Basarios Pallium",
+        "amount": 1
+      },
+      {
+        "name": "Afflicted Shell",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40058,
+    "name": "Leap Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Jump Master",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Bazelgeuse Wing",
+        "amount": 3
+      },
+      {
+        "name": "Rathalos Wing",
+        "amount": 1
+      },
+      {
+        "name": "Bishaten Horn+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40059,
+    "name": "Magazine Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Load Shells",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Goss Harag Horn+",
+        "amount": 2
+      },
+      {
+        "name": "Bishaten Tailcase+",
+        "amount": 2
+      },
+      {
+        "name": "Beast Gem",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40169,
+    "name": "Magazine Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Load Shells",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Scorching Silverwing",
+        "amount": 2
+      },
+      {
+        "name": "Magmadron Mantle",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40060,
+    "name": "Mastery Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 2000,
+    "skill_points": [
+      {
+        "name": "Master's Touch",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 8
+      },
+      {
+        "name": "Fire Dragon Scale+",
+        "amount": 6
+      },
+      {
+        "name": "Teostra Mane",
+        "amount": 4
+      },
+      {
+        "name": "Goss Harag Bile",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40185,
+    "name": "Mastery Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Master's Touch",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Hellfire Shard",
+        "amount": 1
+      },
+      {
+        "name": "Teostra Lash",
+        "amount": 1
+      },
+      {
+        "name": "Afflicted Dire Bone",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40061,
+    "name": "Medicine Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Recovery Up",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Basarios Pleura+",
+        "amount": 2
+      },
+      {
+        "name": "Ancient Potion",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40128,
+    "name": "Medicine Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Recovery Up",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Large Herbivore Bone",
+        "amount": 2
+      },
+      {
+        "name": "Fine Black Pearl",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40165,
+    "name": "Mighty Bow Jewel 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Bow Charge Plus",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Bone",
+        "amount": 3
+      },
+      {
+        "name": "Large Elder Dragon Gem",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40062,
+    "name": "Mighty Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Maximum Might",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Narwa Claw+",
+        "amount": 2
+      },
+      {
+        "name": "Goss Harag Fur+",
+        "amount": 4
+      },
+      {
+        "name": "Rathian Plate",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40193,
+    "name": "Mighty Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Maximum Might",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Violet Mizu Fin",
+        "amount": 3
+      },
+      {
+        "name": "Abyssal Dragonscale",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40063,
+    "name": "Mind's Eye Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Mind's Eye",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Goss Harag Hide+",
+        "amount": 2
+      },
+      {
+        "name": "Mizutsune Purplefur+",
+        "amount": 3
+      },
+      {
+        "name": "Gold Rajang Pelt",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40155,
+    "name": "Mind's Eye Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Mind's Eye",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Goss Finehide",
+        "amount": 2
+      },
+      {
+        "name": "Mizutsune Purplefell",
+        "amount": 3
+      },
+      {
+        "name": "Afflicted Scale",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40064,
+    "name": "Muck Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Muck Resistance",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Lagombi Plastron+",
+        "amount": 2
+      },
+      {
+        "name": "Barroth Shell",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40065,
+    "name": "Paralyzer Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Paralysis Attack",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Omniplegia Sac",
+        "amount": 3
+      },
+      {
+        "name": "Golden Sludge",
+        "amount": 2
+      },
+      {
+        "name": "Elder Dragon Bone",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40189,
+    "name": "Paralyzer Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Paralysis Attack",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Flaming Espinas Cortex",
+        "amount": 2
+      },
+      {
+        "name": "Boltscale",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40066,
+    "name": "Pep Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Sleep Resistance",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Great Baggi Hide+",
+        "amount": 2
+      },
+      {
+        "name": "Baggi Scale+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40188,
+    "name": "Phoenix Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Coalescence",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Gore Magala Cortex",
+        "amount": 2
+      },
+      {
+        "name": "S. Magala Shard",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Dire Horn",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40195,
+    "name": "Phoenix Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Coalescence",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Chameleos Risegem",
+        "amount": 1
+      },
+      {
+        "name": "Gore Magala Eclipse",
+        "amount": 2
+      },
+      {
+        "name": "S. Magala Hardhorn",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40067,
+    "name": "Physique Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Constitution",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Volvidon Carapace",
+        "amount": 3
+      },
+      {
+        "name": "Fucium Ore",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40129,
+    "name": "Physique Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Constitution",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Volvidon Cortex",
+        "amount": 3
+      },
+      {
+        "name": "Boggi Shard",
+        "amount": 3
+      },
+      {
+        "name": "Afflicted Shell",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40068,
+    "name": "Pierce Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Pierce Up",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Tigrex Fang+",
+        "amount": 3
+      },
+      {
+        "name": "Rajang Horn+",
+        "amount": 1
+      },
+      {
+        "name": "Mizutsune Plate",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40198,
+    "name": "Pierce Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Pierce Up",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Lucent Narga Hardfang",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Dire Claw",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40187,
+    "name": "Polisher Pro Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Grinder (S)",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Ceanataur Hardclaw",
+        "amount": 3
+      },
+      {
+        "name": "Afflicted Dire Scale",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40211,
+    "name": "Polisher Pro Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Grinder (S)",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 3
+      },
+      {
+        "name": "Seregios Carver+",
+        "amount": 4
+      },
+      {
+        "name": "Afflicted Dire Fang",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40069,
+    "name": "Potential Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Heroics",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Rajang Tail",
+        "amount": 2
+      },
+      {
+        "name": "Majestic Horn",
+        "amount": 2
+      },
+      {
+        "name": "Tigrex Scale+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40229,
+    "name": "Potential Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Heroics",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Gold Rajang Pelt+",
+        "amount": 3
+      },
+      {
+        "name": "Risen Dragonbone",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40070,
+    "name": "Precise Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Ballistics",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Narwa Claw+",
+        "amount": 2
+      },
+      {
+        "name": "Zinogre Claw+",
+        "amount": 3
+      },
+      {
+        "name": "Diablos Medulla",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40148,
+    "name": "Precise Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Ballistics",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Zinogre Hardclaw",
+        "amount": 3
+      },
+      {
+        "name": "Abyssal Dragonscale",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Claw",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40071,
+    "name": "Protection Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 750,
+    "skill_points": [
+      {
+        "name": "Divine Blessing",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Somnacanth Scale+",
+        "amount": 3
+      },
+      {
+        "name": "Mizutsune Fin+",
+        "amount": 2
+      },
+      {
+        "name": "Wyvern Gem",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40133,
+    "name": "Protection Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Divine Blessing",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Spongy Piel",
+        "amount": 2
+      },
+      {
+        "name": "Twisted Stiffbone",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40072,
+    "name": "Quickload Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 1000,
+    "skill_points": [
+      {
+        "name": "Reload Speed",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 3
+      },
+      {
+        "name": "Magnamalo Scale+",
+        "amount": 2
+      },
+      {
+        "name": "Diablos Carapace",
+        "amount": 2
+      },
+      {
+        "name": "Bishaten Fur+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40073,
+    "name": "Quickswitch Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1000,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 3
+      },
+      {
+        "name": "Tigrex Claw+",
+        "amount": 2
+      },
+      {
+        "name": "Somnacanth Claw+",
+        "amount": 1
+      },
+      {
+        "name": "Rakna-Kadaki Silk",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40168,
+    "name": "Quickswitch Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Rapid Morph",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Scorching Silverwing",
+        "amount": 2
+      },
+      {
+        "name": "Luna Vermilion Hardclaw",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40074,
+    "name": "Razor Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Razor Sharp",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Magnamalo Scute+",
+        "amount": 3
+      },
+      {
+        "name": "Rajang Claw+",
+        "amount": 2
+      },
+      {
+        "name": "Rathalos Plate",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40179,
+    "name": "Razor Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Razor Sharp",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Lucent Narga Razor",
+        "amount": 2
+      },
+      {
+        "name": "Magnamalo Bladeshell",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40075,
+    "name": "Recovery Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Recovery Speed",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Jyuratodus Fin+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40163,
+    "name": "Redirection Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Redirection",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Frostborn Hardfang",
+        "amount": 2
+      },
+      {
+        "name": "Malzeno Fellwing",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40206,
+    "name": "Redirection Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Redirection",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Contrary Scale",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40076,
+    "name": "Refresh Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Stamina Surge",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Tigrex Scale+",
+        "amount": 3
+      },
+      {
+        "name": "Almudron Whisker+",
+        "amount": 2
+      },
+      {
+        "name": "Royal Ludroth Crest+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40145,
+    "name": "Refresh Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Stamina Surge",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Almud Ascetic Whisker",
+        "amount": 3
+      },
+      {
+        "name": "Chic Crest",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Shell",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40077,
+    "name": "Resistor Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 750,
+    "skill_points": [
+      {
+        "name": "Blight Resistance",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Freezer Sac",
+        "amount": 1
+      },
+      {
+        "name": "Thunder Sac",
+        "amount": 1
+      },
+      {
+        "name": "Torrent Sac",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40135,
+    "name": "Resistor Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Blight Resistance",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Adamant Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Magnamalo Soulprism+",
+        "amount": 2
+      },
+      {
+        "name": "S. Magala Lightwing",
+        "amount": 1
+      },
+      {
+        "name": "Afflicted Blood",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40078,
+    "name": "Rodeo Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Master Mounter",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Aknosom Feather+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40079,
+    "name": "Salvo Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Rapid Fire Up",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Narwa Horn+",
+        "amount": 3
+      },
+      {
+        "name": "Rathian Spike+",
+        "amount": 1
+      },
+      {
+        "name": "Anjanath Plate",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40080,
+    "name": "Satiated Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Free Meal",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Suspicious Fang+",
+        "amount": 2
+      },
+      {
+        "name": "Kulu-Ya-Ku Beak+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40081,
+    "name": "Sharp Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Protective Polish",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Magnamalo Blade+",
+        "amount": 4
+      },
+      {
+        "name": "Narga Razor",
+        "amount": 3
+      },
+      {
+        "name": "Great Izuchi Tail+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40177,
+    "name": "Sharp Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Protective Polish",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Silver Rathalos Lash",
+        "amount": 2
+      },
+      {
+        "name": "Seregios Breacher+",
+        "amount": 2
+      },
+      {
+        "name": "Rath Gleam",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40082,
+    "name": "Sheath Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 750,
+    "skill_points": [
+      {
+        "name": "Quick Sheathe",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Nargacuga Pelt+",
+        "amount": 2
+      },
+      {
+        "name": "Tobi-Kadachi Claw+",
+        "amount": 1
+      },
+      {
+        "name": "Bishaten Talon+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40173,
+    "name": "Sheath Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Quick Sheathe",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Gold Rathian Weave",
+        "amount": 2
+      },
+      {
+        "name": "Tobi-Kadachi Hardclaw",
+        "amount": 1
+      },
+      {
+        "name": "Bishaten Hardclaw",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40083,
+    "name": "Shield Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Narwa Carapace",
+        "amount": 3
+      },
+      {
+        "name": "Goss Harag Brace+",
+        "amount": 3
+      },
+      {
+        "name": "Basarios Pleura+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40147,
+    "name": "Shield Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Guard Up",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 8
+      },
+      {
+        "name": "Basarios Pectus+",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40231,
+    "name": "Shockproof Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Shock Absorber",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Monster Bone+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40084,
+    "name": "Sleep Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Sleep Attack",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Somnacanth Sedative",
+        "amount": 4
+      },
+      {
+        "name": "Coma Sac",
+        "amount": 2
+      },
+      {
+        "name": "Elder Dragon Bone",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40190,
+    "name": "Sleep Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Sleep Attack",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Flaming Espinas Surspike",
+        "amount": 2
+      },
+      {
+        "name": "Somna Dream Powder",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40085,
+    "name": "Slider Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Affinity Sliding",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Lagombi Plastron+",
+        "amount": 1
+      },
+      {
+        "name": "Spongy Hide+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40086,
+    "name": "Sniper Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 750,
+    "skill_points": [
+      {
+        "name": "Steadiness",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Mizutsune Scale+",
+        "amount": 2
+      },
+      {
+        "name": "Rathalos Wing",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40166,
+    "name": "Sniper Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Steadiness",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 8
+      },
+      {
+        "name": "Rathian Weave",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40087,
+    "name": "Sonorous Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Horn Maestro",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Pukei-Pukei Sac+",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40186,
+    "name": "Spiribird's Call Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Spiribird's Call",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Garangolm Cortex",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Dire Scale",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40088,
+    "name": "Spread Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Spread Up",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Bazelgeuse Fuse",
+        "amount": 3
+      },
+      {
+        "name": "Bazelgeuse Talon",
+        "amount": 2
+      },
+      {
+        "name": "Zinogre Plate",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40199,
+    "name": "Spread Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Spread Up",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Gold Rathian Surspike",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Dire Shell",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40089,
+    "name": "Sprinter Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Marathon Runner",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Zinogre Electrofur",
+        "amount": 3
+      },
+      {
+        "name": "Diablos Carapace",
+        "amount": 3
+      },
+      {
+        "name": "Royal Ludroth Claw+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40151,
+    "name": "Sprinter Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Marathon Runner",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Boltscale",
+        "amount": 3
+      },
+      {
+        "name": "Magmadron Hardwhisker",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Scale",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "id": 40090,
+    "name": "Steadfast Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 1000,
+    "skill_points": [
+      {
+        "name": "Stun Resistance",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Rakna-Kadaki Carapace",
+        "amount": 2
+      },
+      {
+        "name": "Almudron Shell+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40091,
+    "name": "Stream Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Jyuratodus Carapace",
+        "amount": 2
+      },
+      {
+        "name": "Torrent Sac",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40115,
+    "name": "Stream Jewel+ 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 3000,
+    "skill_points": [
+      {
+        "name": "Water Attack",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Flood Sac",
+        "amount": 3
+      },
+      {
+        "name": "Overgrown Stiffbone",
+        "amount": 4
+      }
+    ]
+  },
+  {
+    "id": 40092,
+    "name": "Tenderizer Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Weakness Exploit",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Rakna-Kadaki Spike",
+        "amount": 3
+      },
+      {
+        "name": "Almudron Claw+",
+        "amount": 3
+      },
+      {
+        "name": "Narga Medulla",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40093,
+    "name": "Thrift Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Spare Shot",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Rajang Fang+",
+        "amount": 3
+      },
+      {
+        "name": "Rakna-Kadaki Glowgut",
+        "amount": 2
+      },
+      {
+        "name": "Wyvern Gem",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40243,
+    "name": "Thrift Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Spare Shot",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Primordial Bloodstone",
+        "amount": 1
+      },
+      {
+        "name": "Amatsu Membrane",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 40094,
+    "name": "Throttle Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Latent Power",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Lazurite Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Anjanath Pelt+",
+        "amount": 3
+      },
+      {
+        "name": "Zinogre Horn+",
+        "amount": 1
+      },
+      {
+        "name": "Wyvern Gem",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40208,
+    "name": "Throttle Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Latent Power",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Teostra Risegem",
+        "amount": 1
+      },
+      {
+        "name": "Gold Rajang Pelt+",
+        "amount": 3
+      },
+      {
+        "name": "Large Elder Dragon Gem",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40095,
+    "name": "Thunder Res Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Thunder Resistance",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Pearl Hide",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40228,
+    "name": "Trigger Jewel 3",
+    "slot_size": 3,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Status Trigger",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Chameleos Risegem",
+        "amount": 1
+      },
+      {
+        "name": "Risen Dragonbone",
+        "amount": 4
+      }
+    ]
+  },
+  {
+    "id": 40238,
+    "name": "Trigger Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Status Trigger",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Anomaly Jewel",
+        "amount": 5
+      },
+      {
+        "name": "Chameleos Risegem",
+        "amount": 1
+      },
+      {
+        "name": "Risen Slogbone",
+        "amount": 6
+      }
+    ]
+  },
+  {
+    "id": 40096,
+    "name": "Trueshot Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 1500,
+    "skill_points": [
+      {
+        "name": "Special Ammo Boost",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 4
+      },
+      {
+        "name": "Almudron Claw+",
+        "amount": 2
+      },
+      {
+        "name": "Somnacanth Fin+",
+        "amount": 2
+      },
+      {
+        "name": "Mizutsune Claw+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40170,
+    "name": "Trueshot Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 6000,
+    "skill_points": [
+      {
+        "name": "Special Ammo Boost",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Flickering Silvershell",
+        "amount": 3
+      },
+      {
+        "name": "Almudron Hardclaw",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40097,
+    "name": "Venom Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Poison Attack",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Pukei-Pukei Scale+",
+        "amount": 2
+      },
+      {
+        "name": "Toxin Sac",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": 40098,
+    "name": "Wall Run Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Wall Runner",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Bishaten Talon+",
+        "amount": 2
+      },
+      {
+        "name": "Quality Stomach",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40099,
+    "name": "Water Res Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 250,
+    "skill_points": [
+      {
+        "name": "Water Resistance",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Tetranadon Hide+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40100,
+    "name": "Wind Res Jewel 1",
+    "slot_size": 1,
+    "rarity": null,
+    "price": 750,
+    "skill_points": [
+      {
+        "name": "Windproof",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Bloodrun Jewel",
+        "amount": 1
+      },
+      {
+        "name": "Basarios Carapace",
+        "amount": 2
+      },
+      {
+        "name": "Tetra Carapace+",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40101,
+    "name": "Wirebug Jewel 2",
+    "slot_size": 2,
+    "rarity": null,
+    "price": 500,
+    "skill_points": [
+      {
+        "name": "Wirebug Whisperer",
+        "points": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "Aquaglow Jewel",
+        "amount": 2
+      },
+      {
+        "name": "Bishaten Feather+",
+        "amount": 2
+      },
+      {
+        "name": "Monster Broth",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": 40130,
+    "name": "Wirebug Jewel+ 4",
+    "slot_size": 4,
+    "rarity": null,
+    "price": 4000,
+    "skill_points": [
+      {
+        "name": "Wirebug Whisperer",
+        "points": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Sovereign Jewel",
+        "amount": 6
+      },
+      {
+        "name": "Pyre-Kadaki Silk+",
+        "amount": 2
+      },
+      {
+        "name": "Monster Essence",
+        "amount": 2
+      },
+      {
+        "name": "Afflicted Fang",
+        "amount": 7
+      }
+    ]
+  }
+]

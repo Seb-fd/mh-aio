@@ -90,6 +90,39 @@ export function fallbackLabel(value: string | null | undefined): string {
   return value ?? 'Unknown'
 }
 
+/**
+ * Parse the parent weapon name out of `weapons.upgrade_path`.
+ *
+ * Legacy games (MHW, MH2G, MHP3rd) store a plain parent name string or null.
+ * Rise/Wilds seeds store a JSON-encoded object:
+ *   `{"previous": "Hope Blade I", "branches": [...]}` (or `"previous": null` for forge-only roots).
+ * The `branches` array is redundant — `previous` is the true parent edge.
+ *
+ * Returns the parent name, or null for roots / empty / unparseable-parent values.
+ * On JSON parse failure falls back to the raw string (legacy format).
+ */
+export function parseUpgradeParent(upgrade_path: string | null | undefined): string | null {
+  if (!upgrade_path) return null
+  const trimmed = upgrade_path.trim()
+  if (!trimmed) return null
+  if (!trimmed.startsWith('{')) return trimmed
+  try {
+    const obj: unknown = JSON.parse(trimmed)
+    if (obj && typeof obj === 'object' && !Array.isArray(obj)) {
+      const prev = (obj as { previous?: unknown }).previous
+      if (prev == null) return null
+      if (typeof prev === 'string') {
+        const t = prev.trim()
+        return t === '' ? null : t
+      }
+      return null
+    }
+    return trimmed
+  } catch {
+    return trimmed
+  }
+}
+
 export function slotLabel(slot: string | null | undefined): string {
   if (!slot) return '—'
   const s = slot.toLowerCase()
@@ -99,4 +132,70 @@ export function slotLabel(slot: string | null | undefined): string {
   if (s === 'waist') return 'Waist'
   if (s === 'legs' || s === 'greaves') return 'Legs'
   return slot
+}
+
+/** Minimal weapon shape needed for tree building (matches `Weapon`). */
+export interface WeaponNode {
+  id: number
+  name: string
+  weapon_type: string
+  upgrade_path: string | null | undefined
+  sort_order?: number | null
+}
+
+export interface WeaponForest<W extends WeaponNode> {
+  byId: Map<number, W>
+  /** Parent weapon id per weapon id (absent = root). */
+  parentOf: Map<number, number>
+  /** Children per weapon id, pre-sorted with sortFn. */
+  childrenOf: Map<number, W[]>
+  /** Root weapons in sortFn order. */
+  roots: W[]
+}
+
+/**
+ * Build upgrade trees keyed by weapon ID, not name.
+ *
+ * Names are not unique per game/type (Wilds Artian weapons repeat the same
+ * name 3x with different elements/ids), so name-keyed maps merge distinct
+ * subtrees. Edges resolve within the same weapon_type; ambiguous parents
+ * (same name twice in one type — not present in current data) fall back
+ * deterministically to the first in sortFn order. Missing/self parents
+ * are roots.
+ */
+export function buildWeaponForest<W extends WeaponNode>(
+  weapons: W[],
+  sortFn: (a: W, b: W) => number,
+): WeaponForest<W> {
+  const byId = new Map<number, W>()
+  const byTypeName = new Map<string, W[]>()
+  for (const w of weapons) {
+    byId.set(w.id, w)
+    const key = `${w.weapon_type}|${w.name}`
+    const arr = byTypeName.get(key) ?? []
+    arr.push(w)
+    byTypeName.set(key, arr)
+  }
+  const parentOf = new Map<number, number>()
+  for (const w of weapons) {
+    const parentName = parseUpgradeParent(w.upgrade_path)
+    if (!parentName || parentName === w.name) continue
+    const cands = (byTypeName.get(`${w.weapon_type}|${parentName}`) ?? []).filter(
+      (c) => c.id !== w.id,
+    )
+    if (cands.length === 0) continue
+    cands.sort(sortFn)
+    parentOf.set(w.id, cands[0].id)
+  }
+  const childrenOf = new Map<number, W[]>()
+  for (const w of weapons) {
+    const pid = parentOf.get(w.id)
+    if (pid == null || !byId.has(pid)) continue
+    const arr = childrenOf.get(pid) ?? []
+    arr.push(w)
+    childrenOf.set(pid, arr)
+  }
+  for (const arr of childrenOf.values()) arr.sort(sortFn)
+  const roots = weapons.filter((w) => !parentOf.has(w.id)).sort(sortFn)
+  return { byId, parentOf, childrenOf, roots }
 }

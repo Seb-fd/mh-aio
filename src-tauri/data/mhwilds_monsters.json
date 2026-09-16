@@ -1,0 +1,274 @@
+[
+  {
+    "id": 20021,
+    "name": "Ajarakan",
+    "species": "Fanged Beast",
+    "size": "Large",
+    "description": "Fanged beasts that adhere metal to their bodies and use friction to heat and cause explosions. They move in groups during the Firespring.",
+    "sort_order": 1
+  },
+  {
+    "id": 20020,
+    "name": "Arkveld",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "A wyvern with chain-like wings. The flexible chainblades on their wings are used to mow down prey and absorb elemental energy.",
+    "sort_order": 2
+  },
+  {
+    "id": 20012,
+    "name": "Balahara",
+    "species": "Leviathan",
+    "size": "Large",
+    "description": "Desert-dwelling leviathans that use their supple, serpentine bodies to create quicksand traps. Weak against sonic bombs when they're submerged.",
+    "sort_order": 3
+  },
+  {
+    "id": 20030,
+    "name": "Blangonga",
+    "species": "Fanged Beast",
+    "size": "Large",
+    "description": "Large, white fanged beasts that rule over other Blango, attacking as a pack. They exhibit a range of mobility, particularly in snowy climes.",
+    "sort_order": 4
+  },
+  {
+    "id": 20014,
+    "name": "Chatacabra",
+    "species": "Amphibian",
+    "size": "Large",
+    "description": "Amphibians that affix rocks to their forelimbs to power up attacks. Break this \"armor\" to create an attack opening. The tongue is most vulnerable.",
+    "sort_order": 5
+  },
+  {
+    "id": 20005,
+    "name": "Congalala",
+    "species": "Fanged Beast",
+    "size": "Large",
+    "description": "Large, pink fanged beasts. Beware their potent breath, which changes based on their mushroom diet, and stench, which disables recovery items.",
+    "sort_order": 6
+  },
+  {
+    "id": 20011,
+    "name": "Doshaguma",
+    "species": "Fanged Beast",
+    "size": "Large",
+    "description": "Rugged, territorial fanged beasts that exhibit an aggressive disposition and inhabit a large range. Sometimes observed in large packs.",
+    "sort_order": 7
+  },
+  {
+    "id": 20034,
+    "name": "Gogmazios",
+    "species": "Elder Dragon",
+    "size": "Large",
+    "description": "A mysterious elder dragon covered head to tail in a viscous black liquid that was found hibernating in an expanse beneath Azuz.",
+    "sort_order": 8
+  },
+  {
+    "id": 20007,
+    "name": "Gore Magala",
+    "species": "Demi Elder",
+    "size": "Large",
+    "description": "Monsters draped in great wings like a black overcoat. They have no eyes, so instead they use a scattering of fine scales to locate prey.",
+    "sort_order": 9
+  },
+  {
+    "id": 20008,
+    "name": "Gravios",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "Large wyverns found in the Oilwell Basin. Their highly developed carapaces repel attacks and emit powerful heat rays.",
+    "sort_order": 10
+  },
+  {
+    "id": 20009,
+    "name": "Guardian Arkveld",
+    "species": "Construct",
+    "size": "Large",
+    "description": "An artificial species created by an ancient civilization based on a presumed extinct, legendary monster called Arkveld.",
+    "sort_order": 11
+  },
+  {
+    "id": 20002,
+    "name": "Guardian Doshaguma",
+    "species": "Construct",
+    "size": "Large",
+    "description": "An artificial species created by an ancient civilization with a Doshaguma's power. They boast an incredibly robust physique and can spew acid.",
+    "sort_order": 12
+  },
+  {
+    "id": 20028,
+    "name": "Guardian Ebony Odogaron",
+    "species": "Construct",
+    "size": "Large",
+    "description": "An artificial species created by an ancient civilization with an Ebony Odogaron's power. The flurries from their foreclaws pose a threat.",
+    "sort_order": 13
+  },
+  {
+    "id": 20016,
+    "name": "Guardian Fulgur Anjanath",
+    "species": "Construct",
+    "size": "Large",
+    "description": "An artificial species created by an ancient civilization with a Fulgur Anjanath's power. They can discharge lightning and have a nasty bite.",
+    "sort_order": 14
+  },
+  {
+    "id": 20024,
+    "name": "Guardian Rathalos",
+    "species": "Construct",
+    "size": "Large",
+    "description": "An artificial species created by an ancient civilization with a Rathalos's power. Beware the energy released by their powerful claw attacks.",
+    "sort_order": 15
+  },
+  {
+    "id": 20022,
+    "name": "Gypceros",
+    "species": "Bird Wyvern",
+    "size": "Large",
+    "description": "Monsters that use their prominent crest to stun foes with disorienting flashes of light before finishing them off with poisonous saliva.",
+    "sort_order": 16
+  },
+  {
+    "id": 20017,
+    "name": "Hirabami",
+    "species": "Leviathan",
+    "size": "Large",
+    "description": "Leviathans that inhabit the Iceshard Cliffs. They have sharp, pincer-like tails and membranes on their necks that catch the wind to keep them aloft.",
+    "sort_order": 17
+  },
+  {
+    "id": 20026,
+    "name": "Jin Dahaad",
+    "species": "Leviathan",
+    "size": "Large",
+    "description": "A leviathan that sits at the peak of the Iceshard Cliffs' ecosystem. It generates cold air via cooling organs across its massive body.",
+    "sort_order": 18
+  },
+  {
+    "id": 20031,
+    "name": "Lagiacrus",
+    "species": "Leviathan",
+    "size": "Large",
+    "description": "Leviathans that exist at the top of the aquatic food chain. They have appeared in the waters of the Scarlet Forest, drawn in by its fertile environment.",
+    "sort_order": 19
+  },
+  {
+    "id": 20004,
+    "name": "Lala Barina",
+    "species": "Temnoceran",
+    "size": "Large",
+    "description": "Temnocerans native to the Scarlet Forest with distinctive, pirouette-like movements. The florets they release have a paralytic effect.",
+    "sort_order": 20
+  },
+  {
+    "id": 20015,
+    "name": "Mizutsune",
+    "species": "Leviathan",
+    "size": "Large",
+    "description": "Specially evolved leviathans, Mizutsune can secrete a peculiar foam that deftly covers their foes in dangerous bubbles.",
+    "sort_order": 21
+  },
+  {
+    "id": 20006,
+    "name": "Nerscylla",
+    "species": "Temnoceran",
+    "size": "Large",
+    "description": "Temnocerans that afflict poison, sleep, and webbing ailments—skillfully cornering prey, then hunting it with their pincer-like jaws.",
+    "sort_order": 22
+  },
+  {
+    "id": 20027,
+    "name": "Nu Udra",
+    "species": "Cephalopod",
+    "size": "Large",
+    "description": "The cephalopod that reigns supreme over Oilwell Basin's ecosystem. A vision of hell, it attacks with tentacles and ignited oilsilt.",
+    "sort_order": 23
+  },
+  {
+    "id": 20033,
+    "name": "Omega Planetes",
+    "species": "Machine",
+    "size": "Large",
+    "description": "An Omega frame that crossed the interdimensional rift. It descended on the Forbidden Lands to find stronger lifeforms and planets to invade.",
+    "sort_order": 24
+  },
+  {
+    "id": 20010,
+    "name": "Quematrice",
+    "species": "Brute Wyvern",
+    "size": "Large",
+    "description": "Brute wyverns that spread flammable vapor which they then ignite with their tails. They subsist on prey stolen from other predators.",
+    "sort_order": 25
+  },
+  {
+    "id": 20029,
+    "name": "Rathalos",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "Fearsome wyverns known as \"Kings of the Skies.\" Armed with powerful poison claws, they use their aerial prowess to descend on prey from above.",
+    "sort_order": 26
+  },
+  {
+    "id": 20013,
+    "name": "Rathian",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "The \"Queen of the Land,\" these female fire-breathing wyverns are known for their powerful legs and lethal, poison-secreting tails.",
+    "sort_order": 27
+  },
+  {
+    "id": 20003,
+    "name": "Rey Dau",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "The flying wyvern that reigns supreme over the Windward Plains' ecosystem. It is able to store, amplify, and discharge the Sandtide's lightning.",
+    "sort_order": 28
+  },
+  {
+    "id": 20019,
+    "name": "Rompopolo",
+    "species": "Brute Wyvern",
+    "size": "Large",
+    "description": "Dappled brute wyverns that prowl Oilwell Basin. The gas from their tongues is toxic, and the gas in their tails can detonate the earth.",
+    "sort_order": 29
+  },
+  {
+    "id": 20032,
+    "name": "Seregios",
+    "species": "Flying Wyvern",
+    "size": "Large",
+    "description": "Fiercely territorial flying wyverns known for the sharp, blade-like scales covering their bodies.",
+    "sort_order": 30
+  },
+  {
+    "id": 20025,
+    "name": "Uth Duna",
+    "species": "Leviathan",
+    "size": "Large",
+    "description": "The leviathan that reigns supreme over the Scarlet Forest's ecosystem. Its protective veil can also generate a wave to keep foes at bay.",
+    "sort_order": 31
+  },
+  {
+    "id": 20023,
+    "name": "Xu Wu",
+    "species": "Cephalopod",
+    "size": "Large",
+    "description": "Cephalopods that roam the Ruins of Wyveria and prey on Guardians. This often leads to conflicts between the two monsters.",
+    "sort_order": 32
+  },
+  {
+    "id": 20018,
+    "name": "Yian Kut-Ku",
+    "species": "Bird Wyvern",
+    "size": "Large",
+    "description": "Bird wyverns with impressive beaks, big ears, and an appetite for insects. Skittish by nature, they will still put up a fight if threatened.",
+    "sort_order": 33
+  },
+  {
+    "id": 20001,
+    "name": "Zoh Shia",
+    "species": "Construct",
+    "size": "Large",
+    "description": "A Guardian created to be Wyveria's savior. It was feeding off the Dragontorch, drawing from the vast stores of energy while it slumbered.",
+    "sort_order": 34
+  }
+]

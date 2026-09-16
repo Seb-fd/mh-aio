@@ -52,6 +52,7 @@ export interface MonsterDetail {
   icon_name: string | null
   icon_color: string | null
   icon_url: string | null
+  icon_url_lg: string | null
   language: string
 }
 
@@ -465,6 +466,48 @@ export interface SearchResult {
   route: string
 }
 
+export interface SavedBuild {
+  version: number
+  id: string
+  name: string
+  game_id: number
+  query: AssQueryInput
+  solution: AssSolutionView
+}
+
+export type FavoriteKind =
+  'monster' | 'weapon' | 'armor' | 'armor_set' | 'quest' | 'item' | 'skill' | 'decoration'
+
+export interface Favorite {
+  game_id: number
+  kind: FavoriteKind
+  id: number
+  name: string
+  created_at: number
+}
+
+export function favoriteRoute(gameRouteId: string, fav: Pick<Favorite, 'kind' | 'id'>): string {
+  const base = `/${gameRouteId}`
+  switch (fav.kind) {
+    case 'monster':
+      return `${base}/monsters/${fav.id}`
+    case 'weapon':
+      return `${base}/weapons/${fav.id}`
+    case 'armor':
+      return `${base}/armor/${fav.id}`
+    case 'armor_set':
+      return `${base}/armor/sets/${fav.id}`
+    case 'quest':
+      return `${base}/quests/${fav.id}`
+    case 'item':
+      return `${base}/items/${fav.id}`
+    case 'skill':
+      return `${base}/skills/${fav.id}`
+    case 'decoration':
+      return `${base}/decorations/${fav.id}`
+  }
+}
+
 export interface AssSkillReq {
   skill_id: number
   points_required: number
@@ -614,4 +657,15 @@ export const api = {
   getPalicoGadgets: (gameId: number) => invoke<PalicoGadget[]>('get_palico_gadgets', { gameId }),
   getPalicoGadgetDetail: (id: number) =>
     invoke<PalicoGadgetDetail | null>('get_palico_gadget_detail', { id }),
+  listBuilds: (gameId: number | null) => invoke<SavedBuild[]>('list_builds', { gameId }),
+  saveBuild: (name: string, gameId: number, query: AssQueryInput, solution: AssSolutionView) =>
+    invoke<SavedBuild>('save_build', { name, gameId, query, solution }),
+  getBuild: (id: string) => invoke<SavedBuild | null>('get_build', { id }),
+  deleteBuild: (id: string) => invoke<boolean>('delete_build', { id }),
+  importBuild: (json: string) => invoke<SavedBuild>('import_build', { json }),
+  listFavorites: (gameId: number | null) => invoke<Favorite[]>('list_favorites', { gameId }),
+  toggleFavorite: (gameId: number, kind: FavoriteKind, id: number, name: string) =>
+    invoke<boolean>('toggle_favorite', { gameId, kind, id, name }),
+  removeFavorite: (gameId: number, kind: FavoriteKind, id: number) =>
+    invoke<boolean>('remove_favorite', { gameId, kind, id }),
 }

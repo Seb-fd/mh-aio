@@ -1,0 +1,11572 @@
+[
+  {
+    "armor_id": 50602,
+    "item_id": 30531,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50602,
+    "item_id": 30703,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50600,
+    "item_id": 30530,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50600,
+    "item_id": 30703,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50604,
+    "item_id": 30530,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50604,
+    "item_id": 30703,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50601,
+    "item_id": 30053,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50601,
+    "item_id": 30703,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50603,
+    "item_id": 30053,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50603,
+    "item_id": 30703,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50498,
+    "item_id": 30331,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50498,
+    "item_id": 30332,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50564,
+    "item_id": 30333,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50564,
+    "item_id": 30335,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50564,
+    "item_id": 30339,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50564,
+    "item_id": 30342,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50504,
+    "item_id": 30333,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50504,
+    "item_id": 30335,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50504,
+    "item_id": 30339,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50504,
+    "item_id": 30342,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50499,
+    "item_id": 30332,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50499,
+    "item_id": 30333,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50499,
+    "item_id": 30334,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50565,
+    "item_id": 30337,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50565,
+    "item_id": 30338,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50565,
+    "item_id": 30339,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50565,
+    "item_id": 30340,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50505,
+    "item_id": 30337,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50505,
+    "item_id": 30338,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50505,
+    "item_id": 30339,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50505,
+    "item_id": 30340,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50495,
+    "item_id": 30333,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50495,
+    "item_id": 30334,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50495,
+    "item_id": 30335,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50495,
+    "item_id": 30336,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50561,
+    "item_id": 30338,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50561,
+    "item_id": 30339,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50561,
+    "item_id": 30342,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50561,
+    "item_id": 30536,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50501,
+    "item_id": 30338,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50501,
+    "item_id": 30339,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50501,
+    "item_id": 30342,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50501,
+    "item_id": 30536,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50496,
+    "item_id": 30330,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50496,
+    "item_id": 30334,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50562,
+    "item_id": 30337,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50562,
+    "item_id": 30340,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50562,
+    "item_id": 30605,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50502,
+    "item_id": 30337,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50502,
+    "item_id": 30340,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50502,
+    "item_id": 30605,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50497,
+    "item_id": 30330,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50497,
+    "item_id": 30331,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50497,
+    "item_id": 30332,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50563,
+    "item_id": 30337,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50563,
+    "item_id": 30340,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50563,
+    "item_id": 30341,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50563,
+    "item_id": 30342,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50503,
+    "item_id": 30337,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50503,
+    "item_id": 30340,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50503,
+    "item_id": 30341,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50503,
+    "item_id": 30342,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50270,
+    "item_id": 30052,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50270,
+    "item_id": 30055,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50039,
+    "item_id": 30053,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50039,
+    "item_id": 30054,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50271,
+    "item_id": 30052,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50271,
+    "item_id": 30055,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50040,
+    "item_id": 30053,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50040,
+    "item_id": 30054,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50267,
+    "item_id": 30051,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50267,
+    "item_id": 30052,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50036,
+    "item_id": 30053,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50036,
+    "item_id": 30054,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50268,
+    "item_id": 30051,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50268,
+    "item_id": 30052,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50037,
+    "item_id": 30053,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50037,
+    "item_id": 30054,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50269,
+    "item_id": 30051,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50269,
+    "item_id": 30052,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50038,
+    "item_id": 30053,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50038,
+    "item_id": 30054,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50300,
+    "item_id": 30271,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50300,
+    "item_id": 30602,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50300,
+    "item_id": 30672,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50687,
+    "item_id": 30372,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50687,
+    "item_id": 30608,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50687,
+    "item_id": 30644,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50687,
+    "item_id": 30775,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50207,
+    "item_id": 30423,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50207,
+    "item_id": 30424,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50207,
+    "item_id": 30427,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50207,
+    "item_id": 30428,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50524,
+    "item_id": 30423,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50524,
+    "item_id": 30424,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50524,
+    "item_id": 30427,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50524,
+    "item_id": 30428,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50708,
+    "item_id": 30084,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50708,
+    "item_id": 30422,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50708,
+    "item_id": 30423,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50708,
+    "item_id": 30787,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50208,
+    "item_id": 30419,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50208,
+    "item_id": 30422,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50208,
+    "item_id": 30423,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50208,
+    "item_id": 30425,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50525,
+    "item_id": 30419,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50525,
+    "item_id": 30422,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50525,
+    "item_id": 30423,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50525,
+    "item_id": 30425,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50709,
+    "item_id": 30424,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50709,
+    "item_id": 30425,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50709,
+    "item_id": 30427,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50709,
+    "item_id": 30787,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50204,
+    "item_id": 30422,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50204,
+    "item_id": 30423,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50204,
+    "item_id": 30424,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50204,
+    "item_id": 30426,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50521,
+    "item_id": 30422,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50521,
+    "item_id": 30423,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50521,
+    "item_id": 30424,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50521,
+    "item_id": 30426,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50705,
+    "item_id": 30422,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50705,
+    "item_id": 30426,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50705,
+    "item_id": 30427,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50705,
+    "item_id": 30787,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50205,
+    "item_id": 30422,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50205,
+    "item_id": 30423,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50205,
+    "item_id": 30425,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50205,
+    "item_id": 30428,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50522,
+    "item_id": 30422,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50522,
+    "item_id": 30423,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50522,
+    "item_id": 30425,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50522,
+    "item_id": 30428,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50706,
+    "item_id": 30419,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50706,
+    "item_id": 30423,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50706,
+    "item_id": 30424,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50706,
+    "item_id": 30787,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50206,
+    "item_id": 30084,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50206,
+    "item_id": 30425,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50206,
+    "item_id": 30426,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50206,
+    "item_id": 30428,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50523,
+    "item_id": 30084,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50523,
+    "item_id": 30425,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50523,
+    "item_id": 30426,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50523,
+    "item_id": 30428,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50707,
+    "item_id": 30060,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50707,
+    "item_id": 30419,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50707,
+    "item_id": 30426,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50707,
+    "item_id": 30787,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50519,
+    "item_id": 30382,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50519,
+    "item_id": 30531,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50519,
+    "item_id": 30637,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50520,
+    "item_id": 30520,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50520,
+    "item_id": 30557,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50520,
+    "item_id": 30637,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50516,
+    "item_id": 30520,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50516,
+    "item_id": 30529,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50516,
+    "item_id": 30637,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50517,
+    "item_id": 30055,
+    "quantity": 10
+  },
+  {
+    "armor_id": 50517,
+    "item_id": 30382,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50517,
+    "item_id": 30637,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50518,
+    "item_id": 30060,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50518,
+    "item_id": 30520,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50518,
+    "item_id": 30637,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50664,
+    "item_id": 30489,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50664,
+    "item_id": 30529,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50664,
+    "item_id": 30608,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50664,
+    "item_id": 30725,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50698,
+    "item_id": 30121,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50698,
+    "item_id": 30697,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50698,
+    "item_id": 30700,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50698,
+    "item_id": 30793,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50694,
+    "item_id": 30314,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50694,
+    "item_id": 30696,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50694,
+    "item_id": 30701,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50694,
+    "item_id": 30793,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50695,
+    "item_id": 30315,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50695,
+    "item_id": 30695,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50695,
+    "item_id": 30698,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50695,
+    "item_id": 30793,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50697,
+    "item_id": 30314,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50697,
+    "item_id": 30318,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50697,
+    "item_id": 30696,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50697,
+    "item_id": 30793,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50696,
+    "item_id": 30316,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50696,
+    "item_id": 30317,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50696,
+    "item_id": 30699,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50696,
+    "item_id": 30793,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50554,
+    "item_id": 30531,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50554,
+    "item_id": 30560,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50553,
+    "item_id": 30536,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50553,
+    "item_id": 30560,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50555,
+    "item_id": 30530,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50555,
+    "item_id": 30560,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50529,
+    "item_id": 30072,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50529,
+    "item_id": 30073,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50529,
+    "item_id": 30278,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50529,
+    "item_id": 30643,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50170,
+    "item_id": 30281,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50170,
+    "item_id": 30282,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50170,
+    "item_id": 30546,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50342,
+    "item_id": 30281,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50342,
+    "item_id": 30282,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50342,
+    "item_id": 30546,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50530,
+    "item_id": 30072,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50530,
+    "item_id": 30074,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50171,
+    "item_id": 30279,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50171,
+    "item_id": 30280,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50171,
+    "item_id": 30282,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50171,
+    "item_id": 30643,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50343,
+    "item_id": 30279,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50343,
+    "item_id": 30280,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50343,
+    "item_id": 30282,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50343,
+    "item_id": 30643,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50526,
+    "item_id": 30073,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50526,
+    "item_id": 30074,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50167,
+    "item_id": 30280,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50167,
+    "item_id": 30281,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50167,
+    "item_id": 30282,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50339,
+    "item_id": 30280,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50339,
+    "item_id": 30281,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50339,
+    "item_id": 30282,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50527,
+    "item_id": 30072,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50527,
+    "item_id": 30073,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50527,
+    "item_id": 30075,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50168,
+    "item_id": 30279,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50168,
+    "item_id": 30281,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50168,
+    "item_id": 30602,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50340,
+    "item_id": 30279,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50340,
+    "item_id": 30281,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50340,
+    "item_id": 30602,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50528,
+    "item_id": 30074,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50528,
+    "item_id": 30075,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50528,
+    "item_id": 30545,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50169,
+    "item_id": 30075,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50169,
+    "item_id": 30279,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50169,
+    "item_id": 30280,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50169,
+    "item_id": 30281,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50341,
+    "item_id": 30075,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50341,
+    "item_id": 30279,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50341,
+    "item_id": 30280,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50341,
+    "item_id": 30281,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50653,
+    "item_id": 30714,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50653,
+    "item_id": 30715,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50653,
+    "item_id": 30716,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50653,
+    "item_id": 30717,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50654,
+    "item_id": 30529,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50654,
+    "item_id": 30714,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50654,
+    "item_id": 30716,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50654,
+    "item_id": 30717,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50656,
+    "item_id": 30714,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50656,
+    "item_id": 30716,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50656,
+    "item_id": 30719,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50656,
+    "item_id": 30720,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50655,
+    "item_id": 30714,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50655,
+    "item_id": 30715,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50655,
+    "item_id": 30718,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50655,
+    "item_id": 30720,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50657,
+    "item_id": 30714,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50657,
+    "item_id": 30715,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50657,
+    "item_id": 30718,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50657,
+    "item_id": 30719,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50245,
+    "item_id": 30246,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50245,
+    "item_id": 30247,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50245,
+    "item_id": 30552,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50337,
+    "item_id": 30054,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50337,
+    "item_id": 30273,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50337,
+    "item_id": 30553,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50202,
+    "item_id": 30054,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50202,
+    "item_id": 30273,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50202,
+    "item_id": 30553,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50246,
+    "item_id": 30248,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50246,
+    "item_id": 30249,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50246,
+    "item_id": 30450,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50246,
+    "item_id": 30552,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50338,
+    "item_id": 30273,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50338,
+    "item_id": 30277,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50338,
+    "item_id": 30529,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50338,
+    "item_id": 30553,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50203,
+    "item_id": 30273,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50203,
+    "item_id": 30277,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50203,
+    "item_id": 30529,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50203,
+    "item_id": 30553,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50242,
+    "item_id": 30249,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50242,
+    "item_id": 30552,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50334,
+    "item_id": 30274,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50334,
+    "item_id": 30275,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50334,
+    "item_id": 30277,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50199,
+    "item_id": 30274,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50199,
+    "item_id": 30275,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50199,
+    "item_id": 30277,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50243,
+    "item_id": 30245,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50243,
+    "item_id": 30247,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50243,
+    "item_id": 30249,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50335,
+    "item_id": 30273,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50335,
+    "item_id": 30274,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50335,
+    "item_id": 30276,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50335,
+    "item_id": 30553,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50200,
+    "item_id": 30273,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50200,
+    "item_id": 30274,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50200,
+    "item_id": 30276,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50200,
+    "item_id": 30553,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50244,
+    "item_id": 30245,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50244,
+    "item_id": 30246,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50336,
+    "item_id": 30275,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50336,
+    "item_id": 30276,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50336,
+    "item_id": 30277,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50336,
+    "item_id": 30451,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50201,
+    "item_id": 30275,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50201,
+    "item_id": 30276,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50201,
+    "item_id": 30277,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50201,
+    "item_id": 30451,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50452,
+    "item_id": 30059,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50452,
+    "item_id": 30060,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50452,
+    "item_id": 30435,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50453,
+    "item_id": 30435,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50453,
+    "item_id": 30527,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50453,
+    "item_id": 30537,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50449,
+    "item_id": 30435,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50449,
+    "item_id": 30527,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50449,
+    "item_id": 30537,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50450,
+    "item_id": 30059,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50450,
+    "item_id": 30435,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50450,
+    "item_id": 30537,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50451,
+    "item_id": 30059,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50451,
+    "item_id": 30435,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50451,
+    "item_id": 30537,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50391,
+    "item_id": 30496,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50391,
+    "item_id": 30497,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50391,
+    "item_id": 30499,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50391,
+    "item_id": 30549,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50019,
+    "item_id": 30496,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50019,
+    "item_id": 30497,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50019,
+    "item_id": 30499,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50019,
+    "item_id": 30549,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50392,
+    "item_id": 30495,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50392,
+    "item_id": 30497,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50392,
+    "item_id": 30498,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50392,
+    "item_id": 30605,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50020,
+    "item_id": 30495,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50020,
+    "item_id": 30497,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50020,
+    "item_id": 30498,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50020,
+    "item_id": 30605,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50388,
+    "item_id": 30059,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50388,
+    "item_id": 30495,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50388,
+    "item_id": 30496,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50388,
+    "item_id": 30498,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50016,
+    "item_id": 30059,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50016,
+    "item_id": 30495,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50016,
+    "item_id": 30496,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50016,
+    "item_id": 30498,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50389,
+    "item_id": 30497,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50389,
+    "item_id": 30499,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50389,
+    "item_id": 30527,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50017,
+    "item_id": 30497,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50017,
+    "item_id": 30499,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50017,
+    "item_id": 30527,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50390,
+    "item_id": 30035,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50390,
+    "item_id": 30495,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50390,
+    "item_id": 30498,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50390,
+    "item_id": 30499,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50018,
+    "item_id": 30035,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50018,
+    "item_id": 30495,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50018,
+    "item_id": 30498,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50018,
+    "item_id": 30499,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50681,
+    "item_id": 30374,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50681,
+    "item_id": 30508,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50681,
+    "item_id": 30608,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50681,
+    "item_id": 30775,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50310,
+    "item_id": 30273,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50310,
+    "item_id": 30451,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50310,
+    "item_id": 30459,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50310,
+    "item_id": 30666,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50309,
+    "item_id": 30202,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50309,
+    "item_id": 30276,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50309,
+    "item_id": 30451,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50309,
+    "item_id": 30666,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50308,
+    "item_id": 30274,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50308,
+    "item_id": 30451,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50308,
+    "item_id": 30524,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50308,
+    "item_id": 30666,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50306,
+    "item_id": 30449,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50306,
+    "item_id": 30451,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50306,
+    "item_id": 30553,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50306,
+    "item_id": 30666,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50307,
+    "item_id": 30275,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50307,
+    "item_id": 30451,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50307,
+    "item_id": 30526,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50307,
+    "item_id": 30666,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50265,
+    "item_id": 30056,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50054,
+    "item_id": 30538,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50054,
+    "item_id": 30539,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50266,
+    "item_id": 30056,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50055,
+    "item_id": 30536,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50055,
+    "item_id": 30539,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50262,
+    "item_id": 30056,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50051,
+    "item_id": 30537,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50051,
+    "item_id": 30539,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50263,
+    "item_id": 30056,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50052,
+    "item_id": 30536,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50052,
+    "item_id": 30539,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50264,
+    "item_id": 30056,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50053,
+    "item_id": 30537,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50053,
+    "item_id": 30539,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50278,
+    "item_id": 30086,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50531,
+    "item_id": 30449,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50438,
+    "item_id": 30449,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50137,
+    "item_id": 30202,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50137,
+    "item_id": 30451,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50137,
+    "item_id": 30526,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50139,
+    "item_id": 30202,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50139,
+    "item_id": 30451,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50139,
+    "item_id": 30526,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50138,
+    "item_id": 30202,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50138,
+    "item_id": 30451,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50138,
+    "item_id": 30526,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50136,
+    "item_id": 30202,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50136,
+    "item_id": 30451,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50136,
+    "item_id": 30526,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50135,
+    "item_id": 30202,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50135,
+    "item_id": 30451,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50135,
+    "item_id": 30526,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50692,
+    "item_id": 30532,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50692,
+    "item_id": 30774,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50693,
+    "item_id": 30528,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50693,
+    "item_id": 30774,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50689,
+    "item_id": 30529,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50689,
+    "item_id": 30774,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50690,
+    "item_id": 30532,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50690,
+    "item_id": 30774,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50691,
+    "item_id": 30528,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50691,
+    "item_id": 30774,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50572,
+    "item_id": 30417,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50574,
+    "item_id": 30417,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50573,
+    "item_id": 30417,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50573,
+    "item_id": 30533,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50571,
+    "item_id": 30417,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50571,
+    "item_id": 30533,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50575,
+    "item_id": 30417,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50575,
+    "item_id": 30533,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50493,
+    "item_id": 30076,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50493,
+    "item_id": 30079,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50493,
+    "item_id": 30088,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50493,
+    "item_id": 30259,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50049,
+    "item_id": 30262,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50049,
+    "item_id": 30263,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50049,
+    "item_id": 30264,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50369,
+    "item_id": 30262,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50369,
+    "item_id": 30263,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50369,
+    "item_id": 30264,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50494,
+    "item_id": 30056,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50494,
+    "item_id": 30076,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50494,
+    "item_id": 30078,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50050,
+    "item_id": 30260,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50050,
+    "item_id": 30261,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50050,
+    "item_id": 30264,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50050,
+    "item_id": 30453,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50370,
+    "item_id": 30260,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50370,
+    "item_id": 30261,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50370,
+    "item_id": 30264,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50370,
+    "item_id": 30453,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50490,
+    "item_id": 30076,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50490,
+    "item_id": 30079,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50046,
+    "item_id": 30260,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50046,
+    "item_id": 30261,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50046,
+    "item_id": 30604,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50366,
+    "item_id": 30260,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50366,
+    "item_id": 30261,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50366,
+    "item_id": 30604,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50491,
+    "item_id": 30077,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50491,
+    "item_id": 30078,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50491,
+    "item_id": 30079,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50047,
+    "item_id": 30263,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50047,
+    "item_id": 30264,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50047,
+    "item_id": 30539,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50367,
+    "item_id": 30263,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50367,
+    "item_id": 30264,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50367,
+    "item_id": 30539,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50492,
+    "item_id": 30077,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50492,
+    "item_id": 30078,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50048,
+    "item_id": 30260,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50048,
+    "item_id": 30261,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50048,
+    "item_id": 30262,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50048,
+    "item_id": 30263,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50368,
+    "item_id": 30260,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50368,
+    "item_id": 30261,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50368,
+    "item_id": 30262,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50368,
+    "item_id": 30263,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50304,
+    "item_id": 30443,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50304,
+    "item_id": 30668,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50304,
+    "item_id": 30669,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50304,
+    "item_id": 30675,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50305,
+    "item_id": 30506,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50305,
+    "item_id": 30668,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50305,
+    "item_id": 30669,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50305,
+    "item_id": 30675,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50302,
+    "item_id": 30500,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50302,
+    "item_id": 30668,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50302,
+    "item_id": 30669,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50302,
+    "item_id": 30675,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50303,
+    "item_id": 30495,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50303,
+    "item_id": 30668,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50303,
+    "item_id": 30669,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50303,
+    "item_id": 30675,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50301,
+    "item_id": 30285,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50301,
+    "item_id": 30668,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50301,
+    "item_id": 30669,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50301,
+    "item_id": 30675,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50387,
+    "item_id": 30458,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50581,
+    "item_id": 30459,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50080,
+    "item_id": 30459,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50380,
+    "item_id": 30284,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50380,
+    "item_id": 30565,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50380,
+    "item_id": 30604,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50381,
+    "item_id": 30268,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50381,
+    "item_id": 30539,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50381,
+    "item_id": 30565,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50377,
+    "item_id": 30054,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50377,
+    "item_id": 30260,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50377,
+    "item_id": 30565,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50378,
+    "item_id": 30273,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50378,
+    "item_id": 30565,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50378,
+    "item_id": 30637,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50379,
+    "item_id": 30279,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50379,
+    "item_id": 30565,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50379,
+    "item_id": 30602,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50426,
+    "item_id": 30462,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50426,
+    "item_id": 30464,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50004,
+    "item_id": 30468,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50004,
+    "item_id": 30470,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50004,
+    "item_id": 30535,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50092,
+    "item_id": 30468,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50092,
+    "item_id": 30470,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50092,
+    "item_id": 30535,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50427,
+    "item_id": 30462,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50427,
+    "item_id": 30464,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50427,
+    "item_id": 30466,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50427,
+    "item_id": 30521,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50005,
+    "item_id": 30090,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50005,
+    "item_id": 30467,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50005,
+    "item_id": 30469,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50005,
+    "item_id": 30535,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50093,
+    "item_id": 30090,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50093,
+    "item_id": 30467,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50093,
+    "item_id": 30469,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50093,
+    "item_id": 30535,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50423,
+    "item_id": 30463,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50423,
+    "item_id": 30465,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50001,
+    "item_id": 30467,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50001,
+    "item_id": 30469,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50001,
+    "item_id": 30604,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50089,
+    "item_id": 30467,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50089,
+    "item_id": 30469,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50089,
+    "item_id": 30604,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50424,
+    "item_id": 30462,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50424,
+    "item_id": 30463,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50424,
+    "item_id": 30465,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50002,
+    "item_id": 30467,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50002,
+    "item_id": 30468,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50002,
+    "item_id": 30469,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50002,
+    "item_id": 30470,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50090,
+    "item_id": 30467,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50090,
+    "item_id": 30468,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50090,
+    "item_id": 30469,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50090,
+    "item_id": 30470,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50425,
+    "item_id": 30052,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50425,
+    "item_id": 30464,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50425,
+    "item_id": 30465,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50003,
+    "item_id": 30470,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50003,
+    "item_id": 30522,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50003,
+    "item_id": 30535,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50091,
+    "item_id": 30470,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50091,
+    "item_id": 30522,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50091,
+    "item_id": 30535,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50116,
+    "item_id": 30384,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50116,
+    "item_id": 30386,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50116,
+    "item_id": 30389,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50116,
+    "item_id": 30637,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50239,
+    "item_id": 30384,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50239,
+    "item_id": 30386,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50239,
+    "item_id": 30389,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50239,
+    "item_id": 30637,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50684,
+    "item_id": 30387,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50684,
+    "item_id": 30637,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50684,
+    "item_id": 30646,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50684,
+    "item_id": 30773,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50117,
+    "item_id": 30385,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50117,
+    "item_id": 30387,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50117,
+    "item_id": 30388,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50117,
+    "item_id": 30549,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50240,
+    "item_id": 30385,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50240,
+    "item_id": 30387,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50240,
+    "item_id": 30388,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50240,
+    "item_id": 30549,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50685,
+    "item_id": 30385,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50685,
+    "item_id": 30386,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50685,
+    "item_id": 30388,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50685,
+    "item_id": 30773,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50118,
+    "item_id": 30383,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50118,
+    "item_id": 30385,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50118,
+    "item_id": 30387,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50118,
+    "item_id": 30459,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50241,
+    "item_id": 30383,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50241,
+    "item_id": 30385,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50241,
+    "item_id": 30387,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50241,
+    "item_id": 30459,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50686,
+    "item_id": 30084,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50686,
+    "item_id": 30383,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50686,
+    "item_id": 30384,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50686,
+    "item_id": 30773,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50114,
+    "item_id": 30084,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50114,
+    "item_id": 30383,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50114,
+    "item_id": 30386,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50114,
+    "item_id": 30389,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50237,
+    "item_id": 30084,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50237,
+    "item_id": 30383,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50237,
+    "item_id": 30386,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50237,
+    "item_id": 30389,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50682,
+    "item_id": 30383,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50682,
+    "item_id": 30387,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50682,
+    "item_id": 30388,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50682,
+    "item_id": 30773,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50115,
+    "item_id": 30383,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50115,
+    "item_id": 30384,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50115,
+    "item_id": 30385,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50115,
+    "item_id": 30603,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50238,
+    "item_id": 30383,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50238,
+    "item_id": 30384,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50238,
+    "item_id": 30385,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50238,
+    "item_id": 30603,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50683,
+    "item_id": 30384,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50683,
+    "item_id": 30386,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50683,
+    "item_id": 30646,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50683,
+    "item_id": 30773,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50559,
+    "item_id": 30418,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50559,
+    "item_id": 30529,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50559,
+    "item_id": 30532,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50560,
+    "item_id": 30418,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50560,
+    "item_id": 30531,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50560,
+    "item_id": 30532,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50556,
+    "item_id": 30382,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50556,
+    "item_id": 30492,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50556,
+    "item_id": 30532,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50556,
+    "item_id": 30612,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50557,
+    "item_id": 30054,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50557,
+    "item_id": 30084,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50557,
+    "item_id": 30532,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50557,
+    "item_id": 30557,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50558,
+    "item_id": 30035,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50558,
+    "item_id": 30532,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50558,
+    "item_id": 30612,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50558,
+    "item_id": 30637,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50442,
+    "item_id": 30059,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50442,
+    "item_id": 30201,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50442,
+    "item_id": 30448,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50439,
+    "item_id": 30201,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50439,
+    "item_id": 30453,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50439,
+    "item_id": 30539,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50441,
+    "item_id": 30201,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50441,
+    "item_id": 30453,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50441,
+    "item_id": 30539,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50443,
+    "item_id": 30059,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50443,
+    "item_id": 30201,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50443,
+    "item_id": 30448,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50440,
+    "item_id": 30201,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50440,
+    "item_id": 30453,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50440,
+    "item_id": 30539,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50588,
+    "item_id": 30337,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50588,
+    "item_id": 30340,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50588,
+    "item_id": 30682,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50628,
+    "item_id": 30308,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50628,
+    "item_id": 30487,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50628,
+    "item_id": 30490,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50628,
+    "item_id": 30704,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50629,
+    "item_id": 30308,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50629,
+    "item_id": 30310,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50629,
+    "item_id": 30487,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50629,
+    "item_id": 30704,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50627,
+    "item_id": 30309,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50627,
+    "item_id": 30310,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50627,
+    "item_id": 30488,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50627,
+    "item_id": 30704,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50625,
+    "item_id": 30311,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50625,
+    "item_id": 30489,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50625,
+    "item_id": 30528,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50625,
+    "item_id": 30704,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50626,
+    "item_id": 30309,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50626,
+    "item_id": 30487,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50626,
+    "item_id": 30490,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50626,
+    "item_id": 30704,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50097,
+    "item_id": 30341,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50097,
+    "item_id": 30537,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50097,
+    "item_id": 30602,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50097,
+    "item_id": 30603,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50098,
+    "item_id": 30503,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50098,
+    "item_id": 30539,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50098,
+    "item_id": 30603,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50098,
+    "item_id": 30605,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50094,
+    "item_id": 30059,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50094,
+    "item_id": 30536,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50094,
+    "item_id": 30603,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50095,
+    "item_id": 30059,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50095,
+    "item_id": 30060,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50095,
+    "item_id": 30603,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50096,
+    "item_id": 30376,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50096,
+    "item_id": 30538,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50096,
+    "item_id": 30603,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50096,
+    "item_id": 30604,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50063,
+    "item_id": 30031,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50063,
+    "item_id": 30034,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50446,
+    "item_id": 30284,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50446,
+    "item_id": 30286,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50446,
+    "item_id": 30287,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50446,
+    "item_id": 30605,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50356,
+    "item_id": 30284,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50356,
+    "item_id": 30286,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50356,
+    "item_id": 30287,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50356,
+    "item_id": 30605,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50064,
+    "item_id": 30033,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50064,
+    "item_id": 30034,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50064,
+    "item_id": 30057,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50447,
+    "item_id": 30035,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50447,
+    "item_id": 30284,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50447,
+    "item_id": 30286,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50447,
+    "item_id": 30288,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50357,
+    "item_id": 30035,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50357,
+    "item_id": 30284,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50357,
+    "item_id": 30286,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50357,
+    "item_id": 30288,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50065,
+    "item_id": 30032,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50065,
+    "item_id": 30033,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50065,
+    "item_id": 30058,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50065,
+    "item_id": 30283,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50448,
+    "item_id": 30090,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50448,
+    "item_id": 30284,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50448,
+    "item_id": 30285,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50448,
+    "item_id": 30286,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50358,
+    "item_id": 30090,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50358,
+    "item_id": 30284,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50358,
+    "item_id": 30285,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50358,
+    "item_id": 30286,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50061,
+    "item_id": 30031,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50061,
+    "item_id": 30032,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50061,
+    "item_id": 30034,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50061,
+    "item_id": 30085,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50444,
+    "item_id": 30287,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50444,
+    "item_id": 30288,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50444,
+    "item_id": 30539,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50354,
+    "item_id": 30287,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50354,
+    "item_id": 30288,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50354,
+    "item_id": 30539,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50062,
+    "item_id": 30032,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50062,
+    "item_id": 30033,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50445,
+    "item_id": 30285,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50445,
+    "item_id": 30287,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50445,
+    "item_id": 30288,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50445,
+    "item_id": 30448,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50355,
+    "item_id": 30285,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50355,
+    "item_id": 30287,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50355,
+    "item_id": 30288,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50355,
+    "item_id": 30448,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50608,
+    "item_id": 30284,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50608,
+    "item_id": 30285,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50608,
+    "item_id": 30287,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50608,
+    "item_id": 30709,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50582,
+    "item_id": 30084,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50582,
+    "item_id": 30557,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50582,
+    "item_id": 30608,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50661,
+    "item_id": 30637,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50661,
+    "item_id": 30723,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50662,
+    "item_id": 30537,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50662,
+    "item_id": 30723,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50663,
+    "item_id": 30637,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50663,
+    "item_id": 30723,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50659,
+    "item_id": 30637,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50659,
+    "item_id": 30723,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50660,
+    "item_id": 30537,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50660,
+    "item_id": 30723,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50233,
+    "item_id": 30290,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50233,
+    "item_id": 30292,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50233,
+    "item_id": 30611,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50121,
+    "item_id": 30296,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50121,
+    "item_id": 30298,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50121,
+    "item_id": 30300,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50121,
+    "item_id": 30603,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50154,
+    "item_id": 30296,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50154,
+    "item_id": 30298,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50154,
+    "item_id": 30300,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50154,
+    "item_id": 30603,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50616,
+    "item_id": 30296,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50616,
+    "item_id": 30297,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50616,
+    "item_id": 30300,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50616,
+    "item_id": 30702,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50234,
+    "item_id": 30289,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50234,
+    "item_id": 30291,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50122,
+    "item_id": 30294,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50122,
+    "item_id": 30299,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50122,
+    "item_id": 30300,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50122,
+    "item_id": 30302,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50155,
+    "item_id": 30294,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50155,
+    "item_id": 30299,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50155,
+    "item_id": 30300,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50155,
+    "item_id": 30302,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50617,
+    "item_id": 30296,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50617,
+    "item_id": 30300,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50617,
+    "item_id": 30301,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50617,
+    "item_id": 30702,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50235,
+    "item_id": 30289,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50235,
+    "item_id": 30290,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50235,
+    "item_id": 30293,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50123,
+    "item_id": 30297,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50123,
+    "item_id": 30299,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50123,
+    "item_id": 30302,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50123,
+    "item_id": 30455,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50156,
+    "item_id": 30297,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50156,
+    "item_id": 30299,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50156,
+    "item_id": 30302,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50156,
+    "item_id": 30455,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50618,
+    "item_id": 30060,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50618,
+    "item_id": 30298,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50618,
+    "item_id": 30299,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50618,
+    "item_id": 30702,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50231,
+    "item_id": 30289,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50231,
+    "item_id": 30294,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50231,
+    "item_id": 30295,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50231,
+    "item_id": 30556,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50119,
+    "item_id": 30296,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50119,
+    "item_id": 30298,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50119,
+    "item_id": 30301,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50119,
+    "item_id": 30302,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50152,
+    "item_id": 30296,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50152,
+    "item_id": 30298,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50152,
+    "item_id": 30301,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50152,
+    "item_id": 30302,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50614,
+    "item_id": 30084,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50614,
+    "item_id": 30296,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50614,
+    "item_id": 30298,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50614,
+    "item_id": 30702,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50232,
+    "item_id": 30291,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50232,
+    "item_id": 30292,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50232,
+    "item_id": 30293,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50232,
+    "item_id": 30417,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50120,
+    "item_id": 30296,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50120,
+    "item_id": 30297,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50120,
+    "item_id": 30298,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50120,
+    "item_id": 30546,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50153,
+    "item_id": 30296,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50153,
+    "item_id": 30297,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50153,
+    "item_id": 30298,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50153,
+    "item_id": 30546,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50615,
+    "item_id": 30294,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50615,
+    "item_id": 30297,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50615,
+    "item_id": 30300,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50615,
+    "item_id": 30702,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50680,
+    "item_id": 30608,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50680,
+    "item_id": 30643,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50680,
+    "item_id": 30663,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50680,
+    "item_id": 30778,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50279,
+    "item_id": 30532,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50279,
+    "item_id": 30637,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50279,
+    "item_id": 30669,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50279,
+    "item_id": 30675,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50333,
+    "item_id": 30093,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50333,
+    "item_id": 30529,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50333,
+    "item_id": 30602,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50333,
+    "item_id": 30647,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50593,
+    "item_id": 30269,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50593,
+    "item_id": 30270,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50593,
+    "item_id": 30602,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50593,
+    "item_id": 30681,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50112,
+    "item_id": 30359,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50112,
+    "item_id": 30556,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50112,
+    "item_id": 30611,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50363,
+    "item_id": 30318,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50363,
+    "item_id": 30422,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50363,
+    "item_id": 30425,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50363,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50467,
+    "item_id": 30318,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50467,
+    "item_id": 30422,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50467,
+    "item_id": 30425,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50467,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50113,
+    "item_id": 30556,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50113,
+    "item_id": 30611,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50364,
+    "item_id": 30355,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50364,
+    "item_id": 30418,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50364,
+    "item_id": 30423,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50364,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50468,
+    "item_id": 30355,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50468,
+    "item_id": 30418,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50468,
+    "item_id": 30423,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50468,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50109,
+    "item_id": 30369,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50109,
+    "item_id": 30417,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50109,
+    "item_id": 30556,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50360,
+    "item_id": 30301,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50360,
+    "item_id": 30422,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50360,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50360,
+    "item_id": 30612,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50464,
+    "item_id": 30301,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50464,
+    "item_id": 30422,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50464,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50464,
+    "item_id": 30612,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50110,
+    "item_id": 30392,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50110,
+    "item_id": 30538,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50110,
+    "item_id": 30556,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50361,
+    "item_id": 30424,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50361,
+    "item_id": 30427,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50361,
+    "item_id": 30557,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50361,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50465,
+    "item_id": 30424,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50465,
+    "item_id": 30427,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50465,
+    "item_id": 30557,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50465,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50111,
+    "item_id": 30417,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50111,
+    "item_id": 30460,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50111,
+    "item_id": 30556,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50362,
+    "item_id": 30388,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50362,
+    "item_id": 30423,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50362,
+    "item_id": 30424,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50362,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50466,
+    "item_id": 30388,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50466,
+    "item_id": 30423,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50466,
+    "item_id": 30424,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50466,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50143,
+    "item_id": 30358,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50143,
+    "item_id": 30360,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50400,
+    "item_id": 30035,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50400,
+    "item_id": 30362,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50400,
+    "item_id": 30364,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50400,
+    "item_id": 30366,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50346,
+    "item_id": 30035,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50346,
+    "item_id": 30362,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50346,
+    "item_id": 30364,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50346,
+    "item_id": 30366,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50144,
+    "item_id": 30357,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50144,
+    "item_id": 30359,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50144,
+    "item_id": 30361,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50144,
+    "item_id": 30556,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50401,
+    "item_id": 30362,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50401,
+    "item_id": 30363,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50401,
+    "item_id": 30365,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50401,
+    "item_id": 30604,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50347,
+    "item_id": 30362,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50347,
+    "item_id": 30363,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50347,
+    "item_id": 30365,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50347,
+    "item_id": 30604,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50145,
+    "item_id": 30359,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50145,
+    "item_id": 30360,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50145,
+    "item_id": 30611,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50402,
+    "item_id": 30363,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50402,
+    "item_id": 30365,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50402,
+    "item_id": 30366,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50402,
+    "item_id": 30461,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50348,
+    "item_id": 30363,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50348,
+    "item_id": 30365,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50348,
+    "item_id": 30366,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50348,
+    "item_id": 30461,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50141,
+    "item_id": 30357,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50141,
+    "item_id": 30358,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50141,
+    "item_id": 30360,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50398,
+    "item_id": 30364,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50398,
+    "item_id": 30365,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50398,
+    "item_id": 30366,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50398,
+    "item_id": 30557,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50344,
+    "item_id": 30364,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50344,
+    "item_id": 30365,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50344,
+    "item_id": 30366,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50344,
+    "item_id": 30557,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50142,
+    "item_id": 30357,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50142,
+    "item_id": 30359,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50399,
+    "item_id": 30362,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50399,
+    "item_id": 30364,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50399,
+    "item_id": 30612,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50345,
+    "item_id": 30362,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50345,
+    "item_id": 30364,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50345,
+    "item_id": 30612,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50410,
+    "item_id": 30390,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50410,
+    "item_id": 30391,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50410,
+    "item_id": 30393,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50513,
+    "item_id": 30397,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50513,
+    "item_id": 30399,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50513,
+    "item_id": 30401,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50513,
+    "item_id": 30402,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50351,
+    "item_id": 30397,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50351,
+    "item_id": 30399,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50351,
+    "item_id": 30401,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50351,
+    "item_id": 30402,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50411,
+    "item_id": 30392,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50411,
+    "item_id": 30394,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50411,
+    "item_id": 30395,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50411,
+    "item_id": 30396,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50514,
+    "item_id": 30394,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50514,
+    "item_id": 30395,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50514,
+    "item_id": 30400,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50514,
+    "item_id": 30402,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50352,
+    "item_id": 30394,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50352,
+    "item_id": 30395,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50352,
+    "item_id": 30400,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50352,
+    "item_id": 30402,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50412,
+    "item_id": 30390,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50412,
+    "item_id": 30392,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50515,
+    "item_id": 30398,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50515,
+    "item_id": 30400,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50515,
+    "item_id": 30402,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50515,
+    "item_id": 30538,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50353,
+    "item_id": 30398,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50353,
+    "item_id": 30400,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50353,
+    "item_id": 30402,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50353,
+    "item_id": 30538,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50408,
+    "item_id": 30392,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50408,
+    "item_id": 30393,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50408,
+    "item_id": 30394,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50511,
+    "item_id": 30397,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50511,
+    "item_id": 30398,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50511,
+    "item_id": 30399,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50511,
+    "item_id": 30400,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50349,
+    "item_id": 30397,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50349,
+    "item_id": 30398,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50349,
+    "item_id": 30399,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50349,
+    "item_id": 30400,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50409,
+    "item_id": 30391,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50409,
+    "item_id": 30393,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50512,
+    "item_id": 30397,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50512,
+    "item_id": 30399,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50512,
+    "item_id": 30418,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50350,
+    "item_id": 30397,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50350,
+    "item_id": 30399,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50350,
+    "item_id": 30418,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50509,
+    "item_id": 30442,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50509,
+    "item_id": 30444,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50509,
+    "item_id": 30447,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50509,
+    "item_id": 30534,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50535,
+    "item_id": 30442,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50535,
+    "item_id": 30444,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50535,
+    "item_id": 30447,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50535,
+    "item_id": 30534,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50510,
+    "item_id": 30442,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50510,
+    "item_id": 30443,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50510,
+    "item_id": 30446,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50510,
+    "item_id": 30557,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50536,
+    "item_id": 30442,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50536,
+    "item_id": 30443,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50536,
+    "item_id": 30446,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50536,
+    "item_id": 30557,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50506,
+    "item_id": 30443,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50506,
+    "item_id": 30445,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50506,
+    "item_id": 30534,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50506,
+    "item_id": 30547,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50532,
+    "item_id": 30443,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50532,
+    "item_id": 30445,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50532,
+    "item_id": 30534,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50532,
+    "item_id": 30547,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50507,
+    "item_id": 30084,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50507,
+    "item_id": 30444,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50507,
+    "item_id": 30445,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50507,
+    "item_id": 30534,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50533,
+    "item_id": 30084,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50533,
+    "item_id": 30444,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50533,
+    "item_id": 30445,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50533,
+    "item_id": 30534,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50508,
+    "item_id": 30442,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50508,
+    "item_id": 30444,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50508,
+    "item_id": 30612,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50534,
+    "item_id": 30442,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50534,
+    "item_id": 30444,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50534,
+    "item_id": 30612,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50224,
+    "item_id": 30367,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50224,
+    "item_id": 30369,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50132,
+    "item_id": 30370,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50132,
+    "item_id": 30372,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50132,
+    "item_id": 30373,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50132,
+    "item_id": 30374,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50069,
+    "item_id": 30370,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50069,
+    "item_id": 30372,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50069,
+    "item_id": 30373,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50069,
+    "item_id": 30374,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50225,
+    "item_id": 30369,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50225,
+    "item_id": 30370,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50225,
+    "item_id": 30417,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50133,
+    "item_id": 30374,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50133,
+    "item_id": 30375,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50133,
+    "item_id": 30544,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50133,
+    "item_id": 30645,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50070,
+    "item_id": 30374,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50070,
+    "item_id": 30375,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50070,
+    "item_id": 30544,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50070,
+    "item_id": 30645,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50221,
+    "item_id": 30367,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50221,
+    "item_id": 30368,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50221,
+    "item_id": 30371,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50221,
+    "item_id": 30645,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50129,
+    "item_id": 30373,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50129,
+    "item_id": 30374,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50129,
+    "item_id": 30375,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50129,
+    "item_id": 30529,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50066,
+    "item_id": 30373,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50066,
+    "item_id": 30374,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50066,
+    "item_id": 30375,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50066,
+    "item_id": 30529,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50222,
+    "item_id": 30368,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50222,
+    "item_id": 30369,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50130,
+    "item_id": 30372,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50130,
+    "item_id": 30374,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50130,
+    "item_id": 30418,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50067,
+    "item_id": 30372,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50067,
+    "item_id": 30374,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50067,
+    "item_id": 30418,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50223,
+    "item_id": 30367,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50223,
+    "item_id": 30368,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50223,
+    "item_id": 30370,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50131,
+    "item_id": 30372,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50131,
+    "item_id": 30373,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50131,
+    "item_id": 30375,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50131,
+    "item_id": 30644,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50068,
+    "item_id": 30372,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50068,
+    "item_id": 30373,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50068,
+    "item_id": 30375,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50068,
+    "item_id": 30644,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50081,
+    "item_id": 30460,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50081,
+    "item_id": 30538,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50365,
+    "item_id": 30461,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50365,
+    "item_id": 30538,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50220,
+    "item_id": 30461,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50220,
+    "item_id": 30538,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50172,
+    "item_id": 30563,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50236,
+    "item_id": 30451,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50236,
+    "item_id": 30563,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50712,
+    "item_id": 30318,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50712,
+    "item_id": 30490,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50712,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50712,
+    "item_id": 30788,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50711,
+    "item_id": 30122,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50711,
+    "item_id": 30488,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50711,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50711,
+    "item_id": 30788,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50714,
+    "item_id": 30314,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50714,
+    "item_id": 30528,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50714,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50714,
+    "item_id": 30788,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50713,
+    "item_id": 30317,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50713,
+    "item_id": 30487,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50713,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50713,
+    "item_id": 30788,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50710,
+    "item_id": 30489,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50710,
+    "item_id": 30529,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50710,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50710,
+    "item_id": 30788,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50647,
+    "item_id": 30490,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50647,
+    "item_id": 30602,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50647,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50647,
+    "item_id": 30725,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50646,
+    "item_id": 30487,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50646,
+    "item_id": 30602,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50646,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50646,
+    "item_id": 30725,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50673,
+    "item_id": 30763,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50673,
+    "item_id": 30764,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50673,
+    "item_id": 30769,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50673,
+    "item_id": 30771,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50678,
+    "item_id": 30763,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50678,
+    "item_id": 30764,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50678,
+    "item_id": 30769,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50678,
+    "item_id": 30771,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50674,
+    "item_id": 30763,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50674,
+    "item_id": 30765,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50674,
+    "item_id": 30767,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50674,
+    "item_id": 30768,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50679,
+    "item_id": 30763,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50679,
+    "item_id": 30765,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50679,
+    "item_id": 30767,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50679,
+    "item_id": 30768,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50670,
+    "item_id": 30763,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50670,
+    "item_id": 30764,
+    "quantity": 7
+  },
+  {
+    "armor_id": 50670,
+    "item_id": 30765,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50670,
+    "item_id": 30770,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50675,
+    "item_id": 30763,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50675,
+    "item_id": 30764,
+    "quantity": 7
+  },
+  {
+    "armor_id": 50675,
+    "item_id": 30765,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50675,
+    "item_id": 30770,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50671,
+    "item_id": 30763,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50671,
+    "item_id": 30766,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50671,
+    "item_id": 30768,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50671,
+    "item_id": 30771,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50676,
+    "item_id": 30763,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50676,
+    "item_id": 30766,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50676,
+    "item_id": 30768,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50676,
+    "item_id": 30771,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50672,
+    "item_id": 30763,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50672,
+    "item_id": 30767,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50672,
+    "item_id": 30769,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50672,
+    "item_id": 30770,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50677,
+    "item_id": 30763,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50677,
+    "item_id": 30767,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50677,
+    "item_id": 30769,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50677,
+    "item_id": 30770,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50014,
+    "item_id": 30382,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50014,
+    "item_id": 30512,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50014,
+    "item_id": 30514,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50014,
+    "item_id": 30515,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50569,
+    "item_id": 30382,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50569,
+    "item_id": 30512,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50569,
+    "item_id": 30514,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50569,
+    "item_id": 30515,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50015,
+    "item_id": 30512,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50015,
+    "item_id": 30514,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50015,
+    "item_id": 30518,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50015,
+    "item_id": 30519,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50570,
+    "item_id": 30512,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50570,
+    "item_id": 30514,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50570,
+    "item_id": 30518,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50570,
+    "item_id": 30519,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50011,
+    "item_id": 30084,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50011,
+    "item_id": 30514,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50011,
+    "item_id": 30517,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50011,
+    "item_id": 30519,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50566,
+    "item_id": 30084,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50566,
+    "item_id": 30514,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50566,
+    "item_id": 30517,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50566,
+    "item_id": 30519,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50012,
+    "item_id": 30512,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50012,
+    "item_id": 30513,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50012,
+    "item_id": 30515,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50012,
+    "item_id": 30516,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50567,
+    "item_id": 30512,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50567,
+    "item_id": 30513,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50567,
+    "item_id": 30515,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50567,
+    "item_id": 30516,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50013,
+    "item_id": 30513,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50013,
+    "item_id": 30517,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50013,
+    "item_id": 30519,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50013,
+    "item_id": 30520,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50568,
+    "item_id": 30513,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50568,
+    "item_id": 30517,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50568,
+    "item_id": 30519,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50568,
+    "item_id": 30520,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50288,
+    "item_id": 30054,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50288,
+    "item_id": 30530,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50288,
+    "item_id": 30668,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50288,
+    "item_id": 30675,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50229,
+    "item_id": 30457,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50229,
+    "item_id": 30502,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50229,
+    "item_id": 30504,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50229,
+    "item_id": 30505,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50217,
+    "item_id": 30457,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50217,
+    "item_id": 30502,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50217,
+    "item_id": 30504,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50217,
+    "item_id": 30505,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50230,
+    "item_id": 30500,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50230,
+    "item_id": 30501,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50230,
+    "item_id": 30504,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50230,
+    "item_id": 30555,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50218,
+    "item_id": 30500,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50218,
+    "item_id": 30501,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50218,
+    "item_id": 30504,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50218,
+    "item_id": 30555,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50226,
+    "item_id": 30500,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50226,
+    "item_id": 30502,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50226,
+    "item_id": 30602,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50214,
+    "item_id": 30500,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50214,
+    "item_id": 30502,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50214,
+    "item_id": 30602,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50227,
+    "item_id": 30084,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50227,
+    "item_id": 30504,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50227,
+    "item_id": 30505,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50227,
+    "item_id": 30530,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50215,
+    "item_id": 30084,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50215,
+    "item_id": 30504,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50215,
+    "item_id": 30505,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50215,
+    "item_id": 30530,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50228,
+    "item_id": 30500,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50228,
+    "item_id": 30503,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50228,
+    "item_id": 30505,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50228,
+    "item_id": 30531,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50216,
+    "item_id": 30500,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50216,
+    "item_id": 30503,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50216,
+    "item_id": 30505,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50216,
+    "item_id": 30531,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50025,
+    "item_id": 30532,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50025,
+    "item_id": 30557,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50025,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50024,
+    "item_id": 30532,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50024,
+    "item_id": 30539,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50024,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50021,
+    "item_id": 30532,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50021,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50021,
+    "item_id": 30612,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50022,
+    "item_id": 30418,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50022,
+    "item_id": 30532,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50022,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50023,
+    "item_id": 30054,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50023,
+    "item_id": 30532,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50023,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50284,
+    "item_id": 30480,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50284,
+    "item_id": 30668,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50284,
+    "item_id": 30675,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50280,
+    "item_id": 30476,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50280,
+    "item_id": 30668,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50280,
+    "item_id": 30675,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50283,
+    "item_id": 30093,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50283,
+    "item_id": 30668,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50283,
+    "item_id": 30675,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50281,
+    "item_id": 30467,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50281,
+    "item_id": 30668,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50281,
+    "item_id": 30675,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50282,
+    "item_id": 30487,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50282,
+    "item_id": 30668,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50282,
+    "item_id": 30675,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50102,
+    "item_id": 30487,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50102,
+    "item_id": 30490,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50102,
+    "item_id": 30491,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50102,
+    "item_id": 30529,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50181,
+    "item_id": 30487,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50181,
+    "item_id": 30490,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50181,
+    "item_id": 30491,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50181,
+    "item_id": 30529,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50103,
+    "item_id": 30489,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50103,
+    "item_id": 30491,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50103,
+    "item_id": 30551,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50182,
+    "item_id": 30489,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50182,
+    "item_id": 30491,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50182,
+    "item_id": 30551,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50099,
+    "item_id": 30488,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50099,
+    "item_id": 30489,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50099,
+    "item_id": 30491,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50178,
+    "item_id": 30488,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50178,
+    "item_id": 30489,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50178,
+    "item_id": 30491,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50100,
+    "item_id": 30487,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50100,
+    "item_id": 30488,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50100,
+    "item_id": 30489,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50100,
+    "item_id": 30490,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50179,
+    "item_id": 30487,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50179,
+    "item_id": 30488,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50179,
+    "item_id": 30489,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50179,
+    "item_id": 30490,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50101,
+    "item_id": 30487,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50101,
+    "item_id": 30490,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50101,
+    "item_id": 30602,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50180,
+    "item_id": 30487,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50180,
+    "item_id": 30490,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50180,
+    "item_id": 30602,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50599,
+    "item_id": 30054,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50599,
+    "item_id": 30094,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50599,
+    "item_id": 30606,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50599,
+    "item_id": 30705,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50635,
+    "item_id": 30325,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50635,
+    "item_id": 30328,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50635,
+    "item_id": 30602,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50635,
+    "item_id": 30724,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50638,
+    "item_id": 30325,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50638,
+    "item_id": 30326,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50638,
+    "item_id": 30602,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50638,
+    "item_id": 30724,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50639,
+    "item_id": 30055,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50639,
+    "item_id": 30060,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50639,
+    "item_id": 30328,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50639,
+    "item_id": 30724,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50637,
+    "item_id": 30327,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50637,
+    "item_id": 30451,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50637,
+    "item_id": 30536,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50637,
+    "item_id": 30724,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50636,
+    "item_id": 30326,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50636,
+    "item_id": 30327,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50636,
+    "item_id": 30537,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50636,
+    "item_id": 30724,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50605,
+    "item_id": 30260,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50605,
+    "item_id": 30449,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50605,
+    "item_id": 30455,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50605,
+    "item_id": 30669,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50415,
+    "item_id": 30054,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50415,
+    "item_id": 30434,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50415,
+    "item_id": 30536,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50416,
+    "item_id": 30054,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50416,
+    "item_id": 30434,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50416,
+    "item_id": 30536,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50417,
+    "item_id": 30054,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50417,
+    "item_id": 30434,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50417,
+    "item_id": 30457,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50413,
+    "item_id": 30054,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50413,
+    "item_id": 30434,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50413,
+    "item_id": 30457,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50414,
+    "item_id": 30054,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50414,
+    "item_id": 30434,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50414,
+    "item_id": 30457,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50034,
+    "item_id": 30320,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50034,
+    "item_id": 30321,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50034,
+    "item_id": 30323,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50150,
+    "item_id": 30325,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50150,
+    "item_id": 30327,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50150,
+    "item_id": 30602,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50462,
+    "item_id": 30325,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50462,
+    "item_id": 30327,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50462,
+    "item_id": 30602,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50035,
+    "item_id": 30320,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50035,
+    "item_id": 30322,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50035,
+    "item_id": 30324,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50035,
+    "item_id": 30537,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50151,
+    "item_id": 30325,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50151,
+    "item_id": 30326,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50151,
+    "item_id": 30327,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50151,
+    "item_id": 30328,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50463,
+    "item_id": 30325,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50463,
+    "item_id": 30326,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50463,
+    "item_id": 30327,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50463,
+    "item_id": 30328,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50031,
+    "item_id": 30322,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50031,
+    "item_id": 30323,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50031,
+    "item_id": 30548,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50147,
+    "item_id": 30326,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50147,
+    "item_id": 30328,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50147,
+    "item_id": 30329,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50459,
+    "item_id": 30326,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50459,
+    "item_id": 30328,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50459,
+    "item_id": 30329,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50032,
+    "item_id": 30321,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50032,
+    "item_id": 30323,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50148,
+    "item_id": 30328,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50148,
+    "item_id": 30329,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50148,
+    "item_id": 30549,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50460,
+    "item_id": 30328,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50460,
+    "item_id": 30329,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50460,
+    "item_id": 30549,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50033,
+    "item_id": 30320,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50033,
+    "item_id": 30322,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50149,
+    "item_id": 30084,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50149,
+    "item_id": 30325,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50149,
+    "item_id": 30327,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50149,
+    "item_id": 30329,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50461,
+    "item_id": 30084,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50461,
+    "item_id": 30325,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50461,
+    "item_id": 30327,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50461,
+    "item_id": 30329,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50421,
+    "item_id": 30051,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50421,
+    "item_id": 30057,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50422,
+    "item_id": 30057,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50419,
+    "item_id": 30055,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50419,
+    "item_id": 30057,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50418,
+    "item_id": 30051,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50418,
+    "item_id": 30057,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50420,
+    "item_id": 30055,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50420,
+    "item_id": 30057,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50275,
+    "item_id": 30053,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50275,
+    "item_id": 30055,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50160,
+    "item_id": 30054,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50160,
+    "item_id": 30529,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50160,
+    "item_id": 30532,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50276,
+    "item_id": 30053,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50276,
+    "item_id": 30530,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50161,
+    "item_id": 30054,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50161,
+    "item_id": 30530,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50161,
+    "item_id": 30532,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50272,
+    "item_id": 30052,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50272,
+    "item_id": 30053,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50157,
+    "item_id": 30054,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50157,
+    "item_id": 30531,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50157,
+    "item_id": 30532,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50273,
+    "item_id": 30053,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50273,
+    "item_id": 30055,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50158,
+    "item_id": 30054,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50158,
+    "item_id": 30532,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50158,
+    "item_id": 30533,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50274,
+    "item_id": 30052,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50274,
+    "item_id": 30053,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50159,
+    "item_id": 30054,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50159,
+    "item_id": 30528,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50159,
+    "item_id": 30532,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50456,
+    "item_id": 30202,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50456,
+    "item_id": 30451,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50456,
+    "item_id": 30524,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50458,
+    "item_id": 30202,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50458,
+    "item_id": 30451,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50458,
+    "item_id": 30524,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50457,
+    "item_id": 30202,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50457,
+    "item_id": 30451,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50457,
+    "item_id": 30524,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50455,
+    "item_id": 30202,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50455,
+    "item_id": 30451,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50455,
+    "item_id": 30524,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50454,
+    "item_id": 30202,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50454,
+    "item_id": 30451,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50454,
+    "item_id": 30524,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50658,
+    "item_id": 30488,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50658,
+    "item_id": 30492,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50658,
+    "item_id": 30608,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50658,
+    "item_id": 30725,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50140,
+    "item_id": 30456,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50140,
+    "item_id": 30536,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50134,
+    "item_id": 30457,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50134,
+    "item_id": 30531,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50500,
+    "item_id": 30457,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50500,
+    "item_id": 30531,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50074,
+    "item_id": 30452,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50074,
+    "item_id": 30559,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50072,
+    "item_id": 30090,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50072,
+    "item_id": 30559,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50071,
+    "item_id": 30452,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50071,
+    "item_id": 30559,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50073,
+    "item_id": 30090,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50073,
+    "item_id": 30559,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50197,
+    "item_id": 30482,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50197,
+    "item_id": 30483,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50197,
+    "item_id": 30485,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50197,
+    "item_id": 30544,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50396,
+    "item_id": 30482,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50396,
+    "item_id": 30483,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50396,
+    "item_id": 30485,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50396,
+    "item_id": 30544,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50198,
+    "item_id": 30480,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50198,
+    "item_id": 30481,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50198,
+    "item_id": 30482,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50198,
+    "item_id": 30484,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50397,
+    "item_id": 30480,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50397,
+    "item_id": 30481,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50397,
+    "item_id": 30482,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50397,
+    "item_id": 30484,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50194,
+    "item_id": 30480,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50194,
+    "item_id": 30484,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50194,
+    "item_id": 30602,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50393,
+    "item_id": 30480,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50393,
+    "item_id": 30484,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50393,
+    "item_id": 30602,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50195,
+    "item_id": 30480,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50195,
+    "item_id": 30484,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50195,
+    "item_id": 30485,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50195,
+    "item_id": 30531,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50394,
+    "item_id": 30480,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50394,
+    "item_id": 30484,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50394,
+    "item_id": 30485,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50394,
+    "item_id": 30531,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50196,
+    "item_id": 30481,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50196,
+    "item_id": 30483,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50196,
+    "item_id": 30485,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50395,
+    "item_id": 30481,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50395,
+    "item_id": 30483,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50395,
+    "item_id": 30485,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50622,
+    "item_id": 30694,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50622,
+    "item_id": 30695,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50622,
+    "item_id": 30700,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50622,
+    "item_id": 30701,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50611,
+    "item_id": 30694,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50611,
+    "item_id": 30695,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50611,
+    "item_id": 30700,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50611,
+    "item_id": 30701,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50623,
+    "item_id": 30694,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50623,
+    "item_id": 30698,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50623,
+    "item_id": 30700,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50623,
+    "item_id": 30701,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50612,
+    "item_id": 30694,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50612,
+    "item_id": 30698,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50612,
+    "item_id": 30700,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50612,
+    "item_id": 30701,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50624,
+    "item_id": 30694,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50624,
+    "item_id": 30696,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50624,
+    "item_id": 30697,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50624,
+    "item_id": 30701,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50613,
+    "item_id": 30694,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50613,
+    "item_id": 30696,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50613,
+    "item_id": 30697,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50613,
+    "item_id": 30701,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50620,
+    "item_id": 30528,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50620,
+    "item_id": 30696,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50620,
+    "item_id": 30697,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50620,
+    "item_id": 30698,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50609,
+    "item_id": 30528,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50609,
+    "item_id": 30696,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50609,
+    "item_id": 30697,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50609,
+    "item_id": 30698,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50621,
+    "item_id": 30695,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50621,
+    "item_id": 30696,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50621,
+    "item_id": 30697,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50621,
+    "item_id": 30699,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50610,
+    "item_id": 30695,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50610,
+    "item_id": 30696,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50610,
+    "item_id": 30697,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50610,
+    "item_id": 30699,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50551,
+    "item_id": 30611,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50550,
+    "item_id": 30052,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50550,
+    "item_id": 30611,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50548,
+    "item_id": 30611,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50549,
+    "item_id": 30052,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50549,
+    "item_id": 30611,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50552,
+    "item_id": 30052,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50552,
+    "item_id": 30611,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50619,
+    "item_id": 30054,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50619,
+    "item_id": 30467,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50619,
+    "item_id": 30606,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50619,
+    "item_id": 30705,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50175,
+    "item_id": 30461,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50175,
+    "item_id": 30528,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50175,
+    "item_id": 30558,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50176,
+    "item_id": 30461,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50176,
+    "item_id": 30528,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50176,
+    "item_id": 30558,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50173,
+    "item_id": 30461,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50173,
+    "item_id": 30528,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50173,
+    "item_id": 30558,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50174,
+    "item_id": 30461,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50174,
+    "item_id": 30528,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50174,
+    "item_id": 30558,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50177,
+    "item_id": 30461,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50177,
+    "item_id": 30529,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50177,
+    "item_id": 30558,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50219,
+    "item_id": 30467,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50219,
+    "item_id": 30480,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50219,
+    "item_id": 30566,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50688,
+    "item_id": 30506,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50688,
+    "item_id": 30510,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50688,
+    "item_id": 30608,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50688,
+    "item_id": 30775,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50320,
+    "item_id": 30657,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50320,
+    "item_id": 30658,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50320,
+    "item_id": 30660,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50320,
+    "item_id": 30662,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50291,
+    "item_id": 30657,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50291,
+    "item_id": 30658,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50291,
+    "item_id": 30660,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50291,
+    "item_id": 30662,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50321,
+    "item_id": 30546,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50321,
+    "item_id": 30656,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50321,
+    "item_id": 30658,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50321,
+    "item_id": 30659,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50292,
+    "item_id": 30546,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50292,
+    "item_id": 30656,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50292,
+    "item_id": 30658,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50292,
+    "item_id": 30659,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50322,
+    "item_id": 30656,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50322,
+    "item_id": 30657,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50322,
+    "item_id": 30662,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50322,
+    "item_id": 30663,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50293,
+    "item_id": 30656,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50293,
+    "item_id": 30657,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50293,
+    "item_id": 30662,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50293,
+    "item_id": 30663,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50318,
+    "item_id": 30455,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50318,
+    "item_id": 30657,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50318,
+    "item_id": 30662,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50289,
+    "item_id": 30455,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50289,
+    "item_id": 30657,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50289,
+    "item_id": 30662,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50319,
+    "item_id": 30084,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50319,
+    "item_id": 30656,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50319,
+    "item_id": 30659,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50319,
+    "item_id": 30660,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50290,
+    "item_id": 30084,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50290,
+    "item_id": 30656,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50290,
+    "item_id": 30659,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50290,
+    "item_id": 30660,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50431,
+    "item_id": 30472,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50431,
+    "item_id": 30474,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50431,
+    "item_id": 30486,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50482,
+    "item_id": 30459,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50482,
+    "item_id": 30477,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50482,
+    "item_id": 30478,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50482,
+    "item_id": 30479,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50085,
+    "item_id": 30459,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50085,
+    "item_id": 30477,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50085,
+    "item_id": 30478,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50085,
+    "item_id": 30479,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50432,
+    "item_id": 30471,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50432,
+    "item_id": 30472,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50483,
+    "item_id": 30478,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50483,
+    "item_id": 30479,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50483,
+    "item_id": 30487,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50483,
+    "item_id": 30555,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50086,
+    "item_id": 30478,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50086,
+    "item_id": 30479,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50086,
+    "item_id": 30487,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50086,
+    "item_id": 30555,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50428,
+    "item_id": 30472,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50428,
+    "item_id": 30475,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50428,
+    "item_id": 30486,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50428,
+    "item_id": 30554,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50479,
+    "item_id": 30441,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50479,
+    "item_id": 30451,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50479,
+    "item_id": 30476,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50082,
+    "item_id": 30441,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50082,
+    "item_id": 30451,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50082,
+    "item_id": 30476,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50429,
+    "item_id": 30473,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50429,
+    "item_id": 30474,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50480,
+    "item_id": 30441,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50480,
+    "item_id": 30477,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50480,
+    "item_id": 30479,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50480,
+    "item_id": 30492,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50083,
+    "item_id": 30441,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50083,
+    "item_id": 30477,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50083,
+    "item_id": 30479,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50083,
+    "item_id": 30492,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50430,
+    "item_id": 30471,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50430,
+    "item_id": 30473,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50430,
+    "item_id": 30474,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50481,
+    "item_id": 30441,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50481,
+    "item_id": 30476,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50481,
+    "item_id": 30477,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50481,
+    "item_id": 30478,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50084,
+    "item_id": 30441,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50084,
+    "item_id": 30476,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50084,
+    "item_id": 30477,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50084,
+    "item_id": 30478,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50323,
+    "item_id": 30538,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50323,
+    "item_id": 30649,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50323,
+    "item_id": 30651,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50323,
+    "item_id": 30652,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50311,
+    "item_id": 30538,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50311,
+    "item_id": 30649,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50311,
+    "item_id": 30651,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50311,
+    "item_id": 30652,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50327,
+    "item_id": 30518,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50327,
+    "item_id": 30649,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50327,
+    "item_id": 30651,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50327,
+    "item_id": 30653,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50315,
+    "item_id": 30518,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50315,
+    "item_id": 30649,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50315,
+    "item_id": 30651,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50315,
+    "item_id": 30653,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50326,
+    "item_id": 30650,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50326,
+    "item_id": 30652,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50326,
+    "item_id": 30654,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50326,
+    "item_id": 30655,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50314,
+    "item_id": 30650,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50314,
+    "item_id": 30652,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50314,
+    "item_id": 30654,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50314,
+    "item_id": 30655,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50324,
+    "item_id": 30557,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50324,
+    "item_id": 30648,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50324,
+    "item_id": 30650,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50324,
+    "item_id": 30655,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50312,
+    "item_id": 30557,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50312,
+    "item_id": 30648,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50312,
+    "item_id": 30650,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50312,
+    "item_id": 30655,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50325,
+    "item_id": 30427,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50325,
+    "item_id": 30648,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50325,
+    "item_id": 30649,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50325,
+    "item_id": 30651,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50313,
+    "item_id": 30427,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50313,
+    "item_id": 30648,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50313,
+    "item_id": 30649,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50313,
+    "item_id": 30651,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50643,
+    "item_id": 30663,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50643,
+    "item_id": 30715,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50643,
+    "item_id": 30719,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50643,
+    "item_id": 30721,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50644,
+    "item_id": 30692,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50644,
+    "item_id": 30714,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50644,
+    "item_id": 30716,
+    "quantity": 7
+  },
+  {
+    "armor_id": 50644,
+    "item_id": 30720,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50640,
+    "item_id": 30701,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50640,
+    "item_id": 30715,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50640,
+    "item_id": 30717,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50640,
+    "item_id": 30721,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50641,
+    "item_id": 30427,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50641,
+    "item_id": 30714,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50641,
+    "item_id": 30716,
+    "quantity": 7
+  },
+  {
+    "armor_id": 50641,
+    "item_id": 30720,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50642,
+    "item_id": 30654,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50642,
+    "item_id": 30715,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50642,
+    "item_id": 30718,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50642,
+    "item_id": 30721,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50669,
+    "item_id": 30495,
+    "quantity": 8
+  },
+  {
+    "armor_id": 50669,
+    "item_id": 30497,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50669,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50669,
+    "item_id": 30777,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50665,
+    "item_id": 30035,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50665,
+    "item_id": 30495,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50665,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50665,
+    "item_id": 30777,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50668,
+    "item_id": 30495,
+    "quantity": 7
+  },
+  {
+    "armor_id": 50668,
+    "item_id": 30498,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50668,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50668,
+    "item_id": 30777,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50667,
+    "item_id": 30035,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50667,
+    "item_id": 30495,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50667,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50667,
+    "item_id": 30777,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50666,
+    "item_id": 30495,
+    "quantity": 9
+  },
+  {
+    "armor_id": 50666,
+    "item_id": 30496,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50666,
+    "item_id": 30608,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50666,
+    "item_id": 30777,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50607,
+    "item_id": 30350,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50607,
+    "item_id": 30353,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50607,
+    "item_id": 30354,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50607,
+    "item_id": 30708,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50537,
+    "item_id": 30052,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50537,
+    "item_id": 30454,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50371,
+    "item_id": 30054,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50371,
+    "item_id": 30455,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50359,
+    "item_id": 30054,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50359,
+    "item_id": 30455,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50008,
+    "item_id": 30080,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50008,
+    "item_id": 30266,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50374,
+    "item_id": 30268,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50374,
+    "item_id": 30269,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50374,
+    "item_id": 30270,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50374,
+    "item_id": 30271,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50191,
+    "item_id": 30268,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50191,
+    "item_id": 30269,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50191,
+    "item_id": 30270,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50191,
+    "item_id": 30271,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50009,
+    "item_id": 30081,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50009,
+    "item_id": 30082,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50375,
+    "item_id": 30269,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50375,
+    "item_id": 30271,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50375,
+    "item_id": 30272,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50192,
+    "item_id": 30269,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50192,
+    "item_id": 30271,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50192,
+    "item_id": 30272,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50010,
+    "item_id": 30080,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50010,
+    "item_id": 30081,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50010,
+    "item_id": 30082,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50376,
+    "item_id": 30268,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50376,
+    "item_id": 30270,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50376,
+    "item_id": 30602,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50193,
+    "item_id": 30268,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50193,
+    "item_id": 30270,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50193,
+    "item_id": 30602,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50006,
+    "item_id": 30051,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50006,
+    "item_id": 30083,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50006,
+    "item_id": 30266,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50006,
+    "item_id": 30267,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50372,
+    "item_id": 30269,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50372,
+    "item_id": 30270,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50372,
+    "item_id": 30272,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50372,
+    "item_id": 30539,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50189,
+    "item_id": 30269,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50189,
+    "item_id": 30270,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50189,
+    "item_id": 30272,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50189,
+    "item_id": 30539,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50007,
+    "item_id": 30082,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50007,
+    "item_id": 30083,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50007,
+    "item_id": 30266,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50373,
+    "item_id": 30083,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50373,
+    "item_id": 30271,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50373,
+    "item_id": 30272,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50373,
+    "item_id": 30530,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50190,
+    "item_id": 30083,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50190,
+    "item_id": 30271,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50190,
+    "item_id": 30272,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50190,
+    "item_id": 30530,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50541,
+    "item_id": 30376,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50541,
+    "item_id": 30507,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50541,
+    "item_id": 30511,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50541,
+    "item_id": 30530,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50044,
+    "item_id": 30376,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50044,
+    "item_id": 30507,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50044,
+    "item_id": 30511,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50044,
+    "item_id": 30530,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50542,
+    "item_id": 30453,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50542,
+    "item_id": 30507,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50542,
+    "item_id": 30508,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50542,
+    "item_id": 30511,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50045,
+    "item_id": 30453,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50045,
+    "item_id": 30507,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50045,
+    "item_id": 30508,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50045,
+    "item_id": 30511,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50538,
+    "item_id": 30506,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50538,
+    "item_id": 30508,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50538,
+    "item_id": 30602,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50041,
+    "item_id": 30506,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50041,
+    "item_id": 30508,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50041,
+    "item_id": 30602,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50539,
+    "item_id": 30060,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50539,
+    "item_id": 30506,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50539,
+    "item_id": 30507,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50539,
+    "item_id": 30509,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50042,
+    "item_id": 30060,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50042,
+    "item_id": 30506,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50042,
+    "item_id": 30507,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50042,
+    "item_id": 30509,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50540,
+    "item_id": 30506,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50540,
+    "item_id": 30510,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50540,
+    "item_id": 30511,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50540,
+    "item_id": 30544,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50043,
+    "item_id": 30506,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50043,
+    "item_id": 30510,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50043,
+    "item_id": 30511,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50043,
+    "item_id": 30544,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50107,
+    "item_id": 30094,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50107,
+    "item_id": 30376,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50107,
+    "item_id": 30494,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50078,
+    "item_id": 30094,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50078,
+    "item_id": 30376,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50078,
+    "item_id": 30494,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50108,
+    "item_id": 30060,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50108,
+    "item_id": 30094,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50108,
+    "item_id": 30095,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50108,
+    "item_id": 30494,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50079,
+    "item_id": 30060,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50079,
+    "item_id": 30094,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50079,
+    "item_id": 30095,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50079,
+    "item_id": 30494,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50104,
+    "item_id": 30093,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50104,
+    "item_id": 30095,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50104,
+    "item_id": 30602,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50075,
+    "item_id": 30093,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50075,
+    "item_id": 30095,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50075,
+    "item_id": 30602,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50105,
+    "item_id": 30093,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50105,
+    "item_id": 30097,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50105,
+    "item_id": 30494,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50076,
+    "item_id": 30093,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50076,
+    "item_id": 30097,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50076,
+    "item_id": 30494,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50106,
+    "item_id": 30093,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50106,
+    "item_id": 30094,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50106,
+    "item_id": 30096,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50106,
+    "item_id": 30551,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50077,
+    "item_id": 30093,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50077,
+    "item_id": 30094,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50077,
+    "item_id": 30096,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50077,
+    "item_id": 30551,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50633,
+    "item_id": 30686,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50633,
+    "item_id": 30687,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50633,
+    "item_id": 30688,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50633,
+    "item_id": 30689,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50597,
+    "item_id": 30686,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50597,
+    "item_id": 30687,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50597,
+    "item_id": 30688,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50597,
+    "item_id": 30689,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50634,
+    "item_id": 30686,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50634,
+    "item_id": 30688,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50634,
+    "item_id": 30692,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50634,
+    "item_id": 30693,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50598,
+    "item_id": 30686,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50598,
+    "item_id": 30688,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50598,
+    "item_id": 30692,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50598,
+    "item_id": 30693,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50630,
+    "item_id": 30060,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50630,
+    "item_id": 30687,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50630,
+    "item_id": 30691,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50630,
+    "item_id": 30693,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50594,
+    "item_id": 30060,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50594,
+    "item_id": 30687,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50594,
+    "item_id": 30691,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50594,
+    "item_id": 30693,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50631,
+    "item_id": 30686,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50631,
+    "item_id": 30688,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50631,
+    "item_id": 30690,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50631,
+    "item_id": 30692,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50595,
+    "item_id": 30686,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50595,
+    "item_id": 30688,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50595,
+    "item_id": 30690,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50595,
+    "item_id": 30692,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50632,
+    "item_id": 30690,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50632,
+    "item_id": 30691,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50632,
+    "item_id": 30692,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50632,
+    "item_id": 30693,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50596,
+    "item_id": 30690,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50596,
+    "item_id": 30691,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50596,
+    "item_id": 30692,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50596,
+    "item_id": 30693,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50164,
+    "item_id": 30119,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50164,
+    "item_id": 30120,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50164,
+    "item_id": 30121,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50164,
+    "item_id": 30417,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50126,
+    "item_id": 30314,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50126,
+    "item_id": 30317,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50126,
+    "item_id": 30318,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50126,
+    "item_id": 30319,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50405,
+    "item_id": 30314,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50405,
+    "item_id": 30317,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50405,
+    "item_id": 30318,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50405,
+    "item_id": 30319,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50330,
+    "item_id": 30314,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50330,
+    "item_id": 30317,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50330,
+    "item_id": 30318,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50330,
+    "item_id": 30664,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50165,
+    "item_id": 30089,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50165,
+    "item_id": 30118,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50165,
+    "item_id": 30119,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50165,
+    "item_id": 30611,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50127,
+    "item_id": 30314,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50127,
+    "item_id": 30315,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50127,
+    "item_id": 30317,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50127,
+    "item_id": 30603,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50406,
+    "item_id": 30314,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50406,
+    "item_id": 30315,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50406,
+    "item_id": 30317,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50406,
+    "item_id": 30603,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50331,
+    "item_id": 30314,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50331,
+    "item_id": 30315,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50331,
+    "item_id": 30317,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50331,
+    "item_id": 30664,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50166,
+    "item_id": 30121,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50166,
+    "item_id": 30122,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50166,
+    "item_id": 30313,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50166,
+    "item_id": 30556,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50128,
+    "item_id": 30314,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50128,
+    "item_id": 30316,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50128,
+    "item_id": 30317,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50128,
+    "item_id": 30528,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50407,
+    "item_id": 30314,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50407,
+    "item_id": 30316,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50407,
+    "item_id": 30317,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50407,
+    "item_id": 30528,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50332,
+    "item_id": 30121,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50332,
+    "item_id": 30316,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50332,
+    "item_id": 30529,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50332,
+    "item_id": 30664,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50162,
+    "item_id": 30117,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50162,
+    "item_id": 30118,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50162,
+    "item_id": 30119,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50124,
+    "item_id": 30315,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50124,
+    "item_id": 30316,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50124,
+    "item_id": 30319,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50124,
+    "item_id": 30449,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50403,
+    "item_id": 30315,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50403,
+    "item_id": 30316,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50403,
+    "item_id": 30319,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50403,
+    "item_id": 30449,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50328,
+    "item_id": 30084,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50328,
+    "item_id": 30314,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50328,
+    "item_id": 30316,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50328,
+    "item_id": 30664,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50163,
+    "item_id": 30117,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50163,
+    "item_id": 30120,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50125,
+    "item_id": 30121,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50125,
+    "item_id": 30122,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50125,
+    "item_id": 30316,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50125,
+    "item_id": 30319,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50404,
+    "item_id": 30121,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50404,
+    "item_id": 30122,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50404,
+    "item_id": 30316,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50404,
+    "item_id": 30319,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50329,
+    "item_id": 30122,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50329,
+    "item_id": 30315,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50329,
+    "item_id": 30317,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50329,
+    "item_id": 30664,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50699,
+    "item_id": 30084,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50699,
+    "item_id": 30310,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50699,
+    "item_id": 30311,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50699,
+    "item_id": 30796,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50579,
+    "item_id": 30053,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50579,
+    "item_id": 30303,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50579,
+    "item_id": 30305,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50579,
+    "item_id": 30307,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50586,
+    "item_id": 30308,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50586,
+    "item_id": 30310,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50586,
+    "item_id": 30312,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50586,
+    "item_id": 30457,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50477,
+    "item_id": 30308,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50477,
+    "item_id": 30310,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50477,
+    "item_id": 30312,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50477,
+    "item_id": 30457,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50580,
+    "item_id": 30304,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50580,
+    "item_id": 30306,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50587,
+    "item_id": 30311,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50587,
+    "item_id": 30312,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50587,
+    "item_id": 30551,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50478,
+    "item_id": 30311,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50478,
+    "item_id": 30312,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50478,
+    "item_id": 30551,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50576,
+    "item_id": 30303,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50576,
+    "item_id": 30304,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50576,
+    "item_id": 30306,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50583,
+    "item_id": 30309,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50583,
+    "item_id": 30311,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50583,
+    "item_id": 30312,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50474,
+    "item_id": 30309,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50474,
+    "item_id": 30311,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50474,
+    "item_id": 30312,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50577,
+    "item_id": 30303,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50577,
+    "item_id": 30305,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50584,
+    "item_id": 30308,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50584,
+    "item_id": 30310,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50584,
+    "item_id": 30602,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50475,
+    "item_id": 30308,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50475,
+    "item_id": 30310,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50475,
+    "item_id": 30602,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50578,
+    "item_id": 30305,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50578,
+    "item_id": 30306,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50578,
+    "item_id": 30550,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50585,
+    "item_id": 30308,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50585,
+    "item_id": 30309,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50585,
+    "item_id": 30310,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50585,
+    "item_id": 30311,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50476,
+    "item_id": 30308,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50476,
+    "item_id": 30309,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50476,
+    "item_id": 30310,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50476,
+    "item_id": 30311,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50287,
+    "item_id": 30414,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50287,
+    "item_id": 30532,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50287,
+    "item_id": 30607,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50287,
+    "item_id": 30667,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50296,
+    "item_id": 30054,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50296,
+    "item_id": 30665,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50298,
+    "item_id": 30054,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50298,
+    "item_id": 30665,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50294,
+    "item_id": 30054,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50294,
+    "item_id": 30665,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50297,
+    "item_id": 30054,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50297,
+    "item_id": 30665,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50295,
+    "item_id": 30054,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50295,
+    "item_id": 30665,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50316,
+    "item_id": 30445,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50316,
+    "item_id": 30538,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50316,
+    "item_id": 30557,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50316,
+    "item_id": 30673,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50285,
+    "item_id": 30201,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50285,
+    "item_id": 30411,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50285,
+    "item_id": 30607,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50285,
+    "item_id": 30667,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50317,
+    "item_id": 30412,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50317,
+    "item_id": 30532,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50317,
+    "item_id": 30607,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50317,
+    "item_id": 30667,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50088,
+    "item_id": 30461,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50088,
+    "item_id": 30562,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50087,
+    "item_id": 30461,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50087,
+    "item_id": 30562,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50645,
+    "item_id": 30382,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50645,
+    "item_id": 30476,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50645,
+    "item_id": 30489,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50645,
+    "item_id": 30727,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50704,
+    "item_id": 30482,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50704,
+    "item_id": 30490,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50704,
+    "item_id": 30514,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50704,
+    "item_id": 30518,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50701,
+    "item_id": 30477,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50701,
+    "item_id": 30480,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50701,
+    "item_id": 30508,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50701,
+    "item_id": 30510,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50703,
+    "item_id": 30095,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50703,
+    "item_id": 30097,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50703,
+    "item_id": 30441,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50703,
+    "item_id": 30487,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50700,
+    "item_id": 30478,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50700,
+    "item_id": 30484,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50700,
+    "item_id": 30488,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50700,
+    "item_id": 30492,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50702,
+    "item_id": 30476,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50702,
+    "item_id": 30481,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50702,
+    "item_id": 30691,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50702,
+    "item_id": 30692,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50286,
+    "item_id": 30528,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50286,
+    "item_id": 30529,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50286,
+    "item_id": 30533,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50286,
+    "item_id": 30637,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50299,
+    "item_id": 30528,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50299,
+    "item_id": 30529,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50299,
+    "item_id": 30530,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50299,
+    "item_id": 30531,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50188,
+    "item_id": 30532,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50188,
+    "item_id": 30561,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50277,
+    "item_id": 30087,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50277,
+    "item_id": 30088,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50146,
+    "item_id": 30090,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50146,
+    "item_id": 30452,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50484,
+    "item_id": 30090,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50484,
+    "item_id": 30452,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50606,
+    "item_id": 30399,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50606,
+    "item_id": 30607,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50606,
+    "item_id": 30612,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50606,
+    "item_id": 30710,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50471,
+    "item_id": 30343,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50471,
+    "item_id": 30347,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50487,
+    "item_id": 30351,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50487,
+    "item_id": 30353,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50487,
+    "item_id": 30356,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50487,
+    "item_id": 30457,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50384,
+    "item_id": 30351,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50384,
+    "item_id": 30353,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50384,
+    "item_id": 30356,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50384,
+    "item_id": 30457,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50650,
+    "item_id": 30350,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50650,
+    "item_id": 30354,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50650,
+    "item_id": 30355,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50650,
+    "item_id": 30722,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50472,
+    "item_id": 30345,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50472,
+    "item_id": 30346,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50472,
+    "item_id": 30347,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50472,
+    "item_id": 30417,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50488,
+    "item_id": 30350,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50488,
+    "item_id": 30352,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50488,
+    "item_id": 30354,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50488,
+    "item_id": 30544,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50385,
+    "item_id": 30350,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50385,
+    "item_id": 30352,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50385,
+    "item_id": 30354,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50385,
+    "item_id": 30544,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50651,
+    "item_id": 30350,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50651,
+    "item_id": 30353,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50651,
+    "item_id": 30355,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50651,
+    "item_id": 30722,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50473,
+    "item_id": 30344,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50473,
+    "item_id": 30346,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50473,
+    "item_id": 30536,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50473,
+    "item_id": 30611,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50489,
+    "item_id": 30350,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50489,
+    "item_id": 30354,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50489,
+    "item_id": 30355,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50489,
+    "item_id": 30356,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50386,
+    "item_id": 30350,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50386,
+    "item_id": 30354,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50386,
+    "item_id": 30355,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50386,
+    "item_id": 30356,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50652,
+    "item_id": 30348,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50652,
+    "item_id": 30351,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50652,
+    "item_id": 30354,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50652,
+    "item_id": 30722,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50469,
+    "item_id": 30343,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50469,
+    "item_id": 30344,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50469,
+    "item_id": 30345,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50485,
+    "item_id": 30060,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50485,
+    "item_id": 30350,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50485,
+    "item_id": 30351,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50485,
+    "item_id": 30354,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50382,
+    "item_id": 30060,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50382,
+    "item_id": 30350,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50382,
+    "item_id": 30351,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50382,
+    "item_id": 30354,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50648,
+    "item_id": 30352,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50648,
+    "item_id": 30353,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50648,
+    "item_id": 30531,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50648,
+    "item_id": 30722,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50470,
+    "item_id": 30343,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50470,
+    "item_id": 30348,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50470,
+    "item_id": 30349,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50470,
+    "item_id": 30556,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50486,
+    "item_id": 30348,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50486,
+    "item_id": 30352,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50486,
+    "item_id": 30353,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50486,
+    "item_id": 30356,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50383,
+    "item_id": 30348,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50383,
+    "item_id": 30352,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50383,
+    "item_id": 30353,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50383,
+    "item_id": 30356,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50649,
+    "item_id": 30035,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50649,
+    "item_id": 30350,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50649,
+    "item_id": 30351,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50649,
+    "item_id": 30722,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50059,
+    "item_id": 30450,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50059,
+    "item_id": 30523,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50029,
+    "item_id": 30524,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50029,
+    "item_id": 30539,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50436,
+    "item_id": 30524,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50436,
+    "item_id": 30539,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50060,
+    "item_id": 30523,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50060,
+    "item_id": 30525,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50030,
+    "item_id": 30524,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50030,
+    "item_id": 30539,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50437,
+    "item_id": 30524,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50437,
+    "item_id": 30539,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50056,
+    "item_id": 30056,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50056,
+    "item_id": 30523,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50026,
+    "item_id": 30451,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50026,
+    "item_id": 30524,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50433,
+    "item_id": 30451,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50433,
+    "item_id": 30524,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50057,
+    "item_id": 30056,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50057,
+    "item_id": 30523,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50027,
+    "item_id": 30524,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50027,
+    "item_id": 30526,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50434,
+    "item_id": 30524,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50434,
+    "item_id": 30526,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50058,
+    "item_id": 30523,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50058,
+    "item_id": 30525,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50028,
+    "item_id": 30524,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50028,
+    "item_id": 30526,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50435,
+    "item_id": 30524,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50435,
+    "item_id": 30526,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50212,
+    "item_id": 30404,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50212,
+    "item_id": 30407,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50212,
+    "item_id": 30409,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50212,
+    "item_id": 30410,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50186,
+    "item_id": 30411,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50186,
+    "item_id": 30414,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50186,
+    "item_id": 30461,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50546,
+    "item_id": 30411,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50546,
+    "item_id": 30414,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50546,
+    "item_id": 30461,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50213,
+    "item_id": 30406,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50213,
+    "item_id": 30407,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50213,
+    "item_id": 30408,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50187,
+    "item_id": 30265,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50187,
+    "item_id": 30412,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50187,
+    "item_id": 30413,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50187,
+    "item_id": 30546,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50547,
+    "item_id": 30265,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50547,
+    "item_id": 30412,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50547,
+    "item_id": 30413,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50547,
+    "item_id": 30546,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50209,
+    "item_id": 30404,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50209,
+    "item_id": 30405,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50209,
+    "item_id": 30408,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50209,
+    "item_id": 30538,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50183,
+    "item_id": 30265,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50183,
+    "item_id": 30409,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50183,
+    "item_id": 30413,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50183,
+    "item_id": 30415,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50543,
+    "item_id": 30265,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50543,
+    "item_id": 30409,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50543,
+    "item_id": 30413,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50543,
+    "item_id": 30415,
+    "quantity": 5
+  },
+  {
+    "armor_id": 50210,
+    "item_id": 30405,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50210,
+    "item_id": 30406,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50184,
+    "item_id": 30265,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50184,
+    "item_id": 30411,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50184,
+    "item_id": 30414,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50184,
+    "item_id": 30416,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50544,
+    "item_id": 30265,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50544,
+    "item_id": 30411,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50544,
+    "item_id": 30414,
+    "quantity": 4
+  },
+  {
+    "armor_id": 50544,
+    "item_id": 30416,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50211,
+    "item_id": 30404,
+    "quantity": 2
+  },
+  {
+    "armor_id": 50211,
+    "item_id": 30407,
+    "quantity": 1
+  },
+  {
+    "armor_id": 50185,
+    "item_id": 30411,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50185,
+    "item_id": 30412,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50185,
+    "item_id": 30414,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50185,
+    "item_id": 30415,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50545,
+    "item_id": 30411,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50545,
+    "item_id": 30412,
+    "quantity": 6
+  },
+  {
+    "armor_id": 50545,
+    "item_id": 30414,
+    "quantity": 3
+  },
+  {
+    "armor_id": 50545,
+    "item_id": 30415,
+    "quantity": 3
+  }
+]

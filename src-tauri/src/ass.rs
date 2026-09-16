@@ -4,13 +4,13 @@ use std::collections::{HashMap, HashSet};
 
 // ── Public API types (Tauri) ────────────────────────────────────────
 
-#[derive(Debug, Deserialize, Clone)]
+#[derive(Debug, Deserialize, Serialize, Clone)]
 pub struct SkillRequirement {
     pub skill_id: i32,
     pub points_required: i32,
 }
 
-#[derive(Debug, Deserialize, Clone)]
+#[derive(Debug, Deserialize, Serialize, Clone)]
 pub struct AssQueryInput {
     pub game_id: i32,
     pub skills: Vec<SkillRequirement>,
@@ -25,7 +25,7 @@ pub struct AssQueryInput {
     pub sort_by: Option<String>, // None | "defence" | "fire_res" etc
 }
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct AssArmorRef {
     pub id: i32,
     pub name: String,
@@ -36,7 +36,7 @@ pub struct AssArmorRef {
     pub skills: Option<String>,
 }
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct AssDecorationRef {
     pub id: i32,
     pub name: String,
@@ -48,7 +48,7 @@ pub struct AssDecorationRef {
     pub count: i32,
 }
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct AssSolutionView {
     pub armors: Vec<AssArmorRef>,
     pub decorations: Vec<AssDecorationRef>,

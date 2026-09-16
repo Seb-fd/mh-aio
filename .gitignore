@@ -47,6 +47,8 @@ Thumbs.db
 # Dev-only data generation scripts (read external mhfu-db upstream; not needed at runtime)
 scripts/*
 !scripts/check-version.js
+# Scrape/fetch caches (regenerable via scripts/; can exceed 1GB)
+tmp/
 tmp_mhfu_upstream/
 tmp_mhp3rd_ass/
 tmp_mhp3rd_upstream/

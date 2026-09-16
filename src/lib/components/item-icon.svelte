@@ -55,6 +55,7 @@
     class="shrink-0 object-contain"
     style="width: {size}px; height: {size}px;"
     loading="lazy"
+    decoding="async"
     onerror={() => (failed = true)}
   />
 {:else if iconName}

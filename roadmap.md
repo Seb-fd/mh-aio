@@ -4,7 +4,7 @@
 
 A comprehensive, offline-first encyclopedia and toolkit for all Monster Hunter games, covering multiple titles with detailed data on weapons, armor, monsters, quests, skills, items, builds (incl. an armor set solver ported from Athena's A.S.S.), and suggestions.
 
-Current state: **MH2G / Freedom Unite is fully populated and verified** (2075 armor, 1083 items, 83 monsters, 1500 weapons, 99 skill families, 192 decorations) with detail views, game-faithful ordering (monsters Hunter's Notes order, weapons Smith order), filtered browsers (Large/Small, Blademaster/Gunner), armor set search, and per-game global search. **MHP3rd / Portable 3rd (DB id 4) is fully seeded** (1065 items, 378 quests — all 378 bilingual, 60 monsters, 972 weapons, 1111 armor, 263 combines, 761 drops, 1867 quest rewards). Remaining titles (MHW/MHR/MHWilds) are wired for routing/theming with data pending.
+Current state: **MH2G / Freedom Unite is fully populated and verified** (2075 armor, 1083 items, 83 monsters, 1500 weapons, 99 skill families, 192 decorations) with detail views, game-faithful ordering (monsters Hunter's Notes order, weapons Smith order), filtered browsers (Large/Small, Blademaster/Gunner), armor set search, and per-game global search. **MHP3rd / Portable 3rd (DB id 4) is fully seeded** (1044 items, 378 quests — all 378 bilingual, 60 monsters, 972 weapons, 1111 armor, 263 combines, 1679 drops, 1867 quest rewards; fidelity pass DONE per `spec/features/001-mhp3rd-fidelity-pass/`). **MHW: Iceborne (DB id 1) core is seeded** (1359 items, 94 monsters, 3544 weapons, 521 quests, 211 Melder recipes, 20 Mantles/Boosters, 8 Palico Gadgets; gaps tracked in `spec/features/002b-mhw-gaps/`). Remaining titles (MHR/MHWilds) are wired for routing/theming with data pending.
 
 ---
 
@@ -298,18 +298,22 @@ CREATE TABLE armor_materials (
    - Materials, drop sources, combine recipes populated; item taxonomy ISO-derived (`Consumable 91 / Material 913 / Ammo 79` + `subcategory` Charm/Husk/Coating); ordering faithful to UMD (Hunter's Notes, Smith trees, quest hubs, Book of Combos)
    - Data verified against retail UMD and event distribution file (see `docs/fidelity-report.md`)
    - Armor Set Search (Athena's A.S.S. port) + per-game global search + ordered, filtered browsers (Large/Small, Blademaster/Gunner, Training/Treasure/Event) + combinations view (Normal/Alchemy/Treasure, `success %`) + clickable recipes
-2. **Monster Hunter Portable 3rd** (2010) — MHP3rd, **fully seeded (mhp3rd, DB id 4)**
-   - 1065 items (Material 964 / Consumable 55 / Ammo 46, 291 descriptions, 181 buy prices), 378 quests (`village 96 · guild_low 88 · guild_high 100 · event 52 · hot_spring 7 · drink 16 · nyanta 3 · training 10 · challenge 6`, all 378 carry JP `name_original`), 60 monsters, 972 weapons, 1111 armor, 263 combines (202 Normal + 61 Alchemy), 761 drops, 1867 quest rewards
-   - Sourced from `MHP3: Item List` + `www.mhp3wiki.info` via Playwright; gaps: gathering-only `item_sources` (shop/trade/farm pending), numeric struct audit pending
+2. **Monster Hunter Portable 3rd** (2010) — MHP3rd, **fully seeded (mhp3rd, DB id 4), fidelity pass DONE (spec `001`)**
+   - 1044 items (Material 943 / Consumable 55 / Ammo 46, 291 descriptions — 17 EN + 274 JP, 150 buy prices), 378 quests (`village 96 · guild_low 88 · guild_high 100 · event 52 · hot_spring 7 · drink 16 · nyanta 3 · training 10 · challenge 6`, all 378 carry JP `name_original`), 60 monsters, 972 weapons, 1111 armor, 263 combines (202 Normal + 61 Alchemy), 1679 drops, 2016 item_sources, 1867 quest rewards
+   - Sourced from `MHP3: Item List` + `www.mhp3wiki.info` via Playwright; SDD 001 verified shop/trade/farm coverage and fixed small-monster visibility (`get_item_sources` `source_id IS NOT NULL` guard)
+
+### Current (seeded core)
+
+3. **Monster Hunter World: Iceborne** (2018/2019) — MHW, **core seeded (mhw, DB id 1), gaps DONE (spec `002b`)**
+   - 1359 items, 94 monsters, 3544 weapons, 1595 armor, 521 quests, 178 skills, 5862 drops, 211 Melder recipes, 20 Mantles/Boosters, 8 Palico Gadgets + 404 decorations, 788 weakness rows, 911 gather rows. Sources: MHWorldData + Fandom (not mhw-db.com API)
+4. **Monster Hunter Wilds** (2025) — MHWilds, **core seeded (mhwilds, DB id 3), spec `004` DONE**
+   - 34 Large monsters, 773 items, 1188 weapons, 714 armor (183 sets), 179 skills, 361 decorations, 1775 drops, 121 combines. Sources: MHDB Wilds API. Gaps (no upstream data): quests, charms, small monsters
+5. **Monster Hunter Rise: Sunbreak** (2021/2022) — MHR, **fully seeded (mhr, DB id 2), spec `003` DONE**
+   - 112 monsters, 1642 items, 3953 weapons, 1591 armor (410 sets), 946 quests, 147 skills, 243 decorations, 7092 drops, 7508 quest rewards. Sources: Badge87 + CrimsonNynja bulk + Kiranico v16 scrape. Gaps: talismans, weapon deco slot sizes/descriptions
 
 ### Planned
 
-3. **Monster Hunter World: Iceborne** (2018/2019)
-   - Sources: mhw-db.com API, Kiranico
-4. **Monster Hunter Rise: Sunbreak** (2021/2022)
-   - Sources: Kiranico, Game8
-5. **Monster Hunter Wilds** (2025)
-   - Sources: Kiranico (mhwilds.kiranico.com), Game8
+6. *(none — all five games seeded; see Phase 6 for distribution)*
 
 ---
 
@@ -350,24 +354,26 @@ CREATE TABLE armor_materials (
 - [x] Skill picker UI (up to 5 skills) with ability selectors
 - [x] Optimal set calculator (HR/Elder rank gate, gender, weapon slots, piercings)
 - [x] English, guided UX with quick "Try:" examples
-- [ ] Save/load custom builds (future)
-- [ ] Export builds to JSON / share link (future)
+- [x] Save/load custom builds (app-data `builds.json`, per-game) — spec `005`
+- [x] Export builds to JSON / share code + validated import — spec `005`
 
 ### ✅ Phase 4 (partial): Global Search (DONE)
 
 - [x] Global per-game search across all entities (accent-insensitive, debounced)
-- [ ] Favorites system (future)
-- [ ] Import panel for JSON/CSV (future)
+- [x] Favorites system (app-data, per-game stars + ★ list filters) — spec `006-favorites-system`
+- [x] Import panel for JSON/CSV (per-game `[game]/import`: 6 entity kinds, dry-run preview, transactional idempotent apply) — spec `007-import-panel-json-csv`
 - [ ] Offline mode verification (future)
 - [ ] Auto-update mechanism (future)
 
-### ✅ Phase 5: Multi-Game — MHP3rd seeded (partial)
+### ✅ Phase 5: Multi-Game — MHP3rd DONE, MHW core DONE
 
-- [x] MHP3rd data import — 1065 items, 378 quests, 60 monsters, 972 weapons, 1111 armor, 263 combines, 761 drops, skills/decorations seeded via `src-tauri/data/mhp3rd_*.json` + `db/seed.rs` (idempotent)
-- [ ] MHW scraper (mhw-db.com API)
-- [ ] MHR scraper (Kiranico / Game8)
-- [ ] MHWilds scraper
-- [ ] Game-specific UI adaptations (Focus Mode, Wirebugs, etc.)
+- [x] MHP3rd data import + fidelity pass — 1044 items, 378 quests, 60 monsters, 972 weapons, 1111 armor, 263 combines, 1679 drops, 2016 item_sources, skills/decorations seeded via `src-tauri/data/mhp3rd_*.json` + `db/seed.rs` (idempotent) — spec `001-mhp3rd-fidelity-pass` DONE
+- [x] MHW data import (core) — 1359 items, 94 monsters, 3544 weapons, 1595 armor, 521 quests, 178 skills, 5862 drops, 211 Melder, 20 Mantles/Boosters, 8 Palico Gadgets via MHWorldData + Fandom pipeline (`scripts/generate_mhw_*`) — specs `002-mhw-data-import` + `009-mhw-tools-melder` DONE
+- [x] MHW gaps DONE — 404 decorations, 788 weakness rows (88 monsters), ~20k derived equipment links, 911 gather rows, 179 skills + weapon_skill_points — spec `002b-mhw-gaps`
+- [x] MHWilds data import (core) — 34 monsters, 773 items, 1188 weapons, 714 armor, 179 skills, 361 decorations, 1775 drops via MHDB Wilds API (`scripts/generate_mhwilds_from_mhdb.py`) — spec `004-mhwilds-data-import` DONE (quests/charms deferred: no upstream data)
+- [ ] MHR scraper (Kiranico / Game8) — spec `003-mhr-data-import`
+- [ ] MHWilds scraper (Kiranico / Game8 / wilds.mhdb.io) — spec `004-mhwilds-data-import`
+- [ ] Game-specific UI adaptations (Focus Mode, Wirebugs, etc. — own spec each if scoped, see `009` pattern)
 
 ### 📋 Phase 6: Mobile & Distribution
 
