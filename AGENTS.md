@@ -12,10 +12,13 @@ npx tauri dev               # Full app (frontend + Rust backend)
 npx tauri build             # Production build
 cargo build --manifest-path src-tauri/Cargo.toml  # Rust backend only
 npm run check / lint / typecheck  # svelte-check (all three aliases)
+npm run lint:eslint         # ESLint (CI runs `lint:eslint --if-present`)
+npm run format              # Prettier --write (fix formatting locally)
+npm run format:check        # Prettier --check (CI runs this; must pass)
 cargo test --manifest-path src-tauri/Cargo.toml   # Rust unit tests (ASS + db)
 ```
 
-`package.json` defines `check`, `check:watch`, `lint` and `typecheck` (all wrapping `svelte-check`). There is **no dedicated format or frontend unit-test runner**; the Rust suites in `ass.rs` and `db::queries` are exercised by `cargo test`.
+`package.json` defines `check`, `check:watch`, `lint` and `typecheck` (all wrapping `svelte-check`), plus `format` / `format:check` (Prettier) and `lint:eslint`. There is **no frontend unit-test runner**; the Rust suites in `ass.rs` and `db::queries` are exercised by `cargo test`. Prettier config lives in `.prettierrc` (`semi: false`, `singleQuote: true`, `printWidth: 100`); CI checks **all** non-ignored files including `*.md` (`.opencode/agents/`, `docs/`, `spec/`, `roadmap.md`).
 
 ## Architecture
 
@@ -87,11 +90,17 @@ Registered in `src-tauri/src/lib.rs` via `tauri::generate_handler!`. Defined in 
 > - **Pre-commit/push CI gate — MANDATORY when the user requests commit/push:** Before `git add/commit/push/tag`, **ensure GitHub CI will pass**. Run locally everything CI runs and fix findings before committing:
 >   ```bash
 >   npm run check   # svelte-check (also lint/typecheck — they are aliases)
->   cargo test --manifest-path src-tauri/Cargo.toml
+>   npm run lint:eslint --if-present  # ESLint (CI job `ESLint`)
+>   npm run format:check --if-present # Prettier (CI job `Prettier check`; fix with `npm run format`)
+>   cargo fmt --manifest-path src-tauri/Cargo.toml --check  # Rustfmt (CI job `Rust fmt check`)
+>   cargo clippy --manifest-path src-tauri/Cargo.toml -- -D warnings  # Clippy (CI job `Cargo clippy`)
+>   cargo test --manifest-path src-tauri/Cargo.toml   # Rust unit tests (ASS + db)
 >   cargo build --manifest-path src-tauri/Cargo.toml  # if the workflow builds
+>   node scripts/check-version.js  # version sync (CI job `Version sync check`)
+>   npm audit --audit-level=moderate  # CI job `npm audit`
 >   # + check .github/workflows/*.yml for extra jobs (release, tauri build) and run them if applicable
 >   ```
->   If something fails, **fix it first**, re-run until green, and only then `commit/push`. If push already happened and CI fails, fix immediately with a new commit. Do not ask the user to act as CI.
+>   If something fails, **fix it first**, re-run until green, and only then `commit/push`. If push already happened and CI fails, fix immediately with a new commit. Do not ask the user to act as CI. **Markdown files are checked too** — always run `npm run format` after editing `.opencode/agents/*.md`, `docs/**`, `spec/**` or `roadmap.md`.
 
 ## Release & Versioning
 

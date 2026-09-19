@@ -313,7 +313,7 @@ CREATE TABLE armor_materials (
 
 ### Planned
 
-6. *(none — all five games seeded; see Phase 6 for distribution)*
+6. _(none — all five games seeded; see Phase 6 for distribution)_
 
 ---
 
