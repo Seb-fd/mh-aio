@@ -97,7 +97,7 @@ Registered in `src-tauri/src/lib.rs` via `tauri::generate_handler!`. Defined in 
 >   cargo test --manifest-path src-tauri/Cargo.toml   # Rust unit tests (ASS + db)
 >   cargo build --manifest-path src-tauri/Cargo.toml  # if the workflow builds
 >   node scripts/check-version.js  # version sync (CI job `Version sync check`)
->   npm audit --audit-level=moderate  # CI job `npm audit`
+>   npm audit --audit-level=moderate  # CI job `npm audit` (needs npm 11 bulk endpoint + lockfile in sync; if `Invalid package tree`, run `npm install --package-lock-only` and commit `package-lock.json`)
 >   # + check .github/workflows/*.yml for extra jobs (release, tauri build) and run them if applicable
 >   ```
 >   If something fails, **fix it first**, re-run until green, and only then `commit/push`. If push already happened and CI fails, fix immediately with a new commit. Do not ask the user to act as CI. **Markdown files are checked too** — always run `npm run format` after editing `.opencode/agents/*.md`, `docs/**`, `spec/**` or `roadmap.md`.
