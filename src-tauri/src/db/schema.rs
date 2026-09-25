@@ -132,6 +132,30 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             equipment_id INTEGER NOT NULL
         );
 
+        -- Monster ailment tolerances (poison/paralysis/sleep/KO)
+        CREATE TABLE IF NOT EXISTS monster_ailments (
+            id INTEGER PRIMARY KEY,
+            monster_id INTEGER REFERENCES monsters(id),
+            ailment TEXT NOT NULL,
+            initial INTEGER,
+            increase INTEGER,
+            max INTEGER,
+            decay_step INTEGER,
+            decay_interval INTEGER,
+            duration_sec INTEGER,
+            damage INTEGER
+        );
+
+        -- Monster trap/tool effectiveness (seconds; 0 = immune; dung/meat 1/0)
+        CREATE TABLE IF NOT EXISTS monster_tools (
+            id INTEGER PRIMARY KEY,
+            monster_id INTEGER REFERENCES monsters(id),
+            tool TEXT NOT NULL,
+            normal INTEGER,
+            notfound INTEGER,
+            enraged INTEGER
+        );
+
         -- Quests table
         CREATE TABLE IF NOT EXISTS quests (
             id INTEGER PRIMARY KEY,
@@ -393,6 +417,8 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
         CREATE INDEX IF NOT EXISTS idx_quest_rewards_quest ON quest_rewards(quest_id);
         CREATE INDEX IF NOT EXISTS idx_monster_drops_monster ON monster_drops(monster_id);
         CREATE INDEX IF NOT EXISTS idx_monster_drops_item ON monster_drops(item_id);
+        CREATE INDEX IF NOT EXISTS idx_monster_ailments_monster ON monster_ailments(monster_id);
+        CREATE INDEX IF NOT EXISTS idx_monster_tools_monster ON monster_tools(monster_id);
         CREATE INDEX IF NOT EXISTS idx_monster_eq_monster ON monster_equipment(monster_id);
         CREATE INDEX IF NOT EXISTS idx_skill_levels_skill ON skill_levels(skill_id);
         CREATE INDEX IF NOT EXISTS idx_skill_levels_points ON skill_levels(points);
@@ -493,6 +519,8 @@ fn add_idempotency_constraints(conn: &Connection) -> Result<()> {
         ("uq_monster_weaknesses", "DELETE FROM monster_weaknesses WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_weaknesses GROUP BY monster_id, IFNULL(part_name, ''));"),
         ("uq_item_sources", "DELETE FROM item_sources WHERE rowid NOT IN (SELECT MIN(rowid) FROM item_sources GROUP BY item_id, source_type, IFNULL(source_id, -1), IFNULL(quantity_min, -1), IFNULL(quantity_max, -1), IFNULL(probability, -1), IFNULL(location, ''), IFNULL(conditions, ''));"),
         ("uq_melder_recipes", "DELETE FROM melder_recipes WHERE rowid NOT IN (SELECT MIN(rowid) FROM melder_recipes GROUP BY game_id, result_item_id);"),
+        ("uq_monster_ailments", "DELETE FROM monster_ailments WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_ailments GROUP BY monster_id, ailment);"),
+        ("uq_monster_tools", "DELETE FROM monster_tools WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_tools GROUP BY monster_id, tool);"),
     ];
     for (index, sql) in dedupes {
         if !existing.contains(index) {
@@ -511,6 +539,8 @@ fn add_idempotency_constraints(conn: &Connection) -> Result<()> {
         CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_weaknesses ON monster_weaknesses(monster_id, IFNULL(part_name, ''));
         CREATE UNIQUE INDEX IF NOT EXISTS uq_item_sources ON item_sources(item_id, source_type, IFNULL(source_id, -1), IFNULL(quantity_min, -1), IFNULL(quantity_max, -1), IFNULL(probability, -1), IFNULL(location, ''), IFNULL(conditions, ''));
         CREATE UNIQUE INDEX IF NOT EXISTS uq_melder_recipes ON melder_recipes(game_id, result_item_id);
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_ailments ON monster_ailments(monster_id, ailment);
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_tools ON monster_tools(monster_id, tool);
         CREATE UNIQUE INDEX IF NOT EXISTS uq_palico_gadget_levels ON palico_gadget_levels(gadget_id, proficiency);
     ")?;
 
@@ -618,6 +648,8 @@ fn apply_migrations(conn: &Connection) -> Result<()> {
         "CREATE INDEX IF NOT EXISTS idx_quests_category ON quests(category)",
         [],
     );
+    // MHFU part flinch HP (stagger limit) from basic-parts-duration
+    add_column_if_missing(conn, "monster_weaknesses", "stagger_hp", "INTEGER")?;
     Ok(())
 }
 

@@ -1485,7 +1485,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1061,
@@ -1493,7 +1493,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 122,
@@ -1517,7 +1517,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1062,
@@ -1525,7 +1525,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1063,
@@ -1573,7 +1573,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1064,
@@ -1581,7 +1581,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 124,
@@ -1605,7 +1605,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 75
   },
   {
     "result_item_id": 1065,
@@ -1613,7 +1613,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 75
   },
   {
     "result_item_id": 125,
@@ -1637,7 +1637,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 75
   },
   {
     "result_item_id": 1066,
@@ -1645,7 +1645,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 75
   },
   {
     "result_item_id": 126,
@@ -3205,7 +3205,7 @@
     "quantity": 1,
     "result_quantity": 2,
     "combine_type": "normal",
-    "chance": null
+    "chance": 95
   },
   {
     "result_item_id": 1053,
@@ -3213,7 +3213,7 @@
     "quantity": 1,
     "result_quantity": 2,
     "combine_type": "normal",
-    "chance": null
+    "chance": 95
   },
   {
     "result_item_id": 1054,
@@ -3221,7 +3221,7 @@
     "quantity": 1,
     "result_quantity": 2,
     "combine_type": "normal",
-    "chance": null
+    "chance": 95
   },
   {
     "result_item_id": 1054,
@@ -3229,7 +3229,7 @@
     "quantity": 1,
     "result_quantity": 2,
     "combine_type": "normal",
-    "chance": null
+    "chance": 95
   },
   {
     "result_item_id": 1055,
@@ -3237,7 +3237,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1055,
@@ -3245,7 +3245,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1056,
@@ -3253,7 +3253,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 75
   },
   {
     "result_item_id": 1056,
@@ -3261,7 +3261,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 75
   },
   {
     "result_item_id": 1057,
@@ -3269,7 +3269,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 75
   },
   {
     "result_item_id": 1057,
@@ -3277,7 +3277,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 75
   },
   {
     "result_item_id": 1058,
@@ -3285,7 +3285,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1058,
@@ -3293,7 +3293,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1059,
@@ -3301,7 +3301,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 75
   },
   {
     "result_item_id": 1059,
@@ -3309,7 +3309,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 75
   },
   {
     "result_item_id": 1060,
@@ -3317,7 +3317,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 75
   },
   {
     "result_item_id": 1060,
@@ -3325,7 +3325,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 75
   },
   {
     "result_item_id": 1067,
@@ -3333,7 +3333,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1067,
@@ -3341,7 +3341,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1068,
@@ -3349,7 +3349,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1068,
@@ -3357,7 +3357,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1069,
@@ -3365,7 +3365,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1069,
@@ -3373,7 +3373,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1070,
@@ -3381,7 +3381,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 75
   },
   {
     "result_item_id": 1070,
@@ -3389,7 +3389,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 75
   },
   {
     "result_item_id": 1071,
@@ -3397,7 +3397,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1071,
@@ -3405,7 +3405,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1072,
@@ -3413,7 +3413,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1072,
@@ -3421,7 +3421,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1073,
@@ -3429,7 +3429,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1073,
@@ -3437,7 +3437,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 90
   },
   {
     "result_item_id": 1074,
@@ -3445,7 +3445,7 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 75
   },
   {
     "result_item_id": 1074,
@@ -3453,6 +3453,6 @@
     "quantity": 1,
     "result_quantity": 1,
     "combine_type": "normal",
-    "chance": null
+    "chance": 75
   }
 ]

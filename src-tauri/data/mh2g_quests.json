@@ -129,7 +129,8 @@
     "main_monsters": [
       "Giadrome",
       "Giaprey"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 7,
@@ -217,7 +218,8 @@
     "main_monsters": [
       "Giadrome",
       "Giaprey"
-    ]
+    ],
+    "is_urgent": false
   },
   {
     "id": 11,
@@ -546,7 +548,8 @@
     "main_monsters": [
       "Khezu",
       "Giaprey"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 26,
@@ -611,7 +614,8 @@
     "main_monsters": [
       "Khezu",
       "Giaprey"
-    ]
+    ],
+    "is_urgent": false
   },
   {
     "id": 29,
@@ -962,7 +966,8 @@
     "main_monsters": [
       "Blangonga",
       "Blango"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 45,
@@ -1005,7 +1010,8 @@
     "main_monsters": [
       "Blangonga",
       "Blango"
-    ]
+    ],
+    "is_urgent": false
   },
   {
     "id": 47,
@@ -1279,7 +1285,7 @@
     "hub": "elder",
     "stars": 4,
     "objective": "Slay 10 Ceanataurs",
-    "location": "Volcano(Day) ",
+    "location": "Volcano(Day)",
     "time_limit": 50,
     "faints_allowed": 3,
     "is_key_quest": false,
@@ -1786,7 +1792,8 @@
     "main_monsters": [
       "Rathalos",
       "Rathian"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 83,
@@ -1808,7 +1815,8 @@
     "main_monsters": [
       "Rathalos",
       "Rathian"
-    ]
+    ],
+    "is_urgent": false
   },
   {
     "id": 84,
@@ -1980,7 +1988,8 @@
     "contract_fee": 1500,
     "main_monsters": [
       "Shen Gaoren"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 92,
@@ -2012,7 +2021,7 @@
     "hub": "elder",
     "stars": 6,
     "objective": "Hunt the Gravios",
-    "location": "Fortess",
+    "location": "Fortress",
     "time_limit": 35,
     "faints_allowed": 3,
     "is_key_quest": false,
@@ -2939,7 +2948,8 @@
     "main_monsters": [
       "Blangonga",
       "Blango"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 136,
@@ -3024,7 +3034,8 @@
     "main_monsters": [
       "Blangonga",
       "Blango"
-    ]
+    ],
+    "is_urgent": false
   },
   {
     "id": 140,
@@ -3445,7 +3456,7 @@
     "hub": "guild_low",
     "stars": 4,
     "objective": "Defend the Fortress from Lao-Shan Lung",
-    "location": "Fortess",
+    "location": "Fortress",
     "time_limit": 35,
     "faints_allowed": 3,
     "is_key_quest": false,
@@ -3523,7 +3534,8 @@
     "main_monsters": [
       "Tigrex",
       "Giaprey"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 163,
@@ -3545,7 +3557,8 @@
     "main_monsters": [
       "Tigrex",
       "Giaprey"
-    ]
+    ],
+    "is_urgent": false
   },
   {
     "id": 164,
@@ -3903,7 +3916,7 @@
     "location": "Swamp(Day)",
     "time_limit": 50,
     "faints_allowed": 3,
-    "is_key_quest": false,
+    "is_key_quest": true,
     "description": "Large Congalalas continue to gather, and at this rate, they'll completely trash the Swamp and affect our town's way of life. I'm not asking that you get rid of them all, but even 2 would help!",
     "client": "Swamp Townsman",
     "requirements": "HR 1+",
@@ -3934,7 +3947,8 @@
     "main_monsters": [
       "Shen Gaoren",
       "Ioprey"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 182,
@@ -4242,7 +4256,8 @@
     "main_monsters": [
       "Ashen Lao-Shan Lung",
       "Ioprey"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 196,
@@ -4679,7 +4694,8 @@
     "main_monsters": [
       "Ashen Lao-Shan Lung",
       "Ioprey"
-    ]
+    ],
+    "is_urgent": false
   },
   {
     "id": 216,
@@ -4833,7 +4849,8 @@
     "main_monsters": [
       "Tigrex",
       "Tigrex"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 223,
@@ -4855,7 +4872,8 @@
     "main_monsters": [
       "Tigrex",
       "Tigrex"
-    ]
+    ],
+    "is_urgent": false
   },
   {
     "id": 224,
@@ -5588,7 +5606,8 @@
     "contract_fee": 2000,
     "main_monsters": [
       "Shen Gaoren"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 258,
@@ -5609,7 +5628,8 @@
     "contract_fee": 3000,
     "main_monsters": [
       "Akantor"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 259,
@@ -5631,7 +5651,8 @@
     "main_monsters": [
       "Hypnocatrice",
       "Hypnocatrice"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 260,
@@ -5829,7 +5850,8 @@
     "main_monsters": [
       "Hypnocatrice",
       "Hypnocatrice"
-    ]
+    ],
+    "is_urgent": false
   },
   {
     "id": 269,
@@ -6205,7 +6227,8 @@
     "main_monsters": [
       "Nargacuga",
       "King Shakalaka"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 286,
@@ -6271,7 +6294,8 @@
     "main_monsters": [
       "Nargacuga",
       "King Shakalaka"
-    ]
+    ],
+    "is_urgent": false
   },
   {
     "id": 289,
@@ -6822,7 +6846,8 @@
     "main_monsters": [
       "Yama Tsukami",
       "Great Thunderbug"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 314,
@@ -6857,7 +6882,7 @@
     "location": "Desert(Day)",
     "time_limit": 50,
     "faints_allowed": 3,
-    "is_key_quest": false,
+    "is_key_quest": true,
     "description": "A group of highly skilled hunters went off to slay two Tigrex, but they became the hunted. Please destroy the two Tigrex and open a clear route for our rescue team.",
     "client": "Guild Master",
     "requirements": "HR 4+",
@@ -6920,7 +6945,7 @@
     "hub": "guild_g",
     "stars": 3,
     "objective": "Hunt 2 Black Diablos",
-    "location": "Old Desert ",
+    "location": "Old Desert",
     "time_limit": 50,
     "faints_allowed": 3,
     "is_key_quest": true,
@@ -7433,7 +7458,8 @@
     "main_monsters": [
       "Yama Tsukami",
       "Great Thunderbug"
-    ]
+    ],
+    "is_urgent": false
   },
   {
     "id": 342,
@@ -7538,7 +7564,8 @@
     "contract_fee": 5000,
     "main_monsters": [
       "Ukanlos"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 347,
@@ -7560,7 +7587,8 @@
     "main_monsters": [
       "Hypnocatrice",
       "Velociprey"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 348,
@@ -7672,7 +7700,8 @@
     "main_monsters": [
       "Hypnocatrice",
       "Velociprey"
-    ]
+    ],
+    "is_urgent": false
   },
   {
     "id": 353,
@@ -8312,8 +8341,8 @@
     "name": "Secret Request: Nargacuga!",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt the Nargacuga",
     "location": "GrtForest(Day)",
     "time_limit": 50,
@@ -8327,15 +8356,16 @@
     "main_monsters": [
       "Nargacuga",
       "Kelbi"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 383,
     "name": "Secret Request: Nargacuga!",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt the Nargacuga",
     "location": "GrtForest(Day)",
     "time_limit": 50,
@@ -8349,15 +8379,16 @@
     "main_monsters": [
       "Nargacuga",
       "Kelbi"
-    ]
+    ],
+    "is_urgent": false
   },
   {
     "id": 384,
     "name": "Assassin of the Jungle",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt the Nargacuga",
     "location": "Old Jungle",
     "time_limit": 50,
@@ -8378,8 +8409,8 @@
     "name": "Land of the Tremors",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt 2 Tigrex",
     "location": "SnwMntains(Nght)",
     "time_limit": 50,
@@ -8400,13 +8431,13 @@
     "name": "A King, Robed in Smoke",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt the Rathalos",
     "location": "Old Volcano",
     "time_limit": 50,
     "faints_allowed": 3,
-    "is_key_quest": false,
+    "is_key_quest": true,
     "description": "Unbelievably, the king of all wyverns has appeared in the Old Volcano belt. To protect our temple, we went to fight it, but to no avail. Please, we humbly ask for your assistance, hunter!",
     "client": "MightyMountainMonks",
     "requirements": "HR 7+",
@@ -8422,8 +8453,8 @@
     "name": "Dancing Desert Queen",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt the Rathian",
     "location": "Old Desert",
     "time_limit": 50,
@@ -8444,8 +8475,8 @@
     "name": "Descendants of the King",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt the Azure Rathalos and the Pink Rathian",
     "location": "Frst&Hills(Nght)",
     "time_limit": 50,
@@ -8466,8 +8497,8 @@
     "name": "Diablos, the Demon King",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt the Diablos",
     "location": "Desert(Night)",
     "time_limit": 50,
@@ -8488,8 +8519,8 @@
     "name": "The Four Spires",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt 2 Black Diablos",
     "location": "Old Desert",
     "time_limit": 50,
@@ -8510,13 +8541,13 @@
     "name": "Armored Supremacy",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt the Gravios",
     "location": "Old Volcano",
     "time_limit": 50,
     "faints_allowed": 3,
-    "is_key_quest": false,
+    "is_key_quest": true,
     "description": "Even us knights can't stand up to the Gravios's mighty heat ray. I know this is a big request, but can you please go and hunt this armored beast in our stead?",
     "client": "Friendly Head Knight",
     "requirements": "HR 7+",
@@ -8532,8 +8563,8 @@
     "name": "Two Black Suits of Armor",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt 2 Black Gravios",
     "location": "Old Volcano",
     "time_limit": 50,
@@ -8554,8 +8585,8 @@
     "name": "Explore the Unexplored",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt the Silver Rathalos",
     "location": "Tower",
     "time_limit": 50,
@@ -8575,8 +8606,8 @@
     "name": "A Single Beam of Moonlight",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt the Gold Rathian",
     "location": "Tower",
     "time_limit": 50,
@@ -8596,8 +8627,8 @@
     "name": "Fire Ring, Lunar Ring",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt the Silver Rathalos and the Gold Rathian",
     "location": "Old Swamp",
     "time_limit": 50,
@@ -8618,8 +8649,8 @@
     "name": "Attack of the Rajang",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt the Rajang",
     "location": "Volcano(Night)",
     "time_limit": 50,
@@ -8639,8 +8670,8 @@
     "name": "It's Electric",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Slay the Kirin",
     "location": "Old Jungle",
     "time_limit": 50,
@@ -8661,8 +8692,8 @@
     "name": "Diamond Dust",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt all of the Large Monsters",
     "location": "SnwyMntains(Day)",
     "time_limit": 50,
@@ -8683,8 +8714,8 @@
     "name": "Hard-Shelled Terrors",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt all of the Large Monsters",
     "location": "Volcano(Day)",
     "time_limit": 50,
@@ -8705,8 +8736,8 @@
     "name": "Bird Wyvern All-Stars",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt all of the Large Monsters",
     "location": "Frst&Hills(Nght)",
     "time_limit": 50,
@@ -8728,8 +8759,8 @@
     "name": "Sand Dune's Might",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt all of the Large Monsters",
     "location": "Old Desert",
     "time_limit": 50,
@@ -8751,8 +8782,8 @@
     "name": "Evaporate into the Night",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Slay the Chameleos",
     "location": "Jungle(Night)",
     "time_limit": 50,
@@ -8772,8 +8803,8 @@
     "name": "The Elder Dragon of Mist",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Slay the Chameleos",
     "location": "Frst&Hills(Day)",
     "time_limit": 50,
@@ -8793,8 +8824,8 @@
     "name": "A Midnight Audience",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Slay the Teostra",
     "location": "Town",
     "time_limit": 50,
@@ -8814,8 +8845,8 @@
     "name": "Fight for Your Life!",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Slay the Teostra",
     "location": "Town",
     "time_limit": 50,
@@ -8835,8 +8866,8 @@
     "name": "The Approaching Gaoren",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Defend the Fortress from Shen Gaoren",
     "location": "Fortress",
     "time_limit": 35,
@@ -8857,8 +8888,8 @@
     "name": "Monster Hunter",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Hunt all of the Large Monsters",
     "location": "Great Arena",
     "time_limit": 50,
@@ -8874,15 +8905,16 @@
       "Tigrex",
       "Nargacuga",
       "Rajang"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 408,
     "name": "Rise to the Summit",
     "type": "Hunting",
     "rank": "G",
-    "hub": "guild_g",
-    "stars": 1,
+    "hub": "nekoto",
+    "stars": 9,
     "objective": "Slay the Akantor",
     "location": "Battleground",
     "time_limit": 50,
@@ -8895,7 +8927,8 @@
     "contract_fee": 6000,
     "main_monsters": [
       "Akantor"
-    ]
+    ],
+    "is_urgent": true
   },
   {
     "id": 409,
@@ -12188,7 +12221,7 @@
     "type": "Hunting",
     "rank": "G",
     "hub": "event",
-    "stars": 9,
+    "stars": 3,
     "objective": "Hunt the Teostra",
     "location": "Volcano (Day)",
     "time_limit": 50,
@@ -12307,7 +12340,7 @@
     "is_key_quest": false,
     "description": "One time, when I was a little girl, I saw a giant shadow in the sky. It was bigger than any wyvern I'd ever seen... Was it all just a dream? Would you look into",
     "client": "Long-Haired Old Lady",
-    "requirements": "",
+    "requirements": "HR 9 or Above",
     "reward_money": 30000,
     "contract_fee": 2500,
     "main_monsters": [
@@ -12330,7 +12363,7 @@
     "is_key_quest": false,
     "description": "Come one, come all, to the ultimate arena! I've got 2 of the hardest, strongest, and most terrifying monsters around! Step on up! Prove you've got the right stuff!",
     "client": "Suspicious Manager",
-    "requirements": "",
+    "requirements": "HR 7 or Above",
     "reward_money": 26100,
     "contract_fee": 2200,
     "main_monsters": [
@@ -12374,7 +12407,7 @@
     "is_key_quest": false,
     "description": "Please, hear me out! Lately, my village's water has started smelling like sewage! Surely there must be something wrong at the source... Please find the",
     "client": "Lakeside Housewife",
-    "requirements": "",
+    "requirements": "HR 7 or Above",
     "reward_money": 18000,
     "contract_fee": 1500,
     "main_monsters": [
@@ -12397,7 +12430,7 @@
     "is_key_quest": false,
     "description": "I had sworn off this business a long time ago, but I couldn't leave it behind, so here I am, back in the thick of it! Your opponent this time is a pair",
     "client": "Arena Manager",
-    "requirements": "",
+    "requirements": "HR 7 or Above",
     "reward_money": 33000,
     "contract_fee": 2750,
     "main_monsters": [
@@ -12419,7 +12452,7 @@
     "is_key_quest": false,
     "description": "Come one, come all, to the ultimate arena! I've got 2, yes, count 'em, 2 fearsome Black Gravios right here in this very arena! Think you've got what it takes to",
     "client": "Arena Manager",
-    "requirements": "",
+    "requirements": "HR 7 or Above",
     "reward_money": 36000,
     "contract_fee": 3000,
     "main_monsters": [
@@ -12441,7 +12474,7 @@
     "is_key_quest": false,
     "description": "Two Rajang stole my lovely, unwilling bride and escaped into the mountains. I don't care that she doesn't want me, but I can't live without her! Please, lend me your",
     "client": "Event Guild",
-    "requirements": "",
+    "requirements": "HR 7 or Above",
     "reward_money": 30000,
     "contract_fee": 2500,
     "main_monsters": [
@@ -12462,7 +12495,7 @@
     "is_key_quest": false,
     "description": "An epic arena hunt. Four powerful monsters await in this grand battle.",
     "client": "Arena Manager",
-    "requirements": "",
+    "requirements": "HR 7 or above",
     "reward_money": 39000,
     "contract_fee": 3250,
     "main_monsters": [
@@ -12485,7 +12518,7 @@
     "is_key_quest": false,
     "description": "An epic hunt. Four Kings of Fire — take down the fiery beasts that rule the volcano.",
     "client": "Hearthside Researcher",
-    "requirements": "",
+    "requirements": "HR 7 or above",
     "reward_money": 42000,
     "contract_fee": 3500,
     "main_monsters": [
@@ -12509,7 +12542,7 @@
     "is_key_quest": false,
     "description": "An epic free-for-all. Hunt every large monster to prove you are worthy of the hunter's title.",
     "client": "Arena Manager",
-    "requirements": "",
+    "requirements": "HR 7 or above",
     "reward_money": 60000,
     "contract_fee": 5000,
     "main_monsters": [
@@ -12533,7 +12566,7 @@
     "is_key_quest": false,
     "description": "I require some entertainment at my party, for which I am recruiting hunters. Hee hee hee... It's a veritable buffet of free-roaming porkers, if you will. Can",
     "client": "Showy Suspect Dame",
-    "requirements": "",
+    "requirements": "HR 7 or Above",
     "reward_money": 8400,
     "contract_fee": 700,
     "main_monsters": [
@@ -12556,7 +12589,7 @@
     "is_key_quest": false,
     "description": "An arena brawl. Two Hypnocatrices stand between you and the reward.",
     "client": "Arena Manager",
-    "requirements": "",
+    "requirements": "HR 7 or Above",
     "reward_money": 15000,
     "contract_fee": 1250,
     "main_monsters": [
@@ -12578,7 +12611,7 @@
     "is_key_quest": false,
     "description": "Surrounded by magma, a Lavasioth lurks beneath the surface. Hunt it down.",
     "client": "Ashen Miner",
-    "requirements": "",
+    "requirements": "HR 7 or Above",
     "reward_money": 13500,
     "contract_fee": 1150,
     "main_monsters": [
@@ -12600,7 +12633,7 @@
     "is_key_quest": false,
     "description": "I came here in search of a meal yet to be tasted by mortal buds. I hear there is a legendary creature that lives on that hill nearby. Help me fulfill my life-long",
     "client": "Event Guild",
-    "requirements": "",
+    "requirements": "No equipped armor",
     "reward_money": 6000,
     "contract_fee": 500,
     "main_monsters": [
@@ -12670,7 +12703,7 @@
     "is_key_quest": false,
     "description": "For our commoners' sake, we took it upon ourselves to be brave and investigate the forest. But even Mother Dear did not warn us that such a dangerous place existed!",
     "client": "Event Guild",
-    "requirements": "",
+    "requirements": "HR 4 or above",
     "reward_money": 14100,
     "contract_fee": 1200,
     "main_monsters": [
@@ -12694,7 +12727,7 @@
     "is_key_quest": false,
     "description": "I want this to be one fun festival, and you know what I think would make it fun? Letting the people see some top-notch hunters in action! I've got 4 monsters ready,",
     "client": "Suave Show Producer",
-    "requirements": "",
+    "requirements": "HR 4 or above",
     "reward_money": 24000,
     "contract_fee": 2000,
     "main_monsters": [
@@ -12717,7 +12750,7 @@
     "is_key_quest": false,
     "description": "Master! Do you plan to check out the old Tower? You can't afford to miss it, meow... And if you do go, you'll see something pretty incredible... Though I have",
     "client": "Pure White Felyne",
-    "requirements": "",
+    "requirements": "HR 6 or above",
     "reward_money": 36000,
     "contract_fee": 3000,
     "main_monsters": [
@@ -12739,7 +12772,7 @@
     "is_key_quest": false,
     "description": "The black wings of fate herald the coming of Fatalis. Slay it.",
     "client": "Guild Officer",
-    "requirements": "",
+    "requirements": "HR 9 or Above",
     "reward_money": 54000,
     "contract_fee": 4500,
     "main_monsters": [
@@ -12760,7 +12793,7 @@
     "is_key_quest": false,
     "description": "The skies burn crimson. Slay the Crimson Fatalis.",
     "client": "Guild Officer",
-    "requirements": "",
+    "requirements": "HR 9 or Above",
     "reward_money": 54000,
     "contract_fee": 4500,
     "main_monsters": [
@@ -12782,7 +12815,7 @@
     "is_key_quest": false,
     "description": "A white beam of light pierces the tower. Slay the White Fatalis.",
     "client": "Guild Officer",
-    "requirements": "",
+    "requirements": "HR 9 or Above",
     "reward_money": 54000,
     "contract_fee": 4500,
     "main_monsters": [
@@ -12826,7 +12859,7 @@
     "is_key_quest": false,
     "description": "The profoundly powerful Akantor...  We chased it this far, however, we've sustained heavy damage. Hunters of this land! I ask for your",
     "client": "Event Guild",
-    "requirements": "",
+    "requirements": "HR 9 or Above",
     "reward_money": 60000,
     "contract_fee": 5000,
     "main_monsters": [
@@ -12848,7 +12881,7 @@
     "is_key_quest": false,
     "description": "I... I'm the one in charge of the festival this time, and, um... *ahem* The reward for skillfully winning this challenge is a very special ticket! So, um, I hope you",
     "client": "Event Guild",
-    "requirements": "",
+    "requirements": "HR 7 or above",
     "reward_money": 33000,
     "contract_fee": 2750,
     "main_monsters": [
@@ -12872,7 +12905,7 @@
     "is_key_quest": false,
     "description": "Wow! Sounds like there's a striped monster somewhere on the other side! Let's hurry and try to catch a glimpse! If it's a violent beast, you will be there for me, right?",
     "client": "Event Guild",
-    "requirements": "",
+    "requirements": "HR 7 or Above",
     "reward_money": 14100,
     "contract_fee": 1200,
     "main_monsters": [
@@ -12893,7 +12926,7 @@
     "is_key_quest": false,
     "description": "I can't believe what I saw! It was terrible! There they were, 2 Rajang just sitting there in the arena... Listen, if you value your life at all, absolutely do",
     "client": "Event Guild",
-    "requirements": "",
+    "requirements": "HR 7 or Above",
     "reward_money": 42000,
     "contract_fee": 3500,
     "main_monsters": [
@@ -12913,7 +12946,7 @@
     "time_limit": 50,
     "faints_allowed": 3,
     "is_key_quest": false,
-    "description": "",
+    "description": "A Yian Garuga has been spotted in the jungle, and as your esteemed instructor, I deem this to be a great chance to do some training. I'll lend ya some equipment, so get out there already!",
     "client": "Event Guild",
     "requirements": "",
     "reward_money": 6000,
@@ -12935,9 +12968,9 @@
     "time_limit": 50,
     "faints_allowed": 3,
     "is_key_quest": false,
-    "description": "",
+    "description": "Oho! A challenge from the Shakalaka! Now normally, I'd go myself, but I just remembered I have something very important to take care of! Go stand in for me and bring back that trophy!",
     "client": "Event Guild",
-    "requirements": "",
+    "requirements": "HR 4 or above",
     "reward_money": 7500,
     "contract_fee": 0,
     "main_monsters": [
@@ -12959,7 +12992,7 @@
     "is_key_quest": false,
     "description": "The battlefield this time will be the Moat Arena. The prize money is pretty good, so no harm in trying. Huh? Where's the fine print? Aww, you'll do fine! You'll win!",
     "client": "Event Guild",
-    "requirements": "",
+    "requirements": "HR 7 or above",
     "reward_money": 60000,
     "contract_fee": 0,
     "main_monsters": [
@@ -12981,7 +13014,7 @@
     "is_key_quest": false,
     "description": "Become one with the monsters by knowing how they think; that's the best way to beat them! That's what this training is for. Use this equipment and get inside the",
     "client": "Event Guild",
-    "requirements": "",
+    "requirements": "HR 7 or above",
     "reward_money": 21000,
     "contract_fee": 0,
     "main_monsters": [
@@ -13003,9 +13036,9 @@
     "time_limit": 50,
     "faints_allowed": 3,
     "is_key_quest": false,
-    "description": "",
+    "description": "Running on an empty tank is the worst thing a hunter can do. That is to say, to master eating is to master the hunt! I'm going to turn you into the best cook ever! Or at least the best BBQer!",
     "client": "Event Guild",
-    "requirements": "",
+    "requirements": "HR 4 or above",
     "reward_money": 4800,
     "contract_fee": 0,
     "main_monsters": [
@@ -13027,7 +13060,7 @@
     "is_key_quest": false,
     "description": "I got a request to do something about all the huge bugs that have popped up in the Old Jungle. Just an idea, but you might want to go for the leader here. Make",
     "client": "Old Jungle Resident",
-    "requirements": "",
+    "requirements": "HR 4 or above",
     "reward_money": 7500,
     "contract_fee": 0,
     "main_monsters": [
@@ -13049,7 +13082,7 @@
     "is_key_quest": false,
     "description": "Fight 2 Nargacugas back to back! Be wary of their intense speed and their super-strong tails! One swish is all it takes! Stay cool and think things out.",
     "client": "Arena Manager",
-    "requirements": "",
+    "requirements": "HR 7 or above",
     "reward_money": 24000,
     "contract_fee": 0,
     "main_monsters": [
@@ -13071,7 +13104,7 @@
     "is_key_quest": false,
     "description": "I'm hosting an arena of my own where I'll happily hand out prizes from my stash of treasures to anyone with outstanding times. You can even participate with your",
     "client": "Event Guild",
-    "requirements": "",
+    "requirements": "HR 7 or above",
     "reward_money": 27000,
     "contract_fee": 0,
     "main_monsters": [
@@ -13095,7 +13128,7 @@
     "is_key_quest": false,
     "description": "I've got a special quest for you today! Your target: the pack of Velociprey waiting for you at the Great Arena. But! Those guys are small fries compared to the other",
     "client": "Event Guild",
-    "requirements": "",
+    "requirements": "HR 7 or above",
     "reward_money": 12000,
     "contract_fee": 0,
     "main_monsters": [
@@ -13118,7 +13151,7 @@
     "is_key_quest": false,
     "description": "It's the much dreaded Golden Rajang! It's the strongest of the strong you'll ever face, but since it's you, I have faith that you'll defeat it. Hold nothing back",
     "client": "Event Guild",
-    "requirements": "",
+    "requirements": "HR 9 or above",
     "reward_money": 24000,
     "contract_fee": 0,
     "main_monsters": [
@@ -13138,7 +13171,7 @@
     "time_limit": 50,
     "faints_allowed": 3,
     "is_key_quest": false,
-    "description": "",
+    "description": "Welcome to the competition! In this challenge, we are asking participants to slay a Nargacuga of the Great Forest. Trust yourself and show us the strength that lies within!",
     "client": "Event Guild",
     "requirements": "",
     "reward_money": 2400,
@@ -13182,7 +13215,7 @@
     "time_limit": 50,
     "faints_allowed": 3,
     "is_key_quest": false,
-    "description": "",
+    "description": "It appears that we have arrived at the best part of these competitions. I wonder who will stand tall in the end and take home the proof! I look forward to seeing your magnificent technique.",
     "client": "Event Guild",
     "requirements": "",
     "reward_money": 3000,
@@ -13206,7 +13239,7 @@
     "time_limit": 50,
     "faints_allowed": 3,
     "is_key_quest": false,
-    "description": "",
+    "description": "Thanks to the participation of so many strong hunters, we've been able to reach this stage, the finale! We hope that all the hunters will join in one last hunt in a show of true might!",
     "client": "Event Guild",
     "requirements": "",
     "reward_money": 4500,

@@ -1,0 +1,2480 @@
+[
+  {
+    "monster_id": 4,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 4,
+    "tool": "Flash Bomb",
+    "normal": 10,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 4,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 4,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 4,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 4,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 6,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 6,
+    "tool": "Flash Bomb",
+    "normal": 5,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 6,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 6,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 6,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 6,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 16,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 16,
+    "tool": "Flash Bomb",
+    "normal": 15,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 16,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 16,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 16,
+    "tool": "Shock Trap",
+    "normal": 15,
+    "notfound": 15,
+    "enraged": 15
+  },
+  {
+    "monster_id": 16,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 18,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 18,
+    "tool": "Flash Bomb",
+    "normal": 15,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 18,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 18,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 18,
+    "tool": "Shock Trap",
+    "normal": 15,
+    "notfound": 15,
+    "enraged": 15
+  },
+  {
+    "monster_id": 18,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 20,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 20,
+    "tool": "Flash Bomb",
+    "normal": 15,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 20,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 20,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 20,
+    "tool": "Shock Trap",
+    "normal": 15,
+    "notfound": 15,
+    "enraged": 15
+  },
+  {
+    "monster_id": 20,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 22,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 22,
+    "tool": "Flash Bomb",
+    "normal": 15,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 22,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 22,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 22,
+    "tool": "Shock Trap",
+    "normal": 15,
+    "notfound": 15,
+    "enraged": 15
+  },
+  {
+    "monster_id": 22,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 23,
+    "tool": "Dung",
+    "normal": 1,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 23,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 23,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 23,
+    "tool": "Pitfall Trap",
+    "normal": 27,
+    "notfound": 27,
+    "enraged": 27
+  },
+  {
+    "monster_id": 23,
+    "tool": "Shock Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 10
+  },
+  {
+    "monster_id": 23,
+    "tool": "Sonic Bomb",
+    "normal": 8,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 24,
+    "tool": "Dung",
+    "normal": 1,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 24,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 24,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 24,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 17,
+    "enraged": 17
+  },
+  {
+    "monster_id": 24,
+    "tool": "Shock Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 10
+  },
+  {
+    "monster_id": 24,
+    "tool": "Sonic Bomb",
+    "normal": 8,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 25,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 25,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 25,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 25,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 17,
+    "enraged": 0
+  },
+  {
+    "monster_id": 25,
+    "tool": "Shock Trap",
+    "normal": 8,
+    "notfound": 8,
+    "enraged": 8
+  },
+  {
+    "monster_id": 25,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 26,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 26,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 26,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 26,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 17,
+    "enraged": 0
+  },
+  {
+    "monster_id": 26,
+    "tool": "Shock Trap",
+    "normal": 8,
+    "notfound": 8,
+    "enraged": 8
+  },
+  {
+    "monster_id": 26,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 27,
+    "tool": "Dung",
+    "normal": 1,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 27,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 27,
+    "tool": "Meat",
+    "normal": 1,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 27,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 17,
+    "enraged": 17
+  },
+  {
+    "monster_id": 27,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 27,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 28,
+    "tool": "Dung",
+    "normal": 1,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 28,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 28,
+    "tool": "Meat",
+    "normal": 1,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 28,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 17,
+    "enraged": 17
+  },
+  {
+    "monster_id": 28,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 28,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 29,
+    "tool": "Dung",
+    "normal": 1,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 29,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 29,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 29,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 17,
+    "enraged": 17
+  },
+  {
+    "monster_id": 29,
+    "tool": "Shock Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 10
+  },
+  {
+    "monster_id": 29,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 31,
+    "tool": "Dung",
+    "normal": 1,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 31,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 31,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 31,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 27,
+    "enraged": 10
+  },
+  {
+    "monster_id": 31,
+    "tool": "Shock Trap",
+    "normal": 8,
+    "notfound": 8,
+    "enraged": 8
+  },
+  {
+    "monster_id": 31,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 32,
+    "tool": "Dung",
+    "normal": 1,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 32,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 32,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 32,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 27,
+    "enraged": 10
+  },
+  {
+    "monster_id": 32,
+    "tool": "Shock Trap",
+    "normal": 8,
+    "notfound": 8,
+    "enraged": 8
+  },
+  {
+    "monster_id": 32,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 33,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 33,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 33,
+    "tool": "Meat",
+    "normal": 1,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 33,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 27,
+    "enraged": 10
+  },
+  {
+    "monster_id": 33,
+    "tool": "Shock Trap",
+    "normal": 8,
+    "notfound": 8,
+    "enraged": 8
+  },
+  {
+    "monster_id": 33,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 34,
+    "tool": "Dung",
+    "normal": 1,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 34,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 34,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 34,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 27,
+    "enraged": 10
+  },
+  {
+    "monster_id": 34,
+    "tool": "Shock Trap",
+    "normal": 8,
+    "notfound": 8,
+    "enraged": 8
+  },
+  {
+    "monster_id": 34,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 35,
+    "tool": "Dung",
+    "normal": 1,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 35,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 35,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 35,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 27,
+    "enraged": 10
+  },
+  {
+    "monster_id": 35,
+    "tool": "Shock Trap",
+    "normal": 8,
+    "notfound": 8,
+    "enraged": 8
+  },
+  {
+    "monster_id": 35,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 36,
+    "tool": "Dung",
+    "normal": 1,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 36,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 36,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 36,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 27,
+    "enraged": 10
+  },
+  {
+    "monster_id": 36,
+    "tool": "Shock Trap",
+    "normal": 8,
+    "notfound": 8,
+    "enraged": 8
+  },
+  {
+    "monster_id": 36,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 37,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 37,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 37,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 37,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 27,
+    "enraged": 10
+  },
+  {
+    "monster_id": 37,
+    "tool": "Shock Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 10
+  },
+  {
+    "monster_id": 37,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 38,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 38,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 38,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 38,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 27,
+    "enraged": 10
+  },
+  {
+    "monster_id": 38,
+    "tool": "Shock Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 10
+  },
+  {
+    "monster_id": 38,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 39,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 39,
+    "tool": "Flash Bomb",
+    "normal": 15,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 39,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 39,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 17,
+    "enraged": 17
+  },
+  {
+    "monster_id": 39,
+    "tool": "Shock Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 10
+  },
+  {
+    "monster_id": 39,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 40,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 40,
+    "tool": "Flash Bomb",
+    "normal": 15,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 40,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 40,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 17,
+    "enraged": 17
+  },
+  {
+    "monster_id": 40,
+    "tool": "Shock Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 10
+  },
+  {
+    "monster_id": 40,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 42,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 42,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 42,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 42,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 42,
+    "tool": "Shock Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 10
+  },
+  {
+    "monster_id": 42,
+    "tool": "Sonic Bomb",
+    "normal": 10,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 43,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 43,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 43,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 43,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 43,
+    "tool": "Shock Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 10
+  },
+  {
+    "monster_id": 43,
+    "tool": "Sonic Bomb",
+    "normal": 10,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 44,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 44,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 44,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 44,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 44,
+    "tool": "Shock Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 10
+  },
+  {
+    "monster_id": 44,
+    "tool": "Sonic Bomb",
+    "normal": 10,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 45,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 45,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 45,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 45,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 45,
+    "tool": "Shock Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 10
+  },
+  {
+    "monster_id": 45,
+    "tool": "Sonic Bomb",
+    "normal": 10,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 46,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 46,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 46,
+    "tool": "Meat",
+    "normal": 1,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 46,
+    "tool": "Pitfall Trap",
+    "normal": 20,
+    "notfound": 20,
+    "enraged": 20
+  },
+  {
+    "monster_id": 46,
+    "tool": "Shock Trap",
+    "normal": 8,
+    "notfound": 8,
+    "enraged": 8
+  },
+  {
+    "monster_id": 46,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 47,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 47,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 47,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 47,
+    "tool": "Pitfall Trap",
+    "normal": 20,
+    "notfound": 20,
+    "enraged": 20
+  },
+  {
+    "monster_id": 47,
+    "tool": "Shock Trap",
+    "normal": 8,
+    "notfound": 8,
+    "enraged": 8
+  },
+  {
+    "monster_id": 47,
+    "tool": "Sonic Bomb",
+    "normal": 8,
+    "notfound": null,
+    "enraged": 8
+  },
+  {
+    "monster_id": 48,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 48,
+    "tool": "Flash Bomb",
+    "normal": 7,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 48,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 48,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 48,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 48,
+    "tool": "Sonic Bomb",
+    "normal": 10,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 49,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 49,
+    "tool": "Flash Bomb",
+    "normal": 7,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 49,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 49,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 49,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 49,
+    "tool": "Sonic Bomb",
+    "normal": 10,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 51,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 51,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 51,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 51,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 51,
+    "tool": "Shock Trap",
+    "normal": 15,
+    "notfound": 15,
+    "enraged": 15
+  },
+  {
+    "monster_id": 51,
+    "tool": "Sonic Bomb",
+    "normal": 8,
+    "notfound": null,
+    "enraged": 8
+  },
+  {
+    "monster_id": 52,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 52,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 52,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 52,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 17,
+    "enraged": 17
+  },
+  {
+    "monster_id": 52,
+    "tool": "Shock Trap",
+    "normal": 15,
+    "notfound": 15,
+    "enraged": 15
+  },
+  {
+    "monster_id": 52,
+    "tool": "Sonic Bomb",
+    "normal": 8,
+    "notfound": null,
+    "enraged": 8
+  },
+  {
+    "monster_id": 53,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 53,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 53,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 53,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 17,
+    "enraged": 17
+  },
+  {
+    "monster_id": 53,
+    "tool": "Shock Trap",
+    "normal": 15,
+    "notfound": 15,
+    "enraged": 15
+  },
+  {
+    "monster_id": 53,
+    "tool": "Sonic Bomb",
+    "normal": 8,
+    "notfound": null,
+    "enraged": 8
+  },
+  {
+    "monster_id": 54,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 54,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 54,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 54,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 17,
+    "enraged": 17
+  },
+  {
+    "monster_id": 54,
+    "tool": "Shock Trap",
+    "normal": 15,
+    "notfound": 15,
+    "enraged": 15
+  },
+  {
+    "monster_id": 54,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 56,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 56,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 56,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 56,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 56,
+    "tool": "Shock Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 10
+  },
+  {
+    "monster_id": 56,
+    "tool": "Sonic Bomb",
+    "normal": 10,
+    "notfound": null,
+    "enraged": 10
+  },
+  {
+    "monster_id": 57,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 57,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 57,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 57,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 57,
+    "tool": "Shock Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 10
+  },
+  {
+    "monster_id": 57,
+    "tool": "Sonic Bomb",
+    "normal": 10,
+    "notfound": null,
+    "enraged": 10
+  },
+  {
+    "monster_id": 59,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 59,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 59,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 59,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 59,
+    "tool": "Shock Trap",
+    "normal": 15,
+    "notfound": 15,
+    "enraged": 15
+  },
+  {
+    "monster_id": 59,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 60,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 60,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 60,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 60,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 60,
+    "tool": "Shock Trap",
+    "normal": 15,
+    "notfound": 15,
+    "enraged": 15
+  },
+  {
+    "monster_id": 60,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 61,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 61,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 61,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 61,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 61,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 61,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 63,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 63,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 63,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 63,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 63,
+    "tool": "Shock Trap",
+    "normal": 15,
+    "notfound": 15,
+    "enraged": 0
+  },
+  {
+    "monster_id": 63,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 65,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 65,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 65,
+    "tool": "Meat",
+    "normal": 1,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 65,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 27,
+    "enraged": 10
+  },
+  {
+    "monster_id": 65,
+    "tool": "Shock Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 10
+  },
+  {
+    "monster_id": 65,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 66,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 66,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 66,
+    "tool": "Meat",
+    "normal": 1,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 66,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 27,
+    "enraged": 10
+  },
+  {
+    "monster_id": 66,
+    "tool": "Shock Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 10
+  },
+  {
+    "monster_id": 66,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 68,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 68,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 68,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 68,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 27,
+    "enraged": 10
+  },
+  {
+    "monster_id": 68,
+    "tool": "Shock Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 10
+  },
+  {
+    "monster_id": 68,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 69,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 69,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 69,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 1,
+    "enraged": null
+  },
+  {
+    "monster_id": 69,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 27,
+    "enraged": 10
+  },
+  {
+    "monster_id": 69,
+    "tool": "Shock Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 10
+  },
+  {
+    "monster_id": 69,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 70,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 70,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 70,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 70,
+    "tool": "Pitfall Trap",
+    "normal": 17,
+    "notfound": 17,
+    "enraged": 0
+  },
+  {
+    "monster_id": 70,
+    "tool": "Shock Trap",
+    "normal": 8,
+    "notfound": 8,
+    "enraged": 8
+  },
+  {
+    "monster_id": 70,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 71,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 71,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 71,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 71,
+    "tool": "Pitfall Trap",
+    "normal": 10,
+    "notfound": 10,
+    "enraged": 0
+  },
+  {
+    "monster_id": 71,
+    "tool": "Shock Trap",
+    "normal": 8,
+    "notfound": 8,
+    "enraged": 8
+  },
+  {
+    "monster_id": 71,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 72,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 72,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 72,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 72,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 72,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 72,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 73,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 73,
+    "tool": "Flash Bomb",
+    "normal": 15,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 73,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 73,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 73,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 73,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 74,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 74,
+    "tool": "Flash Bomb",
+    "normal": 15,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 74,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 74,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 74,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 74,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 75,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 75,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 75,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 75,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 75,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 75,
+    "tool": "Sonic Bomb",
+    "normal": 8,
+    "notfound": null,
+    "enraged": 8
+  },
+  {
+    "monster_id": 76,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 76,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 76,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 76,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 76,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 76,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 77,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 77,
+    "tool": "Flash Bomb",
+    "normal": 30,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 77,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 77,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 77,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 77,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 78,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 78,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 78,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 78,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 78,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 78,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 79,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 79,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 79,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 79,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 79,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 79,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 80,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 80,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 80,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 80,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 80,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 80,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 81,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 81,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 81,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 81,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 81,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 81,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 82,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 82,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 82,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 82,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 82,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 82,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  },
+  {
+    "monster_id": 83,
+    "tool": "Dung",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 83,
+    "tool": "Flash Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": null
+  },
+  {
+    "monster_id": 83,
+    "tool": "Meat",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": null
+  },
+  {
+    "monster_id": 83,
+    "tool": "Pitfall Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 83,
+    "tool": "Shock Trap",
+    "normal": 0,
+    "notfound": 0,
+    "enraged": 0
+  },
+  {
+    "monster_id": 83,
+    "tool": "Sonic Bomb",
+    "normal": 0,
+    "notfound": null,
+    "enraged": 0
+  }
+]

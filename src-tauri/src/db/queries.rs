@@ -88,6 +88,8 @@ pub struct MonsterDetail {
     pub size: Option<String>,
     pub description: Option<String>,
     pub weaknesses: Vec<MonsterWeakness>,
+    pub ailments: Vec<MonsterAilment>,
+    pub tools: Vec<MonsterTool>,
     pub drops: Vec<MonsterDrop>,
     pub armor: Vec<Armor>,
     pub weapons: Vec<Weapon>,
@@ -124,6 +126,31 @@ pub struct MonsterWeakness {
     pub thunder: Option<i32>,
     pub ice: Option<i32>,
     pub dragon: Option<i32>,
+    pub stagger_hp: Option<i32>,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct MonsterAilment {
+    pub id: i32,
+    pub monster_id: i32,
+    pub ailment: String,
+    pub initial: Option<i32>,
+    pub increase: Option<i32>,
+    pub max: Option<i32>,
+    pub decay_step: Option<i32>,
+    pub decay_interval: Option<i32>,
+    pub duration_sec: Option<i32>,
+    pub damage: Option<i32>,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct MonsterTool {
+    pub id: i32,
+    pub monster_id: i32,
+    pub tool: String,
+    pub normal: Option<i32>,
+    pub notfound: Option<i32>,
+    pub enraged: Option<i32>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -547,6 +574,8 @@ pub fn get_monster_detail(conn: &Connection, id: i32) -> Result<Option<MonsterDe
     };
 
     let weaknesses = get_monster_weaknesses(conn, id)?;
+    let ailments = get_monster_ailments(conn, id)?;
+    let tools = get_monster_tools(conn, id)?;
     let drops = get_monster_drops(conn, id)?;
     let armor = get_monster_related_armor(conn, id)?;
     let weapons = get_monster_related_weapons(conn, id)?;
@@ -559,6 +588,8 @@ pub fn get_monster_detail(conn: &Connection, id: i32) -> Result<Option<MonsterDe
         size,
         description,
         weaknesses,
+        ailments,
+        tools,
         drops,
         armor,
         weapons,
@@ -888,7 +919,7 @@ fn get_monster_drops(conn: &Connection, monster_id: i32) -> Result<Vec<MonsterDr
 
 fn get_monster_weaknesses(conn: &Connection, monster_id: i32) -> Result<Vec<MonsterWeakness>> {
     let mut stmt = conn.prepare(
-        "SELECT id, part_name, sever, blunt, projectile, fire, water, thunder, ice, dragon
+        "SELECT id, part_name, sever, blunt, projectile, fire, water, thunder, ice, dragon, stagger_hp
          FROM monster_weaknesses WHERE monster_id = ?1 ORDER BY id",
     )?;
 
@@ -905,6 +936,7 @@ fn get_monster_weaknesses(conn: &Connection, monster_id: i32) -> Result<Vec<Mons
                 thunder: row.get(7)?,
                 ice: row.get(8)?,
                 dragon: row.get(9)?,
+                stagger_hp: row.get(10)?,
             })
         })?
         .filter_map(|r| {
@@ -914,6 +946,62 @@ fn get_monster_weaknesses(conn: &Connection, monster_id: i32) -> Result<Vec<Mons
         .collect();
 
     Ok(weaknesses)
+}
+
+fn get_monster_ailments(conn: &Connection, monster_id: i32) -> Result<Vec<MonsterAilment>> {
+    let mut stmt = conn.prepare(
+        "SELECT id, monster_id, ailment, initial, increase, max, decay_step, decay_interval, duration_sec, damage
+         FROM monster_ailments WHERE monster_id = ?1 ORDER BY id",
+    )?;
+
+    let ailments = stmt
+        .query_map(params![monster_id], |row| {
+            Ok(MonsterAilment {
+                id: row.get(0)?,
+                monster_id: row.get(1)?,
+                ailment: row.get(2)?,
+                initial: row.get(3)?,
+                increase: row.get(4)?,
+                max: row.get(5)?,
+                decay_step: row.get(6)?,
+                decay_interval: row.get(7)?,
+                duration_sec: row.get(8)?,
+                damage: row.get(9)?,
+            })
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+
+    Ok(ailments)
+}
+
+fn get_monster_tools(conn: &Connection, monster_id: i32) -> Result<Vec<MonsterTool>> {
+    let mut stmt = conn.prepare(
+        "SELECT id, monster_id, tool, normal, notfound, enraged
+         FROM monster_tools WHERE monster_id = ?1 ORDER BY id",
+    )?;
+
+    let tools = stmt
+        .query_map(params![monster_id], |row| {
+            Ok(MonsterTool {
+                id: row.get(0)?,
+                monster_id: row.get(1)?,
+                tool: row.get(2)?,
+                normal: row.get(3)?,
+                notfound: row.get(4)?,
+                enraged: row.get(5)?,
+            })
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+
+    Ok(tools)
 }
 
 pub fn get_weapons_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Weapon>> {
@@ -4095,11 +4183,106 @@ mod tests {
             count("SELECT COUNT(*) FROM monsters WHERE game_id IN (2, 3) AND icon_url_lg IS NULL"),
             0
         );
-        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 5);
+        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 13);
+        // MHFU equipment backfill: variants have gear links now.
+        assert!(
+            count("SELECT COUNT(*) FROM monster_equipment WHERE game_id = 5 AND monster_id = 26")
+                > 30
+        );
+        assert!(
+            count("SELECT COUNT(*) FROM monster_equipment WHERE game_id = 5 AND monster_id = 32")
+                > 100
+        );
+        // MHFU items backfill: 1175+ rows + shop prices + carry limits.
+        assert_eq!(count("SELECT COUNT(*) FROM items WHERE game_id = 5"), 1244);
+        assert_eq!(
+            count("SELECT COUNT(*) FROM items WHERE game_id = 5 AND name = 'Book of Combos 2' AND rarity = 4 AND sell_price = 200"),
+            1
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM items WHERE game_id = 5 AND name = 'Potion' AND buy_price = 66"),
+            1
+        );
+        // MHFU quests fix: Nekoht-9 restored, urgents flagged, JUMP G3.
+        assert_eq!(
+            count("SELECT COUNT(*) FROM quests WHERE game_id = 5 AND hub = 'nekoto'"),
+            62
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM quests WHERE game_id = 5 AND hub = 'guild_g'"),
+            89
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM quests WHERE game_id = 5 AND is_urgent = 1"),
+            20
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM quests WHERE game_id = 5 AND id = 565 AND stars = 3"),
+            1
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM quest_rewards WHERE quest_id IN (SELECT id FROM quests WHERE game_id = 5) AND condition = 'Special Reward'"),
+            4
+        );
+        // MHFU weapon craft split: all 1500 weapons have forge/upgrade rows.
+        assert_eq!(
+            count("SELECT COUNT(DISTINCT weapon_id) FROM weapon_craft WHERE weapon_id IN (SELECT id FROM weapons WHERE game_id = 5)"),
+            1500
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_weaknesses WHERE monster_id = 26"),
+            7
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_weaknesses WHERE monster_id = 74"),
+            7
+        );
+        // MHFU drop backfill: Scarred Garuga + Rusted Kushala no longer empty.
+        assert!(count("SELECT COUNT(*) FROM monster_drops WHERE monster_id = 26") > 30);
+        assert!(count("SELECT COUNT(*) FROM monster_drops WHERE monster_id = 74") > 30);
+        // MHFU extraction-arbitrated corrections (mhfu-db wins over guides).
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_drops WHERE monster_id = 25 AND item_id = 428 AND method = 'carve' AND part = 'Body' AND rank = 'G' AND ABS(probability - 0.53) < 1e-9"),
+            1
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_drops WHERE monster_id = 34 AND item_id = 562 AND method = 'break' AND part = 'Head' AND rank = 'Low' AND ABS(probability - 0.65) < 1e-9"),
+            1
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_drops WHERE monster_id = 20 AND item_id = 379 AND method = 'carve' AND part = 'Body' AND rank = 'High' AND ABS(probability - 0.05) < 1e-9"),
+            1
+        );
+        // Shadow-rank row removed (Gendrome High held Low-rank Scale values).
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_drops WHERE monster_id = 20 AND item_id = 375 AND method = 'carve' AND part = 'Body' AND rank = 'High'"),
+            0
+        );
 
-        // Second run: pure no-op (5 PK lookups, warm-boot fast path).
+        // Second run: pure no-op (13 PK lookups, warm-boot fast path).
         crate::db::seed::apply_data_patches(&c).unwrap();
-        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 5);
+        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 13);
+        assert_eq!(count("SELECT COUNT(*) FROM items"), items_before);
+
+        // Regression simulation: revert corrected rows to pre-fix values and
+        // re-run patches — the corrections patch must heal them.
+        c.execute_batch(
+            "UPDATE monster_drops SET probability = 0.64 WHERE monster_id = 25 AND item_id = 428 AND method = 'carve' AND part = 'Body' AND rank = 'G';
+             INSERT INTO monster_drops (monster_id, item_id, method, part, rank, quantity, probability, condition, language)
+             VALUES (20, 375, 'carve', 'Body', 'High', 1, 0.15, NULL, 'en');
+             DELETE FROM data_patches WHERE name = 'mh2g_drop_corrections';",
+        )
+        .unwrap();
+        crate::db::seed::apply_data_patches(&c).unwrap();
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_drops WHERE monster_id = 25 AND item_id = 428 AND method = 'carve' AND part = 'Body' AND rank = 'G' AND ABS(probability - 0.53) < 1e-9"),
+            1
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_drops WHERE monster_id = 20 AND item_id = 375 AND method = 'carve' AND part = 'Body' AND rank = 'High'"),
+            0
+        );
+        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 13);
         assert_eq!(count("SELECT COUNT(*) FROM items"), items_before);
     }
 }

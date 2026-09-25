@@ -44,6 +44,8 @@ pub fn seed(conn: &Connection) -> Result<()> {
     seed_extra_item_sources(conn)?;
     seed_monster_equipment(conn)?;
     seed_monster_weaknesses(conn)?;
+    seed_monster_ailments(conn)?;
+    seed_monster_tools(conn)?;
     seed_item_combine(conn)?;
     seed_extra_item_combine(conn)?;
     seed_weapons(conn)?;
@@ -179,6 +181,14 @@ pub fn apply_data_patches(conn: &Connection) -> Result<()> {
     patch_item_icons_mhwilds(conn)?;
     patch_quest_icons_mhr(conn)?;
     patch_monster_thumbs_rise_wilds(conn)?;
+    patch_mh2g_monster_drops(conn)?;
+    patch_mh2g_drop_corrections(conn)?;
+    patch_mh2g_weaknesses(conn)?;
+    patch_mh2g_equipment(conn)?;
+    patch_mh2g_hunt_info(conn)?;
+    patch_mh2g_items(conn)?;
+    patch_mh2g_quests(conn)?;
+    patch_mh2g_weapon_craft(conn)?;
     Ok(())
 }
 
@@ -199,6 +209,410 @@ fn record_patch(conn: &Connection, name: &str) -> Result<()> {
         rusqlite::params![name],
     )?;
     Ok(())
+}
+
+/// Backfill MHFU monster drops from the extended `mh2g_monster_drops.json`
+/// (Scarred Yian Garuga, Rusted Kushala Daora, thin large tables, rated
+/// small monsters — see `scripts/generate_mh2g_monster_drops.py`).
+/// Runs once per database WITHOUT a DATA_VERSION bump: `INSERT OR IGNORE`
+/// is keyed on `uq_monster_drops`, so pre-existing rows are untouched and
+/// only genuinely new (monster, item, method, part, rank) combos land.
+/// The item "How to Obtain" mirror is re-run (idempotent) so new drops
+/// show up item-side too.
+fn patch_mh2g_monster_drops(conn: &Connection) -> Result<()> {
+    const NAME: &str = "mh2g_monster_drops_backfill";
+    if patch_applied(conn, NAME)? {
+        return Ok(());
+    }
+    // Fresh databases have no monsters yet at patch time (patches run before
+    // the full seed) and FKs would reject the inserts — skip there, the full
+    // `seed_monster_drops` reads the same extended JSON anyway.
+    let have_monsters: i64 = conn
+        .query_row("SELECT COUNT(*) FROM monsters WHERE game_id = 5", [], |r| {
+            r.get(0)
+        })
+        .unwrap_or(0);
+    if have_monsters == 0 {
+        record_patch(conn, NAME)?;
+        return Ok(());
+    }
+    let json_data = include_str!("../../data/mh2g_monster_drops.json");
+    let drops: Vec<DropJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for d in drops {
+        conn.execute(
+            "INSERT OR IGNORE INTO monster_drops
+                (monster_id, item_id, method, part, rank, quantity, probability, condition, language)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, 'en')",
+            rusqlite::params![d.monster_id, d.item_id, d.method, d.part, d.rank, d.quantity, d.probability, d.condition],
+        )?;
+    }
+    seed_item_sources_from_drops(conn)?;
+    record_patch(conn, NAME)
+}
+
+/// Correct pre-existing MHFU drop rates to MHP2G-extracted truth
+/// (`scripts/correct_mh2g_drop_rates.py`, mhfu-db wins; see
+/// `scripts/mh2g_drop_corrections.log`). Covers swaps (Rathalos
+/// Shell/Scale), shadow-rank deletes (Gendrome High holding Low values)
+/// and pure rate fixes (Garuga G Thick 64% -> 53%). Runs once per
+/// database WITHOUT a DATA_VERSION bump. Matching is twin-safe
+/// (key + old probability/quantity) and NULL-safe (`IS`); `condition`
+/// text is never touched. Mirror `item_sources` rows for affected
+/// monsters are rebuilt so the item side shows corrected rates.
+fn patch_mh2g_drop_corrections(conn: &Connection) -> Result<()> {
+    const NAME: &str = "mh2g_drop_corrections";
+    if patch_applied(conn, NAME)? {
+        return Ok(());
+    }
+    // Same fresh-DB gate as the backfill above: the full seed already
+    // inserts the corrected JSON, so there is nothing to fix yet.
+    let have_monsters: i64 = conn
+        .query_row("SELECT COUNT(*) FROM monsters WHERE game_id = 5", [], |r| {
+            r.get(0)
+        })
+        .unwrap_or(0);
+    if have_monsters == 0 {
+        record_patch(conn, NAME)?;
+        return Ok(());
+    }
+    #[derive(Deserialize)]
+    struct Correction {
+        monster_id: i32,
+        item_id: i32,
+        method: String,
+        part: Option<String>,
+        rank: Option<String>,
+        old_probability: f64,
+        old_quantity: i32,
+        quantity: Option<i32>,
+        probability: Option<f64>,
+    }
+    #[derive(Deserialize)]
+    struct CorrectionsFile {
+        updates: Vec<Correction>,
+        deletes: Vec<Correction>,
+        rebuild_mirrors_for: Vec<i32>,
+    }
+    let json_data = include_str!("../../data/mh2g_drop_corrections.json");
+    let corrections: CorrectionsFile = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for u in &corrections.updates {
+        conn.execute(
+            "UPDATE monster_drops SET quantity = ?1, probability = ?2
+              WHERE monster_id = ?3 AND item_id = ?4 AND method = ?5
+                AND part IS ?6 AND rank IS ?7
+                AND ABS(probability - ?8) < 1e-9 AND quantity = ?9",
+            rusqlite::params![
+                u.quantity.unwrap_or(u.old_quantity),
+                u.probability.unwrap_or(u.old_probability),
+                u.monster_id,
+                u.item_id,
+                u.method,
+                u.part,
+                u.rank,
+                u.old_probability,
+                u.old_quantity
+            ],
+        )?;
+    }
+    for x in &corrections.deletes {
+        conn.execute(
+            "DELETE FROM monster_drops
+              WHERE monster_id = ?1 AND item_id = ?2 AND method = ?3
+                AND part IS ?4 AND rank IS ?5
+                AND ABS(probability - ?6) < 1e-9 AND quantity = ?7",
+            rusqlite::params![
+                x.monster_id,
+                x.item_id,
+                x.method,
+                x.part,
+                x.rank,
+                x.old_probability,
+                x.old_quantity
+            ],
+        )?;
+    }
+    // Rebuild the item-side mirror for affected monsters only (mh2g owns
+    // monster ids 1-83 outright; other games use offset ids). Mirror rows
+    // are exactly those with NULL location + carve/capture/drop/break type.
+    for mid in &corrections.rebuild_mirrors_for {
+        conn.execute(
+            "DELETE FROM item_sources
+              WHERE source_id = ?1
+                AND source_type IN ('carve', 'capture', 'drop', 'break')
+                AND location IS NULL",
+            rusqlite::params![mid],
+        )?;
+        conn.execute(
+            "INSERT OR IGNORE INTO item_sources (item_id, source_type, source_id, quantity_min, quantity_max, probability)
+             SELECT item_id,
+                    CASE method WHEN 'carve' THEN 'carve' WHEN 'capture' THEN 'capture' WHEN 'drop' THEN 'drop' WHEN 'break' THEN 'break' ELSE method END,
+                    monster_id, quantity, quantity, probability
+             FROM monster_drops WHERE monster_id = ?1",
+            rusqlite::params![mid],
+        )?;
+    }
+    record_patch(conn, NAME)
+}
+
+/// Backfill MHFU weakness rows from the extended
+/// `mh2g_monster_weaknesses.json` (Scarred/Rusted full part lists, thin
+/// large expansion, smalls Body-only — see
+/// `scripts/generate_mh2g_weaknesses.py`). Runs once per database WITHOUT
+/// a DATA_VERSION bump: `INSERT OR IGNORE` is keyed on
+/// `uq_monster_weaknesses`, so pre-existing rows are untouched.
+fn patch_mh2g_weaknesses(conn: &Connection) -> Result<()> {
+    const NAME: &str = "mh2g_weaknesses_backfill";
+    if patch_applied(conn, NAME)? {
+        return Ok(());
+    }
+    let have_monsters: i64 = conn
+        .query_row("SELECT COUNT(*) FROM monsters WHERE game_id = 5", [], |r| {
+            r.get(0)
+        })
+        .unwrap_or(0);
+    if have_monsters == 0 {
+        record_patch(conn, NAME)?;
+        return Ok(());
+    }
+    let json_data = include_str!("../../data/mh2g_monster_weaknesses.json");
+    let weaknesses: Vec<WeaknessJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for w in weaknesses {
+        conn.execute(
+            "INSERT OR IGNORE INTO monster_weaknesses (monster_id, part_name, sever, blunt, projectile, fire, water, thunder, ice, dragon)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10)",
+            rusqlite::params![w.monster_id, w.part_name, w.sever, w.blunt, w.projectile, w.fire, w.water, w.thunder, w.ice, w.dragon],
+        )?;
+    }
+    record_patch(conn, NAME)
+}
+
+/// Backfill MHFU monster<->gear links from the extended
+/// `mh2g_monster_equipment.json` (join-derived: gear links to every monster
+/// dropping one of its materials, family-trio capped — see
+/// `scripts/generate_mh2g_equipment.py`). Runs once per database WITHOUT a
+/// DATA_VERSION bump: `INSERT OR IGNORE` is keyed on
+/// `uq_monster_equipment`, so pre-existing rows are untouched.
+fn patch_mh2g_equipment(conn: &Connection) -> Result<()> {
+    const NAME: &str = "mh2g_equipment_backfill";
+    if patch_applied(conn, NAME)? {
+        return Ok(());
+    }
+    let have_monsters: i64 = conn
+        .query_row("SELECT COUNT(*) FROM monsters WHERE game_id = 5", [], |r| {
+            r.get(0)
+        })
+        .unwrap_or(0);
+    if have_monsters == 0 {
+        record_patch(conn, NAME)?;
+        return Ok(());
+    }
+    let json_data = include_str!("../../data/mh2g_monster_equipment.json");
+    let rows: Vec<MonsterEquipJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for r in rows {
+        conn.execute(
+            "INSERT OR IGNORE INTO monster_equipment (game_id, monster_id, equipment_kind, equipment_id)
+             VALUES (5, ?1, ?2, ?3)",
+            rusqlite::params![r.monster_id, r.kind, r.equipment_id],
+        )?;
+    }
+    record_patch(conn, NAME)
+}
+
+/// Backfill MHFU hunt-reference data: ailment tolerances + trap/tool
+/// effectiveness + weakness stagger HP (see
+/// `scripts/generate_mh2g_hunt_info.py`). Runs once per database WITHOUT a
+/// DATA_VERSION bump (`INSERT OR IGNORE` on natural keys; stagger_hp flows
+/// through the weaknesses patch path as part of the extended JSON).
+fn patch_mh2g_hunt_info(conn: &Connection) -> Result<()> {
+    const NAME: &str = "mh2g_hunt_info";
+    if patch_applied(conn, NAME)? {
+        return Ok(());
+    }
+    let have_monsters: i64 = conn
+        .query_row("SELECT COUNT(*) FROM monsters WHERE game_id = 5", [], |r| {
+            r.get(0)
+        })
+        .unwrap_or(0);
+    if have_monsters == 0 {
+        record_patch(conn, NAME)?;
+        return Ok(());
+    }
+    // Stagger HP rides on weakness rows: refresh matched parts, insert rest.
+    let json_data = include_str!("../../data/mh2g_monster_weaknesses.json");
+    let weaknesses: Vec<WeaknessJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for w in &weaknesses {
+        conn.execute(
+            "UPDATE monster_weaknesses SET stagger_hp = COALESCE(stagger_hp, ?3)
+             WHERE monster_id = ?1 AND part_name = ?2",
+            rusqlite::params![w.monster_id, w.part_name, w.stagger_hp],
+        )?;
+    }
+    seed_monster_weaknesses(conn)?;
+    seed_monster_ailments(conn)?;
+    seed_monster_tools(conn)?;
+    record_patch(conn, NAME)
+}
+
+/// Sync MHFU items from the extended `mh2g_items.json` (1175+ new rows +
+/// NULL-fills for rarity/sell/buy/carry/description — see
+/// `scripts/generate_mh2g_items_backfill.py`) plus NULL combine chances.
+/// Runs once per database WITHOUT a DATA_VERSION bump. Fills are
+/// NULL-guarded so ISO-fixed prices and curated descriptions are never
+/// overwritten.
+fn patch_mh2g_items(conn: &Connection) -> Result<()> {
+    const NAME: &str = "mh2g_items_backfill";
+    if patch_applied(conn, NAME)? {
+        return Ok(());
+    }
+    let have_items: i64 = conn
+        .query_row("SELECT COUNT(*) FROM items WHERE game_id = 5", [], |r| {
+            r.get(0)
+        })
+        .unwrap_or(0);
+    if have_items == 0 {
+        record_patch(conn, NAME)?;
+        return Ok(());
+    }
+    let json_data = include_str!("../../data/mh2g_items.json");
+    let items: Vec<ItemJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for it in &items {
+        conn.execute(
+            "INSERT OR IGNORE INTO items (id, game_id, name, category, subcategory, rarity, sell_price, buy_price, carry_limit, icon_url, icon_name, icon_color, description, language)
+             VALUES (?1, 5, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, 'en')",
+            rusqlite::params![it.id, it.name, it.category, it.subcategory, it.rarity, it.sell_price, it.buy_price, it.carry_limit, it.icon_url, it.icon_name, it.icon_color, it.description],
+        )?;
+        conn.execute(
+            "UPDATE items SET category = ?1, subcategory = ?2,
+                icon_url = COALESCE(?3, icon_url), icon_name = COALESCE(?4, icon_name), icon_color = COALESCE(?5, icon_color),
+                rarity = COALESCE(rarity, ?6), sell_price = COALESCE(sell_price, ?7), buy_price = COALESCE(buy_price, ?8),
+                carry_limit = COALESCE(carry_limit, ?9), description = COALESCE(description, ?10)
+             WHERE id = ?11 AND game_id = 5",
+            rusqlite::params![it.category, it.subcategory, it.icon_url, it.icon_name, it.icon_color, it.rarity, it.sell_price, it.buy_price, it.carry_limit, it.description, it.id],
+        )?;
+    }
+    // Upstream descriptions for items that still lack one (curated kept).
+    let desc_data = include_str!("../../data/mh2g_item_descriptions.json");
+    let descs: Vec<ItemDescJson> = serde_json::from_str(desc_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for d in descs {
+        conn.execute(
+            "UPDATE items SET description = ?1 WHERE name = ?2 AND game_id = 5 AND description IS NULL",
+            rusqlite::params![d.description, d.name],
+        )?;
+    }
+    // Combine chances filled from twins (NULL rows only).
+    let comb_data = include_str!("../../data/mh2g_item_combine.json");
+    let recipes: Vec<CombineJson> = serde_json::from_str(comb_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for rc in recipes {
+        if rc.chance.is_none() {
+            continue;
+        }
+        conn.execute(
+            "UPDATE item_combine SET chance = ?1
+             WHERE result_item_id = ?2 AND component_item_id = ?3 AND chance IS NULL",
+            rusqlite::params![rc.chance, rc.result_item_id, rc.component_item_id],
+        )?;
+    }
+    record_patch(conn, NAME)
+}
+
+/// Sync MHFU quests from the fixed `mh2g_quests.json` (Nekoht-9 hub restore,
+/// urgent/key flags, requirements/descriptions fills, location typos, JUMP
+/// G3 — see `scripts/fix_mh2g_quests.py`) plus ticket reward rows. Runs once
+/// per database WITHOUT a DATA_VERSION bump. Flags/hub/stars/location apply
+/// unconditionally by id (JSON is authority); descriptions/requirements fill
+/// NULLs only so curated text survives; hub icons refresh on moved quests.
+fn patch_mh2g_quests(conn: &Connection) -> Result<()> {
+    const NAME: &str = "mh2g_quests_fix";
+    if patch_applied(conn, NAME)? {
+        return Ok(());
+    }
+    let have_quests: i64 = conn
+        .query_row("SELECT COUNT(*) FROM quests WHERE game_id = 5", [], |r| {
+            r.get(0)
+        })
+        .unwrap_or(0);
+    if have_quests == 0 {
+        record_patch(conn, NAME)?;
+        return Ok(());
+    }
+    let json_data = include_str!("../../data/mh2g_quests.json");
+    let quests: Vec<QuestJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for q in &quests {
+        let hub_icon_url = q
+            .hub
+            .as_deref()
+            .map(quest_hub_slug)
+            .map(|s| format!("/icons/mhfu/quests/hubs/{}.png", s))
+            .unwrap_or_else(|| "unknown".to_string());
+        conn.execute(
+            "UPDATE quests SET hub = COALESCE(?1, hub), stars = COALESCE(?2, stars),
+                is_key_quest = ?3, is_urgent = ?4,
+                requirements = COALESCE(requirements, ?5),
+                description = COALESCE(description, ?6),
+                location = COALESCE(?7, location),
+                hub_icon_name = COALESCE(?1, hub_icon_name),
+                hub_icon_url = ?8
+             WHERE id = ?9 AND game_id = 5",
+            rusqlite::params![
+                q.hub,
+                q.stars,
+                q.is_key_quest.unwrap_or(false),
+                q.is_urgent.unwrap_or(false),
+                q.requirements,
+                q.description,
+                q.location,
+                hub_icon_url,
+                q.id
+            ],
+        )?;
+    }
+    let reward_data = include_str!("../../data/mh2g_quest_rewards.json");
+    let rewards: Vec<QuestRewardJson> = serde_json::from_str(reward_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for r in rewards {
+        // EXISTS guard: legacy/partial DBs (migration tests) may not have the
+        // parent quest row yet; the full seed inserts it right after patches.
+        conn.execute(
+            "INSERT OR IGNORE INTO quest_rewards (id, quest_id, item_id, quantity, probability, condition)
+             SELECT ?1, ?2, ?3, ?4, ?5, ?6
+             WHERE EXISTS (SELECT 1 FROM quests WHERE id = ?2 AND game_id = 5)
+               AND EXISTS (SELECT 1 FROM items WHERE id = ?3 AND game_id = 5)",
+            rusqlite::params![r.id, r.quest_id, r.item_id, r.quantity, r.probability, r.condition],
+        )?;
+    }
+    record_patch(conn, NAME)
+}
+
+/// Backfill MHFU weapon forge/upgrade split rows from the extended
+/// `mh2g_weapon_craft.json` (425 SNS/gunner weapons — see
+/// `scripts/generate_mh2g_weapon_craft.py`). Runs once per database WITHOUT
+/// a DATA_VERSION bump; replays the seed resolution (name->id, misses
+/// skipped) so it is idempotent.
+fn patch_mh2g_weapon_craft(conn: &Connection) -> Result<()> {
+    const NAME: &str = "mh2g_weapon_craft";
+    if patch_applied(conn, NAME)? {
+        return Ok(());
+    }
+    let have_weapons: i64 = conn
+        .query_row("SELECT COUNT(*) FROM weapons WHERE game_id = 5", [], |r| {
+            r.get(0)
+        })
+        .unwrap_or(0);
+    if have_weapons == 0 {
+        record_patch(conn, NAME)?;
+        return Ok(());
+    }
+    seed_weapon_craft(conn)?;
+    record_patch(conn, NAME)
 }
 
 fn patch_item_icons_mhp3rd(conn: &Connection) -> Result<()> {
@@ -433,6 +847,10 @@ struct ItemJson {
     rarity: Option<i32>,
     sell_price: Option<i32>,
     buy_price: Option<i32>,
+    #[serde(default)]
+    carry_limit: Option<i32>,
+    #[serde(default)]
+    description: Option<String>,
     icon_url: Option<String>,
     icon_name: Option<String>,
     icon_color: Option<String>,
@@ -445,9 +863,9 @@ fn seed_items(conn: &Connection) -> Result<()> {
 
     for it in &items {
         conn.execute(
-            "INSERT OR IGNORE INTO items (id, game_id, name, category, subcategory, rarity, sell_price, buy_price, icon_url, icon_name, icon_color, description, language)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, NULL, 'en')",
-            rusqlite::params![it.id, MH2G, it.name, it.category, it.subcategory, it.rarity, it.sell_price, it.buy_price, it.icon_url, it.icon_name, it.icon_color],
+            "INSERT OR IGNORE INTO items (id, game_id, name, category, subcategory, rarity, sell_price, buy_price, carry_limit, icon_url, icon_name, icon_color, description, language)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, NULL, 'en')",
+            rusqlite::params![it.id, MH2G, it.name, it.category, it.subcategory, it.rarity, it.sell_price, it.buy_price, it.carry_limit, it.icon_url, it.icon_name, it.icon_color],
         )?;
     }
 
@@ -637,14 +1055,16 @@ fn seed_extra_item_combine(conn: &Connection) -> Result<()> {
 struct WeaknessJson {
     monster_id: i32,
     part_name: String,
-    sever: i32,
-    blunt: i32,
-    projectile: i32,
-    fire: i32,
-    water: i32,
-    thunder: i32,
-    ice: i32,
-    dragon: i32,
+    sever: Option<i32>,
+    blunt: Option<i32>,
+    projectile: Option<i32>,
+    fire: Option<i32>,
+    water: Option<i32>,
+    thunder: Option<i32>,
+    ice: Option<i32>,
+    dragon: Option<i32>,
+    #[serde(default)]
+    stagger_hp: Option<i32>,
 }
 
 fn seed_monster_weaknesses(conn: &Connection) -> Result<()> {
@@ -654,9 +1074,63 @@ fn seed_monster_weaknesses(conn: &Connection) -> Result<()> {
 
     for w in weaknesses {
         conn.execute(
-            "INSERT OR IGNORE INTO monster_weaknesses (monster_id, part_name, sever, blunt, projectile, fire, water, thunder, ice, dragon)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10)",
-            rusqlite::params![w.monster_id, w.part_name, w.sever, w.blunt, w.projectile, w.fire, w.water, w.thunder, w.ice, w.dragon],
+            "INSERT OR IGNORE INTO monster_weaknesses (monster_id, part_name, sever, blunt, projectile, fire, water, thunder, ice, dragon, stagger_hp)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11)",
+            rusqlite::params![w.monster_id, w.part_name, w.sever, w.blunt, w.projectile, w.fire, w.water, w.thunder, w.ice, w.dragon, w.stagger_hp],
+        )?;
+    }
+
+    Ok(())
+}
+
+#[derive(Deserialize)]
+struct AilmentJson {
+    monster_id: i32,
+    ailment: String,
+    initial: Option<i32>,
+    increase: Option<i32>,
+    max: Option<i32>,
+    decay_step: Option<i32>,
+    decay_interval: Option<i32>,
+    duration_sec: Option<i32>,
+    damage: Option<i32>,
+}
+
+fn seed_monster_ailments(conn: &Connection) -> Result<()> {
+    let json_data = include_str!("../../data/mh2g_monster_ailments.json");
+    let rows: Vec<AilmentJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+
+    for r in rows {
+        conn.execute(
+            "INSERT OR IGNORE INTO monster_ailments (monster_id, ailment, initial, increase, max, decay_step, decay_interval, duration_sec, damage)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9)",
+            rusqlite::params![r.monster_id, r.ailment, r.initial, r.increase, r.max, r.decay_step, r.decay_interval, r.duration_sec, r.damage],
+        )?;
+    }
+
+    Ok(())
+}
+
+#[derive(Deserialize)]
+struct HuntToolJson {
+    monster_id: i32,
+    tool: String,
+    normal: Option<i32>,
+    notfound: Option<i32>,
+    enraged: Option<i32>,
+}
+
+fn seed_monster_tools(conn: &Connection) -> Result<()> {
+    let json_data = include_str!("../../data/mh2g_monster_tools.json");
+    let rows: Vec<HuntToolJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+
+    for r in rows {
+        conn.execute(
+            "INSERT OR IGNORE INTO monster_tools (monster_id, tool, normal, notfound, enraged)
+             VALUES (?1, ?2, ?3, ?4, ?5)",
+            rusqlite::params![r.monster_id, r.tool, r.normal, r.notfound, r.enraged],
         )?;
     }
 

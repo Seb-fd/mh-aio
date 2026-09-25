@@ -8432,7 +8432,12 @@
   },
   {
     "weapon_id": 555,
-    "forge": [],
+    "forge": [
+      {
+        "item": "Sm Ancient Stone",
+        "quantity": 1
+      }
+    ],
     "upgrade": []
   },
   {
@@ -24042,5 +24047,9628 @@
       }
     ],
     "upgrade": []
+  },
+  {
+    "weapon_id": 1400,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "HrdBlangongaPlt+",
+        "quantity": 4
+      },
+      {
+        "item": "Massive Bone",
+        "quantity": 4
+      },
+      {
+        "item": "Lthr Pelagus Plt",
+        "quantity": 3
+      },
+      {
+        "item": "PhantomButterfly",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "weapon_id": 552,
+    "forge": [
+      {
+        "item": "Daora Claw",
+        "quantity": 2
+      },
+      {
+        "item": "Fire Dragon Claw",
+        "quantity": 2
+      },
+      {
+        "item": "Teostra Mane",
+        "quantity": 3
+      },
+      {
+        "item": "Commendation G",
+        "quantity": 2
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Fire Dragon Claw",
+        "quantity": 1
+      },
+      {
+        "item": "Daora Webbing",
+        "quantity": 3
+      },
+      {
+        "item": "Fire Drgn Webbng",
+        "quantity": 3
+      },
+      {
+        "item": "Daora Sharp Claw",
+        "quantity": 2
+      },
+      {
+        "item": "Daora Jewel",
+        "quantity": 1
+      },
+      {
+        "item": "Fire Drgn Jwl",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 568,
+    "forge": [
+      {
+        "item": "SpecLavasioFin+",
+        "quantity": 3
+      },
+      {
+        "item": "SpecPlesiothFin+",
+        "quantity": 3
+      },
+      {
+        "item": "Hvy Monster Bone",
+        "quantity": 8
+      },
+      {
+        "item": "HvyPiscineFang",
+        "quantity": 6
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "SpecLavasioFin+",
+        "quantity": 1
+      },
+      {
+        "item": "SpecPlesiothFin+",
+        "quantity": 1
+      },
+      {
+        "item": "ThckLavasiothScl",
+        "quantity": 3
+      },
+      {
+        "item": "ThckPlesiothScl",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 594,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "ThckDaoraDrgnScl",
+        "quantity": 5
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 10
+      },
+      {
+        "item": "ElderDragonBlood",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 542,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Lao-Shan's Horn",
+        "quantity": 4
+      },
+      {
+        "item": "Fire Dragon Pwdr",
+        "quantity": 2
+      },
+      {
+        "item": "Lao-Shan's Ruby",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 569,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "SpecLavasioFin+",
+        "quantity": 4
+      },
+      {
+        "item": "SpecPlesiothFin+",
+        "quantity": 4
+      },
+      {
+        "item": "YamaTsukamiFluid",
+        "quantity": 3
+      },
+      {
+        "item": "Big Wyvern Stone",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 518,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "StoutBlkTwstdHrn",
+        "quantity": 2
+      },
+      {
+        "item": "Top-GrdPlatHorn",
+        "quantity": 2
+      },
+      {
+        "item": "HvyBlkBlosShell",
+        "quantity": 4
+      },
+      {
+        "item": "Big Wyvern Stone",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 538,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "HardFatalisHorn",
+        "quantity": 2
+      },
+      {
+        "item": "Hvy Fatalis Shl",
+        "quantity": 4
+      },
+      {
+        "item": "BigEDragonJewel",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 554,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "HrdFireDrgnClaw",
+        "quantity": 2
+      },
+      {
+        "item": "Daora Sharp Claw",
+        "quantity": 3
+      },
+      {
+        "item": "ThckDaoraDrgnScl",
+        "quantity": 5
+      },
+      {
+        "item": "BigEDragonJewel",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 140,
+    "forge": [
+      {
+        "item": "Great Stone",
+        "quantity": 5
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 35
+      },
+      {
+        "item": "Hvy Monster Bone",
+        "quantity": 5
+      },
+      {
+        "item": "Big Wyvern Stone",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 159,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "SpecGrnPlesioFn+",
+        "quantity": 5
+      },
+      {
+        "item": "ThckGrnPlesioScl",
+        "quantity": 7
+      },
+      {
+        "item": "Mega Demondrug",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 168,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "HvyRathalosShl",
+        "quantity": 10
+      },
+      {
+        "item": "HrdFireWyvernClw",
+        "quantity": 10
+      },
+      {
+        "item": "Sharp Claw",
+        "quantity": 25
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 174,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "ThckAzurRthlsScl",
+        "quantity": 3
+      },
+      {
+        "item": "Azur Rthlos Tail",
+        "quantity": 12
+      },
+      {
+        "item": "Rathalos Ruby",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 600,
+    "forge": [
+      {
+        "item": "Large Ruststone",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 774,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Cactus Flower",
+        "quantity": 10
+      },
+      {
+        "item": "Massive Bone",
+        "quantity": 10
+      },
+      {
+        "item": "Dosbiscus",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 601,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Earth Crystal",
+        "quantity": 20
+      }
+    ]
+  },
+  {
+    "weapon_id": 602,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Earth Crystal",
+        "quantity": 40
+      },
+      {
+        "item": "ElderDragonBlood",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 603,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Lunastra Horn",
+        "quantity": 3
+      },
+      {
+        "item": "Lunastra Shell",
+        "quantity": 3
+      },
+      {
+        "item": "Firestone",
+        "quantity": 7
+      }
+    ]
+  },
+  {
+    "weapon_id": 604,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Fire Drgn Webbng",
+        "quantity": 4
+      },
+      {
+        "item": "Teostra Shell",
+        "quantity": 5
+      },
+      {
+        "item": "ElderDragonBlood",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 605,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Lunastra Horn",
+        "quantity": 6
+      },
+      {
+        "item": "Fire Drgn Scl+",
+        "quantity": 6
+      },
+      {
+        "item": "Fire Drgn Jwl",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 606,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Lunastra Spike",
+        "quantity": 3
+      },
+      {
+        "item": "ThckFireDrgnScl",
+        "quantity": 6
+      },
+      {
+        "item": "BigEDragonJewel",
+        "quantity": 1
+      },
+      {
+        "item": "Commendation",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 850,
+    "forge": [
+      {
+        "item": "AncientDrgnmoss",
+        "quantity": 6
+      },
+      {
+        "item": "AncientDrgnwood",
+        "quantity": 2
+      },
+      {
+        "item": "YamaTsukaFillet",
+        "quantity": 2
+      },
+      {
+        "item": "Thunderbug Jelly",
+        "quantity": 10
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "AncientDrgnwood",
+        "quantity": 3
+      },
+      {
+        "item": "AncientDrgnmoss",
+        "quantity": 1
+      },
+      {
+        "item": "YamaTsukamiHide",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 1282,
+    "forge": [
+      {
+        "item": "Iron Ore",
+        "quantity": 8
+      },
+      {
+        "item": "Sm Monster Bone",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1283,
+    "forge": [
+      {
+        "item": "Vespoid Wing",
+        "quantity": 6
+      },
+      {
+        "item": "Hornetaur Shell",
+        "quantity": 4
+      },
+      {
+        "item": "Disk Stone",
+        "quantity": 3
+      },
+      {
+        "item": "Brute Bone",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1284,
+    "forge": [
+      {
+        "item": "Brute Bone",
+        "quantity": 4
+      },
+      {
+        "item": "Bulldrome Hide",
+        "quantity": 4
+      },
+      {
+        "item": "Kelbi Hide",
+        "quantity": 4
+      },
+      {
+        "item": "Kelbi Horn",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1285,
+    "forge": [
+      {
+        "item": "Rubbery Hide",
+        "quantity": 4
+      },
+      {
+        "item": "Earth Crystal",
+        "quantity": 10
+      },
+      {
+        "item": "Rubbery Hide+",
+        "quantity": 4
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1286,
+    "forge": [
+      {
+        "item": "Pur Rubbery Hide",
+        "quantity": 8
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 4
+      },
+      {
+        "item": "Carpenterbug",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1287,
+    "forge": [
+      {
+        "item": "Cephalos Fin",
+        "quantity": 2
+      },
+      {
+        "item": "Cephalos Scale",
+        "quantity": 6
+      },
+      {
+        "item": "Iron Ore",
+        "quantity": 10
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1288,
+    "forge": [
+      {
+        "item": "Kut-Ku Shell",
+        "quantity": 8
+      },
+      {
+        "item": "Kut-Ku Scale",
+        "quantity": 8
+      },
+      {
+        "item": "Flabby Hide",
+        "quantity": 5
+      },
+      {
+        "item": "Lg Monster Bone",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1289,
+    "forge": [
+      {
+        "item": "Hermitaur Claw",
+        "quantity": 3
+      },
+      {
+        "item": "Hermitaur Shell",
+        "quantity": 8
+      },
+      {
+        "item": "Sm Hermitaur Shl",
+        "quantity": 10
+      },
+      {
+        "item": "Piscine Fang",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1290,
+    "forge": [
+      {
+        "item": "Basarios Shell",
+        "quantity": 10
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 15
+      },
+      {
+        "item": "Poison Sac",
+        "quantity": 4
+      },
+      {
+        "item": "Basarios Wing",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1291,
+    "forge": [
+      {
+        "item": "Firestone",
+        "quantity": 1
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 15
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 20
+      },
+      {
+        "item": "Iron Ore",
+        "quantity": 40
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1292,
+    "forge": [
+      {
+        "item": "Hercudrome",
+        "quantity": 2
+      },
+      {
+        "item": "Vespoid Abdomen",
+        "quantity": 1
+      },
+      {
+        "item": "Hornetaur Shell",
+        "quantity": 15
+      },
+      {
+        "item": "Monster Bone+",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1293,
+    "forge": [
+      {
+        "item": "Wht Monoblos Spn",
+        "quantity": 5
+      },
+      {
+        "item": "Wht Monoblos Shl",
+        "quantity": 5
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 2
+      },
+      {
+        "item": "Wht Monoblos Hrn",
+        "quantity": 2
+      },
+      {
+        "item": "Wht Monoblos Cpc",
+        "quantity": 5
+      },
+      {
+        "item": "WhtMonoblosThora",
+        "quantity": 5
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 6
+      },
+      {
+        "item": "Monoblos Heart",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1294,
+    "forge": [
+      {
+        "item": "Ceanataur Leg",
+        "quantity": 3
+      },
+      {
+        "item": "Ceanataur Shell",
+        "quantity": 6
+      },
+      {
+        "item": "Ceanataur Claw",
+        "quantity": 3
+      },
+      {
+        "item": "Lg Monster Bone",
+        "quantity": 8
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1295,
+    "forge": [
+      {
+        "item": "Giant Beak",
+        "quantity": 1
+      },
+      {
+        "item": "Blue Kut-Ku Shl",
+        "quantity": 5
+      },
+      {
+        "item": "Alluring Hide",
+        "quantity": 5
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1296,
+    "forge": [
+      {
+        "item": "Diablos Spine",
+        "quantity": 5
+      },
+      {
+        "item": "Diablos Shell",
+        "quantity": 5
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 15
+      },
+      {
+        "item": "Majestic Horn",
+        "quantity": 1
+      },
+      {
+        "item": "Diablos Thoracic",
+        "quantity": 3
+      },
+      {
+        "item": "Diablos Carapace",
+        "quantity": 6
+      },
+      {
+        "item": "Union Ore",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1297,
+    "forge": [
+      {
+        "item": "Tigrex Skull Shl",
+        "quantity": 2
+      },
+      {
+        "item": "Tigrex Shell",
+        "quantity": 8
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 6
+      },
+      {
+        "item": "Monster Bone+",
+        "quantity": 8
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1298,
+    "forge": [
+      {
+        "item": "Great Ladybug",
+        "quantity": 2
+      },
+      {
+        "item": "Killer Beetle",
+        "quantity": 2
+      },
+      {
+        "item": "Giant Bone",
+        "quantity": 3
+      },
+      {
+        "item": "Congalala Fang",
+        "quantity": 4
+      },
+      {
+        "item": "Rare Scarab",
+        "quantity": 3
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 1
+      },
+      {
+        "item": "Monster Broth",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1299,
+    "forge": [
+      {
+        "item": "Kirin Mane",
+        "quantity": 8
+      },
+      {
+        "item": "Kirin Hide",
+        "quantity": 2
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 10
+      },
+      {
+        "item": "Twisted Horn",
+        "quantity": 2
+      },
+      {
+        "item": "Kirin Hide+",
+        "quantity": 3
+      },
+      {
+        "item": "Kirin Thndr Tail",
+        "quantity": 3
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 10
+      },
+      {
+        "item": "Majestic Horn",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1300,
+    "forge": [
+      {
+        "item": "Dark Stone",
+        "quantity": 1
+      },
+      {
+        "item": "Dark Piece",
+        "quantity": 4
+      },
+      {
+        "item": "ElderDragonBlood",
+        "quantity": 1
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1301,
+    "forge": [
+      {
+        "item": "Garuga Ear",
+        "quantity": 2
+      },
+      {
+        "item": "Garuga Shell",
+        "quantity": 8
+      },
+      {
+        "item": "Blangonga Whiskr",
+        "quantity": 4
+      },
+      {
+        "item": "Ceanataur Claw",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1302,
+    "forge": [
+      {
+        "item": "Daora Shell",
+        "quantity": 5
+      },
+      {
+        "item": "DaoraDragonScale",
+        "quantity": 8
+      },
+      {
+        "item": "ElderDragonBlood",
+        "quantity": 1
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1303,
+    "forge": [
+      {
+        "item": "Lunastra Shell",
+        "quantity": 4
+      },
+      {
+        "item": "Fire Dragon Scl",
+        "quantity": 6
+      },
+      {
+        "item": "Lunastra Mane",
+        "quantity": 2
+      },
+      {
+        "item": "Firestone",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1304,
+    "forge": [
+      {
+        "item": "Teostra Shell",
+        "quantity": 4
+      },
+      {
+        "item": "Fire Dragon Scl",
+        "quantity": 2
+      },
+      {
+        "item": "Teostra Mane",
+        "quantity": 2
+      },
+      {
+        "item": "Firestone",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1305,
+    "forge": [
+      {
+        "item": "Gaoren Pincer",
+        "quantity": 2
+      },
+      {
+        "item": "Gaoren Shell",
+        "quantity": 5
+      },
+      {
+        "item": "Firestone",
+        "quantity": 1
+      },
+      {
+        "item": "Pokke Ticket",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1306,
+    "forge": [
+      {
+        "item": "Lao-Shan's Shell",
+        "quantity": 4
+      },
+      {
+        "item": "Lao-Shan's Scale",
+        "quantity": 6
+      },
+      {
+        "item": "Rathalos Plate",
+        "quantity": 1
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1307,
+    "forge": [
+      {
+        "item": "Stout Bone",
+        "quantity": 4
+      },
+      {
+        "item": "FlynMealPassPlus",
+        "quantity": 2
+      },
+      {
+        "item": "Bulldrome Hide+",
+        "quantity": 3
+      },
+      {
+        "item": "King Scarab",
+        "quantity": 6
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 20
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 6
+      },
+      {
+        "item": "Hvy Monster Bone",
+        "quantity": 1
+      },
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1309,
+    "forge": [
+      {
+        "item": "Cephalos Fin+",
+        "quantity": 5
+      },
+      {
+        "item": "Cephalos Scale+",
+        "quantity": 6
+      },
+      {
+        "item": "Coral Cphlos Scl",
+        "quantity": 3
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1310,
+    "forge": [
+      {
+        "item": "Firecell Stone",
+        "quantity": 1
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 10
+      },
+      {
+        "item": "King Scarab",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1311,
+    "forge": [
+      {
+        "item": "Vespoid Carapace",
+        "quantity": 10
+      },
+      {
+        "item": "Vespoid Abdomen",
+        "quantity": 1
+      },
+      {
+        "item": "Hornetaur Crapce",
+        "quantity": 10
+      },
+      {
+        "item": "King Scarab",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1312,
+    "forge": [
+      {
+        "item": "Basarios Carpace",
+        "quantity": 10
+      },
+      {
+        "item": "Basarios Tears",
+        "quantity": 2
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 20
+      },
+      {
+        "item": "King Scarab",
+        "quantity": 8
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1313,
+    "forge": [
+      {
+        "item": "Hermitaur Carpce",
+        "quantity": 8
+      },
+      {
+        "item": "Hermitaur Shell",
+        "quantity": 10
+      },
+      {
+        "item": "Cephalos Scale+",
+        "quantity": 6
+      },
+      {
+        "item": "Stout Bone",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1314,
+    "forge": [
+      {
+        "item": "Gravios Carapace",
+        "quantity": 8
+      },
+      {
+        "item": "Gravios Skl Shl",
+        "quantity": 1
+      },
+      {
+        "item": "Basarios Tears",
+        "quantity": 1
+      },
+      {
+        "item": "Rare Scarab",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1315,
+    "forge": [
+      {
+        "item": "Ceanataur Carpce",
+        "quantity": 6
+      },
+      {
+        "item": "Ceanataur Pincer",
+        "quantity": 3
+      },
+      {
+        "item": "Coral Cphlos Scl",
+        "quantity": 4
+      },
+      {
+        "item": "Monster Bone+",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1317,
+    "forge": [
+      {
+        "item": "Tigrex Carapace",
+        "quantity": 6
+      },
+      {
+        "item": "Tigrex Skull Shl",
+        "quantity": 3
+      },
+      {
+        "item": "FireWyvrn BrnStm",
+        "quantity": 1
+      },
+      {
+        "item": "Wyvern Stone",
+        "quantity": 2
+      },
+      {
+        "item": "Hvy Tigrex Shell",
+        "quantity": 6
+      },
+      {
+        "item": "Hvy Tigrex Fang",
+        "quantity": 3
+      },
+      {
+        "item": "HvnlyTigrexScale",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1318,
+    "forge": [
+      {
+        "item": "Narga Scale+",
+        "quantity": 10
+      },
+      {
+        "item": "Black Narga Pelt",
+        "quantity": 5
+      },
+      {
+        "item": "Narga Brain Stem",
+        "quantity": 1
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1319,
+    "forge": [
+      {
+        "item": "Pur Gypceros Wng",
+        "quantity": 8
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 6
+      },
+      {
+        "item": "Congalala Pelt+",
+        "quantity": 3
+      },
+      {
+        "item": "Hercudrome",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1320,
+    "forge": [
+      {
+        "item": "Blk Gravios Cpc",
+        "quantity": 8
+      },
+      {
+        "item": "Blk Gravios Skl",
+        "quantity": 1
+      },
+      {
+        "item": "Gravios BrainStm",
+        "quantity": 1
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1321,
+    "forge": [
+      {
+        "item": "Blue Kut-Ku Cpc",
+        "quantity": 8
+      },
+      {
+        "item": "Long Kut-Ku Ear",
+        "quantity": 2
+      },
+      {
+        "item": "Pale Khezu Steak",
+        "quantity": 2
+      },
+      {
+        "item": "Union Ore",
+        "quantity": 8
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1325,
+    "forge": [
+      {
+        "item": "Daora Jewel",
+        "quantity": 1
+      },
+      {
+        "item": "Daora Carapace",
+        "quantity": 5
+      },
+      {
+        "item": "ElderDragonBlood",
+        "quantity": 4
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1326,
+    "forge": [
+      {
+        "item": "Fatalis Shell",
+        "quantity": 2
+      },
+      {
+        "item": "Fatalis Horn",
+        "quantity": 2
+      },
+      {
+        "item": "Fatalis Scale",
+        "quantity": 2
+      },
+      {
+        "item": "Union Ore",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1327,
+    "forge": [
+      {
+        "item": "LunastraCarapace",
+        "quantity": 4
+      },
+      {
+        "item": "Fire Drgn Jwl",
+        "quantity": 1
+      },
+      {
+        "item": "Lunastra Mane",
+        "quantity": 1
+      },
+      {
+        "item": "Firecell Stone",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1328,
+    "forge": [
+      {
+        "item": "Fire Drgn Jwl",
+        "quantity": 1
+      },
+      {
+        "item": "Teostra Carapace",
+        "quantity": 5
+      },
+      {
+        "item": "ElderDragonBlood",
+        "quantity": 4
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1329,
+    "forge": [
+      {
+        "item": "Fatalis CrmsnShl",
+        "quantity": 2
+      },
+      {
+        "item": "Fatalis CrmsnHrn",
+        "quantity": 2
+      },
+      {
+        "item": "Fatalis CrmsnScl",
+        "quantity": 2
+      },
+      {
+        "item": "Firecell Stone",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1330,
+    "forge": [
+      {
+        "item": "Long Garuga Ear",
+        "quantity": 3
+      },
+      {
+        "item": "Garuga Carapace",
+        "quantity": 5
+      },
+      {
+        "item": "Garuga Wing",
+        "quantity": 3
+      },
+      {
+        "item": "Black Blos Cpc",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1331,
+    "forge": [
+      {
+        "item": "Gaoren Thoracic",
+        "quantity": 3
+      },
+      {
+        "item": "Gaoren Carapace",
+        "quantity": 5
+      },
+      {
+        "item": "Firecell Stone",
+        "quantity": 2
+      },
+      {
+        "item": "Pokke Ticket",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1332,
+    "forge": [
+      {
+        "item": "Lao-Shan's Ruby",
+        "quantity": 1
+      },
+      {
+        "item": "Lao-ShanCarapace",
+        "quantity": 3
+      },
+      {
+        "item": "Lao-Shan Scale+",
+        "quantity": 5
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 8
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1333,
+    "forge": [
+      {
+        "item": "Azure LaoS Shell",
+        "quantity": 5
+      },
+      {
+        "item": "Lao-Shan's Ruby",
+        "quantity": 1
+      },
+      {
+        "item": "Lao-ShanCarapace",
+        "quantity": 3
+      },
+      {
+        "item": "Wyvern Stone",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1335,
+    "forge": [
+      {
+        "item": "SpecRubberyHide+",
+        "quantity": 6
+      },
+      {
+        "item": "Gypceros Head",
+        "quantity": 1
+      },
+      {
+        "item": "KhezuHide-Cream",
+        "quantity": 3
+      },
+      {
+        "item": "Purecrystal",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1336,
+    "forge": [
+      {
+        "item": "HrdPuGypcerosWng",
+        "quantity": 6
+      },
+      {
+        "item": "HardGypcerosHead",
+        "quantity": 1
+      },
+      {
+        "item": "StrAlluringWing",
+        "quantity": 3
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1337,
+    "forge": [
+      {
+        "item": "HrdCongalalaPlt+",
+        "quantity": 8
+      },
+      {
+        "item": "Lg Pelagus Fang",
+        "quantity": 4
+      },
+      {
+        "item": "Vibrant Pelt",
+        "quantity": 3
+      },
+      {
+        "item": "Hvy Monster Bone",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1338,
+    "forge": [
+      {
+        "item": "ThckPlesiothScl",
+        "quantity": 8
+      },
+      {
+        "item": "SpecPlesiothFin+",
+        "quantity": 4
+      },
+      {
+        "item": "ThckGrnPlesioScl",
+        "quantity": 4
+      },
+      {
+        "item": "Emperor Cricket",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1339,
+    "forge": [
+      {
+        "item": "PlumD.HermitrShl",
+        "quantity": 8
+      },
+      {
+        "item": "HrdHermitaurClaw",
+        "quantity": 3
+      },
+      {
+        "item": "ThckGrnPlesioScl",
+        "quantity": 3
+      },
+      {
+        "item": "Massive Bone",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1340,
+    "forge": [
+      {
+        "item": "Kut-Ku Carapace",
+        "quantity": 6
+      },
+      {
+        "item": "Str Kut-Ku Wing",
+        "quantity": 6
+      },
+      {
+        "item": "Hypno Bezoar",
+        "quantity": 2
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1341,
+    "forge": [
+      {
+        "item": "HvyBlueKut-KuShl",
+        "quantity": 6
+      },
+      {
+        "item": "Lucky Kut-Ku Ear",
+        "quantity": 3
+      },
+      {
+        "item": "Hypno Claw+",
+        "quantity": 5
+      },
+      {
+        "item": "Hvy Monster Bone",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1342,
+    "forge": [
+      {
+        "item": "Mellanje Ore",
+        "quantity": 10
+      },
+      {
+        "item": "ThckLavasiothScl",
+        "quantity": 4
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 20
+      },
+      {
+        "item": "Big Wyvern Stone",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1343,
+    "forge": [
+      {
+        "item": "HvyBasariosShell",
+        "quantity": 10
+      },
+      {
+        "item": "StrBasariosWing",
+        "quantity": 2
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 20
+      },
+      {
+        "item": "Emperor Cricket",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1344,
+    "forge": [
+      {
+        "item": "HrdBlangongaPlt+",
+        "quantity": 8
+      },
+      {
+        "item": "HvyBlangongaFang",
+        "quantity": 4
+      },
+      {
+        "item": "Lthr Pelagus Plt",
+        "quantity": 2
+      },
+      {
+        "item": "Lg Pelagus Fang",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1345,
+    "forge": [
+      {
+        "item": "HvyCeanataurShl",
+        "quantity": 6
+      },
+      {
+        "item": "HrdCeanataurClaw",
+        "quantity": 4
+      },
+      {
+        "item": "Hvy Monster Bone",
+        "quantity": 4
+      },
+      {
+        "item": "Big Wyvern Stone",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1346,
+    "forge": [
+      {
+        "item": "HvyGraviosShell",
+        "quantity": 8
+      },
+      {
+        "item": "Gravios Skl Shl",
+        "quantity": 2
+      },
+      {
+        "item": "StrBasariosWing",
+        "quantity": 1
+      },
+      {
+        "item": "HvnlyGraviosShl",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1347,
+    "forge": [
+      {
+        "item": "Pirate J Tckt G",
+        "quantity": 4
+      },
+      {
+        "item": "ThckFireDrgnScl",
+        "quantity": 10
+      },
+      {
+        "item": "HrdFireDrgnClaw",
+        "quantity": 3
+      },
+      {
+        "item": "BigEDragonJewel",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1365,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "ThkBullfangoPelt",
+        "quantity": 15
+      },
+      {
+        "item": "RobustWyvernBone",
+        "quantity": 20
+      },
+      {
+        "item": "Lg Monster Bone",
+        "quantity": 30
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1366,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Kelbi Hide",
+        "quantity": 20
+      },
+      {
+        "item": "Majestic Horn",
+        "quantity": 10
+      },
+      {
+        "item": "Carpenterbug",
+        "quantity": 99
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1367,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Monster Essence",
+        "quantity": 30
+      },
+      {
+        "item": "Monster Broth",
+        "quantity": 30
+      },
+      {
+        "item": "Monster Fluid",
+        "quantity": 30
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1368,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "YamaTsukamiFluid",
+        "quantity": 4
+      },
+      {
+        "item": "Vespoid Abdomen",
+        "quantity": 10
+      },
+      {
+        "item": "Hornetaur Head",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1369,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "DeadlyPoisonSac",
+        "quantity": 10
+      },
+      {
+        "item": "Toxin Sac",
+        "quantity": 10
+      },
+      {
+        "item": "Purecrystal",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1370,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "HardGypcerosHead",
+        "quantity": 3
+      },
+      {
+        "item": "Lightcrystal",
+        "quantity": 20
+      },
+      {
+        "item": "Novacrystal",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1371,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "HvyPiscineFang",
+        "quantity": 10
+      },
+      {
+        "item": "Coral Cphlos Fin",
+        "quantity": 6
+      },
+      {
+        "item": "Union Ore",
+        "quantity": 30
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1372,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Vibrant Comb",
+        "quantity": 2
+      },
+      {
+        "item": "HrdCongalalaClw+",
+        "quantity": 4
+      },
+      {
+        "item": "HrdE.CongaClaw",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1373,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Hermitaur Claw+",
+        "quantity": 8
+      },
+      {
+        "item": "HvyHermitaurShl",
+        "quantity": 8
+      },
+      {
+        "item": "Black Pearl",
+        "quantity": 20
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1374,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Firestone",
+        "quantity": 40
+      },
+      {
+        "item": "Mellanje Ore",
+        "quantity": 30
+      },
+      {
+        "item": "Basarios Tears",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1375,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "ThckPlesiothScl",
+        "quantity": 10
+      },
+      {
+        "item": "Ancient Fish",
+        "quantity": 10
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 20
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1376,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "PlumD.HermitrClw",
+        "quantity": 6
+      },
+      {
+        "item": "PlumD.HermitrShl",
+        "quantity": 8
+      },
+      {
+        "item": "Wyvern Skull Shl",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1377,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Thick Kut-Ku Scl",
+        "quantity": 10
+      },
+      {
+        "item": "Lucky Kut-Ku Ear",
+        "quantity": 5
+      },
+      {
+        "item": "Pale Khezu Steak",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1378,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "ThkBlueKut-KuScl",
+        "quantity": 10
+      },
+      {
+        "item": "Long Kut-Ku Ear",
+        "quantity": 10
+      },
+      {
+        "item": "KhezuSpecialCut",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1379,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Wht Monoblos Cpc",
+        "quantity": 8
+      },
+      {
+        "item": "StoutBlkTwstdHrn",
+        "quantity": 4
+      },
+      {
+        "item": "Monoblos Heart",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1380,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "HvyDiablosShell",
+        "quantity": 8
+      },
+      {
+        "item": "Top-GrdPlatHorn",
+        "quantity": 6
+      },
+      {
+        "item": "Wyvern Stone",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1348,
+    "forge": [
+      {
+        "item": "VespoidQn'sCrown",
+        "quantity": 3
+      },
+      {
+        "item": "Vespoid Abdomen",
+        "quantity": 3
+      },
+      {
+        "item": "Lightning Sac",
+        "quantity": 2
+      },
+      {
+        "item": "Hornet Razorwing",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1349,
+    "forge": [
+      {
+        "item": "ThickNargaScale",
+        "quantity": 10
+      },
+      {
+        "item": "BlackNargaPelt+",
+        "quantity": 5
+      },
+      {
+        "item": "HvnlyNargaScale",
+        "quantity": 1
+      },
+      {
+        "item": "Hvy Monster Bone",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1350,
+    "forge": [
+      {
+        "item": "PhantomButterfly",
+        "quantity": 8
+      },
+      {
+        "item": "HvyRathalosShl",
+        "quantity": 2
+      },
+      {
+        "item": "Great Ladybug",
+        "quantity": 10
+      },
+      {
+        "item": "Monster Essence",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1351,
+    "forge": [
+      {
+        "item": "SpecialKirinHide",
+        "quantity": 3
+      },
+      {
+        "item": "Platinum Mane",
+        "quantity": 3
+      },
+      {
+        "item": "Mellanje Ore",
+        "quantity": 4
+      },
+      {
+        "item": "StoutWarpedHorn",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1352,
+    "forge": [
+      {
+        "item": "SilverGarugaPelt",
+        "quantity": 4
+      },
+      {
+        "item": "Hvy Garuga Shell",
+        "quantity": 5
+      },
+      {
+        "item": "Str Garuga Wing",
+        "quantity": 4
+      },
+      {
+        "item": "Hvy Monster Bone",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1353,
+    "forge": [
+      {
+        "item": "TerraCeanatrShl",
+        "quantity": 6
+      },
+      {
+        "item": "TerraCeanatrClaw",
+        "quantity": 4
+      },
+      {
+        "item": "HvyBasariosShell",
+        "quantity": 4
+      },
+      {
+        "item": "ThckLavasiothScl",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1354,
+    "forge": [
+      {
+        "item": "Hvy Daora Shell",
+        "quantity": 5
+      },
+      {
+        "item": "Str Daora Wing",
+        "quantity": 4
+      },
+      {
+        "item": "BigEDragonJewel",
+        "quantity": 1
+      },
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1355,
+    "forge": [
+      {
+        "item": "HvyFatalisCrmShl",
+        "quantity": 2
+      },
+      {
+        "item": "HrdFatlisCrmHorn",
+        "quantity": 2
+      },
+      {
+        "item": "ThckFatlisCrmScl",
+        "quantity": 2
+      },
+      {
+        "item": "BigEDragonJewel",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1356,
+    "forge": [
+      {
+        "item": "HvyBlkGraviosShl",
+        "quantity": 8
+      },
+      {
+        "item": "Gravios BrainStm",
+        "quantity": 1
+      },
+      {
+        "item": "Firecell Stone",
+        "quantity": 6
+      },
+      {
+        "item": "HvnlyBlkGraviShl",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1357,
+    "forge": [
+      {
+        "item": "HvyTeostraShell",
+        "quantity": 5
+      },
+      {
+        "item": "HrdFireDrgnClaw",
+        "quantity": 2
+      },
+      {
+        "item": "BigEDragonJewel",
+        "quantity": 1
+      },
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1358,
+    "forge": [
+      {
+        "item": "HvyBlkBlosSpine",
+        "quantity": 3
+      },
+      {
+        "item": "HvyDiablosShell",
+        "quantity": 6
+      },
+      {
+        "item": "Mellanje Ore",
+        "quantity": 5
+      },
+      {
+        "item": "StoutBlkTwstdHrn",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1359,
+    "forge": [
+      {
+        "item": "Hvy Fatalis Shl",
+        "quantity": 2
+      },
+      {
+        "item": "HardFatalisHorn",
+        "quantity": 2
+      },
+      {
+        "item": "ThckFatalisScale",
+        "quantity": 2
+      },
+      {
+        "item": "BigEDragonJewel",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1361,
+    "forge": [
+      {
+        "item": "Hvy Gaoren Spine",
+        "quantity": 4
+      },
+      {
+        "item": "HvyGaorenShell",
+        "quantity": 6
+      },
+      {
+        "item": "Firecell Stone",
+        "quantity": 20
+      },
+      {
+        "item": "HvnlyGaorenShell",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1362,
+    "forge": [
+      {
+        "item": "AncientDrgnwood",
+        "quantity": 4
+      },
+      {
+        "item": "YamaTsukamiFluid",
+        "quantity": 8
+      },
+      {
+        "item": "Thunderbug Jelly",
+        "quantity": 6
+      },
+      {
+        "item": "Mellanje Ore",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1363,
+    "forge": [
+      {
+        "item": "Lao-Shan'sHvyShl",
+        "quantity": 4
+      },
+      {
+        "item": "Azure LaoS Claw",
+        "quantity": 3
+      },
+      {
+        "item": "Lao-ShanHvnlyScl",
+        "quantity": 1
+      },
+      {
+        "item": "Big Wyvern Stone",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1364,
+    "forge": [
+      {
+        "item": "HvyUkanlosShell",
+        "quantity": 6
+      },
+      {
+        "item": "StrongUkanlosFin",
+        "quantity": 4
+      },
+      {
+        "item": "UkanlosUnderscl",
+        "quantity": 3
+      },
+      {
+        "item": "Ukanlos Stone",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1381,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "VespoidQn'sCrown",
+        "quantity": 5
+      },
+      {
+        "item": "Thunderbug Jelly",
+        "quantity": 20
+      },
+      {
+        "item": "Killer Beetle",
+        "quantity": 99
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1382,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Dark Stone",
+        "quantity": 10
+      },
+      {
+        "item": "BigEDragonJewel",
+        "quantity": 1
+      },
+      {
+        "item": "Giant Blk Pearl",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1383,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "ThckFireDrgnScl",
+        "quantity": 4
+      },
+      {
+        "item": "LunastraCarapace",
+        "quantity": 8
+      },
+      {
+        "item": "Fire Drgn Jwl",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1384,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Lao-ShanHvnlyScl",
+        "quantity": 1
+      },
+      {
+        "item": "Lao-Shan's Ruby",
+        "quantity": 2
+      },
+      {
+        "item": "ElderDragonBlood",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 967,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Ceanataur Claw+",
+        "quantity": 3
+      },
+      {
+        "item": "Ceanataur Carpce",
+        "quantity": 5
+      },
+      {
+        "item": "Ceanataur Leg",
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "weapon_id": 1011,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Lao-ShanCarapace",
+        "quantity": 3
+      },
+      {
+        "item": "Lao-Shan'sThkScl",
+        "quantity": 6
+      },
+      {
+        "item": "Gaoren Thoracic",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "weapon_id": 936,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Platinum Mane",
+        "quantity": 3
+      },
+      {
+        "item": "SpecialKirinHide",
+        "quantity": 5
+      },
+      {
+        "item": "Thunderbug Jelly",
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "weapon_id": 1149,
+    "forge": [
+      {
+        "item": "Iron Ore",
+        "quantity": 4
+      },
+      {
+        "item": "Brute Bone",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1150,
+    "forge": [
+      {
+        "item": "Disk Stone",
+        "quantity": 5
+      },
+      {
+        "item": "Iron Ore",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1151,
+    "forge": [
+      {
+        "item": "Velociprey Scale",
+        "quantity": 6
+      },
+      {
+        "item": "Sm Monster Bone",
+        "quantity": 3
+      },
+      {
+        "item": "Iron Ore",
+        "quantity": 6
+      },
+      {
+        "item": "Velociprey Hide",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1152,
+    "forge": [
+      {
+        "item": "Giadrome Claw",
+        "quantity": 4
+      },
+      {
+        "item": "Giaprey Scale",
+        "quantity": 6
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 1
+      },
+      {
+        "item": "Sm Monster Bone",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1153,
+    "forge": [
+      {
+        "item": "Genprey Scale",
+        "quantity": 8
+      },
+      {
+        "item": "Sm Monster Bone",
+        "quantity": 4
+      },
+      {
+        "item": "Iron Ore",
+        "quantity": 8
+      },
+      {
+        "item": "Gendrome Hide",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1154,
+    "forge": [
+      {
+        "item": "Cephalos Fin",
+        "quantity": 3
+      },
+      {
+        "item": "Cephalos Scale",
+        "quantity": 6
+      },
+      {
+        "item": "Lg Monster Bone",
+        "quantity": 3
+      },
+      {
+        "item": "Earth Crystal",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1155,
+    "forge": [
+      {
+        "item": "Plesioth Fin",
+        "quantity": 3
+      },
+      {
+        "item": "Plesioth Scale",
+        "quantity": 6
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "Carpenterbug",
+        "quantity": 6
+      },
+      {
+        "item": "Plesioth Fin+",
+        "quantity": 4
+      },
+      {
+        "item": "Plesioth Scale+",
+        "quantity": 6
+      },
+      {
+        "item": "Springnight Carp",
+        "quantity": 4
+      },
+      {
+        "item": "Union Ore",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1156,
+    "forge": [
+      {
+        "item": "Iodrome Hide",
+        "quantity": 2
+      },
+      {
+        "item": "Med Monster Bone",
+        "quantity": 3
+      },
+      {
+        "item": "Iron Ore",
+        "quantity": 10
+      },
+      {
+        "item": "Ioprey Scale",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1157,
+    "forge": [
+      {
+        "item": "Blango Pelt",
+        "quantity": 4
+      },
+      {
+        "item": "Brute Bone",
+        "quantity": 6
+      },
+      {
+        "item": "Ice Crystal",
+        "quantity": 10
+      },
+      {
+        "item": "Giant Bone",
+        "quantity": 3
+      },
+      {
+        "item": "Blangonga Whiskr",
+        "quantity": 3
+      },
+      {
+        "item": "Blangonga Pelt",
+        "quantity": 3
+      },
+      {
+        "item": "Killer Beetle",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1158,
+    "forge": [
+      {
+        "item": "Congalala Pelt",
+        "quantity": 5
+      },
+      {
+        "item": "Congalala Fang",
+        "quantity": 3
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "Giant Bone",
+        "quantity": 1
+      },
+      {
+        "item": "Congalala Pelt+",
+        "quantity": 6
+      },
+      {
+        "item": "Congalala Claw+",
+        "quantity": 2
+      },
+      {
+        "item": "Vibrant Pelt",
+        "quantity": 2
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1159,
+    "forge": [
+      {
+        "item": "Grn Plesioth Scl",
+        "quantity": 6
+      },
+      {
+        "item": "Plesioth Fin",
+        "quantity": 3
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "Springnight Carp",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1160,
+    "forge": [
+      {
+        "item": "Sm Lobstershell",
+        "quantity": 2
+      },
+      {
+        "item": "Plesioth Scale",
+        "quantity": 5
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1161,
+    "forge": [
+      {
+        "item": "Flabby Hide",
+        "quantity": 4
+      },
+      {
+        "item": "Lost Umbrella",
+        "quantity": 1
+      },
+      {
+        "item": "Carpenterbug",
+        "quantity": 8
+      },
+      {
+        "item": "Electro Sac",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1162,
+    "forge": [
+      {
+        "item": "Giant Beak",
+        "quantity": 1
+      },
+      {
+        "item": "Kut-Ku Shell",
+        "quantity": 5
+      },
+      {
+        "item": "Kut-Ku Ear",
+        "quantity": 2
+      },
+      {
+        "item": "Flabby Hide",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1163,
+    "forge": [
+      {
+        "item": "Giant Beak",
+        "quantity": 1
+      },
+      {
+        "item": "Blue Kut-Ku Shl",
+        "quantity": 4
+      },
+      {
+        "item": "Kut-Ku Ear",
+        "quantity": 2
+      },
+      {
+        "item": "Alluring Hide",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1164,
+    "forge": [
+      {
+        "item": "Dragonite Ore",
+        "quantity": 2
+      },
+      {
+        "item": "Basarios Shell",
+        "quantity": 6
+      },
+      {
+        "item": "Earth Crystal",
+        "quantity": 20
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 10
+      },
+      {
+        "item": "Basarios Tears",
+        "quantity": 1
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 10
+      },
+      {
+        "item": "Union Ore",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1165,
+    "forge": [
+      {
+        "item": "Rainbow Ore",
+        "quantity": 2
+      },
+      {
+        "item": "Cephalos Scale",
+        "quantity": 8
+      },
+      {
+        "item": "Cephalos Fin",
+        "quantity": 5
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 8
+      },
+      {
+        "item": "Coral Cphlos Fin",
+        "quantity": 1
+      },
+      {
+        "item": "Coral Cphlos Scl",
+        "quantity": 4
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "King Scarab",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1166,
+    "forge": [
+      {
+        "item": "Alluring Hide",
+        "quantity": 4
+      },
+      {
+        "item": "Lost Umbrella",
+        "quantity": 1
+      },
+      {
+        "item": "Firestone",
+        "quantity": 1
+      },
+      {
+        "item": "Electro Sac",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1168,
+    "forge": [
+      {
+        "item": "Rathian Scale",
+        "quantity": 5
+      },
+      {
+        "item": "Monster Bone+",
+        "quantity": 2
+      },
+      {
+        "item": "Rathian Shell",
+        "quantity": 3
+      },
+      {
+        "item": "Gunpowder",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1169,
+    "forge": [
+      {
+        "item": "Rathalos Shell",
+        "quantity": 3
+      },
+      {
+        "item": "Monster Bone+",
+        "quantity": 2
+      },
+      {
+        "item": "Rathalos Scale",
+        "quantity": 5
+      },
+      {
+        "item": "Gunpowder",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1170,
+    "forge": [
+      {
+        "item": "Gravios Shell",
+        "quantity": 6
+      },
+      {
+        "item": "Wyvern Skull Shl",
+        "quantity": 1
+      },
+      {
+        "item": "Monster Bone+",
+        "quantity": 3
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 4
+      },
+      {
+        "item": "Gravios Carapace",
+        "quantity": 6
+      },
+      {
+        "item": "Basarios Carpace",
+        "quantity": 5
+      },
+      {
+        "item": "Rare Scarab",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1171,
+    "forge": [
+      {
+        "item": "Blk Gravios Shl",
+        "quantity": 4
+      },
+      {
+        "item": "Basarios Wing",
+        "quantity": 1
+      },
+      {
+        "item": "Monster Bone+",
+        "quantity": 3
+      },
+      {
+        "item": "Hercudrome",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1172,
+    "forge": [
+      {
+        "item": "Tigrex Shell",
+        "quantity": 6
+      },
+      {
+        "item": "Tigrex Fang",
+        "quantity": 3
+      },
+      {
+        "item": "Tigrex Scale",
+        "quantity": 5
+      },
+      {
+        "item": "Monster Bone+",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1280,
+    "forge": [
+      {
+        "item": "Ruststone",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1173,
+    "forge": [
+      {
+        "item": "FlynMealPassReg",
+        "quantity": 3
+      },
+      {
+        "item": "Lightcrystal",
+        "quantity": 1
+      },
+      {
+        "item": "Rubbery Hide",
+        "quantity": 5
+      },
+      {
+        "item": "Flame Sac",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1174,
+    "forge": [
+      {
+        "item": "FlynMealPassReg",
+        "quantity": 3
+      },
+      {
+        "item": "Black Pearl",
+        "quantity": 6
+      },
+      {
+        "item": "Hermitaur Claw",
+        "quantity": 2
+      },
+      {
+        "item": "Flame Sac",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1175,
+    "forge": [
+      {
+        "item": "Amezari Shell",
+        "quantity": 4
+      },
+      {
+        "item": "Plesioth Scale",
+        "quantity": 5
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1176,
+    "forge": [
+      {
+        "item": "Chameleos Hide",
+        "quantity": 6
+      },
+      {
+        "item": "ChameleosWebbing",
+        "quantity": 4
+      },
+      {
+        "item": "Firestone",
+        "quantity": 1
+      },
+      {
+        "item": "ElderDragonBlood",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1177,
+    "forge": [
+      {
+        "item": "Tigrex Coin",
+        "quantity": 8
+      },
+      {
+        "item": "Blackbelt Ticket",
+        "quantity": 10
+      },
+      {
+        "item": "Khezu Coin",
+        "quantity": 7
+      },
+      {
+        "item": "Yian Garuga Coin",
+        "quantity": 8
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1178,
+    "forge": [
+      {
+        "item": "Dark Stone",
+        "quantity": 1
+      },
+      {
+        "item": "Dark Piece",
+        "quantity": 3
+      },
+      {
+        "item": "Lost Umbrella",
+        "quantity": 1
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1179,
+    "forge": [
+      {
+        "item": "Garuga Shell",
+        "quantity": 6
+      },
+      {
+        "item": "Sharpened Beak",
+        "quantity": 2
+      },
+      {
+        "item": "Garuga Ear",
+        "quantity": 2
+      },
+      {
+        "item": "Ceanataur Shell",
+        "quantity": 8
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1180,
+    "forge": [
+      {
+        "item": "Pnk Rathian Scl",
+        "quantity": 5
+      },
+      {
+        "item": "Pnk Rathian Shl",
+        "quantity": 3
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 2
+      },
+      {
+        "item": "Rathian Spike",
+        "quantity": 1
+      },
+      {
+        "item": "Pnk Rathian Scl+",
+        "quantity": 5
+      },
+      {
+        "item": "Pnk Rathian Cpc",
+        "quantity": 3
+      },
+      {
+        "item": "Wyvern Stone",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1181,
+    "forge": [
+      {
+        "item": "Azure Rthlos Shl",
+        "quantity": 5
+      },
+      {
+        "item": "Pnk Rathian Scl",
+        "quantity": 5
+      },
+      {
+        "item": "Lightcrystal",
+        "quantity": 2
+      },
+      {
+        "item": "FireWyvrn Marrow",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1182,
+    "forge": [
+      {
+        "item": "Azure Rthlos Shl",
+        "quantity": 5
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 2
+      },
+      {
+        "item": "FireWyvrn Marrow",
+        "quantity": 1
+      },
+      {
+        "item": "Azure Rthlos Cpc",
+        "quantity": 5
+      },
+      {
+        "item": "Azre Rthlos Scl+",
+        "quantity": 3
+      },
+      {
+        "item": "Azur Rthlos Wing",
+        "quantity": 2
+      },
+      {
+        "item": "Wyvern Stone",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1183,
+    "forge": [
+      {
+        "item": "Velocidrome Clw+",
+        "quantity": 6
+      },
+      {
+        "item": "Velociprey Scle+",
+        "quantity": 8
+      },
+      {
+        "item": "Monster Bone+",
+        "quantity": 5
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1185,
+    "forge": [
+      {
+        "item": "Gendrome Tail",
+        "quantity": 6
+      },
+      {
+        "item": "Genprey Scale+",
+        "quantity": 8
+      },
+      {
+        "item": "Monster Bone+",
+        "quantity": 5
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 8
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1187,
+    "forge": [
+      {
+        "item": "Cephalos Fin+",
+        "quantity": 5
+      },
+      {
+        "item": "Cephalos Scale+",
+        "quantity": 6
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "Hercudrome",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1188,
+    "forge": [
+      {
+        "item": "HornetaurInnrWng",
+        "quantity": 6
+      },
+      {
+        "item": "Hornetaur Crapce",
+        "quantity": 10
+      },
+      {
+        "item": "Stout Bone",
+        "quantity": 3
+      },
+      {
+        "item": "Hercudrome",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1189,
+    "forge": [
+      {
+        "item": "Ioprey Scale+",
+        "quantity": 8
+      },
+      {
+        "item": "Toxin Sac",
+        "quantity": 6
+      },
+      {
+        "item": "Stout Bone",
+        "quantity": 2
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1190,
+    "forge": [
+      {
+        "item": "Lg Lobstershell",
+        "quantity": 2
+      },
+      {
+        "item": "Plesioth Fin+",
+        "quantity": 4
+      },
+      {
+        "item": "Plesioth Scale+",
+        "quantity": 5
+      },
+      {
+        "item": "King Scarab",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1191,
+    "forge": [
+      {
+        "item": "Rathian Scale+",
+        "quantity": 5
+      },
+      {
+        "item": "Rathian Carapace",
+        "quantity": 3
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "King Scarab",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1192,
+    "forge": [
+      {
+        "item": "Stout Bone",
+        "quantity": 2
+      },
+      {
+        "item": "FlynMealPassPlus",
+        "quantity": 2
+      },
+      {
+        "item": "Monster Bone+",
+        "quantity": 5
+      },
+      {
+        "item": "King Scarab",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1194,
+    "forge": [
+      {
+        "item": "Rathalos Carpace",
+        "quantity": 5
+      },
+      {
+        "item": "Rathalos Scale+",
+        "quantity": 3
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "King Scarab",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1195,
+    "forge": [
+      {
+        "item": "Blangonga Pelt+",
+        "quantity": 6
+      },
+      {
+        "item": "Blango Pelt+",
+        "quantity": 6
+      },
+      {
+        "item": "Stout Bone",
+        "quantity": 4
+      },
+      {
+        "item": "Hercudrome",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1197,
+    "forge": [
+      {
+        "item": "Tigrex Carapace",
+        "quantity": 4
+      },
+      {
+        "item": "Tigrex Scale+",
+        "quantity": 8
+      },
+      {
+        "item": "FireWyvrn BrnStm",
+        "quantity": 1
+      },
+      {
+        "item": "Wyvern Stone",
+        "quantity": 2
+      },
+      {
+        "item": "Hvy Tigrex Shell",
+        "quantity": 4
+      },
+      {
+        "item": "ThickTigrexScale",
+        "quantity": 8
+      },
+      {
+        "item": "HvnlyTigrexScale",
+        "quantity": 1
+      },
+      {
+        "item": "Big Wyvern Stone",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1198,
+    "forge": [
+      {
+        "item": "Narga Scale+",
+        "quantity": 6
+      },
+      {
+        "item": "Black Narga Pelt",
+        "quantity": 4
+      },
+      {
+        "item": "Nargacuga Fang+",
+        "quantity": 8
+      },
+      {
+        "item": "Narga Brain Stem",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1199,
+    "forge": [
+      {
+        "item": "Giadrome Claw+",
+        "quantity": 8
+      },
+      {
+        "item": "Giaprey Scale+",
+        "quantity": 10
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 1
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1200,
+    "forge": [
+      {
+        "item": "Grn Plsioth Scl+",
+        "quantity": 5
+      },
+      {
+        "item": "Grn Plsioth Fin+",
+        "quantity": 4
+      },
+      {
+        "item": "Ancient Fish",
+        "quantity": 2
+      },
+      {
+        "item": "Union Ore",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1202,
+    "forge": [
+      {
+        "item": "Alluring Webbing",
+        "quantity": 8
+      },
+      {
+        "item": "Lost Umbrella",
+        "quantity": 1
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 4
+      },
+      {
+        "item": "Thunder Sac",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1203,
+    "forge": [
+      {
+        "item": "Blk Gravios Cpc",
+        "quantity": 6
+      },
+      {
+        "item": "Blk Gravios Shl",
+        "quantity": 5
+      },
+      {
+        "item": "Blk Gravios Skl",
+        "quantity": 1
+      },
+      {
+        "item": "Union Ore",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1281,
+    "forge": [
+      {
+        "item": "Ancient Stone",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1204,
+    "forge": [
+      {
+        "item": "Felyne Fur Ruby",
+        "quantity": 1
+      },
+      {
+        "item": "FlynMealPassPlus",
+        "quantity": 3
+      },
+      {
+        "item": "Novacrystal",
+        "quantity": 1
+      },
+      {
+        "item": "Inferno Sac",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1205,
+    "forge": [
+      {
+        "item": "Felyne Fur Ruby",
+        "quantity": 1
+      },
+      {
+        "item": "FlynMealPassPlus",
+        "quantity": 3
+      },
+      {
+        "item": "Dark Stone",
+        "quantity": 2
+      },
+      {
+        "item": "Inferno Sac",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1206,
+    "forge": [
+      {
+        "item": "ShakaInheritance",
+        "quantity": 2
+      },
+      {
+        "item": "ShakalakaTreasre",
+        "quantity": 8
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 8
+      },
+      {
+        "item": "Monster Broth",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1207,
+    "forge": [
+      {
+        "item": "FireWyvrn BrnStm",
+        "quantity": 1
+      },
+      {
+        "item": "Kirin Coin",
+        "quantity": 7
+      },
+      {
+        "item": "Fire Coin",
+        "quantity": 12
+      },
+      {
+        "item": "Expert Ticket",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1209,
+    "forge": [
+      {
+        "item": "Rathian Spike+",
+        "quantity": 1
+      },
+      {
+        "item": "FireWyvrn BrnStm",
+        "quantity": 1
+      },
+      {
+        "item": "Firecell Stone",
+        "quantity": 1
+      },
+      {
+        "item": "Inferno Sac",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1210,
+    "forge": [
+      {
+        "item": "Chameleos Jewel",
+        "quantity": 1
+      },
+      {
+        "item": "Chameleos Hide+",
+        "quantity": 3
+      },
+      {
+        "item": "Chameleos Hide",
+        "quantity": 6
+      },
+      {
+        "item": "Rare Scarab",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1212,
+    "forge": [
+      {
+        "item": "Azure Rthlos Cpc",
+        "quantity": 5
+      },
+      {
+        "item": "Pnk Rathian Scl+",
+        "quantity": 5
+      },
+      {
+        "item": "Rathalos Ruby",
+        "quantity": 1
+      },
+      {
+        "item": "Rathian Spike",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1213,
+    "forge": [
+      {
+        "item": "Gld Rathian Scl+",
+        "quantity": 6
+      },
+      {
+        "item": "Gld Rathian Cpc",
+        "quantity": 5
+      },
+      {
+        "item": "Novacrystal",
+        "quantity": 2
+      },
+      {
+        "item": "FireWyvrn BrnStm",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1214,
+    "forge": [
+      {
+        "item": "Rejuvenated Beak",
+        "quantity": 3
+      },
+      {
+        "item": "Garuga Mane",
+        "quantity": 4
+      },
+      {
+        "item": "Garuga Scale+",
+        "quantity": 4
+      },
+      {
+        "item": "Blk Gravios Cpc",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1215,
+    "forge": [
+      {
+        "item": "Slvr Rthlos Cpc",
+        "quantity": 5
+      },
+      {
+        "item": "Slvr Rthlos Scl+",
+        "quantity": 6
+      },
+      {
+        "item": "Novacrystal",
+        "quantity": 2
+      },
+      {
+        "item": "FireWyvrn BrnStm",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1216,
+    "forge": [
+      {
+        "item": "Slvr Rthlos Wing",
+        "quantity": 2
+      },
+      {
+        "item": "Gld Rathian Scl+",
+        "quantity": 8
+      },
+      {
+        "item": "Rathalos Ruby",
+        "quantity": 1
+      },
+      {
+        "item": "Rathian Ruby",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1217,
+    "forge": [
+      {
+        "item": "Fatalis Webbing",
+        "quantity": 1
+      },
+      {
+        "item": "Lost Umbrella",
+        "quantity": 1
+      },
+      {
+        "item": "Fatalis Scale",
+        "quantity": 5
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 15
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1218,
+    "forge": [
+      {
+        "item": "Rathalos Ruby",
+        "quantity": 2
+      },
+      {
+        "item": "Rathalos Wing",
+        "quantity": 5
+      },
+      {
+        "item": "Rathalos Plate",
+        "quantity": 3
+      },
+      {
+        "item": "Rajang Coin",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1219,
+    "forge": [
+      {
+        "item": "Gold Rajang Pelt",
+        "quantity": 1
+      },
+      {
+        "item": "Blk Rajang Pelt",
+        "quantity": 3
+      },
+      {
+        "item": "Rajang Fang",
+        "quantity": 3
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1220,
+    "forge": [
+      {
+        "item": "Eltalite Ore",
+        "quantity": 15
+      },
+      {
+        "item": "RobustWyvernBone",
+        "quantity": 10
+      },
+      {
+        "item": "Piercing Claw",
+        "quantity": 6
+      },
+      {
+        "item": "Commendation",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1221,
+    "forge": [
+      {
+        "item": "SpecPlesiothFin+",
+        "quantity": 4
+      },
+      {
+        "item": "ThckPlesiothScl",
+        "quantity": 6
+      },
+      {
+        "item": "PlumD.HermitrShl",
+        "quantity": 4
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1222,
+    "forge": [
+      {
+        "item": "ThckGrnPlesioScl",
+        "quantity": 6
+      },
+      {
+        "item": "SpecGrnPlesioFn+",
+        "quantity": 4
+      },
+      {
+        "item": "HvyHermitaurShl",
+        "quantity": 4
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1223,
+    "forge": [
+      {
+        "item": "Gt Lobstershell",
+        "quantity": 2
+      },
+      {
+        "item": "SpecGrnPlesioFn+",
+        "quantity": 4
+      },
+      {
+        "item": "ThckPlesiothScl",
+        "quantity": 6
+      },
+      {
+        "item": "Emperor Cricket",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1224,
+    "forge": [
+      {
+        "item": "HrdCongalalaPlt+",
+        "quantity": 6
+      },
+      {
+        "item": "HrdCongalalaClw+",
+        "quantity": 3
+      },
+      {
+        "item": "Vibrant Pelt",
+        "quantity": 3
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1225,
+    "forge": [
+      {
+        "item": "E.CongalalaPelt+",
+        "quantity": 6
+      },
+      {
+        "item": "HrdE.CongaClaw",
+        "quantity": 3
+      },
+      {
+        "item": "Vibrant Comb",
+        "quantity": 2
+      },
+      {
+        "item": "Emperor Cricket",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1226,
+    "forge": [
+      {
+        "item": "KhezuHide-Cream",
+        "quantity": 4
+      },
+      {
+        "item": "KhezuSpecialCut",
+        "quantity": 1
+      },
+      {
+        "item": "SpecRubberyHide+",
+        "quantity": 4
+      },
+      {
+        "item": "Emperor Cricket",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1227,
+    "forge": [
+      {
+        "item": "Hvy Kut-Ku Shell",
+        "quantity": 5
+      },
+      {
+        "item": "Lucky Kut-Ku Ear",
+        "quantity": 3
+      },
+      {
+        "item": "Str Kut-Ku Wing",
+        "quantity": 4
+      },
+      {
+        "item": "OrangeHypnoPelt+",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1228,
+    "forge": [
+      {
+        "item": "HvyBlueKut-KuShl",
+        "quantity": 5
+      },
+      {
+        "item": "Lucky Kut-Ku Ear",
+        "quantity": 3
+      },
+      {
+        "item": "Hvy Monster Bone",
+        "quantity": 1
+      },
+      {
+        "item": "Hypno Fang",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1229,
+    "forge": [
+      {
+        "item": "ThickNargaScale",
+        "quantity": 1
+      },
+      {
+        "item": "SpecRemobraSkin+",
+        "quantity": 8
+      },
+      {
+        "item": "Big Wyvern Stone",
+        "quantity": 1
+      },
+      {
+        "item": "Hvy Monster Bone",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1230,
+    "forge": [
+      {
+        "item": "StrBasariosWing",
+        "quantity": 1
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 10
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 20
+      },
+      {
+        "item": "Mellanje Ore",
+        "quantity": 8
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1231,
+    "forge": [
+      {
+        "item": "ThckRathianScl",
+        "quantity": 6
+      },
+      {
+        "item": "HvyRathianShell",
+        "quantity": 4
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "PhantomButterfly",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1232,
+    "forge": [
+      {
+        "item": "HvyRathalosShl",
+        "quantity": 4
+      },
+      {
+        "item": "Hrd Rathalos Scl",
+        "quantity": 6
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "PhantomButterfly",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1233,
+    "forge": [
+      {
+        "item": "HrdBlangongaPlt+",
+        "quantity": 6
+      },
+      {
+        "item": "Lthr Pelagus Plt",
+        "quantity": 3
+      },
+      {
+        "item": "Massive Bone",
+        "quantity": 4
+      },
+      {
+        "item": "Piercing Claw",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1234,
+    "forge": [
+      {
+        "item": "ThckPnkRathnScl",
+        "quantity": 6
+      },
+      {
+        "item": "HvyPnkRathianShl",
+        "quantity": 4
+      },
+      {
+        "item": "Rathian Spike+",
+        "quantity": 2
+      },
+      {
+        "item": "Big Wyvern Stone",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1235,
+    "forge": [
+      {
+        "item": "HvyAzurRthlsShl",
+        "quantity": 4
+      },
+      {
+        "item": "ThckAzurRthlsScl",
+        "quantity": 6
+      },
+      {
+        "item": "FireWyvrn BrnStm",
+        "quantity": 5
+      },
+      {
+        "item": "Big Wyvern Stone",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1236,
+    "forge": [
+      {
+        "item": "ThckLavasiothScl",
+        "quantity": 6
+      },
+      {
+        "item": "SpecLavasioFin+",
+        "quantity": 4
+      },
+      {
+        "item": "TerraCeanatrClaw",
+        "quantity": 2
+      },
+      {
+        "item": "Big Wyvern Stone",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1237,
+    "forge": [
+      {
+        "item": "C.BlangongaPelt+",
+        "quantity": 6
+      },
+      {
+        "item": "Lthr Pelagus Plt",
+        "quantity": 4
+      },
+      {
+        "item": "HvyC.BlangoFang",
+        "quantity": 2
+      },
+      {
+        "item": "Massive Bone",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1238,
+    "forge": [
+      {
+        "item": "HvyGraviosShell",
+        "quantity": 6
+      },
+      {
+        "item": "HvyBasariosShell",
+        "quantity": 5
+      },
+      {
+        "item": "HvnlyGraviosShl",
+        "quantity": 1
+      },
+      {
+        "item": "PhantomButterfly",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1256,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Hvy Monster Bone",
+        "quantity": 2
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 6
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 30
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1257,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Monster Essence",
+        "quantity": 10
+      },
+      {
+        "item": "Hornetaur Crapce",
+        "quantity": 30
+      },
+      {
+        "item": "Rare Scarab",
+        "quantity": 15
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1258,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Giaprey Scale+",
+        "quantity": 20
+      },
+      {
+        "item": "Giadrome Claw+",
+        "quantity": 8
+      },
+      {
+        "item": "Giadrome Skull",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1259,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Velociprey Scle+",
+        "quantity": 20
+      },
+      {
+        "item": "Velocidrome Clw+",
+        "quantity": 8
+      },
+      {
+        "item": "Velocidrome Head",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1260,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Genprey Scale+",
+        "quantity": 20
+      },
+      {
+        "item": "Thunderbug Juice",
+        "quantity": 20
+      },
+      {
+        "item": "Gendrome Skull",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1261,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Ioprey Scale+",
+        "quantity": 20
+      },
+      {
+        "item": "Gypceros Head",
+        "quantity": 2
+      },
+      {
+        "item": "Iodrome Skull",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1262,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Cephalos Scale+",
+        "quantity": 10
+      },
+      {
+        "item": "Hvy Monster Bone",
+        "quantity": 8
+      },
+      {
+        "item": "Monster Bone+",
+        "quantity": 20
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1263,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Coral Cphlos Fin",
+        "quantity": 8
+      },
+      {
+        "item": "PlumD.HermitrShl",
+        "quantity": 8
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 20
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1264,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "SpecPlesiothFin+",
+        "quantity": 6
+      },
+      {
+        "item": "ThckPlesiothScl",
+        "quantity": 8
+      },
+      {
+        "item": "Black Pearl",
+        "quantity": 20
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1265,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "ThckGrnPlesioScl",
+        "quantity": 8
+      },
+      {
+        "item": "SpecGrnPlesioFn+",
+        "quantity": 6
+      },
+      {
+        "item": "Giant Blk Pearl",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1266,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Gt Lobstershell",
+        "quantity": 3
+      },
+      {
+        "item": "ThckGrnPlesioScl",
+        "quantity": 8
+      },
+      {
+        "item": "SpecPlesiothFin+",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1267,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Lost Umbrella",
+        "quantity": 5
+      },
+      {
+        "item": "KhezuHide-Cream",
+        "quantity": 10
+      },
+      {
+        "item": "Pale Khezu Steak",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1268,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Lost Umbrella",
+        "quantity": 5
+      },
+      {
+        "item": "StrAlluringWing",
+        "quantity": 10
+      },
+      {
+        "item": "Basarios Tears",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1269,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Vibrant Pelt",
+        "quantity": 6
+      },
+      {
+        "item": "HrdCongalalaClw+",
+        "quantity": 6
+      },
+      {
+        "item": "Mellanje Ore",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1270,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Vibrant Comb",
+        "quantity": 4
+      },
+      {
+        "item": "E.CongalalaPelt+",
+        "quantity": 8
+      },
+      {
+        "item": "Purecrystal",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1271,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "KhezuSpecialCut",
+        "quantity": 1
+      },
+      {
+        "item": "StrAlluringWing",
+        "quantity": 6
+      },
+      {
+        "item": "HrdPuGypcerosWng",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1272,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Thick Kut-Ku Scl",
+        "quantity": 10
+      },
+      {
+        "item": "RainbowTailFeath",
+        "quantity": 5
+      },
+      {
+        "item": "Big Wyvern Stone",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1273,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "ThkBlueKut-KuScl",
+        "quantity": 10
+      },
+      {
+        "item": "Hypno Claw+",
+        "quantity": 4
+      },
+      {
+        "item": "Purecrystal",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1239,
+    "forge": [
+      {
+        "item": "ShakalakaTreasr+",
+        "quantity": 2
+      },
+      {
+        "item": "ShakaInheritance",
+        "quantity": 3
+      },
+      {
+        "item": "Remobra Skull",
+        "quantity": 3
+      },
+      {
+        "item": "Monster Essence",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1240,
+    "forge": [
+      {
+        "item": "BlackNargaPelt+",
+        "quantity": 4
+      },
+      {
+        "item": "HvyNargacugaFang",
+        "quantity": 8
+      },
+      {
+        "item": "HvnlyNargaScale",
+        "quantity": 1
+      },
+      {
+        "item": "Hvy Monster Bone",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1241,
+    "forge": [
+      {
+        "item": "Azure LaoS Claw",
+        "quantity": 4
+      },
+      {
+        "item": "Warrior Coin G",
+        "quantity": 7
+      },
+      {
+        "item": "BlackBeltCoinG",
+        "quantity": 12
+      },
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1242,
+    "forge": [
+      {
+        "item": "Rathian Thorn",
+        "quantity": 1
+      },
+      {
+        "item": "StrRathalosWing",
+        "quantity": 4
+      },
+      {
+        "item": "Mellanje Ore",
+        "quantity": 5
+      },
+      {
+        "item": "Blazing Fire Sac",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1243,
+    "forge": [
+      {
+        "item": "HvyAzurRthlsShl",
+        "quantity": 3
+      },
+      {
+        "item": "ThckPnkRathnScl",
+        "quantity": 5
+      },
+      {
+        "item": "HvnlyRathalosScl",
+        "quantity": 1
+      },
+      {
+        "item": "Rathian Thorn",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1244,
+    "forge": [
+      {
+        "item": "SpecialKirinHide",
+        "quantity": 3
+      },
+      {
+        "item": "Platinum Mane",
+        "quantity": 4
+      },
+      {
+        "item": "Kirin Azure Horn",
+        "quantity": 3
+      },
+      {
+        "item": "Purecrystal",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1245,
+    "forge": [
+      {
+        "item": "ThickGarugaScale",
+        "quantity": 4
+      },
+      {
+        "item": "Rejuvenated Beak",
+        "quantity": 3
+      },
+      {
+        "item": "SilverGarugaPelt",
+        "quantity": 4
+      },
+      {
+        "item": "Hvy Monster Bone",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1246,
+    "forge": [
+      {
+        "item": "ThckGldRathnScl",
+        "quantity": 6
+      },
+      {
+        "item": "HvyGldRathianShl",
+        "quantity": 5
+      },
+      {
+        "item": "Purecrystal",
+        "quantity": 2
+      },
+      {
+        "item": "GoldRathianThorn",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1247,
+    "forge": [
+      {
+        "item": "HvySlvrRthlsShl",
+        "quantity": 5
+      },
+      {
+        "item": "ThckSlvrRthlsScl",
+        "quantity": 6
+      },
+      {
+        "item": "Purecrystal",
+        "quantity": 2
+      },
+      {
+        "item": "LthrSlvrRthlsTal",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1248,
+    "forge": [
+      {
+        "item": "HvySlvrRthlsShl",
+        "quantity": 6
+      },
+      {
+        "item": "ThckGldRathnScl",
+        "quantity": 8
+      },
+      {
+        "item": "HvnlyRathalosScl",
+        "quantity": 1
+      },
+      {
+        "item": "HvnlyRathianScl",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1249,
+    "forge": [
+      {
+        "item": "SpecChameleHide+",
+        "quantity": 3
+      },
+      {
+        "item": "HrdChameleosHorn",
+        "quantity": 2
+      },
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "BigEDragonJewel",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1250,
+    "forge": [
+      {
+        "item": "HvyBlkGraviosShl",
+        "quantity": 6
+      },
+      {
+        "item": "Gravios BrainStm",
+        "quantity": 2
+      },
+      {
+        "item": "HvnlyBlkGraviShl",
+        "quantity": 1
+      },
+      {
+        "item": "Mellanje Ore",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1251,
+    "forge": [
+      {
+        "item": "HvnlyRathalosScl",
+        "quantity": 2
+      },
+      {
+        "item": "HvySlvrRthlsShl",
+        "quantity": 6
+      },
+      {
+        "item": "Rathalos Ruby",
+        "quantity": 3
+      },
+      {
+        "item": "Expert Coin G",
+        "quantity": 7
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1252,
+    "forge": [
+      {
+        "item": "GoldRajangPelt+",
+        "quantity": 1
+      },
+      {
+        "item": "Blk Rajang Pelt+",
+        "quantity": 3
+      },
+      {
+        "item": "Hvy Rajang Fang",
+        "quantity": 3
+      },
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1253,
+    "forge": [
+      {
+        "item": "ThckWhtFatlisScl",
+        "quantity": 4
+      },
+      {
+        "item": "StrWhtFatalisWng",
+        "quantity": 2
+      },
+      {
+        "item": "Ukanlos Stone",
+        "quantity": 2
+      },
+      {
+        "item": "BigEDragonJewel",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1255,
+    "forge": [
+      {
+        "item": "StrongUkanlosFin",
+        "quantity": 3
+      },
+      {
+        "item": "Hvy Ukanlos Tail",
+        "quantity": 2
+      },
+      {
+        "item": "UkanlosUnderscl",
+        "quantity": 4
+      },
+      {
+        "item": "Ukanlos Stone",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1274,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "AncientDrgnwood",
+        "quantity": 4
+      },
+      {
+        "item": "Ancient Stone",
+        "quantity": 5
+      },
+      {
+        "item": "Blazing Fire Sac",
+        "quantity": 8
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1275,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Felyne Fur Ruby",
+        "quantity": 5
+      },
+      {
+        "item": "FlynMealPassPlus",
+        "quantity": 20
+      },
+      {
+        "item": "Blazing Fire Sac",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1276,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Felyne Fur Ruby",
+        "quantity": 5
+      },
+      {
+        "item": "BlackNargaPelt+",
+        "quantity": 4
+      },
+      {
+        "item": "Sinister Cloth",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1277,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "ShakalakaTreasr+",
+        "quantity": 3
+      },
+      {
+        "item": "ShakalakaTreasre",
+        "quantity": 20
+      },
+      {
+        "item": "Old Pickaxe",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1278,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Amezari Shell",
+        "quantity": 5
+      },
+      {
+        "item": "Lg Lobstershell",
+        "quantity": 10
+      },
+      {
+        "item": "Big Wyvern Stone",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1279,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Str Fatalis Wng",
+        "quantity": 1
+      },
+      {
+        "item": "ThckFatalisScale",
+        "quantity": 5
+      },
+      {
+        "item": "SpecRemobraSkin+",
+        "quantity": 20
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 337,
+    "forge": [
+      {
+        "item": "Iron Ore",
+        "quantity": 1
+      },
+      {
+        "item": "Disk Stone",
+        "quantity": 1
+      },
+      {
+        "item": "Normal Ticket",
+        "quantity": 1
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Iron Ore",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 369,
+    "forge": [
+      {
+        "item": "Giaprey Scale",
+        "quantity": 4
+      },
+      {
+        "item": "Giaprey Hide",
+        "quantity": 4
+      },
+      {
+        "item": "Sharp Claw",
+        "quantity": 2
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Sharp Claw",
+        "quantity": 1
+      },
+      {
+        "item": "Giaprey Hide",
+        "quantity": 3
+      },
+      {
+        "item": "Sm Monster Bone",
+        "quantity": 1
+      },
+      {
+        "item": "Giadrome Hide",
+        "quantity": 1
+      },
+      {
+        "item": "Giadrome Claw",
+        "quantity": 4
+      },
+      {
+        "item": "Carpenterbug",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "weapon_id": 299,
+    "forge": [
+      {
+        "item": "Sm Monster Bone",
+        "quantity": 2
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Sm Monster Bone",
+        "quantity": 1
+      },
+      {
+        "item": "Brute Bone",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 301,
+    "forge": [
+      {
+        "item": "Hard Ticket",
+        "quantity": 1
+      },
+      {
+        "item": "Sm Monster Bone",
+        "quantity": 1
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Med Monster Bone",
+        "quantity": 1
+      },
+      {
+        "item": "Sm Monster Bone",
+        "quantity": 2
+      },
+      {
+        "item": "Sm Bone Husk",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "weapon_id": 380,
+    "forge": [
+      {
+        "item": "Small Ruststone",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 340,
+    "forge": [
+      {
+        "item": "Velocidrome Claw",
+        "quantity": 6
+      },
+      {
+        "item": "Velocidrome Head",
+        "quantity": 1
+      },
+      {
+        "item": "Med Monster Bone",
+        "quantity": 4
+      },
+      {
+        "item": "Conga Pelt",
+        "quantity": 6
+      },
+      {
+        "item": "Plus Class Tcket",
+        "quantity": 1
+      },
+      {
+        "item": "Striped Skin",
+        "quantity": 1
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Velocidrome Claw",
+        "quantity": 4
+      },
+      {
+        "item": "Velocidrome Hide",
+        "quantity": 2
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 3
+      },
+      {
+        "item": "Velocidrome Head",
+        "quantity": 2
+      },
+      {
+        "item": "Striped Skin",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "weapon_id": 362,
+    "forge": [
+      {
+        "item": "FlynMealPassReg",
+        "quantity": 2
+      },
+      {
+        "item": "Iron Ore",
+        "quantity": 3
+      },
+      {
+        "item": "Antiseptic Stone",
+        "quantity": 1
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "FlynMealPassReg",
+        "quantity": 1
+      },
+      {
+        "item": "Iron Ore",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 365,
+    "forge": [
+      {
+        "item": "Ice Crystal",
+        "quantity": 8
+      },
+      {
+        "item": "Iron Ore",
+        "quantity": 8
+      },
+      {
+        "item": "Giaprey Scale",
+        "quantity": 5
+      },
+      {
+        "item": "Knife Mackerel",
+        "quantity": 3
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Ice Crystal",
+        "quantity": 5
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 2
+      },
+      {
+        "item": "Blango Pelt",
+        "quantity": 3
+      },
+      {
+        "item": "Blangonga Fang",
+        "quantity": 2
+      },
+      {
+        "item": "Wht Monoblos Shl",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 302,
+    "forge": [
+      {
+        "item": "Blood Red Horn",
+        "quantity": 1
+      },
+      {
+        "item": "Hermitaur Shell",
+        "quantity": 3
+      },
+      {
+        "item": "Piscine Fang",
+        "quantity": 3
+      },
+      {
+        "item": "Med Monster Bone",
+        "quantity": 2
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Blood Red Horn",
+        "quantity": 1
+      },
+      {
+        "item": "Lg Monster Bone",
+        "quantity": 2
+      },
+      {
+        "item": "Mega Demondrug",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 387,
+    "forge": [
+      {
+        "item": "Pawprint Stamp",
+        "quantity": 2
+      },
+      {
+        "item": "Barrel Lid",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 373,
+    "forge": [
+      {
+        "item": "Iodrome Hide",
+        "quantity": 3
+      },
+      {
+        "item": "Ioprey Scale",
+        "quantity": 7
+      },
+      {
+        "item": "Poison Sac",
+        "quantity": 4
+      },
+      {
+        "item": "Sm Monster Bone",
+        "quantity": 4
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Ioprey Hide",
+        "quantity": 5
+      },
+      {
+        "item": "Ioprey Fang",
+        "quantity": 15
+      },
+      {
+        "item": "Brute Bone",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 327,
+    "forge": [
+      {
+        "item": "FireWyvern Fluid",
+        "quantity": 4
+      },
+      {
+        "item": "Flame Sac",
+        "quantity": 2
+      },
+      {
+        "item": "Wyvern Fang",
+        "quantity": 2
+      },
+      {
+        "item": "Sm Monster Bone",
+        "quantity": 10
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "FireWyvern Fluid",
+        "quantity": 2
+      },
+      {
+        "item": "Med Monster Bone",
+        "quantity": 2
+      },
+      {
+        "item": "Flame Sac",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 304,
+    "forge": [
+      {
+        "item": "Hard Ticket",
+        "quantity": 1
+      },
+      {
+        "item": "Twisted Horn",
+        "quantity": 1
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Twisted Horn",
+        "quantity": 1
+      },
+      {
+        "item": "Wyvern Fang",
+        "quantity": 10
+      },
+      {
+        "item": "Diablos Shell",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "weapon_id": 391,
+    "forge": [
+      {
+        "item": "ShakalakaTreasre",
+        "quantity": 6
+      },
+      {
+        "item": "Poison Sac",
+        "quantity": 12
+      },
+      {
+        "item": "Pawprint Stamp",
+        "quantity": 2
+      },
+      {
+        "item": "Commendation",
+        "quantity": 1
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Iron Ore",
+        "quantity": 10
+      },
+      {
+        "item": "Poison Sac",
+        "quantity": 8
+      },
+      {
+        "item": "ShakalakaTreasre",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "weapon_id": 400,
+    "forge": [
+      {
+        "item": "Hero of Kkto Bio",
+        "quantity": 1
+      },
+      {
+        "item": "Black Pearl",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 402,
+    "forge": [
+      {
+        "item": "Hero of JumboBio",
+        "quantity": 1
+      },
+      {
+        "item": "Lightcrystal",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 397,
+    "forge": [
+      {
+        "item": "Blackbelt Ticket",
+        "quantity": 8
+      },
+      {
+        "item": "Yian Garuga Coin",
+        "quantity": 10
+      },
+      {
+        "item": "Khezu Coin",
+        "quantity": 10
+      },
+      {
+        "item": "Cephadrome Coin",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 353,
+    "forge": [
+      {
+        "item": "Garuga Tail",
+        "quantity": 1
+      },
+      {
+        "item": "Garuga Wing",
+        "quantity": 2
+      },
+      {
+        "item": "Garuga Scale",
+        "quantity": 3
+      },
+      {
+        "item": "Med Monster Bone",
+        "quantity": 3
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Garuga Ear",
+        "quantity": 2
+      },
+      {
+        "item": "Garuga Wing",
+        "quantity": 1
+      },
+      {
+        "item": "Garuga Scale",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "weapon_id": 395,
+    "forge": [
+      {
+        "item": "Daora Webbing",
+        "quantity": 4
+      },
+      {
+        "item": "ChameleosWebbing",
+        "quantity": 4
+      },
+      {
+        "item": "Fire Drgn Webbng",
+        "quantity": 4
+      },
+      {
+        "item": "Remobra Skin",
+        "quantity": 10
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Daora Horn",
+        "quantity": 3
+      },
+      {
+        "item": "Chameleos Horn",
+        "quantity": 3
+      },
+      {
+        "item": "Lunastra Horn",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 319,
+    "forge": [
+      {
+        "item": "Kirin Horn",
+        "quantity": 1
+      },
+      {
+        "item": "Kirin Mane",
+        "quantity": 5
+      },
+      {
+        "item": "Wyvern Fang",
+        "quantity": 8
+      },
+      {
+        "item": "Rubbery Hide",
+        "quantity": 4
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Kirin Horn",
+        "quantity": 1
+      },
+      {
+        "item": "Kirin Mane",
+        "quantity": 3
+      },
+      {
+        "item": "Pur Rubbery Hide",
+        "quantity": 2
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "weapon_id": 417,
+    "forge": [
+      {
+        "item": "Dark Stone",
+        "quantity": 1
+      },
+      {
+        "item": "Dark Piece",
+        "quantity": 4
+      },
+      {
+        "item": "Pokke Ticket",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 409,
+    "forge": [
+      {
+        "item": "Tigrex Claw",
+        "quantity": 4
+      },
+      {
+        "item": "Tigrex Fang",
+        "quantity": 4
+      },
+      {
+        "item": "Tigrex Shell",
+        "quantity": 3
+      },
+      {
+        "item": "Pokke Ticket",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 343,
+    "forge": [
+      {
+        "item": "Carbalite Ore",
+        "quantity": 4
+      },
+      {
+        "item": "Iron Ore",
+        "quantity": 40
+      },
+      {
+        "item": "Disk Stone",
+        "quantity": 40
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Carbalite Ore",
+        "quantity": 2
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 10
+      },
+      {
+        "item": "Union Ore",
+        "quantity": 8
+      },
+      {
+        "item": "Basarios Tears",
+        "quantity": 1
+      },
+      {
+        "item": "Rathian Plate",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 308,
+    "forge": [
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 4
+      },
+      {
+        "item": "Lg Monster Bone",
+        "quantity": 12
+      },
+      {
+        "item": "Brute Bone",
+        "quantity": 30
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 2
+      },
+      {
+        "item": "Monster Bone+",
+        "quantity": 4
+      },
+      {
+        "item": "Sm Bone Husk",
+        "quantity": 50
+      },
+      {
+        "item": "Stout Bone",
+        "quantity": 4
+      },
+      {
+        "item": "Rare Scarab",
+        "quantity": 10
+      },
+      {
+        "item": "Eldr Dragon Bone",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 316,
+    "forge": [
+      {
+        "item": "OrangeHypnoPelt",
+        "quantity": 5
+      },
+      {
+        "item": "Top-GrdHypnoClaw",
+        "quantity": 6
+      },
+      {
+        "item": "Sleep Sac",
+        "quantity": 4
+      },
+      {
+        "item": "Novacrystal",
+        "quantity": 1
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "OrangeHypnoPelt",
+        "quantity": 3
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 4
+      },
+      {
+        "item": "Velocidrome Clw+",
+        "quantity": 5
+      },
+      {
+        "item": "Sleep Sac",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 310,
+    "forge": [
+      {
+        "item": "Rajang Horn",
+        "quantity": 2
+      },
+      {
+        "item": "Rajang Claw",
+        "quantity": 2
+      },
+      {
+        "item": "Blk Rajang Pelt",
+        "quantity": 4
+      },
+      {
+        "item": "Commendation",
+        "quantity": 4
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Rajang Horn",
+        "quantity": 1
+      },
+      {
+        "item": "Blk Rajang Pelt",
+        "quantity": 5
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "weapon_id": 404,
+    "forge": [
+      {
+        "item": "Ceanataur Claw+",
+        "quantity": 3
+      },
+      {
+        "item": "Hermitaur Claw+",
+        "quantity": 3
+      },
+      {
+        "item": "Ceanataur Carpce",
+        "quantity": 5
+      },
+      {
+        "item": "Hermitaur Carpce",
+        "quantity": 5
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Ceanataur Claw+",
+        "quantity": 1
+      },
+      {
+        "item": "Hermitaur Claw+",
+        "quantity": 1
+      },
+      {
+        "item": "Hermitaur Carpce",
+        "quantity": 3
+      },
+      {
+        "item": "Black Pearl",
+        "quantity": 3
+      },
+      {
+        "item": "HrdHermitaurClaw",
+        "quantity": 2
+      },
+      {
+        "item": "HvyHermitaurShl",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "weapon_id": 412,
+    "forge": [
+      {
+        "item": "Narga Scale+",
+        "quantity": 6
+      },
+      {
+        "item": "Black Narga Pelt",
+        "quantity": 8
+      },
+      {
+        "item": "Narga Tail Spike",
+        "quantity": 8
+      },
+      {
+        "item": "Narga Brain Stem",
+        "quantity": 1
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Black Narga Pelt",
+        "quantity": 6
+      },
+      {
+        "item": "Narga Scale+",
+        "quantity": 4
+      },
+      {
+        "item": "Narga Tail Spike",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "weapon_id": 414,
+    "forge": [
+      {
+        "item": "Azure LaoS Horn",
+        "quantity": 2
+      },
+      {
+        "item": "Azure LaoS Shell",
+        "quantity": 5
+      },
+      {
+        "item": "Lao-Shan's Claw",
+        "quantity": 4
+      },
+      {
+        "item": "Commendation",
+        "quantity": 1
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Azure LaoS Horn",
+        "quantity": 1
+      },
+      {
+        "item": "Azure LaoS Shell",
+        "quantity": 3
+      },
+      {
+        "item": "Lao-Shan Scale+",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "weapon_id": 422,
+    "forge": [
+      {
+        "item": "Pokke Ticket+",
+        "quantity": 2
+      },
+      {
+        "item": "Gld Rathian Cpc",
+        "quantity": 5
+      },
+      {
+        "item": "Slvr Rthlos Cpc",
+        "quantity": 5
+      },
+      {
+        "item": "Tigrex Carapace",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 347,
+    "forge": [
+      {
+        "item": "Eltalite Ore",
+        "quantity": 10
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 20
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 30
+      },
+      {
+        "item": "RobustWyvernBone",
+        "quantity": 10
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Eltalite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "Union Ore",
+        "quantity": 10
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 15
+      }
+    ]
+  },
+  {
+    "weapon_id": 349,
+    "forge": [
+      {
+        "item": "Lightning Sac",
+        "quantity": 4
+      },
+      {
+        "item": "SpecRubberyHide+",
+        "quantity": 6
+      },
+      {
+        "item": "Kirin Azure Horn",
+        "quantity": 3
+      },
+      {
+        "item": "Kirin Hide+",
+        "quantity": 3
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Lightning Sac",
+        "quantity": 2
+      },
+      {
+        "item": "SpecRubberyHide+",
+        "quantity": 3
+      },
+      {
+        "item": "Kirin Azure Horn",
+        "quantity": 1
+      },
+      {
+        "item": "Kirin Hide",
+        "quantity": 5
+      },
+      {
+        "item": "SpecialKirinHide",
+        "quantity": 3
+      },
+      {
+        "item": "KhezuSpecialCut",
+        "quantity": 1
+      },
+      {
+        "item": "HardGypcerosHead",
+        "quantity": 1
+      },
+      {
+        "item": "Purecrystal",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 378,
+    "forge": [
+      {
+        "item": "Rathian Thorn",
+        "quantity": 2
+      },
+      {
+        "item": "HvyPnkRathianShl",
+        "quantity": 6
+      },
+      {
+        "item": "DeadlyPoisonSac",
+        "quantity": 5
+      },
+      {
+        "item": "Rathian Ruby",
+        "quantity": 1
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Rathian Thorn",
+        "quantity": 1
+      },
+      {
+        "item": "ThckPnkRathnScl",
+        "quantity": 5
+      },
+      {
+        "item": "DeadlyPoisonSac",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 317,
+    "forge": [
+      {
+        "item": "OrangeHypnoPelt+",
+        "quantity": 5
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 10
+      },
+      {
+        "item": "Hypno Bezoar+",
+        "quantity": 1
+      },
+      {
+        "item": "Lg Pelagus Fang",
+        "quantity": 2
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "OrangeHypnoPelt+",
+        "quantity": 3
+      },
+      {
+        "item": "Hypno Claw+",
+        "quantity": 2
+      },
+      {
+        "item": "Hypno Bezoar",
+        "quantity": 1
+      },
+      {
+        "item": "HrdCongalalaPlt+",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 313,
+    "forge": [
+      {
+        "item": "Eltalite Ore",
+        "quantity": 8
+      },
+      {
+        "item": "RobustWyvernBone",
+        "quantity": 4
+      },
+      {
+        "item": "Monster Essence",
+        "quantity": 2
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 15
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Eltalite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "RobustWyvernBone",
+        "quantity": 3
+      },
+      {
+        "item": "Eldr Dragon Bone",
+        "quantity": 5
+      },
+      {
+        "item": "Lg Pelagus Fang",
+        "quantity": 2
+      },
+      {
+        "item": "HvyC.BlangoFang",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 423,
+    "forge": [
+      {
+        "item": "SpecPuppetTicket",
+        "quantity": 5
+      },
+      {
+        "item": "Commendation S",
+        "quantity": 2
+      },
+      {
+        "item": "AncientDrgnwood",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 425,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Iron Ore",
+        "quantity": 40
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 20
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 426,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Sm Monster Bone",
+        "quantity": 20
+      },
+      {
+        "item": "Stout Bone",
+        "quantity": 10
+      },
+      {
+        "item": "RobustWyvernBone",
+        "quantity": 8
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 427,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Small Ruststone",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 428,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Giaprey Scale+",
+        "quantity": 10
+      },
+      {
+        "item": "Giaprey Hide",
+        "quantity": 50
+      },
+      {
+        "item": "RobustWyvernBone",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 429,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Genprey Scale+",
+        "quantity": 10
+      },
+      {
+        "item": "Genprey Fang",
+        "quantity": 30
+      },
+      {
+        "item": "Thunderbug Jelly",
+        "quantity": 8
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 430,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Ioprey Scale+",
+        "quantity": 10
+      },
+      {
+        "item": "Ioprey Fang",
+        "quantity": 30
+      },
+      {
+        "item": "DeadlyPoisonSac",
+        "quantity": 8
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 431,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Velocidrome Clw+",
+        "quantity": 10
+      },
+      {
+        "item": "Velocidrome Hide",
+        "quantity": 15
+      },
+      {
+        "item": "RobustWyvernBone",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 432,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "SpecRubberyHide+",
+        "quantity": 5
+      },
+      {
+        "item": "Med Monster Bone",
+        "quantity": 20
+      },
+      {
+        "item": "Toxin Sac",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 433,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "SpecRubberyHide+",
+        "quantity": 5
+      },
+      {
+        "item": "Eldr Dragon Bone",
+        "quantity": 10
+      },
+      {
+        "item": "Lightning Sac",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 434,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "SpecPlesiothFin+",
+        "quantity": 5
+      },
+      {
+        "item": "Cephalos Fin+",
+        "quantity": 5
+      },
+      {
+        "item": "Sleepyfish",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 435,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Top-GrdRedHorn",
+        "quantity": 2
+      },
+      {
+        "item": "MonoblosThoracic",
+        "quantity": 4
+      },
+      {
+        "item": "Hvy Monster Bone",
+        "quantity": 8
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 436,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "StoutWarpedHorn",
+        "quantity": 2
+      },
+      {
+        "item": "HvyDiablosSpine",
+        "quantity": 3
+      },
+      {
+        "item": "Blos Fang",
+        "quantity": 15
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 437,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Kirin Horn",
+        "quantity": 3
+      },
+      {
+        "item": "Kirin Mane",
+        "quantity": 15
+      },
+      {
+        "item": "SpecRubberyHide+",
+        "quantity": 5
+      },
+      {
+        "item": "Platinum Mane",
+        "quantity": 3
+      },
+      {
+        "item": "Rubbery Hide",
+        "quantity": 20
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 439,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "HrdPuGypcerosWng",
+        "quantity": 5
+      },
+      {
+        "item": "Thunder Sac",
+        "quantity": 10
+      },
+      {
+        "item": "KhezuSpecialCut",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 440,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "FireWyvern Fluid",
+        "quantity": 20
+      },
+      {
+        "item": "Hrd Rathalos Scl",
+        "quantity": 5
+      },
+      {
+        "item": "Rathalos Ruby",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 441,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Pawprint Stamp",
+        "quantity": 10
+      },
+      {
+        "item": "Barrel Lid",
+        "quantity": 5
+      },
+      {
+        "item": "Thunderbug Jelly",
+        "quantity": 15
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 442,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Sm Ancient Stone",
+        "quantity": 3
+      },
+      {
+        "item": "ElderDragonBlood",
+        "quantity": 10
+      },
+      {
+        "item": "Big Wyvern Stone",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 443,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "HvyGraviosShell",
+        "quantity": 8
+      },
+      {
+        "item": "Rathian Plate",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 444,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Brute Bone",
+        "quantity": 50
+      },
+      {
+        "item": "Monster Bone+",
+        "quantity": 10
+      },
+      {
+        "item": "Massive Bone",
+        "quantity": 8
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 445,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Velociprey Scle+",
+        "quantity": 10
+      },
+      {
+        "item": "Velociprey Fang",
+        "quantity": 30
+      },
+      {
+        "item": "RobustWyvernBone",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 446,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "FlynMealPassPlus",
+        "quantity": 10
+      },
+      {
+        "item": "Purecrystal",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 447,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Ice Crystal",
+        "quantity": 20
+      },
+      {
+        "item": "Purecrystal",
+        "quantity": 2
+      },
+      {
+        "item": "HvyBlangongaFang",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 448,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Pur Gypceros Wng",
+        "quantity": 10
+      },
+      {
+        "item": "HardGypcerosHead",
+        "quantity": 1
+      },
+      {
+        "item": "Poison Sac",
+        "quantity": 20
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 449,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "SpecGrnPlesioFn+",
+        "quantity": 5
+      },
+      {
+        "item": "Coral Cphlos Fin",
+        "quantity": 5
+      },
+      {
+        "item": "Coma Sac",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 413,
+    "forge": [
+      {
+        "item": "ThickNargaScale",
+        "quantity": 6
+      },
+      {
+        "item": "HvyNargaTailSpik",
+        "quantity": 10
+      },
+      {
+        "item": "StrNargaCttngWng",
+        "quantity": 4
+      },
+      {
+        "item": "HvnlyNargaScale",
+        "quantity": 1
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "ThickNargaScale",
+        "quantity": 4
+      },
+      {
+        "item": "HvyNargaTailSpik",
+        "quantity": 8
+      },
+      {
+        "item": "BlackNargaPelt+",
+        "quantity": 4
+      },
+      {
+        "item": "Narga Brain Stem",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 424,
+    "forge": [
+      {
+        "item": "StrongUkanlosFin",
+        "quantity": 2
+      },
+      {
+        "item": "UkanlosDiggngClw",
+        "quantity": 3
+      },
+      {
+        "item": "HvyUkanlosShell",
+        "quantity": 5
+      },
+      {
+        "item": "Ukanlos Stone",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 450,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "StrRathalosWing",
+        "quantity": 2
+      },
+      {
+        "item": "HvyRathalosShl",
+        "quantity": 5
+      },
+      {
+        "item": "FireWyvrn Marrow",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 451,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Hrd Rathalos Scl",
+        "quantity": 8
+      },
+      {
+        "item": "Blazing Fire Sac",
+        "quantity": 5
+      },
+      {
+        "item": "Rathalos Plate",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 452,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Rathian Carapace",
+        "quantity": 8
+      },
+      {
+        "item": "Rathian Spike+",
+        "quantity": 5
+      },
+      {
+        "item": "DeadlyPoisonSac",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 453,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Hard Daora Horn",
+        "quantity": 2
+      },
+      {
+        "item": "SpecRemobraSkin+",
+        "quantity": 10
+      },
+      {
+        "item": "Commendation",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 454,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Kirin Azure Horn",
+        "quantity": 3
+      },
+      {
+        "item": "SpecialKirinHide",
+        "quantity": 5
+      },
+      {
+        "item": "HrdPuGypcerosWng",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 455,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "FlynMealPassPlus",
+        "quantity": 10
+      },
+      {
+        "item": "Felyne Fur Ruby",
+        "quantity": 5
+      },
+      {
+        "item": "YamaTsukamiFluid",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 456,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "ShakaInheritance",
+        "quantity": 10
+      },
+      {
+        "item": "ShakalakaTreasr+",
+        "quantity": 3
+      },
+      {
+        "item": "DeadlyPoisonSac",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 457,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Commendation G",
+        "quantity": 5
+      },
+      {
+        "item": "Monoblos Heart",
+        "quantity": 3
+      },
+      {
+        "item": "Ukanlos Stone",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 458,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "Commendation G",
+        "quantity": 5
+      },
+      {
+        "item": "Purecrystal",
+        "quantity": 5
+      },
+      {
+        "item": "Lao-ShanHvnlyScl",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 459,
+    "forge": [
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      },
+      {
+        "item": "HvyGldRathianShl",
+        "quantity": 10
+      },
+      {
+        "item": "HvySlvrRthlsShl",
+        "quantity": 10
+      },
+      {
+        "item": "Big Wyvern Stone",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 339,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Machalite Ore",
+        "quantity": 1
+      },
+      {
+        "item": "Iron Ore",
+        "quantity": 3
+      },
+      {
+        "item": "Earth Crystal",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 381,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Earth Crystal",
+        "quantity": 20
+      }
+    ]
+  },
+  {
+    "weapon_id": 371,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Genprey Hide",
+        "quantity": 5
+      },
+      {
+        "item": "Genprey Fang",
+        "quantity": 15
+      },
+      {
+        "item": "Sm Monster Bone",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 356,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Rubbery Hide",
+        "quantity": 4
+      },
+      {
+        "item": "Lg Monster Bone",
+        "quantity": 3
+      },
+      {
+        "item": "Electro Sac",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 359,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Rubbery Hide",
+        "quantity": 4
+      },
+      {
+        "item": "Med Monster Bone",
+        "quantity": 3
+      },
+      {
+        "item": "Poison Sac",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "weapon_id": 303,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Blood Red Horn",
+        "quantity": 2
+      },
+      {
+        "item": "Monoblos Spine",
+        "quantity": 2
+      },
+      {
+        "item": "Monoblos Shell",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 323,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Plesioth Fin",
+        "quantity": 2
+      },
+      {
+        "item": "Cephalos Fin",
+        "quantity": 2
+      },
+      {
+        "item": "Sleep Herb",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "weapon_id": 389,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Pawprint Stamp",
+        "quantity": 3
+      },
+      {
+        "item": "Felvine",
+        "quantity": 10
+      },
+      {
+        "item": "FlynMealPassPlus",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 357,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Rubbery Hide",
+        "quantity": 6
+      },
+      {
+        "item": "Eldr Dragon Bone",
+        "quantity": 2
+      },
+      {
+        "item": "Electro Sac",
+        "quantity": 4
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 360,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Pur Rubbery Hide",
+        "quantity": 5
+      },
+      {
+        "item": "Monster Bone+",
+        "quantity": 3
+      },
+      {
+        "item": "Gypceros Head",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 363,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "FlynMealPassReg",
+        "quantity": 3
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 3
+      },
+      {
+        "item": "Pokke Ticket",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 364,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "FlynMealPassPlus",
+        "quantity": 3
+      },
+      {
+        "item": "FlynMealPassReg",
+        "quantity": 5
+      },
+      {
+        "item": "Novacrystal",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 372,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Gendrome Hide",
+        "quantity": 3
+      },
+      {
+        "item": "Paralysis Sac",
+        "quantity": 5
+      },
+      {
+        "item": "Thunderbug Juice",
+        "quantity": 2
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 374,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Dragonite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "Iodrome Hide",
+        "quantity": 5
+      },
+      {
+        "item": "Iodrome Skull",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 324,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Plesioth Fin",
+        "quantity": 5
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "Sleepyfish",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "weapon_id": 328,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Rathalos Shell",
+        "quantity": 5
+      },
+      {
+        "item": "Rathalos Scale",
+        "quantity": 3
+      },
+      {
+        "item": "FireWyvrn Marrow",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 388,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Pawprint Stamp",
+        "quantity": 3
+      },
+      {
+        "item": "Felvine",
+        "quantity": 10
+      },
+      {
+        "item": "FlynMealPassReg",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 358,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Pur Rubbery Hide",
+        "quantity": 8
+      },
+      {
+        "item": "Monster Bone+",
+        "quantity": 3
+      },
+      {
+        "item": "Pale Bone",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 375,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Rathian Spike",
+        "quantity": 1
+      },
+      {
+        "item": "Rathian Scale",
+        "quantity": 4
+      },
+      {
+        "item": "Poison Sac",
+        "quantity": 5
+      },
+      {
+        "item": "Rathian Spike+",
+        "quantity": 1
+      },
+      {
+        "item": "Rathian Scale+",
+        "quantity": 5
+      },
+      {
+        "item": "Rathian Plate",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 305,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Majestic Horn",
+        "quantity": 1
+      },
+      {
+        "item": "Blos Fang",
+        "quantity": 10
+      },
+      {
+        "item": "Diablos Spine",
+        "quantity": 7
+      }
+    ]
+  },
+  {
+    "weapon_id": 325,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Grn Plesioth Fin",
+        "quantity": 5
+      },
+      {
+        "item": "Plesioth Fin",
+        "quantity": 5
+      },
+      {
+        "item": "Sleep Sac",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "weapon_id": 329,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Rathalos Shell",
+        "quantity": 10
+      },
+      {
+        "item": "Rathalos Webbing",
+        "quantity": 10
+      },
+      {
+        "item": "Fire Dragon Scl",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "weapon_id": 330,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Rathalos Scale",
+        "quantity": 8
+      },
+      {
+        "item": "Flame Sac",
+        "quantity": 10
+      },
+      {
+        "item": "Rathalos Plate",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 334,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Gravios Shell",
+        "quantity": 4
+      },
+      {
+        "item": "Blk Gravios Shl",
+        "quantity": 4
+      },
+      {
+        "item": "Firestone",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "weapon_id": 401,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Pokke Ticket",
+        "quantity": 1
+      },
+      {
+        "item": "Monoblos Heart",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 403,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Pokke Ticket",
+        "quantity": 1
+      },
+      {
+        "item": "Eldr Dragon Bone",
+        "quantity": 3
+      },
+      {
+        "item": "Lao-Shan's Scale",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 382,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Earth Crystal",
+        "quantity": 40
+      },
+      {
+        "item": "ElderDragonBlood",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 383,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Daora Claw",
+        "quantity": 2
+      },
+      {
+        "item": "Daora Shell",
+        "quantity": 2
+      },
+      {
+        "item": "DaoraDragonScale",
+        "quantity": 3
+      },
+      {
+        "item": "Daora Horn",
+        "quantity": 2
+      },
+      {
+        "item": "Daora Tail",
+        "quantity": 3
+      },
+      {
+        "item": "ElderDragonBlood",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 342,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Velociprey Hide+",
+        "quantity": 15
+      },
+      {
+        "item": "Velocidrome Clw+",
+        "quantity": 8
+      },
+      {
+        "item": "Wyvern Stone",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 351,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Velociprey Hide+",
+        "quantity": 10
+      },
+      {
+        "item": "Velociprey Fang",
+        "quantity": 30
+      },
+      {
+        "item": "Velocidrome Head",
+        "quantity": 5
+      },
+      {
+        "item": "Union Ore",
+        "quantity": 10
+      },
+      {
+        "item": "Velocidrome Clw+",
+        "quantity": 5
+      },
+      {
+        "item": "Velociprey Scle+",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "weapon_id": 361,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Pur Gypceros Wng",
+        "quantity": 7
+      },
+      {
+        "item": "Gypceros Head",
+        "quantity": 3
+      },
+      {
+        "item": "Toxin Sac",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "weapon_id": 367,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Ice Crystal",
+        "quantity": 20
+      },
+      {
+        "item": "Blangonga Fang+",
+        "quantity": 2
+      },
+      {
+        "item": "Blango Pelt+",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "weapon_id": 390,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "FlynMealPassPlus",
+        "quantity": 5
+      },
+      {
+        "item": "Gastronome Tuna",
+        "quantity": 5
+      },
+      {
+        "item": "Felyne Fur Ruby",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 392,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "ShakaInheritance",
+        "quantity": 3
+      },
+      {
+        "item": "ShakalakaTreasre",
+        "quantity": 8
+      },
+      {
+        "item": "Toxin Sac",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "weapon_id": 345,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Gravios BrainStm",
+        "quantity": 1
+      },
+      {
+        "item": "Ceanataur Claw+",
+        "quantity": 1
+      },
+      {
+        "item": "Rathian Ruby",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 354,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Long Garuga Ear",
+        "quantity": 2
+      },
+      {
+        "item": "Garuga Wing",
+        "quantity": 4
+      },
+      {
+        "item": "Garuga Scale+",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "weapon_id": 377,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Rathian Carapace",
+        "quantity": 5
+      },
+      {
+        "item": "Rathian Ruby",
+        "quantity": 1
+      },
+      {
+        "item": "Chameleos Spike",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 306,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "TwstBlkBlosHrn",
+        "quantity": 3
+      },
+      {
+        "item": "Blk Blos Thracic",
+        "quantity": 3
+      },
+      {
+        "item": "Black Blos Cpc",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "weapon_id": 321,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Kirin Thndr Tail",
+        "quantity": 2
+      },
+      {
+        "item": "Pur Gypceros Wng",
+        "quantity": 3
+      },
+      {
+        "item": "Novacrystal",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 326,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Grn Plsioth Fin+",
+        "quantity": 4
+      },
+      {
+        "item": "Plesioth Fin+",
+        "quantity": 4
+      },
+      {
+        "item": "Coral Cphlos Fin",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 335,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Gravios Carapace",
+        "quantity": 6
+      },
+      {
+        "item": "Blk Gravios Cpc",
+        "quantity": 6
+      },
+      {
+        "item": "Gravios BrainStm",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 410,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Tigrex Claw+",
+        "quantity": 4
+      },
+      {
+        "item": "Tigrex Claw",
+        "quantity": 10
+      },
+      {
+        "item": "Tigrex Carapace",
+        "quantity": 3
+      },
+      {
+        "item": "Hard Tigrex Claw",
+        "quantity": 4
+      },
+      {
+        "item": "Hvy Tigrex Fang",
+        "quantity": 4
+      },
+      {
+        "item": "Hvy Tigrex Shell",
+        "quantity": 2
+      },
+      {
+        "item": "HvnlyTigrexScale",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 396,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Lao-Shan's Horn",
+        "quantity": 3
+      },
+      {
+        "item": "Teostra Horn",
+        "quantity": 3
+      },
+      {
+        "item": "Pokke Ticket+",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 311,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Rajang Fang",
+        "quantity": 4
+      },
+      {
+        "item": "Gold Rajang Pelt",
+        "quantity": 1
+      },
+      {
+        "item": "Union Ore",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "weapon_id": 322,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Kirin Azure Horn",
+        "quantity": 3
+      },
+      {
+        "item": "Kirin Hide+",
+        "quantity": 4
+      },
+      {
+        "item": "Kirin Thndr Tail",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "weapon_id": 331,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Gld Rathian Scl+",
+        "quantity": 10
+      },
+      {
+        "item": "Gld Rathian Cpc",
+        "quantity": 8
+      },
+      {
+        "item": "Rathian Ruby",
+        "quantity": 1
+      },
+      {
+        "item": "ThckRathianScl",
+        "quantity": 8
+      },
+      {
+        "item": "Rathian Thorn",
+        "quantity": 1
+      },
+      {
+        "item": "Blazing Fire Sac",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 418,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Fatalis Horn",
+        "quantity": 3
+      },
+      {
+        "item": "Fatalis Scale",
+        "quantity": 7
+      },
+      {
+        "item": "Chameleos Jewel",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 420,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Fatalis CrmsnHrn",
+        "quantity": 2
+      },
+      {
+        "item": "Fatalis CrmsnScl",
+        "quantity": 6
+      },
+      {
+        "item": "Daora Jewel",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 415,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Azure LaoS Horn",
+        "quantity": 2
+      },
+      {
+        "item": "Lao-Shan's Ruby",
+        "quantity": 1
+      },
+      {
+        "item": "Gaoren Thoracic",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "weapon_id": 385,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Daora Carapace",
+        "quantity": 4
+      },
+      {
+        "item": "DaoraDragonScal+",
+        "quantity": 5
+      },
+      {
+        "item": "Daora Jewel",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 398,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Expert Ticket",
+        "quantity": 15
+      },
+      {
+        "item": "Fire Coin",
+        "quantity": 10
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "weapon_id": 346,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "StrBasariosWing",
+        "quantity": 1
+      },
+      {
+        "item": "HrdCeanataurClaw",
+        "quantity": 3
+      },
+      {
+        "item": "HvnlyRathianScl",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 348,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Mellanje Ore",
+        "quantity": 8
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 10
+      },
+      {
+        "item": "PhantomButterfly",
+        "quantity": 5
+      },
+      {
+        "item": "Monster Essence",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 355,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Long Garuga Ear",
+        "quantity": 4
+      },
+      {
+        "item": "Str Garuga Wing",
+        "quantity": 2
+      },
+      {
+        "item": "Rejuvenated Beak",
+        "quantity": 1
+      },
+      {
+        "item": "Hvy Garuga Shell",
+        "quantity": 7
+      }
+    ]
+  },
+  {
+    "weapon_id": 368,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Ice Crystal",
+        "quantity": 20
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 10
+      },
+      {
+        "item": "HvyBlangongaFang",
+        "quantity": 2
+      },
+      {
+        "item": "DaoraDragonScal+",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "weapon_id": 318,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Hypno Claw+",
+        "quantity": 5
+      },
+      {
+        "item": "Hypno Bezoar+",
+        "quantity": 1
+      },
+      {
+        "item": "Coma Sac",
+        "quantity": 3
+      },
+      {
+        "item": "Purecrystal",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 407,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "TerraCeanatrClaw",
+        "quantity": 2
+      },
+      {
+        "item": "PlumD.HermitrClw",
+        "quantity": 2
+      },
+      {
+        "item": "TerraCeanatrShl",
+        "quantity": 4
+      },
+      {
+        "item": "PlumD.HermitrShl",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "weapon_id": 393,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "ShakalakaTreasr+",
+        "quantity": 3
+      },
+      {
+        "item": "DeadlyPoisonSac",
+        "quantity": 5
+      },
+      {
+        "item": "Machalite Ore",
+        "quantity": 20
+      },
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 394,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "ShakalakaTreasr+",
+        "quantity": 5
+      },
+      {
+        "item": "LethrGarugaTail",
+        "quantity": 2
+      },
+      {
+        "item": "HardGypcerosHead",
+        "quantity": 1
+      },
+      {
+        "item": "Remobra Skull",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 379,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "GoldRathianThorn",
+        "quantity": 1
+      },
+      {
+        "item": "HvyPnkRathianShl",
+        "quantity": 5
+      },
+      {
+        "item": "ThckRathianScl",
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "weapon_id": 307,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "StoutBlkTwstdHrn",
+        "quantity": 2
+      },
+      {
+        "item": "HvyBlkBlosSpine",
+        "quantity": 3
+      },
+      {
+        "item": "HvyBlkBlosShell",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "weapon_id": 312,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Hard Rajang Horn",
+        "quantity": 2
+      },
+      {
+        "item": "Blk Rajang Pelt+",
+        "quantity": 5
+      },
+      {
+        "item": "GoldRajangPelt+",
+        "quantity": 1
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "weapon_id": 315,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "YamaTsukamiFluid",
+        "quantity": 2
+      },
+      {
+        "item": "Eltalite Ore",
+        "quantity": 30
+      },
+      {
+        "item": "Hvy Tigrex Fang",
+        "quantity": 2
+      },
+      {
+        "item": "Commendation S",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 333,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "ThckGldRathnScl",
+        "quantity": 7
+      },
+      {
+        "item": "HvyGldRathianShl",
+        "quantity": 5
+      },
+      {
+        "item": "GoldRathianThorn",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 336,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "HvyGraviosShell",
+        "quantity": 6
+      },
+      {
+        "item": "HvyBlkGraviosShl",
+        "quantity": 6
+      },
+      {
+        "item": "Blazing Fire Sac",
+        "quantity": 8
+      },
+      {
+        "item": "Gravios BrainStm",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 406,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "HrdCeanataurClaw",
+        "quantity": 2
+      },
+      {
+        "item": "HvyCeanataurShl",
+        "quantity": 4
+      },
+      {
+        "item": "HvyHermitaurShl",
+        "quantity": 2
+      },
+      {
+        "item": "Giant Blk Pearl",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 408,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "TerraCeanatrClaw",
+        "quantity": 4
+      },
+      {
+        "item": "PlumD.HermitrClw",
+        "quantity": 4
+      },
+      {
+        "item": "Giant Blk Pearl",
+        "quantity": 3
+      },
+      {
+        "item": "HvnlyGaorenShell",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 419,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "HardFatalisHorn",
+        "quantity": 2
+      },
+      {
+        "item": "ThckFatalisScale",
+        "quantity": 5
+      },
+      {
+        "item": "BigEDragonJewel",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 421,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "HrdFatlisCrmHorn",
+        "quantity": 2
+      },
+      {
+        "item": "ThckFatlisCrmScl",
+        "quantity": 6
+      },
+      {
+        "item": "BigEDragonJewel",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 416,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Lao-Shan'sHvyShl",
+        "quantity": 5
+      },
+      {
+        "item": "Azure LaoS Claw",
+        "quantity": 2
+      },
+      {
+        "item": "Lao-ShanHvnlyScl",
+        "quantity": 1
+      },
+      {
+        "item": "YamaTsukamiFluid",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 386,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Hard Daora Horn",
+        "quantity": 2
+      },
+      {
+        "item": "Lthr Daora Tail",
+        "quantity": 3
+      },
+      {
+        "item": "Hvy Daora Shell",
+        "quantity": 5
+      },
+      {
+        "item": "BigEDragonJewel",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 399,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Hvy Monster Bone",
+        "quantity": 4
+      },
+      {
+        "item": "Legend Coin G",
+        "quantity": 2
+      },
+      {
+        "item": "BlackBeltCoinG",
+        "quantity": 8
+      },
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 516,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Majestic Horn",
+        "quantity": 2
+      },
+      {
+        "item": "Monoblos Heart",
+        "quantity": 1
+      },
+      {
+        "item": "Diablos Thoracic",
+        "quantity": 7
+      }
+    ]
+  },
+  {
+    "weapon_id": 553,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Daora Sharp Claw",
+        "quantity": 2
+      },
+      {
+        "item": "Fire Dragon Claw",
+        "quantity": 3
+      },
+      {
+        "item": "Daora Jewel",
+        "quantity": 1
+      },
+      {
+        "item": "Fire Drgn Jwl",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 1308,
+    "forge": [
+      {
+        "item": "Rubbery Hide+",
+        "quantity": 4
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 10
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1316,
+    "forge": [
+      {
+        "item": "Diablos Thoracic",
+        "quantity": 3
+      },
+      {
+        "item": "Diablos Carapace",
+        "quantity": 6
+      },
+      {
+        "item": "Union Ore",
+        "quantity": 5
+      },
+      {
+        "item": "Majestic Horn",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1322,
+    "forge": [
+      {
+        "item": "Wht Monoblos Cpc",
+        "quantity": 5
+      },
+      {
+        "item": "WhtMonoblosThora",
+        "quantity": 5
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 6
+      },
+      {
+        "item": "Monoblos Heart",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1323,
+    "forge": [
+      {
+        "item": "Rare Scarab",
+        "quantity": 3
+      },
+      {
+        "item": "Great Ladybug",
+        "quantity": 4
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 1
+      },
+      {
+        "item": "Monster Broth",
+        "quantity": 4
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1324,
+    "forge": [
+      {
+        "item": "Kirin Hide+",
+        "quantity": 3
+      },
+      {
+        "item": "Kirin Thndr Tail",
+        "quantity": 3
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 10
+      },
+      {
+        "item": "Majestic Horn",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1334,
+    "forge": [
+      {
+        "item": "Eltalite Ore",
+        "quantity": 20
+      },
+      {
+        "item": "Hrd Monster Bone",
+        "quantity": 6
+      },
+      {
+        "item": "Hvy Monster Bone",
+        "quantity": 1
+      },
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1360,
+    "forge": [
+      {
+        "item": "Hvy Tigrex Shell",
+        "quantity": 6
+      },
+      {
+        "item": "Tigrex Skull Shl",
+        "quantity": 3
+      },
+      {
+        "item": "Hvy Tigrex Fang",
+        "quantity": 3
+      },
+      {
+        "item": "HvnlyTigrexScale",
+        "quantity": 1
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 956,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Top-GrdRedHorn",
+        "quantity": 1
+      },
+      {
+        "item": "MonoblosCarapace",
+        "quantity": 5
+      },
+      {
+        "item": "Inferno Sac",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "weapon_id": 1167,
+    "forge": [
+      {
+        "item": "Blangonga Whiskr",
+        "quantity": 3
+      },
+      {
+        "item": "Blangonga Pelt",
+        "quantity": 3
+      },
+      {
+        "item": "Giant Bone",
+        "quantity": 4
+      },
+      {
+        "item": "Killer Beetle",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1184,
+    "forge": [
+      {
+        "item": "Plesioth Fin+",
+        "quantity": 4
+      },
+      {
+        "item": "Plesioth Scale+",
+        "quantity": 6
+      },
+      {
+        "item": "Springnight Carp",
+        "quantity": 4
+      },
+      {
+        "item": "Union Ore",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1186,
+    "forge": [
+      {
+        "item": "Basarios Tears",
+        "quantity": 1
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 10
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 20
+      },
+      {
+        "item": "Union Ore",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1193,
+    "forge": [
+      {
+        "item": "Congalala Pelt+",
+        "quantity": 6
+      },
+      {
+        "item": "Congalala Claw+",
+        "quantity": 2
+      },
+      {
+        "item": "Vibrant Pelt",
+        "quantity": 2
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1196,
+    "forge": [
+      {
+        "item": "Gravios Carapace",
+        "quantity": 6
+      },
+      {
+        "item": "Basarios Carpace",
+        "quantity": 5
+      },
+      {
+        "item": "Wyvern Skull Shl",
+        "quantity": 2
+      },
+      {
+        "item": "Rare Scarab",
+        "quantity": 5
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1201,
+    "forge": [
+      {
+        "item": "Coral Cphlos Fin",
+        "quantity": 1
+      },
+      {
+        "item": "Coral Cphlos Scl",
+        "quantity": 4
+      },
+      {
+        "item": "Carbalite Ore",
+        "quantity": 5
+      },
+      {
+        "item": "King Scarab",
+        "quantity": 6
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1208,
+    "forge": [
+      {
+        "item": "Pnk Rathian Scl+",
+        "quantity": 5
+      },
+      {
+        "item": "Pnk Rathian Cpc",
+        "quantity": 3
+      },
+      {
+        "item": "Rathian Spike",
+        "quantity": 2
+      },
+      {
+        "item": "Wyvern Stone",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1211,
+    "forge": [
+      {
+        "item": "Azure Rthlos Cpc",
+        "quantity": 5
+      },
+      {
+        "item": "Azre Rthlos Scl+",
+        "quantity": 3
+      },
+      {
+        "item": "Azur Rthlos Wing",
+        "quantity": 2
+      },
+      {
+        "item": "Wyvern Stone",
+        "quantity": 2
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 1254,
+    "forge": [
+      {
+        "item": "Hvy Tigrex Shell",
+        "quantity": 4
+      },
+      {
+        "item": "ThickTigrexScale",
+        "quantity": 8
+      },
+      {
+        "item": "HvnlyTigrexScale",
+        "quantity": 1
+      },
+      {
+        "item": "Big Wyvern Stone",
+        "quantity": 3
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 338,
+    "forge": [
+      {
+        "item": "Normal Ticket",
+        "quantity": 1
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Iron Ore",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 341,
+    "forge": [
+      {
+        "item": "Plus Class Tcket",
+        "quantity": 1
+      },
+      {
+        "item": "Striped Skin",
+        "quantity": 1
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Velocidrome Claw",
+        "quantity": 6
+      },
+      {
+        "item": "Velocidrome Head",
+        "quantity": 2
+      },
+      {
+        "item": "Striped Skin",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "weapon_id": 438,
+    "forge": [
+      {
+        "item": "Commendation G",
+        "quantity": 1
+      },
+      {
+        "item": "Kirin Horn",
+        "quantity": 5
+      },
+      {
+        "item": "Platinum Mane",
+        "quantity": 3
+      },
+      {
+        "item": "Rubbery Hide",
+        "quantity": 20
+      }
+    ],
+    "upgrade": []
+  },
+  {
+    "weapon_id": 300,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Sm Monster Bone",
+        "quantity": 1
+      },
+      {
+        "item": "Brute Bone",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 370,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Giadrome Hide",
+        "quantity": 1
+      },
+      {
+        "item": "Giadrome Claw",
+        "quantity": 4
+      },
+      {
+        "item": "Carpenterbug",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "weapon_id": 366,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Ice Crystal",
+        "quantity": 20
+      },
+      {
+        "item": "Blangonga Fang",
+        "quantity": 2
+      },
+      {
+        "item": "Wht Monoblos Shl",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 320,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Kirin Horn",
+        "quantity": 2
+      },
+      {
+        "item": "Kirin Mane",
+        "quantity": 6
+      },
+      {
+        "item": "Dragonite Ore",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "weapon_id": 384,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Daora Horn",
+        "quantity": 2
+      },
+      {
+        "item": "Daora Tail",
+        "quantity": 3
+      },
+      {
+        "item": "ElderDragonBlood",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 344,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Union Ore",
+        "quantity": 8
+      },
+      {
+        "item": "Basarios Tears",
+        "quantity": 1
+      },
+      {
+        "item": "Rathian Plate",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 376,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Rathian Spike+",
+        "quantity": 1
+      },
+      {
+        "item": "Rathian Scale+",
+        "quantity": 5
+      },
+      {
+        "item": "Rathian Plate",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 309,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Stout Bone",
+        "quantity": 4
+      },
+      {
+        "item": "Rare Scarab",
+        "quantity": 10
+      },
+      {
+        "item": "Eldr Dragon Bone",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 352,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Union Ore",
+        "quantity": 10
+      },
+      {
+        "item": "Velocidrome Clw+",
+        "quantity": 5
+      },
+      {
+        "item": "Velociprey Scle+",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "weapon_id": 314,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Eltalite Ore",
+        "quantity": 10
+      },
+      {
+        "item": "Lg Pelagus Fang",
+        "quantity": 2
+      },
+      {
+        "item": "HvyC.BlangoFang",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 332,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "ThckRathianScl",
+        "quantity": 8
+      },
+      {
+        "item": "Gld Rathian Cpc",
+        "quantity": 8
+      },
+      {
+        "item": "Rathian Thorn",
+        "quantity": 1
+      },
+      {
+        "item": "Blazing Fire Sac",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "weapon_id": 405,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Ceanataur Claw+",
+        "quantity": 3
+      },
+      {
+        "item": "HrdHermitaurClaw",
+        "quantity": 2
+      },
+      {
+        "item": "HvyHermitaurShl",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "weapon_id": 350,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "SpecialKirinHide",
+        "quantity": 3
+      },
+      {
+        "item": "KhezuSpecialCut",
+        "quantity": 1
+      },
+      {
+        "item": "HardGypcerosHead",
+        "quantity": 1
+      },
+      {
+        "item": "Purecrystal",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "weapon_id": 411,
+    "forge": [],
+    "upgrade": [
+      {
+        "item": "Hard Tigrex Claw",
+        "quantity": 4
+      },
+      {
+        "item": "Hvy Tigrex Fang",
+        "quantity": 4
+      },
+      {
+        "item": "Hvy Tigrex Shell",
+        "quantity": 2
+      },
+      {
+        "item": "HvnlyTigrexScale",
+        "quantity": 1
+      }
+    ]
   }
 ]

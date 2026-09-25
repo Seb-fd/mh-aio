@@ -106,6 +106,13 @@
     return 'bg-gray-800/40'
   }
 
+  function formatTool(value: number | null, tool: string): string {
+    if (value == null) return '-'
+    if (tool === 'Dung' || tool === 'Meat') return value > 0 ? 'Works' : 'No effect'
+    if (value <= 0) return 'Immune'
+    return `${value}s`
+  }
+
   function sortDrops(drops: MonsterDrop[]): MonsterDrop[] {
     return [...drops].sort((a, b) => {
       const ra = rankOrder.indexOf(a.rank ?? '')
@@ -385,6 +392,9 @@
             <div class="rounded-lg border themed-card p-4">
               <div class="flex items-center justify-between mb-3">
                 <span class="font-semibold text-gray-100">{w.part_name}</span>
+                {#if w.stagger_hp != null}
+                  <span class="text-[11px] text-gray-400">Flinch HP {w.stagger_hp}</span>
+                {/if}
               </div>
               <div class="grid grid-cols-4 sm:grid-cols-4 lg:grid-cols-8 gap-2 text-xs">
                 <div
@@ -454,6 +464,68 @@
               </div>
             </div>
           {/each}
+        </div>
+      </section>
+    {/if}
+
+    {#if monster.ailments.length > 0}
+      <section class="mb-8">
+        <h2 class="section-title mb-3">Ailments</h2>
+        <div class="rounded-lg border themed-card p-4 overflow-x-auto">
+          <table class="w-full text-xs">
+            <thead>
+              <tr class="text-gray-400 text-left">
+                <th class="py-1 pr-3 font-medium">Ailment</th>
+                <th class="py-1 pr-3 font-medium">Initial</th>
+                <th class="py-1 pr-3 font-medium">Buildup +</th>
+                <th class="py-1 pr-3 font-medium">Max</th>
+                <th class="py-1 pr-3 font-medium">Duration</th>
+                <th class="py-1 font-medium">Damage</th>
+              </tr>
+            </thead>
+            <tbody>
+              {#each monster.ailments as a}
+                <tr class="border-t border-gray-800">
+                  <td class="py-1.5 pr-3 font-semibold text-gray-100">{a.ailment}</td>
+                  <td class="py-1.5 pr-3 text-gray-300">{a.initial ?? '-'}</td>
+                  <td class="py-1.5 pr-3 text-gray-300">{a.increase ?? '-'}</td>
+                  <td class="py-1.5 pr-3 text-gray-300">{a.max ?? '-'}</td>
+                  <td class="py-1.5 pr-3 text-gray-300"
+                    >{a.duration_sec != null ? `${a.duration_sec}s` : '-'}</td
+                  >
+                  <td class="py-1.5 text-gray-300">{a.damage ?? '-'}</td>
+                </tr>
+              {/each}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    {/if}
+
+    {#if monster.tools.length > 0}
+      <section class="mb-8">
+        <h2 class="section-title mb-3">Traps & Items</h2>
+        <div class="rounded-lg border themed-card p-4 overflow-x-auto">
+          <table class="w-full text-xs">
+            <thead>
+              <tr class="text-gray-400 text-left">
+                <th class="py-1 pr-3 font-medium">Tool</th>
+                <th class="py-1 pr-3 font-medium">Effect</th>
+                <th class="py-1 pr-3 font-medium">Unaware</th>
+                <th class="py-1 font-medium">Enraged</th>
+              </tr>
+            </thead>
+            <tbody>
+              {#each monster.tools as t}
+                <tr class="border-t border-gray-800">
+                  <td class="py-1.5 pr-3 font-semibold text-gray-100">{t.tool}</td>
+                  <td class="py-1.5 pr-3 text-gray-300">{formatTool(t.normal, t.tool)}</td>
+                  <td class="py-1.5 pr-3 text-gray-300">{formatTool(t.notfound, t.tool)}</td>
+                  <td class="py-1.5 text-gray-300">{formatTool(t.enraged, t.tool)}</td>
+                </tr>
+              {/each}
+            </tbody>
+          </table>
         </div>
       </section>
     {/if}

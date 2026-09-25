@@ -23,6 +23,29 @@ export interface MonsterWeakness {
   thunder: number | null
   ice: number | null
   dragon: number | null
+  stagger_hp: number | null
+}
+
+export interface MonsterAilment {
+  id: number
+  monster_id: number
+  ailment: string
+  initial: number | null
+  increase: number | null
+  max: number | null
+  decay_step: number | null
+  decay_interval: number | null
+  duration_sec: number | null
+  damage: number | null
+}
+
+export interface MonsterTool {
+  id: number
+  monster_id: number
+  tool: string
+  normal: number | null
+  notfound: number | null
+  enraged: number | null
 }
 
 export interface MonsterDrop {
@@ -46,6 +69,8 @@ export interface MonsterDetail {
   size: string | null
   description: string | null
   weaknesses: MonsterWeakness[]
+  ailments: MonsterAilment[]
+  tools: MonsterTool[]
   drops: MonsterDrop[]
   armor: Armor[]
   weapons: Weapon[]
