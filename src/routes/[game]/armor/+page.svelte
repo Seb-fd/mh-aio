@@ -444,6 +444,13 @@
                   <p class="text-xs text-gray-400 mb-2">
                     {setLabel(set)} · R{set.rarity ?? 1}
                   </p>
+                  {#if set.bonus_skill}
+                    <p class="text-[11px] text-emerald-300/90 mb-2">
+                      ◆ {set.bonus_skill} ({set.bonus_required}){set.bonus_skill2
+                        ? ' · +1 more'
+                        : ''}
+                    </p>
+                  {/if}
                   <div class="flex flex-wrap gap-1">
                     {#each pieces as p}
                       <span

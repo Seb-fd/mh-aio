@@ -38166,7 +38166,7 @@
     "part": null,
     "rank": "High",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.61,
     "condition": "Gold Plating Carved"
   },
   {
@@ -38176,7 +38176,7 @@
     "part": null,
     "rank": "High",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.03,
     "condition": "Gold Plating Carved"
   },
   {
@@ -56860,36 +56860,6 @@
     "condition": null
   },
   {
-    "monster_id": 1046,
-    "item_id": 21359,
-    "method": "carve",
-    "part": null,
-    "rank": "High",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1003,
-    "item_id": 21358,
-    "method": "carve",
-    "part": null,
-    "rank": "High",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1003,
-    "item_id": 20666,
-    "method": "carve",
-    "part": null,
-    "rank": "High",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
     "monster_id": 1060,
     "item_id": 20312,
     "method": "carve",
@@ -56926,7 +56896,7 @@
     "part": null,
     "rank": "High",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.7,
     "condition": null
   },
   {
@@ -56966,7 +56936,7 @@
     "part": null,
     "rank": "High",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.35,
     "condition": null
   },
   {
@@ -56976,7 +56946,7 @@
     "part": null,
     "rank": "High",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.05,
     "condition": null
   },
   {
@@ -56986,7 +56956,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.7,
     "condition": null
   },
   {
@@ -56996,7 +56966,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.3,
     "condition": null
   },
   {
@@ -57006,7 +56976,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.35,
     "condition": null
   },
   {
@@ -57016,7 +56986,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.65,
     "condition": null
   },
   {
@@ -57026,7 +56996,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.35,
     "condition": null
   },
   {
@@ -57036,7 +57006,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.65,
     "condition": null
   },
   {
@@ -57046,7 +57016,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.65,
     "condition": null
   },
   {
@@ -57056,7 +57026,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.35,
     "condition": null
   },
   {
@@ -57066,7 +57036,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.65,
     "condition": null
   },
   {
@@ -57076,17 +57046,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1035,
-    "item_id": 20690,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
+    "probability": 0.65,
     "condition": null
   },
   {
@@ -57096,7 +57056,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.65,
     "condition": null
   },
   {
@@ -57106,7 +57066,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.35,
     "condition": null
   },
   {
@@ -57116,7 +57076,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.6,
     "condition": null
   },
   {
@@ -57126,7 +57086,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.8,
     "condition": null
   },
   {
@@ -57136,7 +57096,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.7,
     "condition": null
   },
   {
@@ -57146,7 +57106,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.3,
     "condition": null
   },
   {
@@ -57156,7 +57116,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.3,
     "condition": null
   },
   {
@@ -57166,7 +57126,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.7,
     "condition": null
   },
   {
@@ -57176,7 +57136,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.65,
     "condition": null
   },
   {
@@ -57186,7 +57146,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.35,
     "condition": null
   },
   {
@@ -57196,7 +57156,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.65,
     "condition": null
   },
   {
@@ -57206,7 +57166,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.65,
     "condition": null
   },
   {
@@ -57216,7 +57176,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.35,
     "condition": null
   },
   {
@@ -57830,16 +57790,6 @@
     "condition": null
   },
   {
-    "monster_id": 1027,
-    "item_id": 21070,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
     "monster_id": 1064,
     "item_id": 21132,
     "method": "carve",
@@ -58070,316 +58020,6 @@
     "condition": "Guiding Lands"
   },
   {
-    "monster_id": 1078,
-    "item_id": 20913,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 20914,
-    "method": "reward",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 20915,
-    "method": "break",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 20916,
-    "method": "break",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 20917,
-    "method": "break",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 20918,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 20919,
-    "method": "break",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 20789,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 20920,
-    "method": "reward",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 21124,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": "Guiding Lands"
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 21125,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": "Guiding Lands"
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 20921,
-    "method": "reward",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 20922,
-    "method": "reward",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 20923,
-    "method": "break",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 20924,
-    "method": "break",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 20925,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 20926,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 20927,
-    "method": "capture",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 20928,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 21149,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": "Guiding Lands"
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 21150,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": "Guiding Lands"
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 21241,
-    "method": "reward",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 21242,
-    "method": "reward",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 21243,
-    "method": "break",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 21244,
-    "method": "break",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 21245,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 21246,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 21247,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 21248,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": null
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 21272,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": "Guiding Lands"
-  },
-  {
-    "monster_id": 1078,
-    "item_id": 21273,
-    "method": "carve",
-    "part": null,
-    "rank": "Master",
-    "quantity": 1,
-    "probability": null,
-    "condition": "Guiding Lands"
-  },
-  {
     "monster_id": 1002,
     "item_id": 21305,
     "method": "carve",
@@ -58436,7 +58076,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.9,
     "condition": null
   },
   {
@@ -58446,7 +58086,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.97,
     "condition": null
   },
   {
@@ -58456,7 +58096,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.97,
     "condition": null
   },
   {
@@ -58466,7 +58106,7 @@
     "part": null,
     "rank": "Master",
     "quantity": 1,
-    "probability": null,
+    "probability": 0.04,
     "condition": null
   },
   {

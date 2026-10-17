@@ -4,84 +4,84 @@
     "skill_id": 10001,
     "points": 10,
     "ability_name": "Attack Up [Sm]",
-    "description": null
+    "description": "Small attack increase."
   },
   {
     "id": 10002,
     "skill_id": 10001,
     "points": 15,
     "ability_name": "Attack Up [Med]",
-    "description": null
+    "description": "Medium attack increase."
   },
   {
     "id": 10003,
     "skill_id": 10001,
     "points": 20,
     "ability_name": "Attack Up [Lg]",
-    "description": null
+    "description": "Large attack increase."
   },
   {
     "id": 10004,
     "skill_id": 10001,
     "points": -10,
     "ability_name": "Attack Down [Sm]",
-    "description": null
+    "description": "Small attack decrease."
   },
   {
     "id": 10005,
     "skill_id": 10001,
     "points": -15,
     "ability_name": "Attack Down [Med]",
-    "description": null
+    "description": "Medium attack decrease."
   },
   {
     "id": 10006,
     "skill_id": 10001,
     "points": -20,
     "ability_name": "Attack Down [Lg]",
-    "description": null
+    "description": "Large attack decrease."
   },
   {
     "id": 10007,
     "skill_id": 10002,
     "points": 10,
     "ability_name": "Reckless Abandon +1",
-    "description": null
+    "description": "Increases Affinity by 10%."
   },
   {
     "id": 10008,
     "skill_id": 10002,
     "points": 15,
     "ability_name": "Reckless Abandon +2",
-    "description": null
+    "description": "Increases Affinity by 20%."
   },
   {
     "id": 10009,
     "skill_id": 10002,
     "points": 20,
     "ability_name": "Reckless Abandon +3",
-    "description": null
+    "description": "Increases Affinity by 30%."
   },
   {
     "id": 10010,
     "skill_id": 10002,
     "points": -10,
     "ability_name": "Reckless Abandon -1",
-    "description": null
+    "description": "Increases Affinity by 10%."
   },
   {
     "id": 10011,
     "skill_id": 10002,
     "points": -15,
     "ability_name": "Reckless Abandon -2",
-    "description": null
+    "description": "Increases Affinity by 20%."
   },
   {
     "id": 10012,
     "skill_id": 10002,
     "points": -20,
     "ability_name": "Reckless Abandon -3",
-    "description": null
+    "description": "Increases Affinity by 30%."
   },
   {
     "id": 10013,
@@ -102,56 +102,56 @@
     "skill_id": 10004,
     "points": 10,
     "ability_name": "Speed Sharpening",
-    "description": null
+    "description": "Weapons are sharpened 4x faster than usual."
   },
   {
     "id": 10016,
     "skill_id": 10004,
     "points": -10,
     "ability_name": "Slow Sharpening",
-    "description": null
+    "description": "Weapons take longer to sharpen. 5 times to sharpen a weapon as opposed to 4."
   },
   {
     "id": 10017,
     "skill_id": 10005,
     "points": 15,
     "ability_name": "Sharpness +1",
-    "description": null
+    "description": "Increases your weapon's Sharpness by one level."
   },
   {
     "id": 10018,
     "skill_id": 10006,
     "points": 10,
     "ability_name": "Unsheathe Stun",
-    "description": null
+    "description": "Grants the ability to stun (KO) monsters with draw attacks."
   },
   {
     "id": 10019,
     "skill_id": 10007,
     "points": 10,
     "ability_name": "Unsheathe Critical",
-    "description": null
+    "description": "Increases affinity for unsheathe attacks with 100%."
   },
   {
     "id": 10020,
     "skill_id": 10008,
     "points": 10,
     "ability_name": "Concentration",
-    "description": null
+    "description": "Decreases charging time for charge attacks with Great Swords, Hammers and Bows. Speeds up the rate at which the Long Sword, Switch Axe and Dual Blades bars fill and also increases the amount of the phial bar for Switch Axes recovered when hitting R to refill it."
   },
   {
     "id": 10021,
     "skill_id": 10008,
     "points": -10,
     "ability_name": "Distraction",
-    "description": null
+    "description": "Increases charging time for charge attacks gauges."
   },
   {
     "id": 10022,
     "skill_id": 10009,
     "points": 10,
     "ability_name": "ESP",
-    "description": null
+    "description": "Prevents your attacks from being deflected."
   },
   {
     "id": 10023,
@@ -186,21 +186,21 @@
     "skill_id": 10014,
     "points": 10,
     "ability_name": "Flute Expert",
-    "description": null
+    "description": "Increases duration of flute/hunting horn buffs and decreases chance of flute breaking."
   },
   {
     "id": 10028,
     "skill_id": 10015,
     "points": 10,
     "ability_name": "Gunnery Master",
-    "description": null
+    "description": "Increased damage of Ballisia S and Cannon S"
   },
   {
     "id": 10029,
     "skill_id": 10015,
     "points": 15,
     "ability_name": "Gunnery King",
-    "description": null
+    "description": "Increased damage of Ballisia S and Cannon S, Gunlance's Shelling, Crag S and reduces Gunlance's WF cooldown time--"
   },
   {
     "id": 10030,
@@ -221,21 +221,21 @@
     "skill_id": 10017,
     "points": 10,
     "ability_name": "Adrenaline +1",
-    "description": null
+    "description": "Defense increased when low health."
   },
   {
     "id": 10033,
     "skill_id": 10017,
     "points": 15,
     "ability_name": "Adrenaline +2",
-    "description": null
+    "description": "Attack (x1.33)/Defense (+90) increased when health is 40% or lower."
   },
   {
     "id": 10034,
     "skill_id": 10017,
     "points": -10,
     "ability_name": "Worry",
-    "description": null
+    "description": "Attack/Defense lowered when low health."
   },
   {
     "id": 10035,
@@ -249,7 +249,7 @@
     "skill_id": 10019,
     "points": 15,
     "ability_name": "Load Up",
-    "description": null
+    "description": "Increases the loadable amount of all usable ammo by one and adds 1 level of charge to bow."
   },
   {
     "id": 10037,
@@ -263,259 +263,259 @@
     "skill_id": 10021,
     "points": 10,
     "ability_name": "Reload Speed +1",
-    "description": null
+    "description": "Bowgun reloading speed increases 1 level"
   },
   {
     "id": 10039,
     "skill_id": 10021,
     "points": 15,
     "ability_name": "Reload Speed +2",
-    "description": null
+    "description": "Bowgun reloading speed increases 2 levels"
   },
   {
     "id": 10040,
     "skill_id": 10021,
     "points": 20,
     "ability_name": "Reload Speed +3",
-    "description": null
+    "description": "Bowgun reloading speed increases 3 levels"
   },
   {
     "id": 10041,
     "skill_id": 10021,
     "points": -10,
     "ability_name": "Reload Speed -1",
-    "description": null
+    "description": "Bowgun reloading speed increases 1 level"
   },
   {
     "id": 10042,
     "skill_id": 10021,
     "points": -15,
     "ability_name": "Reload Speed -2",
-    "description": null
+    "description": "Bowgun reloading speed increases 2 levels"
   },
   {
     "id": 10043,
     "skill_id": 10021,
     "points": -20,
     "ability_name": "Reload Speed -3",
-    "description": null
+    "description": "Bowgun reloading speed increases 3 levels"
   },
   {
     "id": 10044,
     "skill_id": 10022,
     "points": 10,
     "ability_name": "Recoil Reduction +1",
-    "description": null
+    "description": "Bowgun recoil is reduced"
   },
   {
     "id": 10045,
     "skill_id": 10022,
     "points": 15,
     "ability_name": "Recoil Reduction +2",
-    "description": null
+    "description": "Bowgun recoil is reduced further"
   },
   {
     "id": 10046,
     "skill_id": 10022,
     "points": 20,
     "ability_name": "Recoil Reduction +3",
-    "description": null
+    "description": "Bowgun recoil is reduced even greater"
   },
   {
     "id": 10047,
     "skill_id": 10022,
     "points": -10,
     "ability_name": "Recoil Reduction -1",
-    "description": null
+    "description": "Bowgun recoil is reduced"
   },
   {
     "id": 10048,
     "skill_id": 10022,
     "points": -15,
     "ability_name": "Recoil Reduction -2",
-    "description": null
+    "description": "Bowgun recoil is reduced further"
   },
   {
     "id": 10049,
     "skill_id": 10022,
     "points": -20,
     "ability_name": "Recoil Reduction -3",
-    "description": null
+    "description": "Bowgun recoil is reduced even greater"
   },
   {
     "id": 10050,
     "skill_id": 10023,
     "points": 10,
     "ability_name": "Accuracy+1",
-    "description": null
+    "description": "Decreases Deviation while aiming."
   },
   {
     "id": 10051,
     "skill_id": 10023,
     "points": 15,
     "ability_name": "Accuracy+2",
-    "description": null
+    "description": "Greatly decreases Deviation while aiming."
   },
   {
     "id": 10052,
     "skill_id": 10023,
     "points": -10,
     "ability_name": "Accuracy-1",
-    "description": null
+    "description": "Decreases Deviation while aiming."
   },
   {
     "id": 10053,
     "skill_id": 10023,
     "points": -15,
     "ability_name": "Accuracy-2",
-    "description": null
+    "description": "Greatly decreases Deviation while aiming."
   },
   {
     "id": 10054,
     "skill_id": 10024,
     "points": 10,
     "ability_name": "NormalS/RapidBowUp",
-    "description": null
+    "description": "Increases the damage of Normal S"
   },
   {
     "id": 10055,
     "skill_id": 10025,
     "points": 10,
     "ability_name": "PierceS/PierceBowUp",
-    "description": null
+    "description": "Increases the damage of Pierce S"
   },
   {
     "id": 10056,
     "skill_id": 10026,
     "points": 10,
     "ability_name": "PelletS/ScatterBowUp",
-    "description": null
+    "description": "Increases the damage of Pellet S"
   },
   {
     "id": 10057,
     "skill_id": 10027,
     "points": 10,
     "ability_name": "Normal S All Add",
-    "description": null
+    "description": "Allows a bowgun to fire all Normal S levels"
   },
   {
     "id": 10058,
     "skill_id": 10028,
     "points": 10,
     "ability_name": "Pierce S LV1 Add",
-    "description": null
+    "description": "Allows a bowgun to fire Pierce S Lv1"
   },
   {
     "id": 10059,
     "skill_id": 10028,
     "points": 15,
     "ability_name": "Pierce S All Add",
-    "description": null
+    "description": "Allows a bowgun to fire all Pierce S levels"
   },
   {
     "id": 10060,
     "skill_id": 10029,
     "points": 10,
     "ability_name": "Pellet S LV1 Add",
-    "description": null
+    "description": "Allows a bowgun to fire Pellet S Lv1"
   },
   {
     "id": 10061,
     "skill_id": 10029,
     "points": 15,
     "ability_name": "Pellet S All Add",
-    "description": null
+    "description": "Allows a bowgun to fire all Pellet S levels"
   },
   {
     "id": 10062,
     "skill_id": 10030,
     "points": 10,
     "ability_name": "Crag S LV1 Add",
-    "description": null
+    "description": "Allows a bowgun to fire Crag S Lv1"
   },
   {
     "id": 10063,
     "skill_id": 10030,
     "points": 15,
     "ability_name": "Crag S All Add",
-    "description": null
+    "description": "Allows a bowgun to fire all Crag S levels"
   },
   {
     "id": 10064,
     "skill_id": 10031,
     "points": 10,
     "ability_name": "Clust S LV1 Add",
-    "description": null
+    "description": "Allows a bowgun to fire Clust S Lv1"
   },
   {
     "id": 10065,
     "skill_id": 10031,
     "points": 15,
     "ability_name": "Clust S All Add",
-    "description": null
+    "description": "Allows a bowgun to fire all Clust S levels"
   },
   {
     "id": 10066,
     "skill_id": 10032,
     "points": 10,
     "ability_name": "Cutter S Add",
-    "description": null
+    "description": "Allows a bowgun to fire Slicing Shot"
   },
   {
     "id": 10067,
     "skill_id": 10033,
     "points": 10,
     "ability_name": "Poison Coating Add",
-    "description": null
+    "description": "Bow can use poison coating."
   },
   {
     "id": 10068,
     "skill_id": 10034,
     "points": 10,
     "ability_name": "Parlysis Coating Add",
-    "description": null
+    "description": "Bow can use paralysis coating"
   },
   {
     "id": 10069,
     "skill_id": 10035,
     "points": 10,
     "ability_name": "Sleep Coating Add",
-    "description": null
+    "description": "Bow can use sleep coating"
   },
   {
     "id": 10070,
     "skill_id": 10036,
     "points": 10,
     "ability_name": "Power Coating Add",
-    "description": null
+    "description": "Bow can use power coating"
   },
   {
     "id": 10071,
     "skill_id": 10037,
     "points": 10,
     "ability_name": "Close Range Coating Add",
-    "description": null
+    "description": "Bow can use close range coating"
   },
   {
     "id": 10072,
     "skill_id": 10038,
     "points": 10,
     "ability_name": "Fatigue Coating Add",
-    "description": null
+    "description": "Bow can use exhaust coating"
   },
   {
     "id": 10073,
     "skill_id": 10039,
     "points": 10,
     "ability_name": "Abnormal Status Atk +1",
-    "description": null
+    "description": "Status attacks increased by 10%."
   },
   {
     "id": 10074,
     "skill_id": 10039,
     "points": 15,
     "ability_name": "Abnormal Status Atk +2",
-    "description": null
+    "description": "Status attacks increased by 20%."
   },
   {
     "id": 10075,
@@ -529,154 +529,154 @@
     "skill_id": 10040,
     "points": 10,
     "ability_name": "Element Atk Up",
-    "description": null
+    "description": "Elemental attacks do more damage."
   },
   {
     "id": 10077,
     "skill_id": 10040,
     "points": -10,
     "ability_name": "Elemnt Atk Down",
-    "description": null
+    "description": "Elemental attacks do less damage."
   },
   {
     "id": 10078,
     "skill_id": 10041,
     "points": 10,
     "ability_name": "Fire Element +1",
-    "description": null
+    "description": "Increases damage done by fire element attacks."
   },
   {
     "id": 10079,
     "skill_id": 10041,
     "points": 15,
     "ability_name": "Fire Element +2",
-    "description": null
+    "description": "Greatly increases damage done by fire element attacks."
   },
   {
     "id": 10080,
     "skill_id": 10041,
     "points": -10,
     "ability_name": "Fire Elment Down",
-    "description": null
+    "description": "Decreases damage done by fire element attacks."
   },
   {
     "id": 10081,
     "skill_id": 10042,
     "points": 10,
     "ability_name": "Water Element +1",
-    "description": null
+    "description": "Increases damage done by water element attacks."
   },
   {
     "id": 10082,
     "skill_id": 10042,
     "points": 15,
     "ability_name": "Water Element +2",
-    "description": null
+    "description": "Greatly increases damage done by water element attacks."
   },
   {
     "id": 10083,
     "skill_id": 10042,
     "points": -10,
     "ability_name": "Water Element Down",
-    "description": null
+    "description": "Decreases damage done by water element attacks."
   },
   {
     "id": 10084,
     "skill_id": 10043,
     "points": 10,
     "ability_name": "Thunder Element +1",
-    "description": null
+    "description": "Increases damage done by thunder element attacks"
   },
   {
     "id": 10085,
     "skill_id": 10043,
     "points": 15,
     "ability_name": "Thunder Element +2",
-    "description": null
+    "description": "Greatly increases damage done by thunder element attacks."
   },
   {
     "id": 10086,
     "skill_id": 10043,
     "points": -10,
     "ability_name": "Thunder Element Down",
-    "description": null
+    "description": "Decreases damage done by thunder element attacks"
   },
   {
     "id": 10087,
     "skill_id": 10044,
     "points": 10,
     "ability_name": "Ice Element +1",
-    "description": null
+    "description": "Increases damage done by ice element attacks"
   },
   {
     "id": 10088,
     "skill_id": 10044,
     "points": 15,
     "ability_name": "Ice Element +2",
-    "description": null
+    "description": "Greatly increases damage done by ice element attacks"
   },
   {
     "id": 10089,
     "skill_id": 10044,
     "points": -10,
     "ability_name": "Ice Element Down",
-    "description": null
+    "description": "Decreases damage done by ice element attacks"
   },
   {
     "id": 10090,
     "skill_id": 10045,
     "points": 10,
     "ability_name": "Dragon Element +1",
-    "description": null
+    "description": "Increases damage done by dragon element attacks"
   },
   {
     "id": 10091,
     "skill_id": 10045,
     "points": 15,
     "ability_name": "Dragon Element +2",
-    "description": null
+    "description": "Greatly increases damage done by dragon element attacks"
   },
   {
     "id": 10092,
     "skill_id": 10045,
     "points": -10,
     "ability_name": "Dragon Element Down",
-    "description": null
+    "description": "Decreases damage done by dragon element attacks"
   },
   {
     "id": 10093,
     "skill_id": 10046,
     "points": 10,
     "ability_name": "Constitution +1",
-    "description": null
+    "description": "Evading and blocking uses a little less stamina."
   },
   {
     "id": 10094,
     "skill_id": 10046,
     "points": 15,
     "ability_name": "Constitution +2",
-    "description": null
+    "description": "Evading and blocking uses a lot less stamina."
   },
   {
     "id": 10095,
     "skill_id": 10046,
     "points": -10,
     "ability_name": "Constitution -1",
-    "description": null
+    "description": "Evading and blocking uses a little less stamina."
   },
   {
     "id": 10096,
     "skill_id": 10046,
     "points": -15,
     "ability_name": "Constitution -2",
-    "description": null
+    "description": "Evading and blocking uses a lot less stamina."
   },
   {
     "id": 10097,
     "skill_id": 10047,
     "points": 10,
     "ability_name": "Runner",
-    "description": null
+    "description": "Actions other than evasion and blocking use less stamina."
   },
   {
     "id": 10098,
@@ -704,42 +704,42 @@
     "skill_id": 10049,
     "points": 10,
     "ability_name": "Hunger Halved",
-    "description": null
+    "description": "Max stamina bar shrinks a little slower."
   },
   {
     "id": 10102,
     "skill_id": 10049,
     "points": 15,
     "ability_name": "Hunger Negated",
-    "description": null
+    "description": "Max stamina bar never shrinks. Will shink in the Tundra without Cold Resistance."
   },
   {
     "id": 10103,
     "skill_id": 10049,
     "points": -10,
     "ability_name": "Hunger Inc [Lo]",
-    "description": null
+    "description": "Max stamina bar shrinks a little faster."
   },
   {
     "id": 10104,
     "skill_id": 10049,
     "points": -15,
     "ability_name": "Hunger Inc [Hi]",
-    "description": null
+    "description": "Max stamina bar shrinks a lot faster."
   },
   {
     "id": 10105,
     "skill_id": 10050,
     "points": 10,
     "ability_name": "Evade +1",
-    "description": null
+    "description": "Extends the invulnerability period when evading."
   },
   {
     "id": 10106,
     "skill_id": 10050,
     "points": 15,
     "ability_name": "Evade +2",
-    "description": null
+    "description": "Greatly extends the invulnerability period when evading."
   },
   {
     "id": 10107,
@@ -753,7 +753,7 @@
     "skill_id": 10051,
     "points": 15,
     "ability_name": "Evasion Up",
-    "description": null
+    "description": "Increases evasion distance."
   },
   {
     "id": 10109,
@@ -767,63 +767,63 @@
     "skill_id": 10053,
     "points": 10,
     "ability_name": "Sneak",
-    "description": null
+    "description": "Monsters are less likely to target you in a group."
   },
   {
     "id": 10111,
     "skill_id": 10053,
     "points": -10,
     "ability_name": "Taunt",
-    "description": null
+    "description": "Monsters are more likely to target you in a group."
   },
   {
     "id": 10112,
     "skill_id": 10054,
     "points": 10,
     "ability_name": "Recovery Speed +1",
-    "description": null
+    "description": "Red part of health bar recovers faster."
   },
   {
     "id": 10113,
     "skill_id": 10054,
     "points": 15,
     "ability_name": "Recovery Speed +2",
-    "description": null
+    "description": "Red part of health bar recovers fastest."
   },
   {
     "id": 10114,
     "skill_id": 10054,
     "points": -10,
     "ability_name": "Recovery Spd -1",
-    "description": null
+    "description": "Red part of health bar recovers faster."
   },
   {
     "id": 10115,
     "skill_id": 10054,
     "points": -15,
     "ability_name": "Recovery Spd -2",
-    "description": null
+    "description": "Red part of health bar recovers fastest."
   },
   {
     "id": 10116,
     "skill_id": 10055,
     "points": 10,
     "ability_name": "Guard +1",
-    "description": null
+    "description": "Blocking uses less stamina and knockback is reduced."
   },
   {
     "id": 10117,
     "skill_id": 10055,
     "points": 15,
     "ability_name": "Guard +2",
-    "description": null
+    "description": "Blocking uses a lot less stamina and knockback is reduced more."
   },
   {
     "id": 10118,
     "skill_id": 10055,
     "points": -10,
     "ability_name": "Guard -1",
-    "description": null
+    "description": "Blocking uses less stamina and knockback is reduced."
   },
   {
     "id": 10119,
@@ -837,105 +837,105 @@
     "skill_id": 10057,
     "points": 10,
     "ability_name": "Auto-Guard",
-    "description": null
+    "description": "If you are able to block, attacks will be blocked for you."
   },
   {
     "id": 10121,
     "skill_id": 10058,
     "points": 10,
     "ability_name": "Divine Protection",
-    "description": null
+    "description": "Sometimes decreases damage taken."
   },
   {
     "id": 10122,
     "skill_id": 10058,
     "points": -10,
     "ability_name": "Demonic Protection",
-    "description": null
+    "description": "Sometimes increases damage taken."
   },
   {
     "id": 10123,
     "skill_id": 10059,
     "points": 10,
     "ability_name": "Poison Negated",
-    "description": null
+    "description": "Prevents poison."
   },
   {
     "id": 10124,
     "skill_id": 10059,
     "points": -10,
     "ability_name": "Poison [x2]",
-    "description": null
+    "description": "Doubles the damage received from poison."
   },
   {
     "id": 10125,
     "skill_id": 10060,
     "points": 10,
     "ability_name": "Parlysis Negated",
-    "description": null
+    "description": "Prevents paralysis."
   },
   {
     "id": 10126,
     "skill_id": 10060,
     "points": -10,
     "ability_name": "Paralysis [x2]",
-    "description": null
+    "description": "Doubles the duration of paralysis."
   },
   {
     "id": 10127,
     "skill_id": 10061,
     "points": 10,
     "ability_name": "Sleep Negated",
-    "description": null
+    "description": "Prevents sleep."
   },
   {
     "id": 10128,
     "skill_id": 10061,
     "points": -10,
     "ability_name": "Sleep [x2]",
-    "description": null
+    "description": "Doubles the duration of sleep."
   },
   {
     "id": 10129,
     "skill_id": 10062,
     "points": 10,
     "ability_name": "Stun Halved",
-    "description": null
+    "description": "Reduces the likelihood of being stunned by 50%."
   },
   {
     "id": 10130,
     "skill_id": 10062,
     "points": 15,
     "ability_name": "Stun Negated",
-    "description": null
+    "description": "Prevents stun."
   },
   {
     "id": 10131,
     "skill_id": 10062,
     "points": -10,
     "ability_name": "Stun [x2]",
-    "description": null
+    "description": "Makes it harder to recover from being stunned."
   },
   {
     "id": 10132,
     "skill_id": 10063,
     "points": 10,
     "ability_name": "Mud/Snow Res",
-    "description": null
+    "description": "Prevents Snowman and Muddy conditions."
   },
   {
     "id": 10133,
     "skill_id": 10064,
     "points": 10,
     "ability_name": "Quake Res",
-    "description": null
+    "description": "Prevents staggering from tremors created by large monsters."
   },
   {
     "id": 10134,
     "skill_id": 10065,
     "points": 10,
     "ability_name": "Wind Breaker",
-    "description": null
+    "description": "Negates almost all Wind Pressure."
   },
   {
     "id": 10135,
@@ -949,14 +949,14 @@
     "skill_id": 10066,
     "points": 10,
     "ability_name": "Antiseptic",
-    "description": null
+    "description": "Negates soiled status effect (from Rangurotora)."
   },
   {
     "id": 10137,
     "skill_id": 10067,
     "points": 10,
     "ability_name": "Steal No Effect",
-    "description": null
+    "description": "Enemies cannot steal anything from hunter"
   },
   {
     "id": 10138,
@@ -970,280 +970,280 @@
     "skill_id": 10069,
     "points": 10,
     "ability_name": "Def Down Negate",
-    "description": null
+    "description": "Negates defense down status effect."
   },
   {
     "id": 10140,
     "skill_id": 10070,
     "points": 10,
     "ability_name": "Earplug",
-    "description": null
+    "description": "Unaffected by some monster roars."
   },
   {
     "id": 10141,
     "skill_id": 10070,
     "points": 15,
     "ability_name": "HighGradeEarplug",
-    "description": null
+    "description": "Unaffected by all monster roars. (Doboru, Tigrex, Diablos, Gigginox, Deviljho, Akantor, Ukanlos, Jhen Morhan and Alatreon need HGE)"
   },
   {
     "id": 10142,
     "skill_id": 10071,
     "points": 10,
     "ability_name": "Health +20",
-    "description": null
+    "description": "Max Health +20."
   },
   {
     "id": 10143,
     "skill_id": 10071,
     "points": 15,
     "ability_name": "Health +50",
-    "description": null
+    "description": "Max Health +50."
   },
   {
     "id": 10144,
     "skill_id": 10071,
     "points": -10,
     "ability_name": "Health -10",
-    "description": null
+    "description": "Max Health -10."
   },
   {
     "id": 10145,
     "skill_id": 10071,
     "points": -15,
     "ability_name": "Health -30",
-    "description": null
+    "description": "Max Health -30."
   },
   {
     "id": 10146,
     "skill_id": 10072,
     "points": 10,
     "ability_name": "Def Up (S)",
-    "description": null
+    "description": "Small defense increase."
   },
   {
     "id": 10147,
     "skill_id": 10072,
     "points": 15,
     "ability_name": "Def Up (M)",
-    "description": null
+    "description": "Medium defense increase."
   },
   {
     "id": 10148,
     "skill_id": 10072,
     "points": 20,
     "ability_name": "Def Up (L)",
-    "description": null
+    "description": "Large defense increase."
   },
   {
     "id": 10149,
     "skill_id": 10072,
     "points": -10,
     "ability_name": "Def Down (S)",
-    "description": null
+    "description": "Small defense decrease."
   },
   {
     "id": 10150,
     "skill_id": 10072,
     "points": -15,
     "ability_name": "Def Down (M)",
-    "description": null
+    "description": "Medium defense decrease."
   },
   {
     "id": 10151,
     "skill_id": 10072,
     "points": -20,
     "ability_name": "Def Down (L)",
-    "description": null
+    "description": "Large defense decrease."
   },
   {
     "id": 10152,
     "skill_id": 10073,
     "points": 10,
     "ability_name": "Fire Res (S)",
-    "description": null
+    "description": "Increases Fire resistance by 5."
   },
   {
     "id": 10153,
     "skill_id": 10073,
     "points": 15,
     "ability_name": "Fire Res (L)",
-    "description": null
+    "description": "Increases Fire resistance by 10."
   },
   {
     "id": 10154,
     "skill_id": 10073,
     "points": -10,
     "ability_name": "Fire Res Weakened",
-    "description": null
+    "description": "Decreases Fire resistance."
   },
   {
     "id": 10155,
     "skill_id": 10074,
     "points": 10,
     "ability_name": "Water Res (S)",
-    "description": null
+    "description": "Increases Water resistance by 5."
   },
   {
     "id": 10156,
     "skill_id": 10074,
     "points": 15,
     "ability_name": "Water Res (L)",
-    "description": null
+    "description": "Increases Water resistance by 10."
   },
   {
     "id": 10157,
     "skill_id": 10074,
     "points": -10,
     "ability_name": "Water Res Weakened",
-    "description": null
+    "description": "Decreases Water resistance."
   },
   {
     "id": 10158,
     "skill_id": 10075,
     "points": 10,
     "ability_name": "Thunder Res (S)",
-    "description": null
+    "description": "Increases Thunder resistance by 5."
   },
   {
     "id": 10159,
     "skill_id": 10075,
     "points": 15,
     "ability_name": "Thunder Res (L)",
-    "description": null
+    "description": "Increases Thunder resistance by 10."
   },
   {
     "id": 10160,
     "skill_id": 10075,
     "points": -10,
     "ability_name": "Thunder Res Weakened",
-    "description": null
+    "description": "Decreases Thunder resistance."
   },
   {
     "id": 10161,
     "skill_id": 10076,
     "points": 10,
     "ability_name": "Ice Res (S)",
-    "description": null
+    "description": "Increases Ice resistance by 5."
   },
   {
     "id": 10162,
     "skill_id": 10076,
     "points": 15,
     "ability_name": "Ice Res (L)",
-    "description": null
+    "description": "Increases Ice resistance by 10."
   },
   {
     "id": 10163,
     "skill_id": 10076,
     "points": -10,
     "ability_name": "Ice Res Weakened",
-    "description": null
+    "description": "Decreases Ice resistance."
   },
   {
     "id": 10164,
     "skill_id": 10077,
     "points": 10,
     "ability_name": "Dragon Res (S)",
-    "description": null
+    "description": "Increases Dragon resistance by 5."
   },
   {
     "id": 10165,
     "skill_id": 10077,
     "points": 15,
     "ability_name": "Dragon Res (L)",
-    "description": null
+    "description": "Increases Dragon resistance by 10."
   },
   {
     "id": 10166,
     "skill_id": 10077,
     "points": -10,
     "ability_name": "Dragon Res Weakened",
-    "description": null
+    "description": "Decreases Dragon resistance."
   },
   {
     "id": 10167,
     "skill_id": 10078,
     "points": 10,
     "ability_name": "Wide Area +1",
-    "description": null
+    "description": "Health & status Items used also affect nearby party members."
   },
   {
     "id": 10168,
     "skill_id": 10078,
     "points": 20,
     "ability_name": "Wide Area +2",
-    "description": null
+    "description": "Health & status Items used also affect party members."
   },
   {
     "id": 10169,
     "skill_id": 10079,
     "points": 10,
     "ability_name": "Bombardier",
-    "description": null
+    "description": "Bomb damage is increased. Bomb Combinations are 100%"
   },
   {
     "id": 10170,
     "skill_id": 10080,
     "points": 10,
     "ability_name": "Trap Master",
-    "description": null
+    "description": "Speeds up trap and bomb setting time. 100% Trap combinations."
   },
   {
     "id": 10171,
     "skill_id": 10081,
     "points": 10,
     "ability_name": "Trnquilizr Guru",
-    "description": null
+    "description": "Monster icon on the map blinks when monsters are ready to be captured"
   },
   {
     "id": 10172,
     "skill_id": 10082,
     "points": 10,
     "ability_name": "Detect",
-    "description": null
+    "description": "Marked monsters display additional information on the map. Also makes monsters temporarily visible on the map without being marked."
   },
   {
     "id": 10173,
     "skill_id": 10082,
     "points": 15,
     "ability_name": "Autotracker",
-    "description": null
+    "description": "Permanently displays monster information on the map even without being marked."
   },
   {
     "id": 10174,
     "skill_id": 10083,
     "points": 10,
     "ability_name": "DungBombExpert",
-    "description": null
+    "description": "Increases Dung Bomb efficiency. 100% combination."
   },
   {
     "id": 10175,
     "skill_id": 10084,
     "points": 10,
     "ability_name": "Recovery Up",
-    "description": null
+    "description": "Increases the efficiency of Health recovery items."
   },
   {
     "id": 10176,
     "skill_id": 10084,
     "points": -10,
     "ability_name": "Recovery Down",
-    "description": null
+    "description": "Decreases the efficiency of Health recovery items."
   },
   {
     "id": 10177,
     "skill_id": 10085,
     "points": 10,
     "ability_name": "Item Use Up",
-    "description": null
+    "description": "Increases the effect time of certain items."
   },
   {
     "id": 10178,
     "skill_id": 10085,
     "points": -10,
     "ability_name": "Item Use Down",
-    "description": null
+    "description": "Decreases the effect time of certain items."
   },
   {
     "id": 10179,
@@ -1264,14 +1264,14 @@
     "skill_id": 10087,
     "points": 10,
     "ability_name": "Quick Eating +1",
-    "description": null
+    "description": "Increases meat-eating speed."
   },
   {
     "id": 10182,
     "skill_id": 10087,
     "points": 15,
     "ability_name": "Quick Eating +2",
-    "description": null
+    "description": "Increases meat and item consuming speed."
   },
   {
     "id": 10183,
@@ -1285,133 +1285,133 @@
     "skill_id": 10088,
     "points": 10,
     "ability_name": "Huntsman's Life",
-    "description": null
+    "description": "Causes fish to take bait on 1st try and raises effectiveness of bait."
   },
   {
     "id": 10185,
     "skill_id": 10089,
     "points": 10,
     "ability_name": "Backpacking Expert",
-    "description": null
+    "description": "Travel faster while carrying eggs or powderstones."
   },
   {
     "id": 10186,
     "skill_id": 10090,
     "points": 10,
     "ability_name": "Heat Cancel",
-    "description": null
+    "description": "Negates all heat, as well as damage received from lava."
   },
   {
     "id": 10187,
     "skill_id": 10090,
     "points": -10,
     "ability_name": "Heat Inc",
-    "description": null
+    "description": "Greatly increases damage incurred from heat."
   },
   {
     "id": 10188,
     "skill_id": 10091,
     "points": 10,
     "ability_name": "Cold Eliminate",
-    "description": null
+    "description": "Negates all cold."
   },
   {
     "id": 10189,
     "skill_id": 10091,
     "points": -10,
     "ability_name": "Cold Increase",
-    "description": null
+    "description": "Cold decreases stamina faster."
   },
   {
     "id": 10190,
     "skill_id": 10092,
     "points": 10,
     "ability_name": "Gathering +1",
-    "description": null
+    "description": "Chance to gather more resources in a single spot"
   },
   {
     "id": 10191,
     "skill_id": 10092,
     "points": 15,
     "ability_name": "Gathering +2",
-    "description": null
+    "description": "Higher chance to gather more resources in a single spot"
   },
   {
     "id": 10192,
     "skill_id": 10092,
     "points": -10,
     "ability_name": "Gathering -1",
-    "description": null
+    "description": "Chance to gather more resources in a single spot"
   },
   {
     "id": 10193,
     "skill_id": 10093,
     "points": 10,
     "ability_name": "Hi-SpdGathering",
-    "description": null
+    "description": "Gathering speed is increased"
   },
   {
     "id": 10194,
     "skill_id": 10094,
     "points": 10,
     "ability_name": "Spirit's Whim",
-    "description": null
+    "description": "Chance of bugnets/pickaxes/horns breaking is reduced"
   },
   {
     "id": 10195,
     "skill_id": 10094,
     "points": 15,
     "ability_name": "Divine Whim",
-    "description": null
+    "description": "Chance of bugnets/pickaxes/horns breaking is greatly reduced"
   },
   {
     "id": 10196,
     "skill_id": 10094,
     "points": -10,
     "ability_name": "Spectre's Whim",
-    "description": null
+    "description": "Chance of bugnets/pickaxes/horns breaking is increased"
   },
   {
     "id": 10197,
     "skill_id": 10094,
     "points": -15,
     "ability_name": "Devil's Whim",
-    "description": null
+    "description": "Chance of bugnets/pickaxes/horns breaking is greatly increased"
   },
   {
     "id": 10198,
     "skill_id": 10095,
     "points": 10,
     "ability_name": "Good Luck",
-    "description": null
+    "description": "Sometimes increases the number of Reward Items received."
   },
   {
     "id": 10199,
     "skill_id": 10095,
     "points": 15,
     "ability_name": "Luck Booster",
-    "description": null
+    "description": "Sometimes increases the number of Reward Items received."
   },
   {
     "id": 10200,
     "skill_id": 10095,
     "points": -10,
     "ability_name": "Bad Luck",
-    "description": null
+    "description": "Sometimes decreases the number of Reward Items received."
   },
   {
     "id": 10201,
     "skill_id": 10095,
     "points": -15,
     "ability_name": "Calamity",
-    "description": null
+    "description": "Often decreases the number of Reward Items received."
   },
   {
     "id": 10202,
     "skill_id": 10096,
     "points": 15,
     "ability_name": "Carving Expert",
-    "description": null
+    "description": "Boosts number of carving chances."
   },
   {
     "id": 10203,
@@ -1446,7 +1446,7 @@
     "skill_id": 10098,
     "points": -10,
     "ability_name": "Combine Success -10%",
-    "description": null
+    "description": "Decreases your Combination success rate by 10%."
   },
   {
     "id": 10208,
@@ -1467,35 +1467,7 @@
     "skill_id": 10100,
     "points": 0,
     "ability_name": "Torso Inc",
-    "description": null
-  },
-  {
-    "id": 10211,
-    "skill_id": 10101,
-    "points": 10,
-    "ability_name": "スキル系統1 Up",
-    "description": null
-  },
-  {
-    "id": 10212,
-    "skill_id": 10101,
-    "points": -10,
-    "ability_name": "スキル系統1 Down",
-    "description": null
-  },
-  {
-    "id": 10213,
-    "skill_id": 10102,
-    "points": 10,
-    "ability_name": "スキル系統2 Up",
-    "description": null
-  },
-  {
-    "id": 10214,
-    "skill_id": 10102,
-    "points": -10,
-    "ability_name": "スキル系統2 Down",
-    "description": null
+    "description": "Double skill points on torso including all decoration jewels."
   },
   {
     "id": 10215,

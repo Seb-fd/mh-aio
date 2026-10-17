@@ -16,7 +16,7 @@
     iconUrl: string
     iconName: string
     iconColor: string
-    gameOnly?: string
+    gameOnly?: string | string[]
   }
 
   const navItems: NavItem[] = [
@@ -91,9 +91,31 @@
       iconColor: '#3D7F3A',
       gameOnly: 'mhw',
     },
+    {
+      href: '/charms',
+      label: 'Charms',
+      iconUrl: '/icons/mhfu/decorations/ItemIcon017i.png',
+      iconName: 'Attack',
+      iconColor: 'Red',
+      gameOnly: ['mhp3rd', 'mhw'],
+    },
+    {
+      href: '/comrades',
+      label: 'Comrades',
+      iconUrl: '/icons/mhfu/monsters/felyne.png',
+      iconName: 'Felyne',
+      iconColor: 'Gray',
+      gameOnly: ['mhp3rd', 'mhr'],
+    },
   ]
 
-  const visibleItems = $derived(navItems.filter((i) => !i.gameOnly || i.gameOnly === game?.id))
+  const visibleItems = $derived(
+    navItems.filter(
+      (i) =>
+        !i.gameOnly ||
+        (Array.isArray(i.gameOnly) ? i.gameOnly.includes(game?.id ?? '') : i.gameOnly === game?.id),
+    ),
+  )
 
   function navigate(href: string) {
     if (!game) return

@@ -1,0 +1,922 @@
+[
+  {
+    "name_jp": "ボーンネコピック",
+    "price": 150,
+    "rarity": 1,
+    "attack": 14,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "肉球ネコぱんち",
+    "price": 150,
+    "rarity": 1,
+    "attack": 12,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ユクモノネコ木刀",
+    "price": 225,
+    "rarity": 1,
+    "attack": 16,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ボーンネコハンマー",
+    "price": 225,
+    "rarity": 1,
+    "attack": 18,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ドスブルネコタスク",
+    "price": 300,
+    "rarity": 2,
+    "attack": 20,
+    "element": null,
+    "sharpness": null,
+    "affinity": "10%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ジャギィネコナイフ",
+    "price": 300,
+    "rarity": 2,
+    "attack": 24,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "アシラネコトゲ棍棒",
+    "price": 300,
+    "rarity": 2,
+    "attack": 22,
+    "element": null,
+    "sharpness": null,
+    "affinity": "10%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ブナハネコダガー",
+    "price": 225,
+    "rarity": 2,
+    "attack": 18,
+    "element": null,
+    "sharpness": null,
+    "affinity": "8%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "リノプロネコ金槌",
+    "price": 225,
+    "rarity": 2,
+    "attack": 18,
+    "element": null,
+    "sharpness": null,
+    "affinity": "4%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ズワロネコリーフ",
+    "price": 225,
+    "rarity": 2,
+    "attack": 14,
+    "element": "水 8",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "マカネコピック",
+    "price": 300,
+    "rarity": 2,
+    "attack": 22,
+    "element": null,
+    "sharpness": null,
+    "affinity": "4%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "巨大ネコどんぐり",
+    "price": 300,
+    "rarity": 2,
+    "attack": 24,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ペッコネコアックス",
+    "price": 300,
+    "rarity": 2,
+    "attack": 22,
+    "element": "火 8",
+    "sharpness": null,
+    "affinity": "4%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "ルドロスネコネイル",
+    "price": 300,
+    "rarity": 2,
+    "attack": 22,
+    "element": "水 10",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "フロギィネコギター",
+    "price": 300,
+    "rarity": 2,
+    "attack": 28,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ウルクネコステッキ",
+    "price": 300,
+    "rarity": 2,
+    "attack": 22,
+    "element": "氷 10",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ボロスネコメイス",
+    "price": 300,
+    "rarity": 2,
+    "attack": 34,
+    "element": null,
+    "sharpness": null,
+    "affinity": "-8%",
+    "style": "打"
+  },
+  {
+    "name_jp": "アイアンネコソード",
+    "price": 375,
+    "rarity": 2,
+    "attack": 32,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "バギィネコ警棒",
+    "price": 375,
+    "rarity": 2,
+    "attack": 36,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ラングロネコ提灯",
+    "price": 37,
+    "rarity": 2,
+    "attack": 26,
+    "element": "火 12",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "レイアネコレイピア",
+    "price": 375,
+    "rarity": 2,
+    "attack": 30,
+    "element": "火 8",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "ネブラネコフォーク",
+    "price": 375,
+    "rarity": 2,
+    "attack": 38,
+    "element": null,
+    "sharpness": null,
+    "affinity": "6%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "マギュルネコホウキ",
+    "price": 375,
+    "rarity": 3,
+    "attack": 30,
+    "element": null,
+    "sharpness": null,
+    "affinity": "4%",
+    "style": "打"
+  },
+  {
+    "name_jp": "すずらんネコロッド",
+    "price": 375,
+    "rarity": 3,
+    "attack": 26,
+    "element": "雷 10",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ランポスネコピック",
+    "price": 375,
+    "rarity": 3,
+    "attack": 32,
+    "element": "防+5",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "大タルネコハンマー",
+    "price": 375,
+    "rarity": 3,
+    "attack": 30,
+    "element": "防+5",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ベリオネコ包丁",
+    "price": 450,
+    "rarity": 3,
+    "attack": 32,
+    "element": "氷 12",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "ナルガネコ手裏剣",
+    "price": 450,
+    "rarity": 3,
+    "attack": 42,
+    "element": null,
+    "sharpness": null,
+    "affinity": "10%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "ガンキンネコ鉄塊",
+    "price": 450,
+    "rarity": 3,
+    "attack": 44,
+    "element": null,
+    "sharpness": null,
+    "affinity": "-8%",
+    "style": "打"
+  },
+  {
+    "name_jp": "レウスネコブレイド",
+    "price": 450,
+    "rarity": 3,
+    "attack": 32,
+    "element": "火 12",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "王ネコ剣ゴロゴロ",
+    "price": 450,
+    "rarity": 3,
+    "attack": 32,
+    "element": "雷 12",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "グリルネコハンマー",
+    "price": 450,
+    "rarity": 3,
+    "attack": 30,
+    "element": "防+10",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ギルドネコレイピア",
+    "price": 450,
+    "rarity": 3,
+    "attack": 34,
+    "element": null,
+    "sharpness": null,
+    "affinity": "12%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "ディアネコハンマー",
+    "price": 525,
+    "rarity": 3,
+    "attack": 46,
+    "element": "防+10",
+    "sharpness": null,
+    "affinity": "-6%",
+    "style": "打"
+  },
+  {
+    "name_jp": "アグナネコランス",
+    "price": 525,
+    "rarity": 3,
+    "attack": 30,
+    "element": "火 16",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "レックスネコ轟槌",
+    "price": 525,
+    "rarity": 3,
+    "attack": 50,
+    "element": null,
+    "sharpness": null,
+    "affinity": "-10%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ドボルネコアックス",
+    "price": 525,
+    "rarity": 3,
+    "attack": 48,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "旗本ネコ合戦旗",
+    "price": 525,
+    "rarity": 3,
+    "attack": 38,
+    "element": "龍 12",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "武者ネコノ太刀",
+    "price": 525,
+    "rarity": 3,
+    "attack": 36,
+    "element": "龍 8",
+    "sharpness": null,
+    "affinity": "8%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "武者ネコノ槌",
+    "price": 525,
+    "rarity": 3,
+    "attack": 34,
+    "element": "龍 8",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "海賊Jネコの大鍵",
+    "price": 525,
+    "rarity": 3,
+    "attack": 44,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "ボーンSネコピック",
+    "price": 750,
+    "rarity": 4,
+    "attack": 62,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "肉球Sネコぱんち",
+    "price": 750,
+    "rarity": 4,
+    "attack": 60,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "カブレラネコピック",
+    "price": 750,
+    "rarity": 4,
+    "attack": 68,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "巨大Sネコどんぐり",
+    "price": 750,
+    "rarity": 4,
+    "attack": 66,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ユクモネコ木刀・鰹節",
+    "price": 750,
+    "rarity": 4,
+    "attack": 64,
+    "element": null,
+    "sharpness": null,
+    "affinity": "6%",
+    "style": "打"
+  },
+  {
+    "name_jp": "マギュルSネコホウキ",
+    "price": 750,
+    "rarity": 4,
+    "attack": 60,
+    "element": "防+8",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ネコノバンサン",
+    "price": 750,
+    "rarity": 4,
+    "attack": 62,
+    "element": "防+12",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ボーンSネコハンマー",
+    "price": 750,
+    "rarity": 4,
+    "attack": 64,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ドスブルSネコタスク",
+    "price": 825,
+    "rarity": 4,
+    "attack": 70,
+    "element": "防+5",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ジャギィSネコナイフ",
+    "price": 825,
+    "rarity": 4,
+    "attack": 74,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "アシラSネコトゲ棍棒",
+    "price": 825,
+    "rarity": 4,
+    "attack": 72,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ブナハSネコダガー",
+    "price": 825,
+    "rarity": 4,
+    "attack": 60,
+    "element": null,
+    "sharpness": null,
+    "affinity": "12%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "リノプロSネコ金槌",
+    "price": 750,
+    "rarity": 4,
+    "attack": 66,
+    "element": null,
+    "sharpness": null,
+    "affinity": "6%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ズワロSネコリーフ",
+    "price": 750,
+    "rarity": 4,
+    "attack": 62,
+    "element": "水 10",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ペッコSネコアックス",
+    "price": 825,
+    "rarity": 5,
+    "attack": 70,
+    "element": "火 10",
+    "sharpness": null,
+    "affinity": "6%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "ルドロスSネコネイル",
+    "price": 825,
+    "rarity": 5,
+    "attack": 70,
+    "element": "水 12",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "フロギィSネコギター",
+    "price": 825,
+    "rarity": 5,
+    "attack": 78,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ボロスSネコメイス",
+    "price": 825,
+    "rarity": 5,
+    "attack": 82,
+    "element": null,
+    "sharpness": null,
+    "affinity": "-10%",
+    "style": "打"
+  },
+  {
+    "name_jp": "カブレラソード",
+    "price": 825,
+    "rarity": 5,
+    "attack": 80,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "ウルクSネコステッキ",
+    "price": 900,
+    "rarity": 5,
+    "attack": 68,
+    "element": "氷 12",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "バギィSネコ警棒",
+    "price": 900,
+    "rarity": 5,
+    "attack": 84,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ラングロSネコ提灯",
+    "price": 900,
+    "rarity": 5,
+    "attack": 72,
+    "element": "火 14",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "クイーンネコレイピア",
+    "price": 900,
+    "rarity": 5,
+    "attack": 78,
+    "element": "火 8",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "ネブラSネコフォーク",
+    "price": 900,
+    "rarity": 5,
+    "attack": 86,
+    "element": null,
+    "sharpness": null,
+    "affinity": "6%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "ハプルSネコ銃槌",
+    "price": 900,
+    "rarity": 5,
+    "attack": 76,
+    "element": "水 10",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ベリオSネコ包丁",
+    "price": 900,
+    "rarity": 6,
+    "attack": 76,
+    "element": "氷 14",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "ナルガSネコ手裏剣",
+    "price": 900,
+    "rarity": 6,
+    "attack": 84,
+    "element": null,
+    "sharpness": null,
+    "affinity": "14%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "ガンキンSネコ鉄塊",
+    "price": 900,
+    "rarity": 6,
+    "attack": 92,
+    "element": "防+15",
+    "sharpness": null,
+    "affinity": "-10%",
+    "style": "打"
+  },
+  {
+    "name_jp": "炎剣ネコブレイド",
+    "price": 900,
+    "rarity": 6,
+    "attack": 80,
+    "element": "火 14",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "バンギスネコ暴槌",
+    "price": 1050,
+    "rarity": 7,
+    "attack": 98,
+    "element": "龍 6",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "すずらんSネコロッド",
+    "price": 900,
+    "rarity": 6,
+    "attack": 72,
+    "element": "雷 12",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "マキワリSネコ斧",
+    "price": 825,
+    "rarity": 6,
+    "attack": 76,
+    "element": null,
+    "sharpness": null,
+    "affinity": "10%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "ランポスSネコピック",
+    "price": 825,
+    "rarity": 6,
+    "attack": 78,
+    "element": "防+8",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "大タルSネコハンマー",
+    "price": 825,
+    "rarity": 6,
+    "attack": 76,
+    "element": "防+8",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ギルドネコカリバー",
+    "price": 1050,
+    "rarity": 6,
+    "attack": 80,
+    "element": null,
+    "sharpness": null,
+    "affinity": "20%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "王牙ネコ剣【猫雷】",
+    "price": 1050,
+    "rarity": 6,
+    "attack": 80,
+    "element": "雷 14",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "ディアSネコハンマー",
+    "price": 1050,
+    "rarity": 6,
+    "attack": 94,
+    "element": "防+10",
+    "sharpness": null,
+    "affinity": "-8%",
+    "style": "打"
+  },
+  {
+    "name_jp": "アグナSネコランス",
+    "price": 1050,
+    "rarity": 6,
+    "attack": 76,
+    "element": "火 18",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "レックスSネコ轟槌",
+    "price": 1050,
+    "rarity": 6,
+    "attack": 98,
+    "element": null,
+    "sharpness": null,
+    "affinity": "-12%",
+    "style": "打"
+  },
+  {
+    "name_jp": "ドボルSネコアックス",
+    "price": 1050,
+    "rarity": 6,
+    "attack": 96,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "旗本ネコ合戦旗【忠】",
+    "price": 1050,
+    "rarity": 7,
+    "attack": 90,
+    "element": "龍 12",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "覇剣ネコカムトルム",
+    "price": 1050,
+    "rarity": 7,
+    "attack": 104,
+    "element": null,
+    "sharpness": null,
+    "affinity": "15%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "崩剣ネコカムルバス",
+    "price": 1050,
+    "rarity": 7,
+    "attack": 96,
+    "element": "氷 8 防+10",
+    "sharpness": null,
+    "affinity": "-15%",
+    "style": "打"
+  },
+  {
+    "name_jp": "エスカドネコサイス",
+    "price": 1050,
+    "rarity": 7,
+    "attack": 84,
+    "element": "龍 20",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "凶ネコ刀【鰯雲】",
+    "price": 1050,
+    "rarity": 7,
+    "attack": 100,
+    "element": "水 8",
+    "sharpness": null,
+    "affinity": "-10%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "名刀ニャンテツケン",
+    "price": 1050,
+    "rarity": 7,
+    "attack": 84,
+    "element": "龍 10",
+    "sharpness": null,
+    "affinity": "8%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "打ち出のニャンコ槌",
+    "price": 1050,
+    "rarity": 7,
+    "attack": 82,
+    "element": "龍 10",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "打"
+  },
+  {
+    "name_jp": "大海賊Jネコの大冒険",
+    "price": 1050,
+    "rarity": 7,
+    "attack": 94,
+    "element": null,
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "ネコ魔王剣",
+    "price": 1050,
+    "rarity": 7,
+    "attack": 82,
+    "element": "龍 12",
+    "sharpness": null,
+    "affinity": "0%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "ソリッドネコナイフ",
+    "price": 1050,
+    "rarity": 7,
+    "attack": 88,
+    "element": null,
+    "sharpness": null,
+    "affinity": "16%",
+    "style": "斬"
+  },
+  {
+    "name_jp": "UTネコボトル",
+    "price": 1050,
+    "rarity": 7,
+    "attack": 84,
+    "element": null,
+    "sharpness": null,
+    "affinity": "6%",
+    "style": "打"
+  }
+]

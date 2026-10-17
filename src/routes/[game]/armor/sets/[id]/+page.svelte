@@ -6,7 +6,7 @@
   import Skeleton from '$lib/components/ui/skeleton.svelte'
   import EmptyState from '$lib/components/ui/empty-state.svelte'
   import Badge from '$lib/components/ui/badge.svelte'
-  import { rankTone } from '$lib/utils/mh'
+  import { rankTone, formatBonus } from '$lib/utils/mh'
   import { goto } from '$app/navigation'
   import { selectedGame } from '$lib/stores/game'
   import ItemIcon from '$lib/components/item-icon.svelte'
@@ -45,6 +45,15 @@
     if (!$selectedGame) return
     goto(`/${$selectedGame.id}/armor/${id}`)
   }
+
+  function openSkill(id: number) {
+    if (!$selectedGame) return
+    goto(`/${$selectedGame.id}/skills/${id}`)
+  }
+
+  const bonus1 = $derived(set ? formatBonus(set.bonus_skill, set.bonus_required) : null)
+  const bonus2 = $derived(set ? formatBonus(set.bonus_skill2, set.bonus_required2) : null)
+  const hasBonus = $derived(bonus1 != null || bonus2 != null)
 </script>
 
 <div class="max-w-5xl mx-auto numbered-sections">
@@ -74,6 +83,46 @@
         },
       ]}
     />
+
+    {#if hasBonus}
+      <section class="mb-6">
+        <h2 class="section-title mb-3">Set Bonus</h2>
+        <div class="rounded-lg border themed-card p-4 space-y-2">
+          {#if bonus1}
+            <div class="flex flex-wrap items-center gap-2 text-sm">
+              {#if set.bonus_skill_id != null}
+                {@const skillId = set.bonus_skill_id}
+                <button
+                  onclick={() => openSkill(skillId)}
+                  class="font-semibold text-gray-100 hover:text-[var(--theme-text-accent)] transition-colors"
+                >
+                  {set.bonus_skill}
+                </button>
+              {:else}
+                <span class="font-semibold text-gray-100">{set.bonus_skill}</span>
+              {/if}
+              <span class="text-xs text-gray-400">— {set.bonus_required} pieces</span>
+            </div>
+          {/if}
+          {#if bonus2}
+            <div class="flex flex-wrap items-center gap-2 text-sm">
+              {#if set.bonus_skill2_id != null}
+                {@const skill2Id = set.bonus_skill2_id}
+                <button
+                  onclick={() => openSkill(skill2Id)}
+                  class="font-semibold text-gray-100 hover:text-[var(--theme-text-accent)] transition-colors"
+                >
+                  {set.bonus_skill2}
+                </button>
+              {:else}
+                <span class="font-semibold text-gray-100">{set.bonus_skill2}</span>
+              {/if}
+              <span class="text-xs text-gray-400">— {set.bonus_required2} pieces</span>
+            </div>
+          {/if}
+        </div>
+      </section>
+    {/if}
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {#each set.pieces as piece (piece.id)}

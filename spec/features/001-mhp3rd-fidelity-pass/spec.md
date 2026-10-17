@@ -37,7 +37,7 @@
 ## Data contracts
 
 - Tables: `items`, `item_sources`, `monster_drops`, `quest_rewards`, `item_combine`.
-- Canonical counts: items **1044** (`Material 943 / Consumable 55 / Ammo 46`; chest-order reindex, 0 dangling refs) — the **1065 / Material 964 / 181 buy prices / 761 drops** figures in older root docs are pre-purge era (`-21` = `"(Hunt 1 [[Zinogre]])"` + 18 typos), do not use them. `buy_price>0` **150**; `sell_price==0` 23 (guides/tickets); `rarity` null 2 (`Courage Scraps`). Combines **263** (202 Normal in book order + 61 Alchemy, 0 Treasure) with `chance`. Sources **2016** (trade 528 / drop 515 / carve 374 / farm 120 / gather 110 / shop 102 / mining 100 / capture 98 / bug 36 / fish 30 / other 3). Drops **1679**. Monsters 60 / weaknesses 120 / equipment 534. Weapons 972 / craft 987 / materials 2043. Armor 1111 / armor_materials 4130 (+ derived sets). Quests 378 / rewards 1867. Skills 103 / levels 215 / decos 165 (+ derived skill points).
+- Canonical counts: items **1044** (`Material 943 / Consumable 55 / Ammo 46`; chest-order reindex, 0 dangling refs; item 10526 kept as unresolved ticket placeholder for 6 Ludroth U armor rows) — the **1065 / Material 964 / 181 buy prices / 761 drops** figures in older root docs are pre-purge era (`-21` = `"(Hunt 1 [[Zinogre]])"` + 18 typos), do not use them. `buy_price>0` **150**; `sell_price==0` 23 (guides/tickets); `rarity` null 2 (`Courage Scraps`). Combines **263** (202 Normal in book order + 61 Alchemy, 0 Treasure) with `chance`. Sources **2016** (trade 528 / drop 515 / carve 374 / farm 120 / gather 110 / shop 102 / mining 100 / capture 98 / bug 36 / fish 30 / other 3; farm strings fixed Pokke→Yukumo). Drops **1949** (60/60 monsters; 200 xeno rows pruned). Monsters 60 / weaknesses **213** (rewritten hitzones) / equipment **4481** (Akantor + Green Nargacuga linked). Weapons **973** (incl. Ludroth Splashammer; element/status filled; all with craft rows) / craft **988** / materials complete (139 backfilled). Armor **1106** (5 junk removed) / armor_materials 4130. Quests 378 / rewards 1867 (44 key flags; incl. 6 S-rank rows). Skills 101 / levels 215 (182 with descriptions) / decos 164 (158 with rarity). Charms **50,635** + charm_skills. Comrade weapons/armor/skills **92/154/52**. Trap tools **180**. Monster ailments/tools tables exist (MHFU-filled; MHP3rd tools filled).
 - Seed idempotency: existing `uq_item_sources(...)`, `uq_item_combine(...)` cover all rows.
 - Ordering: Book order (`ORDER BY item_combine.id`), Chest order for items.
 
@@ -54,7 +54,7 @@
 - JP badge renders as text **`JP`** (`items/[id]/+page.svelte` CJK regex), not the 🇯🇵 emoji cited in older docs.
 - Bilingual fields exist **only on quests** (`name/location/objective_original`; `description_original` key exists but is empty 0/378 in source → falls back to `description`). Items/monsters/weapons/armor have no `*_original`.
 - `builds` (ASS) works technically for `game_id 4` (all queries filter by `game_id`) but is tuned for MH2G (HR/Elder gate, Torso Inc, piercings); no MHP3rd-specific gate documented.
-- `tools/*` does NOT apply to MHP3rd (`gameOnly: 'mhw'`).
+- `tools/*` does NOT apply to MHP3rd (`gameOnly: 'mhw'`); MHP3rd instead has `charms/*` (skill search) and `comrades/*` (weapons/armor/skills tabs, JP names — no EN source exists) with `gameOnly: 'mhp3rd'` sidebar entries.
 
 ## Constraints
 

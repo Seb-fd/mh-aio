@@ -4877,7 +4877,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Casting Machine",
-    "conditions": "Pokke Farm smelting/casting"
+    "conditions": "Yukumo Farm smelting/casting"
   },
   {
     "item_id": 10099,
@@ -4887,7 +4887,7 @@
     "quantity_max": 1,
     "probability": 0.3,
     "location": "Yukumo Farm - Fishing Spot",
-    "conditions": "Farm Level 0 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10172,
@@ -5117,7 +5117,7 @@
     "quantity_max": 1,
     "probability": 0.12,
     "location": "Yukumo Farm - Bug Catching",
-    "conditions": "Farm Level 0, 1 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10352,
@@ -5127,7 +5127,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field (Additional Harvest)",
-    "conditions": "Additional harvest chance (Pokke Farm)"
+    "conditions": "Additional harvest chance (Yukumo Farm)"
   },
   {
     "item_id": 10098,
@@ -5147,7 +5147,7 @@
     "quantity_max": 1,
     "probability": 0.15,
     "location": "Yukumo Farm - Bug Catching",
-    "conditions": "Farm Level 2, 3 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 2, 3 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10091,
@@ -5437,7 +5437,7 @@
     "quantity_max": 1,
     "probability": 0.15,
     "location": "Yukumo Farm - Bug Catching",
-    "conditions": "Farm Level 0, 3, 4 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 3, 4 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10109,
@@ -5657,7 +5657,7 @@
     "quantity_max": 1,
     "probability": 0.12,
     "location": "Yukumo Farm - Mining Spot",
-    "conditions": "Farm Level 0 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10885,
@@ -5687,7 +5687,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (black hammer)",
-    "conditions": "Hit Bug Tree with black hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with black hammer (Yukumo Farm)"
   },
   {
     "item_id": 10059,
@@ -5697,7 +5697,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (white hammer)",
-    "conditions": "Hit Bug Tree with white hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with white hammer (Yukumo Farm)"
   },
   {
     "item_id": 10059,
@@ -5707,7 +5707,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field (Additional Harvest)",
-    "conditions": "Additional harvest chance (Pokke Farm)"
+    "conditions": "Additional harvest chance (Yukumo Farm)"
   },
   {
     "item_id": 10059,
@@ -6017,7 +6017,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Village - Yukumo Points Exchange / Arena Quest Reward",
-    "conditions": "Exchange Pokke Points or complete Arena/Training Quests"
+    "conditions": "Exchange Yukumo Points or complete Arena/Training Quests"
   },
   {
     "item_id": 10190,
@@ -6367,7 +6367,7 @@
     "quantity_max": 1,
     "probability": 0.95,
     "location": "Yukumo Farm - Beehive",
-    "conditions": "Farm Level 0, 1, 2 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1, 2 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10042,
@@ -6457,7 +6457,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field (Additional Harvest)",
-    "conditions": "Additional harvest chance (Pokke Farm)"
+    "conditions": "Additional harvest chance (Yukumo Farm)"
   },
   {
     "item_id": 10040,
@@ -6467,7 +6467,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field Cultivation",
-    "conditions": "Grown from Pokke Farm (use Seeds + Pokke Points)"
+    "conditions": "Grown from Yukumo Farm (use Seeds + Yukumo Points)"
   },
   {
     "item_id": 10040,
@@ -6497,7 +6497,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field Cultivation",
-    "conditions": "Grown from Pokke Farm (use Seeds + Pokke Points)"
+    "conditions": "Grown from Yukumo Farm (use Seeds + Yukumo Points)"
   },
   {
     "item_id": 10041,
@@ -6517,7 +6517,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field (Additional Harvest)",
-    "conditions": "Additional harvest chance (Pokke Farm)"
+    "conditions": "Additional harvest chance (Yukumo Farm)"
   },
   {
     "item_id": 10043,
@@ -6527,7 +6527,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field Cultivation",
-    "conditions": "Grown from Pokke Farm (use Seeds + Pokke Points)"
+    "conditions": "Grown from Yukumo Farm (use Seeds + Yukumo Points)"
   },
   {
     "item_id": 10043,
@@ -6547,7 +6547,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field Cultivation",
-    "conditions": "Grown from Pokke Farm (use Seeds + Pokke Points)"
+    "conditions": "Grown from Yukumo Farm (use Seeds + Yukumo Points)"
   },
   {
     "item_id": 10045,
@@ -6567,7 +6567,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field (Additional Harvest)",
-    "conditions": "Additional harvest chance (Pokke Farm)"
+    "conditions": "Additional harvest chance (Yukumo Farm)"
   },
   {
     "item_id": 10356,
@@ -6577,7 +6577,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field Cultivation",
-    "conditions": "Grown from Pokke Farm (use Seeds + Pokke Points)"
+    "conditions": "Grown from Yukumo Farm (use Seeds + Yukumo Points)"
   },
   {
     "item_id": 10356,
@@ -6607,7 +6607,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field Cultivation",
-    "conditions": "Grown from Pokke Farm (use Seeds + Pokke Points)"
+    "conditions": "Grown from Yukumo Farm (use Seeds + Yukumo Points)"
   },
   {
     "item_id": 10050,
@@ -6627,7 +6627,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field Cultivation",
-    "conditions": "Grown from Pokke Farm (use Seeds + Pokke Points)"
+    "conditions": "Grown from Yukumo Farm (use Seeds + Yukumo Points)"
   },
   {
     "item_id": 10048,
@@ -6657,7 +6657,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field Cultivation",
-    "conditions": "Grown from Pokke Farm (use Seeds + Pokke Points)"
+    "conditions": "Grown from Yukumo Farm (use Seeds + Yukumo Points)"
   },
   {
     "item_id": 10049,
@@ -6697,7 +6697,7 @@
     "quantity_max": 1,
     "probability": 0.4,
     "location": "Yukumo Farm - Mushroom Tree",
-    "conditions": "Farm Level 0, 1, 2 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1, 2 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10051,
@@ -6747,7 +6747,7 @@
     "quantity_max": 1,
     "probability": 0.28,
     "location": "Yukumo Farm - Mushroom Tree",
-    "conditions": "Farm Level 1, 2 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 1, 2 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10052,
@@ -6807,7 +6807,7 @@
     "quantity_max": 1,
     "probability": 0.26,
     "location": "Yukumo Farm - Mushroom Tree",
-    "conditions": "Farm Level 0, 1, 2 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1, 2 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10054,
@@ -6827,7 +6827,7 @@
     "quantity_max": 1,
     "probability": 0.32,
     "location": "Yukumo Farm - Mushroom Tree",
-    "conditions": "Farm Level 0, 1, 2 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1, 2 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10053,
@@ -6867,7 +6867,7 @@
     "quantity_max": 1,
     "probability": 0.1,
     "location": "Yukumo Farm - Mushroom Tree",
-    "conditions": "Farm Level 1, 2 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 1, 2 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10055,
@@ -6927,7 +6927,7 @@
     "quantity_max": 1,
     "probability": 0.06,
     "location": "Yukumo Farm - Mushroom Tree",
-    "conditions": "Farm Level 2 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 2 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10046,
@@ -7007,7 +7007,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field (Additional Harvest)",
-    "conditions": "Additional harvest chance (Pokke Farm)"
+    "conditions": "Additional harvest chance (Yukumo Farm)"
   },
   {
     "item_id": 10056,
@@ -7027,7 +7027,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (black hammer)",
-    "conditions": "Hit Bug Tree with black hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with black hammer (Yukumo Farm)"
   },
   {
     "item_id": 10056,
@@ -7037,7 +7037,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (gold hammer)",
-    "conditions": "Hit Bug Tree with gold hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with gold hammer (Yukumo Farm)"
   },
   {
     "item_id": 10056,
@@ -7047,7 +7047,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field Cultivation",
-    "conditions": "Grown from Pokke Farm (use Seeds + Pokke Points)"
+    "conditions": "Grown from Yukumo Farm (use Seeds + Yukumo Points)"
   },
   {
     "item_id": 10056,
@@ -7097,7 +7097,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (black hammer)",
-    "conditions": "Hit Bug Tree with black hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with black hammer (Yukumo Farm)"
   },
   {
     "item_id": 10057,
@@ -7107,7 +7107,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (gold hammer)",
-    "conditions": "Hit Bug Tree with gold hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with gold hammer (Yukumo Farm)"
   },
   {
     "item_id": 10057,
@@ -7117,7 +7117,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (white hammer)",
-    "conditions": "Hit Bug Tree with white hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with white hammer (Yukumo Farm)"
   },
   {
     "item_id": 10057,
@@ -7127,7 +7127,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field Cultivation",
-    "conditions": "Grown from Pokke Farm (use Seeds + Pokke Points)"
+    "conditions": "Grown from Yukumo Farm (use Seeds + Yukumo Points)"
   },
   {
     "item_id": 10057,
@@ -7157,7 +7157,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field (Additional Harvest)",
-    "conditions": "Additional harvest chance (Pokke Farm)"
+    "conditions": "Additional harvest chance (Yukumo Farm)"
   },
   {
     "item_id": 10893,
@@ -7167,7 +7167,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field Cultivation",
-    "conditions": "Grown from Pokke Farm (use Seeds + Pokke Points)"
+    "conditions": "Grown from Yukumo Farm (use Seeds + Yukumo Points)"
   },
   {
     "item_id": 10060,
@@ -7177,7 +7177,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (black hammer)",
-    "conditions": "Hit Bug Tree with black hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with black hammer (Yukumo Farm)"
   },
   {
     "item_id": 10060,
@@ -7187,7 +7187,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (white hammer)",
-    "conditions": "Hit Bug Tree with white hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with white hammer (Yukumo Farm)"
   },
   {
     "item_id": 10060,
@@ -7197,7 +7197,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field (Additional Harvest)",
-    "conditions": "Additional harvest chance (Pokke Farm)"
+    "conditions": "Additional harvest chance (Yukumo Farm)"
   },
   {
     "item_id": 10060,
@@ -7207,7 +7207,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field Cultivation",
-    "conditions": "Grown from Pokke Farm (use Seeds + Pokke Points)"
+    "conditions": "Grown from Yukumo Farm (use Seeds + Yukumo Points)"
   },
   {
     "item_id": 10362,
@@ -7217,7 +7217,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field Cultivation",
-    "conditions": "Grown from Pokke Farm (use Seeds + Pokke Points)"
+    "conditions": "Grown from Yukumo Farm (use Seeds + Yukumo Points)"
   },
   {
     "item_id": 10061,
@@ -7227,7 +7227,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field (Additional Harvest)",
-    "conditions": "Additional harvest chance (Pokke Farm)"
+    "conditions": "Additional harvest chance (Yukumo Farm)"
   },
   {
     "item_id": 10061,
@@ -7237,7 +7237,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field Cultivation",
-    "conditions": "Grown from Pokke Farm (use Seeds + Pokke Points)"
+    "conditions": "Grown from Yukumo Farm (use Seeds + Yukumo Points)"
   },
   {
     "item_id": 10061,
@@ -7277,7 +7277,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field Cultivation",
-    "conditions": "Grown from Pokke Farm (use Seeds + Pokke Points)"
+    "conditions": "Grown from Yukumo Farm (use Seeds + Yukumo Points)"
   },
   {
     "item_id": 10364,
@@ -7297,7 +7297,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field Cultivation",
-    "conditions": "Grown from Pokke Farm (use Seeds + Pokke Points)"
+    "conditions": "Grown from Yukumo Farm (use Seeds + Yukumo Points)"
   },
   {
     "item_id": 10117,
@@ -7317,7 +7317,7 @@
     "quantity_max": 1,
     "probability": 0.13,
     "location": "Yukumo Farm - Mining Spot",
-    "conditions": "Farm Level 0 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10117,
@@ -7397,7 +7397,7 @@
     "quantity_max": 1,
     "probability": 0.24,
     "location": "Yukumo Farm - Mining Spot",
-    "conditions": "Farm Level 0, 1 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10118,
@@ -7437,7 +7437,7 @@
     "quantity_max": 1,
     "probability": 0.22,
     "location": "Yukumo Farm - Mining Spot",
-    "conditions": "Farm Level 0, 1, 2 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1, 2 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10119,
@@ -7547,7 +7547,7 @@
     "quantity_max": 1,
     "probability": 0.23,
     "location": "Yukumo Farm - Mining Spot",
-    "conditions": "Farm Level 0, 1, 2, 3 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1, 2, 3 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10120,
@@ -7707,7 +7707,7 @@
     "quantity_max": 1,
     "probability": 0.26,
     "location": "Yukumo Farm - Mining Spot",
-    "conditions": "Farm Level 1, 2, 3 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 1, 2, 3 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10121,
@@ -7827,7 +7827,7 @@
     "quantity_max": 1,
     "probability": 0.24,
     "location": "Yukumo Farm - Mining Spot",
-    "conditions": "Farm Level 2, 3, 4 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 2, 3, 4 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10122,
@@ -7967,7 +7967,7 @@
     "quantity_max": 1,
     "probability": 0.13,
     "location": "Yukumo Farm - Mining Spot",
-    "conditions": "Farm Level 3, 4 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 3, 4 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10387,
@@ -8427,7 +8427,7 @@
     "quantity_max": 1,
     "probability": 0.04,
     "location": "Yukumo Farm - Mining Spot",
-    "conditions": "Farm Level 1, 2 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 1, 2 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10128,
@@ -8507,7 +8507,7 @@
     "quantity_max": 1,
     "probability": 0.03,
     "location": "Yukumo Farm - Mining Spot",
-    "conditions": "Farm Level 0, 1 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10127,
@@ -8587,7 +8587,7 @@
     "quantity_max": 1,
     "probability": 0.01,
     "location": "Yukumo Farm - Mining Spot",
-    "conditions": "Farm Level 0 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10389,
@@ -8657,7 +8657,7 @@
     "quantity_max": 1,
     "probability": 0.1,
     "location": "Yukumo Farm - Mining Spot",
-    "conditions": "Farm Level 0, 1 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10390,
@@ -8967,7 +8967,7 @@
     "quantity_max": 1,
     "probability": 0.1,
     "location": "Yukumo Farm - Mining Spot",
-    "conditions": "Farm Level 0, 1 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10391,
@@ -9287,7 +9287,7 @@
     "quantity_max": 1,
     "probability": 0.13,
     "location": "Yukumo Farm - Mining Spot",
-    "conditions": "Farm Level 2, 3, 4 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 2, 3, 4 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10392,
@@ -9397,7 +9397,7 @@
     "quantity_max": 1,
     "probability": 0.05,
     "location": "Yukumo Farm - Mining Spot",
-    "conditions": "Farm Level 4 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 4 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10393,
@@ -9477,7 +9477,7 @@
     "quantity_max": 1,
     "probability": 0.05,
     "location": "Yukumo Farm - Mining Spot",
-    "conditions": "Farm Level 0, 1 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10825,
@@ -9537,7 +9537,7 @@
     "quantity_max": 1,
     "probability": 0.05,
     "location": "Yukumo Farm - Mining Spot",
-    "conditions": "Farm Level 1, 2 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 1, 2 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10395,
@@ -9577,7 +9577,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Casting Machine",
-    "conditions": "Pokke Farm smelting/casting"
+    "conditions": "Yukumo Farm smelting/casting"
   },
   {
     "item_id": 10890,
@@ -9587,7 +9587,7 @@
     "quantity_max": 1,
     "probability": 0.28,
     "location": "Yukumo Farm - Fishing Spot",
-    "conditions": "Farm Level 0 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10103,
@@ -9607,7 +9607,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Casting Machine",
-    "conditions": "Pokke Farm smelting/casting"
+    "conditions": "Yukumo Farm smelting/casting"
   },
   {
     "item_id": 10103,
@@ -9617,7 +9617,7 @@
     "quantity_max": 1,
     "probability": 0.16,
     "location": "Yukumo Farm - Fishing Spot",
-    "conditions": "Farm Level 0, 1 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10102,
@@ -9627,7 +9627,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Casting Machine",
-    "conditions": "Pokke Farm smelting/casting"
+    "conditions": "Yukumo Farm smelting/casting"
   },
   {
     "item_id": 10102,
@@ -9637,7 +9637,7 @@
     "quantity_max": 1,
     "probability": 0.25,
     "location": "Yukumo Farm - Fishing Spot",
-    "conditions": "Farm Level 0, 1 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10101,
@@ -9647,7 +9647,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Casting Machine",
-    "conditions": "Pokke Farm smelting/casting"
+    "conditions": "Yukumo Farm smelting/casting"
   },
   {
     "item_id": 10101,
@@ -9657,7 +9657,7 @@
     "quantity_max": 1,
     "probability": 0.25,
     "location": "Yukumo Farm - Fishing Spot",
-    "conditions": "Farm Level 0, 1 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10106,
@@ -9667,7 +9667,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Casting Machine",
-    "conditions": "Pokke Farm smelting/casting"
+    "conditions": "Yukumo Farm smelting/casting"
   },
   {
     "item_id": 10106,
@@ -9677,7 +9677,7 @@
     "quantity_max": 1,
     "probability": 0.3,
     "location": "Yukumo Farm - Fishing Spot",
-    "conditions": "Farm Level 1, 2 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 1, 2 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10104,
@@ -9687,7 +9687,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Casting Machine",
-    "conditions": "Pokke Farm smelting/casting"
+    "conditions": "Yukumo Farm smelting/casting"
   },
   {
     "item_id": 10104,
@@ -9697,7 +9697,7 @@
     "quantity_max": 1,
     "probability": 0.3,
     "location": "Yukumo Farm - Fishing Spot",
-    "conditions": "Farm Level 1, 2 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 1, 2 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10105,
@@ -9707,7 +9707,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Casting Machine",
-    "conditions": "Pokke Farm smelting/casting"
+    "conditions": "Yukumo Farm smelting/casting"
   },
   {
     "item_id": 10105,
@@ -9717,7 +9717,7 @@
     "quantity_max": 1,
     "probability": 0.29,
     "location": "Yukumo Farm - Fishing Spot",
-    "conditions": "Farm Level 1, 2 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 1, 2 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10107,
@@ -9727,7 +9727,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Casting Machine",
-    "conditions": "Pokke Farm smelting/casting"
+    "conditions": "Yukumo Farm smelting/casting"
   },
   {
     "item_id": 10107,
@@ -9737,7 +9737,7 @@
     "quantity_max": 1,
     "probability": 0.08,
     "location": "Yukumo Farm - Fishing Spot",
-    "conditions": "Farm Level 0, 1, 2 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1, 2 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10107,
@@ -9767,7 +9767,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Casting Machine",
-    "conditions": "Pokke Farm smelting/casting"
+    "conditions": "Yukumo Farm smelting/casting"
   },
   {
     "item_id": 10370,
@@ -9797,7 +9797,7 @@
     "quantity_max": 1,
     "probability": 0.1,
     "location": "Yukumo Farm - Beehive",
-    "conditions": "Farm Level 0, 1 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10108,
@@ -9807,7 +9807,7 @@
     "quantity_max": 1,
     "probability": 0.04,
     "location": "Yukumo Farm - Bug Catching",
-    "conditions": "Farm Level 0 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10108,
@@ -9817,7 +9817,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Field (Additional Harvest)",
-    "conditions": "Additional harvest chance (Pokke Farm)"
+    "conditions": "Additional harvest chance (Yukumo Farm)"
   },
   {
     "item_id": 10113,
@@ -9827,7 +9827,7 @@
     "quantity_max": 1,
     "probability": 0.08,
     "location": "Yukumo Farm - Bug Catching",
-    "conditions": "Farm Level 0 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10113,
@@ -9837,7 +9837,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (black hammer)",
-    "conditions": "Hit Bug Tree with black hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with black hammer (Yukumo Farm)"
   },
   {
     "item_id": 10113,
@@ -9847,7 +9847,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (gold hammer)",
-    "conditions": "Hit Bug Tree with gold hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with gold hammer (Yukumo Farm)"
   },
   {
     "item_id": 10113,
@@ -9857,7 +9857,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (white hammer)",
-    "conditions": "Hit Bug Tree with white hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with white hammer (Yukumo Farm)"
   },
   {
     "item_id": 10376,
@@ -9867,7 +9867,7 @@
     "quantity_max": 1,
     "probability": 0.05,
     "location": "Yukumo Farm - Beehive",
-    "conditions": "Farm Level 0, 1, 2 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1, 2 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10377,
@@ -9877,7 +9877,7 @@
     "quantity_max": 1,
     "probability": 0.17,
     "location": "Yukumo Farm - Bug Catching",
-    "conditions": "Farm Level 1, 2, 3, 4 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 1, 2, 3, 4 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10377,
@@ -9887,7 +9887,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (black hammer)",
-    "conditions": "Hit Bug Tree with black hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with black hammer (Yukumo Farm)"
   },
   {
     "item_id": 10377,
@@ -9897,7 +9897,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (white hammer)",
-    "conditions": "Hit Bug Tree with white hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with white hammer (Yukumo Farm)"
   },
   {
     "item_id": 10377,
@@ -9927,7 +9927,7 @@
     "quantity_max": 1,
     "probability": 0.2,
     "location": "Yukumo Farm - Bug Catching",
-    "conditions": "Farm Level 0, 1, 3 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1, 3 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10110,
@@ -9937,7 +9937,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (black hammer)",
-    "conditions": "Hit Bug Tree with black hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with black hammer (Yukumo Farm)"
   },
   {
     "item_id": 10110,
@@ -9947,7 +9947,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (white hammer)",
-    "conditions": "Hit Bug Tree with white hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with white hammer (Yukumo Farm)"
   },
   {
     "item_id": 10110,
@@ -9977,7 +9977,7 @@
     "quantity_max": 1,
     "probability": 0.12,
     "location": "Yukumo Farm - Bug Catching",
-    "conditions": "Farm Level 0, 1, 3, 4 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1, 3, 4 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10111,
@@ -9987,7 +9987,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (black hammer)",
-    "conditions": "Hit Bug Tree with black hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with black hammer (Yukumo Farm)"
   },
   {
     "item_id": 10111,
@@ -9997,7 +9997,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (white hammer)",
-    "conditions": "Hit Bug Tree with white hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with white hammer (Yukumo Farm)"
   },
   {
     "item_id": 10111,
@@ -10097,7 +10097,7 @@
     "quantity_max": 1,
     "probability": 0.1,
     "location": "Yukumo Farm - Bug Catching",
-    "conditions": "Farm Level 2, 3 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 2, 3 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10112,
@@ -10107,7 +10107,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (black hammer)",
-    "conditions": "Hit Bug Tree with black hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with black hammer (Yukumo Farm)"
   },
   {
     "item_id": 10112,
@@ -10117,7 +10117,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (gold hammer)",
-    "conditions": "Hit Bug Tree with gold hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with gold hammer (Yukumo Farm)"
   },
   {
     "item_id": 10112,
@@ -10137,7 +10137,7 @@
     "quantity_max": 1,
     "probability": 0.24,
     "location": "Yukumo Farm - Bug Catching",
-    "conditions": "Farm Level 0, 1 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 0, 1 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10378,
@@ -10147,7 +10147,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (black hammer)",
-    "conditions": "Hit Bug Tree with black hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with black hammer (Yukumo Farm)"
   },
   {
     "item_id": 10378,
@@ -10157,7 +10157,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (white hammer)",
-    "conditions": "Hit Bug Tree with white hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with white hammer (Yukumo Farm)"
   },
   {
     "item_id": 10378,
@@ -10207,7 +10207,7 @@
     "quantity_max": 1,
     "probability": 0.25,
     "location": "Yukumo Farm - Bug Catching",
-    "conditions": "Farm Level 2, 3, 4 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 2, 3, 4 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10380,
@@ -10217,7 +10217,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (black hammer)",
-    "conditions": "Hit Bug Tree with black hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with black hammer (Yukumo Farm)"
   },
   {
     "item_id": 10380,
@@ -10227,7 +10227,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (gold hammer)",
-    "conditions": "Hit Bug Tree with gold hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with gold hammer (Yukumo Farm)"
   },
   {
     "item_id": 10380,
@@ -10237,7 +10237,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (white hammer)",
-    "conditions": "Hit Bug Tree with white hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with white hammer (Yukumo Farm)"
   },
   {
     "item_id": 10380,
@@ -10297,7 +10297,7 @@
     "quantity_max": 1,
     "probability": 0.25,
     "location": "Yukumo Farm - Bug Catching",
-    "conditions": "Farm Level 1, 2 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 1, 2 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10114,
@@ -10307,7 +10307,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (black hammer)",
-    "conditions": "Hit Bug Tree with black hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with black hammer (Yukumo Farm)"
   },
   {
     "item_id": 10114,
@@ -10317,7 +10317,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (white hammer)",
-    "conditions": "Hit Bug Tree with white hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with white hammer (Yukumo Farm)"
   },
   {
     "item_id": 10114,
@@ -10387,7 +10387,7 @@
     "quantity_max": 1,
     "probability": 0.25,
     "location": "Yukumo Farm - Bug Catching",
-    "conditions": "Farm Level 2, 3 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 2, 3 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10116,
@@ -10397,7 +10397,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (black hammer)",
-    "conditions": "Hit Bug Tree with black hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with black hammer (Yukumo Farm)"
   },
   {
     "item_id": 10116,
@@ -10407,7 +10407,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (white hammer)",
-    "conditions": "Hit Bug Tree with white hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with white hammer (Yukumo Farm)"
   },
   {
     "item_id": 10116,
@@ -10467,7 +10467,7 @@
     "quantity_max": 1,
     "probability": 0.1,
     "location": "Yukumo Farm - Bug Catching",
-    "conditions": "Farm Level 3, 4 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 3, 4 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10115,
@@ -10477,7 +10477,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (black hammer)",
-    "conditions": "Hit Bug Tree with black hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with black hammer (Yukumo Farm)"
   },
   {
     "item_id": 10115,
@@ -10487,7 +10487,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (gold hammer)",
-    "conditions": "Hit Bug Tree with gold hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with gold hammer (Yukumo Farm)"
   },
   {
     "item_id": 10115,
@@ -10497,7 +10497,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (white hammer)",
-    "conditions": "Hit Bug Tree with white hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with white hammer (Yukumo Farm)"
   },
   {
     "item_id": 10115,
@@ -10537,7 +10537,7 @@
     "quantity_max": 1,
     "probability": 0.05,
     "location": "Yukumo Farm - Bug Catching",
-    "conditions": "Farm Level 3 (Pokke Farm upgrade)"
+    "conditions": "Farm Level 3 (Yukumo Farm upgrade)"
   },
   {
     "item_id": 10764,
@@ -10547,7 +10547,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (black hammer)",
-    "conditions": "Hit Bug Tree with black hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with black hammer (Yukumo Farm)"
   },
   {
     "item_id": 10764,
@@ -10557,7 +10557,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Farm - Bug Tree (gold hammer)",
-    "conditions": "Hit Bug Tree with gold hammer (Pokke Farm)"
+    "conditions": "Hit Bug Tree with gold hammer (Yukumo Farm)"
   },
   {
     "item_id": 10764,
@@ -16117,7 +16117,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Village - Yukumo Points Exchange / Arena Quest Reward",
-    "conditions": "Exchange Pokke Points or complete Arena/Training Quests"
+    "conditions": "Exchange Yukumo Points or complete Arena/Training Quests"
   },
   {
     "item_id": 10397,
@@ -16387,7 +16387,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Village - Yukumo Points Exchange / Arena Quest Reward",
-    "conditions": "Exchange Pokke Points or complete Arena/Training Quests"
+    "conditions": "Exchange Yukumo Points or complete Arena/Training Quests"
   },
   {
     "item_id": 10209,
@@ -16397,7 +16397,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Village - Yukumo Points Exchange / Arena Quest Reward",
-    "conditions": "Exchange Pokke Points or complete Arena/Training Quests"
+    "conditions": "Exchange Yukumo Points or complete Arena/Training Quests"
   },
   {
     "item_id": 10789,
@@ -16407,7 +16407,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Village - Yukumo Points Exchange / Arena Quest Reward",
-    "conditions": "Exchange Pokke Points or complete Arena/Training Quests"
+    "conditions": "Exchange Yukumo Points or complete Arena/Training Quests"
   },
   {
     "item_id": 10210,
@@ -16417,7 +16417,7 @@
     "quantity_max": 1,
     "probability": null,
     "location": "Yukumo Village - Yukumo Points Exchange / Arena Quest Reward",
-    "conditions": "Exchange Pokke Points or complete Arena/Training Quests"
+    "conditions": "Exchange Yukumo Points or complete Arena/Training Quests"
   },
   {
     "item_id": 10488,
@@ -20158,5 +20158,105 @@
     "probability": 0.1,
     "location": "Yama Tsukami (Small Monster)",
     "conditions": "g-rank"
+  },
+  {
+    "item_id": 10367,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Sandy Plains",
+    "conditions": "Low Rank Areas: 1-10 (gather nodes)"
+  },
+  {
+    "item_id": 10367,
+    "source_type": "gather",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "High Rank Sandy Plains",
+    "conditions": "High Rank Areas: 1-10 (gather nodes)"
+  },
+  {
+    "item_id": 10685,
+    "source_type": "trade",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Yukumo Village - Yukumo Points Exchange / Arena Quest Reward",
+    "conditions": "Exchange Yukumo Points or complete Arena/Training Quests"
+  },
+  {
+    "item_id": 10173,
+    "source_type": "other",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Quest Supply Box",
+    "conditions": "Supplied at quest start"
+  },
+  {
+    "item_id": 10174,
+    "source_type": "other",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Quest Supply Box",
+    "conditions": "Supplied at quest start"
+  },
+  {
+    "item_id": 10178,
+    "source_type": "other",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Quest Supply Box",
+    "conditions": "Supplied at quest start"
+  },
+  {
+    "item_id": 10183,
+    "source_type": "other",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Quest Supply Box",
+    "conditions": "Supplied at quest start"
+  },
+  {
+    "item_id": 10186,
+    "source_type": "other",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Quest Supply Box",
+    "conditions": "Supplied at quest start"
+  },
+  {
+    "item_id": 10187,
+    "source_type": "other",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Quest Supply Box",
+    "conditions": "Supplied at quest start"
+  },
+  {
+    "item_id": 10189,
+    "source_type": "other",
+    "source_id": null,
+    "quantity_min": 1,
+    "quantity_max": 1,
+    "probability": null,
+    "location": "Quest Supply Box",
+    "conditions": "Supplied at quest start"
   }
 ]

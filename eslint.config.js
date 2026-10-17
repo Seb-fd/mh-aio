@@ -31,6 +31,8 @@ export default tseslint.config(
       'node_modules/',
       'static/',
       'scripts/',
+      'tmp/',
+      'tmp_*/',
     ],
   },
   {

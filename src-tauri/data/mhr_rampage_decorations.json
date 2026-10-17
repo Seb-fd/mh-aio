@@ -1,0 +1,210 @@
+[
+ {
+  "id": 60001,
+  "name": "Elembane Jewel 3",
+  "grants_skill": "Element Exploit",
+  "slot": 3,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Element Exploit skill."
+ },
+ {
+  "id": 60002,
+  "name": "Defense Edge Jewel 1",
+  "grants_skill": "Defense Grinder I",
+  "slot": 1,
+  "weapon_types": "Great Sword/Charge Blade",
+  "description": "(Great Sword/Charge Blade only) A decoration that gives weapons Defense Grinder I."
+ },
+ {
+  "id": 60003,
+  "name": "Defense Master Jewel 3",
+  "grants_skill": "Defense Grinder II",
+  "slot": 3,
+  "weapon_types": "Great Sword/Charge Blade",
+  "description": "(Great Sword/Charge Blade only) A decoration that gives weapons Defense Grinder II."
+ },
+ {
+  "id": 60004,
+  "name": "Raging Jewel 3",
+  "grants_skill": "Hellion Mode",
+  "slot": 3,
+  "weapon_types": "Dual Blades",
+  "description": "(Dual Blades only) A decoration that gives weapons Hellion Mode."
+ },
+ {
+  "id": 60005,
+  "name": "Doot Range Jewel 2",
+  "grants_skill": "Maximum Volume",
+  "slot": 2,
+  "weapon_types": "Hunting Horn",
+  "description": "(Hunting Horn only) A decoration that gives weapons Maximum Volume."
+ },
+ {
+  "id": 60006,
+  "name": "Switcher Jewel 3",
+  "grants_skill": "Phial Switch Boost",
+  "slot": 3,
+  "weapon_types": "Switch Axe",
+  "description": "(Switch Axe only) A decoration that gives weapons Phial Switch Boost."
+ },
+ {
+  "id": 60007,
+  "name": "Arc Jewel 2",
+  "grants_skill": "Lasting Arc Shot",
+  "slot": 2,
+  "weapon_types": "Bow",
+  "description": "(Bow only) A decoration that gives weapons Lasting Arc Shot."
+ },
+ {
+  "id": 60008,
+  "name": "Wyrmstake Jewel 3",
+  "grants_skill": "Wyrmstake Boost",
+  "slot": 3,
+  "weapon_types": "Artillery",
+  "description": "(Artillery only) A decoration that gives weapons Wyrmstake Boost."
+ },
+ {
+  "id": 60009,
+  "name": "Anti-Dragon Jewel 2",
+  "grants_skill": "Wyvern Exploit",
+  "slot": 2,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Dragon Exploit skill."
+ },
+ {
+  "id": 60010,
+  "name": "Anti-Aerial Jewel 2",
+  "grants_skill": "Anti-Aerial Species",
+  "slot": 2,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Anti-Aerial Species skill."
+ },
+ {
+  "id": 60011,
+  "name": "Anti-Aquatic Jewel 2",
+  "grants_skill": "Anti-Aquatic Species",
+  "slot": 2,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Anti-Aquatic Species skill."
+ },
+ {
+  "id": 60012,
+  "name": "Small Monster Jewel 1",
+  "grants_skill": "Small Monster Exploit",
+  "slot": 1,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Small Monster Exploit skill."
+ },
+ {
+  "id": 60013,
+  "name": "Fireblight Jewel 1",
+  "grants_skill": "Fireblight Exploit",
+  "slot": 1,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Fireblight Exploit skill."
+ },
+ {
+  "id": 60014,
+  "name": "Waterblight Jewel 1",
+  "grants_skill": "Waterblight Exploit",
+  "slot": 1,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Waterblight Exploit skill."
+ },
+ {
+  "id": 60015,
+  "name": "Thunderblight Jewel 1",
+  "grants_skill": "Thunderblight Exploit",
+  "slot": 1,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Thunderblight Exploit skill."
+ },
+ {
+  "id": 60016,
+  "name": "Iceblight Jewel 1",
+  "grants_skill": "Iceblight Exploit",
+  "slot": 1,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Iceblight Exploit skill."
+ },
+ {
+  "id": 60017,
+  "name": "Magna Soul Jewel 2",
+  "grants_skill": "Magnamalo Soul",
+  "slot": 2,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Magnamalo Soul skill."
+ },
+ {
+  "id": 60018,
+  "name": "Valstrax Soul Jewel 2",
+  "grants_skill": "Valstrax Soul",
+  "slot": 2,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Valstrax Soul skill."
+ },
+ {
+  "id": 60019,
+  "name": "Chameleos Soul Jewel 2",
+  "grants_skill": "Chameleos Soul",
+  "slot": 2,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Chameleos Soul skill."
+ },
+ {
+  "id": 60020,
+  "name": "Daora Soul Jewel 3",
+  "grants_skill": "Kushala Daora Soul",
+  "slot": 3,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Kushala Daora Soul skill."
+ },
+ {
+  "id": 60021,
+  "name": "Teostra Soul Jewel 2",
+  "grants_skill": "Teostra Soul",
+  "slot": 2,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Teostra Soul skill."
+ },
+ {
+  "id": 60022,
+  "name": "Ibushi Soul Jewel 2",
+  "grants_skill": "Ibushi Soul",
+  "slot": 2,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Ibushi Soul skill."
+ },
+ {
+  "id": 60023,
+  "name": "Narwa Soul Jewel 2",
+  "grants_skill": "Narwa Soul",
+  "slot": 2,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Narwa Soul skill."
+ },
+ {
+  "id": 60024,
+  "name": "Rally Jewel 1",
+  "grants_skill": "Buddy Rally",
+  "slot": 1,
+  "weapon_types": null,
+  "description": "A weapon decoration that enhances the Buddy Rally skill."
+ },
+ {
+  "id": 60025,
+  "name": "Spiribird Jewel 1",
+  "grants_skill": "Spiribird Doubled",
+  "slot": 1,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Spiribird Doubled skill."
+ },
+ {
+  "id": 60026,
+  "name": "Fanged Exploit Jewel 2",
+  "grants_skill": "",
+  "slot": 2,
+  "weapon_types": null,
+  "description": "A decoration that gives weapons the Fanged Exploit skill."
+ }
+]

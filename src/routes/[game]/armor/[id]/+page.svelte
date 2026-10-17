@@ -6,7 +6,9 @@
   import MaterialList from '$lib/components/material-list.svelte'
   import Skeleton from '$lib/components/ui/skeleton.svelte'
   import EmptyState from '$lib/components/ui/empty-state.svelte'
-  import { rankTone } from '$lib/utils/mh'
+  import { rankTone, formatBonus } from '$lib/utils/mh'
+  import { goto } from '$app/navigation'
+  import { selectedGame } from '$lib/stores/game'
 
   const id = $derived(Number(page.params.id))
   let armor = $state<ArmorDetail | null>(null)
@@ -37,6 +39,18 @@
     waist: 'Coil',
     legs: 'Greaves',
   }
+
+  function openSet(id: number) {
+    if (!$selectedGame) return
+    goto(`/${$selectedGame.id}/armor/sets/${id}`)
+  }
+
+  const setBonus1 = $derived(
+    armor ? formatBonus(armor.set_bonus_skill, armor.set_bonus_required) : null,
+  )
+  const setBonus2 = $derived(
+    armor ? formatBonus(armor.set_bonus_skill2, armor.set_bonus_required2) : null,
+  )
 </script>
 
 <div class="max-w-5xl mx-auto numbered-sections">
@@ -78,6 +92,31 @@
           : []),
       ]}
     />
+
+    {#if armor.set_id != null && (setBonus1 != null || setBonus2 != null)}
+      {@const setId = armor.set_id}
+      <section class="mb-8">
+        <div class="rounded-lg border themed-card p-4">
+          <p class="text-xs text-gray-400">
+            Part of the
+            <button
+              onclick={() => openSet(setId)}
+              class="font-semibold text-gray-100 hover:text-[var(--theme-text-accent)] transition-colors"
+            >
+              {armor.set_name ?? 'set'}
+            </button>
+          </p>
+          <div class="mt-1 space-y-1">
+            {#if setBonus1}
+              <p class="text-sm text-emerald-300/90">◆ {setBonus1}</p>
+            {/if}
+            {#if setBonus2}
+              <p class="text-sm text-emerald-300/90">◆ {setBonus2}</p>
+            {/if}
+          </div>
+        </div>
+      </section>
+    {/if}
 
     <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
       <div class="rounded-lg border themed-card p-3 text-center">

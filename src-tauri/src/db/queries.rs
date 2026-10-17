@@ -90,6 +90,7 @@ pub struct MonsterDetail {
     pub weaknesses: Vec<MonsterWeakness>,
     pub ailments: Vec<MonsterAilment>,
     pub tools: Vec<MonsterTool>,
+    pub part_break: Vec<MonsterPartBreak>,
     pub drops: Vec<MonsterDrop>,
     pub armor: Vec<Armor>,
     pub weapons: Vec<Weapon>,
@@ -110,7 +111,7 @@ pub struct MonsterDrop {
     pub part: Option<String>,
     pub rank: Option<String>,
     pub quantity: i32,
-    pub probability: f64,
+    pub probability: Option<f64>,
     pub condition: Option<String>,
 }
 
@@ -141,6 +142,7 @@ pub struct MonsterAilment {
     pub decay_interval: Option<i32>,
     pub duration_sec: Option<i32>,
     pub damage: Option<i32>,
+    pub notes: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
@@ -151,6 +153,17 @@ pub struct MonsterTool {
     pub normal: Option<i32>,
     pub notfound: Option<i32>,
     pub enraged: Option<i32>,
+    pub notes: Option<String>,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct MonsterPartBreak {
+    pub id: i32,
+    pub monster_id: i32,
+    pub part: String,
+    pub part_hp: Option<i32>,
+    pub break_text: Option<String>,
+    pub extract: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -204,6 +217,7 @@ pub struct WeaponDetail {
     pub forge_materials: Vec<MaterialRef>,
     pub upgrade_materials: Vec<MaterialRef>,
     pub is_forgeable: bool,
+    pub rampage: Vec<RampageRef>,
     pub icon_name: Option<String>,
     pub icon_color: Option<String>,
     pub icon_url: Option<String>,
@@ -215,6 +229,13 @@ pub struct MaterialRef {
     pub item_id: i32,
     pub item_name: String,
     pub quantity: i32,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct RampageRef {
+    pub skill_id: i32,
+    pub skill_name: String,
+    pub description: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
@@ -270,6 +291,11 @@ pub struct ArmorDetail {
     pub icon_color: Option<String>,
     pub icon_url: Option<String>,
     pub language: String,
+    pub set_name: Option<String>,
+    pub set_bonus_skill: Option<String>,
+    pub set_bonus_required: Option<i32>,
+    pub set_bonus_skill2: Option<String>,
+    pub set_bonus_required2: Option<i32>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -505,6 +531,73 @@ pub struct SkillWeaponRef {
     pub points: i32,
 }
 
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct SetBonusRef {
+    pub set_id: i32,
+    pub set_name: String,
+    pub rank: Option<String>,
+    pub bonus_skill: String,
+    pub required_pieces: i32,
+}
+
+fn get_skill_set_bonuses(conn: &Connection, skill_id: i32) -> Result<Vec<SetBonusRef>> {
+    // Sets whose skill1 or skill2 bonus grants this skill (name-resolved
+    // per-game so cross-game name collisions cannot mislink).
+    let mut stmt = conn.prepare(
+        "SELECT s.id, s.name,
+                (SELECT rank FROM armor WHERE set_id = s.id LIMIT 1) as rank,
+                s.bonus_skill, s.bonus_required
+         FROM armor_sets s
+         JOIN skills sk ON sk.id = ?1 AND sk.game_id = s.game_id
+            AND sk.name = s.bonus_skill
+         ORDER BY s.id
+         LIMIT 200",
+    )?;
+    let mut out: Vec<SetBonusRef> = stmt
+        .query_map(params![skill_id], |row| {
+            Ok(SetBonusRef {
+                set_id: row.get(0)?,
+                set_name: row.get(1)?,
+                rank: row.get(2)?,
+                bonus_skill: row.get(3)?,
+                required_pieces: row.get(4)?,
+            })
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+    let mut stmt2 = conn.prepare(
+        "SELECT s.id, s.name,
+                (SELECT rank FROM armor WHERE set_id = s.id LIMIT 1) as rank,
+                s.bonus_skill2, s.bonus_required2
+         FROM armor_sets s
+         JOIN skills sk ON sk.id = ?1 AND sk.game_id = s.game_id
+            AND sk.name = s.bonus_skill2
+         ORDER BY s.id
+         LIMIT 200",
+    )?;
+    let more: Vec<SetBonusRef> = stmt2
+        .query_map(params![skill_id], |row| {
+            Ok(SetBonusRef {
+                set_id: row.get(0)?,
+                set_name: row.get(1)?,
+                rank: row.get(2)?,
+                bonus_skill: row.get(3)?,
+                required_pieces: row.get(4)?,
+            })
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+    out.extend(more);
+    out.sort_by_key(|r| r.set_id);
+    Ok(out)
+}
+
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SkillDetail {
     pub id: i32,
@@ -517,6 +610,7 @@ pub struct SkillDetail {
     pub decorations: Vec<SkillDecoration>,
     pub armors: Vec<SkillArmorRef>,
     pub weapons: Vec<SkillWeaponRef>,
+    pub set_bonuses: Vec<SetBonusRef>,
 }
 
 pub fn get_monsters_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Monster>> {
@@ -576,6 +670,7 @@ pub fn get_monster_detail(conn: &Connection, id: i32) -> Result<Option<MonsterDe
     let weaknesses = get_monster_weaknesses(conn, id)?;
     let ailments = get_monster_ailments(conn, id)?;
     let tools = get_monster_tools(conn, id)?;
+    let part_break = get_monster_part_break(conn, id)?;
     let drops = get_monster_drops(conn, id)?;
     let armor = get_monster_related_armor(conn, id)?;
     let weapons = get_monster_related_weapons(conn, id)?;
@@ -590,6 +685,7 @@ pub fn get_monster_detail(conn: &Connection, id: i32) -> Result<Option<MonsterDe
         weaknesses,
         ailments,
         tools,
+        part_break,
         drops,
         armor,
         weapons,
@@ -765,6 +861,14 @@ pub fn get_monster_dedicated_sets(
             name: sname,
             pieces,
             language: lang,
+            // Dedicated monster sets are dynamic groupings; canonical bonus
+            // display lives on the sets browser (get_armor_set_detail).
+            bonus_skill: None,
+            bonus_required: None,
+            bonus_skill_id: None,
+            bonus_skill2: None,
+            bonus_required2: None,
+            bonus_skill2_id: None,
         });
     }
     out.sort_by_key(|s| s.id);
@@ -950,7 +1054,7 @@ fn get_monster_weaknesses(conn: &Connection, monster_id: i32) -> Result<Vec<Mons
 
 fn get_monster_ailments(conn: &Connection, monster_id: i32) -> Result<Vec<MonsterAilment>> {
     let mut stmt = conn.prepare(
-        "SELECT id, monster_id, ailment, initial, increase, max, decay_step, decay_interval, duration_sec, damage
+        "SELECT id, monster_id, ailment, initial, increase, max, decay_step, decay_interval, duration_sec, damage, notes
          FROM monster_ailments WHERE monster_id = ?1 ORDER BY id",
     )?;
 
@@ -967,6 +1071,7 @@ fn get_monster_ailments(conn: &Connection, monster_id: i32) -> Result<Vec<Monste
                 decay_interval: row.get(7)?,
                 duration_sec: row.get(8)?,
                 damage: row.get(9)?,
+                notes: row.get(10)?,
             })
         })?
         .filter_map(|r| {
@@ -980,7 +1085,7 @@ fn get_monster_ailments(conn: &Connection, monster_id: i32) -> Result<Vec<Monste
 
 fn get_monster_tools(conn: &Connection, monster_id: i32) -> Result<Vec<MonsterTool>> {
     let mut stmt = conn.prepare(
-        "SELECT id, monster_id, tool, normal, notfound, enraged
+        "SELECT id, monster_id, tool, normal, notfound, enraged, notes
          FROM monster_tools WHERE monster_id = ?1 ORDER BY id",
     )?;
 
@@ -993,6 +1098,7 @@ fn get_monster_tools(conn: &Connection, monster_id: i32) -> Result<Vec<MonsterTo
                 normal: row.get(3)?,
                 notfound: row.get(4)?,
                 enraged: row.get(5)?,
+                notes: row.get(6)?,
             })
         })?
         .filter_map(|r| {
@@ -1002,6 +1108,32 @@ fn get_monster_tools(conn: &Connection, monster_id: i32) -> Result<Vec<MonsterTo
         .collect();
 
     Ok(tools)
+}
+
+fn get_monster_part_break(conn: &Connection, monster_id: i32) -> Result<Vec<MonsterPartBreak>> {
+    let mut stmt = conn.prepare(
+        "SELECT id, monster_id, part, part_hp, break_text, extract
+         FROM monster_part_break WHERE monster_id = ?1 ORDER BY id",
+    )?;
+
+    let out = stmt
+        .query_map(params![monster_id], |row| {
+            Ok(MonsterPartBreak {
+                id: row.get(0)?,
+                monster_id: row.get(1)?,
+                part: row.get(2)?,
+                part_hp: row.get(3)?,
+                break_text: row.get(4)?,
+                extract: row.get(5)?,
+            })
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+
+    Ok(out)
 }
 
 pub fn get_weapons_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Weapon>> {
@@ -1162,6 +1294,7 @@ pub fn get_weapon_detail(conn: &Connection, id: i32) -> Result<Option<WeaponDeta
     let forge_materials = get_weapon_craft_materials(conn, id, "forge")?;
     let upgrade_materials = get_weapon_craft_materials(conn, id, "upgrade")?;
     let is_forgeable = !forge_materials.is_empty();
+    let rampage = get_weapon_rampage(conn, id)?;
 
     Ok(Some(WeaponDetail {
         id,
@@ -1187,11 +1320,34 @@ pub fn get_weapon_detail(conn: &Connection, id: i32) -> Result<Option<WeaponDeta
         forge_materials,
         upgrade_materials,
         is_forgeable,
+        rampage,
         icon_name,
         icon_color,
         icon_url,
         language,
     }))
+}
+
+fn get_weapon_rampage(conn: &Connection, weapon_id: i32) -> Result<Vec<RampageRef>> {
+    let mut stmt = conn.prepare(
+        "SELECT rs.id, rs.name, rs.description
+         FROM weapon_rampage wr JOIN rampage_skills rs ON rs.id = wr.skill_id
+         WHERE wr.weapon_id = ?1 ORDER BY rs.id",
+    )?;
+    let out = stmt
+        .query_map(params![weapon_id], |row| {
+            Ok(RampageRef {
+                skill_id: row.get(0)?,
+                skill_name: row.get(1)?,
+                description: row.get(2)?,
+            })
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+    Ok(out)
 }
 
 fn get_weapon_craft_materials(
@@ -1307,6 +1463,10 @@ pub struct ArmorSet {
     pub rank: Option<String>,
     pub rarity: Option<i32>,
     pub language: String,
+    pub bonus_skill: Option<String>,
+    pub bonus_required: Option<i32>,
+    pub bonus_skill2: Option<String>,
+    pub bonus_required2: Option<i32>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -1316,6 +1476,12 @@ pub struct ArmorSetDetail {
     pub name: String,
     pub pieces: Vec<Armor>,
     pub language: String,
+    pub bonus_skill: Option<String>,
+    pub bonus_required: Option<i32>,
+    pub bonus_skill_id: Option<i32>,
+    pub bonus_skill2: Option<String>,
+    pub bonus_required2: Option<i32>,
+    pub bonus_skill2_id: Option<i32>,
 }
 
 pub fn get_armor_sets_by_game(conn: &Connection, game_id: i32) -> Result<Vec<ArmorSet>> {
@@ -1323,7 +1489,7 @@ pub fn get_armor_sets_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Arm
         "SELECT s.id, s.game_id, s.name, COUNT(a.id) as piece_count,
                 (SELECT rank FROM armor WHERE set_id = s.id LIMIT 1) as rank,
                 (SELECT MAX(rarity) FROM armor WHERE set_id = s.id) as rarity,
-                s.language
+                s.language, s.bonus_skill, s.bonus_required, s.bonus_skill2, s.bonus_required2
          FROM armor_sets s
          LEFT JOIN armor a ON a.set_id = s.id
          WHERE s.game_id = ?1
@@ -1340,6 +1506,10 @@ pub fn get_armor_sets_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Arm
                 rank: row.get(4)?,
                 rarity: row.get(5)?,
                 language: row.get(6)?,
+                bonus_skill: row.get(7)?,
+                bonus_required: row.get(8)?,
+                bonus_skill2: row.get(9)?,
+                bonus_required2: row.get(10)?,
             })
         })?
         .filter_map(|r| {
@@ -1351,14 +1521,30 @@ pub fn get_armor_sets_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Arm
 }
 
 pub fn get_armor_set_detail(conn: &Connection, id: i32) -> Result<Option<ArmorSetDetail>> {
-    let row: Option<(i32, i32, String, String)> = conn
+    let row: Option<(i32, i32, String, String, Option<String>, Option<i32>, Option<i32>, Option<String>, Option<i32>, Option<i32>)> = conn
         .query_row(
-            "SELECT id, game_id, name, language FROM armor_sets WHERE id = ?1",
+            "SELECT s.id, s.game_id, s.name, s.language, s.bonus_skill, s.bonus_required, sk1.id, s.bonus_skill2, s.bonus_required2, sk2.id
+             FROM armor_sets s
+             LEFT JOIN skills sk1 ON sk1.name = s.bonus_skill AND sk1.game_id = s.game_id
+             LEFT JOIN skills sk2 ON sk2.name = s.bonus_skill2 AND sk2.game_id = s.game_id
+             WHERE s.id = ?1",
             params![id],
-            |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?)),
+            |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?, row.get(4)?, row.get(5)?, row.get(6)?, row.get(7)?, row.get(8)?, row.get(9)?)),
         )
         .optional()?;
-    let Some((id, game_id, name, language)) = row else {
+    let Some((
+        id,
+        game_id,
+        name,
+        language,
+        bonus_skill,
+        bonus_required,
+        bonus_skill_id,
+        bonus_skill2,
+        bonus_required2,
+        bonus_skill2_id,
+    )) = row
+    else {
         return Ok(None);
     };
     let mut stmt = conn.prepare(
@@ -1407,6 +1593,12 @@ pub fn get_armor_set_detail(conn: &Connection, id: i32) -> Result<Option<ArmorSe
         name,
         pieces,
         language,
+        bonus_skill,
+        bonus_required,
+        bonus_skill_id,
+        bonus_skill2,
+        bonus_required2,
+        bonus_skill2_id,
     }))
 }
 
@@ -1436,12 +1628,18 @@ pub fn get_armor_detail(conn: &Connection, id: i32) -> Result<Option<ArmorDetail
         Option<String>,
         Option<String>,
         String,
+        Option<String>,
+        Option<String>,
+        Option<i32>,
+        Option<String>,
+        Option<i32>,
     )> = conn
         .query_row(
-            "SELECT id, game_id, name, slot_type, rank, rarity, defense_base, defense_max,
-                    resistance_fire, resistance_water, resistance_thunder, resistance_ice, resistance_dragon,
-                    slots, skills, armor_type, gender, set_id, crafting_cost, description, icon_name, icon_color, icon_url, language
-             FROM armor WHERE id = ?1",
+            "SELECT a.id, a.game_id, a.name, a.slot_type, a.rank, a.rarity, a.defense_base, a.defense_max,
+                    a.resistance_fire, a.resistance_water, a.resistance_thunder, a.resistance_ice, a.resistance_dragon,
+                    a.slots, a.skills, a.armor_type, a.gender, a.set_id, a.crafting_cost, a.description, a.icon_name, a.icon_color, a.icon_url, a.language,
+                    s.name, s.bonus_skill, s.bonus_required, s.bonus_skill2, s.bonus_required2
+             FROM armor a LEFT JOIN armor_sets s ON s.id = a.set_id WHERE a.id = ?1",
             params![id],
             |row| {
                 Ok((
@@ -1469,6 +1667,11 @@ pub fn get_armor_detail(conn: &Connection, id: i32) -> Result<Option<ArmorDetail
                     row.get(21)?,
                     row.get(22)?,
                     row.get(23)?,
+                    row.get(24)?,
+                    row.get(25)?,
+                    row.get(26)?,
+                    row.get(27)?,
+                    row.get(28)?,
                 ))
             },
         )
@@ -1499,6 +1702,11 @@ pub fn get_armor_detail(conn: &Connection, id: i32) -> Result<Option<ArmorDetail
         icon_color,
         icon_url,
         language,
+        set_name,
+        set_bonus_skill,
+        set_bonus_required,
+        set_bonus_skill2,
+        set_bonus_required2,
     )) = row
     else {
         return Ok(None);
@@ -1532,6 +1740,11 @@ pub fn get_armor_detail(conn: &Connection, id: i32) -> Result<Option<ArmorDetail
         icon_color,
         icon_url,
         language,
+        set_name,
+        set_bonus_skill,
+        set_bonus_required,
+        set_bonus_skill2,
+        set_bonus_required2,
     }))
 }
 
@@ -2123,6 +2336,394 @@ pub fn get_combinations_by_game(conn: &Connection, game_id: i32) -> Result<Vec<C
     Ok(out)
 }
 
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct CharmSkillView {
+    pub skill_id: i32,
+    pub skill_name: String,
+    pub points: i32,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct ComradeWeapon {
+    pub id: i32,
+    pub name_jp: String,
+    pub price: Option<i32>,
+    pub rarity: Option<i32>,
+    pub attack: Option<i32>,
+    pub element: Option<String>,
+    pub sharpness: Option<String>,
+    pub affinity: Option<String>,
+    pub style: Option<String>,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct ComradeArmor {
+    pub id: i32,
+    pub name_jp: String,
+    pub slot: String,
+    pub rarity: Option<i32>,
+    pub price: Option<i32>,
+    pub defense: Option<i32>,
+    pub fire: Option<i32>,
+    pub water: Option<i32>,
+    pub thunder: Option<i32>,
+    pub ice: Option<i32>,
+    pub dragon: Option<i32>,
+    pub materials_jp: Option<String>,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct ComradeSkill {
+    pub id: i32,
+    pub name_jp: String,
+    pub memory: Option<String>,
+    pub effect_jp: Option<String>,
+    pub cost: Option<i32>,
+    pub learn_level: Option<String>,
+}
+
+pub fn get_comrade_weapons(conn: &Connection, game_id: i32) -> Result<Vec<ComradeWeapon>> {
+    let mut stmt = conn.prepare(
+        "SELECT id, name_jp, price, rarity, attack, element, sharpness, affinity, style
+         FROM comrade_weapons WHERE game_id = ?1 ORDER BY rarity, id",
+    )?;
+
+    let weapons = stmt
+        .query_map(params![game_id], |row| {
+            Ok(ComradeWeapon {
+                id: row.get(0)?,
+                name_jp: row.get(1)?,
+                price: row.get(2)?,
+                rarity: row.get(3)?,
+                attack: row.get(4)?,
+                element: row.get(5)?,
+                sharpness: row.get(6)?,
+                affinity: row.get(7)?,
+                style: row.get(8)?,
+            })
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+
+    Ok(weapons)
+}
+
+pub fn get_comrade_armor(conn: &Connection, game_id: i32) -> Result<Vec<ComradeArmor>> {
+    let mut stmt = conn.prepare(
+        "SELECT id, name_jp, slot, rarity, price, defense, fire, water, thunder, ice, dragon, materials_jp
+         FROM comrade_armor WHERE game_id = ?1 ORDER BY slot, rarity, id",
+    )?;
+
+    let armor = stmt
+        .query_map(params![game_id], |row| {
+            Ok(ComradeArmor {
+                id: row.get(0)?,
+                name_jp: row.get(1)?,
+                slot: row.get(2)?,
+                rarity: row.get(3)?,
+                price: row.get(4)?,
+                defense: row.get(5)?,
+                fire: row.get(6)?,
+                water: row.get(7)?,
+                thunder: row.get(8)?,
+                ice: row.get(9)?,
+                dragon: row.get(10)?,
+                materials_jp: row.get(11)?,
+            })
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+
+    Ok(armor)
+}
+
+pub fn get_comrade_skills(conn: &Connection, game_id: i32) -> Result<Vec<ComradeSkill>> {
+    let mut stmt = conn.prepare(
+        "SELECT id, name_jp, memory, effect_jp, cost, learn_level
+         FROM comrade_skills WHERE game_id = ?1 ORDER BY id",
+    )?;
+
+    let skills = stmt
+        .query_map(params![game_id], |row| {
+            Ok(ComradeSkill {
+                id: row.get(0)?,
+                name_jp: row.get(1)?,
+                memory: row.get(2)?,
+                effect_jp: row.get(3)?,
+                cost: row.get(4)?,
+                learn_level: row.get(5)?,
+            })
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+
+    Ok(skills)
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct BuddyWeapon {
+    pub id: i32,
+    pub kind: String,
+    pub name: String,
+    pub attack_type: Option<String>,
+    pub attack_melee: Option<i32>,
+    pub attack_ranged: Option<i32>,
+    pub element_type: Option<String>,
+    pub element_melee: Option<i32>,
+    pub element_ranged: Option<i32>,
+    pub status_type: Option<String>,
+    pub status_melee: Option<i32>,
+    pub status_ranged: Option<i32>,
+    pub affinity: Option<i32>,
+    pub defense_bonus: Option<i32>,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct BuddyArmor {
+    pub id: i32,
+    pub kind: String,
+    pub name: String,
+    pub defense: Option<i32>,
+    pub fire: Option<i32>,
+    pub water: Option<i32>,
+    pub thunder: Option<i32>,
+    pub ice: Option<i32>,
+    pub dragon: Option<i32>,
+}
+
+pub fn get_buddy_weapons(
+    conn: &Connection,
+    game_id: i32,
+    kind: Option<String>,
+) -> Result<Vec<BuddyWeapon>> {
+    let mut stmt = conn.prepare(
+        "SELECT id, kind, name, attack_type, attack_melee, attack_ranged,
+                element_type, element_melee, element_ranged,
+                status_type, status_melee, status_ranged, affinity, defense_bonus
+         FROM buddy_weapons WHERE game_id = ?1 AND (?2 IS NULL OR kind = ?2)
+         ORDER BY kind, id",
+    )?;
+
+    let weapons = stmt
+        .query_map(params![game_id, kind], |row| {
+            Ok(BuddyWeapon {
+                id: row.get(0)?,
+                kind: row.get(1)?,
+                name: row.get(2)?,
+                attack_type: row.get(3)?,
+                attack_melee: row.get(4)?,
+                attack_ranged: row.get(5)?,
+                element_type: row.get(6)?,
+                element_melee: row.get(7)?,
+                element_ranged: row.get(8)?,
+                status_type: row.get(9)?,
+                status_melee: row.get(10)?,
+                status_ranged: row.get(11)?,
+                affinity: row.get(12)?,
+                defense_bonus: row.get(13)?,
+            })
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+
+    Ok(weapons)
+}
+
+pub fn get_buddy_armor(
+    conn: &Connection,
+    game_id: i32,
+    kind: Option<String>,
+) -> Result<Vec<BuddyArmor>> {
+    let mut stmt = conn.prepare(
+        "SELECT id, kind, name, defense, fire, water, thunder, ice, dragon
+         FROM buddy_armor WHERE game_id = ?1 AND (?2 IS NULL OR kind = ?2)
+         ORDER BY kind, id",
+    )?;
+
+    let armor = stmt
+        .query_map(params![game_id, kind], |row| {
+            Ok(BuddyArmor {
+                id: row.get(0)?,
+                kind: row.get(1)?,
+                name: row.get(2)?,
+                defense: row.get(3)?,
+                fire: row.get(4)?,
+                water: row.get(5)?,
+                thunder: row.get(6)?,
+                ice: row.get(7)?,
+                dragon: row.get(8)?,
+            })
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+
+    Ok(armor)
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct CharmView {
+    pub id: i32,
+    pub charm_type: String,
+    pub charm_table: Option<i32>,
+    pub slots: i32,
+    pub skills: Vec<CharmSkillView>,
+}
+
+pub fn get_charms_by_game(
+    conn: &Connection,
+    game_id: i32,
+    skill_id: Option<i32>,
+    min_points: Option<i32>,
+) -> Result<Vec<CharmView>> {
+    let min_pts = min_points.unwrap_or(i32::MIN);
+    let mut stmt = conn.prepare(
+        "SELECT c.id, c.charm_type, c.charm_table, c.slots, cs.skill_id, s.name, cs.points
+         FROM charms c
+         JOIN charm_skills cs ON cs.charm_id = c.id
+         JOIN skills s ON s.id = cs.skill_id
+         WHERE c.game_id = ?1
+           AND (?2 IS NULL OR EXISTS (SELECT 1 FROM charm_skills cs2 WHERE cs2.charm_id = c.id AND cs2.skill_id = ?2 AND cs2.points >= ?3))
+         ORDER BY c.slots DESC, cs.points DESC, c.id
+         LIMIT 500",
+    )?;
+    let mut map: std::collections::BTreeMap<i32, CharmView> = std::collections::BTreeMap::new();
+    let mut order: Vec<i32> = Vec::new();
+    let rows = stmt.query_map(params![game_id, skill_id, min_pts], |row| {
+        Ok((
+            row.get::<_, i32>(0)?,
+            row.get::<_, String>(1)?,
+            row.get::<_, Option<i32>>(2)?,
+            row.get::<_, i32>(3)?,
+            row.get::<_, i32>(4)?,
+            row.get::<_, String>(5)?,
+            row.get::<_, i32>(6)?,
+        ))
+    })?;
+    for r in rows {
+        let (cid, ctype, ctable, slots, sid, sname, pts) = r?;
+        let entry = map.entry(cid).or_insert_with(|| {
+            order.push(cid);
+            CharmView {
+                id: cid,
+                charm_type: ctype.clone(),
+                charm_table: ctable,
+                slots,
+                skills: Vec::new(),
+            }
+        });
+        entry.skills.push(CharmSkillView {
+            skill_id: sid,
+            skill_name: sname,
+            points: pts,
+        });
+    }
+    let mut out: Vec<CharmView> = Vec::new();
+    for cid in order {
+        if let Some(v) = map.remove(&cid) {
+            out.push(v);
+        }
+    }
+    Ok(out)
+}
+
+// 010-mhw-100: hunter charms rank tree (MHW). Skills denormalized upstream;
+// materials joined with item names for the rank-tree UI.
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct HunterCharmMaterialView {
+    pub craft_kind: String,
+    pub item_id: i32,
+    pub item_name: String,
+    pub quantity: i32,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct HunterCharmView {
+    pub id: i32,
+    pub name: String,
+    pub charm_level: i32,
+    pub rarity: i32,
+    pub previous_id: Option<i32>,
+    pub previous_name: Option<String>,
+    pub skill1_name: Option<String>,
+    pub skill1_level: Option<i32>,
+    pub skill2_name: Option<String>,
+    pub skill2_level: Option<i32>,
+    pub materials: Vec<HunterCharmMaterialView>,
+}
+
+pub fn get_hunter_charms_by_game(conn: &Connection, game_id: i32) -> Result<Vec<HunterCharmView>> {
+    let mut stmt = conn.prepare(
+        "SELECT hc.id, hc.name, hc.charm_level, hc.rarity, hc.previous_id, p.name,
+                hc.skill1_name, hc.skill1_level, hc.skill2_name, hc.skill2_level
+         FROM hunter_charms hc
+         LEFT JOIN hunter_charms p ON p.id = hc.previous_id AND p.game_id = hc.game_id
+         WHERE hc.game_id = ?1
+         ORDER BY hc.name",
+    )?;
+    let charms: Vec<HunterCharmView> = stmt
+        .query_map(params![game_id], |row| {
+            Ok(HunterCharmView {
+                id: row.get(0)?,
+                name: row.get(1)?,
+                charm_level: row.get(2)?,
+                rarity: row.get(3)?,
+                previous_id: row.get(4)?,
+                previous_name: row.get(5)?,
+                skill1_name: row.get(6)?,
+                skill1_level: row.get(7)?,
+                skill2_name: row.get(8)?,
+                skill2_level: row.get(9)?,
+                materials: Vec::new(),
+            })
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+    let mut out = Vec::with_capacity(charms.len());
+    for mut c in charms {
+        let mut mstmt = conn.prepare(
+            "SELECT m.craft_kind, m.item_id, i.name, m.quantity
+             FROM hunter_charm_materials m
+             JOIN items i ON i.id = m.item_id
+             WHERE m.charm_id = ?1
+             ORDER BY m.craft_kind, m.item_id",
+        )?;
+        c.materials = mstmt
+            .query_map(params![c.id], |row| {
+                Ok(HunterCharmMaterialView {
+                    craft_kind: row.get(0)?,
+                    item_id: row.get(1)?,
+                    item_name: row.get(2)?,
+                    quantity: row.get(3)?,
+                })
+            })?
+            .filter_map(|r| {
+                r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                    .ok()
+            })
+            .collect();
+        out.push(c);
+    }
+    Ok(out)
+}
+
 pub fn get_skills_by_game(conn: &Connection, game_id: i32) -> Result<Vec<Skill>> {
     let mut stmt = conn.prepare(
         "SELECT id, game_id, name, description, max_level, language
@@ -2175,6 +2776,7 @@ pub fn get_skill_detail(conn: &Connection, id: i32) -> Result<Option<SkillDetail
     let decorations = get_skill_decorations(conn, id)?;
     let armors = get_skill_armors(conn, id)?;
     let weapons = get_skill_weapons(conn, id)?;
+    let set_bonuses = get_skill_set_bonuses(conn, id)?;
 
     Ok(Some(SkillDetail {
         id,
@@ -2187,6 +2789,7 @@ pub fn get_skill_detail(conn: &Connection, id: i32) -> Result<Option<SkillDetail
         decorations,
         armors,
         weapons,
+        set_bonuses,
     }))
 }
 
@@ -2486,9 +3089,9 @@ pub fn get_decorations_by_game(conn: &Connection, game_id: i32) -> Result<Vec<De
 }
 
 pub fn get_decoration_detail(conn: &Connection, id: i32) -> Result<Option<DecorationDetail>> {
-    let row: Option<(i32, i32, String, Option<i32>, Option<String>, Option<i32>, Option<i32>, Option<String>, Option<i32>, Option<i32>, Option<i32>, Option<i32>, Option<String>, Option<String>, Option<String>, String)> = conn
+    let row: Option<(i32, i32, String, Option<i32>, Option<String>, Option<i32>, Option<i32>, Option<String>, Option<i32>, Option<i32>, Option<i32>, Option<i32>, Option<String>, Option<String>, Option<String>, String, Option<String>)> = conn
         .query_row(
-            "SELECT d.id, d.game_id, d.name, d.skill_id, s1.name, d.skill_points, d.secondary_skill_id, s2.name, d.secondary_points, d.slot_size, d.rarity, d.price, d.icon_name, d.icon_color, d.icon_url, d.language
+            "SELECT d.id, d.game_id, d.name, d.skill_id, s1.name, d.skill_points, d.secondary_skill_id, s2.name, d.secondary_points, d.slot_size, d.rarity, d.price, d.icon_name, d.icon_color, d.icon_url, d.language, d.acquisition
              FROM decorations d
              LEFT JOIN skills s1 ON s1.id = d.skill_id
              LEFT JOIN skills s2 ON s2.id = d.secondary_skill_id
@@ -2512,6 +3115,7 @@ pub fn get_decoration_detail(conn: &Connection, id: i32) -> Result<Option<Decora
                     row.get(13)?,
                     row.get(14)?,
                     row.get(15)?,
+                    row.get(16)?,
                 ))
             },
         )
@@ -2534,13 +3138,17 @@ pub fn get_decoration_detail(conn: &Connection, id: i32) -> Result<Option<Decora
         icon_color,
         icon_url,
         language,
+        acquisition_db,
     )) = row
     else {
         return Ok(None);
     };
 
     let materials = get_decoration_materials(conn, id)?;
-    let (unlock, acquisition) = decoration_unlock_and_acquisition(&materials, price);
+    let (unlock, derived_acquisition) = decoration_unlock_and_acquisition(&materials, price);
+    // 010-mhw-100 Phase B: stored acquisition (melder costs + feystone odds)
+    // wins over the smith-derived fallback.
+    let acquisition: String = acquisition_db.unwrap_or(derived_acquisition);
 
     Ok(Some(DecorationDetail {
         id,
@@ -3573,6 +4181,283 @@ mod tests {
     }
 
     #[test]
+    fn mhw_010_phase_a_ailments_tools_charms_roster_bonuses() {
+        // 010 Phase A: MHWorldData zero-scrape wins — hunter charms rank tree +
+        // quest roster + set bonus completion + phantom delete + stat-generated
+        // descriptions. (Ailment/tool exact counts live in the Phase B test: the
+        // Phase B JSON supersedes Phase A with Kiranico numerics.)
+        let c = conn();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        // Hunter charms rank tree: 317 charms, 1247 materials, 207 linked previous.
+        assert_eq!(
+            count("SELECT COUNT(*) FROM hunter_charms WHERE game_id = 1"),
+            317
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM hunter_charm_materials WHERE charm_id IN (SELECT id FROM hunter_charms WHERE game_id = 1)"),
+            1247
+        );
+        assert_eq!(
+            count(
+                "SELECT COUNT(*) FROM hunter_charms WHERE game_id = 1 AND previous_id IS NOT NULL"
+            ),
+            207
+        );
+        // No charm material may dangle (seed never FK NULL).
+        assert_eq!(
+            count("SELECT COUNT(*) FROM hunter_charm_materials WHERE item_id NOT IN (SELECT id FROM items)"),
+            0
+        );
+        // Query smoke through the public API.
+        let charms = get_hunter_charms_by_game(&c, 1).unwrap();
+        assert_eq!(charms.len(), 317);
+        assert!(charms
+            .iter()
+            .any(|ch| !ch.materials.is_empty() && ch.previous_name.is_some()));
+        // Quest roster: 517/521 with monsters (4 gathering quests correctly empty).
+        assert_eq!(
+            count("SELECT COUNT(*) FROM quests WHERE game_id = 1 AND main_monsters IS NOT NULL AND main_monsters != '[]'"),
+            517
+        );
+        // Set bonuses: skill1 preserved everywhere upstream has one; 58 skill2 fills.
+        assert_eq!(
+            count("SELECT COUNT(*) FROM armor_sets WHERE game_id = 1 AND bonus_skill2 IS NOT NULL"),
+            58
+        );
+        // Phantom delete: Uragaan + Fulgurbug capture row must not exist.
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_drops WHERE monster_id = 1078 AND item_id = 20927 AND method = 'capture'"),
+            0
+        );
+        // Stat-generated descriptions land on every weapon + armor piece.
+        assert_eq!(
+            count("SELECT COUNT(*) FROM weapons WHERE game_id = 1 AND description IS NOT NULL AND description != ''"),
+            3544
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM armor WHERE game_id = 1 AND description IS NOT NULL AND description != ''"),
+            1595
+        );
+        // Monster detail smoke: ailments + tools render for a covered monster.
+        let mid: i32 = c
+            .query_row(
+                "SELECT monster_id FROM monster_ailments WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 1) LIMIT 1",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        let detail = get_monster_detail(&c, mid)
+            .unwrap()
+            .expect("monster detail");
+        assert!(
+            !detail.ailments.is_empty(),
+            "MHW monster detail must show ailments"
+        );
+        assert!(
+            !detail.tools.is_empty(),
+            "MHW monster detail must show traps"
+        );
+    }
+
+    #[test]
+    fn mhw_010_phase_b_kiranico_numbers_melder_deco_shop() {
+        // 010 Phase B: Kiranico buildup/decay numbers + trap durations/chains +
+        // part-break stagger proxy + melder sources + provisions + deco acquisition.
+        let c = conn();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        let mhw = "monster_id IN (SELECT id FROM monsters WHERE game_id = 1)";
+        // Ailments: 721 rows (66 Phase A + Kiranico fills/new incl. 3 late larges
+        // + smalls); 501 with buildup numerics; no Blastblight leftovers.
+        assert_eq!(
+            count(&format!(
+                "SELECT COUNT(*) FROM monster_ailments WHERE {mhw}"
+            )),
+            721
+        );
+        assert_eq!(
+            count(&format!(
+                "SELECT COUNT(*) FROM monster_ailments WHERE {mhw} AND initial IS NOT NULL"
+            )),
+            501
+        );
+        assert_eq!(
+            count(&format!(
+                "SELECT COUNT(*) FROM monster_ailments WHERE {mhw} AND ailment = 'Blastblight'"
+            )),
+            0
+        );
+        // Traps: 465 rows across 5 tools (Flash Bomb + Dung added); 386 with
+        // seconds; 186 diminishing chains in notes.
+        assert_eq!(
+            count(&format!("SELECT COUNT(*) FROM monster_tools WHERE {mhw}")),
+            465
+        );
+        assert_eq!(
+            count(&format!(
+                "SELECT COUNT(DISTINCT tool) FROM monster_tools WHERE {mhw}"
+            )),
+            5
+        );
+        assert_eq!(
+            count(&format!(
+                "SELECT COUNT(*) FROM monster_tools WHERE {mhw} AND normal IS NOT NULL"
+            )),
+            386
+        );
+        // Stagger proxy: 317 hitzone rows carry Part-Break values.
+        assert_eq!(
+            count(&format!(
+                "SELECT COUNT(*) FROM monster_weaknesses WHERE {mhw} AND stagger_hp IS NOT NULL"
+            )),
+            317
+        );
+        // Melder sources: 212 Kiranico meld rows (RP/MP in conditions).
+        assert_eq!(
+            count("SELECT COUNT(*) FROM item_sources WHERE source_type = 'melder' AND location = 'Elder Melder' AND conditions LIKE '%Research Points%'"),
+            212
+        );
+        // Shop: 56 provisions rows; buy prices present for all of them.
+        assert_eq!(
+            count("SELECT COUNT(*) FROM item_sources WHERE source_type = 'shop' AND item_id IN (SELECT id FROM items WHERE game_id = 1)"),
+            56
+        );
+        assert!(
+            count("SELECT COUNT(*) FROM items WHERE game_id = 1 AND buy_price IS NOT NULL AND buy_price > 0") >= 55
+        );
+        // Deco acquisition: 398/404 (5 event jewels have no feystone/meld row).
+        assert_eq!(
+            count("SELECT COUNT(*) FROM decorations WHERE game_id = 1 AND acquisition IS NOT NULL"),
+            398
+        );
+        // Stored acquisition wins over the smith-derived fallback in detail.
+        let jewel: String = c
+            .query_row(
+                "SELECT acquisition FROM decorations WHERE game_id = 1 AND name = 'Defense Jewel 1'",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert!(
+            jewel.contains("Elder Melder"),
+            "meldable jewel must show melder cost: {jewel}"
+        );
+        // Detail smoke: tools carry durations + chains for a Kiranico monster.
+        let mid: i32 = c
+            .query_row(
+                &format!("SELECT monster_id FROM monster_tools WHERE {mhw} AND notes IS NOT NULL LIMIT 1"),
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        let detail = get_monster_detail(&c, mid)
+            .unwrap()
+            .expect("monster detail");
+        assert!(detail
+            .tools
+            .iter()
+            .any(|t| t.normal.is_some() && t.notes.is_some()));
+        assert!(detail.ailments.iter().any(|a| a.initial.is_some()));
+    }
+
+    #[test]
+    fn mhw_011_set_bonus_display() {
+        // 010 follow-up: set bonuses surfaced on set detail + list + piece
+        // detail + skill reverse refs (MHW only; other games stay NULL).
+        let c = conn();
+        // Anja (20019): single bonus Adrenaline 3, skill id resolves.
+        let anja = get_armor_set_detail(&c, 20019).unwrap().expect("anja set");
+        assert_eq!(anja.bonus_skill.as_deref(), Some("Adrenaline"));
+        assert_eq!(anja.bonus_required, Some(3));
+        assert_eq!(anja.bonus_skill_id, Some(20111));
+        assert_eq!(anja.bonus_skill2, None);
+        // Anja Alpha (20074): two bonuses with resolved skill ids.
+        let alpha = get_armor_set_detail(&c, 20074)
+            .unwrap()
+            .expect("anja alpha");
+        assert_eq!(alpha.bonus_skill.as_deref(), Some("Adrenaline"));
+        assert_eq!(alpha.bonus_skill_id, Some(20111));
+        assert_eq!(alpha.bonus_skill2.as_deref(), Some("Stamina Cap Up"));
+        assert_eq!(alpha.bonus_required2, Some(4));
+        assert!(alpha.bonus_skill2_id.is_some());
+        // Leather (20001): no bonus — section stays hidden.
+        let leather = get_armor_set_detail(&c, 20001).unwrap().expect("leather");
+        assert_eq!(leather.bonus_skill, None);
+        assert_eq!(leather.bonus_skill2, None);
+        // Other games: NULL bonuses (mh2g set sampled live, no hardcoded id).
+        let old_set: i32 = c
+            .query_row(
+                "SELECT id FROM armor_sets WHERE game_id = 5 LIMIT 1",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        let old = get_armor_set_detail(&c, old_set)
+            .unwrap()
+            .expect("mh2g set");
+        assert_eq!(old.bonus_skill, None);
+        assert_eq!(old.bonus_skill2, None);
+        // Reverse lookup: Adrenaline granted by Anja (3 pcs).
+        let refs = get_skill_set_bonuses(&c, 20111).unwrap();
+        let anja_ref = refs.iter().find(|r| r.set_id == 20019).expect("anja ref");
+        assert_eq!(anja_ref.required_pieces, 3);
+        // Piece detail carries the parent bonus (Anja Helm 40084).
+        let helm = get_armor_detail(&c, 40084).unwrap().expect("anja helm");
+        assert_eq!(helm.set_bonus_skill.as_deref(), Some("Adrenaline"));
+        assert_eq!(helm.set_bonus_required, Some(3));
+        // Skill detail carries set-bonus refs.
+        let skill = get_skill_detail(&c, 20111).unwrap().expect("adrenaline");
+        assert!(skill.set_bonuses.iter().any(|r| r.set_id == 20019));
+        // List query exposes bonuses for cards.
+        let sets = get_armor_sets_by_game(&c, 1).unwrap();
+        let anja_list = sets.iter().find(|s| s.id == 20019).expect("anja list");
+        assert_eq!(anja_list.bonus_skill.as_deref(), Some("Adrenaline"));
+    }
+
+    #[test]
+    fn mhw_010_phase_c_fandom_gather_descriptions_combine() {
+        // 010 Phase C: Fandom How-To-Get gather rows + 4 monster descriptions +
+        // combine arbiter (wiki 98 fully covered, 4 legitimate local extras).
+        let c = conn();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        let g1 = "item_id IN (SELECT id FROM items WHERE game_id = 1)";
+        // Hoarfrost Reach + Guiding Lands gather/mining/fishing: 75 rows.
+        assert_eq!(
+            count(&format!("SELECT COUNT(*) FROM item_sources WHERE {g1} AND location IN ('Hoarfrost Reach', 'Guiding Lands', 'Hoarfrost Reach / Guiding Lands')")),
+            75
+        );
+        // Region conditions present (Forest/Wildspire/Coral/Rotten/Volcanic/Tundra).
+        assert!(
+            count(&format!(
+                "SELECT COUNT(*) FROM item_sources WHERE {g1} AND conditions LIKE '%Region%'"
+            )) >= 20
+        );
+        // Monster descriptions: 94/94 (Fatalis/Gajalaka/Anteka/Boaboa from Fandom).
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monsters WHERE game_id = 1 AND description IS NOT NULL AND description != ''"),
+            94
+        );
+        // Combine arbiter: wiki 98 fully covered by local rows. DB holds 186 of
+        // 188 JSON rows: the 2 truly-identical halves (Ancient Potion/Kelbi Horn,
+        // Mega Barrel Bomb/Large Barrel Bomb - same values, zero info loss)
+        // collapse under uq_item_combine2; the Gunpowder 20/40 yield variants
+        // land as distinct rows.
+        assert_eq!(
+            count("SELECT COUNT(*) FROM item_combine WHERE result_item_id IN (SELECT id FROM items WHERE game_id = 1)"),
+            186
+        );
+        // Drop-loss fix: every JSON row lands (NULL rate = unknown, no silent
+        // skips); 35 xeno rows pruned, 32 Kiranico-filled.
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_drops WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 1)"),
+            5826
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_drops WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 1) AND probability IS NULL"),
+            116
+        );
+    }
+
+    #[test]
     fn mhwilds_004_coverage_lists_details_and_junctions() {
         // 004: Wilds core (MHDB API) — every list non-empty, junctions wired.
         let c = conn();
@@ -3861,6 +4746,278 @@ mod tests {
         assert!(!detail.weaknesses.is_empty());
         assert!(!detail.drops.is_empty());
         assert!(!detail.armor.is_empty() || !detail.weapons.is_empty());
+    }
+
+    #[test]
+    fn mhr_011a_monster_status_partbreak_tools() {
+        // 011 Phase A: Kiranico status buildup (112x10, zero nulls) +
+        // part-break (72 monsters) + Fextra trap lists (54 monsters).
+        let c = conn();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        let g2 = "monster_id IN (SELECT id FROM monsters WHERE game_id = 2)";
+        assert_eq!(
+            count(&format!("SELECT COUNT(*) FROM monster_ailments WHERE {g2}")),
+            1120
+        );
+        assert_eq!(
+            count(&format!(
+                "SELECT COUNT(DISTINCT monster_id) FROM monster_ailments WHERE {g2}"
+            )),
+            112
+        );
+        assert_eq!(
+            count(&format!(
+                "SELECT COUNT(*) FROM monster_part_break WHERE {g2}"
+            )),
+            // 541 raw rows collapse to 468: Kiranico repeats identical
+            // (part, hp) rows for multi-break parts (e.g. Aknosom Wing x2);
+            // uq_monster_part_break keeps one (same part_hp either way).
+            468
+        );
+        assert_eq!(
+            count(&format!("SELECT COUNT(*) FROM monster_tools WHERE {g2}")),
+            270
+        );
+        let mid = |name: &str| -> i32 {
+            c.query_row(
+                "SELECT id FROM monsters WHERE game_id = 2 AND name = ?1",
+                [name],
+                |r| r.get(0),
+            )
+            .unwrap()
+        };
+        // Spot: Magnamalo Poison has full numerics.
+        let p: (Option<i32>, Option<i32>, Option<i32>, Option<i32>) = c
+            .query_row(
+                "SELECT initial, increase, max, duration_sec FROM monster_ailments
+                 WHERE monster_id = ?1 AND ailment = 'Poison'",
+                [mid("Magnamalo")],
+                |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?, r.get(3)?)),
+            )
+            .unwrap();
+        assert!(p.0.is_some() && p.1.is_some() && p.2.is_some() && p.3.is_some());
+        // Spot: Aknosom Shock Trap effective (NULL), Sonic Bomb immune (0).
+        let shock: Option<i32> = c
+            .query_row(
+                "SELECT normal FROM monster_tools WHERE monster_id = ?1 AND tool = 'Shock Trap'",
+                [mid("Aknosom")],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(shock, None);
+        let sonic: Option<i32> = c
+            .query_row(
+                "SELECT normal FROM monster_tools WHERE monster_id = ?1 AND tool = 'Sonic Bomb'",
+                [mid("Aknosom")],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(sonic, Some(0));
+        // Detail exposes the new part-break rows.
+        let detail = get_monster_detail(&c, mid("Aknosom"))
+            .unwrap()
+            .expect("aknosom detail");
+        assert_eq!(detail.ailments.len(), 10);
+        assert!(!detail.part_break.is_empty());
+        assert!(detail.part_break.iter().all(|b| b.part_hp.is_some()));
+    }
+
+    #[test]
+    fn mhr_011e_combine() {
+        // 011 Phase E1: 178 (result, component) combine rows from the
+        // Kiranico item-mix view, chance 100 (Rise crafting always succeeds).
+        let c = conn();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        let g2_result = "result_item_id IN (SELECT id FROM items WHERE game_id = 2)";
+        assert_eq!(
+            count(&format!(
+                "SELECT COUNT(*) FROM item_combine WHERE {g2_result} AND combine_type = 'normal'"
+            )),
+            178
+        );
+        let chance_100: i64 = c
+            .query_row(
+                "SELECT COUNT(*) FROM item_combine
+                 WHERE result_item_id IN (SELECT id FROM items WHERE game_id = 2)
+                   AND combine_type = 'normal' AND chance = 100",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(chance_100, 178);
+        // Spot: Potion = Herb (well-known recipe).
+        let potion: i32 = c
+            .query_row(
+                "SELECT id FROM items WHERE game_id = 2 AND name = 'Potion'",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        let herb: i32 = c
+            .query_row(
+                "SELECT id FROM items WHERE game_id = 2 AND name = 'Herb'",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        let link: Option<i32> = c
+            .query_row(
+                "SELECT quantity FROM item_combine
+                 WHERE result_item_id = ?1 AND component_item_id = ?2 AND combine_type = 'normal'",
+                [potion, herb],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(link, Some(1));
+    }
+
+    #[test]
+    fn mhr_011d_talismans() {
+        // 011 Phase D: 11849 generator talisman rows (4 base methods
+        // anima/rebirth/reincarnation/wisp-of-mystery; Sunbreak eve/haze
+        // not in upstream CSVs — gap), each with 1-2 charm_skills joined
+        // to game-2 skills.
+        let c = conn();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        let g2 = "game_id = 2";
+        assert_eq!(
+            count(&format!(
+                "SELECT COUNT(*) FROM charms WHERE {g2} AND charm_type = 'talisman'"
+            )),
+            11849
+        );
+        // charm_skills: each talisman has 1 or 2 (the s2 may resolve to
+        // the same skill as s1; we INSERT OR IGNORE so dedupe is automatic).
+        assert!(
+            count("SELECT COUNT(*) FROM charm_skills
+                   WHERE charm_id IN (SELECT id FROM charms WHERE game_id = 2 AND charm_type = 'talisman')")
+                > 11849
+        );
+        // Skill join: Agitator 2 / Weakness Exploit 2 is a popular meta
+        // combo — verify it exists as a charm.
+        let cid: i32 = c
+            .query_row(
+                "SELECT c.id FROM charms c
+                 JOIN charm_skills cs1 ON cs1.charm_id = c.id
+                 JOIN skills s1 ON s1.id = cs1.skill_id AND s1.name = 'Agitator' AND cs1.points >= 2
+                 JOIN charm_skills cs2 ON cs2.charm_id = c.id AND cs2.skill_id != cs1.skill_id
+                 JOIN skills s2 ON s2.id = cs2.skill_id AND s2.name = 'Weakness Exploit' AND cs2.points >= 2
+                 WHERE c.game_id = 2 AND c.charm_type = 'talisman'
+                 LIMIT 1",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        // Direct SELECT (LIMIT 500 in get_charms_by_game would cut this off).
+        let mut stmt = c
+            .prepare(
+                "SELECT s.name FROM charm_skills cs
+                 JOIN skills s ON s.id = cs.skill_id
+                 WHERE cs.charm_id = ?1 ORDER BY s.name",
+            )
+            .unwrap();
+        let names: Vec<String> = stmt
+            .query_map([cid], |r| r.get::<_, String>(0))
+            .unwrap()
+            .map(|r| r.unwrap())
+            .collect();
+        assert!(names.iter().any(|n| n == "Agitator"), "skills: {names:?}");
+        assert!(
+            names.iter().any(|n| n == "Weakness Exploit"),
+            "skills: {names:?}"
+        );
+    }
+
+    #[test]
+    fn mhr_011c_rampage() {
+        // 011 Phase C: 247 unique rampage skills (32 Kiranico dupes —
+        // same name on two weapon-type pages — collapsed server-side) +
+        // 6822 (skill, weapon) links (33 dupes from the same collapse) +
+        // 26 rampage decos as items. Spot: a popular Bow has multiple
+        // rampage skills.
+        let c = conn();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        assert_eq!(
+            count("SELECT COUNT(*) FROM rampage_skills WHERE game_id = 2"),
+            247
+        );
+        assert_eq!(count("SELECT COUNT(*) FROM weapon_rampage"), 6822);
+        assert_eq!(
+            count("SELECT COUNT(*) FROM rampage_decorations WHERE game_id = 2"),
+            26
+        );
+        // Items: decos stored under Decoration category.
+        assert_eq!(
+            count("SELECT COUNT(*) FROM items WHERE game_id = 2 AND category = 'Decoration'"),
+            26
+        );
+        // Spot: Rampage Bow S (a buildable Rampage Tree Bow) carries 29
+        // possible rampage skills; verify a few and the FK chain.
+        let bow: i32 = c
+            .query_row(
+                "SELECT id FROM weapons WHERE game_id = 2 AND name = 'Rampage Bow S'",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        let detail = get_weapon_detail(&c, bow).unwrap().expect("rampage bow s");
+        assert!(
+            detail.rampage.len() >= 20,
+            "Rampage Bow S should have many rampage skills, got {}",
+            detail.rampage.len()
+        );
+        assert!(detail.rampage.iter().all(|r| r.skill_id > 0));
+    }
+
+    #[test]
+    fn mhr_011b_buddy_gear() {
+        // 011 Phase B: buddy weapons (322 = 161 palico + 161 palamute) +
+        // buddy armor (362 = 181 + 181, upstream x2 dupes collapsed).
+        let c = conn();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        assert_eq!(
+            count("SELECT COUNT(*) FROM buddy_weapons WHERE game_id = 2"),
+            322
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM buddy_armor WHERE game_id = 2"),
+            362
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM buddy_weapons WHERE game_id = 2 AND kind = 'palico'"),
+            161
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM buddy_armor WHERE game_id = 2 AND kind = 'palamute'"),
+            181
+        );
+        // Element/status decoding survived the seed (anchored ElementType codes).
+        assert!(
+            count(
+                "SELECT COUNT(*) FROM buddy_weapons WHERE game_id = 2 AND element_type IS NOT NULL"
+            ) > 100
+        );
+        assert!(
+            count(
+                "SELECT COUNT(*) FROM buddy_weapons WHERE game_id = 2 AND status_type IS NOT NULL"
+            ) > 50
+        );
+        // Spot: Rathalos Sword X (palico) is Fire 25/25.
+        let r: (Option<String>, Option<i32>, Option<i32>) = c
+            .query_row(
+                "SELECT element_type, element_melee, element_ranged FROM buddy_weapons
+                 WHERE game_id = 2 AND kind = 'palico' AND name = 'Rathalos Sword X'",
+                [],
+                |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?)),
+            )
+            .unwrap();
+        assert_eq!(r, (Some("Fire".to_string()), Some(25), Some(25)));
+        // Kind filter works.
+        let palamute = get_buddy_weapons(&c, 2, Some("palamute".to_string())).unwrap();
+        assert_eq!(palamute.len(), 161);
+        assert!(palamute.iter().all(|w| w.kind == "palamute"));
+        let armor = get_buddy_armor(&c, 2, Some("palico".to_string())).unwrap();
+        assert_eq!(armor.len(), 181);
     }
 
     #[test]
@@ -4153,7 +5310,21 @@ mod tests {
              UPDATE items SET icon_url = NULL, icon_name = NULL WHERE game_id IN (2, 3, 4);
              UPDATE quests SET icon_url = NULL, hub_icon_url = NULL WHERE game_id = 2;
              UPDATE monsters SET icon_url = REPLACE(icon_url, '/icons/mhr/monsters/', '/icons/mhw/monsters/') WHERE game_id = 2;
-             UPDATE monsters SET icon_url = REPLACE(icon_url, '/icons/mhwilds/monsters/', '/icons/mhw/monsters/') WHERE game_id = 3;",
+             UPDATE monsters SET icon_url = REPLACE(icon_url, '/icons/mhwilds/monsters/', '/icons/mhw/monsters/') WHERE game_id = 3;
+             UPDATE monster_ailments SET initial = NULL, notes = NULL WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 1);
+             UPDATE monster_tools SET normal = NULL, notes = NULL WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 1);
+             DELETE FROM hunter_charm_materials;
+             DELETE FROM hunter_charms;
+             UPDATE decorations SET acquisition = NULL WHERE game_id = 1;
+             UPDATE weapons SET description = NULL WHERE game_id = 1;
+             UPDATE armor SET description = NULL WHERE game_id = 1;
+             UPDATE armor_sets SET bonus_skill2 = NULL, bonus_required2 = NULL WHERE game_id = 1;
+             UPDATE monster_weaknesses SET stagger_hp = NULL WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 1);
+             UPDATE quests SET main_monsters = '[]' WHERE game_id = 1 AND id IN (100101, 100201);
+             UPDATE items SET buy_price = NULL WHERE game_id = 1;
+             INSERT INTO monster_drops (monster_id, item_id, method, part, rank, quantity, probability, condition, language)
+             VALUES (1078, 20927, 'capture', NULL, 'Master', 1, 0.5, NULL, 'en');
+             DELETE FROM item_combine WHERE result_item_id IN (SELECT id FROM items WHERE name LIKE 'Gunpowder Level%' AND game_id = 1);",
         )
         .unwrap();
         let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
@@ -4183,7 +5354,7 @@ mod tests {
             count("SELECT COUNT(*) FROM monsters WHERE game_id IN (2, 3) AND icon_url_lg IS NULL"),
             0
         );
-        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 13);
+        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 23);
         // MHFU equipment backfill: variants have gear links now.
         assert!(
             count("SELECT COUNT(*) FROM monster_equipment WHERE game_id = 5 AND monster_id = 26")
@@ -4229,6 +5400,82 @@ mod tests {
             count("SELECT COUNT(DISTINCT weapon_id) FROM weapon_craft WHERE weapon_id IN (SELECT id FROM weapons WHERE game_id = 5)"),
             1500
         );
+        // MHP3rd drops sync: all 60 monsters covered, xeno rows pruned.
+        assert_eq!(
+            count("SELECT COUNT(DISTINCT monster_id) FROM monster_drops WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 4)"),
+            60
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_drops WHERE monster_id = 10032 AND item_id IN (SELECT id FROM items WHERE name LIKE '%Tigrex%' OR name LIKE '%Rathalos%')"),
+            0
+        );
+        // MHP3rd weaknesses rewrite: real hitzone parts, no placeholders.
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_weaknesses WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 4)"),
+            213
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_weaknesses WHERE monster_id = 10045 AND part_name = 'Head' AND sever = 80 AND dragon = 35"),
+            1
+        );
+        // MHP3rd roundout: real descriptions, Akantor gear, trap tools.
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monsters WHERE game_id = 4 AND description LIKE '%in Monster Hunter Portable 3rd (ULJM-05800)%'"),
+            1
+        );
+        assert!(
+            count(
+                "SELECT COUNT(*) FROM monster_equipment WHERE game_id = 4 AND monster_id = 10023"
+            ) > 5
+        );
+        assert!(count("SELECT COUNT(*) FROM monster_tools WHERE monster_id = 10057") >= 5);
+        // MHP3rd items fix: 10526 placeholder kept (6 Ludroth U armor rows
+        // FK-depend on it), Yukumo strings fixed.
+        assert_eq!(
+            count("SELECT COUNT(*) FROM items WHERE game_id = 4 AND id = 10526"),
+            1
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM item_sources WHERE item_id IN (SELECT id FROM items WHERE game_id = 4) AND (location LIKE '%Pokke%' OR conditions LIKE '%Pokke%')"),
+            0
+        );
+        // MHP3rd key flags: wiki-confirmed Hunt 1 Barroth.
+        assert_eq!(
+            count(
+                "SELECT COUNT(*) FROM quests WHERE game_id = 4 AND id = 10108 AND is_key_quest = 1"
+            ),
+            1
+        );
+        // MHP3rd gear fix: elements filled, mats complete, junk gone.
+        assert!(
+            count("SELECT COUNT(*) FROM weapons WHERE game_id = 4 AND element_type IS NOT NULL")
+                > 300
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM weapons WHERE game_id = 4 AND id NOT IN (SELECT weapon_id FROM weapon_materials)"),
+            0
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM armor WHERE game_id = 4 AND name LIKE '%engname%'"),
+            0
+        );
+        // MHP3rd charms + comrades seeded.
+        assert_eq!(
+            count("SELECT COUNT(*) FROM charms WHERE game_id = 4"),
+            50635
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM comrade_weapons WHERE game_id = 4"),
+            92
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM comrade_armor WHERE game_id = 4"),
+            154
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM comrade_skills WHERE game_id = 4"),
+            52
+        );
         assert_eq!(
             count("SELECT COUNT(*) FROM monster_weaknesses WHERE monster_id = 26"),
             7
@@ -4259,9 +5506,62 @@ mod tests {
             0
         );
 
-        // Second run: pure no-op (13 PK lookups, warm-boot fast path).
+        // MHW 010 backfill heals the regressed rows above (existing installs
+        // converge without a DATA_VERSION bump).
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_ailments WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 1) AND initial IS NOT NULL"),
+            501
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_tools WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 1) AND normal IS NOT NULL"),
+            386
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM hunter_charms WHERE game_id = 1"),
+            317
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM hunter_charm_materials WHERE charm_id IN (SELECT id FROM hunter_charms WHERE game_id = 1)"),
+            1247
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM decorations WHERE game_id = 1 AND acquisition IS NOT NULL"),
+            398
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM weapons WHERE game_id = 1 AND description IS NOT NULL AND description != ''"),
+            3544
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM armor WHERE game_id = 1 AND description IS NOT NULL AND description != ''"),
+            1595
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM armor_sets WHERE game_id = 1 AND bonus_skill2 IS NOT NULL"),
+            58
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_weaknesses WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 1) AND stagger_hp IS NOT NULL"),
+            317
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM quests WHERE game_id = 1 AND id IN (100101, 100201) AND main_monsters != '[]'"),
+            2
+        );
+        assert!(
+            count("SELECT COUNT(*) FROM items WHERE game_id = 1 AND buy_price IS NOT NULL AND buy_price > 0") >= 55
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_drops WHERE monster_id = 1078 AND item_id = 20927 AND method = 'capture'"),
+            0
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM item_combine WHERE result_item_id IN (SELECT id FROM items WHERE name LIKE 'Gunpowder Level%' AND game_id = 1)"),
+            10
+        );
+        // Second run: pure no-op (23 PK lookups, warm-boot fast path).
         crate::db::seed::apply_data_patches(&c).unwrap();
-        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 13);
+        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 23);
         assert_eq!(count("SELECT COUNT(*) FROM items"), items_before);
 
         // Regression simulation: revert corrected rows to pre-fix values and
@@ -4282,7 +5582,7 @@ mod tests {
             count("SELECT COUNT(*) FROM monster_drops WHERE monster_id = 20 AND item_id = 375 AND method = 'carve' AND part = 'Body' AND rank = 'High'"),
             0
         );
-        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 13);
+        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 23);
         assert_eq!(count("SELECT COUNT(*) FROM items"), items_before);
     }
 }

@@ -37,6 +37,7 @@ export interface MonsterAilment {
   decay_interval: number | null
   duration_sec: number | null
   damage: number | null
+  notes: string | null
 }
 
 export interface MonsterTool {
@@ -46,6 +47,116 @@ export interface MonsterTool {
   normal: number | null
   notfound: number | null
   enraged: number | null
+  notes: string | null
+}
+
+export interface MonsterPartBreak {
+  id: number
+  monster_id: number
+  part: string
+  part_hp: number | null
+  break_text: string | null
+  extract: string | null
+}
+
+export interface CharmSkillView {
+  skill_id: number
+  skill_name: string
+  points: number
+}
+
+export interface CharmView {
+  id: number
+  charm_type: string
+  charm_table: number | null
+  slots: number
+  skills: CharmSkillView[]
+}
+
+export interface HunterCharmMaterialView {
+  craft_kind: string
+  item_id: number
+  item_name: string
+  quantity: number
+}
+
+export interface HunterCharmView {
+  id: number
+  name: string
+  charm_level: number
+  rarity: number
+  previous_id: number | null
+  previous_name: string | null
+  skill1_name: string | null
+  skill1_level: number | null
+  skill2_name: string | null
+  skill2_level: number | null
+  materials: HunterCharmMaterialView[]
+}
+
+export interface ComradeWeapon {
+  id: number
+  name_jp: string
+  price: number | null
+  rarity: number | null
+  attack: number | null
+  element: string | null
+  sharpness: string | null
+  affinity: string | null
+  style: string | null
+}
+
+export interface ComradeArmor {
+  id: number
+  name_jp: string
+  slot: string
+  rarity: number | null
+  price: number | null
+  defense: number | null
+  fire: number | null
+  water: number | null
+  thunder: number | null
+  ice: number | null
+  dragon: number | null
+  materials_jp: string | null
+}
+
+export interface ComradeSkill {
+  id: number
+  name_jp: string
+  memory: string | null
+  effect_jp: string | null
+  cost: number | null
+  learn_level: string | null
+}
+
+export interface BuddyWeapon {
+  id: number
+  kind: string
+  name: string
+  attack_type: string | null
+  attack_melee: number | null
+  attack_ranged: number | null
+  element_type: string | null
+  element_melee: number | null
+  element_ranged: number | null
+  status_type: string | null
+  status_melee: number | null
+  status_ranged: number | null
+  affinity: number | null
+  defense_bonus: number | null
+}
+
+export interface BuddyArmor {
+  id: number
+  kind: string
+  name: string
+  defense: number | null
+  fire: number | null
+  water: number | null
+  thunder: number | null
+  ice: number | null
+  dragon: number | null
 }
 
 export interface MonsterDrop {
@@ -57,7 +168,7 @@ export interface MonsterDrop {
   part: string | null
   rank: string | null
   quantity: number
-  probability: number
+  probability: number | null
   condition: string | null
 }
 
@@ -71,6 +182,7 @@ export interface MonsterDetail {
   weaknesses: MonsterWeakness[]
   ailments: MonsterAilment[]
   tools: MonsterTool[]
+  part_break: MonsterPartBreak[]
   drops: MonsterDrop[]
   armor: Armor[]
   weapons: Weapon[]
@@ -112,6 +224,43 @@ export interface MaterialRef {
   quantity: number
 }
 
+export interface RampageRef {
+  skill_id: number
+  skill_name: string
+  description: string | null
+}
+
+export interface WeaponDetail {
+  id: number
+  game_id: number
+  name: string
+  weapon_type: string
+  rarity: number | null
+  attack: number | null
+  affinity: number | null
+  element_type: string | null
+  element_value: number | null
+  sharpness: string | null
+  slots: string | null
+  skills: string | null
+  status_type: string | null
+  status_value: number | null
+  defense_bonus: number | null
+  crafting_cost: number | null
+  upgrade_path: string | null
+  sort_order: number | null
+  description: string | null
+  materials: MaterialRef[]
+  forge_materials: MaterialRef[]
+  upgrade_materials: MaterialRef[]
+  is_forgeable: boolean
+  rampage: RampageRef[]
+  icon_name: string | null
+  icon_color: string | null
+  icon_url: string | null
+  language: string
+}
+
 export interface WeaponDetail {
   id: number
   game_id: number
@@ -150,6 +299,10 @@ export interface ArmorSet {
   rank: string | null
   rarity: number | null
   language: string
+  bonus_skill: string | null
+  bonus_required: number | null
+  bonus_skill2: string | null
+  bonus_required2: number | null
 }
 export interface ArmorSetDetail {
   id: number
@@ -157,6 +310,12 @@ export interface ArmorSetDetail {
   name: string
   pieces: Armor[]
   language: string
+  bonus_skill: string | null
+  bonus_required: number | null
+  bonus_skill_id: number | null
+  bonus_skill2: string | null
+  bonus_required2: number | null
+  bonus_skill2_id: number | null
 }
 export interface Armor {
   id: number
@@ -209,6 +368,11 @@ export interface ArmorDetail {
   icon_color: string | null
   icon_url: string | null
   language: string
+  set_name: string | null
+  set_bonus_skill: string | null
+  set_bonus_required: number | null
+  set_bonus_skill2: string | null
+  set_bonus_required2: number | null
 }
 
 export interface Quest {
@@ -470,6 +634,14 @@ export interface SkillWeaponRef {
   points: number
 }
 
+export interface SetBonusRef {
+  set_id: number
+  set_name: string
+  rank: string | null
+  bonus_skill: string
+  required_pieces: number
+}
+
 export interface SkillDetail {
   id: number
   game_id: number
@@ -481,6 +653,7 @@ export interface SkillDetail {
   decorations: SkillDecoration[]
   armors: SkillArmorRef[]
   weapons: SkillWeaponRef[]
+  set_bonuses: SetBonusRef[]
 }
 
 export interface SearchResult {
@@ -677,6 +850,20 @@ export const api = {
     invoke<SearchResult[]>('global_search', { gameId, query }),
   getCombinations: (gameId: number) => invoke<CombineView[]>('get_combinations', { gameId }),
   getMelderRecipes: (gameId: number) => invoke<MelderRecipe[]>('get_melder_recipes', { gameId }),
+  getCharms: (gameId: number, skillId?: number | null, minPoints?: number | null) =>
+    invoke<CharmView[]>('get_charms', {
+      gameId,
+      skillId: skillId ?? null,
+      minPoints: minPoints ?? null,
+    }),
+  getHunterCharms: (gameId: number) => invoke<HunterCharmView[]>('get_hunter_charms', { gameId }),
+  getComradeWeapons: (gameId: number) => invoke<ComradeWeapon[]>('get_comrade_weapons', { gameId }),
+  getComradeArmor: (gameId: number) => invoke<ComradeArmor[]>('get_comrade_armor', { gameId }),
+  getComradeSkills: (gameId: number) => invoke<ComradeSkill[]>('get_comrade_skills', { gameId }),
+  getBuddyWeapons: (gameId: number, kind?: string | null) =>
+    invoke<BuddyWeapon[]>('get_buddy_weapons', { gameId, kind: kind ?? null }),
+  getBuddyArmor: (gameId: number, kind?: string | null) =>
+    invoke<BuddyArmor[]>('get_buddy_armor', { gameId, kind: kind ?? null }),
   getMhwMantles: (gameId: number) => invoke<MhwMantle[]>('get_mhw_mantles', { gameId }),
   getMhwMantleDetail: (id: number) => invoke<MhwMantle | null>('get_mhw_mantle_detail', { id }),
   getPalicoGadgets: (gameId: number) => invoke<PalicoGadget[]>('get_palico_gadgets', { gameId }),

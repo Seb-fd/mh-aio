@@ -330,6 +330,22 @@
         <MaterialList materials={weapon.materials} showCraftingCost={false} />
       </section>
     {/if}
+
+    {#if weapon.rampage.length > 0}
+      <section class="mb-8">
+        <h2 class="section-title mb-3">Rampage Skills</h2>
+        <div class="rounded-lg border themed-card p-4">
+          <ul class="space-y-2">
+            {#each weapon.rampage as r}
+              <li>
+                <span class="font-semibold text-gray-100">{r.skill_name}</span>
+                {#if r.description}<span class="text-xs text-gray-400">— {r.description}</span>{/if}
+              </li>
+            {/each}
+          </ul>
+        </div>
+      </section>
+    {/if}
   {/if}
 </div>
 

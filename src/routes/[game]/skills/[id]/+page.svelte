@@ -52,6 +52,9 @@
   function openDecoration(did: number) {
     goto(`/${game}/decorations/${did}`)
   }
+  function openSet(sid: number) {
+    goto(`/${game}/armor/sets/${sid}`)
+  }
 </script>
 
 <div class="max-w-5xl mx-auto numbered-sections">
@@ -87,6 +90,14 @@
           ? [
               {
                 label: `${skill.decorations.length} jewels`,
+                color: 'bg-[var(--theme-bg-elevated)] text-gray-300 border-[var(--theme-border)]',
+              },
+            ]
+          : []),
+        ...(skill.set_bonuses.length
+          ? [
+              {
+                label: `${skill.set_bonuses.length} set bonuses`,
                 color: 'bg-[var(--theme-bg-elevated)] text-gray-300 border-[var(--theme-border)]',
               },
             ]
@@ -417,5 +428,37 @@
         {/if}
       {/if}
     </section>
+
+    <!-- Set bonuses -->
+    {#if skill.set_bonuses.length > 0}
+      <section class="mb-8">
+        <h2 class="section-title mb-3">
+          Set Bonuses ({skill.set_bonuses.length})
+        </h2>
+        <div class="rounded-lg border themed-card overflow-hidden">
+          <div class="divide-y divide-gray-800">
+            {#each skill.set_bonuses as sb}
+              <button
+                onclick={() => openSet(sb.set_id)}
+                aria-label="Open {sb.set_name} set"
+                class="w-full text-left px-4 min-h-[52px] py-3 flex items-center justify-between gap-3 hover:bg-[var(--theme-bg-elevated)]/50 transition-colors motion-safe:transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset"
+              >
+                <div class="min-w-0">
+                  <p class="text-sm font-medium text-gray-100 truncate">{sb.set_name}</p>
+                  <p class="text-xs text-gray-400">
+                    {sb.rank ?? ''} · {sb.bonus_skill} — {sb.required_pieces} pieces
+                  </p>
+                </div>
+                <span
+                  class="shrink-0 text-xs font-bold px-2.5 py-1 rounded-full border tabular-nums bg-emerald-900/30 text-emerald-300 border-emerald-800"
+                >
+                  {sb.required_pieces} pcs
+                </span>
+              </button>
+            {/each}
+          </div>
+        </div>
+      </section>
+    {/if}
   {/if}
 </div>

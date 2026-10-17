@@ -10213,5 +10213,2545 @@
     "weapon_id": 10986,
     "item_id": 10659,
     "quantity": 4
+  },
+  {
+    "weapon_id": 10988,
+    "item_id": 10571,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10988,
+    "item_id": 10231,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10988,
+    "item_id": 10569,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10988,
+    "item_id": 10136,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10988,
+    "item_id": 10570,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10988,
+    "item_id": 10572,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10079,
+    "item_id": 10630,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10079,
+    "item_id": 10632,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10079,
+    "item_id": 10633,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10079,
+    "item_id": 10634,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10040,
+    "item_id": 10577,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10040,
+    "item_id": 10545,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10040,
+    "item_id": 10384,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10061,
+    "item_id": 10607,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10061,
+    "item_id": 10608,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10061,
+    "item_id": 10609,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10019,
+    "item_id": 10557,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10019,
+    "item_id": 10558,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10019,
+    "item_id": 10559,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10090,
+    "item_id": 10559,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10090,
+    "item_id": 10250,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10090,
+    "item_id": 10595,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10066,
+    "item_id": 10615,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10066,
+    "item_id": 10262,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10066,
+    "item_id": 10265,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10075,
+    "item_id": 10626,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10075,
+    "item_id": 10627,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10075,
+    "item_id": 10253,
+    "quantity": 20
+  },
+  {
+    "weapon_id": 10075,
+    "item_id": 10255,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10082,
+    "item_id": 10635,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10082,
+    "item_id": 10636,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10082,
+    "item_id": 10558,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10008,
+    "item_id": 10306,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10008,
+    "item_id": 10542,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10008,
+    "item_id": 10309,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10004,
+    "item_id": 10540,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10004,
+    "item_id": 10541,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10048,
+    "item_id": 10590,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10048,
+    "item_id": 10591,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10048,
+    "item_id": 10592,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10048,
+    "item_id": 10593,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10002,
+    "item_id": 10537,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10002,
+    "item_id": 10318,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10002,
+    "item_id": 10538,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10067,
+    "item_id": 10616,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10067,
+    "item_id": 10617,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10067,
+    "item_id": 10538,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10067,
+    "item_id": 10588,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10142,
+    "item_id": 10686,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10142,
+    "item_id": 10617,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10142,
+    "item_id": 10592,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10125,
+    "item_id": 10583,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10125,
+    "item_id": 10584,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10125,
+    "item_id": 10585,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10127,
+    "item_id": 10669,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10127,
+    "item_id": 10670,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10127,
+    "item_id": 10585,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10127,
+    "item_id": 10560,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10174,
+    "item_id": 10705,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10174,
+    "item_id": 10711,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10174,
+    "item_id": 10301,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10174,
+    "item_id": 10314,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10145,
+    "item_id": 10691,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10145,
+    "item_id": 10692,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10145,
+    "item_id": 10567,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10169,
+    "item_id": 10691,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10169,
+    "item_id": 10709,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10169,
+    "item_id": 10705,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10132,
+    "item_id": 10674,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10132,
+    "item_id": 10675,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10132,
+    "item_id": 10555,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10133,
+    "item_id": 10675,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10133,
+    "item_id": 10676,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10133,
+    "item_id": 10559,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10155,
+    "item_id": 10682,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10155,
+    "item_id": 10700,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10155,
+    "item_id": 10124,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10155,
+    "item_id": 10609,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10117,
+    "item_id": 10299,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10117,
+    "item_id": 10301,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10117,
+    "item_id": 10302,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10114,
+    "item_id": 10658,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10114,
+    "item_id": 10659,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10114,
+    "item_id": 10566,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10115,
+    "item_id": 10660,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10115,
+    "item_id": 10661,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10115,
+    "item_id": 10302,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10129,
+    "item_id": 10591,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10129,
+    "item_id": 10592,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10129,
+    "item_id": 10672,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10129,
+    "item_id": 10593,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10163,
+    "item_id": 10704,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10163,
+    "item_id": 10384,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10163,
+    "item_id": 10274,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10164,
+    "item_id": 10704,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10164,
+    "item_id": 10705,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10164,
+    "item_id": 10618,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10210,
+    "item_id": 10703,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10210,
+    "item_id": 10603,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10210,
+    "item_id": 10636,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10215,
+    "item_id": 10240,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10215,
+    "item_id": 10545,
+    "quantity": 10
+  },
+  {
+    "weapon_id": 10215,
+    "item_id": 10263,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10216,
+    "item_id": 10691,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10216,
+    "item_id": 10692,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10216,
+    "item_id": 10709,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10242,
+    "item_id": 10737,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10242,
+    "item_id": 10738,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10242,
+    "item_id": 10252,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10183,
+    "item_id": 10674,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10183,
+    "item_id": 10675,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10183,
+    "item_id": 10681,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10243,
+    "item_id": 10674,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10243,
+    "item_id": 10676,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10243,
+    "item_id": 10725,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10243,
+    "item_id": 10634,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10235,
+    "item_id": 10582,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10235,
+    "item_id": 10665,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10235,
+    "item_id": 10580,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10236,
+    "item_id": 10736,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10236,
+    "item_id": 10584,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10236,
+    "item_id": 10665,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10236,
+    "item_id": 10585,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10197,
+    "item_id": 10718,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10197,
+    "item_id": 10560,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10197,
+    "item_id": 10553,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10241,
+    "item_id": 10301,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10241,
+    "item_id": 10299,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10241,
+    "item_id": 10302,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10202,
+    "item_id": 10310,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10202,
+    "item_id": 10313,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10202,
+    "item_id": 10312,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10218,
+    "item_id": 10592,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10218,
+    "item_id": 10591,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10218,
+    "item_id": 10590,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10218,
+    "item_id": 10593,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10177,
+    "item_id": 10317,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10177,
+    "item_id": 10321,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10177,
+    "item_id": 10538,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10294,
+    "item_id": 10628,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10294,
+    "item_id": 10633,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10294,
+    "item_id": 10312,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10295,
+    "item_id": 10630,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10295,
+    "item_id": 10631,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10295,
+    "item_id": 10683,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10303,
+    "item_id": 10712,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10303,
+    "item_id": 10673,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10303,
+    "item_id": 10571,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10303,
+    "item_id": 10573,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10351,
+    "item_id": 10626,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10351,
+    "item_id": 10738,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10351,
+    "item_id": 10262,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10351,
+    "item_id": 10252,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10278,
+    "item_id": 11026,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10278,
+    "item_id": 11027,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10278,
+    "item_id": 11029,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10278,
+    "item_id": 11030,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10332,
+    "item_id": 10583,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10332,
+    "item_id": 10736,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10332,
+    "item_id": 10585,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10330,
+    "item_id": 10667,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10330,
+    "item_id": 10669,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10330,
+    "item_id": 10670,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10331,
+    "item_id": 10667,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10331,
+    "item_id": 10668,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10331,
+    "item_id": 10585,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10331,
+    "item_id": 10559,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10338,
+    "item_id": 10761,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10338,
+    "item_id": 10762,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10338,
+    "item_id": 10763,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10338,
+    "item_id": 10698,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10297,
+    "item_id": 10591,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10297,
+    "item_id": 10672,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10297,
+    "item_id": 10748,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10297,
+    "item_id": 10593,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10359,
+    "item_id": 10768,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10359,
+    "item_id": 10234,
+    "quantity": 10
+  },
+  {
+    "weapon_id": 10359,
+    "item_id": 10606,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10359,
+    "item_id": 10594,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10422,
+    "item_id": 10781,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10422,
+    "item_id": 10742,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10422,
+    "item_id": 10713,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10423,
+    "item_id": 10781,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10423,
+    "item_id": 10782,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10423,
+    "item_id": 10592,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10419,
+    "item_id": 10710,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10419,
+    "item_id": 10615,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10419,
+    "item_id": 10262,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10411,
+    "item_id": 10619,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10411,
+    "item_id": 10779,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10411,
+    "item_id": 10698,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10425,
+    "item_id": 10596,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10425,
+    "item_id": 10659,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10425,
+    "item_id": 10660,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10425,
+    "item_id": 10555,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10443,
+    "item_id": 10596,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10443,
+    "item_id": 10658,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10443,
+    "item_id": 10302,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10443,
+    "item_id": 10559,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10391,
+    "item_id": 10573,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10391,
+    "item_id": 10689,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10391,
+    "item_id": 10690,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10391,
+    "item_id": 10776,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10392,
+    "item_id": 10777,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10392,
+    "item_id": 10691,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10392,
+    "item_id": 10716,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10392,
+    "item_id": 10567,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10393,
+    "item_id": 10777,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10393,
+    "item_id": 10690,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10393,
+    "item_id": 10709,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10393,
+    "item_id": 10615,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10426,
+    "item_id": 10668,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10426,
+    "item_id": 10669,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10426,
+    "item_id": 10670,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10417,
+    "item_id": 10705,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10417,
+    "item_id": 10711,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10417,
+    "item_id": 10315,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10417,
+    "item_id": 10314,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10400,
+    "item_id": 10778,
+    "quantity": 10
+  },
+  {
+    "weapon_id": 10400,
+    "item_id": 10555,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10400,
+    "item_id": 10609,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10386,
+    "item_id": 10591,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10386,
+    "item_id": 10590,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10386,
+    "item_id": 10748,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10386,
+    "item_id": 10593,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10353,
+    "item_id": 10318,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10353,
+    "item_id": 10317,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10353,
+    "item_id": 10538,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10500,
+    "item_id": 10738,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10500,
+    "item_id": 10737,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10500,
+    "item_id": 10252,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10500,
+    "item_id": 10107,
+    "quantity": 20
+  },
+  {
+    "weapon_id": 10480,
+    "item_id": 10580,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10480,
+    "item_id": 10579,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10480,
+    "item_id": 10665,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10481,
+    "item_id": 10584,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10481,
+    "item_id": 10583,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10481,
+    "item_id": 10665,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10481,
+    "item_id": 10585,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10514,
+    "item_id": 10632,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10514,
+    "item_id": 10633,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10514,
+    "item_id": 10634,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10514,
+    "item_id": 10124,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10494,
+    "item_id": 10619,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10494,
+    "item_id": 10620,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10494,
+    "item_id": 10549,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10495,
+    "item_id": 10548,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10495,
+    "item_id": 10659,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10495,
+    "item_id": 10698,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10495,
+    "item_id": 10280,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10478,
+    "item_id": 10596,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10478,
+    "item_id": 10658,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10478,
+    "item_id": 10660,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10484,
+    "item_id": 10591,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10484,
+    "item_id": 10590,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10484,
+    "item_id": 10748,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10484,
+    "item_id": 10593,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10567,
+    "item_id": 10557,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10567,
+    "item_id": 10718,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10567,
+    "item_id": 10124,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10619,
+    "item_id": 10691,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10619,
+    "item_id": 10692,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10619,
+    "item_id": 10709,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10619,
+    "item_id": 10567,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10594,
+    "item_id": 10259,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10594,
+    "item_id": 10623,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10594,
+    "item_id": 10614,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10594,
+    "item_id": 10555,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10539,
+    "item_id": 10289,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10539,
+    "item_id": 10790,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10539,
+    "item_id": 10536,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10536,
+    "item_id": 11030,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10536,
+    "item_id": 11028,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10536,
+    "item_id": 11029,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10559,
+    "item_id": 10676,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10559,
+    "item_id": 11029,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10559,
+    "item_id": 10688,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10587,
+    "item_id": 10307,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10587,
+    "item_id": 10542,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10587,
+    "item_id": 10309,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10576,
+    "item_id": 10590,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10576,
+    "item_id": 10592,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10576,
+    "item_id": 10748,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10576,
+    "item_id": 10593,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10668,
+    "item_id": 10667,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10668,
+    "item_id": 10669,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10668,
+    "item_id": 10555,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10669,
+    "item_id": 10669,
+    "quantity": 7
+  },
+  {
+    "weapon_id": 10669,
+    "item_id": 10670,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10669,
+    "item_id": 10585,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10669,
+    "item_id": 10559,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10654,
+    "item_id": 10627,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10654,
+    "item_id": 10710,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10654,
+    "item_id": 10626,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10655,
+    "item_id": 10627,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10655,
+    "item_id": 10615,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10655,
+    "item_id": 10262,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10655,
+    "item_id": 10536,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10647,
+    "item_id": 10633,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10647,
+    "item_id": 10722,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10647,
+    "item_id": 10310,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10647,
+    "item_id": 10681,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10689,
+    "item_id": 10737,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10689,
+    "item_id": 10809,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10689,
+    "item_id": 10615,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10695,
+    "item_id": 10738,
+    "quantity": 7
+  },
+  {
+    "weapon_id": 10695,
+    "item_id": 10567,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10695,
+    "item_id": 10255,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10695,
+    "item_id": 10252,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10633,
+    "item_id": 11031,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10633,
+    "item_id": 11030,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10633,
+    "item_id": 11026,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10673,
+    "item_id": 10313,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10673,
+    "item_id": 10310,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10673,
+    "item_id": 10124,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10673,
+    "item_id": 10790,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10657,
+    "item_id": 10592,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10657,
+    "item_id": 10672,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10657,
+    "item_id": 10591,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10657,
+    "item_id": 10593,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10688,
+    "item_id": 10808,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10688,
+    "item_id": 10728,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10688,
+    "item_id": 10660,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10688,
+    "item_id": 10615,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10759,
+    "item_id": 10777,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10759,
+    "item_id": 10691,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10759,
+    "item_id": 10692,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10760,
+    "item_id": 10661,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10760,
+    "item_id": 10716,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10760,
+    "item_id": 10709,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10760,
+    "item_id": 10615,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10728,
+    "item_id": 10605,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10728,
+    "item_id": 10604,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10728,
+    "item_id": 10636,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10728,
+    "item_id": 10124,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10766,
+    "item_id": 10781,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10766,
+    "item_id": 10245,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10766,
+    "item_id": 10742,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10766,
+    "item_id": 10555,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10767,
+    "item_id": 10782,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10767,
+    "item_id": 10245,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10767,
+    "item_id": 10592,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10767,
+    "item_id": 10559,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10730,
+    "item_id": 10546,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10730,
+    "item_id": 10301,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10730,
+    "item_id": 10700,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10737,
+    "item_id": 10559,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10737,
+    "item_id": 10124,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10737,
+    "item_id": 10658,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10737,
+    "item_id": 10542,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10751,
+    "item_id": 10265,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10751,
+    "item_id": 10268,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10751,
+    "item_id": 10263,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10751,
+    "item_id": 10595,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10727,
+    "item_id": 10729,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10727,
+    "item_id": 10595,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10727,
+    "item_id": 10315,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10717,
+    "item_id": 11030,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10717,
+    "item_id": 11031,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10717,
+    "item_id": 11029,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10732,
+    "item_id": 10766,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10732,
+    "item_id": 10767,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10732,
+    "item_id": 10594,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10732,
+    "item_id": 10701,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10773,
+    "item_id": 10769,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10773,
+    "item_id": 10813,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10773,
+    "item_id": 10700,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10773,
+    "item_id": 10555,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10738,
+    "item_id": 10313,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10738,
+    "item_id": 10311,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10738,
+    "item_id": 10310,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10739,
+    "item_id": 10311,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10739,
+    "item_id": 10312,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10739,
+    "item_id": 10538,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10739,
+    "item_id": 10386,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10752,
+    "item_id": 10711,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10752,
+    "item_id": 10705,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10752,
+    "item_id": 10727,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10752,
+    "item_id": 10314,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10741,
+    "item_id": 10592,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10741,
+    "item_id": 10590,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10741,
+    "item_id": 10748,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10741,
+    "item_id": 10593,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10733,
+    "item_id": 10318,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10733,
+    "item_id": 10537,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10733,
+    "item_id": 10538,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10788,
+    "item_id": 10577,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10788,
+    "item_id": 10545,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10788,
+    "item_id": 10695,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10789,
+    "item_id": 10240,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10789,
+    "item_id": 10544,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10789,
+    "item_id": 10739,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10785,
+    "item_id": 10619,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10785,
+    "item_id": 10779,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10785,
+    "item_id": 10124,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10785,
+    "item_id": 10301,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10785,
+    "item_id": 10620,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10786,
+    "item_id": 10619,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10786,
+    "item_id": 10698,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10786,
+    "item_id": 11026,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10833,
+    "item_id": 10571,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10833,
+    "item_id": 10712,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10833,
+    "item_id": 10722,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10833,
+    "item_id": 10747,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10805,
+    "item_id": 10626,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10805,
+    "item_id": 10738,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10805,
+    "item_id": 10262,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10805,
+    "item_id": 10252,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10805,
+    "item_id": 10710,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10805,
+    "item_id": 10737,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10805,
+    "item_id": 10255,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10805,
+    "item_id": 10615,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10826,
+    "item_id": 10584,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10826,
+    "item_id": 10670,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10826,
+    "item_id": 10667,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10826,
+    "item_id": 10585,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10813,
+    "item_id": 10590,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10813,
+    "item_id": 10592,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10813,
+    "item_id": 10591,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10813,
+    "item_id": 10593,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10813,
+    "item_id": 10748,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10813,
+    "item_id": 10578,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10792,
+    "item_id": 10560,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10792,
+    "item_id": 10558,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10792,
+    "item_id": 10557,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10792,
+    "item_id": 10553,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10792,
+    "item_id": 10559,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10776,
+    "item_id": 10791,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10776,
+    "item_id": 10312,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10776,
+    "item_id": 10776,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10855,
+    "item_id": 10820,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10855,
+    "item_id": 10769,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10855,
+    "item_id": 10700,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10855,
+    "item_id": 10567,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10889,
+    "item_id": 10781,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10889,
+    "item_id": 10245,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10889,
+    "item_id": 10782,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10889,
+    "item_id": 10742,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10883,
+    "item_id": 10747,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10883,
+    "item_id": 10689,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10883,
+    "item_id": 10566,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10868,
+    "item_id": 10590,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10868,
+    "item_id": 10592,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10868,
+    "item_id": 10124,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10868,
+    "item_id": 10593,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10868,
+    "item_id": 10672,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10868,
+    "item_id": 10578,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10858,
+    "item_id": 10736,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10858,
+    "item_id": 10584,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10858,
+    "item_id": 10583,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10858,
+    "item_id": 10555,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10897,
+    "item_id": 10669,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10897,
+    "item_id": 10667,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10897,
+    "item_id": 10557,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10897,
+    "item_id": 10585,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10881,
+    "item_id": 10728,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10881,
+    "item_id": 10729,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10881,
+    "item_id": 10727,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10881,
+    "item_id": 10595,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10881,
+    "item_id": 10660,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10879,
+    "item_id": 10312,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10879,
+    "item_id": 10636,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10879,
+    "item_id": 10386,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10879,
+    "item_id": 10538,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10891,
+    "item_id": 10315,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10891,
+    "item_id": 10821,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10891,
+    "item_id": 10705,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10891,
+    "item_id": 10314,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10874,
+    "item_id": 10596,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10874,
+    "item_id": 10821,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10874,
+    "item_id": 10790,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10874,
+    "item_id": 10302,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10909,
+    "item_id": 10764,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10909,
+    "item_id": 10823,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10911,
+    "item_id": 10568,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10911,
+    "item_id": 10569,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10911,
+    "item_id": 10770,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10914,
+    "item_id": 10674,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10914,
+    "item_id": 10576,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10914,
+    "item_id": 10676,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10914,
+    "item_id": 10555,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10914,
+    "item_id": 10675,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10968,
+    "item_id": 10567,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10968,
+    "item_id": 10566,
+    "quantity": 10
+  },
+  {
+    "weapon_id": 10968,
+    "item_id": 10301,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10945,
+    "item_id": 10592,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10945,
+    "item_id": 10590,
+    "quantity": 5
+  },
+  {
+    "weapon_id": 10945,
+    "item_id": 10748,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10945,
+    "item_id": 10593,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10945,
+    "item_id": 10591,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10945,
+    "item_id": 10578,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10955,
+    "item_id": 10603,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10955,
+    "item_id": 10605,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10955,
+    "item_id": 10703,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10955,
+    "item_id": 10636,
+    "quantity": 2
+  },
+  {
+    "weapon_id": 10955,
+    "item_id": 10635,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10959,
+    "item_id": 10660,
+    "quantity": 8
+  },
+  {
+    "weapon_id": 10959,
+    "item_id": 10790,
+    "quantity": 3
+  },
+  {
+    "weapon_id": 10959,
+    "item_id": 10559,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10959,
+    "item_id": 10302,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10972,
+    "item_id": 10669,
+    "quantity": 6
+  },
+  {
+    "weapon_id": 10972,
+    "item_id": 10636,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10972,
+    "item_id": 10718,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10972,
+    "item_id": 10585,
+    "quantity": 1
+  },
+  {
+    "weapon_id": 10987,
+    "item_id": 10705,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10987,
+    "item_id": 10711,
+    "quantity": 4
+  },
+  {
+    "weapon_id": 10987,
+    "item_id": 10821,
+    "quantity": 7
+  },
+  {
+    "weapon_id": 10987,
+    "item_id": 10314,
+    "quantity": 1
   }
 ]

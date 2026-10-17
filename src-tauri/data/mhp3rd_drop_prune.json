@@ -1,0 +1,1602 @@
+[
+  {
+    "monster_id": 10021,
+    "item_id": 10614,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "Low",
+    "probability": 0.2
+  },
+  {
+    "monster_id": 10021,
+    "item_id": 10614,
+    "method": "break",
+    "part": "胸",
+    "rank": "Low",
+    "probability": 0.55
+  },
+  {
+    "monster_id": 10021,
+    "item_id": 10614,
+    "method": "break",
+    "part": "胸",
+    "rank": "High",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10021,
+    "item_id": 10614,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.08
+  },
+  {
+    "monster_id": 10021,
+    "item_id": 10632,
+    "method": "drop",
+    "part": "Head",
+    "rank": "Low",
+    "probability": 0.26
+  },
+  {
+    "monster_id": 10021,
+    "item_id": 10632,
+    "method": "break",
+    "part": "Head",
+    "rank": "Low",
+    "probability": 0.17
+  },
+  {
+    "monster_id": 10021,
+    "item_id": 10637,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "probability": 0.14
+  },
+  {
+    "monster_id": 10022,
+    "item_id": 10633,
+    "method": "capture",
+    "part": "Tail",
+    "rank": "High",
+    "probability": 0.43
+  },
+  {
+    "monster_id": 10022,
+    "item_id": 10633,
+    "method": "capture",
+    "part": "Head",
+    "rank": "High",
+    "probability": 0.08
+  },
+  {
+    "monster_id": 10022,
+    "item_id": 10639,
+    "method": "break",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.39
+  },
+  {
+    "monster_id": 10022,
+    "item_id": 10639,
+    "method": "capture",
+    "part": "Tail",
+    "rank": "High",
+    "probability": 0.22
+  },
+  {
+    "monster_id": 10022,
+    "item_id": 10642,
+    "method": "break",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.25
+  },
+  {
+    "monster_id": 10023,
+    "item_id": 10285,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "probability": 0.42
+  },
+  {
+    "monster_id": 10023,
+    "item_id": 10286,
+    "method": "drop",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.33
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10591,
+    "method": "carve",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.31
+  },
+  {
+    "monster_id": 10025,
+    "item_id": 10268,
+    "method": "capture",
+    "part": "Body",
+    "rank": "Low",
+    "probability": 0.28
+  },
+  {
+    "monster_id": 10026,
+    "item_id": 10588,
+    "method": "break",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.45
+  },
+  {
+    "monster_id": 10026,
+    "item_id": 10590,
+    "method": "capture",
+    "part": "Body",
+    "rank": "Low",
+    "probability": 0.4
+  },
+  {
+    "monster_id": 10026,
+    "item_id": 10592,
+    "method": "carve",
+    "part": "Tail",
+    "rank": "High",
+    "probability": 0.22
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10533,
+    "method": "carve",
+    "part": "Head",
+    "rank": "Low",
+    "probability": 0.21
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10533,
+    "method": "drop",
+    "part": "Tail",
+    "rank": "High",
+    "probability": 0.37
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10536,
+    "method": "capture",
+    "part": "Head",
+    "rank": "Low",
+    "probability": 0.33
+  },
+  {
+    "monster_id": 10027,
+    "item_id": 10824,
+    "method": "drop",
+    "part": "Body",
+    "rank": "Low",
+    "probability": 0.11
+  },
+  {
+    "monster_id": 10028,
+    "item_id": 10535,
+    "method": "drop",
+    "part": "Tail",
+    "rank": "Low",
+    "probability": 0.21
+  },
+  {
+    "monster_id": 10028,
+    "item_id": 10536,
+    "method": "carve",
+    "part": "Tail",
+    "rank": "High",
+    "probability": 0.07
+  },
+  {
+    "monster_id": 10028,
+    "item_id": 10536,
+    "method": "break",
+    "part": "Tail",
+    "rank": "High",
+    "probability": 0.08
+  },
+  {
+    "monster_id": 10028,
+    "item_id": 10824,
+    "method": "drop",
+    "part": "Tail",
+    "rank": "Low",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10663,
+    "method": "capture",
+    "part": "Tail",
+    "rank": "Low",
+    "probability": 0.32
+  },
+  {
+    "monster_id": 10030,
+    "item_id": 10736,
+    "method": "drop",
+    "part": "Body",
+    "rank": "High",
+    "probability": 0.44
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10599,
+    "method": "carve",
+    "part": "尻尾",
+    "rank": "High",
+    "probability": 0.06
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10599,
+    "method": "capture",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.08
+  },
+  {
+    "monster_id": 10031,
+    "item_id": 10625,
+    "method": "break",
+    "part": "Tail",
+    "rank": "Low",
+    "probability": 0.33
+  },
+  {
+    "monster_id": 10032,
+    "item_id": 10622,
+    "method": "carve",
+    "part": "Tail",
+    "rank": "High",
+    "probability": 0.41
+  },
+  {
+    "monster_id": 10032,
+    "item_id": 10624,
+    "method": "drop",
+    "part": "Body",
+    "rank": "High",
+    "probability": 0.11
+  },
+  {
+    "monster_id": 10032,
+    "item_id": 10625,
+    "method": "capture",
+    "part": "Head",
+    "rank": "High",
+    "probability": 0.25
+  },
+  {
+    "monster_id": 10032,
+    "item_id": 10625,
+    "method": "break",
+    "part": "Tail",
+    "rank": "High",
+    "probability": 0.15
+  },
+  {
+    "monster_id": 10032,
+    "item_id": 10258,
+    "method": "drop",
+    "part": "Head",
+    "rank": "High",
+    "probability": 0.3
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10693,
+    "method": "break",
+    "part": "角",
+    "rank": "Low",
+    "probability": 0.75
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10693,
+    "method": "break",
+    "part": "角",
+    "rank": "High",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10693,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10696,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "High",
+    "probability": 0.34
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10696,
+    "method": "drop",
+    "part": "落し物",
+    "rank": "High",
+    "probability": 0.18
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10696,
+    "method": "break",
+    "part": "背中",
+    "rank": "High",
+    "probability": 0.26
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10696,
+    "method": "capture",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.38
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10720,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "Low",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10720,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "High",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10720,
+    "method": "drop",
+    "part": "落し物",
+    "rank": "Low",
+    "probability": 0.05
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10720,
+    "method": "drop",
+    "part": "落し物",
+    "rank": "High",
+    "probability": 0.07
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10720,
+    "method": "break",
+    "part": "背中",
+    "rank": "Low",
+    "probability": 0.6
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10720,
+    "method": "break",
+    "part": "背中",
+    "rank": "High",
+    "probability": 0.4
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10720,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.24
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 10720,
+    "method": "capture",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11036,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "High",
+    "probability": 0.42
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11036,
+    "method": "carve",
+    "part": "尻尾剥ぎ取り",
+    "rank": "High",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11036,
+    "method": "carve",
+    "part": "尻尾採掘",
+    "rank": "High",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11036,
+    "method": "break",
+    "part": "背中",
+    "rank": "High",
+    "probability": 0.12
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11036,
+    "method": "break",
+    "part": "角",
+    "rank": "High",
+    "probability": 0.2
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11036,
+    "method": "capture",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.18
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11039,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "Low",
+    "probability": 0.04
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11039,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "High",
+    "probability": 0.05
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11039,
+    "method": "carve",
+    "part": "尻尾剥ぎ取り",
+    "rank": "Low",
+    "probability": 0.03
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11039,
+    "method": "carve",
+    "part": "尻尾剥ぎ取り",
+    "rank": "High",
+    "probability": 0.05
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11039,
+    "method": "carve",
+    "part": "尻尾採掘",
+    "rank": "Low",
+    "probability": 0.06
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11039,
+    "method": "carve",
+    "part": "尻尾採掘",
+    "rank": "High",
+    "probability": 0.08
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11039,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.06
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11039,
+    "method": "capture",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.07
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11040,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "High",
+    "probability": 0.03
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11040,
+    "method": "carve",
+    "part": "尻尾剥ぎ取り",
+    "rank": "High",
+    "probability": 0.02
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11040,
+    "method": "carve",
+    "part": "尻尾採掘",
+    "rank": "High",
+    "probability": 0.04
+  },
+  {
+    "monster_id": 10033,
+    "item_id": 11040,
+    "method": "capture",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.05
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10305,
+    "method": "break",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.11
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10305,
+    "method": "drop",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.17
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10306,
+    "method": "carve",
+    "part": "Body",
+    "rank": "Low",
+    "probability": 0.14
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10309,
+    "method": "drop",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.12
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10309,
+    "method": "drop",
+    "part": "Head",
+    "rank": "High",
+    "probability": 0.12
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10647,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "Low",
+    "probability": 0.2
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10647,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.17
+  },
+  {
+    "monster_id": 10034,
+    "item_id": 10647,
+    "method": "capture",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10035,
+    "item_id": 10309,
+    "method": "break",
+    "part": "Tail",
+    "rank": "Low",
+    "probability": 0.15
+  },
+  {
+    "monster_id": 10035,
+    "item_id": 10309,
+    "method": "carve",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.44
+  },
+  {
+    "monster_id": 10035,
+    "item_id": 10309,
+    "method": "carve",
+    "part": "Body",
+    "rank": "Low",
+    "probability": 0.26
+  },
+  {
+    "monster_id": 10035,
+    "item_id": 10546,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "probability": 0.24
+  },
+  {
+    "monster_id": 10035,
+    "item_id": 11013,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.25
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10578,
+    "method": "capture",
+    "part": "Body",
+    "rank": "High",
+    "probability": 0.44
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10586,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "Low",
+    "probability": 0.45
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10586,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "High",
+    "probability": 0.4
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10586,
+    "method": "drop",
+    "part": "落し物",
+    "rank": "Low",
+    "probability": 0.25
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10586,
+    "method": "drop",
+    "part": "落し物",
+    "rank": "High",
+    "probability": 0.25
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10586,
+    "method": "break",
+    "part": "頭",
+    "rank": "Low",
+    "probability": 0.3
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10586,
+    "method": "break",
+    "part": "頭",
+    "rank": "High",
+    "probability": 0.2
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10586,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.18
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10586,
+    "method": "capture",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.18
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10763,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "Low",
+    "probability": 0.15
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10763,
+    "method": "break",
+    "part": "頭",
+    "rank": "Low",
+    "probability": 0.7
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10763,
+    "method": "break",
+    "part": "頭",
+    "rank": "High",
+    "probability": 0.07
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 10763,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.23
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 11022,
+    "method": "carve",
+    "part": "尻尾",
+    "rank": "Low",
+    "probability": 0.08
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 11022,
+    "method": "carve",
+    "part": "尻尾",
+    "rank": "High",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 11022,
+    "method": "break",
+    "part": "尻尾の棘",
+    "rank": "Low",
+    "probability": 0.08
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 11022,
+    "method": "break",
+    "part": "尻尾の棘",
+    "rank": "High",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 11022,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.04
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 11023,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "High",
+    "probability": 0.02
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 11023,
+    "method": "carve",
+    "part": "尻尾",
+    "rank": "High",
+    "probability": 0.08
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 11023,
+    "method": "break",
+    "part": "頭",
+    "rank": "High",
+    "probability": 0.08
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 11023,
+    "method": "break",
+    "part": "尻尾の棘",
+    "rank": "High",
+    "probability": 0.08
+  },
+  {
+    "monster_id": 10040,
+    "item_id": 11023,
+    "method": "capture",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.04
+  },
+  {
+    "monster_id": 10041,
+    "item_id": 10578,
+    "method": "carve",
+    "part": "Body",
+    "rank": "Low",
+    "probability": 0.27
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10637,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "Low",
+    "probability": 0.15
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10637,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "High",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10637,
+    "method": "break",
+    "part": "エラ",
+    "rank": "Low",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10637,
+    "method": "break",
+    "part": "エラ",
+    "rank": "High",
+    "probability": 0.15
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10637,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.23
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10637,
+    "method": "capture",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10803,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "High",
+    "probability": 0.12
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10803,
+    "method": "drop",
+    "part": "落し物",
+    "rank": "High",
+    "probability": 0.2
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10803,
+    "method": "break",
+    "part": "エラ",
+    "rank": "High",
+    "probability": 0.65
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 10803,
+    "method": "capture",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.2
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 11011,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "High",
+    "probability": 0.48
+  },
+  {
+    "monster_id": 10042,
+    "item_id": 11011,
+    "method": "break",
+    "part": "エラ",
+    "rank": "High",
+    "probability": 0.15
+  },
+  {
+    "monster_id": 10044,
+    "item_id": 10820,
+    "method": "drop",
+    "part": "Head",
+    "rank": "High",
+    "probability": 0.26
+  },
+  {
+    "monster_id": 10044,
+    "item_id": 10820,
+    "method": "drop",
+    "part": "Body",
+    "rank": "High",
+    "probability": 0.44
+  },
+  {
+    "monster_id": 10044,
+    "item_id": 10820,
+    "method": "carve",
+    "part": "Body",
+    "rank": "High",
+    "probability": 0.43
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10557,
+    "method": "break",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.4
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10561,
+    "method": "carve",
+    "part": "Body",
+    "rank": "High",
+    "probability": 0.12
+  },
+  {
+    "monster_id": 10045,
+    "item_id": 10562,
+    "method": "drop",
+    "part": "Body",
+    "rank": "High",
+    "probability": 0.17
+  },
+  {
+    "monster_id": 10046,
+    "item_id": 10560,
+    "method": "carve",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.21
+  },
+  {
+    "monster_id": 10046,
+    "item_id": 10560,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "probability": 0.2
+  },
+  {
+    "monster_id": 10046,
+    "item_id": 10561,
+    "method": "capture",
+    "part": "Tail",
+    "rank": "Low",
+    "probability": 0.44
+  },
+  {
+    "monster_id": 10046,
+    "item_id": 11017,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.25
+  },
+  {
+    "monster_id": 10046,
+    "item_id": 11018,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.4
+  },
+  {
+    "monster_id": 10046,
+    "item_id": 11019,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10294,
+    "method": "drop",
+    "part": "Body",
+    "rank": "Low",
+    "probability": 0.21
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10294,
+    "method": "drop",
+    "part": "Tail",
+    "rank": "High",
+    "probability": 0.28
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10300,
+    "method": "carve",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10047,
+    "item_id": 10257,
+    "method": "drop",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.44
+  },
+  {
+    "monster_id": 10048,
+    "item_id": 10294,
+    "method": "drop",
+    "part": "Head",
+    "rank": "Low",
+    "probability": 0.26
+  },
+  {
+    "monster_id": 10048,
+    "item_id": 10552,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "probability": 0.36
+  },
+  {
+    "monster_id": 10048,
+    "item_id": 10553,
+    "method": "drop",
+    "part": "Tail",
+    "rank": "High",
+    "probability": 0.25
+  },
+  {
+    "monster_id": 10048,
+    "item_id": 10765,
+    "method": "capture",
+    "part": "Body",
+    "rank": "High",
+    "probability": 0.4
+  },
+  {
+    "monster_id": 10048,
+    "item_id": 11014,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.22
+  },
+  {
+    "monster_id": 10048,
+    "item_id": 11015,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.3
+  },
+  {
+    "monster_id": 10049,
+    "item_id": 10823,
+    "method": "capture",
+    "part": "Body",
+    "rank": "High",
+    "probability": 0.27
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10614,
+    "method": "capture",
+    "part": "Tail",
+    "rank": "High",
+    "probability": 0.42
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10252,
+    "method": "drop",
+    "part": "Body",
+    "rank": "Low",
+    "probability": 0.27
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10262,
+    "method": "break",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.42
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10747,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "High",
+    "probability": 0.17
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10747,
+    "method": "break",
+    "part": "頭",
+    "rank": "High",
+    "probability": 0.17
+  },
+  {
+    "monster_id": 10051,
+    "item_id": 10747,
+    "method": "capture",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.3
+  },
+  {
+    "monster_id": 10053,
+    "item_id": 10322,
+    "method": "break",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.34
+  },
+  {
+    "monster_id": 10053,
+    "item_id": 10671,
+    "method": "drop",
+    "part": "Head",
+    "rank": "High",
+    "probability": 0.37
+  },
+  {
+    "monster_id": 10053,
+    "item_id": 10743,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "probability": 0.12
+  },
+  {
+    "monster_id": 10053,
+    "item_id": 10743,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "probability": 0.28
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10599,
+    "method": "drop",
+    "part": "Tail",
+    "rank": "Low",
+    "probability": 0.18
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10601,
+    "method": "break",
+    "part": "Body",
+    "rank": "Low",
+    "probability": 0.35
+  },
+  {
+    "monster_id": 10054,
+    "item_id": 10273,
+    "method": "capture",
+    "part": "Tail",
+    "rank": "Low",
+    "probability": 0.24
+  },
+  {
+    "monster_id": 10055,
+    "item_id": 10265,
+    "method": "carve",
+    "part": "Body",
+    "rank": "Low",
+    "probability": 0.18
+  },
+  {
+    "monster_id": 10055,
+    "item_id": 10265,
+    "method": "capture",
+    "part": "Head",
+    "rank": "Low",
+    "probability": 0.22
+  },
+  {
+    "monster_id": 10055,
+    "item_id": 10276,
+    "method": "capture",
+    "part": "Head",
+    "rank": "High",
+    "probability": 0.21
+  },
+  {
+    "monster_id": 10055,
+    "item_id": 11032,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.2
+  },
+  {
+    "monster_id": 10055,
+    "item_id": 11033,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.25
+  },
+  {
+    "monster_id": 10055,
+    "item_id": 11034,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.2
+  },
+  {
+    "monster_id": 10055,
+    "item_id": 11035,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.12
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10778,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "Low",
+    "probability": 0.2
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10778,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "High",
+    "probability": 0.08
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10997,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "High",
+    "probability": 0.3
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10997,
+    "method": "break",
+    "part": "背中",
+    "rank": "High",
+    "probability": 0.4
+  },
+  {
+    "monster_id": 10056,
+    "item_id": 10997,
+    "method": "capture",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.42
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10582,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "Low",
+    "probability": 0.05
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10582,
+    "method": "carve",
+    "part": "尻尾",
+    "rank": "Low",
+    "probability": 0.02
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10582,
+    "method": "carve",
+    "part": "尻尾",
+    "rank": "High",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10582,
+    "method": "drop",
+    "part": "落し物",
+    "rank": "Low",
+    "probability": 0.02
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10582,
+    "method": "break",
+    "part": "角",
+    "rank": "Low",
+    "probability": 0.03
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10582,
+    "method": "break",
+    "part": "角",
+    "rank": "High",
+    "probability": 0.08
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10582,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.02
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10582,
+    "method": "capture",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.04
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10597,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "High",
+    "probability": 0.03
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10597,
+    "method": "carve",
+    "part": "尻尾",
+    "rank": "High",
+    "probability": 0.02
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10597,
+    "method": "drop",
+    "part": "落し物",
+    "rank": "High",
+    "probability": 0.02
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10597,
+    "method": "break",
+    "part": "角",
+    "rank": "High",
+    "probability": 0.03
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10597,
+    "method": "capture",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.02
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10675,
+    "method": "carve",
+    "part": "胴体",
+    "rank": "Low",
+    "probability": 0.15
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10675,
+    "method": "break",
+    "part": "前脚(左右)",
+    "rank": "Low",
+    "probability": 0.7
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10675,
+    "method": "break",
+    "part": "前脚(左右)",
+    "rank": "High",
+    "probability": 0.1
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10675,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.2
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10703,
+    "method": "carve",
+    "part": "背中(虫あみ)",
+    "rank": "Low",
+    "probability": 0.9
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10703,
+    "method": "carve",
+    "part": "背中(虫あみ)",
+    "rank": "High",
+    "probability": 0.9
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10703,
+    "method": "drop",
+    "part": "落し物",
+    "rank": "Low",
+    "probability": 0.15
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10703,
+    "method": "drop",
+    "part": "落し物",
+    "rank": "High",
+    "probability": 0.15
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10703,
+    "method": "capture",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.08
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10703,
+    "method": "capture",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.08
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10807,
+    "method": "carve",
+    "part": "尻尾",
+    "rank": "Low",
+    "probability": 0.7
+  },
+  {
+    "monster_id": 10057,
+    "item_id": 10807,
+    "method": "carve",
+    "part": "尻尾",
+    "rank": "High",
+    "probability": 0.62
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10675,
+    "method": "drop",
+    "part": "Body",
+    "rank": "High",
+    "probability": 0.39
+  },
+  {
+    "monster_id": 10058,
+    "item_id": 10675,
+    "method": "break",
+    "part": "Body",
+    "rank": "High",
+    "probability": 0.43
+  },
+  {
+    "monster_id": 10059,
+    "item_id": 10684,
+    "method": "break",
+    "part": "None",
+    "rank": "High",
+    "probability": 0.27
+  },
+  {
+    "monster_id": 10059,
+    "item_id": 10684,
+    "method": "drop",
+    "part": "Body",
+    "rank": "High",
+    "probability": 0.3
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10229,
+    "method": "carve",
+    "part": "Head",
+    "rank": "Low",
+    "probability": 0.29
+  },
+  {
+    "monster_id": 10060,
+    "item_id": 10244,
+    "method": "break",
+    "part": "None",
+    "rank": "Low",
+    "probability": 0.42
+  },
+  {
+    "monster_id": 10019,
+    "item_id": 10232,
+    "method": "carve",
+    "part": "Body",
+    "rank": "Low",
+    "probability": 0.5
+  },
+  {
+    "monster_id": 10019,
+    "item_id": 10232,
+    "method": "carve",
+    "part": "Body",
+    "rank": "High",
+    "probability": 0.1
+  }
+]

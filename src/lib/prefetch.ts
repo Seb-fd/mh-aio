@@ -13,6 +13,12 @@ const SECTION_JOBS: Record<string, [key: string, run: (dbId: number) => Promise<
   '/items': [['items', (id) => api.getItems(id)]],
   '/skills': [['skills', (id) => api.getSkills(id)]],
   '/decorations': [['decorations', (id) => api.getDecorations(id)]],
+  '/charms': [],
+  '/comrades': [
+    ['comrade-weapons', (id) => api.getComradeWeapons(id)],
+    ['comrade-armor', (id) => api.getComradeArmor(id)],
+    ['comrade-skills', (id) => api.getComradeSkills(id)],
+  ],
   '/tools': [
     ['mhw-mantles', (id) => api.getMhwMantles(id)],
     ['palico-gadgets', (id) => api.getPalicoGadgets(id)],

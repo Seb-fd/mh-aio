@@ -118,7 +118,7 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             part TEXT,
             rank TEXT,
             quantity INTEGER NOT NULL DEFAULT 1,
-            probability REAL NOT NULL,
+            probability REAL,
             condition TEXT,
             language TEXT DEFAULT 'en'
         );
@@ -154,6 +154,155 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             normal INTEGER,
             notfound INTEGER,
             enraged INTEGER
+        );
+
+        -- Monster part-break thresholds (MHR Kiranico part tables; extract
+        -- color is the wirebug/wyvern-riding drop color).
+        CREATE TABLE IF NOT EXISTS monster_part_break (
+            id INTEGER PRIMARY KEY,
+            monster_id INTEGER REFERENCES monsters(id),
+            part TEXT NOT NULL,
+            part_hp INTEGER,
+            break_text TEXT,
+            extract TEXT
+        );
+
+        -- Excavated charms (per-game roll tables; skills in charm_skills)
+        CREATE TABLE IF NOT EXISTS charms (
+            id INTEGER PRIMARY KEY,
+            game_id INTEGER REFERENCES games(id),
+            charm_type TEXT NOT NULL,
+            charm_table INTEGER,
+            slots INTEGER NOT NULL DEFAULT 0,
+            skill_sig TEXT NOT NULL DEFAULT ''
+        );
+
+        -- Hunter charms (MHW rank tree I->V + craft materials; skills denormalized
+        -- like upstream charm_base.csv; materials in hunter_charm_materials)
+        CREATE TABLE IF NOT EXISTS hunter_charms (
+            id INTEGER PRIMARY KEY,
+            game_id INTEGER REFERENCES games(id),
+            name TEXT NOT NULL,
+            charm_level INTEGER,
+            rarity INTEGER,
+            previous_id INTEGER REFERENCES hunter_charms(id),
+            skill1_name TEXT,
+            skill1_level INTEGER,
+            skill2_name TEXT,
+            skill2_level INTEGER
+        );
+
+        CREATE TABLE IF NOT EXISTS hunter_charm_materials (
+            charm_id INTEGER REFERENCES hunter_charms(id),
+            craft_kind TEXT NOT NULL,
+            item_id INTEGER REFERENCES items(id),
+            quantity INTEGER NOT NULL DEFAULT 1,
+            PRIMARY KEY (charm_id, craft_kind, item_id)
+        );
+
+        -- Buddy gear (MHR; EN names from Kiranico; melee/ranged split stats;
+        -- no materials or rarity upstream).
+        CREATE TABLE IF NOT EXISTS buddy_weapons (
+            id INTEGER PRIMARY KEY,
+            game_id INTEGER REFERENCES games(id),
+            kind TEXT NOT NULL,
+            name TEXT NOT NULL,
+            attack_type TEXT,
+            attack_melee INTEGER,
+            attack_ranged INTEGER,
+            element_type TEXT,
+            element_melee INTEGER,
+            element_ranged INTEGER,
+            status_type TEXT,
+            status_melee INTEGER,
+            status_ranged INTEGER,
+            affinity INTEGER,
+            defense_bonus INTEGER
+        );
+
+        -- Rampage system (MHR; weapon-side upgrades + decos).
+        CREATE TABLE IF NOT EXISTS rampage_skills (
+            id INTEGER PRIMARY KEY,
+            game_id INTEGER REFERENCES games(id),
+            name TEXT NOT NULL,
+            description TEXT
+        );
+
+        CREATE TABLE IF NOT EXISTS weapon_rampage (
+            weapon_id INTEGER REFERENCES weapons(id),
+            skill_id INTEGER REFERENCES rampage_skills(id),
+            PRIMARY KEY (weapon_id, skill_id)
+        );
+
+        CREATE TABLE IF NOT EXISTS rampage_decorations (
+            id INTEGER PRIMARY KEY,
+            game_id INTEGER REFERENCES games(id),
+            item_id INTEGER REFERENCES items(id),
+            name TEXT NOT NULL,
+            grants_skill TEXT,
+            slot INTEGER,
+            weapon_types TEXT,
+            description TEXT
+        );
+
+        CREATE TABLE IF NOT EXISTS buddy_armor (
+            id INTEGER PRIMARY KEY,
+            game_id INTEGER REFERENCES games(id),
+            kind TEXT NOT NULL,
+            name TEXT NOT NULL,
+            defense INTEGER,
+            fire INTEGER,
+            water INTEGER,
+            thunder INTEGER,
+            ice INTEGER,
+            dragon INTEGER
+        );
+
+        -- Felyne comrade gear (MHP3rd; JP names, no EN source exists)
+        CREATE TABLE IF NOT EXISTS comrade_weapons (
+            id INTEGER PRIMARY KEY,
+            game_id INTEGER REFERENCES games(id),
+            name_jp TEXT NOT NULL,
+            price INTEGER,
+            rarity INTEGER,
+            attack INTEGER,
+            element TEXT,
+            sharpness TEXT,
+            affinity TEXT,
+            style TEXT
+        );
+
+        CREATE TABLE IF NOT EXISTS comrade_armor (
+            id INTEGER PRIMARY KEY,
+            game_id INTEGER REFERENCES games(id),
+            name_jp TEXT NOT NULL,
+            slot TEXT NOT NULL,
+            rarity INTEGER,
+            price INTEGER,
+            defense INTEGER,
+            fire INTEGER,
+            water INTEGER,
+            thunder INTEGER,
+            ice INTEGER,
+            dragon INTEGER,
+            materials_jp TEXT
+        );
+
+        CREATE TABLE IF NOT EXISTS comrade_skills (
+            id INTEGER PRIMARY KEY,
+            game_id INTEGER REFERENCES games(id),
+            name_jp TEXT NOT NULL,
+            memory TEXT,
+            effect_jp TEXT,
+            cost INTEGER,
+            learn_level TEXT
+        );
+
+        CREATE TABLE IF NOT EXISTS charm_skills (
+            charm_id INTEGER REFERENCES charms(id),
+            skill_id INTEGER REFERENCES skills(id),
+            points INTEGER NOT NULL,
+            PRIMARY KEY (charm_id, skill_id)
         );
 
         -- Quests table
@@ -419,6 +568,15 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
         CREATE INDEX IF NOT EXISTS idx_monster_drops_item ON monster_drops(item_id);
         CREATE INDEX IF NOT EXISTS idx_monster_ailments_monster ON monster_ailments(monster_id);
         CREATE INDEX IF NOT EXISTS idx_monster_tools_monster ON monster_tools(monster_id);
+        CREATE INDEX IF NOT EXISTS idx_monster_part_break_monster ON monster_part_break(monster_id);
+        CREATE INDEX IF NOT EXISTS idx_charms_game ON charms(game_id);
+        CREATE INDEX IF NOT EXISTS idx_charm_skills_charm ON charm_skills(charm_id);
+        CREATE INDEX IF NOT EXISTS idx_charm_skills_skill ON charm_skills(skill_id);
+        CREATE INDEX IF NOT EXISTS idx_comrade_weapons_game ON comrade_weapons(game_id);
+        CREATE INDEX IF NOT EXISTS idx_comrade_armor_game ON comrade_armor(game_id);
+        CREATE INDEX IF NOT EXISTS idx_buddy_weapons_game ON buddy_weapons(game_id);
+        CREATE INDEX IF NOT EXISTS idx_buddy_armor_game ON buddy_armor(game_id);
+        CREATE INDEX IF NOT EXISTS idx_comrade_skills_game ON comrade_skills(game_id);
         CREATE INDEX IF NOT EXISTS idx_monster_eq_monster ON monster_equipment(monster_id);
         CREATE INDEX IF NOT EXISTS idx_skill_levels_skill ON skill_levels(skill_id);
         CREATE INDEX IF NOT EXISTS idx_skill_levels_points ON skill_levels(points);
@@ -484,6 +642,7 @@ fn add_idempotency_constraints(conn: &Connection) -> Result<()> {
         "decorations",
         "mhw_mantles",
         "palico_gadgets",
+        "hunter_charms",
     ];
     for t in content_tables {
         conn.execute(
@@ -510,17 +669,26 @@ fn add_idempotency_constraints(conn: &Connection) -> Result<()> {
         .collect::<std::result::Result<_, _>>()?;
     let dedupes = [
         ("uq_monster_equipment", "DELETE FROM monster_equipment WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_equipment GROUP BY game_id, monster_id, equipment_kind, equipment_id);"),
-        ("uq_item_combine", "DELETE FROM item_combine WHERE rowid NOT IN (SELECT MIN(rowid) FROM item_combine GROUP BY result_item_id, component_item_id, combine_type);"),
+        ("uq_item_combine2", "DELETE FROM item_combine WHERE rowid NOT IN (SELECT MIN(rowid) FROM item_combine GROUP BY result_item_id, component_item_id, combine_type, quantity, result_quantity);"),
         ("uq_weapon_craft", "DELETE FROM weapon_craft WHERE rowid NOT IN (SELECT MIN(rowid) FROM weapon_craft GROUP BY weapon_id, craft_kind, item_id);"),
         ("uq_weapon_materials", "DELETE FROM weapon_materials WHERE rowid NOT IN (SELECT MIN(rowid) FROM weapon_materials GROUP BY weapon_id, item_id);"),
         ("uq_armor_materials", "DELETE FROM armor_materials WHERE rowid NOT IN (SELECT MIN(rowid) FROM armor_materials GROUP BY armor_id, item_id);"),
         ("uq_quest_rewards", "DELETE FROM quest_rewards WHERE rowid NOT IN (SELECT MIN(rowid) FROM quest_rewards GROUP BY quest_id, item_id, IFNULL(condition, ''));"),
-        ("uq_monster_drops", "DELETE FROM monster_drops WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_drops GROUP BY monster_id, item_id, method, IFNULL(part, ''), IFNULL(rank, ''), IFNULL(condition, ''));"),
+        ("uq_monster_drops2", "DELETE FROM monster_drops WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_drops GROUP BY monster_id, item_id, method, IFNULL(part, ''), IFNULL(rank, ''), IFNULL(condition, ''), quantity, IFNULL(probability, -1));"),
         ("uq_monster_weaknesses", "DELETE FROM monster_weaknesses WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_weaknesses GROUP BY monster_id, IFNULL(part_name, ''));"),
         ("uq_item_sources", "DELETE FROM item_sources WHERE rowid NOT IN (SELECT MIN(rowid) FROM item_sources GROUP BY item_id, source_type, IFNULL(source_id, -1), IFNULL(quantity_min, -1), IFNULL(quantity_max, -1), IFNULL(probability, -1), IFNULL(location, ''), IFNULL(conditions, ''));"),
         ("uq_melder_recipes", "DELETE FROM melder_recipes WHERE rowid NOT IN (SELECT MIN(rowid) FROM melder_recipes GROUP BY game_id, result_item_id);"),
         ("uq_monster_ailments", "DELETE FROM monster_ailments WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_ailments GROUP BY monster_id, ailment);"),
         ("uq_monster_tools", "DELETE FROM monster_tools WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_tools GROUP BY monster_id, tool);"),
+        ("uq_monster_part_break", "DELETE FROM monster_part_break WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_part_break GROUP BY monster_id, part, IFNULL(part_hp, -1));"),
+        ("uq_charms", "DELETE FROM charms WHERE rowid NOT IN (SELECT MIN(rowid) FROM charms GROUP BY game_id, charm_type, IFNULL(charm_table, -1), slots, skill_sig);"),
+        ("uq_hunter_charms", "DELETE FROM hunter_charms WHERE rowid NOT IN (SELECT MIN(rowid) FROM hunter_charms GROUP BY game_id, name);"),
+        ("uq_comrade_weapons", "DELETE FROM comrade_weapons WHERE rowid NOT IN (SELECT MIN(rowid) FROM comrade_weapons GROUP BY game_id, name_jp);"),
+        ("uq_comrade_armor", "DELETE FROM comrade_armor WHERE rowid NOT IN (SELECT MIN(rowid) FROM comrade_armor GROUP BY game_id, name_jp, slot);"),
+        ("uq_comrade_skills", "DELETE FROM comrade_skills WHERE rowid NOT IN (SELECT MIN(rowid) FROM comrade_skills GROUP BY game_id, name_jp);"),
+        ("uq_buddy_weapons", "DELETE FROM buddy_weapons WHERE rowid NOT IN (SELECT MIN(rowid) FROM buddy_weapons GROUP BY game_id, kind, name);"),
+        ("uq_buddy_armor", "DELETE FROM buddy_armor WHERE rowid NOT IN (SELECT MIN(rowid) FROM buddy_armor GROUP BY game_id, kind, name);"),
+        ("uq_rampage_skills", "DELETE FROM rampage_skills WHERE rowid NOT IN (SELECT MIN(rowid) FROM rampage_skills GROUP BY game_id, name);"),
     ];
     for (index, sql) in dedupes {
         if !existing.contains(index) {
@@ -530,17 +698,29 @@ fn add_idempotency_constraints(conn: &Connection) -> Result<()> {
 
     conn.execute_batch("
         CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_equipment ON monster_equipment(game_id, monster_id, equipment_kind, equipment_id);
-        CREATE UNIQUE INDEX IF NOT EXISTS uq_item_combine ON item_combine(result_item_id, component_item_id, combine_type);
+        DROP INDEX IF EXISTS uq_item_combine;
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_item_combine2 ON item_combine(result_item_id, component_item_id, combine_type, quantity, result_quantity);
         CREATE UNIQUE INDEX IF NOT EXISTS uq_weapon_craft ON weapon_craft(weapon_id, craft_kind, item_id);
         CREATE UNIQUE INDEX IF NOT EXISTS uq_weapon_materials ON weapon_materials(weapon_id, item_id);
         CREATE UNIQUE INDEX IF NOT EXISTS uq_armor_materials ON armor_materials(armor_id, item_id);
         CREATE UNIQUE INDEX IF NOT EXISTS uq_quest_rewards ON quest_rewards(quest_id, item_id, IFNULL(condition, ''));
-        CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_drops ON monster_drops(monster_id, item_id, method, IFNULL(part, ''), IFNULL(rank, ''), IFNULL(condition, ''));
+        DROP INDEX IF EXISTS uq_monster_drops;
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_drops2 ON monster_drops(monster_id, item_id, method, IFNULL(part, ''), IFNULL(rank, ''), IFNULL(condition, ''), quantity, IFNULL(probability, -1));
         CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_weaknesses ON monster_weaknesses(monster_id, IFNULL(part_name, ''));
         CREATE UNIQUE INDEX IF NOT EXISTS uq_item_sources ON item_sources(item_id, source_type, IFNULL(source_id, -1), IFNULL(quantity_min, -1), IFNULL(quantity_max, -1), IFNULL(probability, -1), IFNULL(location, ''), IFNULL(conditions, ''));
         CREATE UNIQUE INDEX IF NOT EXISTS uq_melder_recipes ON melder_recipes(game_id, result_item_id);
         CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_ailments ON monster_ailments(monster_id, ailment);
         CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_tools ON monster_tools(monster_id, tool);
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_part_break ON monster_part_break(monster_id, part, IFNULL(part_hp, -1));
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_charms ON charms(game_id, charm_type, IFNULL(charm_table, -1), slots, skill_sig);
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_hunter_charms ON hunter_charms(game_id, name);
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_comrade_weapons ON comrade_weapons(game_id, name_jp);
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_comrade_armor ON comrade_armor(game_id, name_jp, slot);
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_comrade_skills ON comrade_skills(game_id, name_jp);
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_buddy_weapons ON buddy_weapons(game_id, kind, name);
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_buddy_armor ON buddy_armor(game_id, kind, name);
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_rampage_skills ON rampage_skills(game_id, name);
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_rampage_decorations ON rampage_decorations(game_id, name);
         CREATE UNIQUE INDEX IF NOT EXISTS uq_palico_gadget_levels ON palico_gadget_levels(gadget_id, proficiency);
     ")?;
 
@@ -648,8 +828,56 @@ fn apply_migrations(conn: &Connection) -> Result<()> {
         "CREATE INDEX IF NOT EXISTS idx_quests_category ON quests(category)",
         [],
     );
+    // 010-mhw-100 verification follow-up: `monster_drops.probability` was
+    // REAL NOT NULL, and `INSERT OR IGNORE` turned NULL rates into SILENT
+    // SKIPS (183 MHW rows never landed). NULL now means unknown rate (same
+    // convention as quest reward tickets). SQLite cannot ALTER COLUMN, so
+    // pre-fix databases are rebuilt (no inbound FKs reference monster_drops;
+    // indexes are recreated by the idempotency pass + explicitly below).
+    let prob_notnull: i64 = conn
+        .query_row(
+            "SELECT COUNT(*) FROM pragma_table_info('monster_drops') WHERE name = 'probability' AND [notnull] = 1",
+            [],
+            |r| r.get(0),
+        )
+        .unwrap_or(0);
+    if prob_notnull > 0 {
+        conn.execute_batch(
+            "CREATE TABLE monster_drops_new (
+                id INTEGER PRIMARY KEY,
+                monster_id INTEGER REFERENCES monsters(id),
+                item_id INTEGER REFERENCES items(id),
+                method TEXT NOT NULL,
+                part TEXT,
+                rank TEXT,
+                quantity INTEGER NOT NULL DEFAULT 1,
+                probability REAL,
+                condition TEXT,
+                language TEXT DEFAULT 'en'
+            );
+            INSERT OR IGNORE INTO monster_drops_new
+                SELECT id, monster_id, item_id, method, part, rank, quantity, probability, condition, language FROM monster_drops;
+            DROP TABLE monster_drops;
+            ALTER TABLE monster_drops_new RENAME TO monster_drops;
+            CREATE INDEX IF NOT EXISTS idx_monster_drops_item ON monster_drops(item_id);",
+        )?;
+    }
     // MHFU part flinch HP (stagger limit) from basic-parts-duration
     add_column_if_missing(conn, "monster_weaknesses", "stagger_hp", "INTEGER")?;
+    // 010-mhw-100: qualitative ailment tolerances (Small/Large/Extreme, Effective)
+    // from MHWorldData monster_ailments.csv (numerics stay NULL until Kiranico)
+    add_column_if_missing(conn, "monster_ailments", "notes", "TEXT")?;
+    // 010-mhw-100: second set bonus (27 MHW sets, e.g. Fatalis Legend) from
+    // MHWorldData armorset_bonus_base.csv skill2 columns
+    add_column_if_missing(conn, "armor_sets", "bonus_skill2", "TEXT")?;
+    add_column_if_missing(conn, "armor_sets", "bonus_required2", "INTEGER")?;
+    // 010-mhw-100 Phase B: Kiranico trap diminishing chains (10→8→6→4→2) don't
+    // fit normal/notfound/enraged; kept as text alongside the first value
+    add_column_if_missing(conn, "monster_tools", "notes", "TEXT")?;
+    // 010-mhw-100 Phase B: deco acquisition (Elder Melder RP/MP cost for the 24
+    // meldable jewels + per-feystone odds); crafting materials stay empty (none
+    // exist upstream - jewels come from the Feystone lottery + Melder)
+    add_column_if_missing(conn, "decorations", "acquisition", "TEXT")?;
     Ok(())
 }
 

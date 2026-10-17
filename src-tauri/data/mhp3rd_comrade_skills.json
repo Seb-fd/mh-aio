@@ -1,0 +1,366 @@
+[
+  {
+    "name_jp": "鬼人笛の術",
+    "memory": "○○",
+    "effect_jp": "プレイヤーとオトモの攻撃力が上昇。",
+    "cost": 60,
+    "learn_level": "2"
+  },
+  {
+    "name_jp": "硬化笛の術",
+    "memory": "○○",
+    "effect_jp": "プレイヤーとオトモの防御力が上昇。",
+    "cost": 60,
+    "learn_level": "2"
+  },
+  {
+    "name_jp": "解毒・消臭笛の術",
+    "memory": "○",
+    "effect_jp": "プレイヤーとオトモの毒、ニオイ状態を解消。",
+    "cost": 30,
+    "learn_level": "2"
+  },
+  {
+    "name_jp": "回復笛の術",
+    "memory": "○○",
+    "effect_jp": "プレイヤーとオトモの体力を回復。",
+    "cost": 70,
+    "learn_level": "5"
+  },
+  {
+    "name_jp": "真・回復笛の術",
+    "memory": "○○○",
+    "effect_jp": "ハンターとオトモの体力を大幅に回復。",
+    "cost": 120,
+    "learn_level": "なつき度4"
+  },
+  {
+    "name_jp": "属性攻撃強化の術",
+    "memory": "○○",
+    "effect_jp": "オトモの属性攻撃力が上昇。",
+    "cost": 50,
+    "learn_level": "10"
+  },
+  {
+    "name_jp": "状態異常攻撃【毒】",
+    "memory": "○○○",
+    "effect_jp": "オトモの近接・ブーメラン攻撃に毒属性付加。",
+    "cost": 80,
+    "learn_level": "ドスフロギィor ギギネブラ討伐"
+  },
+  {
+    "name_jp": "状態異常攻撃【麻痺】",
+    "memory": "○○○○",
+    "effect_jp": "オトモの近接・ブーメラン攻撃に麻痺属性付加。",
+    "cost": 80,
+    "learn_level": "ラングロトラ討伐"
+  },
+  {
+    "name_jp": "状態異常攻撃【睡眠】",
+    "memory": "○○○",
+    "effect_jp": "オトモの近接・ブーメラン攻撃に睡眠属性付加。",
+    "cost": 80,
+    "learn_level": "ドスバギィ討伐"
+  },
+  {
+    "name_jp": "状態異常攻撃強化の術",
+    "memory": "○○",
+    "effect_jp": "オトモの状態異常攻撃の効果が上昇。",
+    "cost": 120,
+    "learn_level": "10"
+  },
+  {
+    "name_jp": "泥・雪だるま早割り術",
+    "memory": "○",
+    "effect_jp": "オトモが泥・雪だるま状態になったときに、素早く復帰する。",
+    "cost": 30,
+    "learn_level": "5"
+  },
+  {
+    "name_jp": "毒無効の術",
+    "memory": "○",
+    "effect_jp": "オトモが毒状態にならない。",
+    "cost": 30,
+    "learn_level": "2"
+  },
+  {
+    "name_jp": "風圧無効の術",
+    "memory": "○○",
+    "effect_jp": "オトモが、一部を除くモンスターの風圧にひるまなくなる。",
+    "cost": 100,
+    "learn_level": "10"
+  },
+  {
+    "name_jp": "防音の術",
+    "memory": "○○",
+    "effect_jp": "オトモが、モンスターの咆哮にひるまなくなる。",
+    "cost": 120,
+    "learn_level": "10"
+  },
+  {
+    "name_jp": "防音・風圧無効の術",
+    "memory": "○○○",
+    "effect_jp": "オトモが、一部を除くモンスターの風圧と咆哮にひるまなくなる。",
+    "cost": 140,
+    "learn_level": "15"
+  },
+  {
+    "name_jp": "攻撃強化術【小】",
+    "memory": "○",
+    "effect_jp": "オトモの攻撃力が上昇します。",
+    "cost": 30,
+    "learn_level": "2"
+  },
+  {
+    "name_jp": "攻撃強化術【大】",
+    "memory": "○○",
+    "effect_jp": "オトモの攻撃力が大きく上昇します。",
+    "cost": 90,
+    "learn_level": "ジンオウガor ティガレックス討伐"
+  },
+  {
+    "name_jp": "防御力強化術【小】",
+    "memory": "○",
+    "effect_jp": "オトモの防御力が上昇します。",
+    "cost": 30,
+    "learn_level": "2"
+  },
+  {
+    "name_jp": "防御力強化術【大】",
+    "memory": "○○",
+    "effect_jp": "オトモの防御力が大きく上昇します。",
+    "cost": 90,
+    "learn_level": "ジンオウガor ティガレックス討伐"
+  },
+  {
+    "name_jp": "体力強化術【小】",
+    "memory": "○",
+    "effect_jp": "オトモの体力上昇値が上昇します。",
+    "cost": 30,
+    "learn_level": "5"
+  },
+  {
+    "name_jp": "体力強化術【大】",
+    "memory": "○○",
+    "effect_jp": "体力上限値が大きく上昇。",
+    "cost": null,
+    "learn_level": "ジンオウガor ティガレックス討伐"
+  },
+  {
+    "name_jp": "ガード確率強化【小】",
+    "memory": "○",
+    "effect_jp": "ガード確率が少し上昇。",
+    "cost": 30,
+    "learn_level": "5"
+  },
+  {
+    "name_jp": "ガード確率強化【大】",
+    "memory": "○○",
+    "effect_jp": "ガード確率が大きく上昇。",
+    "cost": null,
+    "learn_level": "10"
+  },
+  {
+    "name_jp": "会心攻撃強化の術",
+    "memory": "○",
+    "effect_jp": "会心確率が上昇。",
+    "cost": null,
+    "learn_level": "5"
+  },
+  {
+    "name_jp": "ぶんどり強化の術",
+    "memory": "○○",
+    "effect_jp": "モンスターからアイテムを盗む確率が上昇。",
+    "cost": 100,
+    "learn_level": "なつき度4"
+  },
+  {
+    "name_jp": "シビレ罠の術",
+    "memory": "○○○",
+    "effect_jp": "まれにシビレ罠設置",
+    "cost": 160,
+    "learn_level": "なつき度4"
+  },
+  {
+    "name_jp": "マタタビ爆弾の術",
+    "memory": "○",
+    "effect_jp": "投げる爆弾が稀にマタタビ爆弾になる。",
+    "cost": 30,
+    "learn_level": "2"
+  },
+  {
+    "name_jp": "大タル爆弾の術",
+    "memory": "○○",
+    "effect_jp": "まれに、大タル爆弾を抱えて突進攻撃をする。",
+    "cost": 140,
+    "learn_level": "ウラガンキンor リオレウス討伐"
+  },
+  {
+    "name_jp": "爆弾強化の術",
+    "memory": "○○○",
+    "effect_jp": "爆弾攻撃の威力が上がる。",
+    "cost": 150,
+    "learn_level": "ウラガンキンor リオレウス討伐"
+  },
+  {
+    "name_jp": "爆弾ダメージ軽減の術",
+    "memory": "○",
+    "effect_jp": "全ての爆弾のダメージ軽減。",
+    "cost": null,
+    "learn_level": "5"
+  },
+  {
+    "name_jp": "ビッグブーメランの術",
+    "memory": "○○",
+    "effect_jp": "ブーメランが巨大化し威力が上がる。",
+    "cost": 100,
+    "learn_level": "ナルガクルガor ベリオロス討伐"
+  },
+  {
+    "name_jp": "貫通ブーメランの術",
+    "memory": "○",
+    "effect_jp": "ブーメランが貫通するようになる。",
+    "cost": 80,
+    "learn_level": "ナルガクルガor ベリオロス討伐"
+  },
+  {
+    "name_jp": "大砲・バリスタ強化術",
+    "memory": "○",
+    "effect_jp": "オトモの放つ大砲とバリスタの攻撃力が上がる。",
+    "cost": 60,
+    "learn_level": "ウラガンキン討伐"
+  },
+  {
+    "name_jp": "起き上がりこぼし術",
+    "memory": "○○",
+    "effect_jp": "地上でダメージを受けたときに、すぐに起き上がる。",
+    "cost": 100,
+    "learn_level": "ナルガクルガ討伐"
+  },
+  {
+    "name_jp": "七転び八起きの術",
+    "memory": "○○○",
+    "effect_jp": "力尽きるたびに、攻撃力が上昇。最大8回。",
+    "cost": 120,
+    "learn_level": "15"
+  },
+  {
+    "name_jp": "背水の陣の術",
+    "memory": "○○",
+    "effect_jp": "攻撃力と防御力が大幅に上昇。 一度力尽きるとそのクエストでは復活しなくなる。",
+    "cost": 150,
+    "learn_level": "15"
+  },
+  {
+    "name_jp": "耐性強化【火】",
+    "memory": "○",
+    "effect_jp": "火耐性が上昇。",
+    "cost": 15,
+    "learn_level": "3"
+  },
+  {
+    "name_jp": "耐性強化【水】",
+    "memory": "○",
+    "effect_jp": "水耐性が上昇。",
+    "cost": 15,
+    "learn_level": "3"
+  },
+  {
+    "name_jp": "耐性強化【雷】",
+    "memory": "○",
+    "effect_jp": "雷耐性が上昇。",
+    "cost": 15,
+    "learn_level": "5"
+  },
+  {
+    "name_jp": "耐性強化【氷】",
+    "memory": "○",
+    "effect_jp": "氷耐性が上昇。",
+    "cost": 15,
+    "learn_level": "5"
+  },
+  {
+    "name_jp": "耐性強化【龍】",
+    "memory": "○",
+    "effect_jp": "龍耐性が上昇。",
+    "cost": 30,
+    "learn_level": "10"
+  },
+  {
+    "name_jp": "全耐性強化の術",
+    "memory": "○",
+    "effect_jp": "全耐性が少し上昇。",
+    "cost": 30,
+    "learn_level": "10"
+  },
+  {
+    "name_jp": "千里眼の術",
+    "memory": "○○",
+    "effect_jp": "クエスト開始直後と、一定時間ごとに 大型モンスターの場所を知らせる。",
+    "cost": 70,
+    "learn_level": "なつき度4"
+  },
+  {
+    "name_jp": "高速採取の術",
+    "memory": "○",
+    "effect_jp": "採取速度が上昇。",
+    "cost": null,
+    "learn_level": "5"
+  },
+  {
+    "name_jp": "高速回復の術",
+    "memory": "○○",
+    "effect_jp": "自己回復速度が上昇。",
+    "cost": 130,
+    "learn_level": "15"
+  },
+  {
+    "name_jp": "採取封印の術",
+    "memory": "○",
+    "effect_jp": "採取行動をしなくなる。",
+    "cost": 30,
+    "learn_level": "10"
+  },
+  {
+    "name_jp": "サボりなしの術",
+    "memory": "○",
+    "effect_jp": "サボり行動をしなくなる。",
+    "cost": 60,
+    "learn_level": "なつき度4"
+  },
+  {
+    "name_jp": "サボり中・回復の術",
+    "memory": "○",
+    "effect_jp": "サボり行動中に、自分の体力を回復する。",
+    "cost": 60,
+    "learn_level": "なつき度4"
+  },
+  {
+    "name_jp": "オトモ同士の山彦笛術",
+    "memory": "○",
+    "effect_jp": "片方のオトモが笛を吹いたときに、 このスキルを持つオトモが何かの笛を吹く。",
+    "cost": 100,
+    "learn_level": "15"
+  },
+  {
+    "name_jp": "オトモ同士の罠連携術",
+    "memory": "○",
+    "effect_jp": "片方のオトモがシビレ罠を設置 するとその上に大タル爆弾設置",
+    "cost": 60,
+    "learn_level": "なつき度4"
+  },
+  {
+    "name_jp": "オトモ同士の注意術",
+    "memory": "○",
+    "effect_jp": "もう一匹のオトモがサボると注意する。",
+    "cost": 20,
+    "learn_level": "2"
+  },
+  {
+    "name_jp": "オトモ同士のきずな術",
+    "memory": "○○",
+    "effect_jp": "片方のオトモが力尽きたときに、 このスキルを持つオトモの攻撃力と防御力が上昇。",
+    "cost": 80,
+    "learn_level": "10"
+  }
+]

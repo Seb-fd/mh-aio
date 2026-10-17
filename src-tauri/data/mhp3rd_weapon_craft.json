@@ -13145,10 +13145,6 @@
       {
         "item": "Nargacuga Wing",
         "quantity": 3
-      },
-      {
-        "item": "生産素材A3",
-        "quantity": 1
       }
     ],
     "upgrade": []
@@ -21614,6 +21610,45 @@
       {
         "item": "Earth Dragongem",
         "quantity": 1
+      }
+    ]
+  },
+  {
+    "weapon_id": 10988,
+    "forge": [
+      {
+        "item": "R.Ludroth Crest",
+        "quantity": 3
+      },
+      {
+        "item": "Spongy Hide",
+        "quantity": 5
+      },
+      {
+        "item": "Hydro Hide",
+        "quantity": 8
+      },
+      {
+        "item": "Monster Bone L",
+        "quantity": 3
+      }
+    ],
+    "upgrade": [
+      {
+        "item": "Spongy Hide",
+        "quantity": 3
+      },
+      {
+        "item": "R.Ludroth Claw",
+        "quantity": 2
+      },
+      {
+        "item": "R.Ludroth Crest",
+        "quantity": 1
+      },
+      {
+        "item": "Aqua Sac",
+        "quantity": 2
       }
     ]
   }

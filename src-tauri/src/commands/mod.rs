@@ -175,6 +175,73 @@ pub fn get_combinations(
 }
 
 #[tauri::command]
+pub fn get_charms(
+    db: State<'_, Database>,
+    game_id: i32,
+    skill_id: Option<i32>,
+    min_points: Option<i32>,
+) -> Result<Vec<queries::CharmView>, String> {
+    let conn = db.conn.lock().map_err(|e| e.to_string())?;
+    queries::get_charms_by_game(&conn, game_id, skill_id, min_points).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+pub fn get_hunter_charms(
+    db: State<'_, Database>,
+    game_id: i32,
+) -> Result<Vec<queries::HunterCharmView>, String> {
+    let conn = db.conn.lock().map_err(|e| e.to_string())?;
+    queries::get_hunter_charms_by_game(&conn, game_id).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+pub fn get_comrade_weapons(
+    db: State<'_, Database>,
+    game_id: i32,
+) -> Result<Vec<queries::ComradeWeapon>, String> {
+    let conn = db.conn.lock().map_err(|e| e.to_string())?;
+    queries::get_comrade_weapons(&conn, game_id).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+pub fn get_comrade_armor(
+    db: State<'_, Database>,
+    game_id: i32,
+) -> Result<Vec<queries::ComradeArmor>, String> {
+    let conn = db.conn.lock().map_err(|e| e.to_string())?;
+    queries::get_comrade_armor(&conn, game_id).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+pub fn get_comrade_skills(
+    db: State<'_, Database>,
+    game_id: i32,
+) -> Result<Vec<queries::ComradeSkill>, String> {
+    let conn = db.conn.lock().map_err(|e| e.to_string())?;
+    queries::get_comrade_skills(&conn, game_id).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+pub fn get_buddy_weapons(
+    db: State<'_, Database>,
+    game_id: i32,
+    kind: Option<String>,
+) -> Result<Vec<queries::BuddyWeapon>, String> {
+    let conn = db.conn.lock().map_err(|e| e.to_string())?;
+    queries::get_buddy_weapons(&conn, game_id, kind).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+pub fn get_buddy_armor(
+    db: State<'_, Database>,
+    game_id: i32,
+    kind: Option<String>,
+) -> Result<Vec<queries::BuddyArmor>, String> {
+    let conn = db.conn.lock().map_err(|e| e.to_string())?;
+    queries::get_buddy_armor(&conn, game_id, kind).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
 pub fn get_melder_recipes(
     db: State<'_, Database>,
     game_id: i32,

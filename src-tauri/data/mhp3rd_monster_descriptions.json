@@ -1,191 +1,191 @@
 [
   {
     "name": "Altaroth",
-    "description": "Altaroth is a Neopteron (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "様々な場所に広く生息する “甲虫” 。実やキノコ、ハチミツなどを体内に取り込み、巣まで運んでいくという習性を持つ。そのため、腹部が膨らんでいる固体からは有益な素材が採取できる。また、摂取している素材によって腹部の色が変化するようだ。"
   },
   {
     "name": "Anteka",
-    "description": "Anteka is a Herbivore (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "寒冷地に生息する草食モンスター。普段はおとなしいが、不用意に近づくと、巨大な角を振り立てて攻撃してくる。良質な毛皮は利用価値が高く、角はギルドでも珍重される。めまい状態にすると、角を剥ぎ取りやすいとか。"
   },
   {
     "name": "Aptonoth",
-    "description": "Aptonoth is a Herbivore (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "頭部に特徴的な突起のある、比較的おとなしい性格の草食モンスター。群れを作り、集団内で子育ても行う。肉は美味で栄養価も高く、昔から労働力としても人間と深く関わってきた。また、大型モンスターが近付くと、警戒する様子が確認されている。"
   },
   {
     "name": "Baggi",
-    "description": "Baggi is a Bird Wyvern (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "群れで狩りを行う高い知能を持った鳥竜種の肉食モンスター。青白い鱗と鋭い目つきが特徴的。集団で獲物を追い込み、特殊な体液で昏睡させて狩りを行う。大の大人でも数秒で昏睡してしまう体液はハンター達の大きな脅威としてしられている。"
   },
   {
     "name": "Bnahabra",
-    "description": "Bnahabra is a Neopteron (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "あらゆる環境に生息する “飛甲虫” 。麻痺性の毒を持ちテリトリーに入ってくる者を襲ってくる。死体に卵を産みつけ繁殖する事でも知られ、耐性を下げる特殊な体液で腐食を促進させるようだ。この飛甲虫の素材を手に入れるためには毒を用いるのがベスト。"
   },
   {
     "name": "Bullfango",
-    "description": "Bullfango is a Beast (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "野生のイノシシ。気が荒く、ハンターを見つけると突進してくる。その威力は強力。肉は主に食料とされ、癖のある味だが愛好するハンターも多い。繁殖力が高く広範な地域に生息し、時として大規模な群れを形成する。"
   },
   {
     "name": "Delex",
-    "description": "Delex is a Piscine Wyvern (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "砂漠地帯に生息する肉食モンスター。常に４～５匹の群れで行動する。大型のモンスターが狩りをする場に居合わせるとその獲物を取り囲むように泳ぎだし、獲物を追い詰め、おこぼれにあずかろうとする。音には敏感なため音爆弾などで一網打尽にできる。"
   },
   {
     "name": "Felyne",
-    "description": "Felyne is a Lynian (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "ネコに似た姿を持つ獣人族。白毛が特徴。普段はおとなしいが攻撃されると逆上し、誰かれ構わず襲いかかる。好奇心が旺盛で、人語を解し人間社会に溶け込もうとする者もいるようだ。また、マタタビが好きで、その匂いを察知するとどこまでも追いかける。"
   },
   {
     "name": "Gargwa",
-    "description": "Gargwa is a Bird Wyvern (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "渓流に生息する鳥竜種のモンスター。 羽を持つが、小さく退化しており飛ぶ事が出来ない。 ユクモ村では、家畜としても親しまれており、その用途は広い。 また大変臆病な性格で、こっそり背後から驚かされると、卵を産み落としてしまう事も。"
   },
   {
     "name": "Giggi",
-    "description": "Giggi is a Leviathan (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "飛竜の幼生。非常に繁殖力が強く暗所であれば気候に左右される事なく棲みつくことができる。他の生物に張り付き血を吸うことで、成長しつつ体内に毒素を生成することも確認されている。なお、張り付かれた際には地面を転がる行動などを推奨する。"
   },
   {
     "name": "Jaggi",
-    "description": "Jaggi is a Bird Wyvern (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "肉食性の鳥竜種。強い社会性を持ち、大規模な群れを作って生活する。若いオスは集団で、体格差が数倍もあるような大物を狩る。また最新の調査では、群れのリーダーの指示に従って行動するとも考えられている。時には竜の卵を狙うこともある。"
   },
   {
     "name": "Jaggia",
-    "description": "Jaggia is a Bird Wyvern (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "集団行動を取る鳥竜ジャギィのメス。原則として巣の近隣で活動し、巣の防衛や子育てを担う。成熟したオスと比較すれば小柄だが、集団内に無数にいる若いオスよりは大きく、肉体も強靭であるとされる。オス同様、リーダーの指示に従う。"
   },
   {
     "name": "Kelbi",
-    "description": "Kelbi is a Herbivore (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "温和な性格で知られる小型の草食獣。その角は、万病を治す薬の原料として知られている。角には特殊な成分が含まれているため、打撃属性の攻撃でめまい状態にして、生きた状態で剥ぎ取る方が、剥ぎ取りやすい。"
   },
   {
     "name": "Ludroth",
-    "description": "Ludroth is a Leviathan (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "雌の水棲モンスター。ルドロスは大型の雄を中心に完全なハーレムを作る。雄が繁殖のために作ったなわばりに、多数のルドロスが集まってくるのである。なわばりを侵す外敵に対しては非常に攻撃的になるので注意が必要。別名 “水生獣” 。"
   },
   {
     "name": "Melynx",
-    "description": "Melynx is a Lynian (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "ネコに似た姿を持つ獣人族。黒毛が特徴。アイルーにもまして好奇心が旺盛で大の悪戯好き。手癖が悪く人から物を盗み集落に持ち帰ってしまう。マタタビが大好物なのだが、直接食らうと酔っぱらってしまうようだ。酔っぱらうと落し物をすることがある。"
   },
   {
     "name": "Popo",
-    "description": "Popo is a Herbivore (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "群れで生活する草食獣。寒さに耐える長い毛で全身を厚く覆われている。性格は温厚だが、子供を守る際には巨大な牙を使い、勇敢に襲い掛かってくることでも知られている。また、その肉は大変栄養価が高く、特に舌は珍味とされる。"
   },
   {
     "name": "Rhenoplos",
-    "description": "Rhenoplos is a Herbivore (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "大変縄張り意識の強い草食竜。視力が弱く遠くのものは確認できないが、近づくものがあれば優れた聴覚で気配を察知し、どこまでも執拗に追い回す。また、走り出したら容易に止まることができないのか、岩などに衝突する姿がしばしば目撃されている。"
   },
   {
     "name": "Slagtoth",
-    "description": "Slagtoth is a Herbivore (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "水没林や火山の、主に水辺に生息する草食竜。 “垂皮竜” の名が示す様に、分厚くたるんだ皮膚を持ち、そこに栄養を蓄えている。皮は耐熱防水性に優れ、雨具などの衣類に加工される。縄張り意識が強く、雄の固体は飛竜が来ても、逃げようとしないほど。"
   },
   {
     "name": "Uroktor",
-    "description": "Uroktor is a Leviathan (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "火山に棲む海竜種の幼体。腐肉食で知られ、大型モンスターの食い散らかしに群がる。稀に自分でも狩りを行い、その際は地中から地上の獲物を突き刺すように急襲する。近づく者には非常に攻撃的になることでも知られる。別名 “溶岩獣” 。"
   },
   {
     "name": "Wroggi",
-    "description": "Wroggi is a Bird Wyvern (Small) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "口内から喉にかけて、毒を生成する器官を持つ小型の肉食モンスター。基本的に群れで行動し、大型の雄に付き従う事も多い。その場合、群れを成す固体は、非常に忠実であり、命令ひとつで身を挺してリーダーを守ろうとする。"
   },
   {
     "name": "Agnaktor",
-    "description": "Agnaktor is a Leviathan (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "別名“炎戈竜”。硬い嘴と強靭な筋力を使って岩盤を突き破り、地中から地上、さらには天井までをも縦横無尽に行き交う。全身にまとう硬化した溶岩は非常に硬いが、地中に潜った際の熱や、火属性、爆発による攻撃などで赤く変化し、柔らかくなるようだ。"
   },
   {
     "name": "Glacial Agnaktor",
-    "description": "Glacial Agnaktor is a Leviathan (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "凍土に生息するアグナコトルの亜種。“凍戈竜”とも呼ばれ、鋭い嘴で、永久凍土を自在に潜る事ができる。その際に、硬い氷塊を身体に付着させるが、これは熱をもった攻撃を加える事で溶かす事が可能。強烈な水流をブレスとして放つ事ができる。"
   },
   {
     "name": "Akantor",
-    "description": "Akantor is a Flying Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "謎に包まれた竜。一部地方では黒き神、火山の暴君といった数々の異名で呼ばれ、ギルドではその凶暴性や巨大な体躯から“覇竜”と呼称している。巨大な牙や棘を持ち、火山地帯の奥地に生息している。"
   },
   {
     "name": "Arzuros",
-    "description": "Arzuros is a Beast (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "温暖湿潤な地域の山や森に生息する牙獣。二足で起ち上がり、大好物のハチミツを採取したり、河原で魚を捕る事で知られる。鋭い爪と厚い甲殻を持つ前脚は非常に発達しており、その一撃は脅威。美しい青毛を持つ事から“青熊獣”とも呼ばれる。"
   },
   {
     "name": "Barioth",
-    "description": "Barioth is a Flying Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "永久凍土の世界に君臨する迅速の飛竜。巨大な牙と鋭い棘が特徴。翼や尻尾に生えたスパイク状の鱗を巧みに使い、滑りやすい氷の上を自由自在に駆け回る。その能力がある限り、彼の動きについて行くのは非常に困難であろう。別名“氷牙竜”。"
   },
   {
     "name": "Sand Barioth",
-    "description": "Sand Barioth is a Flying Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "“風牙竜”の異名を持つベリオロスの亜種。砂原に生息する。竜巻を発生させるほどの強力なブレスを放ち、さらにその竜巻を利用して高速で移動する場合もあるらしい。赤みがかかった黄色い甲殻を持ち、その牙は、磨き上げると群青色に輝く。"
   },
   {
     "name": "Barroth",
-    "description": "Barroth is a Brute Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "別名 “土砂竜” 。暑さから身を守るためか、普段は泥の中に潜んでいる事が多い。泥をまとう行動も避暑のためだという説が有力。まとった泥は攻撃にも使われるため要注意。また、泥沼を荒らされることを嫌い、荒らす者には猪突猛進の勢いで襲い掛かってくる。"
   },
   {
     "name": "Jade Barroth",
-    "description": "Jade Barroth is a Brute Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "凍土に生息する、ボルボロスの亜種。通常種の泥と同様に、雪や氷を体表にまとい、それを振り飛ばして攻撃を行う場合があるため注意が必要。発達した頭殻を氷に叩きつけるような行動をとる事から“氷砕竜”の異名を持つ。主食はブナハブラ。"
   },
   {
     "name": "Bulldrome",
-    "description": "Bulldrome is a Fanged Beast (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "大型の野生のイノシシで、ブルファンゴのリーダー。大柄で巨大な牙が特徴。ブルファンゴより攻撃的で、その攻撃は突進が主だが、索敵能力が非常に高い。顔に、ヒゲのように白い毛が生えており、“大猪”と呼ばれる。"
   },
   {
     "name": "Deviljho",
-    "description": "Deviljho is a Brute Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "別名“恐暴竜”。特定のテリトリーを持たず、餌を求めて常にさまよい歩いている。非常に狂暴で、怒りの際には筋肉が大きく隆起し、古傷が浮かび上がる。また、高い体温を保つため常に捕食し続ける必要があり、周辺の生物を絶滅に追い込むこともあるという。"
   },
   {
     "name": "Diablos",
-    "description": "Diablos is a Flying Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "砂漠の暴君として恐れられる飛竜。非常に縄張り意識が強く縄張りに侵入した者には異常なまでの攻撃性を見せる。また、砂の中を潜行することが多いためか聴覚が非常に発達しており、音に対しては敏感に反応する。主食はサボテン。別名“角竜”。"
   },
   {
     "name": "Black Diablos",
-    "description": "Black Diablos is a Flying Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "黒い甲殻を持つディアブロス。“黒角竜”と呼ばれ、亜種として扱われているが、実際は繁殖期における雌のディアブロスの体色が、黒く変化したものである。この変化は、他の生物に対する警告色と考えられ、実際に、非常に攻撃性が高くなる。"
   },
   {
     "name": "Duramboros",
-    "description": "Duramboros is a Brute Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "“尾槌竜”の名に違わぬ、ハンマーのような塊の付いた尻尾を持つ獣竜。倒木や立ち枯れた木を主食とする。巨大な尾は、木を打ち倒すために使われるようだ。また、一説では、背中にあるコブがエネルギー源ではないかとされている。"
   },
   {
     "name": "Gigginox",
-    "description": "Gigginox is a Leviathan (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "凍土に生息する飛竜。薄暗い場所を好むため目は退化しているが、熱で獲物を感知し、毒のブレスを吐きつけ襲いかかる。興奮すると体表の色が変わり、一部の部位が硬化する。また、繁殖力が非常に強く、至る所に卵を産みつける。別名“毒怪竜”。"
   },
   {
     "name": "Baleful Gigginox",
-    "description": "Baleful Gigginox is a Leviathan (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "電気を操る怪竜の亜種。突然変異種と見られ発見報告も稀。 発する強烈な電撃で獲物の体の自由を奪い、動きを封じてから捕食するといわれる。 体表にある蓄電器官の破壊を行えば電撃を弱めることができるだろう。 ギルド内では”電怪竜”と称される。"
   },
   {
     "name": "Great Baggi",
-    "description": "Great Baggi is a Bird Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "ジャ ギィと同じ鳥竜種に分類される肉食モンスター。凍土になじむ青白い皮膚の色と、大きく隆起した頭部の突起が特徴。その狡猾な頭脳でバギィの群れを統率す る。狩りをする際には集団で獲物を追い込み、特殊な体液で昏睡させて仕留める。"
   },
   {
     "name": "Great Jaggi",
-    "description": "Great Jaggi is a Bird Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "ジャギィの群れを統率するリーダー。通常、オスはある程度まで成長すると群れを離れ、単独で生活する。その後再び群れへ戻り競争を勝ち抜いたごく一部のオスのみが、この座に就く。群れへの統率力は高く、鳴き声で複雑な命令を下していると言われる。"
   },
   {
     "name": "Great Wroggi",
-    "description": "Great Wroggi is a Bird Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "滞留する霧状の毒を吐き、 “毒狗竜” の異名を持つ鳥竜種のモンスター。 群れで行動し、とりわけ大きく、強い毒を持つ雄の成体が群れのリーダーを務める。喉のまわりにある袋状の器官で毒を生成するため、これを壊されると十分な毒を吐けなくなるようだ。"
   },
   {
     "name": "Lagombi",
-    "description": "Lagombi is a Beast (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "寒冷地での生活に適応した牙獣。分厚い皮下脂肪と保湿性の高い体毛を持つ。草食傾向の強い雑食だが、動物質を摂取する事もある。その際は優れた聴覚で獲物を探し出し、氷上を滑走する事で、素早く、静かに、狩りを行う。通称 “白兎獣” 。"
   },
   {
     "name": "Nargacuga",
-    "description": "Nargacuga is a Flying Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "木々の生い茂る土地に生息する、独特の進化を遂げた飛竜。別名 ”迅竜” 。暗がりに身を潜め、恐るべき素早さで執拗かつ狡猾に獲物を狙い、追い詰める。戦うための武器として発達した尻尾は、非常にしなやかで、強烈な破壊力を持つ。"
   },
   {
     "name": "Green Nargacuga",
-    "description": "Green Nargacuga is a Flying Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "まだら色の体毛を持つナルガクルガの亜種。別名“緑迅竜”。水没林や孤島など緑の多い土地に生息し、その体色は、緑濃い密林に容易に溶け込む。身ごなしが俊敏で、尻尾の扱いにも長けている。飛ばしてくる尻尾の棘は当たると非常に危険との噂もある。"
   },
   {
     "name": "Nibelsnarf",
-    "description": "Nibelsnarf is a Leviathan (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "砂の海で独特の進化を遂げた海竜種。 “潜口竜” とも呼ばれるように、砂に潜り体表を擬態し、獲物を狙う。そして、音で獲物の位置を探り、大きな口で砂ごと飲み込んでしまう。口の中にあるひだのような器官は、栄養を取り込むためのものとされる。"
   },
   {
     "name": "Qurupeco",
-    "description": "Qurupeco is a Bird Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "独特な色彩を持った鳥竜種。胸元と頭部に備わる発声器官を使い、様々なモンスターの鳴きマネを行うことで有名。危険を感じると、飛竜などの声色をマネて呼び、隙を見て逃げようとする。耐性を下げる液体を吐いてくるので注意が必要。別名“彩鳥”。"
   },
   {
     "name": "Crimson Qurupeco",
-    "description": "Crimson Qurupeco is a Bird Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "鮮やかな紅い体毛を持つクルペッコの亜種。別名“紅彩鳥”。通常種同様、鳴きマネや踊りを得意とする。両翼の電気石と呼ばれる部位で、電気を発生させる事ができる。発生した電気は、衝撃を与えると放電し、電撃や強烈な閃光を生み出す。"
   },
   {
     "name": "Rathalos",
-    "description": "Rathalos is a Flying Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "天空の王者と呼称され、畏れられる飛竜。雌火竜と共に巣を中心とした広いテリトリーを形成し、空から監視する。テリトリーに侵入した者には優れた飛行能力で上空から急降下し、毒を含む強力な爪で襲い掛かってくる。火を吐くことから “火竜” と呼ばれる。"
   },
   {
     "name": "Silver Rathalos",
-    "description": "Silver Rathalos is a Flying Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "美しい銀色の甲殻を持つ、リオレウスの希少種。 生態や生息地にも謎が多く、その太陽に喩えられる銀色が、何に由来するものかは判っていない。"
   },
   {
     "name": "Rathian",
-    "description": "Rathian is a Flying Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "陸の女王の異名を持つ “雌火竜” 。地上を中心とした狩りを行うため、大地を駆ける優れた脚力と、獲物を仕留める猛毒を含んだ尾を持つ。つがいで狩りをする様子も目撃されており、その際にはお互いに連携を取るかのような行動を見せるという。"
   },
   {
     "name": "Gold Rathian",
@@ -193,50 +193,50 @@
   },
   {
     "name": "Royal Ludroth",
-    "description": "Royal Ludroth is a Leviathan (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "別名 “水獣” 。首にあるスポンジ状の鱗に大量の水分を含ませることで表皮の乾燥を防ぎ、陸上での活動を助けている。だが、スポンジが萎縮し始めるとその能力を失うため、水浴びを行い回復を図る。また、特殊な粘液を吐きだし獲物の足元をすくって捕える。"
   },
   {
     "name": "Purple Ludroth",
-    "description": "Purple Ludroth is a Leviathan (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "紫色のタテガミを持つ、ロアルドロスの亜種。 スポンジ状のタテガミには、体内で生成された毒液が蓄えられており、行動の際に毒をまき散らす。 タテガミに水分を含ませる行動は、疲労回復にも繋がるため、水源が豊富な土地を好む。 別名”紫水獣”。"
   },
   {
     "name": "Tigrex",
-    "description": "Tigrex is a Flying Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "原始的な風貌を残す飛竜。性格はいたって凶暴で、発達した四肢を使っての突進、強力な爪と顎の一撃、どれも恐ろしい威力で注意が必要。獲物を求めて広い範囲を移動し、凍土にまで姿を現すという。強烈な咆哮を放つため、“轟竜”の異名をもつ。"
   },
   {
     "name": "Brute Tigrex",
-    "description": "Brute Tigrex is a Flying Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "性格はいたって凶暴で攻撃的なティガレックスの亜種。 発達した四肢を使っての突進、強力な爪と顎の一撃、どれも恐ろしい威力で注意が必要。"
   },
   {
     "name": "Ukanlos",
-    "description": "Ukanlos is a Flying Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "謎に包まれた竜。 一部地方では白き神、この世を打ち崩す竜といった異名で呼ばれ、ギルドでは氷塊や岩盤を粉砕しつつ進む姿から、”崩竜”と呼称している。 氷を砕くのに適したアゴや爪を持ち、寒冷地域の最深部に生息している。"
   },
   {
     "name": "Uragaan",
-    "description": "Uragaan is a Brute Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "巨大な獣竜種。頑強な顎で岩盤を細かく砕き、主食である鉱石を摂取する。また、溶岩を巧みに使い岩石や鉱石を体表面に付着させており、ばらまく岩石は、自らが引き起こす振動で大爆発を起こす。転倒時を狙い腹から採掘できる事も。別名 “爆鎚竜” 。"
   },
   {
     "name": "Steel Uragaan",
-    "description": "Steel Uragaan is a Brute Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "鋼鎚竜”の異名を持つウラガンキンの亜種。通常種と同様、身体を丸めて高速で転がって移動するのが特徴。食性の違いか、体内で生成されるガスは悪臭が強い。体表に付着した岩石にもガスがしみこみ、それがばらまかれると、そこからも悪臭が吹き出す。"
   },
   {
     "name": "Volvidon",
-    "description": "Volvidon is a Beast (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "マグマにも耐える、分厚く赤い甲殻を持ち、 “赤甲獣” とも呼ばれる牙獣。身体を丸め、灼熱の地表の上を転がるように移動する。甲虫種を好み、その長い舌で絡めとるように捕らえてしまう。強力な麻痺性の唾を吐く事でも知られているため、注意が必要。"
   },
   {
     "name": "Zinogre",
-    "description": "Zinogre is a Fanged Wyvern (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "雷光を帯びたその姿から \"雷狼竜\" とも呼ばれる牙獣種。起伏の激しい山林に棲むためか、かぎ爪は鋭く、四肢は強靭に発達している。狩りの際には無数の雷光虫を集める事で、まとう電力を飛躍的に高めているとされ、超帯電状態と呼ばれる姿に変化する。"
   },
   {
     "name": "Alatreon",
-    "description": "Alatreon is a Elder Dragon (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "その姿は稲妻の様とも闇の様とも噂され“煌黒龍”と伝えられる古龍。全身を鋭い逆鱗で覆われており触れる者全てを無慈悲に引き裂く。また、自らに宿す属性が非常に不安定なため周囲の天候をも急変させてしまうという。まさに“天災”。"
   },
   {
     "name": "Amatsu",
-    "description": "Amatsu is a Elder Dragon (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "渓流の奥深く、《霊峰》に舞い降りた伝説の古龍。 大嵐と共に現れる事から 嵐の化身として、ユクモ村の伝承にも登場する。暴風と竜巻を従える厄災の 龍として恐れられ、天災にも匹敵するその力から゛嵐龍゛とも呼ばれている。"
   },
   {
     "name": "Jhen Mohran",
-    "description": "Jhen Mohran is a Elder Dragon (Large) in Monster Hunter Portable 3rd (ULJM-05800). Yukumo Village roster (60 monsters, 20 small + 40 large)."
+    "description": "“峯山龍” と呼ばれる巨大な古龍。背中から希少な鉱石が採掘できることから豊穣の象徴とされる。砂と共に無数の有機物を飲み込みながら泳ぐため、周囲にはおこぼれを狙うデルクスが群がっている。そのため、漁師たちはデルクスの群れを元に峯山龍を目指す。"
   }
 ]

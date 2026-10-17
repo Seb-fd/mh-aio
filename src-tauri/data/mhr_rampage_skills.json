@@ -1,0 +1,1237 @@
+[
+ {
+  "id": 80001,
+  "name": "Attack Boost II",
+  "description": "Attack +6"
+ },
+ {
+  "id": 80002,
+  "name": "Attack Boost III",
+  "description": "Attack +8"
+ },
+ {
+  "id": 80003,
+  "name": "Attack Boost IV",
+  "description": "Attack +10"
+ },
+ {
+  "id": 80004,
+  "name": "Attack Surge",
+  "description": "Attack +20 Affinity -30%"
+ },
+ {
+  "id": 80005,
+  "name": "Non-elemental Boost",
+  "description": "+10 Attack if the Ramped-Up weapon has no element."
+ },
+ {
+  "id": 80006,
+  "name": "Elemental Boost I",
+  "description": "Weapon Element +5"
+ },
+ {
+  "id": 80007,
+  "name": "Elemental Boost II",
+  "description": "Weapon Element +7"
+ },
+ {
+  "id": 80008,
+  "name": "Elemental Boost III",
+  "description": "Weapon Element +10"
+ },
+ {
+  "id": 80009,
+  "name": "Elemental Surge",
+  "description": "Weapon Element +10 Attack -15"
+ },
+ {
+  "id": 80010,
+  "name": "Affinity Boost I",
+  "description": "Affinity +4%"
+ },
+ {
+  "id": 80011,
+  "name": "Affinity Boost II",
+  "description": "Affinity +6%"
+ },
+ {
+  "id": 80012,
+  "name": "Affinity Boost III",
+  "description": "Affinity +8%"
+ },
+ {
+  "id": 80013,
+  "name": "Affinity Boost IV",
+  "description": "Affinity +10%"
+ },
+ {
+  "id": 80014,
+  "name": "Affinity Surge",
+  "description": "Affinity +20% Attack -10"
+ },
+ {
+  "id": 80015,
+  "name": "Defense Boost I",
+  "description": "Defense Bonus +10"
+ },
+ {
+  "id": 80016,
+  "name": "Defense Boost II",
+  "description": "Defense Bonus +20"
+ },
+ {
+  "id": 80017,
+  "name": "Defense Boost III",
+  "description": "Defense Bonus +30"
+ },
+ {
+  "id": 80018,
+  "name": "Fire Boost I",
+  "description": "Fire element attack power +4"
+ },
+ {
+  "id": 80019,
+  "name": "Fire Boost II",
+  "description": "Fire element attack power +6"
+ },
+ {
+  "id": 80020,
+  "name": "Fire Boost III",
+  "description": "Fire element attack power +8"
+ },
+ {
+  "id": 80021,
+  "name": "Fire Boost IV",
+  "description": "Fire element attack power +10"
+ },
+ {
+  "id": 80022,
+  "name": "Water Boost I",
+  "description": "Water element attack power +4"
+ },
+ {
+  "id": 80023,
+  "name": "Water Boost II",
+  "description": "Water element attack power +6"
+ },
+ {
+  "id": 80024,
+  "name": "Water Boost III",
+  "description": "Water element attack power +8"
+ },
+ {
+  "id": 80025,
+  "name": "Water Boost IV",
+  "description": "Water element attack power +10"
+ },
+ {
+  "id": 80026,
+  "name": "Thunder Boost I",
+  "description": "Thunder element attack power +4"
+ },
+ {
+  "id": 80027,
+  "name": "Thunder Boost II",
+  "description": "Thunder element attack power +6"
+ },
+ {
+  "id": 80028,
+  "name": "Thunder Boost III",
+  "description": "Thunder element attack power +8"
+ },
+ {
+  "id": 80029,
+  "name": "Thunder Boost IV",
+  "description": "Thunder element attack power +10"
+ },
+ {
+  "id": 80030,
+  "name": "Ice Boost I",
+  "description": "Ice element attack power +4"
+ },
+ {
+  "id": 80031,
+  "name": "Ice Boost II",
+  "description": "Ice element attack power +6"
+ },
+ {
+  "id": 80032,
+  "name": "Ice Boost III",
+  "description": "Ice element attack power +8"
+ },
+ {
+  "id": 80033,
+  "name": "Ice Boost IV",
+  "description": "Ice element attack power +10"
+ },
+ {
+  "id": 80034,
+  "name": "Dragon Boost I",
+  "description": "Dragon element attack power +4"
+ },
+ {
+  "id": 80035,
+  "name": "Dragon Boost II",
+  "description": "Dragon element attack power +6"
+ },
+ {
+  "id": 80036,
+  "name": "Dragon Boost III",
+  "description": "Dragon element attack power +8"
+ },
+ {
+  "id": 80037,
+  "name": "Dragon Boost IV",
+  "description": "Dragon element attack power +10"
+ },
+ {
+  "id": 80038,
+  "name": "Poison Boost I",
+  "description": "Poison buildup +3"
+ },
+ {
+  "id": 80039,
+  "name": "Poison Boost II",
+  "description": "Poison buildup +5"
+ },
+ {
+  "id": 80040,
+  "name": "Poison Boost III",
+  "description": "Poison buildup +7"
+ },
+ {
+  "id": 80041,
+  "name": "Paralysis Boost I",
+  "description": "Paralysis buildup +2"
+ },
+ {
+  "id": 80042,
+  "name": "Paralysis Boost II",
+  "description": "Paralysis buildup +4"
+ },
+ {
+  "id": 80043,
+  "name": "Paralysis Boost III",
+  "description": "Paralysis buildup +6"
+ },
+ {
+  "id": 80044,
+  "name": "Sleep Boost I",
+  "description": "Sleep buildup +2"
+ },
+ {
+  "id": 80045,
+  "name": "Sleep Boost II",
+  "description": "Sleep buildup +4"
+ },
+ {
+  "id": 80046,
+  "name": "Sleep Boost III",
+  "description": "Sleep buildup +6"
+ },
+ {
+  "id": 80047,
+  "name": "Blast Boost I",
+  "description": "Blast buildup +3"
+ },
+ {
+  "id": 80048,
+  "name": "Blast Boost II",
+  "description": "Blast buildup +5"
+ },
+ {
+  "id": 80049,
+  "name": "Blast Boost III",
+  "description": "Blast buildup +7"
+ },
+ {
+  "id": 80050,
+  "name": "Fire I",
+  "description": "Sets weapon element to Fire and adds +10 to its value."
+ },
+ {
+  "id": 80051,
+  "name": "Fire II",
+  "description": "Sets weapon element to Fire and adds +15 to its value."
+ },
+ {
+  "id": 80052,
+  "name": "Fire III",
+  "description": "Sets weapon element to Fire and adds +20 to its value, but reduces attack by 5."
+ },
+ {
+  "id": 80053,
+  "name": "Fire IV",
+  "description": "Sets weapon element to Fire and adds +30 to its value, but reduces attack by 10."
+ },
+ {
+  "id": 80054,
+  "name": "Water I",
+  "description": "Sets weapon element to Water and adds +10 to its value."
+ },
+ {
+  "id": 80055,
+  "name": "Water II",
+  "description": "Sets weapon element to Water and adds +15 to its value."
+ },
+ {
+  "id": 80056,
+  "name": "Water III",
+  "description": "Sets weapon element to Water and adds +20 to its value, but reduces attack by 5."
+ },
+ {
+  "id": 80057,
+  "name": "Water IV",
+  "description": "Sets weapon element to Water and adds +30 to its value, but reduces attack by 10."
+ },
+ {
+  "id": 80058,
+  "name": "Thunder I",
+  "description": "Sets weapon element to Thunder and adds +10 to its value."
+ },
+ {
+  "id": 80059,
+  "name": "Thunder II",
+  "description": "Sets weapon element to Thunder and adds +15 to its value."
+ },
+ {
+  "id": 80060,
+  "name": "Thunder III",
+  "description": "Sets weapon element to Thunder and adds +20 to its value, but reduces attack by 5."
+ },
+ {
+  "id": 80061,
+  "name": "Thunder IV",
+  "description": "Sets weapon element to Thunder and adds +30 to its value, but reduces attack by 10."
+ },
+ {
+  "id": 80062,
+  "name": "Ice I",
+  "description": "Sets weapon element to Ice and adds +10 to its value."
+ },
+ {
+  "id": 80063,
+  "name": "Ice II",
+  "description": "Sets weapon element to Ice and adds +15 to its value."
+ },
+ {
+  "id": 80064,
+  "name": "Ice III",
+  "description": "Sets weapon element to Ice and adds +20 to its value, but reduces attack by 5."
+ },
+ {
+  "id": 80065,
+  "name": "Ice IV",
+  "description": "Sets weapon element to Ice and adds +30 to its value, but reduces attack by 10."
+ },
+ {
+  "id": 80066,
+  "name": "Dragon I",
+  "description": "Sets weapon element to Dragon and adds +10 to its value."
+ },
+ {
+  "id": 80067,
+  "name": "Dragon II",
+  "description": "Sets weapon element to Dragon and adds +15 to its value."
+ },
+ {
+  "id": 80068,
+  "name": "Dragon III",
+  "description": "Sets weapon element to Dragon and adds +20 to its value, but reduces attack by 5."
+ },
+ {
+  "id": 80069,
+  "name": "Dragon IV",
+  "description": "Sets weapon element to Dragon and adds +30 to its value, but reduces attack by 10."
+ },
+ {
+  "id": 80070,
+  "name": "Poison I",
+  "description": "Sets weapon element to Poison and adds +10 to its value."
+ },
+ {
+  "id": 80071,
+  "name": "Poison II",
+  "description": "Sets weapon element to Poison and adds +20 to its value, but reduces Attack by 10."
+ },
+ {
+  "id": 80072,
+  "name": "Poison III",
+  "description": "Sets weapon element to Poison and adds +30 to its value, but reduces Attack by 20."
+ },
+ {
+  "id": 80073,
+  "name": "Paralysis I",
+  "description": "Sets weapon element to Paralysis and adds +10 to its value."
+ },
+ {
+  "id": 80074,
+  "name": "Paralysis II",
+  "description": "Sets weapon element to Paralysis and adds +15 to its value, but reduces Attack by 10."
+ },
+ {
+  "id": 80075,
+  "name": "Paralysis III",
+  "description": "Sets weapon element to Paralysis and adds +20 to its value, but reduces Attack by 20."
+ },
+ {
+  "id": 80076,
+  "name": "Sleep I",
+  "description": "Sets weapon element to Sleep and adds +10 to its value."
+ },
+ {
+  "id": 80077,
+  "name": "Sleep II",
+  "description": "Sets weapon element to Sleep and adds +12 to its value, but reduces Attack by 10."
+ },
+ {
+  "id": 80078,
+  "name": "Sleep III",
+  "description": "Sets weapon element to Sleep and adds +15 to its value, but reduces Attack by 20."
+ },
+ {
+  "id": 80079,
+  "name": "Blast I",
+  "description": "Sets weapon element to Blast and adds +10 to its value."
+ },
+ {
+  "id": 80080,
+  "name": "Blast II",
+  "description": "Sets weapon element to Blast and adds +15 to its value, but reduces Attack by 10."
+ },
+ {
+  "id": 80081,
+  "name": "Blast III",
+  "description": "Sets weapon element to Blast and adds +20 to its value, but reduces Attack by 20."
+ },
+ {
+  "id": 80082,
+  "name": "Sharpness Type I",
+  "description": "Modifies the sharpness of Ramped-Up weapons."
+ },
+ {
+  "id": 80083,
+  "name": "Sharpness Type II",
+  "description": "Modifies the sharpness of Ramped-Up weapons."
+ },
+ {
+  "id": 80084,
+  "name": "Sharpness Type III",
+  "description": "Modifies the sharpness of Ramped-Up weapons, but reduces Attack by 10."
+ },
+ {
+  "id": 80085,
+  "name": "Sharpness Type IV",
+  "description": "Modifies the sharpness of Ramped-Up weapons, but reduces Attack by 20."
+ },
+ {
+  "id": 80086,
+  "name": "Secondary: Fire I",
+  "description": "Sets a non-Fire weapon&#039;s sub element to Fire and adds +10 to its value."
+ },
+ {
+  "id": 80087,
+  "name": "Secondary: Fire II",
+  "description": "Sets a non-Fire weapon&#039;s sub element to Fire and adds +20 to its value, as well as +5 to the primary element."
+ },
+ {
+  "id": 80088,
+  "name": "Secondary: Fire III",
+  "description": "Sets a non-Fire weapon&#039;s sub element to Fire and adds +30 to its value, as well as +10 to the primary element."
+ },
+ {
+  "id": 80089,
+  "name": "Secondary: Water I",
+  "description": "Sets a non-Water weapon&#039;s sub element to Water and adds +10 to its value."
+ },
+ {
+  "id": 80090,
+  "name": "Secondary: Water II",
+  "description": "Sets a non-Water weapon&#039;s sub element to Water and adds +20 to its value, as well as +5 to the primary element."
+ },
+ {
+  "id": 80091,
+  "name": "Secondary: Water III",
+  "description": "Sets a non-Water weapon&#039;s sub element to Water and adds +30 to its value, as well as +10 to the primary element."
+ },
+ {
+  "id": 80092,
+  "name": "Secondary: Thunder I",
+  "description": "Sets a non-Thunder weapon&#039;s sub element to Thunder and adds +10 to its value."
+ },
+ {
+  "id": 80093,
+  "name": "Secondary: Thunder II",
+  "description": "Sets a non-Thunder weapon&#039;s sub element to Thunder and adds +20 to its value, as well as +5 to the primary element."
+ },
+ {
+  "id": 80094,
+  "name": "Secondary: Thunder III",
+  "description": "Sets a non-Thunder weapon&#039;s sub element to Thunder and adds +30 to its value, as well as +10 to the primary element."
+ },
+ {
+  "id": 80095,
+  "name": "Secondary: Ice I",
+  "description": "Sets a non-Ice weapon&#039;s sub element to Ice and adds +10 to its value."
+ },
+ {
+  "id": 80096,
+  "name": "Secondary: Ice II",
+  "description": "Sets a non-Ice weapon&#039;s sub element to Ice and adds +20 to its value, as well as +5 to the primary element."
+ },
+ {
+  "id": 80097,
+  "name": "Secondary: Ice III",
+  "description": "Sets a non-Ice weapon&#039;s sub element to Ice and adds +30 to its value, as well as +10 to the primary element."
+ },
+ {
+  "id": 80098,
+  "name": "Secondary: Dragon I",
+  "description": "Sets a non-Dragon weapon&#039;s sub element to Dragon and adds +10 to its value."
+ },
+ {
+  "id": 80099,
+  "name": "Secondary: Dragon II",
+  "description": "Sets a non-Dragon weapon&#039;s sub element to Dragon and adds +20 to its value, as well as +5 to the primary element."
+ },
+ {
+  "id": 80100,
+  "name": "Secondary: Dragon III",
+  "description": "Sets a non-Dragon weapon&#039;s sub element to Dragon and adds +30 to its value, as well as +10 to the primary element."
+ },
+ {
+  "id": 80101,
+  "name": "Wyrmstake Boost",
+  "description": "Raises the Wyrmstake Cannon&#039;s damage level by 1."
+ },
+ {
+  "id": 80102,
+  "name": "Shelling: Normal I",
+  "description": "Sets shelling type to Normal and shelling level to Level 3."
+ },
+ {
+  "id": 80103,
+  "name": "Shelling: Normal II",
+  "description": "Sets shelling type to Normal and shelling level to Level 4."
+ },
+ {
+  "id": 80104,
+  "name": "Shelling: Normal III",
+  "description": "Sets shelling type to Normal and shelling level to Level 5."
+ },
+ {
+  "id": 80105,
+  "name": "Shelling: Long I",
+  "description": "Sets shelling type to Long and shelling level to Level 3."
+ },
+ {
+  "id": 80106,
+  "name": "Shelling: Long II",
+  "description": "Sets shelling type to Long and shelling level to Level 4."
+ },
+ {
+  "id": 80107,
+  "name": "Shelling: Long III",
+  "description": "Sets shelling type to Long and shelling level to Level 5."
+ },
+ {
+  "id": 80108,
+  "name": "Shelling: Wide I",
+  "description": "Sets shelling type to Wide and shelling level to Level 3."
+ },
+ {
+  "id": 80109,
+  "name": "Shelling: Wide II",
+  "description": "Sets shelling type to Wide and shelling level to Level 4."
+ },
+ {
+  "id": 80110,
+  "name": "Shelling: Wide III",
+  "description": "Sets shelling type to Wide and shelling level to Level 5."
+ },
+ {
+  "id": 80111,
+  "name": "Attack Melody I",
+  "description": "Enables attack-focused performances."
+ },
+ {
+  "id": 80112,
+  "name": "Attack Melody II",
+  "description": "Enables attack-focused performances."
+ },
+ {
+  "id": 80113,
+  "name": "Defensive Melody I",
+  "description": "Enables defense-focused performances."
+ },
+ {
+  "id": 80114,
+  "name": "Defensive Melody II",
+  "description": "Enables defense-focused performances."
+ },
+ {
+  "id": 80115,
+  "name": "Healing Melody I",
+  "description": "Enables healing-focused performances."
+ },
+ {
+  "id": 80116,
+  "name": "Healing Melody II",
+  "description": "Enables healing-focused performances."
+ },
+ {
+  "id": 80117,
+  "name": "Resilient Melody I",
+  "description": "Enables performances that nullify status ailments."
+ },
+ {
+  "id": 80118,
+  "name": "Resilient Melody II",
+  "description": "Enables performances that nullify status ailments."
+ },
+ {
+  "id": 80119,
+  "name": "Boost Equipped Coating",
+  "description": "Coating element +10"
+ },
+ {
+  "id": 80120,
+  "name": "Phial: Power",
+  "description": "Changes equipped phial to a Power Phial, but reduces Attack by 10."
+ },
+ {
+  "id": 80121,
+  "name": "Phial: Element",
+  "description": "Changes equipped phial to an element phial."
+ },
+ {
+  "id": 80122,
+  "name": "Phial: Poison I",
+  "description": "Changes equipped phial to a Poison Phial, and adds +20 to the phial&#039;s element."
+ },
+ {
+  "id": 80123,
+  "name": "Phial: Poison II",
+  "description": "Changes equipped phial to a Poison Phial, and adds +25 to the phial&#039;s element."
+ },
+ {
+  "id": 80124,
+  "name": "Phial: Poison III",
+  "description": "Changes equipped phial to a Poison Phial, and adds +30 to the phial&#039;s element."
+ },
+ {
+  "id": 80125,
+  "name": "Phial: Paralysis I",
+  "description": "Changes equipped phial to a Paralysis Phial, and adds +15 to the phial&#039;s element."
+ },
+ {
+  "id": 80126,
+  "name": "Phial: Paralysis II",
+  "description": "Changes equipped phial to a Paralysis Phial, and adds +20 to the phial&#039;s element."
+ },
+ {
+  "id": 80127,
+  "name": "Phial: Paralysis III",
+  "description": "Changes equipped phial to a Paralysis Phial, and adds +25 to the phial&#039;s element."
+ },
+ {
+  "id": 80128,
+  "name": "Phial: Dragon I",
+  "description": "Changes equipped phial to a Dragon phial, and adds +20 to the phial&#039;s element."
+ },
+ {
+  "id": 80129,
+  "name": "Phial: Dragon II",
+  "description": "Changes equipped phial to a Dragon phial, and adds +25 to the phial&#039;s element."
+ },
+ {
+  "id": 80130,
+  "name": "Phial: Dragon III",
+  "description": "Changes equipped phial to a Dragon phial, and adds +30 to the phial&#039;s element."
+ },
+ {
+  "id": 80131,
+  "name": "Phial: Exhaust I",
+  "description": "Changes equipped phial to an Exhaust Phial, and adds +20 to the phial&#039;s element attack."
+ },
+ {
+  "id": 80132,
+  "name": "Phial: Exhaust II",
+  "description": "Changes equipped phial to an Exhaust Phial, and adds +30 to the phial&#039;s element attack."
+ },
+ {
+  "id": 80133,
+  "name": "Phial: Exhaust III",
+  "description": "Changes equipped phial to an Exhaust Phial, and adds +40 to the phial&#039;s element attack."
+ },
+ {
+  "id": 80134,
+  "name": "Kinsect Level Boost",
+  "description": "Raises Kinsect Level by 1."
+ },
+ {
+  "id": 80135,
+  "name": "Kinsect Level Boost I",
+  "description": "Raises Kinsect Level to Level 4."
+ },
+ {
+  "id": 80136,
+  "name": "Kinsect Level Boost II",
+  "description": "Raises Kinsect Level to Level 5."
+ },
+ {
+  "id": 80137,
+  "name": "Kinsect Level Boost III",
+  "description": "Raises Kinsect Level to Level 6, but reduces Attack by 10."
+ },
+ {
+  "id": 80138,
+  "name": "Kinsect Level Boost IV",
+  "description": "Raises Kinsect Level to Level 7, but reduces Attack by 20."
+ },
+ {
+  "id": 80139,
+  "name": "Recoil Down Boost",
+  "description": "Decrease recoil by 1."
+ },
+ {
+  "id": 80140,
+  "name": "Recoil Down Surge",
+  "description": "Decreases recoil by 2 but increases deviation by 1."
+ },
+ {
+  "id": 80141,
+  "name": "Reload Speed Boost",
+  "description": "Increases reload speed by 1."
+ },
+ {
+  "id": 80142,
+  "name": "Reload Speed Surge",
+  "description": "Increases reload speed by 2 but also increases recoil by 1."
+ },
+ {
+  "id": 80143,
+  "name": "Steadiness Boost",
+  "description": "Decreases deviation by 1."
+ },
+ {
+  "id": 80144,
+  "name": "Steadiness Surge",
+  "description": "Decreases deviation by 2 but also decreases reload speed by 1."
+ },
+ {
+  "id": 80145,
+  "name": "Normal Effect I",
+  "description": "Enables loading of Level 2 Ammo, and increases ammo capacity."
+ },
+ {
+  "id": 80146,
+  "name": "Normal Effect II",
+  "description": "Enables loading of all levels of ammo, and increases ammo capacity."
+ },
+ {
+  "id": 80147,
+  "name": "Pierce Effect I",
+  "description": "Enables loading of Pierce Ammo 1 &amp; 2, and increases ammo capacity."
+ },
+ {
+  "id": 80148,
+  "name": "Pierce Effect II",
+  "description": "Enables loading of all Pierce Ammo, and increases ammo capacity."
+ },
+ {
+  "id": 80149,
+  "name": "Spread Effect I",
+  "description": "Enables loading of Spread Ammo 1 &amp; 2, and increases ammo capacity."
+ },
+ {
+  "id": 80150,
+  "name": "Spread Effect II",
+  "description": "Enables loading of all Spread Ammo, and increases ammo capacity."
+ },
+ {
+  "id": 80151,
+  "name": "Shrapnel Effect I",
+  "description": "Enables loading of Shrapnel Ammo 1 &amp; 2, and increases ammo capacity."
+ },
+ {
+  "id": 80152,
+  "name": "Shrapnel Effect II",
+  "description": "Enables loading of all Shrapnel Ammo, and increases ammo capacity."
+ },
+ {
+  "id": 80153,
+  "name": "Sticky Effect I",
+  "description": "Enables loading of Sticky Ammo 1 &amp; 2, and increases ammo capacity."
+ },
+ {
+  "id": 80154,
+  "name": "Sticky Effect II",
+  "description": "Enables loading of all Sticky Ammo, and increases ammo capacity."
+ },
+ {
+  "id": 80155,
+  "name": "Cluster Effect I",
+  "description": "Enables loading of Cluster Bombs 1 &amp; 2, and increases ammo capacity."
+ },
+ {
+  "id": 80156,
+  "name": "Cluster Effect II",
+  "description": "Enables loading of all Cluster Bombs, and increases ammo capacity."
+ },
+ {
+  "id": 80157,
+  "name": "Add: Normal Ammo I",
+  "description": "Expands weapon ammo capacity for normal ammo."
+ },
+ {
+  "id": 80158,
+  "name": "Add: Normal Ammo II",
+  "description": "Expands weapon ammo capacity for normal ammo."
+ },
+ {
+  "id": 80159,
+  "name": "Sticky/Cluster Effect I",
+  "description": "Enables loading of Sticky Ammo and Cluster Bombs, and changes ammo capacity."
+ },
+ {
+  "id": 80160,
+  "name": "Sticky/Cluster Effect II",
+  "description": "Enables loading of Sticky Ammo and Cluster Bombs, and changes ammo capacity."
+ },
+ {
+  "id": 80161,
+  "name": "Fire Effect I",
+  "description": "Enables loading of Flaming Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80162,
+  "name": "Fire Effect II",
+  "description": "Enables loading of Flaming Ammo and Piercing Fire Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80163,
+  "name": "Water Effect I",
+  "description": "Enables loading of Water Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80164,
+  "name": "Water Effect II",
+  "description": "Enables loading of Water Ammo and Piercing Water Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80165,
+  "name": "Thunder Effect I",
+  "description": "Enables loading of Thunder Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80166,
+  "name": "Thunder Effect II",
+  "description": "Enables loading of Thunder Ammo and Piercing Thunder Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80167,
+  "name": "Ice Effect I",
+  "description": "Enables loading of Freeze Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80168,
+  "name": "Ice Effect II",
+  "description": "Enables loading of Freeze Ammo and Piercing Ice Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80169,
+  "name": "Dragon Effect I",
+  "description": "Enables loading of Dragon Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80170,
+  "name": "Dragon Effect II",
+  "description": "Enables loading of Dragon Ammo and Piercing Dragon Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80171,
+  "name": "Paralysis Effect I",
+  "description": "Enables loading of Paralysis Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80172,
+  "name": "Paralysis Effect II",
+  "description": "Enables loading of Paralysis Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80173,
+  "name": "Sleep Effect I",
+  "description": "Enables loading of Sleep Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80174,
+  "name": "Sleep Effect II",
+  "description": "Enables loading of Sleep Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80175,
+  "name": "Poison Effect I",
+  "description": "Enables loading of Poison, Recovery, Demon, and Armor Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80176,
+  "name": "Poison Effect II",
+  "description": "Enables loading of Poison, Recovery, Demon, and Armor Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80177,
+  "name": "Exhaust Effect I",
+  "description": "Enables loading of Poison, Recovery, Demon, and Armor Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80178,
+  "name": "Exhaust Effect II",
+  "description": "Enables loading of Poison, Recovery, Demon, and Armor Ammo, and changes ammo capacity."
+ },
+ {
+  "id": 80179,
+  "name": "Special: Wyvernheart",
+  "description": "Changes special ammo to Wyvernheart."
+ },
+ {
+  "id": 80180,
+  "name": "Special: Wyvernsnipe",
+  "description": "Changes special ammo to Wyvernsnipe."
+ },
+ {
+  "id": 80181,
+  "name": "Rapid Fire (Normal)",
+  "description": "Allows rapid fire of loadable Normal Ammo 1 &amp; 2."
+ },
+ {
+  "id": 80182,
+  "name": "Rapid Fire (Piercing)",
+  "description": "Allows rapid fire of loadable Pierce Ammo 1 &amp; 2."
+ },
+ {
+  "id": 80183,
+  "name": "Rapid Fire (Spread)",
+  "description": "Allows rapid fire of loadable Spread Ammo 1 &amp; 2."
+ },
+ {
+  "id": 80184,
+  "name": "Rapid Fire (Shrapnel)",
+  "description": "Allows rapid fire of loadable Shrapnel Ammo 1 &amp; 2."
+ },
+ {
+  "id": 80185,
+  "name": "Rapid Fire (Sticky)",
+  "description": "Allows rapid fire of loadable Sticky Ammo 1."
+ },
+ {
+  "id": 80186,
+  "name": "Rapid Fire (Fire)",
+  "description": "Allows rapid fire of loadable Flaming Ammo and Piercing Fire Ammo."
+ },
+ {
+  "id": 80187,
+  "name": "Rapid Fire (Water)",
+  "description": "Allows rapid fire of loadable Water Ammo and Piercing Water Ammo."
+ },
+ {
+  "id": 80188,
+  "name": "Rapid Fire (Thunder)",
+  "description": "Allows rapid fire of loadable Thunder Ammo and Piercing Thunder Ammo."
+ },
+ {
+  "id": 80189,
+  "name": "Rapid Fire (Ice)",
+  "description": "Allows rapid fire of loadable Freeze Ammo and Piercing Ice Ammo."
+ },
+ {
+  "id": 80190,
+  "name": "Rapid Fire (Dragon)",
+  "description": "Allows rapid fire of loadable Dragon Ammo and Piercing Dragon Ammo."
+ },
+ {
+  "id": 80191,
+  "name": "Poison Coating Boost",
+  "description": "Strengthens Poison Coating if coatings can be applied to weapon."
+ },
+ {
+  "id": 80192,
+  "name": "Paralysis Coating Boost",
+  "description": "Strengthens Paralysis Coating if coatings can be applied to weapon."
+ },
+ {
+  "id": 80193,
+  "name": "Sleep Coating Boost",
+  "description": "Strengthens Sleep Coating if coatings can be applied to weapon."
+ },
+ {
+  "id": 80194,
+  "name": "Close-range Coating Boost",
+  "description": "Strengthens Close-range Coating, but reduces Attack by 5."
+ },
+ {
+  "id": 80195,
+  "name": "Use Power Coating",
+  "description": "Allows you to apply Power Coatings."
+ },
+ {
+  "id": 80196,
+  "name": "Use Poison Coating I",
+  "description": "Allows you to apply Poison Coatings."
+ },
+ {
+  "id": 80197,
+  "name": "Use Poison Coating II",
+  "description": "Allows you to apply Poison Coatings and enhances them, but reduces Attack by 5."
+ },
+ {
+  "id": 80198,
+  "name": "Use Para Coating I",
+  "description": "Allows you to apply Paralysis Coatings."
+ },
+ {
+  "id": 80199,
+  "name": "Use Para Coating II",
+  "description": "Allows you to apply Paralysis Coatings and enhances them, but reduces Attack by 10."
+ },
+ {
+  "id": 80200,
+  "name": "Use Sleep Coating I",
+  "description": "Allows you to apply Sleep Coatings."
+ },
+ {
+  "id": 80201,
+  "name": "Use Sleep Coating II",
+  "description": "Allows you to apply Sleep Coatings and enhances them, but reduces Attack by 10."
+ },
+ {
+  "id": 80202,
+  "name": "Use Blast Coating",
+  "description": "Allows you to apply Blast Coatings."
+ },
+ {
+  "id": 80203,
+  "name": "Use Exhaust Coating",
+  "description": "Allows you to apply Exhaust Coatings, and grants +10 Attack."
+ },
+ {
+  "id": 80204,
+  "name": "Firing: Rapid",
+  "description": "Modifies weapon for Rapid-based Charged Attacks."
+ },
+ {
+  "id": 80205,
+  "name": "Firing: Pierce",
+  "description": "Modifies weapon for Pierce-based Charged Attacks."
+ },
+ {
+  "id": 80206,
+  "name": "Firing: Spread",
+  "description": "Modifies weapon for Spread-based Charged Attacks."
+ },
+ {
+  "id": 80207,
+  "name": "Firing: Charge",
+  "description": "Modifies arrow Charge Level for Charged Attacks."
+ },
+ {
+  "id": 80208,
+  "name": "Firing: Swift",
+  "description": "Modifies weapon for somewhat unconventional Charged Attacks."
+ },
+ {
+  "id": 80209,
+  "name": "Arc Shot: Recovery",
+  "description": "Changes shot type to Recovery."
+ },
+ {
+  "id": 80210,
+  "name": "Arc Shot: Affinity",
+  "description": "Changes shot type to Affinity."
+ },
+ {
+  "id": 80211,
+  "name": "Arc Shot: Anti-shock",
+  "description": "Changes shot type to Brace."
+ },
+ {
+  "id": 80212,
+  "name": "Dulling Strike",
+  "description": "Has a chance to increase attack power when your sharpness gauge is green or lower."
+ },
+ {
+  "id": 80213,
+  "name": "Brutal Strike",
+  "description": "Has a chance to increase damage with a negative affinity attack."
+ },
+ {
+  "id": 80214,
+  "name": "Element Exploit",
+  "description": "Increases damage when exploiting a foe&#039;s elemental weakness."
+ },
+ {
+  "id": 80215,
+  "name": "Silkbind Boost",
+  "description": "Increases damage dealt using Silkbind attacks."
+ },
+ {
+  "id": 80216,
+  "name": "Defense Grinder I",
+  "description": "Sharpness is unaffected when guarding."
+ },
+ {
+  "id": 80217,
+  "name": "Defense Grinder II",
+  "description": "Sharpness is slightly restored when guarding."
+ },
+ {
+  "id": 80218,
+  "name": "Hellion Mode",
+  "description": "Attacking in Demon Mode turns every attack into a critical hit, but also doubles sharpness degredation."
+ },
+ {
+  "id": 80219,
+  "name": "Maximum Volume",
+  "description": "Increases a performance&#039;s range of effect once it is activated."
+ },
+ {
+  "id": 80220,
+  "name": "Phial Switch Boost",
+  "description": "Grants special effects to phials when executing morph attacks."
+ },
+ {
+  "id": 80221,
+  "name": "Lasting Arc Shot",
+  "description": "Prolongs the bow&#039;s arc shot effect."
+ },
+ {
+  "id": 80222,
+  "name": "Master Rider",
+  "description": "Increases damage inflicted by Wyvern Riding, and increases the Wyvern Riding Timer."
+ },
+ {
+  "id": 80223,
+  "name": "Wyvern Exploit",
+  "description": "Increases damage to Bird, Flying, Brute, Piscine, and Fanged Wyverns, as well as Leviathans."
+ },
+ {
+  "id": 80224,
+  "name": "Small Monster Exploit",
+  "description": "Increases damage to small monsters."
+ },
+ {
+  "id": 80225,
+  "name": "Anti-Aerial Species",
+  "description": "Increases damage to flying monsters."
+ },
+ {
+  "id": 80226,
+  "name": "Anti-Aquatic Species",
+  "description": "Increases damage to aquatic monsters."
+ },
+ {
+  "id": 80227,
+  "name": "Fireblight Exploit",
+  "description": "Increases damage to monsters afflicted with fireblight."
+ },
+ {
+  "id": 80228,
+  "name": "Waterblight Exploit",
+  "description": "Increases damage to monsters afflicted with waterblight."
+ },
+ {
+  "id": 80229,
+  "name": "Thunderblight Exploit",
+  "description": "Increases damage to monsters afflicted with thunderblight."
+ },
+ {
+  "id": 80230,
+  "name": "Iceblight Exploit",
+  "description": "Increases damage to monsters afflicted with iceblight."
+ },
+ {
+  "id": 80231,
+  "name": "Magnamalo Soul",
+  "description": "Increases attack when afflicted by hellfire status."
+ },
+ {
+  "id": 80232,
+  "name": "Valstrax Soul",
+  "description": "Increases Dragon element attack by 20% when afflicted with dragonblight."
+ },
+ {
+  "id": 80233,
+  "name": "Chameleos Soul",
+  "description": "Landing a hit will yield a small chance of boosting Health, Stamina, Attack, or Defense."
+ },
+ {
+  "id": 80234,
+  "name": "Kushala Daora Soul",
+  "description": "Affinity gradually increases when continuously landing hits on foes."
+ },
+ {
+  "id": 80235,
+  "name": "Teostra Soul",
+  "description": "Increases damage dealt by blast explosions."
+ },
+ {
+  "id": 80236,
+  "name": "Ibushi Soul",
+  "description": "Enhances weapon functionality with each piece of Narwa armor you equip."
+ },
+ {
+  "id": 80237,
+  "name": "Narwa Soul",
+  "description": "Enhances weapon functionality with each piece of Ibushi armor you equip."
+ },
+ {
+  "id": 80238,
+  "name": "Buddy Rally",
+  "description": "Increases Palico and Palamute attack power and defense."
+ },
+ {
+  "id": 80239,
+  "name": "Spiribird Doubled",
+  "description": "Occasionally increases the effect of Spiribirds."
+ },
+ {
+  "id": 80240,
+  "name": "Fanged Exploit",
+  "description": "Increases damage to Fanged Beasts."
+ },
+ {
+  "id": 80241,
+  "name": "Bloody Heart",
+  "description": "During Bloodblight, attack will increase in accordance with vitality recovered by attacking. Effect ends when Bloodblight ends."
+ },
+ {
+  "id": 80242,
+  "name": "Wirebug Wrangler",
+  "description": "Extends the duration you can keep a Wirebug by 30 seconds."
+ },
+ {
+  "id": 80243,
+  "name": "Self-Improvement",
+  "description": "Attack and defense increase as time passes while on a quest. (The maximum is reached after 20 minutes.)"
+ },
+ {
+  "id": 80244,
+  "name": "Charge Up",
+  "description": "Increases your power to induce stun when you hit a monster with a charged attack."
+ },
+ {
+  "id": 80245,
+  "name": "Demon Rage",
+  "description": "When hitting monsters in Demon Mode, stamina consumption caused by Demon Mode will be nullified for a very short while."
+ },
+ {
+  "id": 80246,
+  "name": "Kinsect Supercharge",
+  "description": "Increases Kinsect damage at the expense of extra stamina consumption."
+ },
+ {
+  "id": 80247,
+  "name": "Guard Bash",
+  "description": "Deals blunt damage to a monster when blocking an attack with the Guard Switch Skill without taking too much knockback."
+ }
+]

@@ -1,0 +1,2122 @@
+[
+  {
+    "item_id": 20002,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "20 Research Points / 10 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20007,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "20 Research Points / 10 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20003,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "50 Research Points / 30 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20004,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "80 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20058,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "20 Research Points / 30 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20022,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "40 Research Points / 50 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20026,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "40 Research Points / 50 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20027,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "30 Research Points / 50 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21060,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "50 Research Points / 80 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20028,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "30 Research Points / 50 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20029,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "40 Research Points / 50 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20030,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "40 Research Points / 50 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20018,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "80 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20021,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "80 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20025,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "80 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20065,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "20 Research Points / 30 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20059,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "20 Research Points / 30 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20067,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "40 Research Points / 20 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20068,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "40 Research Points / 20 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20069,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "40 Research Points / 20 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20074,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "40 Research Points / 30 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20077,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "80 Research Points / 50 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20081,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "80 Research Points / 50 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20082,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "20 Research Points / 30 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20060,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "40 Research Points / 20 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20061,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "40 Research Points / 20 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20062,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "40 Research Points / 20 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21339,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 50 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21209,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "20 Research Points / 10 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21210,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "20 Research Points / 10 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21211,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "20 Research Points / 10 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21212,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "20 Research Points / 10 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21213,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "20 Research Points / 10 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20592,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "30 Research Points / 50 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20593,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "30 Research Points / 50 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20578,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "50 Research Points / 20 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20276,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20280,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20313,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20316,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20344,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20349,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20360,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20364,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20394,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20400,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20123,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20124,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20125,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20142,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20173,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20267,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20277,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20333,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20322,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20345,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20171,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20172,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20380,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20281,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20272,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20327,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20338,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20350,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20395,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20403,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20418,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20426,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20435,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20449,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20457,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20411,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20463,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20442,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20466,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20674,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20784,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20778,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20789,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "400 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20790,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20791,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20792,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20793,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20799,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20804,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20825,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20833,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20839,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20844,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20857,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20869,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20882,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20888,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20899,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20912,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20928,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20935,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20942,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20959,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20996,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20853,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21248,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21257,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21289,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21286,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21297,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21306,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21021,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 120 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21022,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "150 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21023,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21089,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "350 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21047,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "400 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21093,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 120 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21095,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 120 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21101,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 120 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21105,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "150 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21132,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21138,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21124,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "250 Research Points / 320 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21149,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "250 Research Points / 320 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21133,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "250 Research Points / 320 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21159,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 400 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21094,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 120 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21099,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 120 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21109,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "150 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21114,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "150 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21134,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21140,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21136,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "250 Research Points / 320 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21157,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 400 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21161,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 400 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21170,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 400 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21111,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 120 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21112,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "150 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21110,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "150 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21097,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "150 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21126,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21130,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "250 Research Points / 320 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21155,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 400 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21167,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 400 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21171,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 400 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21116,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 120 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21117,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "150 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21128,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21146,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21142,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "250 Research Points / 320 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21148,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "250 Research Points / 320 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21165,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 400 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21103,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "150 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21107,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21153,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 400 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21163,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 400 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21169,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 400 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21119,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 120 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21120,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "150 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21122,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21144,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21151,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 400 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21173,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 400 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21266,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "150 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21281,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21268,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "250 Research Points / 320 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21272,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 400 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21096,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "350 Research Points / 120 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21102,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "350 Research Points / 120 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21106,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "400 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21057,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "450 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21139,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "450 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21125,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 320 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21150,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 320 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21058,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 320 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21100,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "350 Research Points / 120 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21055,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "400 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21115,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "400 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21135,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "450 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21141,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "450 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21137,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 320 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21113,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "400 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21056,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "400 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21098,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "400 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21127,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "450 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21131,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "450 Research Points / 320 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21118,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "400 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21129,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "450 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21147,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "450 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21143,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 320 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21104,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "400 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21108,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "450 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21121,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "400 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21123,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "450 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21145,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "450 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21267,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "400 Research Points / 160 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21280,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "450 Research Points / 240 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21269,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 320 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21343,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "20 Research Points / 10 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21232,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21233,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "500 Research Points / 100 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20510,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 300 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20511,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 300 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20512,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 300 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20513,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 300 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 20514,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "100 Research Points / 300 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21290,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 300 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21332,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 300 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21334,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 300 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21030,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 300 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21031,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "200 Research Points / 300 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21331,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 300 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21333,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 300 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21335,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 300 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21175,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 300 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  },
+  {
+    "item_id": 21176,
+    "source_type": "melder",
+    "source_id": null,
+    "location": "Elder Melder",
+    "probability": null,
+    "conditions": "300 Research Points / 300 Melding Points",
+    "quantity_min": 1,
+    "quantity_max": 1
+  }
+]

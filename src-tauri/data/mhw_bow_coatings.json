@@ -1,0 +1,5714 @@
+[
+  {
+    "weapon_id": 32346,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32346,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32346,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32346,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32346,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32346,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32347,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32347,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32347,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32347,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32347,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32347,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32348,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32348,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32348,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32348,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32348,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32348,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32349,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32349,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32349,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32349,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32349,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32349,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32350,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32350,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32350,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32350,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32350,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32350,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32351,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32351,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32351,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32351,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32351,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32351,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32352,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32352,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32352,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32352,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32352,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32352,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32353,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32353,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32353,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32353,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32353,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32353,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32354,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32354,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32354,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32354,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32354,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32354,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32355,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32355,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32355,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32355,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32355,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32355,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32356,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32356,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32356,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32356,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32356,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32356,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32357,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32357,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32357,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32357,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32357,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32357,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32358,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32358,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32358,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32358,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32358,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32358,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32359,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32359,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32359,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32359,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32359,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32359,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32360,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32360,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32360,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32360,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32360,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32360,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32361,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32361,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32361,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32361,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32361,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32361,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32362,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32362,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32362,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32362,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32362,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32362,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32363,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32363,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32363,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32363,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32363,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32363,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32364,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32364,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32364,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32364,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32364,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32364,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32365,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32365,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32365,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32365,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32365,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32365,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32366,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32366,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32366,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32366,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32366,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32366,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32367,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32367,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32367,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32367,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32367,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32367,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32368,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32368,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32368,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32368,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32368,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32368,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32369,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32369,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32369,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32369,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32369,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32369,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32370,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32370,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32370,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32370,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32370,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32370,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32371,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32371,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32371,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32371,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32371,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32371,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32372,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32372,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32372,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32372,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32372,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32372,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32373,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32373,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32373,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32373,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32373,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32373,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32374,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32374,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32374,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32374,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32374,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32374,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32375,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32375,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32375,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32375,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32375,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32375,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32376,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32376,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32376,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32376,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32376,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32376,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32377,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32377,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32377,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32377,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32377,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32377,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32378,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32378,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32378,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32378,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32378,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32378,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32379,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32379,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32379,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32379,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32379,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32379,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32380,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32380,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32380,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32380,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32380,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32380,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32381,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32381,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32381,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32381,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32381,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32381,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32382,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32382,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32382,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32382,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32382,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32382,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32383,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32383,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32383,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32383,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32383,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32383,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32384,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32384,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32384,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32384,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32384,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32384,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32385,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32385,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32385,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32385,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32385,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32385,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32386,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32386,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32386,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32386,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32386,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32386,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32387,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32387,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32387,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32387,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32387,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32387,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32388,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32388,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32388,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32388,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32388,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32388,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32389,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32389,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32389,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32389,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32389,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32389,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32390,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32390,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32390,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32390,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32390,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32390,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32391,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32391,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32391,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32391,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32391,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32391,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32392,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32392,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32392,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32392,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32392,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32392,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32393,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32393,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32393,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32393,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32393,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32393,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32394,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32394,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32394,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32394,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32394,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32394,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32395,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32395,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32395,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32395,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32395,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32395,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32396,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32396,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32396,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32396,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32396,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32396,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32397,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32397,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32397,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32397,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32397,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32397,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32398,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32398,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32398,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32398,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32398,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32398,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32399,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32399,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32399,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32399,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32399,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32399,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32400,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32400,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32400,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32400,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32400,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32400,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32401,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32401,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32401,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32401,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32401,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32401,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32402,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32402,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32402,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32402,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32402,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32402,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32403,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32403,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32403,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32403,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32403,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32403,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32404,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32404,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32404,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32404,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32404,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32404,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32405,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32405,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32405,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32405,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32405,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32405,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32406,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32406,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32406,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32406,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32406,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32406,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32407,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32407,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32407,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32407,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32407,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32407,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32408,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32408,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32408,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32408,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32408,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32408,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32409,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32409,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32409,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32409,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32409,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32409,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32410,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32410,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32410,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32410,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32410,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32410,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32411,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32411,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32411,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32411,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32411,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32411,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32412,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32412,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32412,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32412,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32412,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32412,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32413,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32413,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32413,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32413,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32413,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32413,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32414,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32414,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32414,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32414,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32414,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32414,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32415,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32415,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32415,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32415,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32415,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32415,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32416,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32416,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32416,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32416,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32416,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32416,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32417,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32417,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32417,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32417,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32417,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32417,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32418,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32418,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32418,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32418,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32418,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32418,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32419,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32419,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32419,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32419,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32419,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32419,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32420,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32420,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32420,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32420,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32420,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32420,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32421,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32421,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32421,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32421,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32421,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32421,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32422,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32422,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32422,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32422,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32422,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32422,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32423,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32423,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32423,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32423,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32423,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32423,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32424,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32424,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32424,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32424,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32424,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32424,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32425,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32425,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32425,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32425,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32425,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32425,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32426,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32426,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32426,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32426,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32426,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32426,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32427,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32427,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32427,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32427,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32427,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32427,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32428,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32428,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32428,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32428,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32428,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32428,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32429,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32429,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32429,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32429,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32429,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32429,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32430,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32430,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32430,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32430,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32430,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32430,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32431,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32431,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32431,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32431,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32431,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32431,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32432,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32432,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32432,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32432,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32432,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32432,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32433,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32433,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32433,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32433,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32433,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32433,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32434,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32434,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32434,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32434,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32434,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32434,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32435,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32435,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32435,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32435,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32435,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32435,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32436,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32436,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32436,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32436,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32436,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32436,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32437,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32437,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32437,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32437,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32437,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32437,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32438,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32438,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32438,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32438,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32438,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32438,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32439,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32439,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32439,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32439,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32439,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32439,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32440,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32440,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32440,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32440,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32440,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32440,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32441,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32441,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32441,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32441,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32441,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32441,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32442,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32442,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32442,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32442,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32442,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32442,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32443,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32443,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32443,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32443,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32443,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32443,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32444,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32444,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32444,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32444,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32444,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32444,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32445,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32445,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32445,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32445,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32445,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32445,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32446,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32446,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32446,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32446,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32446,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32446,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32447,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32447,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32447,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32447,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32447,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32447,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32448,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32448,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32448,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32448,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32448,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32448,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32449,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32449,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32449,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32449,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32449,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32449,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32450,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32450,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32450,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32450,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32450,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32450,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32451,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32451,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32451,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32451,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32451,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32451,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32452,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32452,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32452,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32452,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32452,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32452,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32453,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32453,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32453,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32453,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32453,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32453,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32454,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32454,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32454,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32454,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32454,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32454,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32455,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32455,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32455,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32455,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32455,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32455,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32456,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32456,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32456,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32456,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32456,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32456,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32457,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32457,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32457,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32457,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32457,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32457,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32458,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32458,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32458,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32458,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32458,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32458,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32459,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32459,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32459,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32459,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32459,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32459,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32460,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32460,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32460,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32460,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32460,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32460,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32461,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32461,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32461,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32461,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32461,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32461,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32462,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32462,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32462,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32462,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32462,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32462,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32463,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32463,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32463,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32463,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32463,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32463,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32464,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32464,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32464,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32464,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32464,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32464,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32465,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32465,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32465,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32465,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32465,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32465,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32466,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32466,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32466,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32466,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32466,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32466,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32467,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32467,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32467,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32467,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32467,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32467,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32468,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32468,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32468,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32468,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32468,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32468,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32469,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32469,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32469,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32469,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32469,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32469,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32470,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32470,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32470,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32470,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32470,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32470,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32471,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32471,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32471,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32471,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32471,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32471,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32472,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32472,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32472,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32472,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32472,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32472,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32473,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32473,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32473,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32473,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32473,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32473,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32474,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32474,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32474,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32474,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32474,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32474,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32475,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32475,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32475,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32475,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32475,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32475,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32476,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32476,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32476,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32476,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32476,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32476,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32477,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32477,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32477,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32477,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32477,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32477,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32478,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32478,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32478,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32478,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32478,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32478,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32479,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32479,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32479,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32479,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32479,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32479,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32480,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32480,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32480,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32480,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32480,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32480,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32481,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32481,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32481,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32481,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32481,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32481,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32482,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32482,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32482,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32482,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32482,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32482,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32483,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32483,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32483,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32483,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32483,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32483,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32484,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32484,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32484,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32484,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32484,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32484,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32485,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32485,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32485,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32485,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32485,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32485,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32486,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32486,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32486,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32486,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32486,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32486,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32487,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32487,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32487,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32487,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32487,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32487,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32488,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32488,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32488,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32488,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32488,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32488,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32489,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32489,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32489,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32489,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32489,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32489,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32490,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32490,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32490,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32490,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32490,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32490,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32491,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32491,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32491,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32491,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32491,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32491,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32492,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32492,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32492,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32492,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32492,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32492,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32493,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32493,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32493,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32493,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32493,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32493,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32494,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32494,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32494,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32494,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32494,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32494,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32495,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32495,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32495,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32495,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32495,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32495,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32496,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32496,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32496,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32496,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32496,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32496,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32497,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32497,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32497,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32497,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32497,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32497,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32498,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32498,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32498,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32498,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32498,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32498,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32499,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32499,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32499,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32499,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32499,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32499,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32500,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32500,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32500,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32500,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32500,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32500,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32501,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32501,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32501,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32501,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32501,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32501,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32502,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32502,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32502,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32502,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32502,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32502,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32503,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32503,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32503,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32503,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32503,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32503,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32504,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32504,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32504,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32504,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32504,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32504,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32505,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32505,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32505,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32505,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32505,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32505,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32506,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32506,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32506,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32506,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32506,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32506,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32507,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32507,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32507,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32507,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32507,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32507,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32508,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32508,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32508,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32508,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32508,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32508,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32509,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32509,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32509,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32509,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32509,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32509,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32510,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32510,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32510,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32510,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32510,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32510,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32511,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32511,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32511,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32511,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32511,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32511,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32514,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32514,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32514,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32514,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32514,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32514,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32515,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32515,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32515,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32515,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32515,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32515,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33368,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33368,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33368,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33368,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33368,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33368,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33369,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33369,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33369,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33369,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33369,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33369,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33370,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33370,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33370,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33370,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33370,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33370,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33371,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33371,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33371,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33371,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33371,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33371,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33372,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33372,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33372,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33372,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33372,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33372,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33373,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33373,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33373,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33373,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33373,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33373,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33374,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33374,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33374,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33374,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33374,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33374,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33375,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33375,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33375,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33375,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33375,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33375,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33376,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33376,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33376,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33376,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33376,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33376,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33377,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33377,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33377,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33377,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33377,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33377,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33378,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33378,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33378,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33378,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33378,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33378,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33379,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33379,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33379,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33379,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33379,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33379,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33380,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33380,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33380,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33380,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33380,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33380,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33381,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33381,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33381,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33381,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33381,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33381,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33382,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33382,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33382,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33382,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33382,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33382,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33383,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33383,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33383,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33383,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33383,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33383,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33384,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33384,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33384,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33384,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33384,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33384,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33385,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33385,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33385,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33385,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33385,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33385,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33386,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33386,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33386,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33386,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33386,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33386,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33387,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33387,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33387,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33387,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33387,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33387,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33388,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33388,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33388,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33388,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33388,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33388,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33389,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33389,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33389,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33389,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33389,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33389,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33390,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33390,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33390,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33390,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33390,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33390,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33391,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33391,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33391,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33391,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33391,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33391,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33392,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33392,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33392,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33392,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33392,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33392,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33393,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33393,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33393,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33393,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33393,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33393,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33394,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33394,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33394,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33394,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33394,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33394,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33395,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33395,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33395,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33395,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33395,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33395,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33396,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33396,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33396,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33396,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33396,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33396,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33397,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33397,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33397,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33397,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33397,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33397,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33398,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33398,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33398,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33398,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33398,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33398,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33399,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33399,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33399,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33399,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33399,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33399,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33400,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33400,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33400,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33400,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33400,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33400,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33401,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33401,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33401,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33401,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33401,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33401,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33402,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33402,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33402,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33402,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33402,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33402,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33403,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33403,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33403,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33403,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33403,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33403,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33404,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33404,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33404,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33404,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33404,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33404,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33405,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33405,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33405,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33405,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33405,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33405,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33406,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33406,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33406,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33406,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33406,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33406,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33407,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33407,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33407,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33407,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33407,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33407,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33408,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33408,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33408,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33408,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33408,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33408,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33409,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33409,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33409,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33409,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33409,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33409,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33410,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33410,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33410,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33410,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33410,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33410,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33411,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33411,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33411,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33411,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33411,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33411,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33412,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33412,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33412,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33412,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33412,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33412,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33413,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33413,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33413,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33413,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33413,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33413,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33414,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33414,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33414,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33414,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33414,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33414,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33415,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33415,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33415,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33415,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33415,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33415,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33416,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33416,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33416,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33416,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33416,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33416,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33417,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33417,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33417,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33417,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33417,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33417,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33418,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33418,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33418,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33418,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33418,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33418,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33419,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33419,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33419,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33419,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33419,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33419,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33420,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33420,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33420,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33420,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33420,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33420,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33421,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33421,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33421,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33421,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33421,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33421,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33422,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33422,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33422,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33422,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33422,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33422,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33423,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33423,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33423,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33423,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33423,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33423,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33424,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33424,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33424,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33424,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33424,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33424,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33425,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33425,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33425,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33425,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33425,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33425,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33426,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33426,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33426,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33426,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33426,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33426,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33427,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33427,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33427,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33427,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33427,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33427,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33428,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33428,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33428,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33428,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33428,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33428,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33429,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33429,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33429,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33429,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33429,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33429,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33539,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33539,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33539,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33539,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33539,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33539,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33540,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33540,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33540,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33540,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33540,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33540,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33541,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33541,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33541,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33541,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33541,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33541,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33542,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33542,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33542,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33542,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33542,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33542,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33543,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33543,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33543,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33543,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33543,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33543,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 33544,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 33544,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 33544,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 33544,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 33544,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 33544,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32512,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32512,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32512,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32512,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32512,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32512,
+    "coating": "blast"
+  },
+  {
+    "weapon_id": 32513,
+    "coating": "close"
+  },
+  {
+    "weapon_id": 32513,
+    "coating": "power"
+  },
+  {
+    "weapon_id": 32513,
+    "coating": "paralysis"
+  },
+  {
+    "weapon_id": 32513,
+    "coating": "poison"
+  },
+  {
+    "weapon_id": 32513,
+    "coating": "sleep"
+  },
+  {
+    "weapon_id": 32513,
+    "coating": "blast"
+  }
+]

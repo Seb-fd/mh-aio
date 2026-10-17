@@ -515,14 +515,18 @@
     "name": "Anja α",
     "rank": "High",
     "bonus_skill": "Adrenaline",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Stamina Cap Up",
+    "bonus_required2": 4
   },
   {
     "id": 20075,
     "name": "Anja β",
     "rank": "High",
     "bonus_skill": "Adrenaline",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Stamina Cap Up",
+    "bonus_required2": 4
   },
   {
     "id": 20076,
@@ -739,84 +743,108 @@
     "name": "Legiana α",
     "rank": "High",
     "bonus_skill": "Good Luck",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Bow Charge Plus",
+    "bonus_required2": 4
   },
   {
     "id": 20107,
     "name": "Legiana β",
     "rank": "High",
     "bonus_skill": "Good Luck",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Bow Charge Plus",
+    "bonus_required2": 4
   },
   {
     "id": 20108,
     "name": "Odogaron α",
     "rank": "High",
     "bonus_skill": "Punishing Draw",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Protective Polish",
+    "bonus_required2": 4
   },
   {
     "id": 20109,
     "name": "Odogaron β",
     "rank": "High",
     "bonus_skill": "Punishing Draw",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Protective Polish",
+    "bonus_required2": 4
   },
   {
     "id": 20110,
     "name": "Rathalos α",
     "rank": "High",
     "bonus_skill": "Critical Element",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Mind's Eye/Ballistics",
+    "bonus_required2": 4
   },
   {
     "id": 20111,
     "name": "Rathalos β",
     "rank": "High",
     "bonus_skill": "Critical Element",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Mind's Eye/Ballistics",
+    "bonus_required2": 4
   },
   {
     "id": 20112,
     "name": "Rath Soul α",
     "rank": "High",
     "bonus_skill": "Critical Element",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Mind's Eye/Ballistics",
+    "bonus_required2": 4
   },
   {
     "id": 20113,
     "name": "Rath Soul β",
     "rank": "High",
     "bonus_skill": "Critical Element",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Mind's Eye/Ballistics",
+    "bonus_required2": 4
   },
   {
     "id": 20114,
     "name": "Diablos α",
     "rank": "High",
     "bonus_skill": "Bludgeoner",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Non-elemental Boost",
+    "bonus_required2": 4
   },
   {
     "id": 20115,
     "name": "Diablos β",
     "rank": "High",
     "bonus_skill": "Bludgeoner",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Non-elemental Boost",
+    "bonus_required2": 4
   },
   {
     "id": 20116,
     "name": "Diablos Nero α",
     "rank": "High",
     "bonus_skill": "Bludgeoner",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Non-elemental Boost",
+    "bonus_required2": 4
   },
   {
     "id": 20117,
     "name": "Diablos Nero β",
     "rank": "High",
     "bonus_skill": "Bludgeoner",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Non-elemental Boost",
+    "bonus_required2": 4
   },
   {
     "id": 20118,
@@ -1047,14 +1075,18 @@
     "name": "Lunastra α",
     "rank": "High",
     "bonus_skill": "Stamina Cap Up",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Mind's Eye/Ballistics",
+    "bonus_required2": 4
   },
   {
     "id": 20151,
     "name": "Lunastra β",
     "rank": "High",
     "bonus_skill": "Stamina Cap Up",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Mind's Eye/Ballistics",
+    "bonus_required2": 4
   },
   {
     "id": 20152,
@@ -1159,7 +1191,9 @@
     "name": "Lunastra γ",
     "rank": "High",
     "bonus_skill": "Stamina Cap Up",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Mind's Eye/Ballistics",
+    "bonus_required2": 4
   },
   {
     "id": 20167,
@@ -1173,7 +1207,9 @@
     "name": "Azure Starlord α",
     "rank": "High",
     "bonus_skill": "Critical Element",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Mind's Eye/Ballistics",
+    "bonus_required2": 4
   },
   {
     "id": 20169,
@@ -1187,7 +1223,9 @@
     "name": "Drachen α",
     "rank": "High",
     "bonus_skill": "Elemental Airborne",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Master's Touch",
+    "bonus_required2": 4
   },
   {
     "id": 20171,
@@ -2020,14 +2058,18 @@
     "name": "Velkhana α+",
     "rank": "Master",
     "bonus_skill": "Critical Element",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Frostcraft",
+    "bonus_required2": 4
   },
   {
     "id": 20290,
     "name": "Velkhana β+",
     "rank": "Master",
     "bonus_skill": "Critical Element",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Frostcraft",
+    "bonus_required2": 4
   },
   {
     "id": 20291,
@@ -2090,42 +2132,54 @@
     "name": "Namielle α+",
     "rank": "Master",
     "bonus_skill": "Element Acceleration",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "True Element Acceleration",
+    "bonus_required2": 4
   },
   {
     "id": 20300,
     "name": "Namielle β+",
     "rank": "Master",
     "bonus_skill": "Element Acceleration",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "True Element Acceleration",
+    "bonus_required2": 4
   },
   {
     "id": 20301,
     "name": "Guild Palace α+",
     "rank": "Master",
     "bonus_skill": "Good Luck",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Carving Master",
+    "bonus_required2": 4
   },
   {
     "id": 20302,
     "name": "Guild Palace β+",
     "rank": "Master",
     "bonus_skill": "Good Luck",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Carving Master",
+    "bonus_required2": 4
   },
   {
     "id": 20303,
     "name": "Shara Ishvalda α+",
     "rank": "Master",
     "bonus_skill": "Gaia's Veil",
-    "bonus_required": 4
+    "bonus_required": 4,
+    "bonus_skill2": "True Gaia's Veil",
+    "bonus_required2": 5
   },
   {
     "id": 20304,
     "name": "Shara Ishvalda β+",
     "rank": "Master",
     "bonus_skill": "Gaia's Veil",
-    "bonus_required": 4
+    "bonus_required": 4,
+    "bonus_skill2": "True Gaia's Veil",
+    "bonus_required2": 5
   },
   {
     "id": 20305,
@@ -2174,28 +2228,36 @@
     "name": "Golden Lune α+",
     "rank": "Master",
     "bonus_skill": "Divine Blessing Secret",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "True Critical Status",
+    "bonus_required2": 4
   },
   {
     "id": 20312,
     "name": "Golden Lune β+",
     "rank": "Master",
     "bonus_skill": "Divine Blessing Secret",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "True Critical Status",
+    "bonus_required2": 4
   },
   {
     "id": 20313,
     "name": "Silver Sol α+",
     "rank": "Master",
     "bonus_skill": "Slinger Ammo Secret",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "True Critical Element",
+    "bonus_required2": 4
   },
   {
     "id": 20314,
     "name": "Silver Sol β+",
     "rank": "Master",
     "bonus_skill": "Slinger Ammo Secret",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "True Critical Element",
+    "bonus_required2": 4
   },
   {
     "id": 20315,
@@ -2230,42 +2292,54 @@
     "name": "Guildwork α+",
     "rank": "Master",
     "bonus_skill": "Good Luck",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Carving Master",
+    "bonus_required2": 4
   },
   {
     "id": 20320,
     "name": "Guildwork β+",
     "rank": "Master",
     "bonus_skill": "Good Luck",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Carving Master",
+    "bonus_required2": 4
   },
   {
     "id": 20321,
     "name": "Rajang α+",
     "rank": "Master",
     "bonus_skill": "Mind's Eye/Ballistics",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Protective Polish",
+    "bonus_required2": 4
   },
   {
     "id": 20322,
     "name": "Rajang β+",
     "rank": "Master",
     "bonus_skill": "Mind's Eye/Ballistics",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Protective Polish",
+    "bonus_required2": 4
   },
   {
     "id": 20323,
     "name": "Furious Rajang α+",
     "rank": "Master",
     "bonus_skill": "Maximum Might Secret",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Heroics Secret",
+    "bonus_required2": 4
   },
   {
     "id": 20324,
     "name": "Furious Rajang β+",
     "rank": "Master",
     "bonus_skill": "Maximum Might Secret",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Heroics Secret",
+    "bonus_required2": 4
   },
   {
     "id": 20325,
@@ -2286,147 +2360,189 @@
     "name": "Safi'jiiva α+",
     "rank": "Master",
     "bonus_skill": "Dragonvein Awakening",
-    "bonus_required": 3
+    "bonus_required": 3,
+    "bonus_skill2": "True Dragonvein Awakening",
+    "bonus_required2": 5
   },
   {
     "id": 20328,
     "name": "Safi'jiiva β+",
     "rank": "Master",
     "bonus_skill": "Dragonvein Awakening",
-    "bonus_required": 3
+    "bonus_required": 3,
+    "bonus_skill2": "True Dragonvein Awakening",
+    "bonus_required2": 5
   },
   {
     "id": 20329,
     "name": "Raging Brachy α+",
     "rank": "Master",
     "bonus_skill": "Agitator Secret",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Artillery Secret",
+    "bonus_required2": 4
   },
   {
     "id": 20330,
     "name": "Raging Brachy β+",
     "rank": "Master",
     "bonus_skill": "Agitator Secret",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Artillery Secret",
+    "bonus_required2": 4
   },
   {
     "id": 20331,
     "name": "Frostfang Barioth α+",
     "rank": "Master",
     "bonus_skill": "Punishing Draw",
-    "bonus_required": 1
+    "bonus_required": 1,
+    "bonus_skill2": "Slugger Secret",
+    "bonus_required2": 3
   },
   {
     "id": 20332,
     "name": "Frostfang Barioth β+",
     "rank": "Master",
     "bonus_skill": "Punishing Draw",
-    "bonus_required": 1
+    "bonus_required": 1,
+    "bonus_skill2": "Slugger Secret",
+    "bonus_required2": 3
   },
   {
     "id": 20333,
     "name": "Alatreon α+",
     "rank": "Master",
     "bonus_skill": "Element Conversion",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "All Elemental Resistance",
+    "bonus_required2": 3
   },
   {
     "id": 20334,
     "name": "Alatreon β+",
     "rank": "Master",
     "bonus_skill": "Element Conversion",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "All Elemental Resistance",
+    "bonus_required2": 3
   },
   {
     "id": 20335,
     "name": "Kulve Taroth α+",
     "rank": "Master",
     "bonus_skill": "Guts",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Free Meal Secret",
+    "bonus_required2": 4
   },
   {
     "id": 20336,
     "name": "Kulve Taroth β+",
     "rank": "Master",
     "bonus_skill": "Guts",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Free Meal Secret",
+    "bonus_required2": 4
   },
   {
     "id": 20337,
     "name": "Namielle γ+",
     "rank": "Master",
     "bonus_skill": "Element Acceleration",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "True Element Acceleration",
+    "bonus_required2": 4
   },
   {
     "id": 20338,
     "name": "Velkhana γ+",
     "rank": "Master",
     "bonus_skill": "Critical Element",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Frostcraft",
+    "bonus_required2": 4
   },
   {
     "id": 20339,
     "name": "Oolong α+",
     "rank": "Master",
     "bonus_skill": "Joy's Gift",
-    "bonus_required": 3
+    "bonus_required": 3,
+    "bonus_skill2": "Joy's Gratitude",
+    "bonus_required2": 5
   },
   {
     "id": 20340,
     "name": "Astral α+",
     "rank": "Master",
     "bonus_skill": "Gratitude's Gift",
-    "bonus_required": 3
+    "bonus_required": 3,
+    "bonus_skill2": "Gratitude's Blessing",
+    "bonus_required2": 5
   },
   {
     "id": 20341,
     "name": "Rose α+",
     "rank": "Master",
     "bonus_skill": "Full Bloom's Gift",
-    "bonus_required": 3
+    "bonus_required": 3,
+    "bonus_skill2": "Full Bloom Gratitude",
+    "bonus_required2": 5
   },
   {
     "id": 20342,
     "name": "Passionate α+",
     "rank": "Master",
     "bonus_skill": "Sizzling Gift",
-    "bonus_required": 3
+    "bonus_required": 3,
+    "bonus_skill2": "Sizzling Gratitude",
+    "bonus_required2": 5
   },
   {
     "id": 20343,
     "name": "Demonlord α+",
     "rank": "Master",
     "bonus_skill": "Fun Fright's Gift",
-    "bonus_required": 3
+    "bonus_required": 3,
+    "bonus_skill2": "Fun Fright's Gratitude",
+    "bonus_required2": 5
   },
   {
     "id": 20344,
     "name": "Dragon α+",
     "rank": "Master",
     "bonus_skill": "Inheritance",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Transcendance",
+    "bonus_required2": 4
   },
   {
     "id": 20345,
     "name": "Dragon β+",
     "rank": "Master",
     "bonus_skill": "Inheritance",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Transcendance",
+    "bonus_required2": 4
   },
   {
     "id": 20346,
     "name": "Azure Age α+",
     "rank": "Master",
     "bonus_skill": "Slinger Ammo Secret",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "True Critical Element",
+    "bonus_required2": 4
   },
   {
     "id": 20347,
     "name": "Artemis α+",
     "rank": "Master",
     "bonus_skill": "Hasten Recovery",
-    "bonus_required": 2
+    "bonus_required": 2,
+    "bonus_skill2": "Great Luck",
+    "bonus_required2": 4
   },
   {
     "id": 20348,

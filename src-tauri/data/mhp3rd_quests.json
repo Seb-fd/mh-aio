@@ -2662,7 +2662,7 @@
     "location": "Sandy Plains",
     "time_limit": 50,
     "faints_allowed": 3,
-    "is_key_quest": false,
+    "is_key_quest": true,
     "description": "Guild Low Rank ★2: Hunt the target(s) in Sandy Plains. Hunt Barroth. Time limit: 50 min.",
     "client": null,
     "requirements": null,

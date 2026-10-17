@@ -49,7 +49,10 @@
     "requirements": "HR 1",
     "reward_money": 1200,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Kestodon",
+      "Great Jagras"
+    ]
   },
   {
     "id": 103,
@@ -155,7 +158,11 @@
     "requirements": "HR 3",
     "reward_money": 2520,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Barroth",
+      "Rathian",
+      "Diablos"
+    ]
   },
   {
     "id": 302,
@@ -180,7 +187,11 @@
     "requirements": "HR 3",
     "reward_money": 3240,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Jyuratodus",
+      "Rathian",
+      "Barroth"
+    ]
   },
   {
     "id": 305,
@@ -259,7 +270,10 @@
     "requirements": "HR 4",
     "reward_money": 4320,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Zorah Magdaros",
+      "Nergigante"
+    ]
   },
   {
     "id": 405,
@@ -365,7 +379,11 @@
     "requirements": "HR 5",
     "reward_money": 5400,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Odogaron",
+      "Great Girros",
+      "Radobaan"
+    ]
   },
   {
     "id": 502,
@@ -444,7 +462,10 @@
     "requirements": "HR 5+",
     "reward_money": 8280,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Zorah Magdaros",
+      "Nergigante"
+    ]
   },
   {
     "id": 601,
@@ -523,7 +544,12 @@
     "requirements": "HR 7",
     "reward_money": 12600,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Pink Rathian",
+      "Tzitzi-Ya-Ku",
+      "Legiana",
+      "Odogaron"
+    ]
   },
   {
     "id": 701,
@@ -656,7 +682,9 @@
     "requirements": "HR 9",
     "reward_money": 19800,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Xeno'jiiva"
+    ]
   },
   {
     "id": 805,
@@ -789,7 +817,12 @@
     "requirements": "HR 1",
     "reward_money": 720,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Great Jagras",
+      "Pukei-Pukei",
+      "Anjanath",
+      "Rathalos"
+    ]
   },
   {
     "id": 241,
@@ -814,7 +847,9 @@
     "requirements": "HR 1",
     "reward_money": 300,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Great Jagras"
+    ]
   },
   {
     "id": 251,
@@ -1163,7 +1198,12 @@
     "requirements": "HR 3",
     "reward_money": 1080,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Kulu-Ya-Ku",
+      "Rathian",
+      "Barroth",
+      "Diablos"
+    ]
   },
   {
     "id": 364,
@@ -1188,7 +1228,10 @@
     "requirements": "HR 3",
     "reward_money": 1080,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Kulu-Ya-Ku",
+      "Rathian"
+    ]
   },
   {
     "id": 365,
@@ -1375,7 +1418,9 @@
     "requirements": "HR 4",
     "reward_money": 3600,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Rathian"
+    ]
   },
   {
     "id": 461,
@@ -1508,7 +1553,9 @@
     "requirements": "HR 4",
     "reward_money": 3600,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Tzitzi-Ya-Ku"
+    ]
   },
   {
     "id": 475,
@@ -2206,7 +2253,10 @@
     "requirements": "HR 5+",
     "reward_money": 8280,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Zorah Magdaros",
+      "Nergigante"
+    ]
   },
   {
     "id": 651,
@@ -2663,7 +2713,13 @@
     "requirements": "HR 6",
     "reward_money": 5400,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Great Girros",
+      "Radobaan",
+      "Odogaron",
+      "Bazelgeuse",
+      "Deviljho"
+    ]
   },
   {
     "id": 684,
@@ -2796,7 +2852,11 @@
     "requirements": "HR 6",
     "reward_money": 5400,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Gajalaka",
+      "Bazelgeuse",
+      "Deviljho"
+    ]
   },
   {
     "id": 731,
@@ -4657,7 +4717,10 @@
     "requirements": "HR 5+",
     "reward_money": 15120,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Zorah Magdaros",
+      "Nergigante"
+    ]
   },
   {
     "id": 65601,
@@ -5598,7 +5661,10 @@
     "requirements": "HR 9",
     "reward_money": 36000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Zorah Magdaros",
+      "Nergigante"
+    ]
   },
   {
     "id": 62607,
@@ -6267,7 +6333,10 @@
     "requirements": "HR 6",
     "reward_money": 4320,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Gajalaka",
+      "Barroth"
+    ]
   },
   {
     "id": 63031,
@@ -6724,7 +6793,11 @@
     "requirements": "HR 6",
     "reward_money": 10800,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Kulu-Ya-Ku",
+      "Anjanath",
+      "Barroth"
+    ]
   },
   {
     "id": 50701,
@@ -6803,7 +6876,10 @@
     "requirements": "HR 8",
     "reward_money": 12600,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Lunastra",
+      "Teostra"
+    ]
   },
   {
     "id": 50803,
@@ -6855,7 +6931,9 @@
     "requirements": "HR 9",
     "reward_money": 17640,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Behemoth"
+    ]
   },
   {
     "id": 50906,
@@ -6907,7 +6985,10 @@
     "requirements": "HR 9",
     "reward_money": 19800,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Leshen",
+      "Pukei-Pukei"
+    ]
   },
   {
     "id": 1101,
@@ -7202,7 +7283,9 @@
     "requirements": "MR 3",
     "reward_money": 28800,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Velkhana"
+    ]
   },
   {
     "id": 1401,
@@ -7308,7 +7391,9 @@
     "requirements": "MR 4",
     "reward_money": 28800,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Velkhana"
+    ]
   },
   {
     "id": 1405,
@@ -7468,7 +7553,9 @@
     "requirements": "MR 6",
     "reward_money": 14400,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Ruiner Nergigante"
+    ]
   },
   {
     "id": 1602,
@@ -7493,7 +7580,9 @@
     "requirements": "MR 6",
     "reward_money": 43200,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Shara Ishvalda"
+    ]
   },
   {
     "id": 1603,
@@ -7734,7 +7823,12 @@
     "requirements": "MR 1",
     "reward_money": 9000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Beotodus",
+      "Banbaro",
+      "Viper Tobi-Kadachi",
+      "Tigrex"
+    ]
   },
   {
     "id": 1131,
@@ -8272,7 +8366,13 @@
     "requirements": "MR 2",
     "reward_money": 9000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Boaboa",
+      "Beotodus",
+      "Banbaro",
+      "Viper Tobi-Kadachi",
+      "Barioth"
+    ]
   },
   {
     "id": 1224,
@@ -8918,7 +9018,13 @@
     "requirements": "MR 2",
     "reward_money": 9000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Dodogama",
+      "Brachydios",
+      "Uragaan",
+      "Lavasioth",
+      "Velkhana"
+    ]
   },
   {
     "id": 1321,
@@ -9861,7 +9967,12 @@
     "requirements": "MR 4",
     "reward_money": 9000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Shrieking Legiana",
+      "Legiana",
+      "Banbaro",
+      "Tigrex"
+    ]
   },
   {
     "id": 1431,
@@ -11047,7 +11158,12 @@
     "requirements": "MR 1",
     "reward_money": 9000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Beotodus",
+      "Banbaro",
+      "Fulgur Anjanath",
+      "Tigrex"
+    ]
   },
   {
     "id": 61805,
@@ -11072,7 +11188,12 @@
     "requirements": "MR 1",
     "reward_money": 9000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Viper Tobi-Kadachi",
+      "Barioth",
+      "Tigrex",
+      "Fulgur Anjanath"
+    ]
   },
   {
     "id": 61811,
@@ -11097,7 +11218,12 @@
     "requirements": "MR 1",
     "reward_money": 9000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Viper Tobi-Kadachi",
+      "Barioth",
+      "Fulgur Anjanath",
+      "Shrieking Legiana"
+    ]
   },
   {
     "id": 66801,
@@ -11149,7 +11275,12 @@
     "requirements": "MR 1",
     "reward_money": 9000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Great Girros",
+      "Odogaron",
+      "Radobaan",
+      "Tigrex"
+    ]
   },
   {
     "id": 66803,
@@ -11201,7 +11332,12 @@
     "requirements": "MR 1",
     "reward_money": 9000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Barroth",
+      "Rathian",
+      "Pukei-Pukei",
+      "Diablos"
+    ]
   },
   {
     "id": 67822,
@@ -11226,7 +11362,12 @@
     "requirements": "MR 1",
     "reward_money": 9000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Jyuratodus",
+      "Barroth",
+      "Banbaro",
+      "Tigrex"
+    ]
   },
   {
     "id": 67823,
@@ -11251,7 +11392,12 @@
     "requirements": "MR 1",
     "reward_money": 9000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Tzitzi-Ya-Ku",
+      "Fulgur Anjanath",
+      "Legiana",
+      "Nargacuga"
+    ]
   },
   {
     "id": 67824,
@@ -11303,7 +11449,9 @@
     "requirements": "MR 1",
     "reward_money": 18000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Black Diablos"
+    ]
   },
   {
     "id": 67826,
@@ -11328,7 +11476,12 @@
     "requirements": "MR 1",
     "reward_money": 9000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Paolumu",
+      "Rajang",
+      "Ebony Odogaron",
+      "Legiana"
+    ]
   },
   {
     "id": 61803,
@@ -13675,7 +13828,11 @@
     "requirements": "MR 6",
     "reward_money": 36000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Rajang",
+      "Savage Deviljho",
+      "Azure Rathalos"
+    ]
   },
   {
     "id": 51602,
@@ -13727,7 +13884,9 @@
     "requirements": "MR 6",
     "reward_money": 36000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Stygian Zinogre"
+    ]
   },
   {
     "id": 51604,
@@ -13752,7 +13911,9 @@
     "requirements": "MR 6",
     "reward_money": 36000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Safi'jiiva"
+    ]
   },
   {
     "id": 51606,
@@ -13939,7 +14100,9 @@
     "requirements": "HR 9",
     "reward_money": 25200,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Kulve Taroth"
+    ]
   },
   {
     "id": 50902,
@@ -13964,6 +14127,8 @@
     "requirements": "HR 9",
     "reward_money": 36000,
     "contract_fee": 0,
-    "main_monsters": []
+    "main_monsters": [
+      "Kulve Taroth"
+    ]
   }
 ]

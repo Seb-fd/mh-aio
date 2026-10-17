@@ -1,0 +1,3789 @@
+[
+ {
+  "monster_id": 30073,
+  "part": "Head",
+  "part_hp": 400,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30073,
+  "part": "Torso",
+  "part_hp": 350,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30073,
+  "part": "Left Arm",
+  "part_hp": 250,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30073,
+  "part": "Right Arm",
+  "part_hp": 250,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30073,
+  "part": "Hind Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30073,
+  "part": "Wing",
+  "part_hp": 320,
+  "break_text": "320 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30073,
+  "part": "Tail",
+  "part_hp": 280,
+  "break_text": "280 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30001,
+  "part": "頭・嘴・傘",
+  "part_hp": 250,
+  "break_text": "250 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 250 (BreakLevel: 2, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30001,
+  "part": "Neck",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30001,
+  "part": "Wing",
+  "part_hp": 250,
+  "break_text": "500 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30001,
+  "part": "Wing",
+  "part_hp": 250,
+  "break_text": "500 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30001,
+  "part": "Torso",
+  "part_hp": 150,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30001,
+  "part": "Tail",
+  "part_hp": 200,
+  "break_text": "400 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30001,
+  "part": "Leg",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30002,
+  "part": "Head",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30002,
+  "part": "Body",
+  "part_hp": 450,
+  "break_text": "450 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30002,
+  "part": "Left Arm",
+  "part_hp": 200,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30002,
+  "part": "Right Arm",
+  "part_hp": 200,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30002,
+  "part": "Hind Leg",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30002,
+  "part": "Hind Leg",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30002,
+  "part": "Tail",
+  "part_hp": 350,
+  "break_text": "250 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 500 (PermitDamageAttr: Slash)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30002,
+  "part": "Large Mudbulb",
+  "part_hp": 250,
+  "break_text": "250 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30002,
+  "part": "Large Mudbulb",
+  "part_hp": 220,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30004,
+  "part": "Head",
+  "part_hp": 400,
+  "break_text": "400 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 800 (BreakLevel: 2, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30004,
+  "part": "Left Arm",
+  "part_hp": 350,
+  "break_text": "350 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30004,
+  "part": "Right Arm",
+  "part_hp": 350,
+  "break_text": "350 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30004,
+  "part": "Abdomen",
+  "part_hp": 600,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30004,
+  "part": "Tail",
+  "part_hp": 300,
+  "break_text": "150 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30004,
+  "part": "Back",
+  "part_hp": 400,
+  "break_text": "150 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30004,
+  "part": "",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30004,
+  "part": "Hind Leg",
+  "part_hp": 400,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30004,
+  "part": "Hind Leg",
+  "part_hp": 400,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30005,
+  "part": "Head",
+  "part_hp": 240,
+  "break_text": "480 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30005,
+  "part": "Body",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30005,
+  "part": "Left Leg",
+  "part_hp": 100,
+  "break_text": "100 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30005,
+  "part": "Right Leg",
+  "part_hp": 100,
+  "break_text": "100 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30005,
+  "part": "Tail",
+  "part_hp": 200,
+  "break_text": "350 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30005,
+  "part": "Wing",
+  "part_hp": 220,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30005,
+  "part": "Wing",
+  "part_hp": 220,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30008,
+  "part": "Head",
+  "part_hp": 400,
+  "break_text": "800 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2) 800 (BreakLevel: 2, IgnoreCondition: Equal, IgnoreCheckCount: 4)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30008,
+  "part": "Body",
+  "part_hp": 380,
+  "break_text": "380 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30008,
+  "part": "Wing",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30008,
+  "part": "Wing",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30008,
+  "part": "Left Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30008,
+  "part": "Right Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30008,
+  "part": "Tail",
+  "part_hp": 250,
+  "break_text": "500 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30009,
+  "part": "Head",
+  "part_hp": 450,
+  "break_text": "450 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 1350 (BreakLevel: 2, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30009,
+  "part": "Foreleg",
+  "part_hp": 200,
+  "break_text": "400 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30009,
+  "part": "Foreleg",
+  "part_hp": 200,
+  "break_text": "400 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30009,
+  "part": "Hind Leg",
+  "part_hp": 220,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30009,
+  "part": "Hind Leg",
+  "part_hp": 220,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30009,
+  "part": "Body",
+  "part_hp": 280,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30009,
+  "part": "Tail",
+  "part_hp": 350,
+  "break_text": "350 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 650 (PermitDamageAttr: Slash)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30009,
+  "part": "Dorsal Fin",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30010,
+  "part": "Body",
+  "part_hp": 360,
+  "break_text": "360 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30010,
+  "part": "Wing",
+  "part_hp": 260,
+  "break_text": "260 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30010,
+  "part": "Wing",
+  "part_hp": 260,
+  "break_text": "260 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30010,
+  "part": "Left Leg",
+  "part_hp": 230,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30010,
+  "part": "Right Leg",
+  "part_hp": 230,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30010,
+  "part": "Neck",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30010,
+  "part": "Head",
+  "part_hp": 290,
+  "break_text": "580 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30010,
+  "part": "Tail",
+  "part_hp": 290,
+  "break_text": "440 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30011,
+  "part": "Head",
+  "part_hp": 290,
+  "break_text": "580 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30011,
+  "part": "Body",
+  "part_hp": 360,
+  "break_text": "360 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30011,
+  "part": "Wing",
+  "part_hp": 220,
+  "break_text": "220 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30011,
+  "part": "Wing",
+  "part_hp": 220,
+  "break_text": "220 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30011,
+  "part": "Left Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30011,
+  "part": "Right Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30011,
+  "part": "Tail",
+  "part_hp": 240,
+  "break_text": "360 (PermitDamageAttr: Slash)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30012,
+  "part": "Head",
+  "part_hp": 300,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2) 600 (BreakLevel: 2, IgnoreCondition: Equal, IgnoreCheckCount: 4)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30012,
+  "part": "Body",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30012,
+  "part": "Back",
+  "part_hp": 120,
+  "break_text": "360 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30012,
+  "part": "Left Arm",
+  "part_hp": 300,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30012,
+  "part": "Right Arm",
+  "part_hp": 300,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30012,
+  "part": "Hind Leg",
+  "part_hp": 350,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30012,
+  "part": "Hind Leg",
+  "part_hp": 350,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30012,
+  "part": "Tail",
+  "part_hp": 200,
+  "break_text": "400 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30014,
+  "part": "Crest",
+  "part_hp": 250,
+  "break_text": "500 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30014,
+  "part": "Body",
+  "part_hp": 180,
+  "break_text": "360 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30014,
+  "part": "Wing",
+  "part_hp": 220,
+  "break_text": "440 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30014,
+  "part": "Wing",
+  "part_hp": 220,
+  "break_text": "440 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30014,
+  "part": "Right Leg",
+  "part_hp": 210,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30014,
+  "part": "Left Leg",
+  "part_hp": 210,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30014,
+  "part": "Tail Base",
+  "part_hp": 150,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30014,
+  "part": "Tail",
+  "part_hp": 210,
+  "break_text": "420 (PermitDamageAttr: Slash)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30017,
+  "part": "Head",
+  "part_hp": 160,
+  "break_text": "320 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30017,
+  "part": "Body",
+  "part_hp": 480,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30017,
+  "part": "Wing",
+  "part_hp": 170,
+  "break_text": "340 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30017,
+  "part": "Wing",
+  "part_hp": 170,
+  "break_text": "340 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30017,
+  "part": "Hind Leg",
+  "part_hp": 270,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30017,
+  "part": "Hind Leg",
+  "part_hp": 270,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30017,
+  "part": "Tail",
+  "part_hp": 130,
+  "break_text": "260 (PermitDamageAttr: Slash)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30019,
+  "part": "Torso",
+  "part_hp": 230,
+  "break_text": "230 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30019,
+  "part": "Wing",
+  "part_hp": 130,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30019,
+  "part": "Wing",
+  "part_hp": 130,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30019,
+  "part": "Left Leg",
+  "part_hp": 120,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30019,
+  "part": "Right Leg",
+  "part_hp": 120,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30019,
+  "part": "Head",
+  "part_hp": 250,
+  "break_text": "250 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30019,
+  "part": "Abdomen",
+  "part_hp": 350,
+  "break_text": "350 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30019,
+  "part": "Tail",
+  "part_hp": 220,
+  "break_text": "220 (PermitDamageAttr: Slash)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30020,
+  "part": "Head",
+  "part_hp": 270,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30020,
+  "part": "Body",
+  "part_hp": 320,
+  "break_text": "320 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30020,
+  "part": "Legs",
+  "part_hp": 240,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30020,
+  "part": "Wing",
+  "part_hp": 180,
+  "break_text": "180 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30020,
+  "part": "Wing",
+  "part_hp": 180,
+  "break_text": "180 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30020,
+  "part": "Tail",
+  "part_hp": 280,
+  "break_text": "560 (PermitDamageAttr: Slash)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30021,
+  "part": "Head",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30021,
+  "part": "Torso",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30021,
+  "part": "Right Arm",
+  "part_hp": 280,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30021,
+  "part": "Left Arm",
+  "part_hp": 280,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30021,
+  "part": "Hind Leg",
+  "part_hp": 350,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30021,
+  "part": "Hind Leg",
+  "part_hp": 350,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30021,
+  "part": "Tail",
+  "part_hp": 240,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30022,
+  "part": "Head",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30022,
+  "part": "Torso",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30022,
+  "part": "Right Arm",
+  "part_hp": 280,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30022,
+  "part": "Left Arm",
+  "part_hp": 280,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30022,
+  "part": "Hind Leg",
+  "part_hp": 350,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30022,
+  "part": "Hind Leg",
+  "part_hp": 350,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30022,
+  "part": "Tail",
+  "part_hp": 240,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30028,
+  "part": "Head",
+  "part_hp": 380,
+  "break_text": "610 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30028,
+  "part": "Abdomen",
+  "part_hp": 210,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30028,
+  "part": "Foreleg",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30028,
+  "part": "Foreleg",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30028,
+  "part": "Hind Leg",
+  "part_hp": 380,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30028,
+  "part": "Hind Leg",
+  "part_hp": 380,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30028,
+  "part": "Tail",
+  "part_hp": 500,
+  "break_text": "500 (PermitDamageAttr: Slash)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30028,
+  "part": "Wing",
+  "part_hp": 380,
+  "break_text": "380 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30029,
+  "part": "Head",
+  "part_hp": 300,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30029,
+  "part": "Torso",
+  "part_hp": 400,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30029,
+  "part": "Wing",
+  "part_hp": 200,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30029,
+  "part": "右翼脚",
+  "part_hp": 180,
+  "break_text": "180 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30029,
+  "part": "Foreleg",
+  "part_hp": 310,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30029,
+  "part": "Hind Leg",
+  "part_hp": 350,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30029,
+  "part": "Tail",
+  "part_hp": 350,
+  "break_text": "400 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30029,
+  "part": "Antenna",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30029,
+  "part": "左翼脚",
+  "part_hp": 200,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30030,
+  "part": "Head",
+  "part_hp": 350,
+  "break_text": "700 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2) 1050 (BreakLevel: 0, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30030,
+  "part": "Body",
+  "part_hp": 200,
+  "break_text": "400 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30030,
+  "part": "Wing",
+  "part_hp": 400,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30030,
+  "part": "Wing",
+  "part_hp": 400,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30030,
+  "part": "Left Arm",
+  "part_hp": 150,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30030,
+  "part": "Right Arm",
+  "part_hp": 150,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30030,
+  "part": "Tail",
+  "part_hp": 250,
+  "break_text": "300 (PermitDamageAttr: Slash)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30030,
+  "part": "Hind Leg",
+  "part_hp": 150,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30030,
+  "part": "Chest (Windsac)",
+  "part_hp": 250,
+  "break_text": "350 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 0)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30033,
+  "part": "Head",
+  "part_hp": 230,
+  "break_text": "350 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 350 (BreakLevel: 2, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30033,
+  "part": "Body",
+  "part_hp": 350,
+  "break_text": "350 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30033,
+  "part": "Wing",
+  "part_hp": 170,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30033,
+  "part": "Wing",
+  "part_hp": 170,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30033,
+  "part": "Left Leg",
+  "part_hp": 220,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30033,
+  "part": "Right Leg",
+  "part_hp": 220,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30033,
+  "part": "Tail",
+  "part_hp": 170,
+  "break_text": "500 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30034,
+  "part": "Head",
+  "part_hp": 260,
+  "break_text": "520 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30034,
+  "part": "Torso",
+  "part_hp": 320,
+  "break_text": "360 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30034,
+  "part": "Wing",
+  "part_hp": 280,
+  "break_text": "320 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30034,
+  "part": "Leg",
+  "part_hp": 260,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30034,
+  "part": "Tail",
+  "part_hp": 240,
+  "break_text": "560 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30036,
+  "part": "Head",
+  "part_hp": 260,
+  "break_text": "520 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30036,
+  "part": "Torso",
+  "part_hp": 320,
+  "break_text": "360 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30036,
+  "part": "Wing",
+  "part_hp": 280,
+  "break_text": "320 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30036,
+  "part": "Leg",
+  "part_hp": 260,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30036,
+  "part": "Tail",
+  "part_hp": 240,
+  "break_text": "560 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30037,
+  "part": "Head",
+  "part_hp": 540,
+  "break_text": "540 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 810 (BreakLevel: 2, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30037,
+  "part": "Torso",
+  "part_hp": 470,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30037,
+  "part": "Left Arm",
+  "part_hp": 340,
+  "break_text": "340 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30037,
+  "part": "Right Arm",
+  "part_hp": 340,
+  "break_text": "340 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30037,
+  "part": "Hind Leg",
+  "part_hp": 320,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30037,
+  "part": "Hind Leg",
+  "part_hp": 320,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30037,
+  "part": "Tail",
+  "part_hp": 340,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30038,
+  "part": "Head",
+  "part_hp": 320,
+  "break_text": "320 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 800 (BreakLevel: 2, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30038,
+  "part": "Torso",
+  "part_hp": 600,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30038,
+  "part": "Wingclaw",
+  "part_hp": 320,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30038,
+  "part": "Wingclaw",
+  "part_hp": 320,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30038,
+  "part": "Wingclaw",
+  "part_hp": 200,
+  "break_text": "100 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30038,
+  "part": "Wingclaw",
+  "part_hp": 200,
+  "break_text": "100 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30038,
+  "part": "Foreleg",
+  "part_hp": 280,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30038,
+  "part": "Foreleg",
+  "part_hp": 280,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30038,
+  "part": "Foreleg",
+  "part_hp": 125,
+  "break_text": "100 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30038,
+  "part": "Foreleg",
+  "part_hp": 125,
+  "break_text": "100 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30038,
+  "part": "Hind Leg",
+  "part_hp": 340,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30038,
+  "part": "Hind Leg",
+  "part_hp": 340,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30038,
+  "part": "Tail",
+  "part_hp": 200,
+  "break_text": "200 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30038,
+  "part": "Head",
+  "part_hp": 280,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30038,
+  "part": "Back",
+  "part_hp": 500,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30040,
+  "part": "Head",
+  "part_hp": 200,
+  "break_text": "500 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30040,
+  "part": "Head",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30040,
+  "part": "Torso",
+  "part_hp": 350,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30040,
+  "part": "Left Arm",
+  "part_hp": 250,
+  "break_text": "500 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30040,
+  "part": "Right Arm",
+  "part_hp": 250,
+  "break_text": "500 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30040,
+  "part": "Hind Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30040,
+  "part": "Hind Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30040,
+  "part": "Tail",
+  "part_hp": 100,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30040,
+  "part": "",
+  "part_hp": 1,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30042,
+  "part": "Head",
+  "part_hp": 360,
+  "break_text": "580 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30042,
+  "part": "Body",
+  "part_hp": 360,
+  "break_text": "360 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30042,
+  "part": "Wing",
+  "part_hp": 320,
+  "break_text": "320 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30042,
+  "part": "Wing",
+  "part_hp": 320,
+  "break_text": "320 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30042,
+  "part": "Left Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30042,
+  "part": "Right Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30042,
+  "part": "Tail",
+  "part_hp": 240,
+  "break_text": "360 (PermitDamageAttr: Slash)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30043,
+  "part": "Head",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30043,
+  "part": "Torso",
+  "part_hp": 400,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30043,
+  "part": "Wing",
+  "part_hp": 200,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30043,
+  "part": "Wing",
+  "part_hp": 200,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30043,
+  "part": "Foreleg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30043,
+  "part": "Hind Leg",
+  "part_hp": 350,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30043,
+  "part": "Tail",
+  "part_hp": 350,
+  "break_text": "400 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30043,
+  "part": "Antenna",
+  "part_hp": 240,
+  "break_text": "240 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30044,
+  "part": "Head",
+  "part_hp": 350,
+  "break_text": "350 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30044,
+  "part": "Back",
+  "part_hp": 150,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30044,
+  "part": "Left Arm",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30044,
+  "part": "Ice Clump",
+  "part_hp": 0,
+  "break_text": "144 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0) 30 (BreakLevel: 2, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30044,
+  "part": "Right Arm",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30044,
+  "part": "Ice Clump",
+  "part_hp": 0,
+  "break_text": "144 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0) 30 (BreakLevel: 2, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30044,
+  "part": "Hind Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30044,
+  "part": "Hind Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30044,
+  "part": "Body",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30044,
+  "part": "",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30046,
+  "part": "Head",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30046,
+  "part": "Torso",
+  "part_hp": 160,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30046,
+  "part": "Tail",
+  "part_hp": 160,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30047,
+  "part": "Head",
+  "part_hp": 180,
+  "break_text": "360 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30047,
+  "part": "Body",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30047,
+  "part": "Foreleg",
+  "part_hp": 160,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30047,
+  "part": "Tail",
+  "part_hp": 160,
+  "break_text": "320 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30048,
+  "part": "Head",
+  "part_hp": 300,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30048,
+  "part": "Torso",
+  "part_hp": 160,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30048,
+  "part": "Tail",
+  "part_hp": 160,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30055,
+  "part": "Head",
+  "part_hp": 150,
+  "break_text": "450 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30055,
+  "part": "Torso",
+  "part_hp": 390,
+  "break_text": "390 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30055,
+  "part": "Left Leg",
+  "part_hp": 300,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30055,
+  "part": "Right Leg",
+  "part_hp": 300,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30055,
+  "part": "Tail",
+  "part_hp": 130,
+  "break_text": "390 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30055,
+  "part": "泥・頭部",
+  "part_hp": 1,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30055,
+  "part": "泥・胴部",
+  "part_hp": 1,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30055,
+  "part": "泥・左脚",
+  "part_hp": 1,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30055,
+  "part": "泥・右脚",
+  "part_hp": 1,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30055,
+  "part": "泥・尻尾",
+  "part_hp": 1,
+  "break_text": "100 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30058,
+  "part": "Head",
+  "part_hp": 200,
+  "break_text": "400 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30058,
+  "part": "Neck",
+  "part_hp": 90,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30058,
+  "part": "Torso",
+  "part_hp": 240,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30058,
+  "part": "Left Leg",
+  "part_hp": 130,
+  "break_text": "260 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30058,
+  "part": "Right Leg",
+  "part_hp": 130,
+  "break_text": "260 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30058,
+  "part": "Wing",
+  "part_hp": 120,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30058,
+  "part": "Wing",
+  "part_hp": 120,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30058,
+  "part": "Tail",
+  "part_hp": 90,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30059,
+  "part": "Head",
+  "part_hp": 250,
+  "break_text": "500 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30059,
+  "part": "Foreleg",
+  "part_hp": 170,
+  "break_text": "170 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30059,
+  "part": "Body",
+  "part_hp": 360,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30059,
+  "part": "Tail",
+  "part_hp": 170,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30059,
+  "part": "Boulder",
+  "part_hp": 0,
+  "break_text": "12 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0) 3 (BreakLevel: 2, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30059,
+  "part": "Boulder",
+  "part_hp": 0,
+  "break_text": "30 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0) 15 (BreakLevel: 2, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30060,
+  "part": "Head",
+  "part_hp": 220,
+  "break_text": "1320 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 6)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30060,
+  "part": "Back",
+  "part_hp": 100,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30060,
+  "part": "Left Leg",
+  "part_hp": 120,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30060,
+  "part": "Right Leg",
+  "part_hp": 120,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30060,
+  "part": "Wing",
+  "part_hp": 100,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30060,
+  "part": "Tail",
+  "part_hp": 140,
+  "break_text": "400 (PermitDamageAttr: Slash)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30061,
+  "part": "Head",
+  "part_hp": 170,
+  "break_text": "340 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30061,
+  "part": "Upper Half",
+  "part_hp": 150,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30061,
+  "part": "Foreleg",
+  "part_hp": 120,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30061,
+  "part": "Rear",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30061,
+  "part": "Abdomen/Hind Leg",
+  "part_hp": 150,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30062,
+  "part": "Head",
+  "part_hp": 300,
+  "break_text": "900 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30062,
+  "part": "Body",
+  "part_hp": 330,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30062,
+  "part": "Cutwing",
+  "part_hp": 170,
+  "break_text": "170 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30062,
+  "part": "Tail",
+  "part_hp": 400,
+  "break_text": "800 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30062,
+  "part": "Foreleg",
+  "part_hp": 220,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30062,
+  "part": "Hind Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30062,
+  "part": "Cutwing",
+  "part_hp": 170,
+  "break_text": "170 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30062,
+  "part": "Hind Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30064,
+  "part": "Head",
+  "part_hp": 270,
+  "break_text": "270 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 540 (BreakLevel: 2, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30064,
+  "part": "Body",
+  "part_hp": 400,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30064,
+  "part": "Left Arm",
+  "part_hp": 350,
+  "break_text": "350 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30064,
+  "part": "Right Arm",
+  "part_hp": 350,
+  "break_text": "350 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30064,
+  "part": "Hind Leg",
+  "part_hp": 350,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30064,
+  "part": "Tail",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30064,
+  "part": "Abdomen",
+  "part_hp": 400,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30064,
+  "part": "Back",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30065,
+  "part": "Head",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30065,
+  "part": "Body",
+  "part_hp": 450,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30065,
+  "part": "Left Arm",
+  "part_hp": 240,
+  "break_text": "345 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30065,
+  "part": "Right Arm",
+  "part_hp": 240,
+  "break_text": "345 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30065,
+  "part": "Hind Leg",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30065,
+  "part": "Hind Leg",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30065,
+  "part": "Tail",
+  "part_hp": 150,
+  "break_text": "345 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 460 (PermitDamageAttr: Slash)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30065,
+  "part": "",
+  "part_hp": 240,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30065,
+  "part": "Large Mudbulb",
+  "part_hp": 270,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30066,
+  "part": "Head",
+  "part_hp": 200,
+  "break_text": "800 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 4)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30066,
+  "part": "Torso",
+  "part_hp": 600,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30066,
+  "part": "Right Arm",
+  "part_hp": 250,
+  "break_text": "500 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30066,
+  "part": "Left Arm",
+  "part_hp": 250,
+  "break_text": "500 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30066,
+  "part": "Back",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30066,
+  "part": "Tail",
+  "part_hp": 200,
+  "break_text": "300 (PermitDamageAttr: Slash)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30066,
+  "part": "Hind Leg",
+  "part_hp": 220,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30067,
+  "part": "Head",
+  "part_hp": 320,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30067,
+  "part": "Torso",
+  "part_hp": 350,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30067,
+  "part": "Left Arm",
+  "part_hp": 250,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30067,
+  "part": "Right Arm",
+  "part_hp": 250,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30067,
+  "part": "Hind Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30067,
+  "part": "Wing",
+  "part_hp": 320,
+  "break_text": "320 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30067,
+  "part": "Tail",
+  "part_hp": 280,
+  "break_text": "280 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30069,
+  "part": "Head",
+  "part_hp": 270,
+  "break_text": "270 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 810 (BreakLevel: 2, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30069,
+  "part": "Foreleg",
+  "part_hp": 200,
+  "break_text": "400 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30069,
+  "part": "Foreleg",
+  "part_hp": 200,
+  "break_text": "400 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30069,
+  "part": "Hind Leg",
+  "part_hp": 220,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30069,
+  "part": "Hind Leg",
+  "part_hp": 220,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30069,
+  "part": "Body",
+  "part_hp": 280,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30069,
+  "part": "Tail",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 500 (PermitDamageAttr: Slash)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30069,
+  "part": "Dorsal Fin",
+  "part_hp": 220,
+  "break_text": "220 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30070,
+  "part": "Head",
+  "part_hp": 300,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30070,
+  "part": "Body",
+  "part_hp": 330,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30070,
+  "part": "Cutwing",
+  "part_hp": 170,
+  "break_text": "170 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30070,
+  "part": "Tail",
+  "part_hp": 220,
+  "break_text": "660 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30070,
+  "part": "Foreleg",
+  "part_hp": 220,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30070,
+  "part": "Hind Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30070,
+  "part": "Cutwing",
+  "part_hp": 170,
+  "break_text": "170 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30070,
+  "part": "Hind Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30071,
+  "part": "Head",
+  "part_hp": 0,
+  "break_text": "900 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30071,
+  "part": "Leg Fin",
+  "part_hp": 0,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30071,
+  "part": "Wingarm",
+  "part_hp": 0,
+  "break_text": "650 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30071,
+  "part": "Wingarm",
+  "part_hp": 0,
+  "break_text": "650 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30071,
+  "part": "Tail",
+  "part_hp": 0,
+  "break_text": "480 (PermitDamageAttr: Slash)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30071,
+  "part": "Torso",
+  "part_hp": 0,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30071,
+  "part": "Back (Charged)",
+  "part_hp": 0,
+  "break_text": "650 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30071,
+  "part": "Abdomen (Thundersac)",
+  "part_hp": 0,
+  "break_text": "1400 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30071,
+  "part": "Chest (Charged)",
+  "part_hp": 0,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30074,
+  "part": "Head",
+  "part_hp": 250,
+  "break_text": "500 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30074,
+  "part": "Torso",
+  "part_hp": 360,
+  "break_text": "360 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30074,
+  "part": "Wing",
+  "part_hp": 250,
+  "break_text": "250 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30074,
+  "part": "Wing",
+  "part_hp": 250,
+  "break_text": "250 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30074,
+  "part": "Left Leg",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30074,
+  "part": "Right Leg",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30074,
+  "part": "Tail",
+  "part_hp": 260,
+  "break_text": "370 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30076,
+  "part": "Head",
+  "part_hp": 350,
+  "break_text": "350 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30076,
+  "part": "Claw",
+  "part_hp": 150,
+  "break_text": "150 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30076,
+  "part": "Leg (Thread)",
+  "part_hp": 0,
+  "break_text": "230 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0) 310 (BreakLevel: 2, IgnoreCondition: None, IgnoreCheckCount: 0) 500 (BreakLevel: 3, IgnoreCondit",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30076,
+  "part": "Leg (Thread)",
+  "part_hp": 0,
+  "break_text": "230 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0) 310 (BreakLevel: 2, IgnoreCondition: None, IgnoreCheckCount: 0) 500 (BreakLevel: 3, IgnoreCondit",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30076,
+  "part": "Leg (Thread)",
+  "part_hp": 0,
+  "break_text": "230 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0) 310 (BreakLevel: 2, IgnoreCondition: None, IgnoreCheckCount: 0) 500 (BreakLevel: 3, IgnoreCondit",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30076,
+  "part": "Leg (Thread)",
+  "part_hp": 0,
+  "break_text": "230 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0) 310 (BreakLevel: 2, IgnoreCondition: None, IgnoreCheckCount: 0) 500 (BreakLevel: 3, IgnoreCondit",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30076,
+  "part": "Abdomen",
+  "part_hp": 500,
+  "break_text": "500 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30076,
+  "part": "Left Arm",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30076,
+  "part": "Right Arm",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30076,
+  "part": "Hind Leg",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30076,
+  "part": "Hind Leg",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30076,
+  "part": "Abdomen (Cocooned)",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30076,
+  "part": "Chest",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30078,
+  "part": "Head",
+  "part_hp": 540,
+  "break_text": "540 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 810 (BreakLevel: 2, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30078,
+  "part": "Torso",
+  "part_hp": 470,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30078,
+  "part": "Left Arm",
+  "part_hp": 340,
+  "break_text": "340 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30078,
+  "part": "Right Arm",
+  "part_hp": 340,
+  "break_text": "340 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30078,
+  "part": "Hind Leg",
+  "part_hp": 320,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30078,
+  "part": "Hind Leg",
+  "part_hp": 320,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30078,
+  "part": "Tail",
+  "part_hp": 340,
+  "break_text": "1000 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30079,
+  "part": "Head",
+  "part_hp": 180,
+  "break_text": "540 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30079,
+  "part": "Claw",
+  "part_hp": 120,
+  "break_text": "120 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30079,
+  "part": "Leg (Thread)",
+  "part_hp": 0,
+  "break_text": "170 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0) 200 (BreakLevel: 2, IgnoreCondition: None, IgnoreCheckCount: 0) 350 (BreakLevel: 3, IgnoreCondit",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30079,
+  "part": "Leg (Thread)",
+  "part_hp": 0,
+  "break_text": "170 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0) 200 (BreakLevel: 2, IgnoreCondition: None, IgnoreCheckCount: 0) 350 (BreakLevel: 3, IgnoreCondit",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30079,
+  "part": "Leg (Thread)",
+  "part_hp": 0,
+  "break_text": "170 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0) 200 (BreakLevel: 2, IgnoreCondition: None, IgnoreCheckCount: 0) 350 (BreakLevel: 3, IgnoreCondit",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30079,
+  "part": "Leg (Thread)",
+  "part_hp": 0,
+  "break_text": "170 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0) 200 (BreakLevel: 2, IgnoreCondition: None, IgnoreCheckCount: 0) 350 (BreakLevel: 3, IgnoreCondit",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30079,
+  "part": "Abdomen",
+  "part_hp": 200,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30079,
+  "part": "Left Arm",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30079,
+  "part": "Right Arm",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30079,
+  "part": "Hind Leg",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30079,
+  "part": "Hind Leg",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30079,
+  "part": "Abdomen (Cocooned)",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30079,
+  "part": "Chest",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30080,
+  "part": "Body",
+  "part_hp": 360,
+  "break_text": "360 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30080,
+  "part": "Wing",
+  "part_hp": 260,
+  "break_text": "260 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30080,
+  "part": "Wing",
+  "part_hp": 260,
+  "break_text": "260 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30080,
+  "part": "Left Leg",
+  "part_hp": 230,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30080,
+  "part": "Right Leg",
+  "part_hp": 230,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30080,
+  "part": "Neck",
+  "part_hp": 110,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30080,
+  "part": "Head",
+  "part_hp": 290,
+  "break_text": "580 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30080,
+  "part": "Tail",
+  "part_hp": 290,
+  "break_text": "440 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30081,
+  "part": "Head",
+  "part_hp": 290,
+  "break_text": "580 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30081,
+  "part": "Body",
+  "part_hp": 360,
+  "break_text": "360 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30081,
+  "part": "Wing",
+  "part_hp": 220,
+  "break_text": "220 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30081,
+  "part": "Wing",
+  "part_hp": 220,
+  "break_text": "220 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30081,
+  "part": "Left Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30081,
+  "part": "Right Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30081,
+  "part": "Tail",
+  "part_hp": 240,
+  "break_text": "360 (PermitDamageAttr: Slash)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30084,
+  "part": "Head",
+  "part_hp": 380,
+  "break_text": "610 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30084,
+  "part": "Abdomen",
+  "part_hp": 210,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30084,
+  "part": "Foreleg",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30084,
+  "part": "Foreleg",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30084,
+  "part": "Hind Leg",
+  "part_hp": 380,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30084,
+  "part": "Hind Leg",
+  "part_hp": 380,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30084,
+  "part": "Tail",
+  "part_hp": 500,
+  "break_text": "500 (PermitDamageAttr: Slash)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30084,
+  "part": "Wing",
+  "part_hp": 380,
+  "break_text": "380 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30085,
+  "part": "Head",
+  "part_hp": 350,
+  "break_text": "700 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2) 1050 (BreakLevel: 0, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30085,
+  "part": "Body",
+  "part_hp": 200,
+  "break_text": "400 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30085,
+  "part": "Wing",
+  "part_hp": 400,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30085,
+  "part": "Wing",
+  "part_hp": 400,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30085,
+  "part": "Left Arm",
+  "part_hp": 150,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30085,
+  "part": "Right Arm",
+  "part_hp": 150,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30085,
+  "part": "Tail",
+  "part_hp": 250,
+  "break_text": "300 (PermitDamageAttr: Slash)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30085,
+  "part": "Hind Leg",
+  "part_hp": 150,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30085,
+  "part": "Chest (Windsac)",
+  "part_hp": 250,
+  "break_text": "350 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 0)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30086,
+  "part": "Head",
+  "part_hp": 320,
+  "break_text": "1320 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 6)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30086,
+  "part": "Back",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30086,
+  "part": "Left Leg",
+  "part_hp": 220,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30086,
+  "part": "Right Leg",
+  "part_hp": 220,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30086,
+  "part": "Wing",
+  "part_hp": 200,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30086,
+  "part": "Tail",
+  "part_hp": 240,
+  "break_text": "400 (PermitDamageAttr: Slash)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30087,
+  "part": "Head",
+  "part_hp": 400,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 600 (BreakLevel: 2, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30087,
+  "part": "Torso",
+  "part_hp": 440,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30087,
+  "part": "Wing",
+  "part_hp": 220,
+  "break_text": "220 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30087,
+  "part": "Wing",
+  "part_hp": 250,
+  "break_text": "450 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30087,
+  "part": "Foreleg",
+  "part_hp": 275,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30087,
+  "part": "Hind Leg",
+  "part_hp": 385,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30087,
+  "part": "Tail",
+  "part_hp": 360,
+  "break_text": "400 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30088,
+  "part": "Head",
+  "part_hp": 280,
+  "break_text": "560 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30088,
+  "part": "Body",
+  "part_hp": 400,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30088,
+  "part": "Foreleg",
+  "part_hp": 280,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30088,
+  "part": "Hind Leg",
+  "part_hp": 340,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30088,
+  "part": "Wing",
+  "part_hp": 280,
+  "break_text": "280 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30088,
+  "part": "Tail",
+  "part_hp": 290,
+  "break_text": "290 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30089,
+  "part": "Head",
+  "part_hp": 130,
+  "break_text": "390 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30089,
+  "part": "Mane",
+  "part_hp": 200,
+  "break_text": "400 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30089,
+  "part": "Torso",
+  "part_hp": 150,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30089,
+  "part": "Legs",
+  "part_hp": 140,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30089,
+  "part": "Legs",
+  "part_hp": 140,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30089,
+  "part": "Tail",
+  "part_hp": 150,
+  "break_text": "450 (PermitDamageAttr: Slash)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30090,
+  "part": "Head",
+  "part_hp": 200,
+  "break_text": "800 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 4)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30090,
+  "part": "Torso",
+  "part_hp": 600,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30090,
+  "part": "Right Arm",
+  "part_hp": 250,
+  "break_text": "750 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30090,
+  "part": "Left Arm",
+  "part_hp": 250,
+  "break_text": "750 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30090,
+  "part": "Back",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30090,
+  "part": "Tail",
+  "part_hp": 350,
+  "break_text": "300 (PermitDamageAttr: Slash)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30090,
+  "part": "Hind Leg",
+  "part_hp": 500,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30091,
+  "part": "Head",
+  "part_hp": 270,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30091,
+  "part": "Body",
+  "part_hp": 320,
+  "break_text": "320 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30091,
+  "part": "Legs",
+  "part_hp": 240,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30091,
+  "part": "Wing",
+  "part_hp": 180,
+  "break_text": "180 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30091,
+  "part": "Wing",
+  "part_hp": 180,
+  "break_text": "180 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30091,
+  "part": "Tail",
+  "part_hp": 280,
+  "break_text": "900 (PermitDamageAttr: Slash)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30092,
+  "part": "Head",
+  "part_hp": 230,
+  "break_text": "460 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30092,
+  "part": "Torso",
+  "part_hp": 200,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30092,
+  "part": "Left Leg",
+  "part_hp": 160,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30092,
+  "part": "Right Leg",
+  "part_hp": 160,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30092,
+  "part": "Wing",
+  "part_hp": 180,
+  "break_text": "180 (BreakLevel: 1, IgnoreCondition: InTimes, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30092,
+  "part": "Wing",
+  "part_hp": 180,
+  "break_text": "180 (BreakLevel: 1, IgnoreCondition: InTimes, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30092,
+  "part": "Tail",
+  "part_hp": 150,
+  "break_text": "300 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30093,
+  "part": "Head",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 300 (BreakLevel: 2, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30093,
+  "part": "Torso",
+  "part_hp": 400,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30093,
+  "part": "Wing",
+  "part_hp": 200,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30093,
+  "part": "Wing",
+  "part_hp": 200,
+  "break_text": "200 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30093,
+  "part": "Foreleg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30093,
+  "part": "Hind Leg",
+  "part_hp": 350,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30093,
+  "part": "Tail",
+  "part_hp": 350,
+  "break_text": "400 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30095,
+  "part": "Body",
+  "part_hp": 360,
+  "break_text": "360 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30095,
+  "part": "Wing",
+  "part_hp": 260,
+  "break_text": "260 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30095,
+  "part": "Wing",
+  "part_hp": 260,
+  "break_text": "260 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30095,
+  "part": "Left Leg",
+  "part_hp": 230,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30095,
+  "part": "Right Leg",
+  "part_hp": 230,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30095,
+  "part": "Neck",
+  "part_hp": 110,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30095,
+  "part": "Head",
+  "part_hp": 290,
+  "break_text": "580 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30095,
+  "part": "Tail",
+  "part_hp": 290,
+  "break_text": "440 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30098,
+  "part": "Head",
+  "part_hp": 280,
+  "break_text": "560 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30098,
+  "part": "Body",
+  "part_hp": 400,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30098,
+  "part": "Foreleg",
+  "part_hp": 280,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30098,
+  "part": "Hind Leg",
+  "part_hp": 340,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30098,
+  "part": "Wing",
+  "part_hp": 280,
+  "break_text": "280 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30098,
+  "part": "Tail",
+  "part_hp": 290,
+  "break_text": "290 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30099,
+  "part": "Head",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 300 (BreakLevel: 2, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30099,
+  "part": "Right Arm",
+  "part_hp": 350,
+  "break_text": "350 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30099,
+  "part": "Left Arm",
+  "part_hp": 350,
+  "break_text": "350 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30099,
+  "part": "Right Leg",
+  "part_hp": 500,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30099,
+  "part": "Left Leg",
+  "part_hp": 500,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30099,
+  "part": "Carapace",
+  "part_hp": 600,
+  "break_text": "600 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30099,
+  "part": "Torso",
+  "part_hp": 500,
+  "break_text": "400 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30099,
+  "part": "Tail",
+  "part_hp": 500,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30100,
+  "part": "Head",
+  "part_hp": 0,
+  "break_text": "800 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30100,
+  "part": "Leg Fin",
+  "part_hp": 0,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30100,
+  "part": "Wingarm",
+  "part_hp": 0,
+  "break_text": "500 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30100,
+  "part": "Wingarm",
+  "part_hp": 0,
+  "break_text": "500 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30100,
+  "part": "Tail",
+  "part_hp": 0,
+  "break_text": "480 (PermitDamageAttr: Slash)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30100,
+  "part": "Torso",
+  "part_hp": 0,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30100,
+  "part": "Back (Charged)",
+  "part_hp": 0,
+  "break_text": "500 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30100,
+  "part": "Abdomen (Thundersac)",
+  "part_hp": 0,
+  "break_text": "2450 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30100,
+  "part": "Chest (Charged)",
+  "part_hp": 0,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30101,
+  "part": "Head",
+  "part_hp": 280,
+  "break_text": "280 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30101,
+  "part": "Body",
+  "part_hp": 480,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30101,
+  "part": "Left Arm",
+  "part_hp": 240,
+  "break_text": "480 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30101,
+  "part": "Right Arm",
+  "part_hp": 240,
+  "break_text": "480 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30101,
+  "part": "Left Leg",
+  "part_hp": 240,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30101,
+  "part": "Right Leg",
+  "part_hp": 240,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30101,
+  "part": "Tail",
+  "part_hp": 280,
+  "break_text": "560 (PermitDamageAttr: Slash)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30102,
+  "part": "Head",
+  "part_hp": 280,
+  "break_text": "560 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30102,
+  "part": "Torso",
+  "part_hp": 490,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30102,
+  "part": "Back",
+  "part_hp": 200,
+  "break_text": "400 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30102,
+  "part": "Foreleg",
+  "part_hp": 280,
+  "break_text": "560 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30102,
+  "part": "Hind Leg",
+  "part_hp": 280,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30102,
+  "part": "Tail",
+  "part_hp": 300,
+  "break_text": "900 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30104,
+  "part": "Head",
+  "part_hp": 350,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30104,
+  "part": "Body",
+  "part_hp": 380,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30104,
+  "part": "Foreleg",
+  "part_hp": 340,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30104,
+  "part": "Hind Leg",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30104,
+  "part": "Wing",
+  "part_hp": 260,
+  "break_text": "260 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30104,
+  "part": "Tail",
+  "part_hp": 340,
+  "break_text": "500 (PermitDamageAttr: Slash)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30104,
+  "part": "",
+  "part_hp": 40,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30104,
+  "part": "",
+  "part_hp": 40,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30104,
+  "part": "",
+  "part_hp": 40,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30104,
+  "part": "",
+  "part_hp": 40,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30104,
+  "part": "",
+  "part_hp": 40,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30104,
+  "part": "",
+  "part_hp": 40,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30107,
+  "part": "Head",
+  "part_hp": 270,
+  "break_text": "270 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 810 (BreakLevel: 2, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30107,
+  "part": "Foreleg",
+  "part_hp": 200,
+  "break_text": "400 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30107,
+  "part": "Foreleg",
+  "part_hp": 200,
+  "break_text": "400 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30107,
+  "part": "Hind Leg",
+  "part_hp": 220,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30107,
+  "part": "Hind Leg",
+  "part_hp": 220,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30107,
+  "part": "Body",
+  "part_hp": 280,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30107,
+  "part": "Tail",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 500 (PermitDamageAttr: Slash)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30107,
+  "part": "Dorsal Fin",
+  "part_hp": 220,
+  "break_text": "220 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30108,
+  "part": "Back",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30108,
+  "part": "Upper Half",
+  "part_hp": 180,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30108,
+  "part": "Foreleg",
+  "part_hp": 130,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30108,
+  "part": "Back",
+  "part_hp": 110,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30108,
+  "part": "Abdomen/Hind Leg",
+  "part_hp": 130,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30108,
+  "part": "Body (Spinning)",
+  "part_hp": 10,
+  "break_text": "",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30109,
+  "part": "Head",
+  "part_hp": 340,
+  "break_text": "680 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30109,
+  "part": "Wingarm",
+  "part_hp": 280,
+  "break_text": "560 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30109,
+  "part": "Wingarm",
+  "part_hp": 280,
+  "break_text": "560 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30109,
+  "part": "Torso",
+  "part_hp": 340,
+  "break_text": "680 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30109,
+  "part": "Back",
+  "part_hp": 320,
+  "break_text": "640 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30109,
+  "part": "Tail",
+  "part_hp": 280,
+  "break_text": "480 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30109,
+  "part": "Tail Tip (Windsac)",
+  "part_hp": 0,
+  "break_text": "0 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30109,
+  "part": "Chest (Windsac)",
+  "part_hp": 0,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30109,
+  "part": "Back (Windsac)",
+  "part_hp": 0,
+  "break_text": "0 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30112,
+  "part": "Head",
+  "part_hp": 300,
+  "break_text": "300 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 1) 600 (BreakLevel: 2, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30112,
+  "part": "Body",
+  "part_hp": 300,
+  "break_text": "",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30112,
+  "part": "Back",
+  "part_hp": 120,
+  "break_text": "360 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 3)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30112,
+  "part": "Left Arm",
+  "part_hp": 180,
+  "break_text": "360 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30112,
+  "part": "Right Arm",
+  "part_hp": 180,
+  "break_text": "360 (BreakLevel: 1, IgnoreCondition: Equal, IgnoreCheckCount: 2)",
+  "extract": "Red"
+ },
+ {
+  "monster_id": 30112,
+  "part": "Hind Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30112,
+  "part": "Hind Leg",
+  "part_hp": 250,
+  "break_text": "",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30112,
+  "part": "Tail",
+  "part_hp": 130,
+  "break_text": "300 (PermitDamageAttr: Slash)",
+  "extract": "Orange"
+ },
+ {
+  "monster_id": 30056,
+  "part": "Horn",
+  "part_hp": 5,
+  "break_text": "20 (BreakLevel: 1, IgnoreCondition: None, IgnoreCheckCount: 0)",
+  "extract": "White"
+ },
+ {
+  "monster_id": 30056,
+  "part": "Torso",
+  "part_hp": 5,
+  "break_text": "",
+  "extract": "White"
+ }
+]

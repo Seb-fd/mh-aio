@@ -600,18 +600,6 @@
     "max_level": 1
   },
   {
-    "id": 10101,
-    "name": "スキル系統1",
-    "description": "スキル系統1 skill family (P3rd)",
-    "max_level": 3
-  },
-  {
-    "id": 10102,
-    "name": "スキル系統2",
-    "description": "スキル系統2 skill family (P3rd)",
-    "max_level": 3
-  },
-  {
     "id": 10103,
     "name": "Torso Inc",
     "description": "Torso Inc skill family (P3rd)",

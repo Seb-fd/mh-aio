@@ -1,22 +1,5 @@
 [
   {
-    "id": 10001,
-    "name": "﻿#engname",
-    "slot_size": 1,
-    "price": 100,
-    "skill_points": [
-      {
-        "name": "スキル系統1",
-        "points": 0
-      },
-      {
-        "name": "スキル系統2",
-        "points": 0
-      }
-    ],
-    "materials": []
-  },
-  {
     "id": 10002,
     "name": "SteadfastJwl[1]",
     "slot_size": 1,
@@ -40,7 +23,8 @@
         "name": "Brd Wyvern Fang",
         "amount": 3
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10003,
@@ -74,7 +58,8 @@
         "name": "Grt Jaggi Hide+",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10004,
@@ -100,7 +85,8 @@
         "name": "Bnahabra Shell",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10005,
@@ -138,7 +124,8 @@
         "name": "Torpor Sac",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10006,
@@ -164,7 +151,8 @@
         "name": "Baggi Hide",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10007,
@@ -202,7 +190,8 @@
         "name": "Coma Sac",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10008,
@@ -228,7 +217,8 @@
         "name": "Froggi Hide",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10009,
@@ -266,7 +256,8 @@
         "name": "Toxin Sac",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10010,
@@ -292,7 +283,8 @@
         "name": "Catalyst",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10011,
@@ -314,7 +306,8 @@
         "name": "Felvine",
         "amount": 3
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10012,
@@ -340,7 +333,8 @@
         "name": "Rhenoplos Shell",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10013,
@@ -366,7 +360,8 @@
         "name": "Bealite Ore",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10014,
@@ -418,7 +413,8 @@
         "name": "Earth Crystal",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10016,
@@ -444,7 +440,8 @@
         "name": "Fertile Mud",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10017,
@@ -470,7 +467,8 @@
         "name": "Carpenterbug",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10018,
@@ -492,7 +490,8 @@
         "name": "Ice Crystal",
         "amount": 3
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10019,
@@ -514,7 +513,8 @@
         "name": "Baggi Scale",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10020,
@@ -552,7 +552,8 @@
         "name": "Tigrex Carapace",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10021,
@@ -582,7 +583,8 @@
         "name": "Uncanny Hide+",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10022,
@@ -612,7 +614,8 @@
         "name": "Dragonite Ore",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10023,
@@ -642,7 +645,8 @@
         "name": "Carbalite Ore",
         "amount": 3
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10024,
@@ -672,7 +676,8 @@
         "name": "Power Seed",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10025,
@@ -702,7 +707,8 @@
         "name": "Demondrug",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10026,
@@ -732,7 +738,8 @@
         "name": "Mega Demondrug",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10027,
@@ -762,7 +769,8 @@
         "name": "Iron Ore",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10028,
@@ -800,7 +808,8 @@
         "name": "RoyalLudrthScl+",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10029,
@@ -830,7 +839,8 @@
         "name": "Hapurubokka Cpc",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10030,
@@ -872,7 +882,8 @@
         "name": "Quality Fin",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10031,
@@ -902,7 +913,8 @@
         "name": "Monster Broth",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10032,
@@ -928,7 +940,8 @@
         "name": "Alatreon Shell",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10033,
@@ -958,7 +971,8 @@
         "name": "Zinogre Carapace",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10034,
@@ -984,7 +998,8 @@
         "name": "Rathian Scale",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10035,
@@ -1014,7 +1029,8 @@
         "name": "Rangurotora Cpc",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10036,
@@ -1040,7 +1056,8 @@
         "name": "RyalLudrthCrest",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10037,
@@ -1070,7 +1087,8 @@
         "name": "PurpRylLdrthScl",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10038,
@@ -1100,7 +1118,8 @@
         "name": "Thunderbug",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10039,
@@ -1130,7 +1149,8 @@
         "name": "Red Qurpeco Scl",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10040,
@@ -1156,7 +1176,8 @@
         "name": "Grt Baggi Hide",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10041,
@@ -1186,7 +1207,8 @@
         "name": "Urksu Hrd Belly",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10042,
@@ -1212,7 +1234,8 @@
         "name": "Jhen Mohran Scl",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10043,
@@ -1242,7 +1265,8 @@
         "name": "Rathalos Carapace",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10044,
@@ -1280,7 +1304,8 @@
         "name": "Rathalos Scale+",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10045,
@@ -1310,7 +1335,8 @@
         "name": "Rathalos Ruby",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10046,
@@ -1348,7 +1374,8 @@
         "name": "Mossy Carapace+",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10047,
@@ -1378,7 +1405,8 @@
         "name": "Rathian Ruby",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10048,
@@ -1416,7 +1444,8 @@
         "name": "Dviljho Skl Shl",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10049,
@@ -1446,7 +1475,8 @@
         "name": "Wyvern Stone",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10050,
@@ -1484,7 +1514,8 @@
         "name": "Tigrex Scale+",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10051,
@@ -1514,7 +1545,8 @@
         "name": "SandBariothShl",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10052,
@@ -1552,7 +1584,8 @@
         "name": "Jinouga Horn+",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10053,
@@ -1582,7 +1615,8 @@
         "name": "Grn Narga Pelt",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10054,
@@ -1612,7 +1646,8 @@
         "name": "Rhnplos Skl Shl",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10055,
@@ -1650,7 +1685,8 @@
         "name": "Stout Bone",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10056,
@@ -1680,7 +1716,8 @@
         "name": "Med Mnster Bone",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10057,
@@ -1718,7 +1755,8 @@
         "name": "Barroth Claw+",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10058,
@@ -1744,7 +1782,8 @@
         "name": "Mossy Carapace",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10059,
@@ -1774,7 +1813,8 @@
         "name": "Urukusu Lng Ear",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10060,
@@ -1800,7 +1840,8 @@
         "name": "Call to Arms",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10061,
@@ -1826,7 +1867,8 @@
         "name": "Wht Raven Quill",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10062,
@@ -1852,7 +1894,8 @@
         "name": "Grt Jaggi Hide",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10063,
@@ -1878,7 +1921,8 @@
         "name": "Flute",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10064,
@@ -1904,7 +1948,8 @@
         "name": "Lg Barrel-Bomb+",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10065,
@@ -1934,7 +1979,8 @@
         "name": "Armor Seed",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10066,
@@ -1976,7 +2022,8 @@
         "name": "Mega Armorskin",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10067,
@@ -2002,7 +2049,8 @@
         "name": "Alatreon Plate",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10068,
@@ -2028,7 +2076,8 @@
         "name": "Alatreon Horn+",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10069,
@@ -2054,7 +2103,8 @@
         "name": "Fire Herb",
         "amount": 5
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10070,
@@ -2080,7 +2130,8 @@
         "name": "Lg Monster Bone",
         "amount": 3
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10071,
@@ -2106,7 +2157,8 @@
         "name": "Knife Mackerel",
         "amount": 5
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10072,
@@ -2132,7 +2184,8 @@
         "name": "Lg Monster Bone",
         "amount": 3
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10073,
@@ -2158,7 +2211,8 @@
         "name": "Thunderbug",
         "amount": 3
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10074,
@@ -2184,7 +2238,8 @@
         "name": "Lg Monster Bone",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10075,
@@ -2210,7 +2265,8 @@
         "name": "Ice Crystal",
         "amount": 5
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10076,
@@ -2236,7 +2292,8 @@
         "name": "Lg Monster Bone",
         "amount": 3
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10077,
@@ -2262,7 +2319,8 @@
         "name": "Dragon Seed",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10078,
@@ -2310,7 +2368,8 @@
         "name": "Rathian Shell",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10080,
@@ -2336,7 +2395,8 @@
         "name": "Yukumo Ticket",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10081,
@@ -2358,7 +2418,8 @@
         "name": "Bulldrome Hide",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10082,
@@ -2384,7 +2445,8 @@
         "name": "Jaggi Hide",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10083,
@@ -2422,7 +2484,8 @@
         "name": "Grt Baggi Hide+",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10084,
@@ -2452,7 +2515,8 @@
         "name": "Kelbi Horn",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10085,
@@ -2482,7 +2546,8 @@
         "name": "Ancient Potion",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10086,
@@ -2520,7 +2585,8 @@
         "name": "Nargacuga Wing+",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10087,
@@ -2550,7 +2616,8 @@
         "name": "Urukusu Pelt+",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10088,
@@ -2588,7 +2655,8 @@
         "name": "Barioth Carapce",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10089,
@@ -2618,7 +2686,8 @@
         "name": "Qurupeco Wing",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10090,
@@ -2660,7 +2729,8 @@
         "name": "Drink Ticket",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10091,
@@ -2690,7 +2760,8 @@
         "name": "Quality Abdomen",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10092,
@@ -2716,7 +2787,8 @@
         "name": "Shock Trap",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10093,
@@ -2754,7 +2826,8 @@
         "name": "Haprbokka Hide+",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10094,
@@ -2784,7 +2857,8 @@
         "name": "Tigrex Fang+",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10095,
@@ -2822,7 +2896,8 @@
         "name": "SpongyPurplHide",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10096,
@@ -2852,7 +2927,8 @@
         "name": "Spongy Hide+",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10097,
@@ -2890,7 +2966,8 @@
         "name": "Barioth Pelt+",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10098,
@@ -2920,7 +2997,8 @@
         "name": "Grt Frggi Hide+",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10099,
@@ -2962,7 +3040,8 @@
         "name": "HotSpringTicket",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10100,
@@ -2992,7 +3071,8 @@
         "name": "Shrp Mnster Bne",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10101,
@@ -3018,7 +3098,8 @@
         "name": "Well-Done Steak",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10102,
@@ -3040,7 +3121,8 @@
         "name": "Giant Bone",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10103,
@@ -3070,7 +3152,8 @@
         "name": "Silver Egg",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10104,
@@ -3100,7 +3183,8 @@
         "name": "Golden Egg",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10105,
@@ -3130,7 +3214,8 @@
         "name": "Jinouga Pelt",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10106,
@@ -3160,7 +3245,8 @@
         "name": "Jinouga Plate",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10107,
@@ -3238,7 +3324,8 @@
         "name": "Power Extract",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10110,
@@ -3260,7 +3347,8 @@
         "name": "Pepipo Pumpkin",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10111,
@@ -3286,7 +3374,8 @@
         "name": "Sm Monster Bone",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10112,
@@ -3308,7 +3397,8 @@
         "name": "Iron Ore",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10113,
@@ -3398,7 +3488,8 @@
         "name": "Vibrant Down",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10116,
@@ -3424,7 +3515,8 @@
         "name": "Gagua Feather",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10117,
@@ -3446,7 +3538,8 @@
         "name": "Sm Goldenfish",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10118,
@@ -3468,7 +3561,8 @@
         "name": "Large Fin",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10119,
@@ -3494,7 +3588,8 @@
         "name": "Binoculars",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10120,
@@ -3516,7 +3611,8 @@
         "name": "Dung Bomb",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10121,
@@ -3542,7 +3638,8 @@
         "name": "Raw Meat",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10122,
@@ -3564,7 +3661,8 @@
         "name": "Anteka Antlers",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10123,
@@ -3602,7 +3700,8 @@
         "name": "Deviljho Claw",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10124,
@@ -3632,7 +3731,8 @@
         "name": "Deviljho Jewel",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10125,
@@ -3670,7 +3770,8 @@
         "name": "Ice Agnktr Tail",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10126,
@@ -3700,7 +3801,8 @@
         "name": "Tigrex Jaw",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10127,
@@ -3738,7 +3840,8 @@
         "name": "Rathian Plate",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10128,
@@ -3768,7 +3871,8 @@
         "name": "Horrific Maw",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10129,
@@ -3806,7 +3910,8 @@
         "name": "Uragaan Carapce",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10130,
@@ -3836,7 +3941,8 @@
         "name": "Ice Barroth Shl",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10131,
@@ -3874,7 +3980,8 @@
         "name": "Uragaan Scale+",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10132,
@@ -3904,7 +4011,8 @@
         "name": "Barioth Carapce",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10133,
@@ -3930,7 +4038,8 @@
         "name": "Barroth Shell",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10134,
@@ -3968,7 +4077,8 @@
         "name": "Ice Agnktor Fin",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10135,
@@ -3994,7 +4104,8 @@
         "name": "Fire Stone",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10136,
@@ -4024,7 +4135,8 @@
         "name": "Firecell Stone",
         "amount": 3
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10137,
@@ -4050,7 +4162,8 @@
         "name": "Machalite Ore",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10138,
@@ -4080,7 +4193,8 @@
         "name": "Rumblefish",
         "amount": 5
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10139,
@@ -4110,7 +4224,8 @@
         "name": "Shrp Mnster Bne",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10140,
@@ -4140,7 +4255,8 @@
         "name": "Hercudrome",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10141,
@@ -4170,7 +4286,8 @@
         "name": "King Scarab",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10142,
@@ -4200,7 +4317,8 @@
         "name": "Wyvern Fang",
         "amount": 5
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10143,
@@ -4230,7 +4348,8 @@
         "name": "Gracium Ore",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10144,
@@ -4256,7 +4375,8 @@
         "name": "Med Mnster Bone",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10145,
@@ -4298,7 +4418,8 @@
         "name": "Stout Bone",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10146,
@@ -4320,7 +4441,8 @@
         "name": "Dragonite Ore",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10147,
@@ -4342,7 +4464,8 @@
         "name": "Hapurubokka Shl",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10148,
@@ -4364,7 +4487,8 @@
         "name": "Rathalos Shell",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10149,
@@ -4390,7 +4514,8 @@
         "name": "Uragaan Scale",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10150,
@@ -4412,7 +4537,8 @@
         "name": "Urukusu Pelt",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10151,
@@ -4450,7 +4576,8 @@
         "name": "FireWyvrnBrnStm",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10152,
@@ -4480,7 +4607,8 @@
         "name": "Rathalos Plate",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10153,
@@ -4506,7 +4634,8 @@
         "name": "Pelagicite Ore",
         "amount": 3
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10154,
@@ -4544,7 +4673,8 @@
         "name": "ThndrGiggnoxClw",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10155,
@@ -4582,7 +4712,8 @@
         "name": "Barroth Thracic",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10156,
@@ -4612,7 +4743,8 @@
         "name": "Blk Blos Spine",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10157,
@@ -4634,7 +4766,8 @@
         "name": "Unknown Skull",
         "amount": 2
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10158,
@@ -4660,7 +4793,8 @@
         "name": "Paralysis Sac",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10159,
@@ -4690,7 +4824,8 @@
         "name": "Torpor Sac",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10160,
@@ -4712,7 +4847,8 @@
         "name": "Sleep Sac",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10161,
@@ -4734,7 +4870,8 @@
         "name": "Poison Sac",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10162,
@@ -4764,7 +4901,8 @@
         "name": "Nitroshroom",
         "amount": 5
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10163,
@@ -4794,7 +4932,8 @@
         "name": "Magma Shard",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10164,
@@ -4820,7 +4959,8 @@
         "name": "Juvenile Sponge",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   },
   {
     "id": 10165,
@@ -4846,6 +4986,7 @@
         "name": "Lg Monster Bone",
         "amount": 1
       }
-    ]
+    ],
+    "rarity": 4
   }
 ]

@@ -1068,5 +1068,65 @@
     "conditions": "Bounties, Argosy, Steamworks, MR Hunter Helper",
     "quantity_min": 1,
     "quantity_max": 1
+  },
+  {
+    "item_id": 20590,
+    "source_type": "shop",
+    "source_id": null,
+    "location": "Provisions Stock",
+    "probability": null,
+    "conditions": "Buy for 12z",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 20027,
+    "source_type": "shop",
+    "source_id": null,
+    "location": "Provisions Stock",
+    "probability": null,
+    "conditions": "Buy for 480z",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 20561,
+    "source_type": "shop",
+    "source_id": null,
+    "location": "Provisions Stock",
+    "probability": null,
+    "conditions": "Buy for 5z",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 20564,
+    "source_type": "shop",
+    "source_id": null,
+    "location": "Provisions Stock",
+    "probability": null,
+    "conditions": "Buy for 12z",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 20567,
+    "source_type": "shop",
+    "source_id": null,
+    "location": "Provisions Stock",
+    "probability": null,
+    "conditions": "Buy for 12z",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 20588,
+    "source_type": "shop",
+    "source_id": null,
+    "location": "Provisions Stock",
+    "probability": null,
+    "conditions": "Buy for 15z",
+    "quantity_min": 1,
+    "quantity_max": null
   }
 ]

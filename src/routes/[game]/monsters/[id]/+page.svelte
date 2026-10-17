@@ -121,7 +121,7 @@
       const ma = methodOrder.indexOf(a.method)
       const mb = methodOrder.indexOf(b.method)
       if (ma !== mb) return ma - mb
-      return b.probability - a.probability
+      return (b.probability ?? -1) - (a.probability ?? -1)
     })
   }
 
@@ -233,9 +233,9 @@
             {@const meta: MethodMeta = raw ? { ...raw } : { ...fallbackMethod, label: drop.method }}
             <button
               onclick={() => goToItem(drop)}
-              aria-label="{meta.label}: {drop.item_name} x{drop.quantity}, {Math.round(
-                drop.probability * 100,
-              )} percent"
+              aria-label="{meta.label}: {drop.item_name} x{drop.quantity}{drop.probability != null
+                ? `, ${Math.round(drop.probability * 100)} percent`
+                : ', rate unknown'}"
               class="w-full block px-4 min-h-[52px] py-3 rounded-lg border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] hover:border-[var(--theme-border-strong)] hover:bg-[var(--theme-bg-elevated)] transition-colors motion-safe:transition-colors motion-reduce:transition-none text-left group focus-visible:outline-none focus-visible:ring-2"
             >
               <div class="flex items-center gap-3">
@@ -259,12 +259,18 @@
                     <p class="text-[11px] text-gray-400 mt-0.5">※ {drop.condition}</p>
                   {/if}
                   <div class="mt-2 flex items-center gap-2">
-                    <div class="probability-bar" role="presentation">
-                      <span style="--prob: {Math.round(drop.probability * 100)}"></span>
-                    </div>
-                    <span class="text-[10px] text-gray-400 shrink-0 tabular-nums w-9 text-right">
-                      {Math.round(drop.probability * 100)}%
-                    </span>
+                    {#if drop.probability != null}
+                      <div class="probability-bar" role="presentation">
+                        <span style="--prob: {Math.round(drop.probability * 100)}"></span>
+                      </div>
+                      <span class="text-[10px] text-gray-400 shrink-0 tabular-nums w-9 text-right">
+                        {Math.round(drop.probability * 100)}%
+                      </span>
+                    {:else}
+                      <span class="text-[10px] text-gray-500 shrink-0 tabular-nums w-9 text-right">
+                        —
+                      </span>
+                    {/if}
                   </div>
                 </div>
               </div>
@@ -468,6 +474,34 @@
       </section>
     {/if}
 
+    {#if monster.part_break.length > 0}
+      <section class="mb-8">
+        <h2 class="section-title mb-3">Part Break</h2>
+        <div class="rounded-lg border themed-card p-4 overflow-x-auto">
+          <table class="w-full text-xs">
+            <thead>
+              <tr class="text-gray-400 text-left">
+                <th class="py-1 pr-3 font-medium">Part</th>
+                <th class="py-1 pr-3 font-medium">Part HP</th>
+                <th class="py-1 pr-3 font-medium">Break</th>
+                <th class="py-1 font-medium">Extract</th>
+              </tr>
+            </thead>
+            <tbody>
+              {#each monster.part_break as b}
+                <tr class="border-t border-gray-800">
+                  <td class="py-1.5 pr-3 font-semibold text-gray-100">{b.part}</td>
+                  <td class="py-1.5 pr-3 text-gray-300">{b.part_hp ?? '-'}</td>
+                  <td class="py-1.5 pr-3 text-gray-300">{b.break_text ?? '-'}</td>
+                  <td class="py-1.5 text-gray-300">{b.extract ?? '-'}</td>
+                </tr>
+              {/each}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    {/if}
+
     {#if monster.ailments.length > 0}
       <section class="mb-8">
         <h2 class="section-title mb-3">Ailments</h2>
@@ -480,7 +514,10 @@
                 <th class="py-1 pr-3 font-medium">Buildup +</th>
                 <th class="py-1 pr-3 font-medium">Max</th>
                 <th class="py-1 pr-3 font-medium">Duration</th>
-                <th class="py-1 font-medium">Damage</th>
+                <th class="py-1 pr-3 font-medium">Damage</th>
+                {#if monster.ailments.some((a) => a.notes)}
+                  <th class="py-1 font-medium">Tolerance</th>
+                {/if}
               </tr>
             </thead>
             <tbody>
@@ -493,7 +530,10 @@
                   <td class="py-1.5 pr-3 text-gray-300"
                     >{a.duration_sec != null ? `${a.duration_sec}s` : '-'}</td
                   >
-                  <td class="py-1.5 text-gray-300">{a.damage ?? '-'}</td>
+                  <td class="py-1.5 pr-3 text-gray-300">{a.damage ?? '-'}</td>
+                  {#if monster.ailments.some((x) => x.notes)}
+                    <td class="py-1.5 text-gray-300">{a.notes ?? '-'}</td>
+                  {/if}
                 </tr>
               {/each}
             </tbody>
@@ -512,7 +552,10 @@
                 <th class="py-1 pr-3 font-medium">Tool</th>
                 <th class="py-1 pr-3 font-medium">Effect</th>
                 <th class="py-1 pr-3 font-medium">Unaware</th>
-                <th class="py-1 font-medium">Enraged</th>
+                <th class="py-1 pr-3 font-medium">Enraged</th>
+                {#if monster.tools.some((t) => t.notes)}
+                  <th class="py-1 font-medium">Diminishing</th>
+                {/if}
               </tr>
             </thead>
             <tbody>
@@ -521,7 +564,10 @@
                   <td class="py-1.5 pr-3 font-semibold text-gray-100">{t.tool}</td>
                   <td class="py-1.5 pr-3 text-gray-300">{formatTool(t.normal, t.tool)}</td>
                   <td class="py-1.5 pr-3 text-gray-300">{formatTool(t.notfound, t.tool)}</td>
-                  <td class="py-1.5 text-gray-300">{formatTool(t.enraged, t.tool)}</td>
+                  <td class="py-1.5 pr-3 text-gray-300">{formatTool(t.enraged, t.tool)}</td>
+                  {#if monster.tools.some((x) => x.notes)}
+                    <td class="py-1.5 text-gray-300">{t.notes ?? '-'}</td>
+                  {/if}
                 </tr>
               {/each}
             </tbody>

@@ -132,7 +132,7 @@
     "name": "Gajalaka",
     "species": "Lynian",
     "size": "Small",
-    "description": null,
+    "description": "Gajalaka are Lynians first introduced in Monster Hunter: World. These tribes can be found in the Ancient Forest, Wildspire Waste, Coral Highlands, Elder's Recess, and the Caverns of El Dorado. They become immediately hostile when approached to close range. By accepting quests from the Lynian Researcher, hunters can gain benefits from the tribe such as shortcuts, tailriders, and the Palico gadget Mewlotov Cocktail. They are the only Lynian tribe in the New World to be ruled by a bigger and stronger leader, the Gajalaka Chief.",
     "sort_order": 17
   },
   {
@@ -148,7 +148,7 @@
     "name": "Anteka",
     "species": "Herbivore",
     "size": "Small",
-    "description": null,
+    "description": "Anteka is commonly perceived as the snowy region's counterpart to the Kelbi of the forest and jungle regions. Anteka have a similar build to caribou. They have fluffy bodies, along with a fluffy tail. This fur starts white around the hoofs, before turning to a light brown, and back to white along the back and head. They have gold eyes with pupils that are slitted horizontally like a goat. They walk on four hoofed feet and sports a large, impressive pair of antlers upon their heads. Curiously, Anteka have little tufts of fur around their maw that create what looks like white fluffy mustaches.",
     "sort_order": 19
   },
   {
@@ -172,7 +172,7 @@
     "name": "Boaboa",
     "species": "Lynian",
     "size": "Small",
-    "description": null,
+    "description": "The Boaboa have the basic shape of a Grimalkyne, but exhibit much thicker, white fur and a bulkier frame. They wear crude imitations of Popo heads as masks, with the tusk's tips painted in colours that correspond to the status ailment each individual Boaboa uses in combat.",
     "sort_order": 22
   },
   {
@@ -748,7 +748,7 @@
     "name": "Fatalis",
     "species": "Elder Dragon",
     "size": "Large",
-    "description": null,
+    "description": "Fatalis closely resembles a traditional European dragon, with a long, serpentine neck and tail, a pair of large bat-like wings, and a body covered in fine, jet-black scales.",
     "sort_order": 1071
   }
 ]

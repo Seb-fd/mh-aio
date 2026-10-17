@@ -134,6 +134,15 @@ export function slotLabel(slot: string | null | undefined): string {
   return slot
 }
 
+/** Armor set bonus display: `Adrenaline — 3 pieces` (pieces required, not skill level). */
+export function formatBonus(
+  skill: string | null | undefined,
+  required: number | null | undefined,
+): string | null {
+  if (!skill || required == null) return null
+  return `${skill} — ${required} piece${required === 1 ? '' : 's'}`
+}
+
 /** Minimal weapon shape needed for tree building (matches `Weapon`). */
 export interface WeaponNode {
   id: number

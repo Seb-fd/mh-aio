@@ -1,0 +1,752 @@
+[
+  {
+    "item_id": 20036,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Gather in Coral Highlands , Elder's Recess , and Hoarfrost Reach Cultivate at the Botanical Research Center",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21061,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Gather in Hoarfrost Reach Cultivate at the Botanical Research Center",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21062,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Hoarfrost Reach / Guiding Lands",
+    "probability": null,
+    "conditions": "Gather in Hoarfrost Reach and Guiding Lands Cultivate at the Botanical Research Center",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 20040,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Gather in Rotten Vale , Elder's Recess , and Hoarfrost Reach Cultivate at the Botanical Research Center",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 20048,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Gather in Elder's Recess , Caverns of El Dorado , and Hoarfrost Reach Cultivate at the Botanical Research Center",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 20696,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Mining in Hoarfrost Reach",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21226,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 20997,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Forest Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 20998,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Forest Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21075,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Forest Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21076,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Forest Region (Giant Mining Outcrops)",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 20999,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Wildspire Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21000,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Wildspire Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21001,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Wildspire Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21002,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Wildspire Region (Giant Mining Outcrops)",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21003,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Coral Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21004,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Coral Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21077,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Coral Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21005,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Coral Region (Giant Mining Outcrops)",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21006,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Rotten Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21007,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Rotten Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21008,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Rotten Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21078,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Rotten Region (Giant Mining Outcrops)",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21079,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Volcanic Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21080,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Volcanic Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21081,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Volcanic Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21347,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Volcanic Region (Giant Mining Outcrops)",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21258,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Tundra Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21259,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Tundra Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21260,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Tundra Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21261,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Mining in Guiding Lands Tundra Region (Giant Mining Outcrops)",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 20697,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Search bone piles in Hoarfrost Reach",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21009,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Forest Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21010,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Forest Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21045,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Forest Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21046,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Forest Region (Giant Bonepiles)",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21011,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Wildspire Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21012,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Wildspire Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21013,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Wildspire Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21014,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Wildspire Region (Giant Bonepiles)",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21015,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Coral Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21016,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Coral Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21083,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Coral Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21017,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Coral Region (Giant Bonepiles)",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21018,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Rotten Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21019,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Rotten Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21020,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Rotten Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21084,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Rotten Region (Giant Bonepiles)",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21085,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Volcanic Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21086,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Volcanic Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21087,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Volcanic Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21088,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Volcanic Region (Giant Bonepiles)",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21262,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Tundra Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21263,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Tundra Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21264,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Tundra Region",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21265,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Search bone piles in Guiding Lands Tundra Region (Giant Bonepiles)",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 20550,
+    "source_type": "fish",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Fish in Coral Highlands , Rotten Vale , Elder's Recess , or Hoarfrost Reach",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 20551,
+    "source_type": "fish",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Fish in Coral Highlands , Rotten Vale , or Hoarfrost Reach",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 20552,
+    "source_type": "fish",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Fish in Elder's Recess or Hoarfrost Reach",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 20553,
+    "source_type": "fish",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Fish in Elder's Recess or Hoarfrost Reach",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21197,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Gather at butterbur patches in Hoarfrost Reach",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21198,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Gather at butterbur patches in Hoarfrost Reach",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21199,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Gather at butterbur patches in Hoarfrost Reach",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21200,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Gather at frozen foliage in Hoarfrost Reach",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21201,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Gather at frozen foliage in Hoarfrost Reach",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21202,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Gather at frozen foliage in Hoarfrost Reach",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21195,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Mine the shed Kushala Daora skin in Hoarfrost Reach",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21196,
+    "source_type": "mining",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Mine the shed Kushala Daora skin in Hoarfrost Reach",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21205,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Gather at bonepiles in Guiding Lands",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21206,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Gather at bonepiles in Guiding Lands",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21207,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Gather at bonepiles in Guiding Lands",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21203,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Secret butterbur in Hoarfrost Reach area 13 while Flourishing: Butterbur is in effect",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21204,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Secret frozen foliage in Hoarfrost Reach area 8 while Flourishing: Frozen Foliage is in effect",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21357,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Guiding Lands",
+    "probability": null,
+    "conditions": "Gather from Rathian nest in Ancient Forest , Wildspire Waste , or Guiding Lands (cannot deliver TGL egg)",
+    "quantity_min": 1,
+    "quantity_max": null
+  },
+  {
+    "item_id": 21355,
+    "source_type": "gather",
+    "source_id": null,
+    "location": "Hoarfrost Reach",
+    "probability": null,
+    "conditions": "Gather in area 13 of Hoarfrost Reach",
+    "quantity_min": 1,
+    "quantity_max": null
+  }
+]
