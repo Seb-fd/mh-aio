@@ -653,6 +653,7 @@ fn add_idempotency_constraints(conn: &Connection) -> Result<()> {
         "mhw_mantles",
         "palico_gadgets",
         "hunter_charms",
+        "endemic_life",
     ];
     for t in content_tables {
         conn.execute(

@@ -113,7 +113,7 @@
       iconUrl: '/icons/mhw/monsters/Chatacabra.png',
       iconName: 'Chatacabra',
       iconColor: 'Green',
-      gameOnly: 'mhwilds',
+      gameOnly: ['mhw', 'mhwilds'],
     },
   ]
 

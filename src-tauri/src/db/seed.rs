@@ -121,6 +121,10 @@ pub fn seed(conn: &Connection) -> Result<()> {
     seed_palico_gadget_levels(conn)?;
     seed_mhw_quests(conn)?;
     seed_mhw_quest_rewards(conn)?;
+    // 015-mhw-endemic: 33 curated MHW endemic-like creatures + bug/ammo-yield
+    // pickups (parity with Wilds' endemic_life table — MHW has no canonical
+    // in-game "Endemic Life" category so we curate from Fandom MHW+Iberence).
+    seed_mhw_endemic_life(conn)?;
     // MH Wilds (game_id 3) — MHDB Wilds API (no quests/charms upstream)
     seed_mhwilds_monsters(conn)?;
     seed_mhwilds_items(conn)?;
@@ -202,30 +206,52 @@ pub fn seed(conn: &Connection) -> Result<()> {
 /// run inside the caller's transaction, so a crash rolls back to
 /// "not applied" and the next boot retries only the missing patch.
 pub fn apply_data_patches(conn: &Connection) -> Result<()> {
-    patch_item_icons_mhp3rd(conn)?;
-    patch_item_icons_mhr(conn)?;
-    patch_item_icons_mhwilds(conn)?;
-    patch_quest_icons_mhr(conn)?;
-    patch_monster_thumbs_rise_wilds(conn)?;
-    patch_mh2g_monster_drops(conn)?;
-    patch_mh2g_drop_corrections(conn)?;
-    patch_mh2g_weaknesses(conn)?;
-    patch_mh2g_equipment(conn)?;
-    patch_mh2g_hunt_info(conn)?;
-    patch_mh2g_items(conn)?;
-    patch_mh2g_quests(conn)?;
-    patch_mh2g_weapon_craft(conn)?;
-    patch_mhp3rd_drops(conn)?;
-    patch_mhp3rd_weaknesses(conn)?;
-    patch_mhp3rd_roundout(conn)?;
-    patch_mhp3rd_items(conn)?;
-    patch_mhp3rd_quests(conn)?;
-    patch_mhp3rd_gear(conn)?;
-    patch_mhp3rd_charms(conn)?;
-    patch_mhp3rd_comrades(conn)?;
-    patch_mhw_010(conn)?;
-    patch_mhr_011(conn)?;
-    patch_mhwilds_012_014(conn)?;
+    use std::io::Write;
+    // Diagnostic wrapper: identifies which patch failed when something
+    // ancient + esoteric breaks under FK enforcement on a warm boot.
+    // (1931524 caught `patch_mhp3rd_gear` FK-failing on a pre-010 DB because
+    // it tried to DELETE orphan skills referenced by a `#engname`
+    // decoration — the body now deletes those decorations first.)
+    fn run(conn: &Connection, name: &str, f: fn(&Connection) -> Result<()>) -> Result<()> {
+        f(conn).map_err(|e| {
+            eprintln!("[db] patch {name} FAILED: {e}");
+            std::io::stderr().flush().ok();
+            e
+        })
+    }
+    run(conn, "patch_item_icons_mhp3rd", patch_item_icons_mhp3rd)?;
+    run(conn, "patch_item_icons_mhr", patch_item_icons_mhr)?;
+    run(conn, "patch_item_icons_mhwilds", patch_item_icons_mhwilds)?;
+    run(conn, "patch_quest_icons_mhr", patch_quest_icons_mhr)?;
+    run(
+        conn,
+        "patch_monster_thumbs_rise_wilds",
+        patch_monster_thumbs_rise_wilds,
+    )?;
+    run(conn, "patch_mh2g_monster_drops", patch_mh2g_monster_drops)?;
+    run(
+        conn,
+        "patch_mh2g_drop_corrections",
+        patch_mh2g_drop_corrections,
+    )?;
+    run(conn, "patch_mh2g_weaknesses", patch_mh2g_weaknesses)?;
+    run(conn, "patch_mh2g_equipment", patch_mh2g_equipment)?;
+    run(conn, "patch_mh2g_hunt_info", patch_mh2g_hunt_info)?;
+    run(conn, "patch_mh2g_items", patch_mh2g_items)?;
+    run(conn, "patch_mh2g_quests", patch_mh2g_quests)?;
+    run(conn, "patch_mh2g_weapon_craft", patch_mh2g_weapon_craft)?;
+    run(conn, "patch_mhp3rd_drops", patch_mhp3rd_drops)?;
+    run(conn, "patch_mhp3rd_weaknesses", patch_mhp3rd_weaknesses)?;
+    run(conn, "patch_mhp3rd_roundout", patch_mhp3rd_roundout)?;
+    run(conn, "patch_mhp3rd_items", patch_mhp3rd_items)?;
+    run(conn, "patch_mhp3rd_quests", patch_mhp3rd_quests)?;
+    run(conn, "patch_mhp3rd_gear", patch_mhp3rd_gear)?;
+    run(conn, "patch_mhp3rd_charms", patch_mhp3rd_charms)?;
+    run(conn, "patch_mhp3rd_comrades", patch_mhp3rd_comrades)?;
+    run(conn, "patch_mhw_010", patch_mhw_010)?;
+    run(conn, "patch_mhr_011", patch_mhr_011)?;
+    run(conn, "patch_mhwilds_012_014", patch_mhwilds_012_014)?;
+    run(conn, "patch_mhw_015", patch_mhw_015)?;
     Ok(())
 }
 
@@ -250,6 +276,27 @@ fn patch_mhwilds_012_014(conn: &Connection) -> Result<()> {
     seed_mhwilds_charms(conn)?;
     seed_mhwilds_small_monsters(conn)?;
     seed_mhwilds_endemic_life(conn)?;
+    record_patch(conn, NAME)
+}
+
+// 015-mhw-endemic: backfill MHW endemic_life rows for warm-boot installs.
+// Mirrors patch_mhwilds_012_014's shape: a single idempotent patch that
+// runs `seed_mhw_endemic_life` once and records itself in data_patches.
+fn patch_mhw_015(conn: &Connection) -> Result<()> {
+    const NAME: &str = "mhw_015_endemic";
+    if patch_applied(conn, NAME)? {
+        return Ok(());
+    }
+    let have_monsters: i64 = conn
+        .query_row("SELECT COUNT(*) FROM monsters WHERE game_id = 1", [], |r| {
+            r.get(0)
+        })
+        .unwrap_or(0);
+    if have_monsters == 0 {
+        record_patch(conn, NAME)?;
+        return Ok(());
+    }
+    seed_mhw_endemic_life(conn)?;
     record_patch(conn, NAME)
 }
 
@@ -295,23 +342,75 @@ fn patch_mhw_010(conn: &Connection) -> Result<()> {
         record_patch(conn, NAME)?;
         return Ok(());
     }
-    seed_mhw_monster_ailments(conn)?;
-    seed_mhw_monster_tools(conn)?;
-    seed_mhw_hunter_charms(conn)?;
-    seed_mhw_melder_item_sources(conn)?;
-    seed_mhw_gather_fandom_item_sources(conn)?;
-    seed_mhw_items(conn)?;
-    seed_mhw_extra_item_sources(conn)?;
-    seed_mhw_armor_sets(conn)?;
-    seed_mhw_armor(conn)?;
-    seed_mhw_weapons(conn)?;
-    seed_mhw_decorations(conn)?;
-    seed_mhw_monster_weaknesses(conn)?;
-    seed_mhw_quests(conn)?;
-    seed_mhw_monster_drops(conn)?;
-    seed_mhw_item_sources_from_drops(conn)?;
-    seed_mhw_item_combine(conn)?;
-    seed_mhw_extra_item_combine(conn)?;
+    let _ = have_monsters;
+    seed_mhw_monster_ailments(conn).map_err(|e| {
+        eprintln!("[db] seed_mhw_monster_ailments FAILED: {e}");
+        e
+    })?;
+    seed_mhw_monster_tools(conn).map_err(|e| {
+        eprintln!("[db] seed_mhw_monster_tools FAILED: {e}");
+        e
+    })?;
+    seed_mhw_hunter_charms(conn).map_err(|e| {
+        eprintln!("[db] seed_mhw_hunter_charms FAILED: {e}");
+        e
+    })?;
+    seed_mhw_melder_item_sources(conn).map_err(|e| {
+        eprintln!("[db] seed_mhw_melder_item_sources FAILED: {e}");
+        e
+    })?;
+    seed_mhw_gather_fandom_item_sources(conn).map_err(|e| {
+        eprintln!("[db] seed_mhw_gather_fandom_item_sources FAILED: {e}");
+        e
+    })?;
+    seed_mhw_items(conn).map_err(|e| {
+        eprintln!("[db] seed_mhw_items FAILED: {e}");
+        e
+    })?;
+    seed_mhw_extra_item_sources(conn).map_err(|e| {
+        eprintln!("[db] seed_mhw_extra_item_sources FAILED: {e}");
+        e
+    })?;
+    seed_mhw_armor_sets(conn).map_err(|e| {
+        eprintln!("[db] seed_mhw_armor_sets FAILED: {e}");
+        e
+    })?;
+    seed_mhw_armor(conn).map_err(|e| {
+        eprintln!("[db] seed_mhw_armor FAILED: {e}");
+        e
+    })?;
+    seed_mhw_weapons(conn).map_err(|e| {
+        eprintln!("[db] seed_mhw_weapons FAILED: {e}");
+        e
+    })?;
+    seed_mhw_decorations(conn).map_err(|e| {
+        eprintln!("[db] seed_mhw_decorations FAILED: {e}");
+        e
+    })?;
+    seed_mhw_monster_weaknesses(conn).map_err(|e| {
+        eprintln!("[db] seed_mhw_monster_weaknesses FAILED: {e}");
+        e
+    })?;
+    seed_mhw_quests(conn).map_err(|e| {
+        eprintln!("[db] seed_mhw_quests FAILED: {e}");
+        e
+    })?;
+    seed_mhw_monster_drops(conn).map_err(|e| {
+        eprintln!("[db] seed_mhw_monster_drops FAILED: {e}");
+        e
+    })?;
+    seed_mhw_item_sources_from_drops(conn).map_err(|e| {
+        eprintln!("[db] seed_mhw_item_sources_from_drops FAILED: {e}");
+        e
+    })?;
+    seed_mhw_item_combine(conn).map_err(|e| {
+        eprintln!("[db] seed_mhw_item_combine FAILED: {e}");
+        e
+    })?;
+    seed_mhw_extra_item_combine(conn).map_err(|e| {
+        eprintln!("[db] seed_mhw_extra_item_combine FAILED: {e}");
+        e
+    })?;
     record_patch(conn, NAME)
 }
 
@@ -1163,6 +1262,14 @@ fn patch_mhp3rd_gear(conn: &Connection) -> Result<()> {
             )?;
         }
     }
+    // 1931524 warm-boot regression fix: bogus '#engname' decorations
+    // (MHP3rd id 10001) reference the duplicate skills 10101/10102 via
+    // decorations.skill_id + secondary_skill_id. With FK enforcement ON
+    // they MUST be deleted BEFORE the skills or SQLite trips the FK.
+    conn.execute(
+        "DELETE FROM decorations WHERE game_id = 4 AND name LIKE '%#engname%'",
+        [],
+    )?;
     for id in [10001, 10232, 10465, 10678, 10892] {
         conn.execute(
             "DELETE FROM armor WHERE id = ?1 AND game_id = 4",
@@ -6799,6 +6906,31 @@ fn seed_mhwilds_endemic_life(conn: &Connection) -> Result<()> {
             "INSERT OR IGNORE INTO endemic_life (id, game_id, name, kind, description)
              VALUES (?1, 3, ?2, ?3, ?4)",
             rusqlite::params![r.id, r.name, r.kind, r.description],
+        )?;
+    }
+    Ok(())
+}
+
+// 015-mhw-endemic: 33 curated MHW endemic-like creatures + bug/ammo-yield
+// pickups. Same shape as Wilds: {id, name, type, description}. Parity with
+// the Wilds table so the same /[game]/endemic route renders both games.
+fn seed_mhw_endemic_life(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct EndemicJson {
+        id: i32,
+        name: String,
+        #[serde(rename = "type")]
+        kind: Option<String>,
+        description: Option<String>,
+    }
+    let json_data = include_str!("../../data/mhw_endemic_life.json");
+    let rows: Vec<EndemicJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for r in rows {
+        conn.execute(
+            "INSERT OR IGNORE INTO endemic_life (id, game_id, name, kind, description)
+             VALUES (?1, ?2, ?3, ?4, ?5)",
+            rusqlite::params![r.id, MHW, r.name, r.kind, r.description],
         )?;
     }
     Ok(())

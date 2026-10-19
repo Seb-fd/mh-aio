@@ -1,0 +1,200 @@
+[
+  {
+    "id": 90001,
+    "name": "Vigorwasp",
+    "type": "Recovery",
+    "description": "A small black-and-yellow wasp found across the Wildspire Waste, Coral Palace, Rotten Vale and most other biomes. Vigorwasps are captured mid-hunt and automatically revive the Hunter from a fainted state when their health drops low, restoring a portion of their maximum health once per capture."
+  },
+  {
+    "id": 90002,
+    "name": "Godbug",
+    "type": "Mega Potion",
+    "description": "A rare blue-shelled bug prized as the key ingredient of Mega Potions. Combined with a regular Potion, it doubles the heal; combined with Herbs, it produces a Mega Potion outright. Found in Astera, the Tradeyard, and scattered throughout the Wildspire Waste and Rotten Vale."
+  },
+  {
+    "id": 90003,
+    "name": "Bitterbug",
+    "type": "Antidote",
+    "description": "A green-striped bug whose body contains a powerful natural antivenom. Ground into powder and combined with a Nullberry it cures all status effects, including poison, paralysis and stun. Frequently found around Astera, the Research Base and the Wildspire Waste."
+  },
+  {
+    "id": 90004,
+    "name": "Flashbug",
+    "type": "Flashbug Phosphor",
+    "description": "A blue glowbug that releases a brilliant burst of light when startled. Combined with a Bomb Casing or simply thrown, it produces a flash that temporarily blinds large monsters and small creatures alike. Common in caves and dark forest pockets."
+  },
+  {
+    "id": 90005,
+    "name": "Thunderbug",
+    "type": "Thunderbug Capacitor",
+    "description": "A blue-green insect that crackles with stored electrical energy. Used to craft Thunderbug Capacitors, the raw material for the Paralysis Knife ammo. Be careful: handling a live Thunderbug can paralyse the unprepared Hunter."
+  },
+  {
+    "id": 90006,
+    "name": "Insect",
+    "type": "Kinsect",
+    "description": "A general term for the flying insects harvested with the Kinsect Glaive. Each species yields a different Insect Glaive extract — red (strength), white (speed), orange (defence) — and a separate 'severing' extract when targeting severed monster parts."
+  },
+  {
+    "id": 90007,
+    "name": "King Scarab",
+    "type": "Might Seed",
+    "description": "A rare, large golden beetle that boosts the Hunter's affinity by +10 for a short time when consumed. Might Seeds are common consumables, but the King Scarab is the actual creature the seed is taken from, found occasionally in the Wildspire Waste and Coral Palace."
+  },
+  {
+    "id": 90008,
+    "name": "Scarab",
+    "type": "Adamant Seed",
+    "description": "A small bronze-coloured beetle whose pulverised shell becomes an Adamant Seed, granting a temporary +10 boost to the Hunter's Defence. Scarabs cluster on the forest floors of the Ancient Forest and Rotten Vale and are easy to miss among the moss and leaf litter."
+  },
+  {
+    "id": 90009,
+    "name": "Aptonoth",
+    "type": "n/a",
+    "description": "Docile herbivorous dinosaurs that travel the Wildspire Waste, Coral Palace and Ancient Forest in large, slow-moving herds. They are a reliable source of Raw Meat and are frequently hunted by Great Jagras and Anjanath for food."
+  },
+  {
+    "id": 90010,
+    "name": "Jagras",
+    "type": "n/a",
+    "description": "Small, agile pack predators led by a dominant alpha (Great Jagras). They roam the Ancient Forest in dozens and depend on coordinated attacks to bring down much larger prey such as Aptonoth. Captured individuals drop a single Jagras Scale when carved."
+  },
+  {
+    "id": 90011,
+    "name": "Mernos",
+    "type": "n/a",
+    "description": "A tall, long-necked bird-like herbivore that roams the Wildspire Waste and Elder's Recess. Mernos are best known for the Scatternuts they store in their gizzards; when startled they swallow and regurgitate them as a defensive burst."
+  },
+  {
+    "id": 90012,
+    "name": "Vespoid",
+    "type": "n/a",
+    "description": "Wasp-like insects with large, fragile carapaces. Vespoids nest in the upper canopies of the Ancient Forest and Elder's Recess; their shells can be broken to obtain Vespoid Shell and Vespoid Innerwing materials."
+  },
+  {
+    "id": 90013,
+    "name": "Mosswine",
+    "type": "n/a",
+    "description": "A pig-like creature found in the Wildspire Waste and Ancient Forest that constantly rolls in moss and mud to camouflage itself. Mosswine is a reliable source of Mossy Jowls and is occasionally hunted for its raw meat."
+  },
+  {
+    "id": 90014,
+    "name": "Apceros",
+    "type": "n/a",
+    "description": "Armoured herbivorous reptiles that travel the Wildspire Waste and Elder's Recess in small herds. They curl into a defensive ball when threatened and can produce a Thorn Pod when struck, making them a useful Slinger ammo source."
+  },
+  {
+    "id": 90015,
+    "name": "Kestodon",
+    "type": "n/a",
+    "description": "Bipedal lizard-like herbivores distinguished by their shovel-like beaks and bright blue head crests. Males and females differ in scale pattern. Kestodon inhabit the Wildspire Waste and Coral Palace and are skittish, fleeing at the first sign of danger."
+  },
+  {
+    "id": 90016,
+    "name": "Noios",
+    "type": "n/a",
+    "description": "A small flightless bird that drops Screamer Pods from high perches when startled. Noios roost in the Elder's Recess and the Coral Palace, and their high-pitched cries echo across the canyons of the upper floors."
+  },
+  {
+    "id": 90017,
+    "name": "Gajau",
+    "type": "n/a",
+    "description": "A porpoise-like creature that swims in the shallows of the Coral Palace and the freshwater pools of the Wildspire Waste. Gajau are herbivorous and frequently leap from the water; their scales and hides are used in low-rank armour recipes."
+  },
+  {
+    "id": 90018,
+    "name": "Kelbi",
+    "type": "n/a",
+    "description": "Gentle deer-like herbivores that roam the Coral Palace in small herds. They can be captured with a Net and are a renewable source of Kelbi Hide and Kelbi Horn, materials frequently used in early-game armour crafting."
+  },
+  {
+    "id": 90019,
+    "name": "Raphinos",
+    "type": "n/a",
+    "description": "A long-tailed bird of prey that nests on cliffs and steep slopes throughout the Wildspire Waste. Raphinos glide long distances between outcrops and frequently drop Scatternuts as a defensive response to hunters passing below."
+  },
+  {
+    "id": 90020,
+    "name": "Shamos",
+    "type": "n/a",
+    "description": "Small, fox-like carnivores that hunt in packs through the Coral Palace and upper floors of the Elder's Recess. Shamos are curious but skittish, dropping valuable Shamos Scale and Fur materials when carved. Their howls echo at night."
+  },
+  {
+    "id": 90021,
+    "name": "Girros",
+    "type": "n/a",
+    "description": "Small, reptilian pack predators led by a Great Girros alpha in the Rotten Vale. They paralyse their prey with electrical bites and use coordinated attacks to bring down much larger monsters. Girros drop valuable fangs and scales on carve."
+  },
+  {
+    "id": 90022,
+    "name": "Hornetaur",
+    "type": "n/a",
+    "description": "Insectoid creatures with massive, razor-sharp horns that infest the deeper reaches of the Elder's Recess and parts of the Wildspire Waste. Their shells and wing membranes are prized crafting materials."
+  },
+  {
+    "id": 90023,
+    "name": "Gastodon",
+    "type": "n/a",
+    "description": "Large pig-like herbivores with distinctive squared snouts that inhabit the Wildspire Waste. They travel in family groups and are a reliable source of Gastodon Hair and Fang. Their tough hides make excellent low-rank armour."
+  },
+  {
+    "id": 90024,
+    "name": "Barnos",
+    "type": "n/a",
+    "description": "Small crested pterosaurs that nest in trees throughout the Ancient Forest. Barnos are herbivorous and skittish, taking to the air at the slightest disturbance. They drop Scatternuts as a defensive burst."
+  },
+  {
+    "id": 90025,
+    "name": "Gajalaka",
+    "type": "n/a",
+    "description": "Mischievous monkey-like creatures inhabiting the Elder's Recess and the Wildspire Waste. They use small traps and thrown objects to harass Hunters, including the Gajalaka Trap. Friendly Gajalaka in Astera sell useful equipment."
+  },
+  {
+    "id": 90026,
+    "name": "Popo",
+    "type": "n/a",
+    "description": "Slow-moving goat-like herbivores with distinctive curved horns. Popo graze in the colder reaches of the Coral Palace and Elder's Recess and travel in small herds. They are a renewable source of Popo Tongues and warm wool."
+  },
+  {
+    "id": 90027,
+    "name": "Anteka",
+    "type": "n/a",
+    "description": "Antelope-like herbivores with long, swept-back horns found in the Coral Palace and parts of the Wildspire Waste. They are timid and flee at the first sign of danger, making them a quick but reliable source of Anteka Antlers and Hides."
+  },
+  {
+    "id": 90028,
+    "name": "Wulg",
+    "type": "n/a",
+    "description": "A sturdy goat-like creature adapted to the icy, snowy slopes of the Elder's Recess and Hoarfrost Reach. Wulgs are herbivores with thick, shaggy coats and are a renewable source of Wulg Tails and thick hide."
+  },
+  {
+    "id": 90029,
+    "name": "Cortos",
+    "type": "n/a",
+    "description": "A small bird-like creature with a long tail that roams the Elder's Recess and Hoarfrost Reach. Cortos are best known for the Screamer Pods they drop when startled, which Hunters can then use to scatter nearby monsters."
+  },
+  {
+    "id": 90030,
+    "name": "Boaboa",
+    "type": "n/a",
+    "description": "Fierce monkey-like creatures of the Hoarfrost Reach that craft crude weapons and snow figures from the surrounding ice and snow. Hostile Boaboa throw stones, ice and their Boaboa Snowmen at any Hunter that gets too close."
+  },
+  {
+    "id": 90031,
+    "name": "Grimalkyne",
+    "type": "n/a",
+    "description": "A race of feline anthropoids found throughout the Wildspire Waste and Elder's Recess. Each Grimalkyne tribe specialises in a different craft — trapping, poaching, scavenging — and the friendlier tribes will gather useful items for the Hunter."
+  },
+  {
+    "id": 90032,
+    "name": "Boaboa Snowman",
+    "type": "Trap",
+    "description": "A crude snow figure built by the hostile Boaboa tribes of the Hoarfrost Reach. When thrown or dropped near a Hunter it shatters, dealing damage and applying a temporary Snowman debuff that reduces Defense and applies the Snowman status."
+  },
+  {
+    "id": 90033,
+    "name": "Gajalaka Trap",
+    "type": "Trap",
+    "description": "A spiked wooden trap rigged by the Gajalaka tribes of the Elder's Recess. When thrown at a Hunter it explodes into a shower of splinters, dealing damage and briefly stunning them — a hazard worth watching for in Gajalaka territory."
+  }
+]

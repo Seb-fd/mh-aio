@@ -1,4 +1,4 @@
-use rusqlite::{params, Connection, OptionalExtension, Result};
+﻿use rusqlite::{params, Connection, OptionalExtension, Result};
 use serde::{Deserialize, Serialize};
 
 /// Global search result across all game entities, normalized accent-insensitive.
@@ -4543,6 +4543,49 @@ mod tests {
     }
 
     #[test]
+    fn mhw_015_endemic() {
+        // 015: MHW endemic_life rows seeded by seed_mhw_endemic_life. Target
+        // >= 30 entries (8 bugs + 23 small monsters + 2 special). Every row
+        // must have a non-empty description; UNIQUE (game_id, id) is enforced
+        // by add_idempotency_constraints.
+        let c = conn();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        let total: i64 = count("SELECT COUNT(*) FROM endemic_life WHERE game_id = 1");
+        assert!(
+            (30..=40).contains(&total),
+            "MHW endemic should have 30..=40 rows, got {total}"
+        );
+        let no_desc: i64 = count(
+            "SELECT COUNT(*) FROM endemic_life
+              WHERE game_id = 1 AND (description IS NULL OR TRIM(description) = '')",
+        );
+        assert_eq!(no_desc, 0, "every MHW endemic row must have a description");
+        // Spot-check: Vigorwasp is in the curated bug set.
+        let vigorwasp_id: Option<i32> = c
+            .query_row(
+                "SELECT id FROM endemic_life WHERE game_id = 1 AND name = 'Vigorwasp'",
+                [],
+                |r| r.get(0),
+            )
+            .optional()
+            .unwrap();
+        assert!(
+            vigorwasp_id.is_some(),
+            "Vigorwasp must be in MHW endemic_life"
+        );
+        // The (game_id, id) UNIQUE index exists.
+        let idx_count: i64 = count(
+            "SELECT COUNT(*) FROM sqlite_master
+              WHERE type = 'index' AND name = 'uq_endemic_life_game_id'",
+        );
+        assert_eq!(idx_count, 1, "uq_endemic_life_game_id must exist");
+        // list API serves them.
+        let list = get_endemic_life(&c, 1).unwrap();
+        assert!(list.iter().any(|e| e.name == "Vigorwasp"));
+        assert_eq!(list.len() as i64, total);
+    }
+
+    #[test]
     fn mhwilds_012_quests() {
         // 012: Wilds quest list seeded from Fextra (Assignments + Optional +
         // Event). 33 + 81 + 60 = 174 rows, with the existing quests.category
@@ -5489,7 +5532,7 @@ mod tests {
             count("SELECT COUNT(*) FROM monsters WHERE game_id IN (2, 3) AND icon_url_lg IS NULL"),
             0
         );
-        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 24);
+        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 25);
         // MHFU equipment backfill: variants have gear links now.
         assert!(
             count("SELECT COUNT(*) FROM monster_equipment WHERE game_id = 5 AND monster_id = 26")
@@ -5696,7 +5739,7 @@ mod tests {
         );
         // Second run: pure no-op (24 PK lookups, warm-boot fast path).
         crate::db::seed::apply_data_patches(&c).unwrap();
-        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 24);
+        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 25);
         assert_eq!(count("SELECT COUNT(*) FROM items"), items_before);
 
         // Regression simulation: revert corrected rows to pre-fix values and
@@ -5717,7 +5760,59 @@ mod tests {
             count("SELECT COUNT(*) FROM monster_drops WHERE monster_id = 20 AND item_id = 375 AND method = 'carve' AND part = 'Body' AND rank = 'High'"),
             0
         );
-        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 24);
+        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 25);
         assert_eq!(count("SELECT COUNT(*) FROM items"), items_before);
+    }
+
+    #[test]
+    fn mhp3rd_gear_fix_fk_regression_1931524() {
+        // 1931524 FK-regression: when patching from a pre-010 install onto
+        // a fresh 1931524 binary, `patch_mhp3rd_gear` ran on a DB that had
+        // a `#engname` decoration whose `decorations.skill_id` /
+        // `secondary_skill_id` FK referenced a MHP3rd skill the patch was
+        // about to DELETE. The function tried
+        // `DELETE FROM skills WHERE id IN (10101,10102)` BEFORE also
+        // deleting decorations, so SQLite's FK enforcement tripped.
+        // Fix: the `#engname` decorations DELETE now runs first.
+        //
+        // In-memory simulation: insert a fake "#engname_padded" decoration
+        // referencing skill 90001 (out-of-range id; the seed never inserts
+        // 90001). Then delete the `mhp3rd_gear_fix` data_patches row to
+        // simulate a pre-010 install, re-run apply_data_patches, and assert
+        // it returns Ok (the fixed patch's decoration DELETE clears the FK
+        // chain before the skill DELETE).
+        let c = conn();
+        c.execute_batch("PRAGMA foreign_keys = ON;").unwrap();
+        c.execute_batch(
+            "INSERT OR IGNORE INTO items (id, game_id, name, category, rarity, language)
+             VALUES (140001, 4, 'PadItem', 'Consumable', NULL, 'en');
+             INSERT OR IGNORE INTO weapons (id, game_id, name, weapon_type, rarity, language)
+             VALUES (150001, 4, 'PadWeapon', 'Great Sword', NULL, 'en');
+             INSERT OR IGNORE INTO armor (id, game_id, name, slot_type, rarity, language)
+             VALUES (160001, 4, 'PadArmor', 'head', NULL, 'en');
+             INSERT OR IGNORE INTO skills (id, game_id, name, max_level, language)
+             VALUES (90001, 4, 'OrphanSkill_90001', 1, 'en');
+             INSERT OR REPLACE INTO decorations (id, game_id, skill_id, secondary_skill_id, name, rarity, language)
+             VALUES (11001, 4, 90001, NULL, char(0xFEFF) || '#engname_padded', NULL, 'en');
+             DELETE FROM data_patches WHERE name = 'mhp3rd_gear_fix';",
+        ).unwrap();
+        // Apply patches. With the fix, `patch_mhp3rd_gear` deletes the
+        // bogus `#engname*` decoration BEFORE the (hard-coded) skills 10101/
+        // 10102, so no FK trips. The orphan skill 90001 is NOT cleaned by
+        // the patch (it's not in the hard-coded 10101/10102 list) but its
+        // decoration is — which is the actual bug fix.
+        crate::db::seed::apply_data_patches(&c)
+            .expect("apply_data_patches must succeed on pre-010 shapes");
+        // Without the fix, the test would panic with FOREIGN KEY
+        // constraint failed before reaching this assertion. Reaching here
+        // proves the decoration DELETE runs first.
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        assert_eq!(
+            count("SELECT COUNT(*) FROM decorations WHERE id = 11001 AND game_id = 4"),
+            0,
+            "the bogus `#engname*` decoration must be deleted by the patch"
+        );
+        // Re-running patches is a no-op (warm-boot fast path).
+        crate::db::seed::apply_data_patches(&c).expect("second run must be a no-op");
     }
 }

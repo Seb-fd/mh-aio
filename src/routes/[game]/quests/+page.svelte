@@ -283,14 +283,6 @@
     )
   })
 
-  const defaultOpenCategory = $derived(categoryGroups[0]?.category ?? null)
-  const defaultOpenStars = $derived(
-    categoryGroups[0]?.starGroups[0]?.stars ??
-      siegeStarGroups[0]?.stars ??
-      flatStarGroups[0]?.stars ??
-      null,
-  )
-
   function groupLabel(stars: number): string {
     if (hubFilter === 'guild_g') return `G★${stars}`
     if (hubFilter === 'master') return `MR★${stars}`

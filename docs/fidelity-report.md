@@ -207,7 +207,7 @@ By design (documented, not built): World combines never fail (`chance` NULL, bad
 
 Ordering: Chest `sort_order` is an alphabetical proxy (no retail box order published); weapons follow the Kiranico Wilds Smith DFS sequence (scripts/reorder_mhwilds_weapons.py Playwright tab scrape; MHDB previous/branches kept as the edge source, 0 orphans); monsters alphabetical. Icons: no Wilds sets offline — monsters reuse mhw slug paths (UI fallback), weapons/armor reuse the mhw rarity scheme, items NULL, decos mhfu path.
 
-Gaps (no upstream data, not seed bugs): quests (empty list), charms (64 upstream, no table), small monsters. Tracked as Phase 7 in `roadmap.md` and as specs `012`–`014` (Wilds quests / charms / small monsters + endemic).
+Gaps (no upstream data, not seed bugs): quests (empty list), charms (64 upstream, no table), small monsters. Tracked as Phase 7 in `roadmap.md` and as specs `012`–`015` (Wilds quests / charms / small monsters + endemic; MHW endemic life parity).
 
 ## MH Rise — Base catalog (spec 003 Phase A bulk)
 

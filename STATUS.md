@@ -11,9 +11,9 @@
 
 **Games wired baseline (gaps closed by spec):**
 
-- **MH Wilds** (`mhwilds`, dbId 3) — 773 items, 121 combines, 34 large monsters, 1775 drops, 1188 weapons, 714 armor (183 sets), 179 skills, 361 decos. Quests/charms/small monsters/endemic **deferred** (specs `012`–`014` to follow).
+- **MH Wilds** (`mhwilds`, dbId 3) — 773 items, 121 combines, 34 large + 34 small monsters, 1775 drops, 1188 weapons, 714 armor (183 sets), 179 skills, 361 decos, 76 Wilds talismans, 70 endemic creatures. Seeded via specs `012` (quests) + `013` (charms) + `014` (small monsters + endemic).
 
-Specs done: `000` MH2G · `001` MHP3rd · `002`+`002b` MHW core+gaps · `003` MHR · `004` MHWilds core · `005` builds · `006` favorites · `007` import panel · `008` mobile (spec written) · `009` MHW tools/Melder · `010` MHW 100% · `011` MHR 100%.
+Specs done: `000` MH2G · `001` MHP3rd · `002`+`002b` MHW core+gaps · `003` MHR · `004` MHWilds core · `005` builds · `006` favorites · `007` import panel · `008` mobile (spec written) · `009` MHW tools/Melder · `010` MHW 100% · `011` MHR 100% · `012` Wilds quests · `013` Wilds charms · `014` Wilds small/endemic · `015` MHW endemic life.
 
 ---
 
@@ -169,8 +169,9 @@ Specs done: `000` MH2G · `001` MHP3rd · `002`+`002b` MHW core+gaps · `003` MH
 - [x] Favorites system (app-data `favorites.json`, per-game stars on 7 lists + 8 details with ★ filters) — spec `006-favorites-system`
 - [x] Import panel for JSON/CSV (`[game]/import`: 6 kinds, dry-run preview, transactional idempotent apply) — spec `007-import-panel-json-csv`
 - [ ] Mobile build via Tauri v2 — spec `008` written, Android init pending in spec `017`
-- [ ] Wilds quests/charms/small monsters/endemic — specs `012`–`014` pending
-- [ ] MH2G crown + hunt Basic/Bonus + quest HP — spec `015` pending (source-blocked)
+- [x] Wilds quests/charms/small monsters/endemic — specs `012`–`014` done
+- [x] MHW endemic life parity — spec `015` done (33 curated rows: 8 bugs + 23 smalls + 2 special)
+- [ ] MH2G crown + hunt Basic/Bonus + quest HP — spec `016` pending (source-blocked)
 
 ---
 

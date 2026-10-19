@@ -23,6 +23,7 @@ const SECTION_JOBS: Record<string, [key: string, run: (dbId: number) => Promise<
     ['mhw-mantles', (id) => api.getMhwMantles(id)],
     ['palico-gadgets', (id) => api.getPalicoGadgets(id)],
   ],
+  '/endemic': [['endemic-life', (id) => api.getEndemicLife(id)]],
 }
 
 /**

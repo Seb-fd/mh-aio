@@ -387,15 +387,16 @@ CREATE TABLE armor_materials (
 
 Wilds completeness (matching the MHR 100% and MHW 100% spec shape):
 
-- [ ] **012 — Wilds quests** (Kiranico/Game8 scrape, ~600+ rows; quest list empty today) — Round 1
-- [ ] **013 — Wilds charms** (~64 rows + talisman viewer enabled for `mhwilds`) — Round 1
-- [ ] **014 — Wilds small monsters + endemic life** (MHDB `monsters/small` + Fextra endemic) — Round 1
+- [x] **012 — Wilds quests** (Kiranico/Game8 scrape, ~600+ rows; quest list empty today) — Round 1
+- [x] **013 — Wilds charms** (~64 rows + talisman viewer enabled for `mhwilds`) — Round 1
+- [x] **014 — Wilds small monsters + endemic life** (MHDB `monsters/small` + Fextra endemic) — Round 1
+- [x] **015 — MHW endemic life** (parity with Wilds; curated 33 rows: 8 bugs + 23 small-monster packs + 2 special — Slinger-ammo `kind` taxonomy) — Round 1
 
 Long-tail gaps (Round 2 / source-blocked):
 
-- [ ] **015 — MH2G hunt Basic/Bonus %, crown sizes, quest HP** (GameFAQs 59556 bot-blocked; alt sources being probed) — Round 2
-- [ ] **016 — Wilds anomaly investigations / qurious crafting** (spec it, mark anomaly N/A — procedural, unbounded) — Round 2
-- [ ] **017 — Mobile distribution (Android init)** — Round 2
+- [ ] **016 — MH2G hunt Basic/Bonus %, crown sizes, quest HP** (GameFAQs 59556 bot-blocked; alt sources being probed) — Round 2
+- [ ] **017 — Wilds anomaly investigations / qurious crafting** (spec it, mark anomaly N/A — procedural, unbounded) — Round 2
+- [ ] **018 — Mobile distribution (Android init)** — Round 2
 
 ---
 

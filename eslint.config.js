@@ -44,7 +44,11 @@ export default tseslint.config(
       'svelte/prefer-svelte-reactivity': 'off',
       '@typescript-eslint/no-unused-vars': [
         'warn',
-        { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+        },
       ],
       '@typescript-eslint/no-require-imports': 'off',
       'no-control-regex': 'off',

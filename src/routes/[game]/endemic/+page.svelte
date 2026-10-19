@@ -13,7 +13,7 @@
 
   const game = $derived($selectedGame)
   const dbId = $derived(game?.dbId)
-  const isWilds = $derived(game?.id === 'mhwilds')
+  const hasData = $derived(game?.id === 'mhw' || game?.id === 'mhwilds')
 
   let searchTerm = $state('')
   let kindFilter = $state<string>('all')
@@ -21,7 +21,7 @@
   const endemicQuery = createQuery(() => ({
     queryKey: ['endemic-life', dbId ?? 0],
     queryFn: () => api.getEndemicLife(dbId!),
-    enabled: dbId != null && isWilds,
+    enabled: dbId != null && hasData,
     ...dbCache,
     retry: dbRetry,
     retryDelay: dbRetryDelay,
@@ -45,7 +45,8 @@
   <div class="mb-4">
     <h1 class="text-2xl font-bold" style="color: var(--theme-text-accent);">Endemic Life</h1>
     <p class="text-sm text-[var(--theme-text-muted)]">
-      Non-monster creatures found in MH Wilds — captured, fished, or collected.
+      Non-monster creatures and small fauna found across the game — captured, collected, or observed
+      in the field.
     </p>
   </div>
 
@@ -60,10 +61,10 @@
     </div>
   </div>
 
-  {#if !isWilds}
+  {#if !hasData}
     <EmptyState
       title="No endemic life data"
-      hint="Endemic Life is exclusive to MH Wilds. Switch game to see it."
+      hint="Endemic Life isn't seeded for this game yet. Switch game to see it."
     />
   {:else if loading}
     <div class="space-y-2">
