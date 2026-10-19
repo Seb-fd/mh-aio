@@ -305,6 +305,15 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             PRIMARY KEY (charm_id, skill_id)
         );
 
+        -- Endemic life (Wilds-only; non-monster collectible creatures).
+        CREATE TABLE IF NOT EXISTS endemic_life (
+            id INTEGER PRIMARY KEY,
+            game_id INTEGER REFERENCES games(id),
+            name TEXT NOT NULL,
+            kind TEXT,
+            description TEXT
+        );
+
         -- Quests table
         CREATE TABLE IF NOT EXISTS quests (
             id INTEGER PRIMARY KEY,
@@ -576,6 +585,7 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
         CREATE INDEX IF NOT EXISTS idx_comrade_armor_game ON comrade_armor(game_id);
         CREATE INDEX IF NOT EXISTS idx_buddy_weapons_game ON buddy_weapons(game_id);
         CREATE INDEX IF NOT EXISTS idx_buddy_armor_game ON buddy_armor(game_id);
+        CREATE INDEX IF NOT EXISTS idx_endemic_life_game ON endemic_life(game_id);
         CREATE INDEX IF NOT EXISTS idx_comrade_skills_game ON comrade_skills(game_id);
         CREATE INDEX IF NOT EXISTS idx_monster_eq_monster ON monster_equipment(monster_id);
         CREATE INDEX IF NOT EXISTS idx_skill_levels_skill ON skill_levels(skill_id);

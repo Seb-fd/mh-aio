@@ -2488,6 +2488,38 @@ pub struct BuddyWeapon {
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct EndemicLife {
+    pub id: i32,
+    pub game_id: i32,
+    pub name: String,
+    pub kind: Option<String>,
+    pub description: Option<String>,
+}
+
+pub fn get_endemic_life(conn: &Connection, game_id: i32) -> Result<Vec<EndemicLife>> {
+    let mut stmt = conn.prepare(
+        "SELECT id, game_id, name, kind, description FROM endemic_life
+         WHERE game_id = ?1 ORDER BY id",
+    )?;
+    let out = stmt
+        .query_map(params![game_id], |row| {
+            Ok(EndemicLife {
+                id: row.get(0)?,
+                game_id: row.get(1)?,
+                name: row.get(2)?,
+                kind: row.get(3)?,
+                description: row.get(4)?,
+            })
+        })?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+    Ok(out)
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct BuddyArmor {
     pub id: i32,
     pub kind: String,
@@ -4458,6 +4490,109 @@ mod tests {
     }
 
     #[test]
+    fn mhwilds_013_014_charms_small_endemic() {
+        // 013: 76 Wilds talisman rows in `charms` (best-effort skill resolve).
+        // 014: 34 small monsters (merged into the existing `monsters` table
+        // with size='small') + 70 endemic life rows in the new `endemic_life`
+        // table.
+        let c = conn();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        assert_eq!(
+            count(
+                "SELECT COUNT(*) FROM charms WHERE game_id = 3 AND charm_type = 'wilds_talisman'"
+            ),
+            76
+        );
+        // Most talismans resolved to a game-3 skill.
+        let linked: i64 = count(
+            "SELECT COUNT(*) FROM charm_skills cs
+             JOIN charms c ON c.id = cs.charm_id
+             WHERE c.game_id = 3 AND c.charm_type = 'wilds_talisman'",
+        );
+        assert!(
+            linked > 60,
+            "expected most Wilds talismans to link a skill, got {linked}/76"
+        );
+        // List view: 010-mhwilds-100 charms page already has a mode for
+        // charm_type='wilds_talisman'. Sanity check that the API serves them.
+        let talismans = get_charms_by_game(&c, 3, None, None).unwrap();
+        assert!(talismans.iter().any(|c| c.charm_type == "wilds_talisman"));
+        // Small monsters: 34 new rows (existing large count is 34, so 68
+        // total — 20001+20034 + 21001+21034).
+        let smalls: i64 =
+            count("SELECT COUNT(*) FROM monsters WHERE game_id = 3 AND size = 'small'");
+        assert_eq!(smalls, 34);
+        // Large + small = 68 for Wilds.
+        assert_eq!(count("SELECT COUNT(*) FROM monsters WHERE game_id = 3"), 68);
+        // Endemic life.
+        assert_eq!(
+            count("SELECT COUNT(*) FROM endemic_life WHERE game_id = 3"),
+            70
+        );
+        // Smoke: a known small monster detail has its description.
+        let mid: i32 = c
+            .query_row(
+                "SELECT id FROM monsters WHERE game_id = 3 AND size = 'small' AND name = 'Chatacabra'",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        let detail = get_monster_detail(&c, mid).unwrap().expect("chatacabra");
+        assert!(detail.description.is_some());
+        assert_eq!(detail.size.as_deref(), Some("small"));
+    }
+
+    #[test]
+    fn mhwilds_012_quests() {
+        // 012: Wilds quest list seeded from Fextra (Assignments + Optional +
+        // Event). 33 + 81 + 60 = 174 rows, with the existing quests.category
+        // enum (Assignment/Optional/Event) so the UI filter works without
+        // changes. Per-quest rewards are stored as description text; the
+        // quest_rewards junction is empty (deferred — per-item counts are
+        // bot-blocked on the Fextra rewards page).
+        let c = conn();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        assert_eq!(count("SELECT COUNT(*) FROM quests WHERE game_id = 3"), 174);
+        let assignments: i64 =
+            count("SELECT COUNT(*) FROM quests WHERE game_id = 3 AND category = 'Assignment'");
+        let optional: i64 =
+            count("SELECT COUNT(*) FROM quests WHERE game_id = 3 AND category = 'Optional'");
+        let event: i64 =
+            count("SELECT COUNT(*) FROM quests WHERE game_id = 3 AND category = 'Event'");
+        assert_eq!(assignments, 33);
+        assert_eq!(optional, 81);
+        assert_eq!(event, 60);
+        // No orphan cross-game id collisions (uq_quests_game_id).
+        let orphans: i64 = count(
+            "SELECT COUNT(*) FROM quests WHERE game_id = 3 AND id IN
+             (SELECT id FROM quests WHERE game_id <> 3)",
+        );
+        assert_eq!(orphans, 0);
+        // Every Wilds quest has a non-empty category + name.
+        assert_eq!(
+            count("SELECT COUNT(*) FROM quests WHERE game_id = 3 AND (name IS NULL OR name = '' OR category IS NULL)"),
+            0
+        );
+        // List query returns Wilds quests (existing generic list still works).
+        let quests = get_quests_by_game(&c, 3).unwrap();
+        assert!(!quests.is_empty());
+        assert!(quests.iter().all(|q| q.category.is_some()));
+        // Detail smoke: an Assignment with a known main monster resolves.
+        let assignment_with_monster: i32 = c
+            .query_row(
+                "SELECT id FROM quests WHERE game_id = 3 AND category = 'Assignment' AND main_monsters IS NOT NULL LIMIT 1",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        let detail = get_quest_detail(&c, assignment_with_monster)
+            .unwrap()
+            .expect("wilds quest detail");
+        assert!(detail.main_monsters.is_some());
+        assert!(!detail.name.is_empty());
+    }
+
+    #[test]
     fn mhwilds_004_coverage_lists_details_and_junctions() {
         // 004: Wilds core (MHDB API) — every list non-empty, junctions wired.
         let c = conn();
@@ -5354,7 +5489,7 @@ mod tests {
             count("SELECT COUNT(*) FROM monsters WHERE game_id IN (2, 3) AND icon_url_lg IS NULL"),
             0
         );
-        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 23);
+        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 24);
         // MHFU equipment backfill: variants have gear links now.
         assert!(
             count("SELECT COUNT(*) FROM monster_equipment WHERE game_id = 5 AND monster_id = 26")
@@ -5559,9 +5694,9 @@ mod tests {
             count("SELECT COUNT(*) FROM item_combine WHERE result_item_id IN (SELECT id FROM items WHERE name LIKE 'Gunpowder Level%' AND game_id = 1)"),
             10
         );
-        // Second run: pure no-op (23 PK lookups, warm-boot fast path).
+        // Second run: pure no-op (24 PK lookups, warm-boot fast path).
         crate::db::seed::apply_data_patches(&c).unwrap();
-        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 23);
+        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 24);
         assert_eq!(count("SELECT COUNT(*) FROM items"), items_before);
 
         // Regression simulation: revert corrected rows to pre-fix values and
@@ -5582,7 +5717,7 @@ mod tests {
             count("SELECT COUNT(*) FROM monster_drops WHERE monster_id = 20 AND item_id = 375 AND method = 'carve' AND part = 'Body' AND rank = 'High'"),
             0
         );
-        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 23);
+        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 24);
         assert_eq!(count("SELECT COUNT(*) FROM items"), items_before);
     }
 }

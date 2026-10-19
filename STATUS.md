@@ -1,6 +1,19 @@
 # MH-AIO - Project Status
 
-## Current Version: v0.1.0 (MHP2G 1083 items fully sourced + corrected categories + 432 combines · MHP3rd 1044 items / 378 quests / 60 monsters / 972 weapons / 1111 armor — all seeded · MHW+Iceborne 1359 items / 94 monsters / 3544 weapons / 5862 drops — Chest/Smith order + per-rarity icons)
+## Current Version: v0.1.1
+
+**Games at 100% (content complete + verified):**
+
+- **MH2G / Freedom Unite** (`mh2g`, dbId 5) — 1244 items, 432 combines, 83 monsters, 1500 weapons, 2075 armor, 610 quests, 99 skills, 192 decos
+- **MHP3rd** (`mhp3rd`, dbId 4) — 1044 items, 263 combines, 60 monsters, 1949 drops, 972 weapons, 1106 armor, 378 quests, 50,635 charms, comrade gear
+- **MHW + Iceborne** (`mhw`, dbId 1) — 1359 items, 188 combines, 94 monsters, 5826 drops, 3544 weapons, 1595 armor (351 sets), 521 quests, 317 hunter charms, Melder, Mantles/Boosters, Palico Gadgets
+- **MH Rise + Sunbreak** (`mhr`, dbId 2) — 1642 items, 178 combines, 112 monsters, status ailments + part-break + traps, buddy gear (Palico + Palamute), rampage skills + decos, 11849 talismans
+
+**Games wired baseline (gaps closed by spec):**
+
+- **MH Wilds** (`mhwilds`, dbId 3) — 773 items, 121 combines, 34 large monsters, 1775 drops, 1188 weapons, 714 armor (183 sets), 179 skills, 361 decos. Quests/charms/small monsters/endemic **deferred** (specs `012`–`014` to follow).
+
+Specs done: `000` MH2G · `001` MHP3rd · `002`+`002b` MHW core+gaps · `003` MHR · `004` MHWilds core · `005` builds · `006` favorites · `007` import panel · `008` mobile (spec written) · `009` MHW tools/Melder · `010` MHW 100% · `011` MHR 100%.
 
 ---
 
@@ -111,8 +124,9 @@
 ### Build
 
 - [x] `cargo build` — clean
-- [x] `cargo test` — 13 tests pass (ASS rank-gate + robust tiers/hunter types + global_search + idempotency/migration dedup + small-monster visibility + MHW quest offset)
+- [x] `cargo test` — **43 tests pass** (ASS rank-gate + robust tiers/hunter types + global_search + idempotency/migration dedup + small-monster visibility + MHW quest offset + MHW 010 phases A/B/C + set-bonus display + MHP3rd charms + MHR 011 phases A/B/C/D/E)
 - [x] `npx svelte-check` — 0 errors, 0 warnings
+- [x] `cargo clippy -D warnings` + `cargo fmt --check` + `prettier --check` + `eslint` — clean
 
 ---
 
@@ -141,9 +155,9 @@
 ### Phase 2 (Multi-game)
 
 - [x] MHP3rd dataset seeded (items, quests, monsters, armor, weapons, combines, drops, skills, decorations) — fidelity pass DONE (spec `001-mhp3rd-fidelity-pass`)
-- [x] MHW dataset seeded — core DONE (spec `002-mhw-data-import` + `009-mhw-tools-melder`); gaps DONE (spec `002b-mhw-gaps`)
-- [x] MHWilds dataset seeded — core DONE (spec `004-mhwilds-data-import`; quests/charms deferred)
-- [x] MHR dataset seeded — DONE (spec `003-mhr-data-import`: base bulk + Sunbreak v16 Kiranico; talismans deferred)
+- [x] MHW dataset seeded — core DONE (spec `002-mhw-data-import` + `009-mhw-tools-melder`); gaps DONE (spec `002b-mhw-gaps`); **100% follow-up DONE (spec `010-mhw-100`)** — ailments + tools + charms + set bonuses + set-bonus display
+- [x] MHWilds dataset seeded — core DONE (spec `004-mhwilds-data-import`; quests/charms/small monsters/endemic **deferred** to specs `012`–`014`)
+- [x] MHR dataset seeded — DONE (spec `003-mhr-data-import`: base bulk + Sunbreak v16 Kiranico); **100% follow-up DONE (spec `011-mhr-100`)** — ailments + part-break + traps + buddy gear + rampage + talismans
 
 ### Phase 3 (Builds polish)
 
@@ -154,7 +168,9 @@
 
 - [x] Favorites system (app-data `favorites.json`, per-game stars on 7 lists + 8 details with ★ filters) — spec `006-favorites-system`
 - [x] Import panel for JSON/CSV (`[game]/import`: 6 kinds, dry-run preview, transactional idempotent apply) — spec `007-import-panel-json-csv`
-- [ ] Mobile build via Tauri v2 (already supported via `cdylib`)
+- [ ] Mobile build via Tauri v2 — spec `008` written, Android init pending in spec `017`
+- [ ] Wilds quests/charms/small monsters/endemic — specs `012`–`014` pending
+- [ ] MH2G crown + hunt Basic/Bonus + quest HP — spec `015` pending (source-blocked)
 
 ---
 

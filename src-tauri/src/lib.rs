@@ -51,6 +51,7 @@ pub fn run() {
             commands::get_comrade_skills,
             commands::get_buddy_weapons,
             commands::get_buddy_armor,
+            commands::get_endemic_life,
             commands::get_melder_recipes,
             commands::get_mhw_mantles,
             commands::get_mhw_mantle_detail,

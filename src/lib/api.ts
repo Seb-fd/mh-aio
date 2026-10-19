@@ -159,6 +159,14 @@ export interface BuddyArmor {
   dragon: number | null
 }
 
+export interface EndemicLife {
+  id: number
+  game_id: number
+  name: string
+  kind: string | null
+  description: string | null
+}
+
 export interface MonsterDrop {
   id: number
   monster_id: number
@@ -864,6 +872,7 @@ export const api = {
     invoke<BuddyWeapon[]>('get_buddy_weapons', { gameId, kind: kind ?? null }),
   getBuddyArmor: (gameId: number, kind?: string | null) =>
     invoke<BuddyArmor[]>('get_buddy_armor', { gameId, kind: kind ?? null }),
+  getEndemicLife: (gameId: number) => invoke<EndemicLife[]>('get_endemic_life', { gameId }),
   getMhwMantles: (gameId: number) => invoke<MhwMantle[]>('get_mhw_mantles', { gameId }),
   getMhwMantleDetail: (id: number) => invoke<MhwMantle | null>('get_mhw_mantle_detail', { id }),
   getPalicoGadgets: (gameId: number) => invoke<PalicoGadget[]>('get_palico_gadgets', { gameId }),

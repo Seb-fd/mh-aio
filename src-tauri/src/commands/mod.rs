@@ -242,6 +242,15 @@ pub fn get_buddy_armor(
 }
 
 #[tauri::command]
+pub fn get_endemic_life(
+    db: State<'_, Database>,
+    game_id: i32,
+) -> Result<Vec<queries::EndemicLife>, String> {
+    let conn = db.conn.lock().map_err(|e| e.to_string())?;
+    queries::get_endemic_life(&conn, game_id).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
 pub fn get_melder_recipes(
     db: State<'_, Database>,
     game_id: i32,

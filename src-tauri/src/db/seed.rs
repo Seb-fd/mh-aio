@@ -139,6 +139,13 @@ pub fn seed(conn: &Connection) -> Result<()> {
     seed_mhwilds_armor_materials(conn)?;
     seed_mhwilds_armor_skill_points(conn)?;
     seed_mhwilds_weapon_skill_points(conn)?;
+    seed_mhwilds_quests(conn)?;
+    // 013-mhwilds-charms: Wilds talismans as generator rows in `charms`.
+    seed_mhwilds_charms(conn)?;
+    // 014-mhwilds-small-monsters: 34 Wilds small monsters.
+    seed_mhwilds_small_monsters(conn)?;
+    // 014-mhwilds-endemic-life: 70 Wilds endemic creatures (new table).
+    seed_mhwilds_endemic_life(conn)?;
     seed_mhwilds_monster_equipment(conn)?;
     // MH Rise (game_id 2) — Phase A bulk (Badge87 + CrimsonNynja, base Rise;
     // Sunbreak delta via Kiranico scrape in Phase B). No weaknesses/drops
@@ -218,7 +225,32 @@ pub fn apply_data_patches(conn: &Connection) -> Result<()> {
     patch_mhp3rd_comrades(conn)?;
     patch_mhw_010(conn)?;
     patch_mhr_011(conn)?;
+    patch_mhwilds_012_014(conn)?;
     Ok(())
+}
+
+// 012-014: Wilds quest + charm + small monster + endemic backfill for
+// warm-boot installs. Each is a JSON-truth INSERT OR IGNORE so pre-existing
+// rows are untouched and only genuinely new (id, name) tuples land.
+fn patch_mhwilds_012_014(conn: &Connection) -> Result<()> {
+    const NAME: &str = "mhwilds_012_014_backfill";
+    if patch_applied(conn, NAME)? {
+        return Ok(());
+    }
+    let have_monsters: i64 = conn
+        .query_row("SELECT COUNT(*) FROM monsters WHERE game_id = 3", [], |r| {
+            r.get(0)
+        })
+        .unwrap_or(0);
+    if have_monsters == 0 {
+        record_patch(conn, NAME)?;
+        return Ok(());
+    }
+    seed_mhwilds_quests(conn)?;
+    seed_mhwilds_charms(conn)?;
+    seed_mhwilds_small_monsters(conn)?;
+    seed_mhwilds_endemic_life(conn)?;
+    record_patch(conn, NAME)
 }
 
 fn patch_applied(conn: &Connection, name: &str) -> Result<bool> {
@@ -6662,5 +6694,181 @@ fn seed_mhr_quests(conn: &Connection) -> Result<()> {
         )?;
     }
     // Existing installs are covered by the quest_icons_mhr data patch.
+    Ok(())
+}
+
+// 013-mhwilds-charms: Wilds talismans as generator rows in `charms`.
+// One charms row per (skill, max_level) pair; `charm_skills` joins to
+// the existing game-3 skills table by name (case-insensitive). Unresolved
+// skill names (no exact match in the 179 game-3 skills) are logged but
+// still land — the charms browser renders by name.
+fn seed_mhwilds_charms(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct WildsCharm {
+        id: i32,
+        game_id: i32,
+        charm_type: String,
+        skill_name: String,
+        max_level: i32,
+    }
+    let json_data = include_str!("../../data/mhwilds_charms.json");
+    let rows: Vec<WildsCharm> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    // Skill name -> id (case-insensitive). Lower-cased name to id.
+    let mut sname_id: std::collections::HashMap<String, i32> = std::collections::HashMap::new();
+    {
+        let mut stmt = conn.prepare("SELECT id, name FROM skills WHERE game_id = 3")?;
+        let srows = stmt.query_map([], |r| Ok((r.get::<_, i32>(0), r.get::<_, String>(1))))?;
+        for r in srows {
+            let (id, name) = r?;
+            sname_id.insert(name?.to_lowercase(), id?);
+        }
+    }
+    let mut unresolved = 0;
+    for r in &rows {
+        let skill_sig = format!("{}|{}", r.skill_name, r.max_level);
+        conn.execute(
+            "INSERT OR IGNORE INTO charms (id, game_id, charm_type, charm_table, slots, skill_sig)
+             VALUES (?1, ?2, ?3, NULL, 0, ?4)",
+            rusqlite::params![r.id, r.game_id, r.charm_type, skill_sig],
+        )?;
+        if let Some(sid) = sname_id.get(&r.skill_name.to_lowercase()) {
+            conn.execute(
+                "INSERT OR IGNORE INTO charm_skills (charm_id, skill_id, points) VALUES (?1, ?2, ?3)",
+                rusqlite::params![r.id, sid, r.max_level],
+            )?;
+        } else {
+            unresolved += 1;
+        }
+    }
+    if unresolved > 0 {
+        eprintln!(
+            "[seed_mhwilds_charms] unresolved skill names: {unresolved}/{total}",
+            total = rows.len()
+        );
+    }
+    Ok(())
+}
+
+// 014-mhwilds-small-monsters: 34 Wilds small monsters. Reuses the
+// existing `monsters` table (size='small'); id offset 21001+ avoids the
+// 20001-20034 large-monster range set by 004.
+fn seed_mhwilds_small_monsters(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct SmallJson {
+        id: i32,
+        name: String,
+        size: String,
+        species: Option<String>,
+        description: Option<String>,
+    }
+    let json_data = include_str!("../../data/mhwilds_small_monsters.json");
+    let rows: Vec<SmallJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for r in rows {
+        // No upstream icons for small monsters; reuse a neutral mhwilds
+        // monster icon (placeholder). Same pattern as rampage decos in 011.
+        conn.execute(
+            "INSERT OR IGNORE INTO monsters (id, game_id, name, size, species, description, language,
+             icon_url, icon_name, icon_color)
+             VALUES (?1, 3, ?2, ?3, ?4, ?5, 'en',
+                     '/icons/mhfu/monsters/felyne.png', ?2, 'Gray')",
+            rusqlite::params![r.id, r.name, r.size, r.species, r.description],
+        )?;
+    }
+    Ok(())
+}
+
+// 014-mhwilds-endemic-life: 70 Wilds endemic creatures. New table
+// `endemic_life` (non-monster; tracked separately because they're
+// collected/captured rather than hunted).
+fn seed_mhwilds_endemic_life(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct EndemicJson {
+        id: i32,
+        name: String,
+        #[serde(rename = "type")]
+        kind: Option<String>,
+        description: Option<String>,
+    }
+    let json_data = include_str!("../../data/mhwilds_endemic_life.json");
+    let rows: Vec<EndemicJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for r in rows {
+        conn.execute(
+            "INSERT OR IGNORE INTO endemic_life (id, game_id, name, kind, description)
+             VALUES (?1, 3, ?2, ?3, ?4)",
+            rusqlite::params![r.id, r.name, r.kind, r.description],
+        )?;
+    }
+    Ok(())
+}
+
+// 012-mhwilds-quests: Fextra Quests/Optional+Quests/Event+Quests lists
+// (Assignments + Optional + Event). Type = "Assignment" | "Optional" | "Event"
+// already matches the existing `quests.category` enum (000 spec). Hub set
+// to NULL (Wilds quests aren't grouped by hub like MHR; location is the
+// closest analogue and is stored separately). The `possible_rewards_text`
+// blob is kept as the `description` field so the detail view can show it;
+// `quest_rewards` is left empty (Fextra lists reward text, not per-item
+// counts/probabilities — calling the upstream "rewards" page directly
+// is bot-blocked, so per-item rewards are deferred).
+fn seed_mhwilds_quests(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    #[allow(dead_code)]
+    struct WildsQuest {
+        id: i32,
+        name: String,
+        category: String,
+        rank: String,
+        difficulty: Option<i32>,
+        location: Option<String>,
+        objective: Option<String>,
+        monster_id: Option<i32>,
+        possible_rewards_text: Option<String>,
+        possible_reward_item_ids: Vec<i32>,
+    }
+    let json_data = include_str!("../../data/mhwilds_quests.json");
+    let quests: Vec<WildsQuest> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for q in &quests {
+        // Type = category (Assignment/Optional/Event). main_monsters gets the
+        // related monster name (NULL if Fextra didn't expose one).
+        let main = q.monster_id.and_then(|mid| -> Option<String> {
+            conn.query_row("SELECT name FROM monsters WHERE id = ?1", [mid], |r| {
+                r.get::<_, String>(0)
+            })
+            .ok()
+        });
+        let main_json = main
+            .as_ref()
+            .map(|n| serde_json::to_string(&vec![n.clone()]).unwrap_or_else(|_| "[]".to_string()));
+        let description = q.possible_rewards_text.clone();
+        // Generic per-category icon + color: Assignment = hub, Optional =
+        // slay, Event = event. Reuses the MH2G quest icon set.
+        let (icon_url, icon_name, icon_color) = match q.category.as_str() {
+            "Assignment" => ("/icons/mhfu/quests/assigned.png", "Assignment", "Red"),
+            "Event" => ("/icons/mhfu/quests/event.png", "Event", "Gray"),
+            _ => ("/icons/mhfu/quests/slay.png", "Optional", "Orange"),
+        };
+        conn.execute(
+            "INSERT OR IGNORE INTO quests (id, game_id, name, category, rank, stars, objective, location, description, main_monsters, icon_name, icon_color, icon_url, language)
+             VALUES (?1, 3, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, 'en')",
+            rusqlite::params![
+                q.id,
+                q.name,
+                q.category,
+                q.rank,
+                q.difficulty,
+                q.objective,
+                q.location,
+                description,
+                main_json,
+                icon_name,
+                icon_color,
+                icon_url,
+            ],
+        )?;
+    }
     Ok(())
 }

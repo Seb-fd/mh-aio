@@ -1,0 +1,240 @@
+[
+ {
+  "id": 21001,
+  "name": "Anteka",
+  "size": "small",
+  "species": "Herbivore",
+  "description": "Antelope-like herbivores that inhabit the cold regions."
+ },
+ {
+  "id": 21002,
+  "name": "Balahara",
+  "size": "small",
+  "species": "Piscine Wyvern",
+  "description": "Burrowing piscine wyverns that ambush prey from sand."
+ },
+ {
+  "id": 21003,
+  "name": "Blango",
+  "size": "small",
+  "species": "Brute Wyvern (small)",
+  "description": "Fanged, ape-like creatures that travel in packs."
+ },
+ {
+  "id": 21004,
+  "name": "Bomb Beetle",
+  "size": "small",
+  "species": "Neopteron (small)",
+  "description": "Insects that roll into balls and explode when threatened."
+ },
+ {
+  "id": 21005,
+  "name": "Bulaqchi",
+  "size": "small",
+  "species": "Neopteron (small)",
+  "description": "Uses a needle-like mouth to inject fluid that dissolves food."
+ },
+ {
+  "id": 21006,
+  "name": "Canyon Conga",
+  "size": "small",
+  "species": "Bird Wyvern (small)",
+  "description": "Cat-like scavengers that hunt in packs."
+ },
+ {
+  "id": 21007,
+  "name": "Certonodon",
+  "size": "small",
+  "species": "Herbivore",
+  "description": "Squat armored herbivores that curl into balls for defense."
+ },
+ {
+  "id": 21008,
+  "name": "Chatacabra",
+  "size": "small",
+  "species": "Amphibian (small)",
+  "description": "Sticky-tongued amphibians that swallow prey whole."
+ },
+ {
+  "id": 21009,
+  "name": "Comaqchi",
+  "size": "small",
+  "species": "Neopteron (small)",
+  "description": "Insects that spit a corrosive fluid to deter predators."
+ },
+ {
+  "id": 21010,
+  "name": "Dapperwing",
+  "size": "small",
+  "species": "Neopteron (small)",
+  "description": "Butterfly-like insects that flash light to communicate."
+ },
+ {
+  "id": 21011,
+  "name": "Gajios",
+  "size": "small",
+  "species": "Bird Wyvern (small)",
+  "description": "Rapacious bird wyverns that hunt fish in shallow waters."
+ },
+ {
+  "id": 21012,
+  "name": "Gelidron",
+  "size": "small",
+  "species": "Brute Wyvern (small)",
+  "description": "Icy fanged beasts found in frozen climes."
+ },
+ {
+  "id": 21013,
+  "name": "Goreiata",
+  "size": "small",
+  "species": "Bird Wyvern (small)",
+  "description": "Aggressive bird wyverns with blade-like tails."
+ },
+ {
+  "id": 21014,
+  "name": "Guardian Arkveld",
+  "size": "small",
+  "species": "Flying Wyvern (small)",
+  "description": "Juvenile guardian variants of the apex Arkveld."
+ },
+ {
+  "id": 21015,
+  "name": "Guardian Doshaguma",
+  "size": "small",
+  "species": "Fanged Beast (small)",
+  "description": "Guardian pack-beasts that protect their territory."
+ },
+ {
+  "id": 21016,
+  "name": "Guardian Ebony Odogaron",
+  "size": "small",
+  "species": "Fanged Wyvern (small)",
+  "description": "Dark-variant Odogaron juveniles."
+ },
+ {
+  "id": 21017,
+  "name": "Guardian Fulgur Anjanath",
+  "size": "small",
+  "species": "Brute Wyvern (small)",
+  "description": "Lightning-aspected Anjanath juveniles."
+ },
+ {
+  "id": 21018,
+  "name": "Guardian Rathalos",
+  "size": "small",
+  "species": "Flying Wyvern (small)",
+  "description": "Fire-aspected Rathalos juveniles."
+ },
+ {
+  "id": 21019,
+  "name": "Hipparion",
+  "size": "small",
+  "species": "Herbivore",
+  "description": "Bird-like herbivores with powerful kicks."
+ },
+ {
+  "id": 21020,
+  "name": "Kranodath",
+  "size": "small",
+  "species": "Fish (small)",
+  "description": "Toxic-scaled fish that release venom on death."
+ },
+ {
+  "id": 21021,
+  "name": "Lala Barina",
+  "size": "small",
+  "species": "Temnoceran (small)",
+  "description": "Small parasitic temnocerans that manipulate prey."
+ },
+ {
+  "id": 21022,
+  "name": "Melahoa",
+  "size": "small",
+  "species": "Neopteron (small)",
+  "description": "Ants that cultivate honeydew in their nests."
+ },
+ {
+  "id": 21023,
+  "name": "Nerscylla Hatchling",
+  "size": "small",
+  "species": "Temnoceran (small)",
+  "description": "Spider-ants that spit paralyzing silk."
+ },
+ {
+  "id": 21024,
+  "name": "PecHatch",
+  "size": "small",
+  "species": "Herbivore",
+  "description": "Plump flightless birds prized for their meat."
+ },
+ {
+  "id": 21025,
+  "name": "Piragill",
+  "size": "small",
+  "species": "Fish (small)",
+  "description": "Bottom-feeding fish that swallow prey whole."
+ },
+ {
+  "id": 21026,
+  "name": "Quematrice Hatchling",
+  "size": "small",
+  "species": "Brute Wyvern (small)",
+  "description": "Juvenile Quematrices; just-hatched predators."
+ },
+ {
+  "id": 21027,
+  "name": "Rafma",
+  "size": "small",
+  "species": "Neopteron (small)",
+  "description": "Horned beetles that charge with their heads lowered."
+ },
+ {
+  "id": 21028,
+  "name": "Raphinos",
+  "size": "small",
+  "species": "Bird Wyvern (small)",
+  "description": "Restless bird wyverns that peck in swarms."
+ },
+ {
+  "id": 21029,
+  "name": "Rompopolo",
+  "size": "small",
+  "species": "Bird Wyvern (small)",
+  "description": "Plumage-displaying bird wyverns that charm mates with dances."
+ },
+ {
+  "id": 21030,
+  "name": "Sahira",
+  "size": "small",
+  "species": "Neopteron (small)",
+  "description": "Wasps that nest in cliffs and sting with venom."
+ },
+ {
+  "id": 21031,
+  "name": "Talioth",
+  "size": "small",
+  "species": "Flying Wyvern (small)",
+  "description": "Jade-feathered flying wyverns that glide on updrafts."
+ },
+ {
+  "id": 21032,
+  "name": "Toxicbeast",
+  "size": "small",
+  "species": "Amphibian (small)",
+  "description": "Poisonous toads that inflate and spit toxic gas."
+ },
+ {
+  "id": 21033,
+  "name": "Wudwud",
+  "size": "small",
+  "species": "Neopteron (small)",
+  "description": "Ants that ferry food back to massive colonies."
+ },
+ {
+  "id": 21034,
+  "name": "Yian Kut-Ku",
+  "size": "small",
+  "species": "Bird Wyvern (small)",
+  "description": "Crested bird wyverns that charge and fire sonic blasts."
+ }
+]

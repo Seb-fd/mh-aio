@@ -1,0 +1,422 @@
+[
+ {
+  "id": 80001,
+  "name": "Morbol Seedling",
+  "type": "n/a",
+  "description": "In Rimechain Peak, during the encounter with Omega Planetes, it can be found once the boss initiates its Delta Attack phase and summons a Nerscylla Clone."
+ },
+ {
+  "id": 80002,
+  "name": "Cactuar",
+  "type": "n/a",
+  "description": "In Rimechain Peak, during the encounter with Omega Planetes, it can be found once the boss initiates its Delta Attack phase and summons a Nerscylla Clone."
+ },
+ {
+  "id": 80003,
+  "name": "Vigorwasp",
+  "type": "n/a",
+  "description": "Windward Plains Scarlet Forest Ruins of Wyveria Vigorwasps are insects known for collecting restorative nectar from Vitalilies, storing it in their abdomens. While both the flowers and nectar share similar healing properties, the stored nectar can be dispersed in large quantities to create a lingering, continuous healing effect. Hunters can typically find Vigorwasps in the Windward Plains, Scarlet Forest, and Ruins of Wyveria ecosystems."
+ },
+ {
+  "id": 80004,
+  "name": "Giant Vigorwasp",
+  "type": "Eastern Honey",
+  "description": "Windward Plains Scarlet Forest Ruins of Wyveria Giant Vigorwasps are large wasps that carry a greater quantity of nectar at a higher concentration, enhancing both the range and potency of its restorative effects.These wasps are occasionally seen in groups and can typically be found in the Windward Plains, Scarlet Forest, and Ruins of Wyveria ecosystems."
+ },
+ {
+  "id": 80005,
+  "name": "Purewasp",
+  "type": "n/a",
+  "description": "Oilwell Basin Ruins of Wyveria Purewasps are endemic insects known for storing nectar in their abdomens with restorative, detoxifying, and deodorizing properties. Unlike Vigorwasps, their effects differ, suggesting they gather ingredients from medicinal plants other than Vitalilies. Ongoing research indicates that enzymes within their bodies may also contribute to their unique properties. Hunters can typically find Purewasps in the Oilwell Basin, Ruins of Wyveria, and Iceshard Cliffs ecosystems."
+ },
+ {
+  "id": 80006,
+  "name": "Vigormantle Bug",
+  "type": "n/a",
+  "description": "Windward Plains Scarlet Forest Oilwell Basin Ruins of Wyveria Vigormantle Bugs are insects that drape themselves in healing herbs, triggering a fermentation process that produces nectar with restorative properties. Hunters can collect this cloak by hand or with the Hook Slinger to restore health. While the cloak stores valuable nutrients, the Vigormantle Bug can shed it as a decoy to evade predators. These insects are commonly found in the Windward Plains, Scarlet Forest, Oilwell Basin, and Ruins of Wyveria ecosystems."
+ },
+ {
+  "id": 80007,
+  "name": "Chillmantle Bug",
+  "type": "n/a",
+  "description": "Oilwell Basin The Chillmantle Bug is a small, glowing endemic life creature found in Sector 15 of the Oilwell Basin ecosystem. This insect clings to rock walls, making it somewhat difficult to spot due to its size. However, its faint blue glow helps distinguish it from the surrounding environment, especially in darker areas. Those searching for it should keep an eye on rock formations and scan carefully for its soft glow."
+ },
+ {
+  "id": 80008,
+  "name": "Heatmantle Bug",
+  "type": "n/a",
+  "description": "Iceshard Cliffs Heatmantle Bugs are insects adapted to extreme cold environments, wrapping themselves in plant matter with heating properties such as hot peppers to withstand low temperatures. This natural insulation allows them to survive on the surface, but if stripped of their cloak, they must burrow underground to avoid freezing. Hunters can typically find Heatmantle Bugs in the Iceshard Cliffs ecosystem."
+ },
+ {
+  "id": 80009,
+  "name": "Wiggly Litchi",
+  "type": "n/a",
+  "description": "Windward Plains Scarlet Forest Oilwell Basin Ruins of Wyveria Wiggly Litchi are small insects that live in rotting wood and soil. They can be found in Sectors 1, 3, 7, 8, 9, 11, 16, and 17 of Windward Plains. They can also be found at Scarlet Forest, Oilwell Basin, and the Ruins of Wyveria. These creatures feed on dead leaves and plants, helping break them down. Eating a Wiggly Litchi gives a stamina boost and slows down stamina loss, making them useful for long hunts."
+ },
+ {
+  "id": 80010,
+  "name": "Paratoad",
+  "type": "n/a",
+  "description": "Windward Plains Scarlet Forest Ruins of Wyveria Paratoads are small amphibians found near bodies of water in Windward Plains, Scarlet Forest, and the Ruins of Wyveria. These toads contain a powerful paralytic gas that they release when startled or struck. The gas is strong enough to paralyze both hunters and large monsters for a short time, giving the Paratoad a chance to escape. Because of their size and color they can be difficult to spot, but their defensive ability makes them useful for hunters looking to disable monsters in battle."
+ },
+ {
+  "id": 80011,
+  "name": "Nitrotoad",
+  "type": "n/a",
+  "description": "Oilwell Basin Ruins of Wyveria Nitrotoads are small creatures found in Sector 15 of the Oilwell Basin and the Ruins of Wyveria. These unique creatures store an explosive liquid within their bodies, which they release when startled or physically disturbed. Upon exposure to air, this liquid ignites, causing a sudden detonation that can deal significant damage to anything nearby. Hunters should be cautious when approaching these toads, as their explosive reaction can be damaging."
+ },
+ {
+  "id": 80012,
+  "name": "Sleeptoad",
+  "type": "n/a",
+  "description": "Oilwell Basin Ruins of Wyveria Sleeptoads are found in the Oilwell Basin and Ruins of Wyveria ecosystems. They typically inhabit puddles during Inclemencies Weather and are known for their skittish nature, fleeing when danger is nearby. If attacked, Sleeptoads release a sleep-inducing gas that can incapacitate monsters, making them a useful tool for hunters in battle."
+ },
+ {
+  "id": 80013,
+  "name": "Flashflies",
+  "type": "n/a",
+  "description": "Windward Plains Scarlet Forest Oilwell Basin Ruins of Wyveria Flashflies are small insects that can be found in Sector 15 of the Oilwell Basin ecosystem, as well as in the Windward Plains, Scarlet Forest, and Ruins of Wyveria. These insects emit a faint glow but are usually difficult to notice when alone. However, in dark environments such as caves or during the night, they tend to gather in colonies, creating a noticeable light. When struck, Flashflies produce a sudden, bright flash, making them useful for stunning nearby creatures. Hunters exploring these regions should keep an eye out for their soft flickering glow, especially in low-light areas where they are most active."
+ },
+ {
+  "id": 80014,
+  "name": "Dung Beetle",
+  "type": "Rolled-up Dung",
+  "description": "Windward Plains Oilwell Basin Dung Beetles are small insects found in the Windward Plains and Oilwell Basin ecosystems. These creatures are known for rolling up monster dung into compact balls. They use these dung balls not only as a food source but also as a place to lay their eggs and nurture their larvae. The compacted dung pods they create can also be collected and used as Slinger ammo by hunters."
+ },
+ {
+  "id": 80015,
+  "name": "Bomb Beetle",
+  "type": "Bomb Pod",
+  "description": "Oilwell Basin Bomb Beetles are heat-resistant insects found in Sector 9 of the Oilwell Basin ecosystem. These beetles are known for rolling around small explosive rocks, which they use for protection. Due to the extreme temperatures of their habitat, Bomb Beetles have evolved to withstand intense heat, making them well-adapted to volcanic and arid environments."
+ },
+ {
+  "id": 80016,
+  "name": "Rime Beetle",
+  "type": "Frostburst",
+  "description": "Iceshard Cliffs The Rime Beetle is an Endemic Life creature in Monster Hunter Wilds, found in Sectors 2, 7, 11, and 13 of the Iceshard Cliffs. These insects are typically hidden beneath the snow, making them difficult to spot. However, hunters can identify them by looking for small, circular snowballs being pushed across the ground. These snowballs contain valuable materials that can be used as Frostburst Ammo, making them useful for ice-based attacks. Due to their nature, Rime Beetles are restricted to cold environments and are more resistant to freezing temperatures than other creatures."
+ },
+ {
+  "id": 80017,
+  "name": "Thunderbug",
+  "type": "Thunderbug Capacitor",
+  "description": "Windward Plains Ruins of Wyveria The Thunderbug is an Endemic Life creature in Monster Hunter Wilds, found in Sectors 1, 2, 3, 8, and 11 of the Windward Plains. These electric insects store high-voltage energy within their bodies, making them a valuable resource for hunters."
+ },
+ {
+  "id": 80018,
+  "name": "Great Thunderbugs",
+  "type": "Shock Trap",
+  "description": "Windward Plains Ruins of Wyveria Great Thunderbugs are Endemic Life creatures in Monster Hunter Wilds that can be found in Sectors 1 and 11 of the Windward Plains. These insects only appear during Sandstorms, when the intense lightning surges through the area. Unlike regular Thunderbugs, these creatures have formed large colonies, rapidly reproducing due to their exposure to the storm's electrical energy."
+ },
+ {
+  "id": 80019,
+  "name": "Flashbug",
+  "type": "Flashbug Phosphor",
+  "description": "Windward Plains Scarlet Forest Oilwell Basin Ruins of Wyveria The Flashbug is an Endemic Life creature in Monster Hunter Wilds that can be found in Sectors 6, 7, 11, and 15 of the Windward Plains. They also appear in the Scarlet Forest, Oilwell Basin, and Ruins of Wyveria. These small insects are known for their ability to emit strong bursts of light in response to external stimuli. When disturbed, they release a sudden flash, which can temporarily blind nearby creatures, including large monsters."
+ },
+ {
+  "id": 80020,
+  "name": "Godbug",
+  "type": "Godbug Essence",
+  "description": "Windward Plains Scarlet Forest Oilwell Basin Ruins of Wyveria Godbug is a small endemic life insect commonly found in the Windward Plains, Scarlet Forest, Oilwell Basin, and Ruins of Wyveria ecosystems. These elusive bugs cling to rock walls and emit a faint purple glow, making them easier to spot in low-light conditions. Due to their small size, hunters must pay close attention to their surroundings to locate them. In the Oilwell Basin, they are specifically found in Sector 14."
+ },
+ {
+  "id": 80021,
+  "name": "Bitterbug",
+  "type": "Bitterbug Broth",
+  "description": "Windward Plains Scarlet Forest Oilwell Basin Ruins of Wyveria The Bitterbug is an Endemic Life creature in Monster Hunter Wilds that can be found in all sectors of the Windward Plains. These insects are highly valued for their bitter extracts, which are used in a wide range of medicines."
+ },
+ {
+  "id": 80022,
+  "name": "Dark Hornet",
+  "type": "n/a",
+  "description": "Windward Plains Scarlet Forest Ruins of Wyveria The Dark Hornet is an Endemic Life creature in Monster Hunter Wilds that can be found near the bones in Sector 4 of the Windward Plains. These small, glowing insects typically live in groups of 4 to 5 and are easily recognizable by the soft light they emit. When they sense danger, they activate a luminous organ to briefly illuminate their surroundings and scan for threats. If a predator or intruder is detected, the swarm will attack relentlessly, using their poisonous stingers to deter any would-be threats."
+ },
+ {
+  "id": 80023,
+  "name": "Wedge Beetle",
+  "type": "n/a",
+  "description": "Windward Plains Scarlet Forest Oilwell Basin Ruins of Wyveria The Wedge Beetle is an Endemic Life creature in Monster Hunter Wilds that can be found in Sectors 6, 9, 10, 11, 16, and 17 of the Windward Plains. They also appear in the Scarlet Forest, Oilwell Basin, and Ruins of Wyveria. These sturdy insects have hard shells that allow them to withstand minor impacts and cling tightly to walls, cliffs, and other surfaces. Hunters can use their Hook Slinger to latch onto these beetles, allowing for quick movement across terrain or even just to hang in place indefinitely. Their presence provides valuable mobility options for traversing difficult landscapes."
+ },
+ {
+  "id": 80024,
+  "name": "Windrustler",
+  "type": "n/a",
+  "description": "Windward Plains The Windrustler is an Endemic Life creature found in Sectors 8 and 10 of the Windward Plains in Monster Hunter Wilds. These plains-dwelling creatures live in packs and rely on their arrow-shaped crests for communication. They use these crests to coordinate movements and signal danger when predators or hunters approach. Observing their behavior can provide insight into nearby threats, as they instinctively raise their crests when sensing danger."
+ },
+ {
+  "id": 80025,
+  "name": "Black Windrustler",
+  "type": "n/a",
+  "description": "Windward Plains The Windrustler is an Endemic Life creature in Monster Hunter Wilds that can be found in Sectors 8 and 10 of the Windward Plains ecosystem. These creatures typically travel in packs, but on rare occasions, hunters may spot a unique variant with charcoal-colored skin and a larger frame. While some believe this could be a melanistic mutation, the presence of multiple distinct individuals suggests it may actually be a separate subspecies."
+ },
+ {
+  "id": 80026,
+  "name": "Nothpecker",
+  "type": "n/a",
+  "description": "Windward Plains The Nothpecker in Monster Hunter Wilds can be found in Sectors 8 and 13 of the Windward Plains. These birds also nest on the backs of Ceratonoths, making them capturable there as well. They share a symbiotic relationship with the Ceratonoths, often seen perched on them while using their plier-like beaks to remove old scales and feed on insects burrowed into the cracks."
+ },
+ {
+  "id": 80027,
+  "name": "Landlight Shrimp",
+  "type": "n/a",
+  "description": "Windward Plains These shrimp-like creatures have an almost green color and cling to rock walls. They can be found in Sectors 1 and 3 of the Windward Plains. Known as Landlight Shrimp, they use their secretions to sift through fulgurite, feeding on organic matter such as dead Thunderbugs. Their diet appears to include certain microbes that have granted them a subtle luminescence."
+ },
+ {
+  "id": 80028,
+  "name": "Amstrigian",
+  "type": "n/a",
+  "description": "Windward Plains Scarlet Forest The Amstrigian is an Endemic Life creature in Monster Hunter Wilds that can be found on tree branches in Sectors 8 and 10 of the Windward Plains. They can also be spotted in the Scarlet Forest. These birds primarily reside in forested areas but travel to the plains during the Plenty season to raise their young. Amstrigians are known for forming lifelong bonds with their mates, working together to gather food, build nests, and care for their offspring."
+ },
+ {
+  "id": 80029,
+  "name": "Hymstrigian",
+  "type": "n/a",
+  "description": "Windward Plains Scarlet Forest The Hymstrigian is a rare Endemic Life creature in Monster Hunter Wilds that can be found on tree branches in Sector 8 of the Windward Plains, but only during Inclemencies weather. These birds are closely related to the Amstrigian, but they stand out due to their color and singing ability."
+ },
+ {
+  "id": 80030,
+  "name": "Rufflizard",
+  "type": "n/a",
+  "description": "Windward Plains The Rufflizard is an Endemic Life creature in Monster Hunter Wilds that can be found in Sector 3 of the Windward Plains. These small lizards can be seen roaming the ground and are easily recognizable by the fat deposits near their jaws and tail. When food is abundant, these sac-like reservoirs fill up, causing them to swell and turn a healthy red."
+ },
+ {
+  "id": 80031,
+  "name": "Tracktail Lizard",
+  "type": "n/a",
+  "description": "Windward Plains The Tracktail Lizard is an endemic creature found in the Windward Plains ecosystem, in Sectors 11 and 12. These unique lizards are easy to spot when they stand upright using their distinctive tails. Their tails serve multiple purposes—they help the lizards scan their surroundings for danger and also provide shade from the intense desert sun. Observant hunters may notice them resting in open areas."
+ },
+ {
+  "id": 80032,
+  "name": "Pallbug",
+  "type": "n/a",
+  "description": "Windward Plains Scarlet Forest Oilwell Basin Ruins of Wyveria The Pallbug is an Endemic Life creature in Monster Hunter Wilds that can be found some bones in Sector 4 of the Windward Plains. They also inhabit the Scarlet Forest, Oilwell Basin, and Ruins of Wyveria. These insects play a role in the ecosystem as decomposers, feeding on dead flesh and breaking down organic matter."
+ },
+ {
+  "id": 80033,
+  "name": "Quatreflies",
+  "type": "n/a",
+  "description": "Windward Plains Scarlet Forest Oilwell Basin Ruins of Wyveria The Quatreflies are Endemic Life creatures in Monster Hunter Wilds that can be found in Sectors 3, 4, 5, 6, 8, 9, 10, 13, 14, and 16 of the Windward Plains. These small, flying insects have a unique appearance, resembling four-leaf clovers. Their resilient nature allows them to thrive in any weather condition, whether it be day or night."
+ },
+ {
+  "id": 80034,
+  "name": "Emperor Hopper",
+  "type": "n/a",
+  "description": "Windward Plains Scarlet Forest The Emperor Hopper in Monster Hunter Wilds can be found in the grassy areas of Sector 8 in the Windward Plains. It moves by hopping around, making it fairly easy to spot. Unlike other small creatures, it remains unbothered by a hunter's presence, allowing ample time to use the capture net. Equipped with powerful hind legs, it can leap great distances to escape danger. If you rustle through the grass, its usual hiding spot, you're almost certain to see at least one Emperor Hopper spring away."
+ },
+ {
+  "id": 80035,
+  "name": "Tyrant Hopper",
+  "type": "n/a",
+  "description": "Ruins of Wyveria The Tyrant Hopper is an Endemic Life creature found in the Ruins of Wyveria ecosystem in Monster Hunter Wilds. This species is a phase mutation of the Emperor Hopper, distinguished by its reddish-black body and more aggressive nature. Unlike typical hoppers, which are primarily herbivorous, the Tyrant Hopper has developed a scavenging behavior, feeding on carrion. This adaptation makes it a rarity among its kind and a notable presence in the ecosystem."
+ },
+ {
+  "id": 80036,
+  "name": "Sandstar",
+  "type": "n/a",
+  "description": "Windward Plains Sandstars are nocturnal creatures found between Sectors 11 and 16 during Fallows Weather and Plenties Weather. They have pale, luminescent fur, likely a result of their diet, which primarily consists of insects. Highly alert, Sandstars rely on their exceptional hearing to detect approaching threats and flee at the slightest disturbance."
+ },
+ {
+  "id": 80037,
+  "name": "Leaflugger Ant",
+  "type": "Max Potion Mega Potion",
+  "description": "Scarlet Forest The Leaflugger Ant is an Endemic Life species found in the Scarlet Forest ecosystem in Monster Hunter Wilds. These forest ants are known for forming organized ranks to transport freshly cut leaves. Their sharp mandibles feature a dual structure in which one edge is specialized for cutting, while a separate mechanism allows them to bend and secure leaves behind their heads for easy transport."
+ },
+ {
+  "id": 80038,
+  "name": "Florashell Crab",
+  "type": "n/a",
+  "description": "Scarlet Forest The Florashell Crab is an Endemic Life species found in the Scarlet Forest ecosystem in Monster Hunter Wilds. Their shovel-like claws make burrowing into the ground easier, allowing them to remain hidden during the day. They emerge at night, when they become active and can be spotted digging for insects to feed on."
+ },
+ {
+  "id": 80039,
+  "name": "Crudeshell Crab",
+  "type": "n/a",
+  "description": "Oilwell Basin The Crudeshell Crab is an Endemic Life species found in Sector 8 of the Oilwell Basin ecosystem in Monster Hunter Wilds. These small crabs cover their cup-shaped carapaces with oilsilt, using it as camouflage while they burrow into the ground to hide from predators. Unlike other burrowing crabs, they are rarely seen in volcanic regions or during the Firespring, suggesting that they have low heat resistance."
+ },
+ {
+  "id": 80040,
+  "name": "Curioshell Crab",
+  "type": "Ancient Wyvern Coin",
+  "description": "Windward Plains Scarlet Forest Oilwell Basin Ruins of Wyveria Iceshard Cliffs The Curioshell Crab is a small endemic life creature known for its faintly glowing yellow appearance. It can primarily be found in Sector 18 of the Ruins of Wyveria but is also spotted in other ecosystems such as the Windward Plains, Scarlet Forest, and Oilwell Basin. Its small size makes it easy to overlook, especially in rocky or vegetation-heavy environments. These crabs tend to stay close to the ground, often blending in with their surroundings. Hunters searching for them should carefully look at the terrain, particularly near rock formations or damp areas where they are most likely to gather."
+ },
+ {
+  "id": 80041,
+  "name": "Smokeshroud Gekko",
+  "type": "n/a",
+  "description": "Windward Plains Scarlet Forest Smokeshroud Gekko can be found around area 8 within the Scarlet Forest ecosystem by the Underground Lake Campsite in the daytime with the weather forecast of \"Plenty\"."
+ },
+ {
+  "id": 80042,
+  "name": "Dapperwing",
+  "type": "n/a",
+  "description": "Scarlet Forest The Dapperwing is an Endemic Life creature found primarily in the Scarlet Forest, specifically in Sectors 12 and 17, as well as the bower of the Great Tree in Sector 7 and Sector 6. This bird is particularly notable for the males, which undergo a dramatic transformation in plumage depending on the season. During the Fallow, when the environment is more subdued, male Dapperwings sport a muted green coloration that helps them blend in with the dense foliage, providing natural camouflage against predators. However, with the arrival of the Plenty, these birds undergo a spectacular molt, revealing vibrant, eye-catching feathers in a dazzling array of colors. This transformation is believed to be tied to courtship, as females appear to favor males with the most extravagant plumage and well-developed feathers. Males can often be seen showing and displaying their colors in an effort to attract a mate, engaging in elaborate flapping and posturing rituals. Dapperwings are of particular interest to researchers at the Windward Plains during The Samin’s Research Report quest. They can be captured using a capture net."
+ },
+ {
+  "id": 80043,
+  "name": "Dazzlewing",
+  "type": "n/a",
+  "description": "Scarlet Forest Dazzlewing can be located at Sector 15 within the Scarlet Forest ecosystem, chances for this endemic life creature to appear is during the daytime with the weather forecast of \"Plenty\"."
+ },
+ {
+  "id": 80044,
+  "name": "Mimiphyta",
+  "type": "n/a",
+  "description": "Scarlet Forest Mimiphyta is a small, endemic life creature found in the Scarlet Forest ecosystem. These tiny organisms only appear during Plenties weather, making them somewhat rare and difficult to find. They typically rest on top of various plants, blending in with their surroundings. Their yellow scales provide hint of their presence, but due to their small size, they can easily be overlooked. Hunters searching for Mimiphyta should carefully look att the tops of plants, especially in areas with lots of plants."
+ },
+ {
+  "id": 80045,
+  "name": "Scarlet Joyperch",
+  "type": "n/a",
+  "description": "Scarlet Forest The Scarlet Joyperch is an Endemic Life species found in the Scarlet Forest ecosystem in Monster Hunter Wilds. These amphibious creatures have adapted to living both on land and in water, serving as precious evidence of how some species may have transitioned to walking on land. Their unique biology makes them a fascinating subject of study."
+ },
+ {
+  "id": 80046,
+  "name": "Starduster",
+  "type": "n/a",
+  "description": "Scarlet Forest This Endemic Life Creature can be found at Sector 3 of the Scarlet Forest Ecosystem. These are small fish with yellow and blue scales."
+ },
+ {
+  "id": 80047,
+  "name": "Vaporonid",
+  "type": "n/a",
+  "description": "Windward Plains Ruins of Wyveria The Vaporonid is an Endemic Life species found in the Windward Plains and Ruins of Wyveria ecosystems in Monster Hunter Wilds. These master weavers use their large webs to ensnare prey, often capturing butterflies and other insects. Their webs can grow as big as a person and feature a built-in escape route, allowing the Vaporonid to flee quickly if a predator approaches."
+ },
+ {
+  "id": 80048,
+  "name": "Omenfly",
+  "type": "n/a",
+  "description": "Windward Plains Scarlet Forest The Omenfly is an Endemic Life species found in the Windward Plains and Scarlet Forest ecosystems in Monster Hunter Wilds. These insects emit a yellow or red glow from their bellies when they detect threats, serving as a warning to nearby creatures. Their fossil-like appearance suggests that Omenflies have existed for a long time, possibly making them one of the oldest insect species in these regions."
+ },
+ {
+  "id": 80049,
+  "name": "Myriads",
+  "type": "n/a",
+  "description": "Scarlet Forest The Myriads are Endemic Life found in the Scarlet Forest ecosystem in Monster Hunter Wilds. These butterflies follow a seasonal life cycle, hatching during the Plenty and pupating as the season ends. Those that endure the harsh Fallow emerge as adults in the next Plenty. Their adaptability allows some to reach adulthood within the same season if they hatch early, ensuring their survival in the changing environment of the Scarlet Forest."
+ },
+ {
+  "id": 80050,
+  "name": "Pink Landlight Shrimp",
+  "type": "n/a",
+  "description": "Oilwell Basin Pink Landlight Shrimp is an endemic life creature found in Sector 14 of the Oilwell Basin ecosystem. These bioluminescent shrimp are usually seen clinging to the sides of rocks in groups of four. Their distinct pink glow becomes more noticeable in the dark, making them easier to spot at night. While they remain stationary most of the time, hunters can capture them using a net when within reach."
+ },
+ {
+  "id": 80051,
+  "name": "Ember Rufflizard",
+  "type": "n/a",
+  "description": "Oilwell Basin Ember Rufflizards are small, elusive creatures commonly found within the Oilwell Basin ecosystem. They emit a distinct green glow during Inclemencies Weather and are also known to be active in hot environments, particularly near volcanic areas."
+ },
+ {
+  "id": 80052,
+  "name": "Azure Rufflizard",
+  "type": "n/a",
+  "description": "Oilwell Basin You can find this lizard walking in Sector 4 of the Oilwell Basin, by the ancient forge. It's easily recognizable by its size and color."
+ },
+ {
+  "id": 80053,
+  "name": "Gloom Gekko",
+  "type": "n/a",
+  "description": "Oilwell Basin Gloom Gekko can be found in Sectors 2, 3, 4 and 13 of the Oilwell Basin Ecosystem."
+ },
+ {
+  "id": 80054,
+  "name": "Scalebat",
+  "type": "n/a",
+  "description": "Windward Plains Oilwell Basin This Endemic life Creature can be found at Sector 12 of the Oilwell Basin during Plenties weather."
+ },
+ {
+  "id": 80055,
+  "name": "Blink Angler",
+  "type": "n/a",
+  "description": "Windward Plains Oilwell Basin The Blink Angler is an endemic creature found in the Oilwell Basin ecosystem, found towards the slope leading into the midsection between Sectors 9 and 11 from Sector 13. They can only be found during the plenty period in the morning."
+ },
+ {
+  "id": 80056,
+  "name": "Sparklerjelly",
+  "type": "n/a",
+  "description": "Oilwell Basin Sparklerjelly is a floating endemic life creature found in the Oilwell Basin ecosystem. These bioluminescent organisms drift through the air, emitting a faint glow that makes them easy to spot, especially at night. While they typically float at high altitudes, they occasionally descend to lower levels, providing hunters with the opportunity to capture them. To successfully catch a Sparklerjelly, hunters must use a net when it flies close enough."
+ },
+ {
+  "id": 80057,
+  "name": "Peony Sparklerjelly",
+  "type": "n/a",
+  "description": "Oilwell Basin The Peony Sparklerjelly is a rare endemic life creature that can be found in Sector 13 of the Oilwell Basin Ecosystem, but only during the plenty weather, and at nighttime. Unlike its smaller relatives, this large jellyfish-like organism displays an array of colors, including shades of purple and blue, making it one of the most pretty creatures in the game. Its glow stands out, creating a beautiful sight for hunters exploring the area. Due to its rarity and floating nature, careful observation is required to spot and capture it with a net when it drifts low enough."
+ },
+ {
+  "id": 80058,
+  "name": "Nu Yaya",
+  "type": "n/a",
+  "description": "Oilwell Basin Sector 17 During Morning on Plenty Environment. It can be found in Sector 17 of the Oilwell Basin during the Plenties weather in the mornings."
+ },
+ {
+  "id": 80059,
+  "name": "Gawkie",
+  "type": "n/a",
+  "description": "Ruins of Wyveria Iceshard Cliffs Gawkie can be found in Sector 2 of the Ruins of Wyveria Ecosystem."
+ },
+ {
+  "id": 80060,
+  "name": "Solanaria",
+  "type": "n/a",
+  "description": "Ruins of Wyveria The Solanaria is an Endemic Life creature found within the Ruins of Wyveria ecosystem. These beings possess rippling fins on both sides of their bodies, which allow them to gracefully move through the air. What makes them even more remarkable is the circulatory system within their fins, which functions similarly to blood vessels and emits a soft, glowing light. Due to their fragile bodies, Solanaria are incredibly delicate, making them highly vulnerable to environmental hazards. Even a slight shock or a strong gust of wind can easily damage or tear their thin fins."
+ },
+ {
+  "id": 80061,
+  "name": "Pillopod",
+  "type": "n/a",
+  "description": "Oilwell Basin Ruins of Wyveria Pillopods are small, endemic life creatures found in the Oilwell Basin and Ruins of Wyveria ecosystems. Their shape allows them to blend seamlessly with rocky surfaces and coral reefs, making them easy to overlook. These organisms typically cling to rock walls or coral structures, often remaining motionless. In the Oilwell Basin, they are specifically found in Sector 14. Hunters should carefully scan their surroundings to spot and capture them."
+ },
+ {
+  "id": 80062,
+  "name": "Gillopod",
+  "type": "n/a",
+  "description": "Ruins of Wyveria The Gillopod is a rare and larger version of the Pillopod, can be identified for its different size and appearance. It can be found sticking to the walls of your camp in Sector 8 of the Ruins of Wyveria, though some may also appear outside the camp. These creatures can be found sticking high on the walls, allowing them to remain securely attached to rocky surfaces and vertical walls. Since Gillopods closely resemble Pillopods, one of the easiest ways to identify them is by comparing their sizes which makes Gillopods always larger. Their rarity of these creatures is high, so it would take some time before these endemic life creatures do appear in the areas mentioned."
+ },
+ {
+  "id": 80063,
+  "name": "Petalfly",
+  "type": "n/a",
+  "description": "Ruins of Wyveria The Petalfly is an Endemic Life Creature that can be found in Sector 6 of the Ruins of Wyveria ecosystem. These insects thrive in areas with abundant vegetation, particularly in the heart of the Ruins of Wyveria, where the environment provides ample food and shelter for them. Despite having poor flight capabilities, Petalflies have adapted to their surroundings by using the wind to aid their movement, allowing them to drift effortlessly through the air. Their life cycle begins in water or on moist ground, where their larvae develop until they mature into adults. However, an adult Petalfly has a very short lifespan, with its primary purpose being reproduction before its life comes to an end."
+ },
+ {
+  "id": 80064,
+  "name": "Xu Yo",
+  "type": "n/a",
+  "description": "Ruins of Wyveria Can be found in Xu Wu's nest, area 12."
+ },
+ {
+  "id": 80065,
+  "name": "Jewel Scarab",
+  "type": "n/a",
+  "description": "Scarlet Forest The Jewel Scarab is an Endemic Life species found in the Scarlet Forest ecosystem in Monster Hunter Wilds. These brightly colored beetles have impressive, fan-shaped shells, with each individual displaying unique colors and patterns. Their sparkling appearance has led to comparisons with precious gems, making them one of the most visually striking insects in the ecosystem."
+ },
+ {
+  "id": 80066,
+  "name": "Regal Jewel Scarab",
+  "type": "n/a",
+  "description": "Scarlet Forest Can be found in Sector 2 of the Scarlet Forest on a tree hugging the left side with red sap. Can also be found at Sector 3 during Plenty Weather in the morning on a tree in a group of normal scarabs."
+ },
+ {
+  "id": 80067,
+  "name": "Downy Crake",
+  "type": "n/a",
+  "description": "Iceshard Cliffs Downy Crakes can be found perching upon the backs of other small Wildlife, like the Rafma. To get then to spawn a little easier, go to the camp at area 20 during Fallow/Daytime. A bunch of Rafma will spawn around area 13, but cycle through 12 and 17 too, in case they're not immediately outside the spawn. Make sure to equip a Ghillie mantle when spotting them on the Rafmas back before going for the capture. They have been seen during other weathers/Daytimes as well."
+ },
+ {
+  "id": 80068,
+  "name": "Hercudrome",
+  "type": "n/a",
+  "description": "Scarlet Forest This Endemic Life creature can be found between Sectors 2 and 3 of the Scarlet Forest at night during the Plenty."
+ },
+ {
+  "id": 80069,
+  "name": "Gold Hercudrome",
+  "type": "n/a",
+  "description": "Scarlet Forest This Endemic Life creature can be found between Sectors 2 and 3 of the Scarlet Forest at night during the Plenty."
+ },
+ {
+  "id": 80070,
+  "name": "Prism Hercudrome",
+  "type": "n/a",
+  "description": "The Prism Hercudrome is a rare species of Hercudrome beetle that can be found exclusively in Sector 6 of the Ruins of Wyveria ecosystem during the Plenty Weather at night."
+ }
+]

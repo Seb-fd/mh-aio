@@ -207,7 +207,7 @@ By design (documented, not built): World combines never fail (`chance` NULL, bad
 
 Ordering: Chest `sort_order` is an alphabetical proxy (no retail box order published); weapons follow the Kiranico Wilds Smith DFS sequence (scripts/reorder_mhwilds_weapons.py Playwright tab scrape; MHDB previous/branches kept as the edge source, 0 orphans); monsters alphabetical. Icons: no Wilds sets offline — monsters reuse mhw slug paths (UI fallback), weapons/armor reuse the mhw rarity scheme, items NULL, decos mhfu path.
 
-Gaps (no upstream data, not seed bugs): quests (empty list), charms (64 upstream, no table), small monsters.
+Gaps (no upstream data, not seed bugs): quests (empty list), charms (64 upstream, no table), small monsters. Tracked as Phase 7 in `roadmap.md` and as specs `012`–`014` (Wilds quests / charms / small monsters + endemic).
 
 ## MH Rise — Base catalog (spec 003 Phase A bulk)
 
@@ -257,7 +257,7 @@ ID offsets (game-2 space): buddy weapons 70001+, buddy armor 70501+, rampage ski
 
 ## Verification
 
-`svelte-check` → 0 errors/0 warnings. `cargo test` → 13 tests pass (ASS + `db::queries` idempotency/migration/global_search/small-monster-visibility). `cargo build` → clean. All seeds deserialize cleanly from the new JSON (items / item_combine / monster_drops / item_sources / quest_rewards structs). `src/lib/utils/norm.ts` mirrors Rust `norm_key` for accent-insensitive list filtering.
+Current `cargo test` count is 43 (ASS + `db::queries` idempotency / migration / global_search / small-monster-visibility / MHW quest offset / MHW 010 phases A·B·C / set-bonus display / MHP3rd charms / MHR 011 phases A·B·C·D·E). Full gate: `npm run check` 0/0, ESLint 0 errors, Prettier repo-wide, `cargo fmt --check`, `cargo clippy -D warnings`, `cargo build`, `node scripts/check-version.js` 0.1.1 OK, `npm audit --audit-level=moderate` (4 pre-existing transitive findings, accepted). `src/lib/utils/norm.ts` mirrors Rust `norm_key` for accent-insensitive list filtering.
 
 ## Source
 

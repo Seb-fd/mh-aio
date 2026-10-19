@@ -367,20 +367,35 @@ CREATE TABLE armor_materials (
 
 ### ✅ Phase 5: Multi-Game — MHP3rd DONE, MHW core DONE
 
-- [x] MHP3rd data import + fidelity pass — 1044 items, 378 quests, 60 monsters, 972 weapons, 1111 armor, 263 combines, 1679 drops, 2016 item_sources, skills/decorations seeded via `src-tauri/data/mhp3rd_*.json` + `db/seed.rs` (idempotent) — spec `001-mhp3rd-fidelity-pass` DONE
-- [x] MHW data import (core) — 1359 items, 94 monsters, 3544 weapons, 1595 armor, 521 quests, 178 skills, 5862 drops, 211 Melder, 20 Mantles/Boosters, 8 Palico Gadgets via MHWorldData + Fandom pipeline (`scripts/generate_mhw_*`) — specs `002-mhw-data-import` + `009-mhw-tools-melder` DONE
+- [x] MHP3rd data import + fidelity pass — 1044 items, 378 quests, 60 monsters, 972 weapons, 1106 armor, 263 combines, 1949 drops, 2016 item_sources, skills/decorations, **charms (50,635)** + comrade gear, weapon_skill_points — spec `001-mhp3rd-fidelity-pass` DONE
+- [x] MHW data import (core) — 1359 items, 94 monsters, 3544 weapons, 1595 armor, 521 quests, 178 skills, 5826 drops, 211 Melder, 20 Mantles/Boosters, 8 Palico Gadgets via MHWorldData + Fandom pipeline (`scripts/generate_mhw_*`) — specs `002-mhw-data-import` + `009-mhw-tools-melder` DONE
 - [x] MHW gaps DONE — 404 decorations, 788 weakness rows (88 monsters), ~20k derived equipment links, 911 gather rows, 179 skills + weapon_skill_points — spec `002b-mhw-gaps`
-- [x] MHWilds data import (core) — 34 monsters, 773 items, 1188 weapons, 714 armor, 179 skills, 361 decorations, 1775 drops via MHDB Wilds API (`scripts/generate_mhwilds_from_mhdb.py`) — spec `004-mhwilds-data-import` DONE (quests/charms deferred: no upstream data)
-- [ ] MHR scraper (Kiranico / Game8) — spec `003-mhr-data-import`
-- [ ] MHWilds scraper (Kiranico / Game8 / wilds.mhdb.io) — spec `004-mhwilds-data-import`
+- [x] **MHW 100% follow-up** — ailments (721) + traps (465) + set-bonus display (everywhere) + charms (317) + set-bonus stats on armor — spec `010-mhw-100` DONE
+- [x] MHWilds data import (core) — 34 large monsters, 773 items, 1188 weapons, 714 armor, 179 skills, 361 decorations, 1775 drops via MHDB Wilds API (`scripts/generate_mhwilds_from_mhdb.py`) — spec `004-mhwilds-data-import` DONE (quests/charms/small monsters/endemic deferred to specs `012`–`014`)
+- [x] **MHR 100%** (Sunbreak v16 Kiranico + 3geek14/mhr-charms datamine) — 112 monsters + status/part-break/traps, 1642 items, 178 combines, 3953 weapons, 1591 armor, 946 quests, 147 skills, 243 decos, **buddy gear (Palico+Palamute)**, **rampage (247 skills + 6822 weapon links + 26 decos)**, **talismans (11849 generator rows)**, 11849 + char browser — spec `011-mhr-100` DONE
 - [ ] Game-specific UI adaptations (Focus Mode, Wirebugs, etc. — own spec each if scoped, see `009` pattern)
 
 ### 📋 Phase 6: Mobile & Distribution
 
-- [ ] Mobile build via Tauri v2 (already supported via `cdylib`)
+- [x] Spec written — `008-mobile-distribution` (acceptance criteria pending Android init)
+- [ ] Android init via `npx tauri android init` + build smoke — spec `017` (Round 2)
 - [ ] Auto-updater
 - [ ] System tray
 - [ ] Cross-platform packaging (Windows / macOS / Linux / iOS / Android)
+
+### 📋 Phase 7: Remaining gaps (Round 1 in flight)
+
+Wilds completeness (matching the MHR 100% and MHW 100% spec shape):
+
+- [ ] **012 — Wilds quests** (Kiranico/Game8 scrape, ~600+ rows; quest list empty today) — Round 1
+- [ ] **013 — Wilds charms** (~64 rows + talisman viewer enabled for `mhwilds`) — Round 1
+- [ ] **014 — Wilds small monsters + endemic life** (MHDB `monsters/small` + Fextra endemic) — Round 1
+
+Long-tail gaps (Round 2 / source-blocked):
+
+- [ ] **015 — MH2G hunt Basic/Bonus %, crown sizes, quest HP** (GameFAQs 59556 bot-blocked; alt sources being probed) — Round 2
+- [ ] **016 — Wilds anomaly investigations / qurious crafting** (spec it, mark anomaly N/A — procedural, unbounded) — Round 2
+- [ ] **017 — Mobile distribution (Android init)** — Round 2
 
 ---
 
@@ -445,15 +460,17 @@ Ornaments are CSS `repeating-linear-gradient` patterns defined in `src/app.css`,
 
 ## Time Estimation (Cumulative)
 
-| Phase                          | Weeks         | Status     |
-| ------------------------------ | ------------- | ---------- |
-| Phase 1: MVP Core              | 6-8           | ✅ Done    |
-| Phase 2: Data Expansion (MH2G) | 2-3           | ✅ Done    |
-| Phase 3: Build System (ASS)    | 3-4           | ✅ Done    |
-| Phase 4: Global Search         | 1-2           | ✅ Done    |
-| Phase 5: Multi-Game            | 3-4           | 📋 Planned |
-| Phase 6: Mobile & Distribution | 4-6           | 📋 Planned |
-| **Total**                      | **~25 weeks** |            |
+| Phase                                 | Weeks         | Status                                    |
+| ------------------------------------- | ------------- | ----------------------------------------- |
+| Phase 1: MVP Core                     | 6-8           | ✅ Done                                   |
+| Phase 2: Data Expansion (MH2G)        | 2-3           | ✅ Done                                   |
+| Phase 3: Build System (ASS)           | 3-4           | ✅ Done                                   |
+| Phase 4: Global Search                | 1-2           | ✅ Done                                   |
+| Phase 5: Multi-Game (4 titles @ 100%) | 3-4           | ✅ Done                                   |
+| Phase 5b: MHW 100% + MHR 100%         | 2-3           | ✅ Done (010/011)                         |
+| Phase 6: Mobile & Distribution        | 4-6           | 📋 Planned (spec 008; 017 = Android init) |
+| Phase 7: Remaining gaps               | 2-3           | 📋 Planned (012–017)                      |
+| **Total so far**                      | **~25 weeks** |                                           |
 
 _Estimation based on part-time work (15-20h/week)_
 

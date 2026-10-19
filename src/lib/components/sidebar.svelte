@@ -97,7 +97,7 @@
       iconUrl: '/icons/mhfu/decorations/ItemIcon017i.png',
       iconName: 'Attack',
       iconColor: 'Red',
-      gameOnly: ['mhp3rd', 'mhw'],
+      gameOnly: ['mhp3rd', 'mhw', 'mhwilds'],
     },
     {
       href: '/comrades',
@@ -106,6 +106,14 @@
       iconName: 'Felyne',
       iconColor: 'Gray',
       gameOnly: ['mhp3rd', 'mhr'],
+    },
+    {
+      href: '/endemic',
+      label: 'Endemic Life',
+      iconUrl: '/icons/mhw/monsters/Chatacabra.png',
+      iconName: 'Chatacabra',
+      iconColor: 'Green',
+      gameOnly: 'mhwilds',
     },
   ]
 

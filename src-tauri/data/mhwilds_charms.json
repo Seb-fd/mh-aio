@@ -1,0 +1,534 @@
+[
+ {
+  "id": 85000,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Agitator",
+  "max_level": 3
+ },
+ {
+  "id": 85001,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Ambush",
+  "max_level": 2
+ },
+ {
+  "id": 85002,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Anti-Aerial Species",
+  "max_level": 2
+ },
+ {
+  "id": 85003,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Anti-Aquatic Species",
+  "max_level": 2
+ },
+ {
+  "id": 85004,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Aquatic/Oilsilk Motion",
+  "max_level": 2
+ },
+ {
+  "id": 85005,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Artillery",
+  "max_level": 3
+ },
+ {
+  "id": 85006,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Attack Boost",
+  "max_level": 3
+ },
+ {
+  "id": 85007,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Burst",
+  "max_level": 3
+ },
+ {
+  "id": 85008,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Charge Master",
+  "max_level": 2
+ },
+ {
+  "id": 85009,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Cliffhanger",
+  "max_level": 2
+ },
+ {
+  "id": 85010,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Coalescence",
+  "max_level": 2
+ },
+ {
+  "id": 85011,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Constitution",
+  "max_level": 3
+ },
+ {
+  "id": 85012,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Counterstrike",
+  "max_level": 2
+ },
+ {
+  "id": 85013,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Crackling Veil",
+  "max_level": 2
+ },
+ {
+  "id": 85014,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Critical Boost",
+  "max_level": 3
+ },
+ {
+  "id": 85015,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Critical Draw",
+  "max_level": 2
+ },
+ {
+  "id": 85016,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Critical Element",
+  "max_level": 2
+ },
+ {
+  "id": 85017,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Diversion",
+  "max_level": 2
+ },
+ {
+  "id": 85018,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Dragon Attack",
+  "max_level": 2
+ },
+ {
+  "id": 85019,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Dragon Resistance",
+  "max_level": 2
+ },
+ {
+  "id": 85020,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Elemental Attack Boost",
+  "max_level": 2
+ },
+ {
+  "id": 85021,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Evasion",
+  "max_level": 3
+ },
+ {
+  "id": 85022,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Expert",
+  "max_level": 3
+ },
+ {
+  "id": 85023,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Fire Attack",
+  "max_level": 2
+ },
+ {
+  "id": 85024,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Fire Resistance",
+  "max_level": 2
+ },
+ {
+  "id": 85025,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Flayer",
+  "max_level": 2
+ },
+ {
+  "id": 85026,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Focus",
+  "max_level": 3
+ },
+ {
+  "id": 85027,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Foray",
+  "max_level": 2
+ },
+ {
+  "id": 85028,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Free Meal",
+  "max_level": 2
+ },
+ {
+  "id": 85029,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Frostcraft",
+  "max_level": 2
+ },
+ {
+  "id": 85030,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Guts",
+  "max_level": 2
+ },
+ {
+  "id": 85031,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Handicraft",
+  "max_level": 3
+ },
+ {
+  "id": 85032,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Hearing Protection",
+  "max_level": 2
+ },
+ {
+  "id": 85033,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Heavy Hitter",
+  "max_level": 2
+ },
+ {
+  "id": 85034,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Heroics",
+  "max_level": 2
+ },
+ {
+  "id": 85035,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Ice Attack",
+  "max_level": 2
+ },
+ {
+  "id": 85036,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Ice Resistance",
+  "max_level": 2
+ },
+ {
+  "id": 85037,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Intimidator",
+  "max_level": 2
+ },
+ {
+  "id": 85038,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Jump Master",
+  "max_level": 2
+ },
+ {
+  "id": 85039,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Latent Power",
+  "max_level": 2
+ },
+ {
+  "id": 85040,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Leap of Faith",
+  "max_level": 2
+ },
+ {
+  "id": 85041,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Loadshells",
+  "max_level": 2
+ },
+ {
+  "id": 85042,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Marathon Runner",
+  "max_level": 2
+ },
+ {
+  "id": 85043,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Maximum Might",
+  "max_level": 2
+ },
+ {
+  "id": 85044,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Minds Eye",
+  "max_level": 2
+ },
+ {
+  "id": 85045,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Mushroomancer",
+  "max_level": 2
+ },
+ {
+  "id": 85046,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Normal/Rapid Up",
+  "max_level": 2
+ },
+ {
+  "id": 85047,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Oilsilk Elemental Boost",
+  "max_level": 2
+ },
+ {
+  "id": 85048,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Oilsilk Guard",
+  "max_level": 2
+ },
+ {
+  "id": 85049,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Oilsilk Sliding",
+  "max_level": 2
+ },
+ {
+  "id": 85050,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Pierce Up",
+  "max_level": 2
+ },
+ {
+  "id": 85051,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Poison Attack",
+  "max_level": 2
+ },
+ {
+  "id": 85052,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Poison Resistance",
+  "max_level": 2
+ },
+ {
+  "id": 85053,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Power Prolonger",
+  "max_level": 2
+ },
+ {
+  "id": 85054,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Protective Polish",
+  "max_level": 2
+ },
+ {
+  "id": 85055,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Quick Sheathe",
+  "max_level": 2
+ },
+ {
+  "id": 85056,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Razor Sharp",
+  "max_level": 2
+ },
+ {
+  "id": 85057,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Recovery Speed",
+  "max_level": 2
+ },
+ {
+  "id": 85058,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Recovery Up",
+  "max_level": 2
+ },
+ {
+  "id": 85059,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Resentment",
+  "max_level": 2
+ },
+ {
+  "id": 85060,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Sleep Attack",
+  "max_level": 2
+ },
+ {
+  "id": 85061,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Sleep Resistance",
+  "max_level": 2
+ },
+ {
+  "id": 85062,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Slugger",
+  "max_level": 2
+ },
+ {
+  "id": 85063,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Specialist",
+  "max_level": 2
+ },
+ {
+  "id": 85064,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Speed Eating",
+  "max_level": 2
+ },
+ {
+  "id": 85065,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Stamina Thief",
+  "max_level": 2
+ },
+ {
+  "id": 85066,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Surge to Life",
+  "max_level": 2
+ },
+ {
+  "id": 85067,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Thunder Attack",
+  "max_level": 2
+ },
+ {
+  "id": 85068,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Thunder Resistance",
+  "max_level": 2
+ },
+ {
+  "id": 85069,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Tremor Resistance",
+  "max_level": 2
+ },
+ {
+  "id": 85070,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Water Attack",
+  "max_level": 2
+ },
+ {
+  "id": 85071,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Water Resistance",
+  "max_level": 2
+ },
+ {
+  "id": 85072,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Weakness Exploit",
+  "max_level": 2
+ },
+ {
+  "id": 85073,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Wide-Range",
+  "max_level": 2
+ },
+ {
+  "id": 85074,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Wind Mantle",
+  "max_level": 2
+ },
+ {
+  "id": 85075,
+  "game_id": 3,
+  "charm_type": "wilds_talisman",
+  "skill_name": "Wirebug Whisperer",
+  "max_level": 2
+ }
+]
