@@ -4586,6 +4586,54 @@ mod tests {
     }
 
     #[test]
+    fn mhw_015_small_size_backfill() {
+        // Regression: `seed_mhw_monsters` uses `INSERT OR IGNORE` on the PK and
+        // only sets `size` on first insert, so a pre-015 install that had the
+        // 13 pack creatures (Jagras, Mernos, Vespoid, Kelbi, Shamos, Girros,
+        // Barnos, …) inserted as `Large` never corrected them. The `/monsters`
+        // "Small" filter hid 13 of the 23. `patch_mhw_015_small_size` now
+        // backfills `size` from the committed `mhw_monsters.json`.
+        let c = conn();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        // Baseline: the JSON truth is 23 Small / 71 Large for MHW.
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monsters WHERE game_id = 1 AND size = 'Small'"),
+            23,
+            "seed must match mhw_monsters.json (23 Small)"
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monsters WHERE game_id = 1 AND size = 'Large'"),
+            71,
+            "seed must match mhw_monsters.json (71 Large)"
+        );
+        // Simulate the drift: force one of the known-drifted rows to 'Large'
+        // and clear the patch marker, then re-apply. The patch must heal it.
+        c.execute_batch(
+            "UPDATE monsters SET size = 'Large' WHERE id = 1036 AND game_id = 1;
+             DELETE FROM data_patches WHERE name = 'mhw_015_small_size';",
+        )
+        .unwrap();
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monsters WHERE game_id = 1 AND size = 'Small'"),
+            22,
+            "precondition: drift injected (Jagras flipped to Large)"
+        );
+        crate::db::seed::apply_data_patches(&c)
+            .expect("apply_data_patches must heal monsters.size drift");
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monsters WHERE game_id = 1 AND size = 'Small'"),
+            23,
+            "patch must restore Jagras to Small"
+        );
+        // Re-running is a no-op (patch marker present).
+        crate::db::seed::apply_data_patches(&c).expect("second run must be a no-op");
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monsters WHERE game_id = 1 AND size = 'Small'"),
+            23
+        );
+    }
+
+    #[test]
     fn mhwilds_012_quests() {
         // 012: Wilds quest list seeded from Fextra (Assignments + Optional +
         // Event). 33 + 81 + 60 = 174 rows, with the existing quests.category
@@ -5532,7 +5580,17 @@ mod tests {
             count("SELECT COUNT(*) FROM monsters WHERE game_id IN (2, 3) AND icon_url_lg IS NULL"),
             0
         );
-        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 25);
+        // Every registered patch must have recorded itself, and the
+        // 015 size backfill in particular (it self-guards on its own name).
+        assert!(
+            count("SELECT COUNT(*) FROM data_patches") >= 26,
+            "every apply_data_patches() entry must record itself"
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM data_patches WHERE name = 'mhw_015_small_size'"),
+            1,
+            "mhw_015_small_size must record itself"
+        );
         // MHFU equipment backfill: variants have gear links now.
         assert!(
             count("SELECT COUNT(*) FROM monster_equipment WHERE game_id = 5 AND monster_id = 26")
@@ -5739,7 +5797,17 @@ mod tests {
         );
         // Second run: pure no-op (24 PK lookups, warm-boot fast path).
         crate::db::seed::apply_data_patches(&c).unwrap();
-        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 25);
+        // Every registered patch must have recorded itself, and the
+        // 015 size backfill in particular (it self-guards on its own name).
+        assert!(
+            count("SELECT COUNT(*) FROM data_patches") >= 26,
+            "every apply_data_patches() entry must record itself"
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM data_patches WHERE name = 'mhw_015_small_size'"),
+            1,
+            "mhw_015_small_size must record itself"
+        );
         assert_eq!(count("SELECT COUNT(*) FROM items"), items_before);
 
         // Regression simulation: revert corrected rows to pre-fix values and
@@ -5760,7 +5828,17 @@ mod tests {
             count("SELECT COUNT(*) FROM monster_drops WHERE monster_id = 20 AND item_id = 375 AND method = 'carve' AND part = 'Body' AND rank = 'High'"),
             0
         );
-        assert_eq!(count("SELECT COUNT(*) FROM data_patches"), 25);
+        // Every registered patch must have recorded itself, and the
+        // 015 size backfill in particular (it self-guards on its own name).
+        assert!(
+            count("SELECT COUNT(*) FROM data_patches") >= 26,
+            "every apply_data_patches() entry must record itself"
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM data_patches WHERE name = 'mhw_015_small_size'"),
+            1,
+            "mhw_015_small_size must record itself"
+        );
         assert_eq!(count("SELECT COUNT(*) FROM items"), items_before);
     }
 

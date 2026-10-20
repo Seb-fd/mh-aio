@@ -1,5 +1,15 @@
 # 002 — MHW data import (core) — DONE
 
+> **Superseded counts (2026-10-20 docs refresh).** These are pre-`002b` /
+> pre-`010` figures. The corrected values live in
+> [`010-mhw-100`](../010-mhw-100/spec.md) and
+> [`015-mhw-endemic`](../015-mhw-endemic/spec.md):
+> monsters 94 (**23 Small + 71 Large** — `size` is backfilled from the
+> committed JSON by `patch_mhw_015_small_size`), drops **5826** (not 5862),
+> quest_rewards **3675** (not 4176), skills **179** (not 178),
+> combines **186** (not 188), 404 decorations, 788 weakness rows.
+> See [`docs/data-coverage.md`](../../../docs/data-coverage.md).
+
 ## Context
 
 - Status: DONE (core). The old "dataset is pending" statement is superseded: World+Iceborne core (items / monsters / weapons / armor / quests / skills / drops / materials / melder / mantles / palico) is seeded and browsable offline. Remaining gaps moved to `002b-mhw-gaps` (decorations, weaknesses/equipment, skill-points, shop/gather sources).

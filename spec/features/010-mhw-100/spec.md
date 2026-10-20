@@ -1,5 +1,14 @@
 # 010 — MHW to 100% (ailments, traps, charms, roster, Kiranico, Fandom) — DONE
 
+> **Superseded counts (2026-10-20 docs refresh).** The "endemic life"
+> out-of-scope entry below is **closed** —
+> [`015-mhw-endemic`](../015-mhw-endemic/spec.md) shipped 33 curated
+> `endemic_life` rows plus the `/mhw/endemic` browser. Combine is
+> **186** in the DB (the "188" here is the pre-migration JSON
+> denominator). `tasks.md` line 16 says "22 patches"; the
+> `data_patches` table now holds **27**.
+> See [`docs/data-coverage.md`](../../../docs/data-coverage.md).
+
 ## Context
 
 - Problem: MHW core was DONE (002/002b/009) but twelve gaps kept it below mh2g/mhp3rd parity: (1) zero `monster_ailments` rows; (2) zero `monster_tools` rows; (3) `stagger_hp` all NULL; (4) 4 missing monster descriptions; (5) no hunter charms table; (6) 50 empty quest rosters; (7) set bonuses incomplete (no skill2); (8) weapons/armor descriptions 0; (9) deco acquisition empty (no craft mats exist); (10) melder sources thin (10); (11) no Hoarfrost/Guiding Lands gather; (12) combine halves collapsed by the UNIQUE index. All closed below.

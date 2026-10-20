@@ -1,5 +1,15 @@
 # 004 — MHWilds data import — DONE (core)
 
+> **Superseded counts (2026-10-20 docs refresh).** This is the only
+> surviving Wilds spec record, so read the out-of-scope list with care:
+> **quests, charms, small monsters and endemic life all shipped**
+> (174 quests / 76 talismans / 34 small monsters / 70 endemic rows) via
+> the `patch_mhwilds_012_014` backfill — those specs have no
+> `spec/features/` folder. Counts here are also pre-follow-up: drops
+> **1399** (not 1775), combines **120** (not 121), weaknesses **324**
+> (not 340), monsters **68** (34 Large + 34 Small, not 34 Large).
+> See [`docs/data-coverage.md`](../../../docs/data-coverage.md).
+
 ## Context
 
 - Status: DONE (core). Source turned out to be the MHDB Wilds API (`https://wilds.mhdb.io/en`, browser UA required — it 403s the default python UA) via `scripts/generate_mhwilds_from_mhdb.py`, not Kiranico/Game8 scraping.

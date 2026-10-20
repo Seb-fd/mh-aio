@@ -1,5 +1,15 @@
 # 003 — MHR data import — DONE (Phase A bulk + Phase B Sunbreak v16)
 
+> **Superseded counts (2026-10-20 docs refresh).** These are the pre-`011`
+> Sunbreak figures. Current values: items **1668** (not 1642), drops
+> **6403** (not 7092), quest_rewards **6426** (not 7508),
+> weaknesses **624** (not 629), combines **178**.
+> The out-of-scope entries below are **closed by
+> [`011-mhr-100`](../011-mhr-100/spec.md)**: talismans shipped as
+> 11,849 generator rows, and the "no combines upstream" claim was
+> superseded by the `item-mix` import (178 rows, chance 100).
+> See [`docs/data-coverage.md`](../../../docs/data-coverage.md).
+
 ## Context
 
 - Status: DONE. Strategy was A→B: Phase A bulk base-Rise JSONs (fast, playable), Phase B full Sunbreak v16 Kiranico scrape (complete).

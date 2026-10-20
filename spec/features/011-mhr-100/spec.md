@@ -1,5 +1,10 @@
 # 011 — MHR Rise + Sunbreak to 100% — DONE
 
+> **Superseded counts (2026-10-20 docs refresh).** The baseline quoted on
+> the Context line is stale: items **1668** (not 1642) and quest_rewards
+> **6426** (not 7508). Drops are **6403**, weaknesses **624**.
+> See [`docs/data-coverage.md`](../../../docs/data-coverage.md).
+
 ## Context
 
 - MHR baseline DONE (`003`: 112 monsters, 1642 items, 3953 weapons, 1591 armor/410 sets, 946 quests/7508 rewards, 147 skills, 243 decos; tests `mhr_003a/003b` green).
@@ -14,7 +19,7 @@
 - List-only views (full data inline, no detail pages): buddy weapons/armor (stats only, **no materials upstream**), `item-mix` crafting list (numbered, → `item_combine`), rampage decorations, switch skills, dango skills, canteen menu, endemic life, requests.
 - Talisman CSVs are full probability enumerations (40 MB / 778k lines each) — aggregate to distinct (method × skill1/lv × skill2/lv × slots) generator rows in existing `charms` + `charm_skills` tables (MHP3rd pattern). Sunbreak methods (Moonbow/Haze/Aurora): check GitLab tree in Phase D.
 - `mhr_armor_sets.json`: `bonus_skill` key exists, **0/410 non-null** → Rise has no armor set bonuses (rampage skills are the weapon-side equivalent). `bonus_skill2` N/A by design.
-- Weapons: `slots` non-null 2508/3953 (sizes TBD via alt-text parse), `skills`/`description` 0 (stay null unless found).
+- Weapons: `slots` non-null 2508/3953 (**sizes parsed in Phase C** from `<img alt>` — resolved, no longer TBD), `skills`/`description` 0 (stay null unless found).
 
 ## Scope
 
@@ -32,15 +37,16 @@
 
 ## Acceptance criteria
 
-- [ ] All entity lists + details work for `mhr`, no orphan FKs, idempotent re-seed (stable counts).
-- [ ] `mhr_011a/b/c/d/e` tests green (one per phase, counts + spot asserts).
-- [ ] `verify_mhr_100.py` PASSED (counts, orphan checks, generator convergence where applicable).
-- [ ] Pre-existing installs heal via `patch_mhr_011` (warm-boot backfill test).
-- [ ] Full gate green (check/eslint/prettier/fmt/clippy/38+ tests/build/version).
+- [x] All entity lists + details work for `mhr`, no orphan FKs, idempotent re-seed (stable counts).
+- [x] `mhr_011a/b/c/d/e` tests green (one per phase, counts + spot asserts).
+- [x] `verify_mhr_100.py` PASSED (counts, orphan checks, generator convergence where applicable).
+- [x] Pre-existing installs heal via `patch_mhr_011` (warm-boot backfill test).
+- [x] Full gate green (check/eslint/prettier/fmt/clippy/build/version).
 
 ## Data contracts
 
-- New JSON (committed): `mhr_monster_status.json`, `mhr_monster_partbreak.json`, `mhr_buddy_weapons.json`, `mhr_buddy_armor.json`, `mhr_rampage_skills.json`, `mhr_rampage_decorations.json`, `mhr_weapon_rampage.json`, `mhr_talismans.json`, `mhr_combine.json`, `mhr_item_sources_extra.json`, `mhr_reference.json` (dango/switch/endemic).
+- New JSON (committed): `mhr_monster_status.json`, `mhr_monster_partbreak.json`, `mhr_buddy_weapons.json`, `mhr_buddy_armor.json`, `mhr_rampage_skills.json`, `mhr_rampage_decorations.json`, `mhr_weapon_rampage.json`, `mhr_talismans.json`, `mhr_combine.json`, `mhr_item_sources_extra.json`.
 - New tables: `buddy_weapons`, `buddy_armor`, `rampage_skills`, `rampage_decorations`, `weapon_rampage`. Reused: `monster_ailments`, `monster_tools` (traps iff sourced), `charms` + `charm_skills` (talismans), `item_combine`.
-- ID offsets (game_id 2 space, no collisions): TBD in each phase implementation; recorded here when fixed.
+- ID offsets (game_id 2 space, no collisions): buddy weapons 70001+, buddy armor 70501+, rampage skills 80001+, rampage decos (= items) 60001+, talismans 60000+. The pre-existing 003 ranges are monsters 30001+, items 40001+, weapons 50001+, armor 60001+, quests 200001+.
 - Seed: `INSERT OR IGNORE` + JSON-truth backfills; `patch_mhr_011` for warm-boot installs. Never DELETE reference rows.
+- `mhr_reference.json` (dango / switch / endemic) was **not** built — TE2 finalized those as documented N/A with no DB representation.

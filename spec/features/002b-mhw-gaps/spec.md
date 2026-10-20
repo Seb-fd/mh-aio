@@ -1,5 +1,12 @@
 # 002b — MHW gaps (decorations, weaknesses, sources) — DONE
 
+> **Superseded counts (2026-10-20 docs refresh).** Note that the
+> "88 monsters; 6 small monsters have no hitzones" arithmetic below no
+> longer resolves — MHW carries 94 monsters (23 Small + 71 Large) and
+> 788 weakness rows. See
+> [`010-mhw-100`](../010-mhw-100/spec.md) and
+> [`docs/data-coverage.md`](../../../docs/data-coverage.md).
+
 ## Context
 
 - Problem: MHW core was DONE (see `002-mhw-data-import`), but four gaps kept it below MH2G parity: (1) decorations empty; (2) no `monster_weaknesses`/`monster_equipment`/`weapon_skill_points`; (3) thin shop/gather `item_sources`; (4) Normal-only combine unexplained. All closed below.

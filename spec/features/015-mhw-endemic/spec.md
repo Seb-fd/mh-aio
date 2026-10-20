@@ -4,13 +4,13 @@
 
 - MHW + Iceborne baseline DONE (`010-mhw-100`: 1359 items, 94 monsters, 3544 weapons, 1595 armor, 521 quests, etc.; tests `010-mhw-100*` green).
 - MHWilds got an Endemic Life section as part of `014-mhwilds-small-endemic` (70 entries in `endemic_life`, list-only `/mhwilds/endemic` route, sidebar entry `gameOnly: 'mhwilds'`).
-- MHW has **no in-game "Endemic Life" category** in the original release. To provide parity with Wilds, this spec curates ~35 small creatures + bug/ammo-yield pickups from Fandom MHW+Iberence + Kiranico. `kind` field uses **Slinger-ammo yield** for parity with Wilds (e.g. Vigorwasp → `"Recovery"`, Godbug → `"Mega Potion"`).
+- MHW has **no in-game "Endemic Life" category** in the original release. To provide parity with Wilds, this spec curates 33 small creatures + bug/ammo-yield pickups from Fandom MHW+Iberence + Kiranico. `kind` field uses **Slinger-ammo yield** for parity with Wilds (e.g. Vigorwasp → `"Recovery"`, Godbug → `"Mega Potion"`).
 
 ## Scope
 
 ### In scope
 
-- A. **Data**: `src-tauri/data/mhw_endemic_life.json` (~35 entries, IDs 90001-90035). Sources:
+- A. **Data**: `src-tauri/data/mhw_endemic_life.json` (33 entries, IDs 90001-90033). Sources:
   - 14 small-monster pack creatures from `tmp/mhw_mat.json` / Fandom (Barnos, Gajau, Gastodon, Girros, Hornetaur, Jagras, Kelbi, Kestodon, Mernos, Mosswine, Noios, Raphinos, Shamos, Vespoid).
   - Bug family: Vigorwasp, Godbug, Bitterbug, Flashbug, Thunderbug, Insect, King Scarab, Scarab, Pillopod.
   - Slinger ammo origins: Scatternut, Screamer Pod, Bomb Pod, Thorn Pod, Stone, Redpit Vine, Woven Vine, Shiny Beetle.
@@ -31,12 +31,12 @@
 
 ## Acceptance criteria
 
-- [ ] `cargo test` reports 47/47 pass (new `mhw_015_endemic` test added).
-- [ ] Fresh DB shows 30+ rows in `endemic_life WHERE game_id = 1`; `/mhw/endemic` renders them with kind filter chips.
-- [ ] `/mhwilds/endemic` still shows 70 rows (no regression).
-- [ ] Sidebar shows Endemic Life for both MHW and MHWilds; absent for MHP3RD/MHR/MH2G.
-- [ ] Warm-boot (run `seed()` twice on same DB): second run is no-op, no schema delta.
-- [ ] Full CI gate green: `npm run check` 0/0, ESLint 0 errors, Prettier clean, `cargo fmt --check` clean, `cargo clippy -D warnings` clean, `cargo build` clean, `node scripts/check-version.js` OK, `npm audit` 0 vulns.
+- [x] `cargo test` reports 47/47 pass (new `mhw_015_endemic` test added).
+- [x] Fresh DB shows 30+ rows in `endemic_life WHERE game_id = 1`; `/mhw/endemic` renders them with kind filter chips.
+- [x] `/mhwilds/endemic` still shows 70 rows (no regression).
+- [x] Sidebar shows Endemic Life for both MHW and MHWilds; absent for MHP3RD/MHR/MH2G.
+- [x] Warm-boot (run `seed()` twice on same DB): second run is no-op, no schema delta.
+- [x] Full CI gate green: `npm run check` 0/0, ESLint 0 errors, Prettier clean, `cargo fmt --check` clean, `cargo clippy -D warnings` clean, `cargo build` clean, `node scripts/check-version.js` OK, `npm audit` 0 vulns.
 
 ## Data contracts
 
@@ -44,4 +44,4 @@
 - New seed fn: `seed_mhw_endemic_life(conn)` — uses `include_str!("../../data/mhw_endemic_life.json")` + `INSERT OR IGNORE`.
 - New patch: `mhw_015_endemic` (in `apply_data_patches` dispatcher).
 - New UNIQUE index: `uq_endemic_life` on `endemic_life(game_id, id)`.
-- ID offset: 90001-90035.
+- ID offset: 90001-90033.

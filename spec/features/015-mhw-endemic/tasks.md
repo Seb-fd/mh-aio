@@ -8,7 +8,7 @@
 
 ## Phase A — Data + JSON
 
-- [x] TA1 — Curated 35 MHW endemic entries (IDs 90001-90035): 14 small-monster packs, 9 bugs, 8 Slinger-pickups, 2 special, 2 misc. Sourced from Fandom MHW+Iberence wiki + Kiranico (already cached in `tmp_mhw_100/`).
+- [x] TA1 — Curated **33** MHW endemic entries (IDs 90001-90033): 23 small-monster packs (14 with a specific Slinger/yield, 9 plain pack herbivores), 8 bugs, 2 special (Boaboa Snowman, Gajalaka Trap). Sourced from Fandom MHW+Iberence wiki + Kiranico (already cached in `tmp_mhw_100/`).
 - [x] TA2 — Wrote `src-tauri/data/mhw_endemic_life.json` with `{id, name, type, description}` per row. `kind` = Slinger-ammo yield for parity with Wilds.
 - [x] TA3 — Wrote `scripts/generate_mhw_endemic.py` (idempotent emitter that regenerates the JSON from a hand-curated inline data block).
 

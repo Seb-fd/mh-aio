@@ -1,5 +1,13 @@
 # 000 — MH2G (Freedom Unite) baseline — DONE
 
+> **Superseded counts (2026-10-20 docs refresh).** This spec is the
+> retro-anchor; its figures are a point-in-time record. Current values:
+> `armor_sets` **348** (spec says 949), `monster_drops` **3353**
+> (spec says 3402), `item_sources` **15,671** (spec says 12,751).
+> The `combine_type` split that `spec.md` left as an open TODO is now
+> resolved: **379 Normal + 39 Alchemy + 14 Treasure = 432**.
+> See [`docs/data-coverage.md`](../../../docs/data-coverage.md).
+
 ## Context
 
 - Problem: MH2G (`mh2g`, game_id 5) is the verified MVP but had no dedicated spec; its state was only anchored in `roadmap.md` Phase 1/2 + `docs/fidelity-report.md` + `STATUS.md`.

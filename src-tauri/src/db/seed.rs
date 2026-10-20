@@ -252,6 +252,7 @@ pub fn apply_data_patches(conn: &Connection) -> Result<()> {
     run(conn, "patch_mhr_011", patch_mhr_011)?;
     run(conn, "patch_mhwilds_012_014", patch_mhwilds_012_014)?;
     run(conn, "patch_mhw_015", patch_mhw_015)?;
+    run(conn, "patch_mhw_015_small_size", patch_mhw_015_small_size)?;
     Ok(())
 }
 
@@ -297,6 +298,39 @@ fn patch_mhw_015(conn: &Connection) -> Result<()> {
         return Ok(());
     }
     seed_mhw_endemic_life(conn)?;
+    record_patch(conn, NAME)
+}
+
+// 015-mhw-endemic (companion): correct `monsters.size` drift for MHW.
+//
+// `seed_mhw_monsters` uses `INSERT OR IGNORE` on the PK and only sets `size`
+// on first insert, so a pre-015 install that inserted the 13 pack creatures
+// (Jagras, Mernos, Vespoid, Kelbi, Shamos, Girros, Barnos, …) via an older
+// seed path kept `size='Large'` forever. The `/[game]/monsters` "Small" filter
+// then hid 13 of the 23 small monsters.
+//
+// This backfill is driven off the committed `mhw_monsters.json` (never a
+// hardcoded id list) so it always converges on the JSON truth, and it is
+// idempotent: `size IS NOT ?1` is false for already-correct rows.
+fn patch_mhw_015_small_size(conn: &Connection) -> Result<()> {
+    const NAME: &str = "mhw_015_small_size";
+    if patch_applied(conn, NAME)? {
+        return Ok(());
+    }
+    #[derive(Deserialize)]
+    struct MhwMonSizeJson {
+        id: i32,
+        size: String,
+    }
+    let json_data = include_str!("../../data/mhw_monsters.json");
+    let mons: Vec<MhwMonSizeJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for m in &mons {
+        conn.execute(
+            "UPDATE monsters SET size = ?1 WHERE id = ?2 AND game_id = ?3 AND size IS NOT ?1",
+            rusqlite::params![m.size, m.id, MHW],
+        )?;
+    }
     record_patch(conn, NAME)
 }
 

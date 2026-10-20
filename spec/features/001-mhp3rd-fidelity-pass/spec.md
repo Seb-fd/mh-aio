@@ -1,5 +1,15 @@
 # 001 — MHP3rd fidelity pass — DONE
 
+> **Superseded counts (2026-10-20 docs refresh).** The canonical-counts
+> block below is a point-in-time record and several figures have since
+> changed. **Most importantly, line 40's instruction not to use the
+> 1065-item figure is itself obsolete — 1065 is now the live count.**
+> Current values: items **1065** (Material 964 / Consumable 55 / Ammo 46),
+> combines **398** (276 Normal + 122 Alchemy), drops **2200**,
+> weapons **972**, armor **1106** (345 sets), quest_rewards **1864**,
+> item_sources **4099**, charms 50,635.
+> See [`docs/data-coverage.md`](../../../docs/data-coverage.md).
+
 ## Context
 
 - Status: DONE (T1–T11 all `[x]`). What was planned as "populate shop/trade/farm + numeric audit" turned out to be mostly a **visibility fix + audit**: the 2016 `item_sources` rows (shop 102 / trade 528 / farm 120 included) were already seeded; the real gap was `get_item_sources` (`queries.rs`) excluding all `carve/capture/drop/break/quest_reward` junction rows, which hid 987 small-monster rows (`source_id NULL`). Fixed: exclusion now applies only when `source_id IS NOT NULL` (mirrored `monster_drops` dupes stay excluded; same fix unhid 3772 MH2G rows).
