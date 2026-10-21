@@ -1,6 +1,6 @@
 # MH-AIO - Project Status
 
-## Current Version: v0.1.1
+## Current Version: v0.2.0
 
 > **All counts below are sourced from [`docs/data-coverage.md`](docs/data-coverage.md)** (generated per-table × per-game matrix). Regenerate with `py scripts/gen_data_coverage.py`; verify with `--check`.
 

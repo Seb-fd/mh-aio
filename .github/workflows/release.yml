@@ -12,7 +12,21 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [macos-latest, ubuntu-22.04, windows-latest]
+        include:
+          - platform: 'macos-latest'
+            arch: 'silicon'
+            args: '--target aarch64-apple-darwin'
+          - platform: 'macos-latest'
+            arch: 'intel'
+            args: '--target x86_64-apple-darwin'
+          - platform: 'ubuntu-22.04'
+            args: ''
+          # Native ARM runner: public repos only. If this job ever fails to
+          # schedule, drop just this entry - nothing else depends on it.
+          - platform: 'ubuntu-22.04-arm'
+            args: ''
+          - platform: 'windows-latest'
+            args: ''
 
     runs-on: ${{ matrix.platform }}
     steps:
@@ -21,14 +35,20 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 'lts/*'
           cache: 'npm'
 
       - name: Install Rust stable
         uses: dtolnay/rust-toolchain@stable
+        with:
+          # Only the macOS runners cross-compile; empty elsewhere speeds up
+          # the Windows/Linux builds.
+          targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
 
       - name: Install dependencies (Ubuntu only)
-        if: matrix.platform == 'ubuntu-22.04'
+        # MUST match every ubuntu* matrix entry above, otherwise the arm64 job
+        # skips its webkit deps and fails to link.
+        if: matrix.platform == 'ubuntu-22.04' || matrix.platform == 'ubuntu-22.04-arm'
         run: |
           sudo apt-get update
           sudo apt-get install -y build-essential curl wget file libxdo-dev libssl-dev libgtk-3-dev librsvg2-dev patchelf pkg-config
@@ -41,12 +61,41 @@ jobs:
         run: npm ci
 
       - name: Build and Release Tauri
-        uses: tauri-apps/tauri-action@v0
+        uses: tauri-apps/tauri-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tagName: __VERSION__
           releaseName: 'MH-AIO v__VERSION__'
-          releaseBody: 'Automated release for MH-AIO.'
+          # Curated highlights; GitHub's auto-generated commit notes are
+          # appended below (releaseBody is pre-pended to generated notes).
+          releaseBody: |
+            Offline Monster Hunter encyclopedia for **5 titles**, all fully seeded.
+
+            **New in 0.2.0**
+
+            - **MHW + Iceborne Endemic Life** — 33 curated creatures sharing the Wilds browser
+            - **MH Wilds quests, charms, small monsters + endemic** — 174 quests, 76 talismans, 34 small monsters, 70 endemic rows
+            - **MHR + Sunbreak to 100%** — status ailments, part-break, traps, buddy gear, rampage, 11,849 talismans
+            - **MHW + Iceborne to 100%** — 721 ailments, 465 traps, 317 hunter charms, set-bonus skill2, deco acquisition
+            - **MHP3rd completeness** — 50,635 excavated charms with skill search, Comrades gear, trap tools
+            - **MH2G gap completion** — drops, weaknesses, items, quests, gear
+            - New `charms` / `comrades` / `tools` / `endemic` sections
+            - `docs/data-coverage.md` — generated per-table × per-game row counts
+
+            **Fixed**
+
+            - Warm-boot FK panic (decorations now deleted before the skills they reference)
+            - 13 of 23 MHW small monsters were stuck as `Large` and missing from the Small filter
+            - `npm audit` clean (was 4 transitive advisories)
+
+            **Known limitations** — macOS is ad-hoc signed, so you may need to allow it once in
+            System Settings → Privacy & Security (no notarization; that needs a paid Apple
+            Developer account). Windows installers are unsigned, so SmartScreen will warn until
+            the file accrues reputation. There is no auto-updater.
+
+            ---
+          generateReleaseNotes: true
           releaseDraft: false
           prerelease: false
+          args: ${{ matrix.args }}

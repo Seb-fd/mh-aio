@@ -1,7 +1,7 @@
 # Contributing
 
 Thanks for considering a contribution. MH-AIO is an offline-first Tauri v2 encyclopedia
-for Monster Hunter games, currently at v0.1.1 with all five titles seeded — MH2G,
+for Monster Hunter games, currently at v0.2.0 with all five titles seeded — MH2G,
 MHP3rd, MHW+Iceborne and MHR+Sunbreak at 100%, plus MH Wilds core + quests, charms,
 small monsters and endemic life. The canonical agent + arch doc is `AGENTS.md` at the
 repo root — read it first. **All row counts live in the generated
@@ -59,6 +59,10 @@ and `010-mhw-100/spec.md` for the per-game rules.
   `docs/fidelity-report.md` and `spec/constitution/*` must match the generated
   `docs/data-coverage.md`. Regenerate it, then copy figures from it — don't retype them.
 - `py scripts/gen_data_coverage.py --check` fails if the committed doc is stale.
+  It reads your **local** DB, so it can legitimately disagree right after a
+  release that ships a new `patch_*` backfill: the committed doc reflects what
+  the released code produces, your DB still reflects the pre-patch state until
+  you launch the app once. Launch the app, then re-run the check.
 - Specs under `spec/features/` are **historical records**. When a number in one is now
   wrong, add a `> **Superseded:**` banner pointing at the corrected value and the spec
   that owns it — don't rewrite the body.
