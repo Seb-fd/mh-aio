@@ -143,7 +143,16 @@ Registered in `src-tauri/src/lib.rs` via `tauri::generate_handler!` (**43 comman
 
 - **Git Tags**: releases are triggered by pushing a semver git tag **with the `v` prefix**
   (`git tag -a v0.2.0 -m "MH-AIO v0.2.0" && git push origin v0.2.0`) — **only when explicitly
-  requested**. `release.yml` triggers on `'v*'`; a bare `0.2.0` tag will **not** build anything.
+  requested**. `release.yml` triggers on `'v*'` and `'[0-9]*'`, so a bare `0.2.0` tag builds too;
+  still prefer `v` since `AGENTS.md`/GitHub Releases/tauri-action all read better that way.
+  **A wrong tag format is a silent no-op** — no workflow run, no failed run, nothing to notice.
+  This actually happened: `0.2.0` was pushed bare on 2026-10-22 and published nothing; the release
+  only appeared after re-tagging as `v0.2.0`. If a release is missing, check
+  `gh release list` **and** `gh api repos/Seb-fd/mh-aio/actions/runs?event=push` before assuming CI broke.
+  Note the published release tag is `__VERSION__` (from `package.json`), not the pushed tag — pushing
+  `v0.1.1` produced the release `0.1.0`.
+- **Stray tags**: don't leave bare `0.x.y` tags on the remote next to `v0.x.y`. Delete them
+  (`git push origin --delete 0.2.0`); they point at the same commit and confuse `gh release list`.
 - **Release notes**: `CHANGELOG.md` is the canonical long-form record. `release.yml` inlines a
   curated `releaseBody` (duplicated highlights — keep them in sync) and sets
   `generateReleaseNotes: true`, which **prepends** `releaseBody` to GitHub's auto-generated commit

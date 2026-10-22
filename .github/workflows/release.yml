@@ -3,7 +3,10 @@ name: Release
 on:
   push:
     tags:
+      # 'v*' is the canonical form, but accept bare semver too: a bare tag used
+      # to be a silent no-op (nothing published, no failed run to notice).
       - 'v*'
+      - '[0-9]*'
 
 jobs:
   publish:
