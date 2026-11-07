@@ -34,7 +34,7 @@
     <div class="mb-4 md:mb-6">
       <h1 class="fluid-h2 font-bold text-gray-100">Tools</h1>
       <p class="text-sm text-gray-400 mt-1">
-        MHW · Mantles · Boosters · Palico (Gadgets + Safari) — World + Iceborne
+        MHW · Mantles · Boosters · Palico (Gadgets + Safari) · Melder — World + Iceborne
       </p>
       <div class="flex gap-2 mt-4 flex-wrap" role="group" aria-label="Tool categories">
         <button
@@ -66,6 +66,16 @@
             ? 'bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)] border-transparent'
             : 'bg-[var(--theme-bg-surface)] text-gray-400 border-[var(--theme-border)] hover:text-gray-200'}"
           >Palico</button
+        >
+        <button
+          onclick={() => go('melder')}
+          aria-current={isActive('melder') ? 'page' : undefined}
+          class="px-4 min-h-[44px] rounded-full text-xs font-medium border transition-colors motion-safe:transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 {isActive(
+            'melder',
+          )
+            ? 'bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)] border-transparent'
+            : 'bg-[var(--theme-bg-surface)] text-gray-400 border-[var(--theme-border)] hover:text-gray-200'}"
+          >Melder</button
         >
       </div>
     </div>

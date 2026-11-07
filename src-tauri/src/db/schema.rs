@@ -500,6 +500,14 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
             chance INTEGER
         );
 
+        -- Bow coating compatibility (MHW/Iceborne; committed mhw_bow_coatings.json
+        -- was previously unseeded). One row per (weapon_id, coating).
+        CREATE TABLE IF NOT EXISTS weapon_coatings (
+            weapon_id INTEGER REFERENCES weapons(id),
+            coating TEXT NOT NULL,
+            PRIMARY KEY (weapon_id, coating)
+        );
+
         -- Specialized Tools — Mantles & Boosters (MHW/Iceborne exclusive)
         CREATE TABLE IF NOT EXISTS mhw_mantles (
             id INTEGER PRIMARY KEY,
@@ -570,6 +578,7 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
         CREATE INDEX IF NOT EXISTS idx_item_combine_result ON item_combine(result_item_id);
         CREATE INDEX IF NOT EXISTS idx_item_combine_component ON item_combine(component_item_id);
         CREATE INDEX IF NOT EXISTS idx_item_sources_item ON item_sources(item_id);
+        CREATE INDEX IF NOT EXISTS idx_weapon_coatings_weapon ON weapon_coatings(weapon_id);
         CREATE INDEX IF NOT EXISTS idx_melder_result ON melder_recipes(result_item_id);
         CREATE INDEX IF NOT EXISTS idx_melder_game ON melder_recipes(game_id);
         CREATE INDEX IF NOT EXISTS idx_quest_rewards_quest ON quest_rewards(quest_id);
@@ -684,7 +693,7 @@ fn add_idempotency_constraints(conn: &Connection) -> Result<()> {
         ("uq_weapon_craft", "DELETE FROM weapon_craft WHERE rowid NOT IN (SELECT MIN(rowid) FROM weapon_craft GROUP BY weapon_id, craft_kind, item_id);"),
         ("uq_weapon_materials", "DELETE FROM weapon_materials WHERE rowid NOT IN (SELECT MIN(rowid) FROM weapon_materials GROUP BY weapon_id, item_id);"),
         ("uq_armor_materials", "DELETE FROM armor_materials WHERE rowid NOT IN (SELECT MIN(rowid) FROM armor_materials GROUP BY armor_id, item_id);"),
-        ("uq_quest_rewards", "DELETE FROM quest_rewards WHERE rowid NOT IN (SELECT MIN(rowid) FROM quest_rewards GROUP BY quest_id, item_id, IFNULL(condition, ''));"),
+        ("uq_quest_rewards2", "DELETE FROM quest_rewards WHERE rowid NOT IN (SELECT MIN(rowid) FROM quest_rewards GROUP BY quest_id, item_id, IFNULL(condition, ''), quantity, IFNULL(probability, -1));"),
         ("uq_monster_drops2", "DELETE FROM monster_drops WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_drops GROUP BY monster_id, item_id, method, IFNULL(part, ''), IFNULL(rank, ''), IFNULL(condition, ''), quantity, IFNULL(probability, -1));"),
         ("uq_monster_weaknesses", "DELETE FROM monster_weaknesses WHERE rowid NOT IN (SELECT MIN(rowid) FROM monster_weaknesses GROUP BY monster_id, IFNULL(part_name, ''));"),
         ("uq_item_sources", "DELETE FROM item_sources WHERE rowid NOT IN (SELECT MIN(rowid) FROM item_sources GROUP BY item_id, source_type, IFNULL(source_id, -1), IFNULL(quantity_min, -1), IFNULL(quantity_max, -1), IFNULL(probability, -1), IFNULL(location, ''), IFNULL(conditions, ''));"),
@@ -714,7 +723,8 @@ fn add_idempotency_constraints(conn: &Connection) -> Result<()> {
         CREATE UNIQUE INDEX IF NOT EXISTS uq_weapon_craft ON weapon_craft(weapon_id, craft_kind, item_id);
         CREATE UNIQUE INDEX IF NOT EXISTS uq_weapon_materials ON weapon_materials(weapon_id, item_id);
         CREATE UNIQUE INDEX IF NOT EXISTS uq_armor_materials ON armor_materials(armor_id, item_id);
-        CREATE UNIQUE INDEX IF NOT EXISTS uq_quest_rewards ON quest_rewards(quest_id, item_id, IFNULL(condition, ''));
+        DROP INDEX IF EXISTS uq_quest_rewards;
+        CREATE UNIQUE INDEX IF NOT EXISTS uq_quest_rewards2 ON quest_rewards(quest_id, item_id, IFNULL(condition, ''), quantity, IFNULL(probability, -1));
         DROP INDEX IF EXISTS uq_monster_drops;
         CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_drops2 ON monster_drops(monster_id, item_id, method, IFNULL(part, ''), IFNULL(rank, ''), IFNULL(condition, ''), quantity, IFNULL(probability, -1));
         CREATE UNIQUE INDEX IF NOT EXISTS uq_monster_weaknesses ON monster_weaknesses(monster_id, IFNULL(part_name, ''));

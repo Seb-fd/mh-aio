@@ -1,4 +1,4 @@
-﻿use rusqlite::{params, Connection, OptionalExtension, Result};
+use rusqlite::{params, Connection, OptionalExtension, Result};
 use serde::{Deserialize, Serialize};
 
 /// Global search result across all game entities, normalized accent-insensitive.
@@ -218,6 +218,7 @@ pub struct WeaponDetail {
     pub upgrade_materials: Vec<MaterialRef>,
     pub is_forgeable: bool,
     pub rampage: Vec<RampageRef>,
+    pub coatings: Vec<String>,
     pub icon_name: Option<String>,
     pub icon_color: Option<String>,
     pub icon_url: Option<String>,
@@ -1295,6 +1296,7 @@ pub fn get_weapon_detail(conn: &Connection, id: i32) -> Result<Option<WeaponDeta
     let upgrade_materials = get_weapon_craft_materials(conn, id, "upgrade")?;
     let is_forgeable = !forge_materials.is_empty();
     let rampage = get_weapon_rampage(conn, id)?;
+    let coatings = get_weapon_coatings(conn, id)?;
 
     Ok(Some(WeaponDetail {
         id,
@@ -1321,11 +1323,25 @@ pub fn get_weapon_detail(conn: &Connection, id: i32) -> Result<Option<WeaponDeta
         upgrade_materials,
         is_forgeable,
         rampage,
+        coatings,
         icon_name,
         icon_color,
         icon_url,
         language,
     }))
+}
+
+fn get_weapon_coatings(conn: &Connection, weapon_id: i32) -> Result<Vec<String>> {
+    let mut stmt =
+        conn.prepare("SELECT coating FROM weapon_coatings WHERE weapon_id = ?1 ORDER BY coating")?;
+    let out = stmt
+        .query_map(params![weapon_id], |row| row.get::<_, String>(0))?
+        .filter_map(|r| {
+            r.map_err(|e| eprintln!("[queries] row decode skipped: {}", e))
+                .ok()
+        })
+        .collect();
+    Ok(out)
 }
 
 fn get_weapon_rampage(conn: &Connection, weapon_id: i32) -> Result<Vec<RampageRef>> {
@@ -4699,6 +4715,17 @@ mod tests {
         assert!(count("SELECT COUNT(*) FROM weapon_materials WHERE weapon_id IN (SELECT id FROM weapons WHERE game_id = 3)") > 2000);
         assert!(count("SELECT COUNT(*) FROM armor_materials WHERE armor_id IN (SELECT id FROM armor WHERE game_id = 3)") > 1500);
         assert!(count("SELECT COUNT(*) FROM monster_weaknesses WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 3)") >= 200);
+        // Wilds ailments (Kiranico Effective Status, scripts/fetch_mhwilds_ailments.py):
+        // 330 rows (55 large+small dupes x 6); traps (Fextra Effective Items):
+        // 136 rows (34 larges x Flash/Sonic/Shock/Pitfall).
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_ailments WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 3)"),
+            330
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_tools WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 3)"),
+            136
+        );
         assert!(count("SELECT COUNT(*) FROM monster_equipment WHERE game_id = 3") > 1000);
         assert!(count("SELECT COUNT(*) FROM armor_skill_points WHERE armor_id IN (SELECT id FROM armor WHERE game_id = 3)") > 500);
         assert!(count("SELECT COUNT(*) FROM item_combine WHERE result_item_id IN (SELECT id FROM items WHERE game_id = 3)") > 50);
@@ -5228,20 +5255,23 @@ mod tests {
                 "SELECT COUNT(*) FROM buddy_weapons WHERE game_id = 2 AND status_type IS NOT NULL"
             ) > 50
         );
-        // Spot: Rathalos Sword X (palico) is Fire 25/25.
+        // Spot: Felyne Rathalos Sword X (palico) is Fire 25/25.
         let r: (Option<String>, Option<i32>, Option<i32>) = c
             .query_row(
                 "SELECT element_type, element_melee, element_ranged FROM buddy_weapons
-                 WHERE game_id = 2 AND kind = 'palico' AND name = 'Rathalos Sword X'",
+                 WHERE game_id = 2 AND kind = 'palico' AND name = 'Felyne Rathalos Sword X'",
                 [],
                 |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?)),
             )
             .unwrap();
         assert_eq!(r, (Some("Fire".to_string()), Some(25), Some(25)));
-        // Kind filter works.
+        // Kind filter works + prefixes are distinct across kinds.
         let palamute = get_buddy_weapons(&c, 2, Some("palamute".to_string())).unwrap();
         assert_eq!(palamute.len(), 161);
         assert!(palamute.iter().all(|w| w.kind == "palamute"));
+        assert!(palamute.iter().all(|w| w.name.starts_with("Canyne ")));
+        let palico = get_buddy_weapons(&c, 2, Some("palico".to_string())).unwrap();
+        assert!(palico.iter().all(|w| w.name.starts_with("Felyne ")));
         let armor = get_buddy_armor(&c, 2, Some("palico".to_string())).unwrap();
         assert_eq!(armor.len(), 181);
     }
@@ -5762,7 +5792,7 @@ mod tests {
         );
         assert_eq!(
             count("SELECT COUNT(*) FROM decorations WHERE game_id = 1 AND acquisition IS NOT NULL"),
-            398
+            404
         );
         assert_eq!(
             count("SELECT COUNT(*) FROM weapons WHERE game_id = 1 AND description IS NOT NULL AND description != ''"),
@@ -5892,5 +5922,36 @@ mod tests {
         );
         // Re-running patches is a no-op (warm-boot fast path).
         crate::db::seed::apply_data_patches(&c).expect("second run must be a no-op");
+    }
+
+    #[test]
+    fn mhp3rd_ailments_tools_boss_table() {
+        // Boss-summary backfill (scripts/parse_mhp3rd_boss_table.py, cached
+        // mhp3wiki ボス弱点早見表): 120 ailment rows (40 larges x
+        // Poison/Paralysis/Sleep, qualitative notes) + 240 tool rows
+        // (180 numeric + 60 symbol tops-ups for the 10 missing larges).
+        let c = conn();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_ailments WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 4)"),
+            120
+        );
+        assert_eq!(
+            count("SELECT COUNT(DISTINCT monster_id) FROM monster_ailments WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 4)"),
+            40
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM monster_tools WHERE monster_id IN (SELECT id FROM monsters WHERE game_id = 4)"),
+            240
+        );
+        // Spot: Rathalos (mhp3rd) has a Poison row with tolerance notes.
+        let notes: String = c
+            .query_row(
+                "SELECT notes FROM monster_ailments WHERE ailment = 'Poison' AND monster_id IN (SELECT id FROM monsters WHERE game_id = 4 AND name = 'Rathalos')",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert!(notes.contains("tolerance"), "unexpected notes: {notes}");
     }
 }

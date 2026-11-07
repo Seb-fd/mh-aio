@@ -68,33 +68,64 @@
   }))
   const buddyWeapons = $derived<BuddyWeapon[]>(buddyWeaponsQuery.data ?? [])
   const buddyArmor = $derived<BuddyArmor[]>(buddyArmorQuery.data ?? [])
+  const buddyWeaponsActive = $derived(isBuddy && kind === 'weapons')
+  const buddyArmorActive = $derived(isBuddy && kind === 'armor')
   const loading = $derived(
-    isBuddy
-      ? buddyWeaponsQuery.isPending || buddyArmorQuery.isPending
-      : weaponsQuery.isPending || armorQuery.isPending || skillsQuery.isPending,
+    buddyWeaponsActive
+      ? buddyWeaponsQuery.isPending
+      : buddyArmorActive
+        ? buddyArmorQuery.isPending
+        : isBuddy
+          ? false
+          : weaponsQuery.isPending || armorQuery.isPending || skillsQuery.isPending,
   )
   const error = $derived(
-    isBuddy
-      ? dbErrorText(
-          false,
-          buddyWeaponsQuery.failureCount + buddyArmorQuery.failureCount,
-          buddyWeaponsQuery.error ?? buddyArmorQuery.error,
-        )
-      : dbErrorText(
-          false,
-          weaponsQuery.failureCount + armorQuery.failureCount + skillsQuery.failureCount,
-          weaponsQuery.error ?? armorQuery.error ?? skillsQuery.error,
-        ),
+    buddyWeaponsActive
+      ? dbErrorText(false, buddyWeaponsQuery.failureCount, buddyWeaponsQuery.error)
+      : buddyArmorActive
+        ? dbErrorText(false, buddyArmorQuery.failureCount, buddyArmorQuery.error)
+        : isBuddy
+          ? null
+          : dbErrorText(
+              false,
+              weaponsQuery.failureCount + armorQuery.failureCount + skillsQuery.failureCount,
+              weaponsQuery.error ?? armorQuery.error ?? skillsQuery.error,
+            ),
   )
 
   const q = $derived(normKey(searchTerm.trim()))
   const filteredWeapons = $derived(weapons.filter((w) => !q || normKey(w.name_jp).includes(q)))
   const filteredArmor = $derived(armor.filter((a) => !q || normKey(a.name_jp).includes(q)))
   const filteredSkills = $derived(skills.filter((s) => !q || normKey(s.name_jp).includes(q)))
+  // Buddy forge entries are distinct per kind in v2 (Felyne X vs Canyne X,
+  // Fextra naming). Dedupe by name as a safety net for pre-v2 DBs that still
+  // carry identical base names.
+  const dedupedBuddyWeapons = $derived.by(() => {
+    const seen = new Set<string>()
+    const out: BuddyWeapon[] = []
+    for (const w of buddyWeapons) {
+      if (seen.has(w.name)) continue
+      seen.add(w.name)
+      out.push(w)
+    }
+    return out
+  })
+  const dedupedBuddyArmor = $derived.by(() => {
+    const seen = new Set<string>()
+    const out: BuddyArmor[] = []
+    for (const a of buddyArmor) {
+      if (seen.has(a.name)) continue
+      seen.add(a.name)
+      out.push(a)
+    }
+    return out
+  })
   const filteredBuddyWeapons = $derived(
-    buddyWeapons.filter((w) => !q || normKey(w.name).includes(q)),
+    dedupedBuddyWeapons.filter((w) => !q || normKey(w.name).includes(q)),
   )
-  const filteredBuddyArmor = $derived(buddyArmor.filter((a) => !q || normKey(a.name).includes(q)))
+  const filteredBuddyArmor = $derived(
+    dedupedBuddyArmor.filter((a) => !q || normKey(a.name).includes(q)),
+  )
 
   function buddyStats(w: BuddyWeapon): string {
     const parts: string[] = []
@@ -116,7 +147,7 @@
     </h1>
     <p class="text-sm text-[var(--theme-text-muted)]">
       {isBuddy
-        ? 'Palico and Palamute weapons and armor. Stats split melee / ranged.'
+        ? 'Palico (Felyne) and Palamute (Canyne) forge lists. Stats split melee / ranged. Forged at the Buddy Smith from scraps — per-recipe material costs are not published in Kiranico v16.'
         : 'Comrade weapons, armor and skills. Names in Japanese (no official English source exists).'}
     </p>
   </div>
@@ -125,7 +156,7 @@
     {#if isBuddy}
       {#each ['palico', 'palamute'] as k}
         <FilterChip active={buddyKind === k} onclick={() => (buddyKind = k as typeof buddyKind)}
-          >{k === 'palico' ? 'Palico' : 'Palamute'}</FilterChip
+          >{k === 'palico' ? 'Palico (Felyne)' : 'Palamute (Canyne)'}</FilterChip
         >
       {/each}
     {/if}
@@ -151,7 +182,7 @@
     {:else}
       <p class="mb-2 text-xs text-[var(--theme-text-muted)]">
         {filteredBuddyWeapons.length}
-        {buddyKind === 'palico' ? 'Palico' : 'Palamute'} weapons
+        {buddyKind === 'palico' ? 'Palico (Felyne)' : 'Palamute (Canyne)'} weapons
       </p>
       <div class="space-y-2">
         {#each filteredBuddyWeapons as w}
@@ -171,7 +202,7 @@
     {:else}
       <p class="mb-2 text-xs text-[var(--theme-text-muted)]">
         {filteredBuddyArmor.length}
-        {buddyKind === 'palico' ? 'Palico' : 'Palamute'} pieces
+        {buddyKind === 'palico' ? 'Palico (Felyne)' : 'Palamute (Canyne)'} pieces
       </p>
       <div class="space-y-2">
         {#each filteredBuddyArmor as a}
