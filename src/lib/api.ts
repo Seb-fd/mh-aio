@@ -263,6 +263,7 @@ export interface WeaponDetail {
   upgrade_materials: MaterialRef[]
   is_forgeable: boolean
   rampage: RampageRef[]
+  coatings: string[]
   icon_name: string | null
   icon_color: string | null
   icon_url: string | null
@@ -293,6 +294,8 @@ export interface WeaponDetail {
   forge_materials: MaterialRef[]
   upgrade_materials: MaterialRef[]
   is_forgeable: boolean
+  rampage: RampageRef[]
+  coatings: string[]
   icon_name: string | null
   icon_color: string | null
   icon_url: string | null

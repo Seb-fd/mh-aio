@@ -182,10 +182,15 @@
 
     <!-- Crafting Materials - 100% faithful -->
     <section>
-      <h2 class="section-title mb-3">Crafting Materials · 100% Faithful</h2>
+      <h2 class="section-title mb-3">Crafting Materials</h2>
       {#if deco.materials.length === 0}
         <div class="rounded-lg border themed-card p-5 text-center text-gray-400 text-sm">
-          No materials data
+          {#if game === 'mhw' || game === 'mhwilds'}
+            No crafting materials upstream — jewels come from the Feystone lottery / Elder Melder.
+            See Acquisition above.
+          {:else}
+            No materials data for this jewel.
+          {/if}
         </div>
       {:else}
         <div class="space-y-1.5">

@@ -141,6 +141,9 @@
     <p class="text-sm text-[var(--theme-text-muted)]">
       {#if isMhw}
         Hunter charm rank tree — forge and upgrade from I to V.
+      {:else if game?.id === 'mhr'}
+        Max roll per skill pair across Anima / Rebirth / Reincarnation / Wisp-of-Mystery — pick a
+        skill to see matching talismans. Sunbreak Eve / Haze methods are not in the upstream CSV.
       {:else}
         Excavated charm rolls — pick a skill to see matching charms.
       {/if}

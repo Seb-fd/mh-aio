@@ -540,6 +540,14 @@
           </table>
         </div>
       </section>
+    {:else if monster.game_id === 3 || monster.game_id === 4}
+      <section class="mb-8">
+        <h2 class="section-title mb-3">Ailments</h2>
+        <div class="rounded-lg border themed-card p-5 text-sm text-gray-400">
+          No ailment tolerances published upstream for this game. Check Kiranico / mhp3wiki for
+          sleep / paralysis / poison / KO data.
+        </div>
+      </section>
     {/if}
 
     {#if monster.tools.length > 0}
@@ -572,6 +580,14 @@
               {/each}
             </tbody>
           </table>
+        </div>
+      </section>
+    {:else if monster.game_id === 3}
+      <section class="mb-8">
+        <h2 class="section-title mb-3">Traps & Items</h2>
+        <div class="rounded-lg border themed-card p-5 text-sm text-gray-400">
+          No trap effectiveness published upstream for Wilds. Check Kiranico Wilds for Pitfall /
+          Shock / Flash data.
         </div>
       </section>
     {/if}
