@@ -473,13 +473,9 @@ fn is_better_decoration(a: &Decoration, b: &Decoration, _rel: &[i32]) -> bool {
     // NotWorse
     let a_worse = a.abilities.len() == 2;
     let b_worse = b.abilities.len() == 2;
-    if b_worse
+    b_worse
         && (!a_worse
             || a.abilities[1].1 * (b.slot_size as i32) < b.abilities[1].1 * (a.slot_size as i32))
-    {
-        return true;
-    }
-    false
 }
 
 fn get_relevant_data(conn: &Connection, input: &AssQueryInput) -> rusqlite::Result<QueryInternal> {

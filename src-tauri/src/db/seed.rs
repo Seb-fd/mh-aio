@@ -71,6 +71,8 @@ pub fn seed(conn: &Connection) -> Result<()> {
     seed_mhp3rd_extra_item_sources(conn)?;
     seed_mhp3rd_monster_equipment(conn)?;
     seed_mhp3rd_monster_weaknesses(conn)?;
+    seed_mhp3rd_monster_ailments(conn)?;
+    seed_mhp3rd_monster_tools(conn)?;
     seed_mhp3rd_item_combine(conn)?;
     seed_mhp3rd_extra_item_combine(conn)?;
     seed_mhp3rd_weapons(conn)?;
@@ -103,6 +105,7 @@ pub fn seed(conn: &Connection) -> Result<()> {
     seed_mhw_weapons(conn)?;
     seed_mhw_weapon_materials(conn)?;
     seed_mhw_weapon_craft(conn)?;
+    seed_mhw_bow_coatings(conn)?;
     seed_mhw_skills(conn)?;
     seed_mhw_skill_levels(conn)?;
     seed_mhw_hunter_charms(conn)?;
@@ -151,6 +154,8 @@ pub fn seed(conn: &Connection) -> Result<()> {
     // 014-mhwilds-endemic-life: 70 Wilds endemic creatures (new table).
     seed_mhwilds_endemic_life(conn)?;
     seed_mhwilds_monster_equipment(conn)?;
+    seed_mhwilds_monster_ailments(conn)?;
+    seed_mhwilds_monster_tools(conn)?;
     // MH Rise (game_id 2) — Phase A bulk (Badge87 + CrimsonNynja, base Rise;
     // Sunbreak delta via Kiranico scrape in Phase B). No weaknesses/drops
     // (numeric) upstream yet — Phase B brings hitzones + rewards.
@@ -187,6 +192,7 @@ pub fn seed(conn: &Connection) -> Result<()> {
     seed_mhr_weapon_rampage(conn)?;
     seed_mhr_talismans(conn)?;
     seed_mhr_item_combine(conn)?;
+    seed_mhr_extra_item_sources(conn)?;
     // Stamp the data version (inside the caller's transaction in production,
     // so a crash rolls the stamp back with the data and the next boot
     // re-seeds instead of trusting a half-written DB).
@@ -253,6 +259,18 @@ pub fn apply_data_patches(conn: &Connection) -> Result<()> {
     run(conn, "patch_mhwilds_012_014", patch_mhwilds_012_014)?;
     run(conn, "patch_mhw_015", patch_mhw_015)?;
     run(conn, "patch_mhw_015_small_size", patch_mhw_015_small_size)?;
+    run(conn, "patch_100_gaps", patch_100_gaps)?;
+    run(conn, "patch_mhr_buddy_prefix", patch_mhr_buddy_prefix)?;
+    run(
+        conn,
+        "patch_quest_reward_variants",
+        patch_quest_reward_variants,
+    )?;
+    run(
+        conn,
+        "patch_mhp3rd_ailments_tools",
+        patch_mhp3rd_ailments_tools,
+    )?;
     Ok(())
 }
 
@@ -332,6 +350,142 @@ fn patch_mhw_015_small_size(conn: &Connection) -> Result<()> {
         )?;
     }
     record_patch(conn, NAME)
+}
+
+// 100-gaps: closes audit holes without new scrapes.
+// - MHW bow coatings (mhw_bow_coatings.json was committed but never seeded).
+// - MHW deco acquisition fallback for the 6 jewels with NULL acquisition.
+// - MHR quest category backfill (619 NULL -> Hub/Village/Event/... from hub).
+fn patch_100_gaps(conn: &Connection) -> Result<()> {
+    const NAME: &str = "gaps_100_backfill";
+    if patch_applied(conn, NAME)? {
+        return Ok(());
+    }
+    // Patches run before the full seed on fresh DBs — skip FK-child seeds
+    // there (the full seed covers them); only backfill existing installs.
+    let have_weapons: i64 = conn
+        .query_row("SELECT COUNT(*) FROM weapons WHERE game_id = 1", [], |r| {
+            r.get(0)
+        })
+        .unwrap_or(0);
+    if have_weapons > 0 {
+        seed_mhw_bow_coatings(conn)?;
+    }
+    let _ = conn.execute(
+        "UPDATE decorations SET acquisition = 'Feystone lottery — no Elder Melder recipe (event/special jewel).'
+         WHERE game_id = 1 AND (acquisition IS NULL OR acquisition = '')",
+        [],
+    )?;
+    let _ = conn.execute(
+        "UPDATE quests SET category = CASE hub
+             WHEN 'hub_high' THEN 'Hub' WHEN 'hub_low' THEN 'Hub'
+             WHEN 'hub_master' THEN 'Hub' WHEN 'follower' THEN 'Hub'
+             WHEN 'mystery' THEN 'Hub' WHEN 'village' THEN 'Village'
+             WHEN 'event' THEN 'Event' WHEN 'arena' THEN 'Arena'
+             WHEN 'challenge' THEN 'Challenge' WHEN 'training' THEN 'Village'
+             ELSE 'Hub' END
+         WHERE game_id = 2 AND category IS NULL AND hub IS NOT NULL",
+        [],
+    )?;
+    record_patch(conn, NAME)
+}
+
+// Buddy prefix: Kiranico list view drops the Felyne/Canyne prefix, so the
+// committed JSON had 161 identical base names for both kinds (0 stat diffs).
+// Fextra (arbiter) shows distinct forge entries: Felyne X (Palico) vs
+// Canyne X (Palamute). Rename in place (idempotent NOT LIKE guards) so
+// existing installs converge; fresh seeds read prefixed JSON directly.
+fn patch_mhr_buddy_prefix(conn: &Connection) -> Result<()> {
+    const NAME: &str = "mhr_buddy_prefix";
+    if patch_applied(conn, NAME)? {
+        return Ok(());
+    }
+    for (table, pal, pam) in [
+        ("buddy_weapons", "Felyne ", "Canyne "),
+        ("buddy_armor", "Felyne ", "Canyne "),
+    ] {
+        let sql_pal = format!(
+            "UPDATE {table} SET name = '{pal}' || name WHERE game_id = 2 AND kind = 'palico' \
+             AND name NOT LIKE '{pal}%' AND name NOT LIKE 'F %'"
+        );
+        let sql_pam = format!(
+            "UPDATE {table} SET name = '{pam}' || name WHERE game_id = 2 AND kind = 'palamute' \
+             AND name NOT LIKE '{pam}%' AND name NOT LIKE 'C %'"
+        );
+        let _ = conn.execute(&sql_pal, [])?;
+        let _ = conn.execute(&sql_pam, [])?;
+    }
+    record_patch(conn, NAME)
+}
+
+// Quest reward variants: uq_quest_rewards ignored quantity/probability, so
+// 501 MHW + 1082 MHR + 334 MHP3rd rows with distinct rates were dropped as
+// "dupes" (same quest+item+condition, e.g. 100% vs 1% slots). The UNIQUE now
+// keeps (quantity, probability) like uq_monster_drops2. Re-run the three
+// seeds; INSERT OR IGNORE lands only the missing variants.
+fn patch_quest_reward_variants(conn: &Connection) -> Result<()> {
+    const NAME: &str = "quest_reward_variants";
+    if patch_applied(conn, NAME)? {
+        return Ok(());
+    }
+    let count = |sql: &str| -> i64 { conn.query_row(sql, [], |r| r.get(0)).unwrap_or(0) };
+    // Per-game guards: pre-offset / partial DBs (see pre_offset test) lack the
+    // offset quest rows or parent items; seeding rewards against them would
+    // FK-fail. Fresh installs get everything via seed() anyway.
+    if count("SELECT COUNT(*) FROM quests WHERE game_id = 1 AND id >= 100101") > 0 {
+        seed_mhw_quest_rewards(conn)?;
+    }
+    if count("SELECT COUNT(*) FROM quests WHERE game_id = 2") > 0 {
+        seed_mhr_quest_rewards(conn)?;
+        seed_mhr_extra_item_sources(conn)?;
+    }
+    if count("SELECT COUNT(*) FROM quests WHERE game_id = 4") > 0 {
+        seed_mhp3rd_quest_rewards(conn)?;
+    }
+    if count("SELECT COUNT(*) FROM monsters WHERE game_id = 3") > 0 {
+        seed_mhwilds_monster_ailments(conn)?;
+        seed_mhwilds_monster_tools(conn)?;
+    }
+    record_patch(conn, NAME)
+}
+
+// MHP3rd ailments + trap tops-ups (scripts/parse_mhp3rd_boss_table.py,
+// cached mhp3wiki ボス弱点早見表 — no network): 120 ailment rows (40 larges
+// x Poison/Paralysis/Sleep, qualitative notes) + 60 tool rows for the 10
+// larges missing from the 180-row numeric set. INSERT OR IGNORE.
+fn patch_mhp3rd_ailments_tools(conn: &Connection) -> Result<()> {
+    const NAME: &str = "mhp3rd_ailments_tools";
+    if patch_applied(conn, NAME)? {
+        return Ok(());
+    }
+    let have: i64 = conn
+        .query_row("SELECT COUNT(*) FROM monsters WHERE game_id = 4", [], |r| {
+            r.get(0)
+        })
+        .unwrap_or(0);
+    if have > 0 {
+        seed_mhp3rd_monster_ailments(conn)?;
+        seed_mhp3rd_monster_tools(conn)?;
+    }
+    record_patch(conn, NAME)
+}
+
+fn seed_mhw_bow_coatings(conn: &Connection) -> Result<()> {
+    #[derive(serde::Deserialize)]
+    struct CoatingJson {
+        weapon_id: i32,
+        coating: String,
+    }
+    let json_data = include_str!("../../data/mhw_bow_coatings.json");
+    let rows: Vec<CoatingJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for r in &rows {
+        let _ = conn.execute(
+            "INSERT OR IGNORE INTO weapon_coatings (weapon_id, coating) VALUES (?1, ?2)",
+            rusqlite::params![r.weapon_id, r.coating],
+        )?;
+    }
+    Ok(())
 }
 
 fn patch_applied(conn: &Connection, name: &str) -> Result<bool> {
@@ -486,6 +640,7 @@ fn patch_mhr_011(conn: &Connection) -> Result<()> {
     seed_mhr_weapon_rampage(conn)?;
     seed_mhr_talismans(conn)?;
     seed_mhr_item_combine(conn)?;
+    seed_mhr_extra_item_sources(conn)?;
     // Reuse an mhfu decoration icon for each deco (Kiranico publishes no
     // dedicated assets; ItemIcon017*.png is the closest neutral deco icon).
     conn.execute(
@@ -1026,9 +1181,9 @@ fn patch_mhp3rd_roundout(conn: &Connection) -> Result<()> {
         .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
     for r in tools {
         conn.execute(
-            "INSERT OR IGNORE INTO monster_tools (monster_id, tool, normal, notfound, enraged)
-             VALUES (?1, ?2, ?3, ?4, ?5)",
-            rusqlite::params![r.monster_id, r.tool, r.normal, r.notfound, r.enraged],
+            "INSERT OR IGNORE INTO monster_tools (monster_id, tool, normal, notfound, enraged, notes)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6)",
+            rusqlite::params![r.monster_id, r.tool, r.normal, r.notfound, r.enraged, r.notes],
         )?;
     }
     record_patch(conn, NAME)
@@ -3734,6 +3889,40 @@ fn seed_mhp3rd_monster_weaknesses(conn: &Connection) -> Result<()> {
     }
     Ok(())
 }
+
+// Boss-summary ailments (mhp3wiki ボス弱点早見表, scripts/parse_mhp3rd_boss_table.py):
+// Poison/Paralysis/Sleep qualitative rows for all 40 larges; numerics NULL,
+// tolerance+effect/duration in notes. Plain INSERT OR IGNORE (new table data).
+fn seed_mhp3rd_monster_ailments(conn: &Connection) -> Result<()> {
+    let json_data = include_str!("../../data/mhp3rd_monster_ailments.json");
+    let rows: Vec<AilmentJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for r in &rows {
+        conn.execute(
+            "INSERT OR IGNORE INTO monster_ailments (monster_id, ailment, initial, increase, max, decay_step, decay_interval, duration_sec, damage, notes)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10)",
+            rusqlite::params![r.monster_id, r.ailment, r.initial, r.increase, r.max, r.decay_step, r.decay_interval, r.duration_sec, r.damage, r.notes],
+        )?;
+    }
+    Ok(())
+}
+
+// MHP3rd trap/tools live in mhp3rd_monster_tools.json (merged 240 rows:
+// 180 numeric + 60 wiki-symbol tops-ups). Seeded here for fresh DBs; the
+// roundout patch covers upgraded installs that predate the file.
+fn seed_mhp3rd_monster_tools(conn: &Connection) -> Result<()> {
+    let json_data = include_str!("../../data/mhp3rd_monster_tools.json");
+    let rows: Vec<HuntToolJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for r in rows {
+        conn.execute(
+            "INSERT OR IGNORE INTO monster_tools (monster_id, tool, normal, notfound, enraged, notes)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6)",
+            rusqlite::params![r.monster_id, r.tool, r.normal, r.notfound, r.enraged, r.notes],
+        )?;
+    }
+    Ok(())
+}
 fn seed_mhp3rd_item_combine(conn: &Connection) -> Result<()> {
     let json_data = include_str!("../../data/mhp3rd_item_combine.json");
     let recipes: Vec<CombineJson> = serde_json::from_str(json_data)
@@ -5724,6 +5913,61 @@ fn seed_mhwilds_monster_weaknesses(conn: &Connection) -> Result<()> {
     Ok(())
 }
 
+// Wilds traps from Fextra Effective Items (scripts/fetch_mhwilds_traps.py):
+// Flash/Sonic/Shock/Pitfall binary effective->NULL / uneffective->0 for the
+// 34 larges; smalls stay uncovered. Plain INSERT OR IGNORE.
+fn seed_mhwilds_monster_tools(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct WildsToolJson {
+        monster_id: i32,
+        tool: String,
+        normal: Option<i32>,
+        notfound: Option<i32>,
+        enraged: Option<i32>,
+        notes: Option<String>,
+    }
+    let json_data = include_str!("../../data/mhwilds_monster_tools.json");
+    let rows: Vec<WildsToolJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for r in &rows {
+        conn.execute(
+            "INSERT OR IGNORE INTO monster_tools (monster_id, tool, normal, notfound, enraged, notes)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6)",
+            rusqlite::params![r.monster_id, r.tool, r.normal, r.notfound, r.enraged, r.notes],
+        )?;
+    }
+    Ok(())
+}
+
+// Wilds ailments from Kiranico Effective Status Effects
+// (scripts/fetch_mhwilds_ailments.py). Poison/Sleep/Paralysis/Blast/Stun/
+// Exhaust with buildup/increase/max/damage/decay; duration is not published
+// upstream (NULL). New table data, plain INSERT OR IGNORE.
+fn seed_mhwilds_monster_ailments(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct WildsAilmentJson {
+        monster_id: i32,
+        ailment: String,
+        initial: Option<i32>,
+        increase: Option<i32>,
+        max: Option<i32>,
+        decay_step: Option<i32>,
+        decay_interval: Option<i32>,
+        damage: Option<i32>,
+    }
+    let json_data = include_str!("../../data/mhwilds_monster_ailments.json");
+    let rows: Vec<WildsAilmentJson> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for r in &rows {
+        conn.execute(
+            "INSERT OR IGNORE INTO monster_ailments (monster_id, ailment, initial, increase, max, decay_step, decay_interval, duration_sec, damage)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, NULL, ?8)",
+            rusqlite::params![r.monster_id, r.ailment, r.initial, r.increase, r.max, r.decay_step, r.decay_interval, r.damage],
+        )?;
+    }
+    Ok(())
+}
+
 fn seed_mhwilds_weapons(conn: &Connection) -> Result<()> {
     let json_data = include_str!("../../data/mhwilds_weapons.json");
     let weapons: Vec<WeaponJson> = serde_json::from_str(json_data)
@@ -6599,6 +6843,35 @@ fn seed_mhr_item_combine(conn: &Connection) -> Result<()> {
                 r.combine_type
             ],
         )?;
+    }
+    Ok(())
+}
+
+// 011-mhr-100 Phase E (contracted but never landed): Market shop sources.
+// Every item with a buy_price is sold at the Kamura Market. Same row shape
+// as the MHW extra-sources file; INSERT OR IGNORE keeps it idempotent.
+fn seed_mhr_extra_item_sources(conn: &Connection) -> Result<()> {
+    #[derive(Deserialize)]
+    struct ExtraSrc {
+        item_id: i32,
+        source_type: String,
+        source_id: Option<i32>,
+        location: Option<String>,
+        probability: Option<f64>,
+        conditions: Option<String>,
+        quantity_min: Option<i32>,
+        quantity_max: Option<i32>,
+    }
+    let json_data = include_str!("../../data/mhr_item_sources_extra.json");
+    let sources: Vec<ExtraSrc> = serde_json::from_str(json_data)
+        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))?;
+    for s in sources {
+        if item_exists(conn, s.item_id)? {
+            conn.execute(
+                "INSERT OR IGNORE INTO item_sources (item_id, source_type, source_id, quantity_min, quantity_max, probability, location, conditions) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)",
+                rusqlite::params![s.item_id, s.source_type, s.source_id, s.quantity_min.unwrap_or(1), s.quantity_max.unwrap_or(1), s.probability, s.location, s.conditions],
+            )?;
+        }
     }
     Ok(())
 }

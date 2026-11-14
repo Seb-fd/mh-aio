@@ -1,0 +1,3302 @@
+[
+ {
+  "monster_id": 20001,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20001,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 20001,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20001,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20001,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20001,
+  "ailment": "Stun",
+  "initial": 150,
+  "increase": 120,
+  "max": 870,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20002,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20002,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 20002,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20002,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20002,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20002,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20003,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20003,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20003,
+  "ailment": "Paralysis",
+  "initial": 300,
+  "increase": 200,
+  "max": 1500,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20003,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20003,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20003,
+  "ailment": "Stun",
+  "initial": 150,
+  "increase": 120,
+  "max": 870,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20004,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20004,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20004,
+  "ailment": "Paralysis",
+  "initial": 300,
+  "increase": 200,
+  "max": 1500,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20004,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20004,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20004,
+  "ailment": "Stun",
+  "initial": 100,
+  "increase": 75,
+  "max": 550,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20005,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20005,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20005,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20005,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20005,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20005,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20006,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20006,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20006,
+  "ailment": "Paralysis",
+  "initial": 130,
+  "increase": 75,
+  "max": 580,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20006,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20006,
+  "ailment": "Sleep",
+  "initial": 250,
+  "increase": 150,
+  "max": 1150,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20006,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20007,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20007,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20007,
+  "ailment": "Paralysis",
+  "initial": 300,
+  "increase": 200,
+  "max": 1500,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20007,
+  "ailment": "Poison",
+  "initial": 250,
+  "increase": 150,
+  "max": 700,
+  "damage": 150,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20007,
+  "ailment": "Sleep",
+  "initial": 250,
+  "increase": 150,
+  "max": 1150,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20007,
+  "ailment": "Stun",
+  "initial": 150,
+  "increase": 120,
+  "max": 870,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20008,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20008,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20008,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20008,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20008,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20008,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20009,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20009,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 20009,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20009,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20009,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20009,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20010,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20010,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20010,
+  "ailment": "Paralysis",
+  "initial": 130,
+  "increase": 75,
+  "max": 580,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20010,
+  "ailment": "Poison",
+  "initial": 100,
+  "increase": 90,
+  "max": 370,
+  "damage": 250,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20010,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20010,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20011,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20011,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20011,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20011,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20011,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20011,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20012,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20012,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20012,
+  "ailment": "Paralysis",
+  "initial": 130,
+  "increase": 75,
+  "max": 580,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20012,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20012,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20012,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20013,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20013,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20013,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20013,
+  "ailment": "Poison",
+  "initial": 250,
+  "increase": 150,
+  "max": 700,
+  "damage": 150,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20013,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20013,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20014,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20014,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20014,
+  "ailment": "Paralysis",
+  "initial": 130,
+  "increase": 75,
+  "max": 580,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20014,
+  "ailment": "Poison",
+  "initial": 100,
+  "increase": 90,
+  "max": 370,
+  "damage": 250,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20014,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20014,
+  "ailment": "Stun",
+  "initial": 100,
+  "increase": 75,
+  "max": 550,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20015,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20015,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20015,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20015,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20015,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20015,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20016,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20016,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 20016,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20016,
+  "ailment": "Poison",
+  "initial": 250,
+  "increase": 150,
+  "max": 700,
+  "damage": 150,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20016,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20016,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20017,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20017,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20017,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20017,
+  "ailment": "Poison",
+  "initial": 100,
+  "increase": 90,
+  "max": 370,
+  "damage": 250,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20017,
+  "ailment": "Sleep",
+  "initial": 100,
+  "increase": 90,
+  "max": 640,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20017,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20018,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20018,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20018,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20018,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20018,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20018,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20019,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20019,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20019,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20019,
+  "ailment": "Poison",
+  "initial": 250,
+  "increase": 150,
+  "max": 700,
+  "damage": 150,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20019,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20019,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20020,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20020,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20020,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20020,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20020,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20020,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20021,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20021,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20021,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20021,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20021,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20021,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20022,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20022,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20022,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20022,
+  "ailment": "Poison",
+  "initial": 250,
+  "increase": 150,
+  "max": 700,
+  "damage": 150,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20022,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20022,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20023,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20023,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20023,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20023,
+  "ailment": "Poison",
+  "initial": 100,
+  "increase": 90,
+  "max": 370,
+  "damage": 250,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20023,
+  "ailment": "Sleep",
+  "initial": 250,
+  "increase": 150,
+  "max": 1150,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20023,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20024,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20024,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 20024,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20024,
+  "ailment": "Poison",
+  "initial": 250,
+  "increase": 150,
+  "max": 700,
+  "damage": 150,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20024,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20024,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20025,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20025,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20025,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20025,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20025,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20025,
+  "ailment": "Stun",
+  "initial": 150,
+  "increase": 120,
+  "max": 870,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20026,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20026,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20026,
+  "ailment": "Paralysis",
+  "initial": 300,
+  "increase": 200,
+  "max": 1500,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20026,
+  "ailment": "Poison",
+  "initial": 250,
+  "increase": 150,
+  "max": 700,
+  "damage": 150,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20026,
+  "ailment": "Sleep",
+  "initial": 250,
+  "increase": 150,
+  "max": 1150,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20026,
+  "ailment": "Stun",
+  "initial": 200,
+  "increase": 150,
+  "max": 1100,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20027,
+  "ailment": "Blast",
+  "initial": 120,
+  "increase": 90,
+  "max": 1920,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20027,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20027,
+  "ailment": "Paralysis",
+  "initial": 300,
+  "increase": 200,
+  "max": 1500,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20027,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20027,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20027,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20028,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20028,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 20028,
+  "ailment": "Paralysis",
+  "initial": 130,
+  "increase": 75,
+  "max": 580,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20028,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20028,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20028,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20029,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20029,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20029,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20029,
+  "ailment": "Poison",
+  "initial": 250,
+  "increase": 150,
+  "max": 700,
+  "damage": 150,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20029,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20029,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20030,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20030,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20030,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20030,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20030,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20030,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20031,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20031,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20031,
+  "ailment": "Paralysis",
+  "initial": 300,
+  "increase": 200,
+  "max": 1500,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20031,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20031,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20031,
+  "ailment": "Stun",
+  "initial": 150,
+  "increase": 120,
+  "max": 870,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20032,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20032,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20032,
+  "ailment": "Paralysis",
+  "initial": 300,
+  "increase": 200,
+  "max": 1500,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20032,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20032,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20032,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20033,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20033,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 20033,
+  "ailment": "Paralysis",
+  "initial": 300,
+  "increase": 1000,
+  "max": 6300,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20033,
+  "ailment": "Poison",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 20033,
+  "ailment": "Sleep",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 20033,
+  "ailment": "Stun",
+  "initial": 300,
+  "increase": 250,
+  "max": 1800,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20034,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 20034,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 20034,
+  "ailment": "Paralysis",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 20034,
+  "ailment": "Poison",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 20034,
+  "ailment": "Sleep",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 20034,
+  "ailment": "Stun",
+  "initial": 2250,
+  "increase": 500,
+  "max": 3750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21002,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21002,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21002,
+  "ailment": "Paralysis",
+  "initial": 130,
+  "increase": 75,
+  "max": 580,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21002,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21002,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21002,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21003,
+  "ailment": "Blast",
+  "initial": 30,
+  "increase": 10,
+  "max": 50,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21003,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 21003,
+  "ailment": "Paralysis",
+  "initial": 20,
+  "increase": 10,
+  "max": 40,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21003,
+  "ailment": "Poison",
+  "initial": 20,
+  "increase": 30,
+  "max": 80,
+  "damage": 350,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21003,
+  "ailment": "Sleep",
+  "initial": 30,
+  "increase": 20,
+  "max": 70,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21003,
+  "ailment": "Stun",
+  "initial": 45,
+  "increase": 25,
+  "max": 95,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21005,
+  "ailment": "Blast",
+  "initial": 30,
+  "increase": 10,
+  "max": 50,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21005,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 21005,
+  "ailment": "Paralysis",
+  "initial": 20,
+  "increase": 10,
+  "max": 40,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21005,
+  "ailment": "Poison",
+  "initial": 20,
+  "increase": 30,
+  "max": 80,
+  "damage": 350,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21005,
+  "ailment": "Sleep",
+  "initial": 30,
+  "increase": 20,
+  "max": 70,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21005,
+  "ailment": "Stun",
+  "initial": 45,
+  "increase": 25,
+  "max": 95,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21006,
+  "ailment": "Blast",
+  "initial": 30,
+  "increase": 10,
+  "max": 50,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21006,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 21006,
+  "ailment": "Paralysis",
+  "initial": 20,
+  "increase": 10,
+  "max": 40,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21006,
+  "ailment": "Poison",
+  "initial": 20,
+  "increase": 30,
+  "max": 80,
+  "damage": 350,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21006,
+  "ailment": "Sleep",
+  "initial": 30,
+  "increase": 20,
+  "max": 70,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21006,
+  "ailment": "Stun",
+  "initial": 45,
+  "increase": 25,
+  "max": 95,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21008,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21008,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21008,
+  "ailment": "Paralysis",
+  "initial": 130,
+  "increase": 75,
+  "max": 580,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21008,
+  "ailment": "Poison",
+  "initial": 100,
+  "increase": 90,
+  "max": 370,
+  "damage": 250,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21008,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21008,
+  "ailment": "Stun",
+  "initial": 100,
+  "increase": 75,
+  "max": 550,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21009,
+  "ailment": "Blast",
+  "initial": 30,
+  "increase": 10,
+  "max": 50,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21009,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 21009,
+  "ailment": "Paralysis",
+  "initial": 20,
+  "increase": 10,
+  "max": 40,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21009,
+  "ailment": "Poison",
+  "initial": 20,
+  "increase": 30,
+  "max": 80,
+  "damage": 350,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21009,
+  "ailment": "Sleep",
+  "initial": 30,
+  "increase": 20,
+  "max": 70,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21009,
+  "ailment": "Stun",
+  "initial": 45,
+  "increase": 25,
+  "max": 95,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21011,
+  "ailment": "Blast",
+  "initial": 30,
+  "increase": 10,
+  "max": 50,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21011,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 21011,
+  "ailment": "Paralysis",
+  "initial": 20,
+  "increase": 10,
+  "max": 40,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21011,
+  "ailment": "Poison",
+  "initial": 20,
+  "increase": 30,
+  "max": 80,
+  "damage": 350,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21011,
+  "ailment": "Sleep",
+  "initial": 30,
+  "increase": 20,
+  "max": 70,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21011,
+  "ailment": "Stun",
+  "initial": 45,
+  "increase": 25,
+  "max": 95,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21012,
+  "ailment": "Blast",
+  "initial": 30,
+  "increase": 10,
+  "max": 50,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21012,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 21012,
+  "ailment": "Paralysis",
+  "initial": 20,
+  "increase": 10,
+  "max": 40,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21012,
+  "ailment": "Poison",
+  "initial": 20,
+  "increase": 30,
+  "max": 80,
+  "damage": 350,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21012,
+  "ailment": "Sleep",
+  "initial": 30,
+  "increase": 20,
+  "max": 70,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21012,
+  "ailment": "Stun",
+  "initial": 45,
+  "increase": 25,
+  "max": 95,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21014,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21014,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 21014,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21014,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21014,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21014,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21015,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21015,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 21015,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21015,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21015,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21015,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21016,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21016,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 21016,
+  "ailment": "Paralysis",
+  "initial": 130,
+  "increase": 75,
+  "max": 580,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21016,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21016,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21016,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21017,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21017,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 21017,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21017,
+  "ailment": "Poison",
+  "initial": 250,
+  "increase": 150,
+  "max": 700,
+  "damage": 150,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21017,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21017,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21018,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21018,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 21018,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21018,
+  "ailment": "Poison",
+  "initial": 250,
+  "increase": 150,
+  "max": 700,
+  "damage": 150,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21018,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21018,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21020,
+  "ailment": "Blast",
+  "initial": 30,
+  "increase": 10,
+  "max": 50,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21020,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 21020,
+  "ailment": "Paralysis",
+  "initial": 20,
+  "increase": 10,
+  "max": 40,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21020,
+  "ailment": "Poison",
+  "initial": 20,
+  "increase": 30,
+  "max": 80,
+  "damage": 350,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21020,
+  "ailment": "Sleep",
+  "initial": 30,
+  "increase": 20,
+  "max": 70,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21020,
+  "ailment": "Stun",
+  "initial": 45,
+  "increase": 25,
+  "max": 95,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21021,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21021,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21021,
+  "ailment": "Paralysis",
+  "initial": 300,
+  "increase": 200,
+  "max": 1500,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21021,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21021,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21021,
+  "ailment": "Stun",
+  "initial": 100,
+  "increase": 75,
+  "max": 550,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21023,
+  "ailment": "Blast",
+  "initial": 30,
+  "increase": 10,
+  "max": 50,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21023,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 21023,
+  "ailment": "Paralysis",
+  "initial": 20,
+  "increase": 10,
+  "max": 40,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21023,
+  "ailment": "Poison",
+  "initial": 20,
+  "increase": 30,
+  "max": 80,
+  "damage": 350,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21023,
+  "ailment": "Sleep",
+  "initial": 30,
+  "increase": 20,
+  "max": 70,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21023,
+  "ailment": "Stun",
+  "initial": 45,
+  "increase": 25,
+  "max": 95,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21025,
+  "ailment": "Blast",
+  "initial": 30,
+  "increase": 10,
+  "max": 50,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21025,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 21025,
+  "ailment": "Paralysis",
+  "initial": 20,
+  "increase": 10,
+  "max": 40,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21025,
+  "ailment": "Poison",
+  "initial": 20,
+  "increase": 30,
+  "max": 80,
+  "damage": 350,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21025,
+  "ailment": "Sleep",
+  "initial": 30,
+  "increase": 20,
+  "max": 70,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21025,
+  "ailment": "Stun",
+  "initial": 45,
+  "increase": 25,
+  "max": 95,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21027,
+  "ailment": "Blast",
+  "initial": 30,
+  "increase": 10,
+  "max": 50,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21027,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 21027,
+  "ailment": "Paralysis",
+  "initial": 20,
+  "increase": 10,
+  "max": 40,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21027,
+  "ailment": "Poison",
+  "initial": 20,
+  "increase": 30,
+  "max": 80,
+  "damage": 350,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21027,
+  "ailment": "Sleep",
+  "initial": 30,
+  "increase": 20,
+  "max": 70,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21027,
+  "ailment": "Stun",
+  "initial": 45,
+  "increase": 25,
+  "max": 95,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21029,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21029,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21029,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21029,
+  "ailment": "Poison",
+  "initial": 250,
+  "increase": 150,
+  "max": 700,
+  "damage": 150,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21029,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21029,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21031,
+  "ailment": "Blast",
+  "initial": 30,
+  "increase": 10,
+  "max": 50,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21031,
+  "ailment": "Exhaust",
+  "initial": 0,
+  "increase": 0,
+  "max": 0,
+  "damage": 0,
+  "decay_step": 0,
+  "decay_interval": 0
+ },
+ {
+  "monster_id": 21031,
+  "ailment": "Paralysis",
+  "initial": 20,
+  "increase": 10,
+  "max": 40,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21031,
+  "ailment": "Poison",
+  "initial": 20,
+  "increase": 30,
+  "max": 80,
+  "damage": 350,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21031,
+  "ailment": "Sleep",
+  "initial": 30,
+  "increase": 20,
+  "max": 70,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21031,
+  "ailment": "Stun",
+  "initial": 45,
+  "increase": 25,
+  "max": 95,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21034,
+  "ailment": "Blast",
+  "initial": 70,
+  "increase": 30,
+  "max": 670,
+  "damage": 100,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21034,
+  "ailment": "Exhaust",
+  "initial": 225,
+  "increase": 75,
+  "max": 900,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21034,
+  "ailment": "Paralysis",
+  "initial": 180,
+  "increase": 130,
+  "max": 960,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21034,
+  "ailment": "Poison",
+  "initial": 150,
+  "increase": 100,
+  "max": 550,
+  "damage": 200,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21034,
+  "ailment": "Sleep",
+  "initial": 150,
+  "increase": 100,
+  "max": 750,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ },
+ {
+  "monster_id": 21034,
+  "ailment": "Stun",
+  "initial": 120,
+  "increase": 100,
+  "max": 720,
+  "damage": 0,
+  "decay_step": 5,
+  "decay_interval": 10
+ }
+]

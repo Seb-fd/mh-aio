@@ -346,6 +346,22 @@
         </div>
       </section>
     {/if}
+
+    {#if weapon.coatings.length > 0}
+      <section class="mb-8">
+        <h2 class="section-title mb-3">Bow Coatings</h2>
+        <div class="rounded-lg border themed-card p-4">
+          <div class="flex flex-wrap gap-2">
+            {#each weapon.coatings as c}
+              <span
+                class="px-3 py-1 rounded-full text-xs border border-[var(--theme-border)] bg-[var(--theme-bg-elevated)] text-gray-200 capitalize"
+                >{c}</span
+              >
+            {/each}
+          </div>
+        </div>
+      </section>
+    {/if}
   {/if}
 </div>
 

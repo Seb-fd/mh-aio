@@ -97,7 +97,7 @@
       iconUrl: '/icons/mhfu/decorations/ItemIcon017i.png',
       iconName: 'Attack',
       iconColor: 'Red',
-      gameOnly: ['mhp3rd', 'mhw', 'mhwilds'],
+      gameOnly: ['mhp3rd', 'mhr', 'mhw', 'mhwilds'],
     },
     {
       href: '/comrades',

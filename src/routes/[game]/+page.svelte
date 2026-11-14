@@ -14,7 +14,7 @@
     iconName: string
     iconColor: string
     desc: string
-    gameOnly?: string
+    gameOnly?: string | string[]
     /** Bento feature tile: spans 2 columns on sm+ screens. */
     wide?: boolean
   }
@@ -94,8 +94,41 @@
       desc: 'Mantles, Boosters & Palico — World+Iceborne',
       gameOnly: 'mhw',
     },
+    {
+      href: '/charms',
+      label: 'Charms',
+      iconUrl: '/icons/mhfu/decorations/ItemIcon017i.png',
+      iconName: 'Attack',
+      iconColor: 'Red',
+      desc: 'Talismans and excavated charms by skill',
+      gameOnly: ['mhp3rd', 'mhr', 'mhw', 'mhwilds'],
+    },
+    {
+      href: '/comrades',
+      label: 'Comrades',
+      iconUrl: '/icons/mhfu/monsters/felyne.png',
+      iconName: 'Felyne',
+      iconColor: 'Gray',
+      desc: 'Felyne comrades and buddy gear',
+      gameOnly: ['mhp3rd', 'mhr'],
+    },
+    {
+      href: '/endemic',
+      label: 'Endemic Life',
+      iconUrl: '/icons/mhw/monsters/Chatacabra.png',
+      iconName: 'Chatacabra',
+      iconColor: 'Green',
+      desc: 'Endemic creatures and slinger ammo',
+      gameOnly: ['mhw', 'mhwilds'],
+    },
   ]
-  const sections = $derived(allSections.filter((s) => !s.gameOnly || s.gameOnly === game?.id))
+  const sections = $derived(
+    allSections.filter(
+      (s) =>
+        !s.gameOnly ||
+        (Array.isArray(s.gameOnly) ? s.gameOnly.includes(game?.id ?? '') : s.gameOnly === game?.id),
+    ),
+  )
 
   function navigate(href: string) {
     if (!game) return

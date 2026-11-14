@@ -1,0 +1,1090 @@
+[
+ {
+  "monster_id": 20001,
+  "tool": "Flash Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20001,
+  "tool": "Pitfall Trap",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20001,
+  "tool": "Shock Trap",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20001,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20002,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20002,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20002,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20002,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20003,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20003,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20003,
+  "tool": "Shock Trap",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20003,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20004,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20004,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20004,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20004,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20005,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20005,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20005,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20005,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20006,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20006,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20006,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20006,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20007,
+  "tool": "Flash Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20007,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20007,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20007,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20008,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20008,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20008,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20008,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20009,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20009,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20009,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20009,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20010,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20010,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20010,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20010,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20011,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20011,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20011,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20011,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20012,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20012,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20012,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20012,
+  "tool": "Sonic Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20013,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20013,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20013,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20013,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20014,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20014,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20014,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20014,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20015,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20015,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20015,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20015,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20016,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20016,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20016,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20016,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20017,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20017,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20017,
+  "tool": "Shock Trap",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20017,
+  "tool": "Sonic Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20018,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20018,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20018,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20018,
+  "tool": "Sonic Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20019,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20019,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20019,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20019,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20020,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20020,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20020,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20020,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20021,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20021,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20021,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20021,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20022,
+  "tool": "Flash Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20022,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20022,
+  "tool": "Shock Trap",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20022,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20023,
+  "tool": "Flash Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20023,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20023,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20023,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20024,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20024,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20024,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20024,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20025,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20025,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20025,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20025,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20026,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20026,
+  "tool": "Pitfall Trap",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20026,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20026,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20027,
+  "tool": "Flash Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20027,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20027,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20027,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20028,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20028,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20028,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20028,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20029,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20029,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20029,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20029,
+  "tool": "Sonic Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20030,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20030,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20030,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20030,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20031,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20031,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20031,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20031,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20032,
+  "tool": "Flash Bomb",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20032,
+  "tool": "Pitfall Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20032,
+  "tool": "Shock Trap",
+  "normal": null,
+  "notfound": null,
+  "enraged": null,
+  "notes": "effective"
+ },
+ {
+  "monster_id": 20032,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20033,
+  "tool": "Flash Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20033,
+  "tool": "Pitfall Trap",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20033,
+  "tool": "Shock Trap",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20033,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20034,
+  "tool": "Flash Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20034,
+  "tool": "Pitfall Trap",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20034,
+  "tool": "Shock Trap",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ },
+ {
+  "monster_id": 20034,
+  "tool": "Sonic Bomb",
+  "normal": 0,
+  "notfound": null,
+  "enraged": null,
+  "notes": "uneffective"
+ }
+]
