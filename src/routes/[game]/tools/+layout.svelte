@@ -19,6 +19,7 @@
 </script>
 
 <div class="max-w-6xl mx-auto">
+  <!-- Tools gameOnly 'mhw' is intentional: mantles/boosters/palico/melder are World-only systems. -->
   {#if game && game.id !== 'mhw'}
     <div class="border rounded-lg p-8 text-center themed-card mb-6">
       <p class="text-gray-400">
@@ -79,6 +80,6 @@
         >
       </div>
     </div>
+    {@render children()}
   {/if}
-  {@render children()}
 </div>

@@ -106,7 +106,9 @@
     return 'bg-gray-800/40'
   }
 
-  function formatTool(value: number | null, tool: string): string {
+  function formatTool(value: number | null, tool: string, notes?: string | null): string {
+    if (notes === 'effective') return 'Effective'
+    if (notes === 'uneffective') return 'Ineffective'
     if (value == null) return '-'
     if (tool === 'Dung' || tool === 'Meat') return value > 0 ? 'Works' : 'No effect'
     if (value <= 0) return 'Immune'
@@ -570,9 +572,12 @@
               {#each monster.tools as t}
                 <tr class="border-t border-gray-800">
                   <td class="py-1.5 pr-3 font-semibold text-gray-100">{t.tool}</td>
-                  <td class="py-1.5 pr-3 text-gray-300">{formatTool(t.normal, t.tool)}</td>
-                  <td class="py-1.5 pr-3 text-gray-300">{formatTool(t.notfound, t.tool)}</td>
-                  <td class="py-1.5 pr-3 text-gray-300">{formatTool(t.enraged, t.tool)}</td>
+                  <td class="py-1.5 pr-3 text-gray-300">{formatTool(t.normal, t.tool, t.notes)}</td>
+                  <td class="py-1.5 pr-3 text-gray-300"
+                    >{formatTool(t.notfound, t.tool, t.notes)}</td
+                  >
+                  <td class="py-1.5 pr-3 text-gray-300">{formatTool(t.enraged, t.tool, t.notes)}</td
+                  >
                   {#if monster.tools.some((x) => x.notes)}
                     <td class="py-1.5 text-gray-300">{t.notes ?? '-'}</td>
                   {/if}

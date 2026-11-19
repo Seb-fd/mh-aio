@@ -16,6 +16,8 @@
   const dbId = $derived(game?.dbId)
   // Rise uses buddy gear (Palico/Palamute) instead of Felyne comrades.
   const isBuddy = $derived(game?.id === 'mhr')
+  // Sidebar gameOnly ['mhp3rd','mhr'] is intentional: only these games seed comrade/buddy gear.
+  const supported = $derived(game?.id === 'mhp3rd' || game?.id === 'mhr')
 
   let kind = $state<'weapons' | 'armor' | 'skills'>('weapons')
   let buddyKind = $state<'palico' | 'palamute'>('palico')
@@ -168,7 +170,12 @@
     <div class="min-w-48 flex-1"><SearchField bind:value={searchTerm} placeholder="Search…" /></div>
   </div>
 
-  {#if loading}
+  {#if !supported}
+    <EmptyState
+      title="Comrades not available for this game"
+      hint="Felyne comrades cover MHP3rd only; buddy gear covers MHR (Palico/Palamute). This game has no comrade data upstream."
+    />
+  {:else if loading}
     <div class="space-y-2">
       {#each Array(6) as _}
         <Skeleton class="h-16 w-full" />

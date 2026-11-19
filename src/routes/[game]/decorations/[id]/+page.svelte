@@ -186,8 +186,8 @@
       {#if deco.materials.length === 0}
         <div class="rounded-lg border themed-card p-5 text-center text-gray-400 text-sm">
           {#if game === 'mhw' || game === 'mhwilds'}
-            No crafting materials upstream — jewels come from the Feystone lottery / Elder Melder.
-            See Acquisition above.
+            No crafting materials upstream – jewels from melding/drops. See Acquisition above (Elder
+            Melder / Feystone odds where published).
           {:else}
             No materials data for this jewel.
           {/if}

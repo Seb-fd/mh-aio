@@ -16,6 +16,9 @@
   const game = $derived($selectedGame)
   const dbId = $derived(game?.dbId)
   const isMhw = $derived(game?.id === 'mhw')
+  // Sidebar hides Charms for mh2g (0 charm rows upstream); direct URL still
+  // lands here, so guard with an honest N/A explainer instead of an empty list.
+  const isMh2g = $derived(game?.id === 'mh2g')
 
   const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V']
   const familyStem = (name: string) => name.replace(/\s+(I{1,3}|IV|V)$/, '')
@@ -150,7 +153,12 @@
     </p>
   </div>
 
-  {#if isMhw}
+  {#if isMh2g}
+    <EmptyState
+      title="Charms not available for MH2G"
+      hint="Freedom Unite has no charm/talisman system upstream — charms cover MHP3rd excavated, MHR talismans and MHW hunter charms."
+    />
+  {:else if isMhw}
     <Card class="mb-4 p-4">
       <div class="flex flex-wrap items-end gap-3">
         <label class="flex min-w-52 flex-1 flex-col gap-1 text-xs text-gray-400">

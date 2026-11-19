@@ -271,6 +271,11 @@ pub fn apply_data_patches(conn: &Connection) -> Result<()> {
         "patch_mhp3rd_ailments_tools",
         patch_mhp3rd_ailments_tools,
     )?;
+    run(
+        conn,
+        "patch_quest_category_backfill",
+        patch_quest_category_backfill,
+    )?;
     Ok(())
 }
 
@@ -466,6 +471,64 @@ fn patch_mhp3rd_ailments_tools(conn: &Connection) -> Result<()> {
     if have > 0 {
         seed_mhp3rd_monster_ailments(conn)?;
         seed_mhp3rd_monster_tools(conn)?;
+    }
+    record_patch(conn, NAME)
+}
+
+// MHR quest category backfill (fresh-install fix).
+//
+// patch_100_gaps runs BEFORE the full seed on fresh DBs, so its
+// `WHERE game_id = 2 AND category IS NULL` UPDATE hits 0 rows and the seed
+// then inserts ~619 NULL-category rows. This patch re-runs the same mapping
+// under a new name (so already-patched installs pick it up too) and
+// seed_mhr_quests now computes the category up front for fresh installs.
+fn mhr_quest_category(hub: Option<&str>, category: Option<&str>) -> String {
+    if let Some(c) = category {
+        let t = c.trim();
+        if !t.is_empty() && t != "?" {
+            return t.to_string();
+        }
+    }
+    match hub.unwrap_or("").to_ascii_lowercase().as_str() {
+        "hub_high" | "hub_low" | "hub_master" | "follower" | "mystery" => "Hub".to_string(),
+        "village" => "Village".to_string(),
+        "event" => "Event".to_string(),
+        "arena" => "Arena".to_string(),
+        "challenge" => "Challenge".to_string(),
+        "training" => "Village".to_string(),
+        _ => "Hub".to_string(),
+    }
+}
+
+fn patch_quest_category_backfill(conn: &Connection) -> Result<()> {
+    const NAME: &str = "quest_category_backfill";
+    if patch_applied(conn, NAME)? {
+        return Ok(());
+    }
+    let have: i64 = conn
+        .query_row("SELECT COUNT(*) FROM quests WHERE game_id = 2", [], |r| {
+            r.get(0)
+        })
+        .unwrap_or(0);
+    if have > 0 {
+        let _ = conn.execute(
+            "UPDATE quests SET category = CASE hub
+              WHEN 'hub_high' THEN 'Hub' WHEN 'hub_low' THEN 'Hub'
+              WHEN 'hub_master' THEN 'Hub' WHEN 'follower' THEN 'Hub'
+              WHEN 'mystery' THEN 'Hub' WHEN 'village' THEN 'Village'
+              WHEN 'event' THEN 'Event' WHEN 'arena' THEN 'Arena'
+              WHEN 'challenge' THEN 'Challenge' WHEN 'training' THEN 'Village'
+              ELSE 'Hub' END
+             WHERE game_id = 2 AND (category IS NULL OR category = '' OR category = '?')
+             AND hub IS NOT NULL",
+            [],
+        )?;
+        let _ = conn.execute(
+            "UPDATE quests SET category = 'Hub'
+             WHERE game_id = 2 AND (category IS NULL OR category = '' OR category = '?')
+             AND hub IS NULL",
+            [],
+        )?;
     }
     record_patch(conn, NAME)
 }
@@ -7094,17 +7157,20 @@ fn seed_mhr_quests(conn: &Connection) -> Result<()> {
             .map(|v| serde_json::to_string(v).unwrap_or_else(|_| "[]".to_string()));
         // Generic mhfu icons: category "Hub/Village/?" -> hunt/unknown,
         // hubs follower/hub_low/... -> nyanta/guild-low/... (see quest_hub_slug).
-        let qtype = q.category.as_deref().unwrap_or("?");
-        let type_slug = quest_type_slug(qtype);
+        // Fresh-install fix: compute category from hub so new DBs never store
+        // NULL (patch_quest_category_backfill covers upgraded installs).
+        let cat = mhr_quest_category(q.hub.as_deref(), q.category.as_deref());
+        let qtype = cat.clone();
+        let type_slug = quest_type_slug(&qtype);
         let icon_url = format!("/icons/mhfu/quests/{}.png", type_slug);
-        let icon_color = quest_type_color(qtype);
+        let icon_color = quest_type_color(&qtype);
         let hub_name = q.hub.clone().unwrap_or_else(|| "unknown".to_string());
         let hub_slug = quest_hub_slug(&hub_name);
         let hub_icon_url = format!("/icons/mhfu/quests/hubs/{}.png", hub_slug);
         conn.execute(
             "INSERT OR IGNORE INTO quests (id, game_id, name, hub, category, stars, rank, objective, location, client, description, is_key_quest, main_monsters, icon_name, icon_color, icon_url, hub_icon_name, hub_icon_color, hub_icon_url, language)
              VALUES (?1, 2, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, 'Gray', ?17, 'en')",
-            rusqlite::params![q.id, q.name, q.hub, q.category, q.stars, q.rank, q.objective, q.location, q.client, q.description, q.is_key_quest.unwrap_or(false), main_json, qtype, icon_color, icon_url, hub_name, hub_icon_url],
+            rusqlite::params![q.id, q.name, q.hub, cat, q.stars, q.rank, q.objective, q.location, q.client, q.description, q.is_key_quest.unwrap_or(false), main_json, qtype, icon_color, icon_url, hub_name, hub_icon_url],
         )?;
     }
     // Existing installs are covered by the quest_icons_mhr data patch.

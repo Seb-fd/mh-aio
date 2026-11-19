@@ -291,12 +291,17 @@
           {/each}
         </div>
       </section>
-    {:else if game?.id === 'mhwilds'}
+    {:else}
       <section class="mb-8">
         <h2 class="section-title mb-3">Quest Rewards</h2>
         <div class="rounded-lg border themed-card p-5 text-sm text-gray-400">
-          Per-item reward tables are not published upstream for Wilds (Fextra exposes reward text
-          only — see Description above). Check Fextra / Kiranico for drop rates.
+          {#if game?.id === 'mhwilds'}
+            Reward details unavailable upstream (Fextra exposes reward text only — see Description
+            above). Check Fextra / Kiranico for drop rates.
+          {:else}
+            No per-item reward data upstream for this quest. Check Kiranico / the wiki for drop
+            rates.
+          {/if}
         </div>
       </section>
     {/if}
