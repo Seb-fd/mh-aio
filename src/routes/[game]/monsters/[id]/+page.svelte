@@ -106,7 +106,9 @@
     return 'bg-gray-800/40'
   }
 
-  function formatTool(value: number | null, tool: string): string {
+  function formatTool(value: number | null, tool: string, notes?: string | null): string {
+    if (notes === 'effective') return 'Effective'
+    if (notes === 'uneffective') return 'Ineffective'
     if (value == null) return '-'
     if (tool === 'Dung' || tool === 'Meat') return value > 0 ? 'Works' : 'No effect'
     if (value <= 0) return 'Immune'
@@ -242,9 +244,9 @@
                 <meta.Icon class="h-5 w-5 shrink-0 {meta.color}" aria-hidden="true" />
                 <div class="flex-1 min-w-0">
                   <div class="flex items-center gap-2">
-                    <span class="text-xs uppercase tracking-wide {meta.color} font-medium"
-                      >{meta.label}</span
-                    >
+                    <span class="text-xs uppercase tracking-wide {meta.color} font-medium">
+                      {meta.label}
+                    </span>
                     {#if drop.part}
                       <span class="text-xs text-gray-400">· {drop.part}</span>
                     {/if}
@@ -301,8 +303,9 @@
                 'dedicated'
                   ? 'bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)]'
                   : 'bg-[var(--theme-bg-surface)] text-gray-400'}"
-                >Dedicated ({dedicatedSets.length})</button
               >
+                Dedicated ({dedicatedSets.length})
+              </button>
               <button
                 onclick={() => (armorViewMode = 'uses')}
                 aria-pressed={armorViewMode === 'uses'}
@@ -310,8 +313,9 @@
                 'uses'
                   ? 'bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)]'
                   : 'bg-[var(--theme-bg-surface)] text-gray-400'}"
-                >Uses 1 Material ({monster.armor.length})</button
               >
+                Uses 1 Material ({monster.armor.length})
+              </button>
             </div>
           </div>
           {#if armorViewMode === 'dedicated'}
@@ -334,8 +338,9 @@
                       <span class="text-sm font-semibold text-gray-100">{set.name}</span>
                       <span
                         class="text-[10px] px-2 py-0.5 rounded bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] text-gray-400"
-                        >{set.pieces[0]?.rank ?? activeRank} · {set.pieces.length} pcs</span
                       >
+                        {set.pieces[0]?.rank ?? activeRank} · {set.pieces.length} pcs
+                      </span>
                     </div>
                     <div class="flex flex-wrap gap-1">
                       {#each set.pieces as piece, pi (piece.id + '-' + pi)}
@@ -344,9 +349,9 @@
                           class="text-[11px] px-2 py-1 rounded bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] text-gray-300 hover:border-[var(--theme-border-strong)]"
                         >
                           {piece.name}
-                          <span class="text-gray-400"
-                            >[{slotLabel[piece.slot_type] ?? piece.slot_type}]</span
-                          >
+                          <span class="text-gray-400">
+                            [{slotLabel[piece.slot_type] ?? piece.slot_type}]
+                          </span>
                         </button>
                       {/each}
                     </div>
@@ -527,9 +532,9 @@
                   <td class="py-1.5 pr-3 text-gray-300">{a.initial ?? '-'}</td>
                   <td class="py-1.5 pr-3 text-gray-300">{a.increase ?? '-'}</td>
                   <td class="py-1.5 pr-3 text-gray-300">{a.max ?? '-'}</td>
-                  <td class="py-1.5 pr-3 text-gray-300"
-                    >{a.duration_sec != null ? `${a.duration_sec}s` : '-'}</td
-                  >
+                  <td class="py-1.5 pr-3 text-gray-300">
+                    {a.duration_sec != null ? `${a.duration_sec}s` : '-'}
+                  </td>
                   <td class="py-1.5 pr-3 text-gray-300">{a.damage ?? '-'}</td>
                   {#if monster.ailments.some((x) => x.notes)}
                     <td class="py-1.5 text-gray-300">{a.notes ?? '-'}</td>
@@ -570,9 +575,13 @@
               {#each monster.tools as t}
                 <tr class="border-t border-gray-800">
                   <td class="py-1.5 pr-3 font-semibold text-gray-100">{t.tool}</td>
-                  <td class="py-1.5 pr-3 text-gray-300">{formatTool(t.normal, t.tool)}</td>
-                  <td class="py-1.5 pr-3 text-gray-300">{formatTool(t.notfound, t.tool)}</td>
-                  <td class="py-1.5 pr-3 text-gray-300">{formatTool(t.enraged, t.tool)}</td>
+                  <td class="py-1.5 pr-3 text-gray-300">{formatTool(t.normal, t.tool, t.notes)}</td>
+                  <td class="py-1.5 pr-3 text-gray-300">
+                    {formatTool(t.notfound, t.tool, t.notes)}
+                  </td>
+                  <td class="py-1.5 pr-3 text-gray-300">
+                    {formatTool(t.enraged, t.tool, t.notes)}
+                  </td>
                   {#if monster.tools.some((x) => x.notes)}
                     <td class="py-1.5 text-gray-300">{t.notes ?? '-'}</td>
                   {/if}

@@ -14,7 +14,7 @@
   import ItemIcon from '$lib/components/item-icon.svelte'
   import FavoriteButton from '$lib/components/favorite-button.svelte'
   import { favorites } from '$lib/stores/favorites'
-  import { browser } from '$app/environment'
+  import { BROWSER as browser } from 'esm-env'
   import { toolbarTarget } from '$lib/stores/toolbar'
   import { toolbarPortal } from '$lib/actions/toolbar-portal'
   import { captureScrollY, restoreScrollY } from '$lib/utils/scroll-restore'
@@ -375,8 +375,10 @@
                   {#if item.sell_price !== null && item.sell_price !== undefined}
                     <span
                       class="text-xs font-medium tabular-nums shrink-0"
-                      style="color: var(--theme-accent);">{item.sell_price}z</span
+                      style="color: var(--theme-accent);"
                     >
+                      {item.sell_price}z
+                    </span>
                   {/if}
                 </div>
               </Card>

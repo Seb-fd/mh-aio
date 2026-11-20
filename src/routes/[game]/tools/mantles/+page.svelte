@@ -83,9 +83,9 @@
       label="Search mantles"
       class="sm:w-64"
     />
-    <span class="text-xs text-gray-400" role="status"
-      >{filtered.length} / {mantles.length} mantles</span
-    >
+    <span class="text-xs text-gray-400" role="status">
+      {filtered.length} / {mantles.length} mantles
+    </span>
   </div>
   {#if loading}
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3" aria-busy="true">
@@ -120,14 +120,13 @@
                   {m.effect}
                 </p>
                 <p class="text-[11px] mt-1 flex flex-wrap gap-x-2 gap-y-0.5 text-gray-400">
-                  <span class="inline-flex items-center gap-1"
-                    ><Timer class="h-3 w-3 shrink-0" aria-hidden="true" />{m.duration_sec ??
-                      '-'}s</span
-                  >
-                  <span class="inline-flex items-center gap-1 text-gray-400"
-                    ><RefreshCw class="h-3 w-3 shrink-0" aria-hidden="true" />{m.cooldown_sec ??
-                      '-'}s → {m.cooldown_upgraded_sec ?? '-'}s (+)</span
-                  >
+                  <span class="inline-flex items-center gap-1">
+                    <Timer class="h-3 w-3 shrink-0" aria-hidden="true" />{m.duration_sec ?? '-'}s
+                  </span>
+                  <span class="inline-flex items-center gap-1 text-gray-400">
+                    <RefreshCw class="h-3 w-3 shrink-0" aria-hidden="true" />{m.cooldown_sec ??
+                      '-'}s → {m.cooldown_upgraded_sec ?? '-'}s (+)
+                  </span>
                 </p>
                 {#if m.slots && m.slots !== '---'}
                   <p class="text-[10px] text-[var(--theme-accent)] mt-1">Slots: {m.slots}</p>

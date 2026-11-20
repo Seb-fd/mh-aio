@@ -16,6 +16,9 @@
   const game = $derived($selectedGame)
   const dbId = $derived(game?.dbId)
   const isMhw = $derived(game?.id === 'mhw')
+  // Sidebar hides Charms for mh2g (0 charm rows upstream); direct URL still
+  // lands here, so guard with an honest N/A explainer instead of an empty list.
+  const isMh2g = $derived(game?.id === 'mh2g')
 
   const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V']
   const familyStem = (name: string) => name.replace(/\s+(I{1,3}|IV|V)$/, '')
@@ -150,7 +153,12 @@
     </p>
   </div>
 
-  {#if isMhw}
+  {#if isMh2g}
+    <EmptyState
+      title="Charms not available for MH2G"
+      hint="Freedom Unite has no charm/talisman system upstream — charms cover MHP3rd excavated, MHR talismans and MHW hunter charms."
+    />
+  {:else if isMhw}
     <Card class="mb-4 p-4">
       <div class="flex flex-wrap items-end gap-3">
         <label class="flex min-w-52 flex-1 flex-col gap-1 text-xs text-gray-400">
@@ -174,13 +182,13 @@
         </div>
       </div>
       <div class="mt-3 flex flex-wrap gap-2">
-        <FilterChip active={hunterLevel == null} onclick={() => (hunterLevel = null)}
-          >All ranks</FilterChip
-        >
+        <FilterChip active={hunterLevel == null} onclick={() => (hunterLevel = null)}>
+          All ranks
+        </FilterChip>
         {#each [1, 2, 3, 4, 5] as lv}
-          <FilterChip active={hunterLevel === lv} onclick={() => (hunterLevel = lv)}
-            >{ROMAN[lv]}</FilterChip
-          >
+          <FilterChip active={hunterLevel === lv} onclick={() => (hunterLevel = lv)}>
+            {ROMAN[lv]}
+          </FilterChip>
         {/each}
       </div>
     </Card>
@@ -217,18 +225,16 @@
                     {/if}
                     <span class="ml-auto flex flex-wrap gap-2">
                       {#if c.skill1_name}
-                        <span class="text-xs text-gray-200"
-                          >{c.skill1_name}
-                          <span class="font-semibold text-emerald-400">+{c.skill1_level}</span
-                          ></span
-                        >
+                        <span class="text-xs text-gray-200">
+                          {c.skill1_name}
+                          <span class="font-semibold text-emerald-400">+{c.skill1_level}</span>
+                        </span>
                       {/if}
                       {#if c.skill2_name}
-                        <span class="text-xs text-gray-200"
-                          >{c.skill2_name}
-                          <span class="font-semibold text-emerald-400">+{c.skill2_level}</span
-                          ></span
-                        >
+                        <span class="text-xs text-gray-200">
+                          {c.skill2_name}
+                          <span class="font-semibold text-emerald-400">+{c.skill2_level}</span>
+                        </span>
                       {/if}
                     </span>
                   </div>
@@ -326,10 +332,10 @@
               <span class="text-xs text-gray-400">{c.slots} slot{c.slots === 1 ? '' : 's'}</span>
               <span class="ml-auto flex flex-wrap gap-2">
                 {#each c.skills as s}
-                  <span class="text-xs text-gray-200"
-                    >{s.skill_name}
-                    <span class="font-semibold text-emerald-400">+{s.points}</span></span
-                  >
+                  <span class="text-xs text-gray-200">
+                    {s.skill_name}
+                    <span class="font-semibold text-emerald-400">+{s.points}</span>
+                  </span>
                 {/each}
               </span>
             </div>

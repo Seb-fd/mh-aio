@@ -140,8 +140,9 @@
       <h1 class="fluid-h2 font-bold text-gray-100">Combinations</h1>
       <span
         class="text-xs px-2 py-1 rounded-full border bg-[var(--theme-bg-surface)] text-gray-400 border-[var(--theme-border)] whitespace-nowrap"
-        >{combines.length} recipes</span
       >
+        {combines.length} recipes
+      </span>
     </div>
     <p class="text-sm text-gray-400 mt-1">
       {#if game}
@@ -225,18 +226,19 @@
               >
                 {rec.result_name}
               </button>
-              <span class="text-[10px] px-2 py-0.5 rounded-full border font-semibold {badge.cls}"
-                >{badge.label}</span
-              >
+              <span class="text-[10px] px-2 py-0.5 rounded-full border font-semibold {badge.cls}">
+                {badge.label}
+              </span>
               {#if rec.chance != null}
                 <span
                   class="text-[10px] px-1.5 py-0.5 rounded border bg-[var(--theme-bg-elevated)] text-gray-400 border-[var(--theme-border)] tabular-nums"
-                  >{rec.chance}% success</span
                 >
+                  {rec.chance}% success
+                </span>
               {/if}
-              <span class="text-[10px] text-gray-600 ml-auto tabular-nums"
-                >#{rec.result_item_id}</span
-              >
+              <span class="text-[10px] text-gray-600 ml-auto tabular-nums">
+                #{rec.result_item_id}
+              </span>
             </div>
             <div class="flex flex-wrap items-center gap-1.5">
               {#each rec.components as comp, i}
@@ -251,8 +253,10 @@
                   <span class="text-xs text-gray-200">{comp.component_name}</span>
                   <span
                     class="text-[10px] font-semibold tabular-nums"
-                    style="color: var(--theme-accent);">x{comp.quantity}</span
+                    style="color: var(--theme-accent);"
                   >
+                    x{comp.quantity}
+                  </span>
                 </button>
               {/each}
               <span class="text-gray-600 text-sm" aria-hidden="true">=</span>
@@ -266,8 +270,9 @@
                 <span
                   class="text-[10px] font-semibold tabular-nums"
                   style="color: var(--theme-accent);"
-                  >x{rec.components[0]?.result_quantity ?? 1}</span
                 >
+                  x{rec.components[0]?.result_quantity ?? 1}
+                </span>
               </button>
             </div>
             {#if rec.combine_type === 'alchemy'}

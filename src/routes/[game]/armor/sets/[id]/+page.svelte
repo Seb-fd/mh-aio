@@ -149,14 +149,16 @@
             </p>
             <div class="grid grid-cols-2 gap-x-3 gap-y-1 text-xs">
               <div>
-                <span class="text-gray-400">DEF</span><span class="text-gray-100 font-medium ml-1"
-                  >{piece.defense_base ?? 0}-{piece.defense_max ?? 0}</span
-                >
+                <span class="text-gray-400">DEF</span><span class="text-gray-100 font-medium ml-1">
+                  {piece.defense_base ?? 0}-{piece.defense_max ?? 0}
+                </span>
               </div>
               <div>
-                <span class="text-gray-400">Slots</span><span class="text-gray-100 font-medium ml-1"
-                  >{piece.slots ?? '0'}</span
+                <span class="text-gray-400">Slots</span><span
+                  class="text-gray-100 font-medium ml-1"
                 >
+                  {piece.slots ?? '0'}
+                </span>
               </div>
               {#if piece.skills}
                 <div class="col-span-2 mt-1">

@@ -4700,6 +4700,40 @@ mod tests {
     }
 
     #[test]
+    fn quest_gaps_wilds_rewards_empty_and_mhr_category() {
+        // Wilds quest_rewards: 0 rows by design (Fextra exposes reward text,
+        // not per-item counts; possible_reward_item_ids is empty). Reward
+        // text is preserved as quests.description instead of fabricating rows.
+        // MHR categories: fresh seeds + patch_quest_category_backfill fill
+        // from hub; MH2G/MHP3rd keep category NULL by design (hub is canonical).
+        let c = conn();
+        let count = |sql: &str| -> i64 { c.query_row(sql, [], |r| r.get(0)).unwrap() };
+        assert_eq!(
+            count(
+                "SELECT COUNT(*) FROM quest_rewards WHERE quest_id IN (SELECT id FROM quests WHERE game_id = 3)"
+            ),
+            0
+        );
+        assert!(
+            count(
+                "SELECT COUNT(*) FROM quests WHERE game_id = 3 AND description IS NOT NULL AND description <> ''"
+            ) > 100
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM quests WHERE game_id = 2 AND category IS NULL"),
+            0
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM quests WHERE game_id = 4 AND (hub IS NULL OR hub = '')"),
+            0
+        );
+        assert_eq!(
+            count("SELECT COUNT(*) FROM quests WHERE game_id = 5 AND (hub IS NULL OR hub = '')"),
+            0
+        );
+    }
+
+    #[test]
     fn mhwilds_004_coverage_lists_details_and_junctions() {
         // 004: Wilds core (MHDB API) — every list non-empty, junctions wired.
         let c = conn();

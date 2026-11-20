@@ -223,8 +223,9 @@
           {#each parseMonsters(quest.main_monsters) as mon}
             <span
               class="inline-flex items-center gap-1.5 px-3 min-h-[36px] py-1.5 rounded-full bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] text-sm text-gray-200"
-              ><Swords class="h-3.5 w-3.5 shrink-0" aria-hidden="true" />{mon}</span
             >
+              <Swords class="h-3.5 w-3.5 shrink-0" aria-hidden="true" />{mon}
+            </span>
           {/each}
         </div>
       </section>
@@ -268,15 +269,16 @@
                   <div class="flex items-center gap-2">
                     <span
                       class="text-sm text-gray-100 group-hover:text-[var(--theme-text-accent)] transition-colors motion-safe:transition-colors motion-reduce:transition-none"
-                      >{r.item_name}</span
                     >
+                      {r.item_name}
+                    </span>
                     <span class="text-xs text-gray-400 tabular-nums">x{r.quantity}</span>
                     {#if r.condition}
                       <span class="text-[11px] text-amber-400/70">· {r.condition}</span>
                     {/if}
-                    <span class="text-xs text-gray-400 ml-auto tabular-nums"
-                      >{r.probability != null ? `${Math.round(r.probability * 100)}%` : '—'}</span
-                    >
+                    <span class="text-xs text-gray-400 ml-auto tabular-nums">
+                      {r.probability != null ? `${Math.round(r.probability * 100)}%` : '—'}
+                    </span>
                   </div>
                   {#if r.probability != null}
                     <div class="mt-1.5 flex items-center gap-2">
@@ -291,12 +293,17 @@
           {/each}
         </div>
       </section>
-    {:else if game?.id === 'mhwilds'}
+    {:else}
       <section class="mb-8">
         <h2 class="section-title mb-3">Quest Rewards</h2>
         <div class="rounded-lg border themed-card p-5 text-sm text-gray-400">
-          Per-item reward tables are not published upstream for Wilds (Fextra exposes reward text
-          only — see Description above). Check Fextra / Kiranico for drop rates.
+          {#if game?.id === 'mhwilds'}
+            Reward details unavailable upstream (Fextra exposes reward text only — see Description
+            above). Check Fextra / Kiranico for drop rates.
+          {:else}
+            No per-item reward data upstream for this quest. Check Kiranico / the wiki for drop
+            rates.
+          {/if}
         </div>
       </section>
     {/if}

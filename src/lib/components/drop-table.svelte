@@ -346,9 +346,9 @@
           <div class="probability-bar" role="presentation">
             <span style="--prob: {pct(source.probability)}"></span>
           </div>
-          <span class="text-[10px] text-gray-400 shrink-0 tabular-nums w-9 text-right"
-            >{pct(source.probability)}%</span
-          >
+          <span class="text-[10px] text-gray-400 shrink-0 tabular-nums w-9 text-right">
+            {pct(source.probability)}%
+          </span>
         </div>
       {/if}
     </div>

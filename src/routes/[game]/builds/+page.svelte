@@ -392,8 +392,9 @@
           <div class="flex items-center gap-2 mb-3">
             <span
               class="w-6 h-6 rounded-full bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)] flex items-center justify-center text-xs font-bold"
-              >1</span
             >
+              1
+            </span>
             <h2 class="text-sm font-semibold text-gray-200">Hunter Type</h2>
           </div>
           <div class="grid grid-cols-2 gap-2">
@@ -448,19 +449,22 @@
             <div class="flex items-center gap-2">
               <span
                 class="w-6 h-6 rounded-full bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)] flex items-center justify-center text-xs font-bold"
-                >2</span
               >
+                2
+              </span>
               <h2 class="text-sm font-semibold text-gray-200">Skills</h2>
               <span
                 class="text-xs px-2 py-0.5 rounded-full bg-[var(--theme-bg-elevated)] text-gray-400"
-                >{activeCount}/5</span
               >
+                {activeCount}/5
+              </span>
             </div>
             {#if activeCount > 0}<button
                 onclick={() => skillSlots.forEach((_, i) => clearSkill(i))}
                 class="inline-flex items-center text-xs text-gray-400 hover:text-gray-300 min-h-[44px] px-2 -mr-2 rounded focus-visible:outline-none focus-visible:ring-2"
-                >Clear all</button
-              >{/if}
+              >
+                Clear all
+              </button>{/if}
           </div>
           <p class="text-xs text-gray-400 mb-3">
             Choose up to 5 skills. We’ll find sets that activate them.
@@ -490,9 +494,9 @@
                         class="mt-1 w-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-lg px-2 min-h-[44px] py-1 text-xs text-gray-300"
                       >
                         {#each getAbilityOptions(slot.skillId) as lvl}
-                          <option value={lvl.points}
-                            >{lvl.ability_name} ({lvl.points > 0 ? '+' : ''}{lvl.points})</option
-                          >
+                          <option value={lvl.points}>
+                            {lvl.ability_name} ({lvl.points > 0 ? '+' : ''}{lvl.points})
+                          </option>
                         {/each}
                         {#if getAbilityOptions(slot.skillId).length === 0}
                           <option value={slot.points}>+{slot.points} pts</option>
@@ -503,8 +507,9 @@
                       onclick={() => clearSkill(idx)}
                       aria-label="Remove {slot.skillName} skill"
                       class="min-w-[44px] min-h-[44px] rounded-lg bg-[var(--theme-bg-surface)] hover:bg-[var(--theme-bg-elevated)] flex items-center justify-center text-gray-400 hover:text-gray-300 shrink-0 focus-visible:outline-none focus-visible:ring-2"
-                      ><X class="h-4 w-4" aria-hidden="true" /></button
                     >
+                      <X class="h-4 w-4" aria-hidden="true" />
+                    </button>
                   </div>
                 {:else}
                   <div class="relative">
@@ -530,10 +535,10 @@
                             onclick={() => selectSkill(idx, s)}
                           >
                             <span>{s.name}</span>
-                            <span class="text-xs text-gray-600"
-                              >+{skillLevelsMap.get(s.id)?.filter((l) => l.points > 0)[0]?.points ??
-                                10}</span
-                            >
+                            <span class="text-xs text-gray-600">
+                              +{skillLevelsMap.get(s.id)?.filter((l) => l.points > 0)[0]?.points ??
+                                10}
+                            </span>
                           </button>
                         {/each}
                         {#if filteredSkills(slot.filter).length === 0}
@@ -557,8 +562,9 @@
                   { name: 'Sharpness', points: 10 },
                 ])}
               class="text-xs px-2.5 py-1 rounded-full bg-[var(--theme-bg-elevated)] hover:bg-[var(--theme-bg-elevated)] text-gray-300"
-              >Attack + Sharpness</button
             >
+              Attack + Sharpness
+            </button>
             <button
               onclick={() =>
                 applyExample([
@@ -566,13 +572,15 @@
                   { name: 'WindPress', points: 10 },
                 ])}
               class="text-xs px-2.5 py-1 rounded-full bg-[var(--theme-bg-elevated)] hover:bg-[var(--theme-bg-elevated)] text-gray-300"
-              >Earplug + Wind</button
             >
+              Earplug + Wind
+            </button>
             <button
               onclick={() => applyExample([{ name: 'Expert', points: 20 }])}
               class="text-xs px-2.5 py-1 rounded-full bg-[var(--theme-bg-elevated)] hover:bg-[var(--theme-bg-elevated)] text-gray-300"
-              >Critical</button
             >
+              Critical
+            </button>
           </div>
         </div>
 
@@ -581,14 +589,15 @@
           <div class="flex items-center gap-2 mb-3">
             <span
               class="w-6 h-6 rounded-full bg-[var(--theme-bg-elevated)] text-gray-400 flex items-center justify-center text-xs font-bold"
-              >3</span
             >
+              3
+            </span>
             <h2 class="text-sm font-semibold text-gray-200">Hunter Details</h2>
             <span class="text-xs text-gray-600 ml-auto">Optional</span>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-            <label class="text-xs text-gray-400"
-              >HR
+            <label class="text-xs text-gray-400">
+              HR
               <select
                 bind:value={hr}
                 class="mt-1 w-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-lg px-2 py-2 text-sm text-gray-200"
@@ -596,8 +605,8 @@
                 {#each [1, 2, 3, 4, 5, 6, 7, 8, 9] as v}<option value={v}>{v}</option>{/each}
               </select>
             </label>
-            <label class="text-xs text-gray-400"
-              >Elder ★
+            <label class="text-xs text-gray-400">
+              Elder ★
               <select
                 bind:value={elderStar}
                 class="mt-1 w-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-lg px-2 py-2 text-sm text-gray-200"
@@ -605,8 +614,8 @@
                 {#each [1, 2, 3, 4, 5, 6, 7, 8, 9] as v}<option value={v}>{v}</option>{/each}
               </select>
             </label>
-            <label class="text-xs text-gray-400"
-              >Weapon Slots
+            <label class="text-xs text-gray-400">
+              Weapon Slots
               <select
                 bind:value={weaponSlots}
                 class="mt-1 w-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-lg px-2 py-2 text-sm text-gray-200"
@@ -626,8 +635,9 @@
               'male'
                 ? 'bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)] border-[var(--theme-primary)]'
                 : 'bg-[var(--theme-bg-surface)] border-[var(--theme-border)] text-gray-400'}"
-              >Male</button
             >
+              Male
+            </button>
             <button
               onclick={() => (gender = 'female')}
               aria-pressed={gender === 'female'}
@@ -635,8 +645,9 @@
               'female'
                 ? 'bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)] border-[var(--theme-primary)]'
                 : 'bg-[var(--theme-bg-surface)] border-[var(--theme-border)] text-gray-400'}"
-              >Female</button
             >
+              Female
+            </button>
           </div>
           <button
             onclick={() => (showAdvanced = !showAdvanced)}
@@ -652,32 +663,32 @@
                 title={allowBad
                   ? 'Negative skills allowed — solutions may include bad abilities'
                   : 'Negative skills filtered — solver tries to patch bad skills with jewels (advanced reordering not yet implemented)'}
-                ><span
-                  >Allow negative skills {#if !allowBad}<span class="ml-1 text-[10px] text-gray-400"
-                      >(beta)</span
-                    >{/if}</span
-                ><input
+              >
+                <span>
+                  Allow negative skills {#if !allowBad}<span class="ml-1 text-[10px] text-gray-400">
+                      (beta)
+                    </span>{/if}
+                </span><input
                   type="checkbox"
                   bind:checked={allowBad}
                   class="accent-[var(--theme-primary)]"
-                /></label
-              >
+                />
+              </label>
               <label
                 class="flex items-center justify-between gap-2 text-xs text-gray-300 bg-[var(--theme-bg-surface)] rounded-lg px-3 py-2"
-                ><span>Include piercings</span><input
+              >
+                <span>Include piercings</span><input
                   type="checkbox"
                   bind:checked={includePiercings}
-                /></label
-              >
+                />
+              </label>
               <label
                 class="flex items-center justify-between gap-2 text-xs text-gray-300 bg-[var(--theme-bg-surface)] rounded-lg px-3 py-2"
-                ><span>Include Torso Inc</span><input
-                  type="checkbox"
-                  bind:checked={allowTorsoInc}
-                /></label
               >
-              <label class="text-xs text-gray-400"
-                >Sort by
+                <span>Include Torso Inc</span><input type="checkbox" bind:checked={allowTorsoInc} />
+              </label>
+              <label class="text-xs text-gray-400">
+                Sort by
                 <select
                   bind:value={sortBy}
                   class="mt-1 w-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] rounded-lg px-2 py-2 text-xs text-gray-300"
@@ -720,19 +731,21 @@
           >
             <span
               class="w-6 h-6 rounded-full bg-[var(--theme-bg-elevated)] text-gray-400 flex items-center justify-center text-xs font-bold"
-              >4</span
             >
+              4
+            </span>
             <h2 class="text-sm font-semibold text-gray-200">Saved builds</h2>
             <span
               class="text-xs px-2 py-0.5 rounded-full bg-[var(--theme-bg-elevated)] text-gray-400"
-              >{savedBuilds.length}</span
             >
+              {savedBuilds.length}
+            </span>
             <span class="text-[10px] text-gray-400 ml-auto">{showSaved ? '▲' : '▼'}</span>
           </button>
           {#if showSaved}
             <div class="mt-3 space-y-2">
-              <label class="text-xs text-gray-400"
-                >Name for the next save
+              <label class="text-xs text-gray-400">
+                Name for the next save
                 <input
                   placeholder="e.g. Earplug dancer"
                   aria-label="Name for the next saved build"
@@ -766,15 +779,17 @@
                       <button
                         onclick={() => loadBuild(b)}
                         class="text-xs px-2.5 min-h-[36px] rounded-full bg-[var(--theme-primary)]/10 border border-[var(--theme-primary)]/20 text-[var(--theme-primary)]"
-                        >Load</button
                       >
+                        Load
+                      </button>
                       <button
                         onclick={() => exportSaved(b)}
                         aria-label="Export {b.name} as JSON"
                         title="Download JSON"
                         class="inline-flex items-center gap-1 text-xs px-2.5 min-h-[36px] rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-gray-300"
-                        ><Download class="h-3.5 w-3.5" aria-hidden="true" />JSON</button
                       >
+                        <Download class="h-3.5 w-3.5" aria-hidden="true" />JSON
+                      </button>
                       <button
                         onclick={() => copyShare(b)}
                         aria-label="Copy share code for {b.name}"
@@ -784,18 +799,16 @@
                         {#if copiedId === b.id}<Check
                             class="h-3.5 w-3.5 text-emerald-400"
                             aria-hidden="true"
-                          />Copied{:else}<Copy
-                            class="h-3.5 w-3.5"
-                            aria-hidden="true"
-                          />Share{/if}</button
-                      >
+                          />Copied{:else}<Copy class="h-3.5 w-3.5" aria-hidden="true" />Share{/if}
+                      </button>
                       <button
                         onclick={() => deleteSaved(b.id)}
                         aria-label="Delete {b.name}"
                         title="Delete"
                         class="inline-flex items-center gap-1 text-xs px-2.5 min-h-[36px] rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-gray-400 hover:text-red-300"
-                        ><Trash2 class="h-3.5 w-3.5" aria-hidden="true" />Delete</button
                       >
+                        <Trash2 class="h-3.5 w-3.5" aria-hidden="true" />Delete
+                      </button>
                     </div>
                   </div>
                 {/each}
@@ -817,8 +830,9 @@
                   onclick={importFromText}
                   disabled={importText.trim().length === 0}
                   class="w-full min-h-[44px] py-2 rounded-lg text-xs font-bold bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)] hover:opacity-90 disabled:opacity-40"
-                  >Import build</button
                 >
+                  Import build
+                </button>
               {/if}
               {#if savedError}<p
                   class="text-xs text-center text-red-400 bg-red-950/30 border border-red-900 rounded-lg px-3 py-2"
@@ -843,8 +857,9 @@
           </div>
           {#if results.length > 0}<span
               class="text-xs px-2.5 py-1 rounded-full bg-[var(--theme-bg-elevated)] text-gray-400"
-              >{results.length}</span
-            >{/if}
+            >
+              {results.length}
+            </span>{/if}
         </div>
         <div class="flex-1 min-h-0 p-4 space-y-3 overflow-auto">
           {#if results.length === 0 && !searching}
@@ -864,13 +879,15 @@
                 <button
                   onclick={() => applyExample([{ name: 'Attack', points: 20 }])}
                   class="text-xs px-3 min-h-[44px] rounded-full border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] text-gray-400 hover:text-gray-200 focus-visible:outline-none focus-visible:ring-2"
-                  >Try Attack Up (Large)</button
                 >
+                  Try Attack Up (Large)
+                </button>
                 <button
                   onclick={() => applyExample([{ name: 'HearProtct', points: 10 }])}
                   class="text-xs px-3 min-h-[44px] rounded-full border border-[var(--theme-border)] bg-[var(--theme-bg-surface)] text-gray-400 hover:text-gray-200 focus-visible:outline-none focus-visible:ring-2"
-                  >Try Earplug</button
                 >
+                  Try Earplug
+                </button>
               </div>
             </div>
           {/if}
@@ -898,25 +915,29 @@
               <div class="flex items-center justify-between mb-3">
                 <span
                   class="text-xs font-bold px-2.5 py-1 rounded-full bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)]"
-                  >#{i + 1}</span
                 >
+                  #{i + 1}
+                </span>
                 <div class="flex items-center gap-1.5">
                   <button
                     onclick={() => saveSolution(sol, i)}
                     aria-label="Save set #{i + 1}"
                     title="Save this set"
                     class="min-w-[36px] min-h-[36px] px-2 rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-gray-400 hover:text-gray-200 inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-2"
-                    ><Save class="h-4 w-4" aria-hidden="true" /></button
                   >
+                    <Save class="h-4 w-4" aria-hidden="true" />
+                  </button>
                   <div class="flex items-center gap-1.5 text-[11px]">
                     <span
                       class="px-2 py-1 rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-gray-400"
-                      >DEF {sol.defense}</span
                     >
+                      DEF {sol.defense}
+                    </span>
                     <span
                       class="px-2 py-1 rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-emerald-400"
-                      >{sol.slots_spare} spare</span
                     >
+                      {sol.slots_spare} spare
+                    </span>
                   </div>
                 </div>
               </div>
@@ -928,8 +949,9 @@
                     <span
                       class="w-8 h-8 rounded-lg bg-[var(--theme-bg-elevated)] flex items-center justify-center text-[10px] font-bold text-gray-300 shrink-0"
                       aria-hidden="true"
-                      >{slotCode[a.slot_type] ?? a.slot_type.slice(0, 2).toUpperCase()}</span
                     >
+                      {slotCode[a.slot_type] ?? a.slot_type.slice(0, 2).toUpperCase()}
+                    </span>
                     <div class="flex-1 min-w-0">
                       <div class="text-sm font-medium text-gray-100 truncate">{a.name}</div>
                       <div class="text-xs text-gray-400">
@@ -943,28 +965,34 @@
               <div class="mt-3 flex flex-wrap gap-1.5 text-xs">
                 <span
                   class="px-2 py-1 rounded-full bg-orange-950/40 text-orange-300 border border-orange-900/30"
-                  >Fire {sol.fire_res}</span
                 >
+                  Fire {sol.fire_res}
+                </span>
                 <span
                   class="px-2 py-1 rounded-full bg-blue-950/40 text-blue-300 border border-blue-900/30"
-                  >Water {sol.water_res}</span
                 >
+                  Water {sol.water_res}
+                </span>
                 <span
                   class="px-2 py-1 rounded-full bg-yellow-950/40 text-yellow-300 border border-yellow-900/30"
-                  >Thunder {sol.thunder_res}</span
                 >
+                  Thunder {sol.thunder_res}
+                </span>
                 <span
                   class="px-2 py-1 rounded-full bg-cyan-950/40 text-cyan-300 border border-cyan-900/30"
-                  >Ice {sol.ice_res}</span
                 >
+                  Ice {sol.ice_res}
+                </span>
                 <span
                   class="px-2 py-1 rounded-full bg-purple-950/40 text-purple-300 border border-purple-900/30"
-                  >Dragon {sol.dragon_res}</span
                 >
+                  Dragon {sol.dragon_res}
+                </span>
                 <span
                   class="px-2 py-1 rounded-full bg-[var(--theme-bg-surface)] border border-[var(--theme-border)] text-gray-400"
-                  >Rarity {sol.rarity}</span
                 >
+                  Rarity {sol.rarity}
+                </span>
               </div>
               {#if sol.decorations.length}
                 <div class="mt-3">
@@ -973,14 +1001,16 @@
                     {#each sol.decorations as d}
                       <span
                         class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[var(--theme-primary)]/10 border border-[var(--theme-primary)]/20 text-xs text-[var(--theme-primary)]"
-                        ><Gem class="h-3 w-3 shrink-0" aria-hidden="true" />{d.count}× {d.name}<span
+                      >
+                        <Gem class="h-3 w-3 shrink-0" aria-hidden="true" />{d.count}× {d.name}<span
                           class="text-gray-400"
-                          >({d.skill_name}
+                        >
+                          ({d.skill_name}
                           {(d.skill_points ?? 0) > 0 ? '+' : ''}{d.skill_points ??
                             0}{#if d.secondary_skill_name}
-                            / {d.secondary_skill_name}{/if})</span
-                        ></span
-                      >
+                            / {d.secondary_skill_name}{/if})
+                        </span>
+                      </span>
                     {/each}
                   </div>
                 </div>

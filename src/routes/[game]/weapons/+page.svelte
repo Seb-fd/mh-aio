@@ -378,9 +378,9 @@
               />
             {/if}
             {group.type}
-            <span class="text-[11px] font-normal normal-case text-gray-400"
-              >· {group.trees.length}</span
-            >
+            <span class="text-[11px] font-normal normal-case text-gray-400">
+              · {group.trees.length}
+            </span>
           </h2>
           {#each limited as t}
             {#each t.rows as row (row.weapon.id)}
@@ -459,18 +459,20 @@
           {/if}
           <span
             class="text-[10px] text-gray-400 shrink-0 w-10 text-center rounded bg-[var(--theme-bg-elevated)] py-0.5 border border-[var(--theme-border)]"
-            >R{w.rarity ?? 1}</span
           >
+            R{w.rarity ?? 1}
+          </span>
           <span class="text-sm text-gray-100 font-medium truncate min-w-0">{w.name}</span>
-          <span class="text-[11px] text-gray-400 ml-auto shrink-0 tabular-nums"
-            >ATK {w.attack ?? 0}</span
-          >
+          <span class="text-[11px] text-gray-400 ml-auto shrink-0 tabular-nums">
+            ATK {w.attack ?? 0}
+          </span>
         </div>
         <div class="mt-1 flex items-center gap-2 min-w-0">
           {#if w.element_type}
-            <span class="text-[11px] {elementColor(w.element_type)} shrink-0 truncate"
-              >{w.element_type} {w.element_value ?? 0}</span
-            >
+            <span class="text-[11px] {elementColor(w.element_type)} shrink-0 truncate">
+              {w.element_type}
+              {w.element_value ?? 0}
+            </span>
           {/if}
           {#if sharpnessSegments(w.sharpness).length > 0}
             <div

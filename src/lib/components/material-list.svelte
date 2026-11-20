@@ -56,9 +56,9 @@
               {mat.item_name}
             </span>
           </div>
-          <span class="text-sm font-semibold text-[var(--theme-accent)] shrink-0"
-            >x{mat.quantity}</span
-          >
+          <span class="text-sm font-semibold text-[var(--theme-accent)] shrink-0">
+            x{mat.quantity}
+          </span>
         </button>
       {/each}
     </div>

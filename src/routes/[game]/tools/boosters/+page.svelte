@@ -74,9 +74,9 @@
       label="Search boosters"
       class="sm:w-64"
     />
-    <span class="text-xs text-gray-400" role="status"
-      >{filtered.length} / {list.length} boosters</span
-    >
+    <span class="text-xs text-gray-400" role="status">
+      {filtered.length} / {list.length} boosters
+    </span>
   </div>
   {#if loading}<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3" aria-busy="true">
       {#each Array(3) as _}
@@ -108,13 +108,13 @@
                 <p class="font-semibold text-gray-100">{m.name}</p>
                 <p class="text-[11px] text-gray-400 mt-1 line-clamp-2">{m.effect}</p>
                 <p class="text-[11px] mt-1 text-gray-400 flex flex-wrap gap-x-2 gap-y-0.5">
-                  <span class="inline-flex items-center gap-1"
-                    ><Timer class="h-3 w-3 shrink-0" aria-hidden="true" />{m.duration_sec}s</span
-                  >
-                  <span class="inline-flex items-center gap-1"
-                    ><RefreshCw class="h-3 w-3 shrink-0" aria-hidden="true" />{m.cooldown_sec}s → {m.cooldown_upgraded_sec}s
-                    (+)</span
-                  >
+                  <span class="inline-flex items-center gap-1">
+                    <Timer class="h-3 w-3 shrink-0" aria-hidden="true" />{m.duration_sec}s
+                  </span>
+                  <span class="inline-flex items-center gap-1">
+                    <RefreshCw class="h-3 w-3 shrink-0" aria-hidden="true" />{m.cooldown_sec}s → {m.cooldown_upgraded_sec}s
+                    (+)
+                  </span>
                 </p>
                 {#if m.upgrade_quest}<p
                     class="text-[10px] text-emerald-300/80 mt-1 truncate inline-flex items-center gap-1"

@@ -224,9 +224,10 @@
                           class={(deco.skill_points ?? 0) >= 0
                             ? 'text-emerald-300'
                             : 'text-red-300'}
-                          >{deco.skill_name}
-                          {(deco.skill_points ?? 0) > 0 ? '+' : ''}{deco.skill_points}</span
                         >
+                          {deco.skill_name}
+                          {(deco.skill_points ?? 0) > 0 ? '+' : ''}{deco.skill_points}
+                        </span>
                       {/if}
                       {#if deco.secondary_skill_name}
                         <span class="text-gray-600"> · </span>
@@ -234,18 +235,22 @@
                           class={(deco.secondary_points ?? 0) >= 0
                             ? 'text-emerald-300'
                             : 'text-red-300'}
-                          >{deco.secondary_skill_name}
-                          {(deco.secondary_points ?? 0) > 0 ? '+' : ''}{deco.secondary_points}</span
                         >
+                          {deco.secondary_skill_name}
+                          {(deco.secondary_points ?? 0) > 0 ? '+' : ''}{deco.secondary_points}
+                        </span>
                       {/if}
                     </p>
                   </div>
                 </div>
                 <div class="flex items-center justify-between mt-2">
                   <Badge tone="neutral">Slot {deco.slot_size}</Badge>
-                  <span class="text-xs font-medium tabular-nums" style="color: var(--theme-accent);"
-                    >{deco.price ?? 0}z</span
+                  <span
+                    class="text-xs font-medium tabular-nums"
+                    style="color: var(--theme-accent);"
                   >
+                    {deco.price ?? 0}z
+                  </span>
                 </div>
               </Card>
             </button>

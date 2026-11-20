@@ -19,12 +19,13 @@
 </script>
 
 <div class="max-w-6xl mx-auto">
+  <!-- Tools gameOnly 'mhw' is intentional: mantles/boosters/palico/melder are World-only systems. -->
   {#if game && game.id !== 'mhw'}
     <div class="border rounded-lg p-8 text-center themed-card mb-6">
       <p class="text-gray-400">
-        The Tools section is exclusive to <span class="text-blue-400"
-          >Monster Hunter World + Iceborne</span
-        >.
+        The Tools section is exclusive to <span class="text-blue-400">
+          Monster Hunter World + Iceborne
+        </span>.
       </p>
       <p class="text-xs text-gray-400 mt-1">
         Switch to MHW in the game selector to see this section.
@@ -45,8 +46,9 @@
           )
             ? 'bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)] border-transparent'
             : 'bg-[var(--theme-bg-surface)] text-gray-400 border-[var(--theme-border)] hover:text-gray-200'}"
-          >Mantles (17)</button
         >
+          Mantles (17)
+        </button>
         <button
           onclick={() => go('boosters')}
           aria-current={isActive('boosters') ? 'page' : undefined}
@@ -55,8 +57,9 @@
           )
             ? 'bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)] border-transparent'
             : 'bg-[var(--theme-bg-surface)] text-gray-400 border-[var(--theme-border)] hover:text-gray-200'}"
-          >Boosters (3)</button
         >
+          Boosters (3)
+        </button>
         <button
           onclick={() => go('palico')}
           aria-current={isActive('palico') ? 'page' : undefined}
@@ -65,8 +68,9 @@
           )
             ? 'bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)] border-transparent'
             : 'bg-[var(--theme-bg-surface)] text-gray-400 border-[var(--theme-border)] hover:text-gray-200'}"
-          >Palico</button
         >
+          Palico
+        </button>
         <button
           onclick={() => go('melder')}
           aria-current={isActive('melder') ? 'page' : undefined}
@@ -75,10 +79,11 @@
           )
             ? 'bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)] border-transparent'
             : 'bg-[var(--theme-bg-surface)] text-gray-400 border-[var(--theme-border)] hover:text-gray-200'}"
-          >Melder</button
         >
+          Melder
+        </button>
       </div>
     </div>
+    {@render children()}
   {/if}
-  {@render children()}
 </div>

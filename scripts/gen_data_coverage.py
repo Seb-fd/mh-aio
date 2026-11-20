@@ -52,7 +52,7 @@ DIRECT = [
     "skills",
     "decorations",
     "quests",
-    "armor_sets",
+    "melder_recipes",
     "charms",
     "endemic_life",
     "mhw_mantles",
@@ -74,9 +74,11 @@ JOINED = [
     ("monster_weaknesses", "monster_weaknesses", "monster_id", "monsters"),
     ("monster_ailments", "monster_ailments", "monster_id", "monsters"),
     ("monster_tools", "monster_tools", "monster_id", "monsters"),
+    ("monster_part_break", "monster_part_break", "monster_id", "monsters"),
     ("monster_equipment", "monster_equipment", "monster_id", "monsters"),
     ("weapon_materials", "weapon_materials", "weapon_id", "weapons"),
     ("weapon_craft", "weapon_craft", "weapon_id", "weapons"),
+    ("weapon_coatings", "weapon_coatings", "weapon_id", "weapons"),
     ("armor_materials", "armor_materials", "armor_id", "armor"),
     ("skill_levels", "skill_levels", "skill_id", "skills"),
     ("item_sources", "item_sources", "item_id", "items"),
@@ -87,6 +89,18 @@ JOINED = [
     ("armor_skill_points", "armor_skill_points", "armor_id", "armor"),
     ("weapon_skill_points", "weapon_skill_points", "weapon_id", "weapons"),
     ("palico_gadget_levels", "palico_gadget_levels", "gadget_id", "palico_gadgets"),
+]
+
+# tables needing a multi-level join for per-game attribution:
+# hunter_charm_materials -> hunter_charms -> game_id
+CUSTOM_JOINED = [
+    (
+        "hunter_charm_materials",
+        "hunter_charm_materials",
+        "SELECT COUNT(*) FROM hunter_charm_materials m"
+        " JOIN hunter_charms h ON h.id = m.charm_id WHERE h.game_id = ?",
+        "SELECT COUNT(*) FROM hunter_charm_materials",
+    ),
 ]
 
 
@@ -138,8 +152,16 @@ def gather(db: Path) -> dict:
         }
         out["joined"][name]["_total"] = scalar(cur, f"SELECT COUNT(*) FROM {child}")
 
+    for name, child, per_game_sql, total_sql in CUSTOM_JOINED:
+        if child not in tables:
+            raise SystemExit(f"required table missing: {child}")
+        out["joined"][name] = {
+            g: scalar(cur, per_game_sql, (gid,)) for gid, g in GAMES
+        }
+        out["joined"][name]["_total"] = scalar(cur, total_sql)
+
     # --- single-table extras (no per-game attribution needed) ---------------
-    for t in ("melder_recipes",):
+    for t in ():
         out["extra"][t] = scalar(cur, f"SELECT COUNT(*) FROM {t}") if t in tables else None
 
     # --- monsters.size breakdown (exact stored value) -----------------------
@@ -264,6 +286,7 @@ def render(d: dict) -> str:
         "skills",
         "decorations",
         "quests",
+        "melder_recipes",
         "charms",
         "endemic_life",
     ):
@@ -283,15 +306,18 @@ def render(d: dict) -> str:
         "monster_weaknesses",
         "monster_ailments",
         "monster_tools",
+        "monster_part_break",
         "monster_equipment",
         "weapon_materials",
         "weapon_craft",
+        "weapon_coatings",
         "armor_materials",
         "skill_levels",
         "item_sources",
         "item_combine",
         "decoration_materials",
         "charm_skills",
+        "hunter_charm_materials",
         "weapon_rampage",
         "armor_skill_points",
         "weapon_skill_points",
@@ -323,6 +349,16 @@ def render(d: dict) -> str:
     w(
         f"`palico_gadget_levels` (child of `palico_gadgets`): "
         f"{d['joined']['palico_gadget_levels']['mhw']} rows."
+    )
+    w("")
+    w(
+        f"`hunter_charm_materials` (child of `hunter_charms`, MHW rank-tree craft mats): "
+        f"{d['joined']['hunter_charm_materials']['mhw']} rows."
+    )
+    w("")
+    w(
+        f"`weapon_coatings` (child of `weapons`, MHW bow-coating compatibility): "
+        f"{d['joined']['weapon_coatings']['mhw']} rows."
     )
     w("")
 

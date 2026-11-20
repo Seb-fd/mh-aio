@@ -11,6 +11,7 @@
   import { createQuery } from '@tanstack/svelte-query'
   import { dbCache, dbRetry, dbRetryDelay } from '$lib/query'
 
+  // Sidebar gameOnly ['mhw','mhwilds'] is intentional: only these games seed endemic_life.
   const game = $derived($selectedGame)
   const dbId = $derived(game?.dbId)
   const hasData = $derived(game?.id === 'mhw' || game?.id === 'mhwilds')
