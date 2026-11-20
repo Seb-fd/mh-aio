@@ -131,8 +131,9 @@
               <span class="text-emerald-300 text-sm font-semibold">Positive Thresholds</span>
               <span
                 class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-900/40 text-emerald-300 border border-emerald-800"
-                >{positive.length}</span
               >
+                {positive.length}
+              </span>
             </div>
             {#if positive.length === 0}
               <p class="p-4 text-center text-gray-400 text-sm">No positive levels</p>
@@ -148,8 +149,9 @@
                     </div>
                     <span
                       class="shrink-0 text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-900/40 text-emerald-300 border border-emerald-800"
-                      >+{lvl.points}</span
                     >
+                      +{lvl.points}
+                    </span>
                   </div>
                 {/each}
               </div>
@@ -162,8 +164,9 @@
               <span class="text-red-300 text-sm font-semibold">Negative Thresholds</span>
               <span
                 class="text-[10px] px-1.5 py-0.5 rounded bg-red-900/40 text-red-300 border border-red-800"
-                >{negative.length}</span
               >
+                {negative.length}
+              </span>
             </div>
             {#if negative.length === 0}
               <p class="p-4 text-center text-gray-400 text-sm">
@@ -181,8 +184,9 @@
                     </div>
                     <span
                       class="shrink-0 text-xs font-bold px-2.5 py-1 rounded-full bg-red-900/40 text-red-300 border border-red-800"
-                      >{lvl.points}</span
                     >
+                      {lvl.points}
+                    </span>
                   </div>
                 {/each}
               </div>
@@ -206,8 +210,9 @@
           <a
             href="/{game}/decorations"
             class="inline-flex items-center text-xs text-[var(--theme-text-accent)] hover:underline min-h-[44px] px-2 -mr-2 rounded focus-visible:outline-none focus-visible:ring-2"
-            >View all jewels →</a
           >
+            View all jewels →
+          </a>
         {/if}
       </div>
       {#if skill.decorations.length === 0}
@@ -257,22 +262,23 @@
                           class="{(deco.secondary_points ?? 0) >= 0
                             ? 'text-emerald-300'
                             : 'text-red-300'} font-bold"
-                          >{(deco.secondary_points ?? 0) > 0
-                            ? '+'
-                            : ''}{deco.secondary_points}</span
                         >
+                          {(deco.secondary_points ?? 0) > 0 ? '+' : ''}{deco.secondary_points}
+                        </span>
                       </span>
                     {/if}
                   </div>
                   <div class="flex flex-wrap gap-1.5 mt-2">
                     <span
                       class="text-[10px] uppercase tracking-wide px-2 py-0.5 rounded bg-[var(--theme-bg-elevated)] text-gray-400 border border-[var(--theme-border)]"
-                      >{deco.unlock}</span
                     >
+                      {deco.unlock}
+                    </span>
                     <span
                       class="text-[10px] px-2 py-0.5 rounded bg-yellow-900/20 text-yellow-300 border border-yellow-800"
-                      >{deco.price ? `${deco.price}z` : '—'}</span
                     >
+                      {deco.price ? `${deco.price}z` : '—'}
+                    </span>
                   </div>
                   <p class="text-[11px] text-gray-400 mt-1.5">
                     {deco.acquisition} · Slot {deco.slot_size} jewel · Tap to view full detail
@@ -303,9 +309,9 @@
                           : 'Material not in item DB - faithful name'}
                       >
                         <span class="font-medium">{mat.item_name}</span>
-                        <span class="px-1.5 py-0.5 rounded bg-black/20 text-[11px] font-bold"
-                          >x{mat.quantity}</span
-                        >
+                        <span class="px-1.5 py-0.5 rounded bg-black/20 text-[11px] font-bold">
+                          x{mat.quantity}
+                        </span>
                       </button>
                     {/each}
                   </div>

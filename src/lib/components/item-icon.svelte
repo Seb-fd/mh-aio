@@ -67,9 +67,9 @@
     role="img"
     aria-label={iconName + (iconColor ? ` (${iconColor})` : '')}
   >
-    <span class="text-[9px] font-bold leading-none" style="color: {colorCss(iconColor)}"
-      >{iconName.slice(0, 2).toUpperCase()}</span
-    >
+    <span class="text-[9px] font-bold leading-none" style="color: {colorCss(iconColor)}">
+      {iconName.slice(0, 2).toUpperCase()}
+    </span>
   </div>
 {:else}
   <div

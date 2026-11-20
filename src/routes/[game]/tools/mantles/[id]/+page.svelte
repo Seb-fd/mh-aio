@@ -103,14 +103,13 @@
             <p
               class="text-[11px] text-gray-400 mt-1 inline-flex flex-wrap items-center gap-x-2 gap-y-0.5"
             >
-              <span class="inline-flex items-center gap-1"
-                ><Timer class="h-3 w-3 shrink-0" aria-hidden="true" />{mantle.duration_sec ??
-                  '-'}s</span
-              >
-              <span class="inline-flex items-center gap-1"
-                ><RefreshCw class="h-3 w-3 shrink-0" aria-hidden="true" />{mantle.cooldown_sec ??
-                  '-'}s</span
-              >
+              <span class="inline-flex items-center gap-1">
+                <Timer class="h-3 w-3 shrink-0" aria-hidden="true" />{mantle.duration_sec ?? '-'}s
+              </span>
+              <span class="inline-flex items-center gap-1">
+                <RefreshCw class="h-3 w-3 shrink-0" aria-hidden="true" />{mantle.cooldown_sec ??
+                  '-'}s
+              </span>
             </p>
           </div>
         </div>

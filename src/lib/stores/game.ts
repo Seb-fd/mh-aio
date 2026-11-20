@@ -181,7 +181,7 @@ export const GAMES: Game[] = [
 ]
 
 import { writable } from 'svelte/store'
-import { browser } from '$app/environment'
+import { BROWSER as browser } from 'esm-env'
 
 function isGame(value: unknown): value is Game {
   if (!value || typeof value !== 'object') return false

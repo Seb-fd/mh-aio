@@ -96,17 +96,17 @@
       {#if item.sell_price !== null && item.sell_price !== undefined}
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border themed-card">
           <span class="text-xs uppercase tracking-wide text-gray-400">Sell</span>
-          <span class="text-sm font-semibold" style="color: var(--theme-accent);"
-            >{item.sell_price}z</span
-          >
+          <span class="text-sm font-semibold" style="color: var(--theme-accent);">
+            {item.sell_price}z
+          </span>
         </div>
       {/if}
       {#if item.buy_price !== null && item.buy_price !== undefined}
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border themed-card">
           <span class="text-xs uppercase tracking-wide text-gray-400">Buy</span>
-          <span class="text-sm font-semibold" style="color: var(--theme-accent);"
-            >{item.buy_price}z</span
-          >
+          <span class="text-sm font-semibold" style="color: var(--theme-accent);">
+            {item.buy_price}z
+          </span>
         </div>
       {/if}
       {#if item.carry_limit !== null && item.carry_limit !== undefined}
@@ -140,8 +140,10 @@
             <span
               class="text-[10px] px-2 py-0.5 rounded-full border border-amber-800 bg-amber-900/30 text-amber-300 font-semibold"
               role="note"
-              aria-label="Source text is in Japanese (Monster Item List)">JP</span
+              aria-label="Source text is in Japanese (Monster Item List)"
             >
+              JP
+            </span>
           {/if}
         </div>
         <div class="rounded-lg border themed-card p-5 leading-relaxed text-gray-200 text-[15px]">
@@ -174,8 +176,9 @@
             {#if item.recipes[0].chance != null}
               <span
                 class="text-[10px] px-1.5 py-0.5 rounded border bg-[var(--theme-bg-elevated)] text-gray-400 border-[var(--theme-border)]"
-                >{item.recipes[0].chance}% success</span
               >
+                {item.recipes[0].chance}% success
+              </span>
             {/if}
           {/if}
         </div>
@@ -192,11 +195,12 @@
               >
                 <span
                   class="text-sm text-gray-200 hover:text-[var(--theme-accent)] transition-colors"
-                  >{recipe.component_name}</span
                 >
-                <span class="text-xs font-semibold" style="color: var(--theme-accent);"
-                  >x{recipe.quantity}</span
-                >
+                  {recipe.component_name}
+                </span>
+                <span class="text-xs font-semibold" style="color: var(--theme-accent);">
+                  x{recipe.quantity}
+                </span>
               </button>
             {/each}
             <span class="text-gray-600 text-lg">=</span>
@@ -205,9 +209,9 @@
               style="background-color: color-mix(in oklab, var(--theme-accent) 15%, var(--theme-bg-elevated)); border: 1px solid color-mix(in oklab, var(--theme-accent) 40%, transparent);"
             >
               <span class="text-sm text-gray-100">{item.name}</span>
-              <span class="text-xs font-semibold" style="color: var(--theme-accent);"
-                >x{item.recipes[0]?.result_quantity ?? 1}</span
-              >
+              <span class="text-xs font-semibold" style="color: var(--theme-accent);">
+                x{item.recipes[0]?.result_quantity ?? 1}
+              </span>
             </div>
           </div>
           {#if item.recipes[0]?.combine_type === 'alchemy'}
@@ -228,17 +232,17 @@
             class="px-3 py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)]"
           >
             <span class="text-xs text-gray-400">Research</span>
-            <span class="ml-2 text-sm font-semibold" style="color: var(--theme-accent);"
-              >{item.melder.research_cost} RP</span
-            >
+            <span class="ml-2 text-sm font-semibold" style="color: var(--theme-accent);">
+              {item.melder.research_cost} RP
+            </span>
           </div>
           <div
             class="px-3 py-1.5 rounded-md bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)]"
           >
             <span class="text-xs text-gray-400">Melding</span>
-            <span class="ml-2 text-sm font-semibold" style="color: var(--theme-accent);"
-              >{item.melder.melding_cost} MP</span
-            >
+            <span class="ml-2 text-sm font-semibold" style="color: var(--theme-accent);">
+              {item.melder.melding_cost} MP
+            </span>
           </div>
           <span
             class="text-[10px] px-2 py-1 rounded-full border font-semibold

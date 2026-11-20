@@ -355,8 +355,9 @@
             {#each weapon.coatings as c}
               <span
                 class="px-3 py-1 rounded-full text-xs border border-[var(--theme-border)] bg-[var(--theme-bg-elevated)] text-gray-200 capitalize"
-                >{c}</span
               >
+                {c}
+              </span>
             {/each}
           </div>
         </div>
@@ -395,16 +396,19 @@
           />
           <span
             class="text-[10px] shrink-0 w-9 text-center rounded py-0.5 border border-[var(--theme-border)] tabular-nums"
-            style="color: rgb(156 163 175);">R{w.rarity ?? 1}</span
+            style="color: rgb(156 163 175);"
           >
+            R{w.rarity ?? 1}
+          </span>
           {#if w.is_forgeable}
             <Hammer class="h-3 w-3 shrink-0 text-gray-400" aria-label="Forgeable directly" />
           {/if}
           <span class="text-sm font-medium truncate min-w-0">{w.attack ?? 0} · {w.name}</span>
           {#if w.element_type}
-            <span class="text-[11px] {elementColor(w.element_type)} shrink-0 hidden sm:inline"
-              >{w.element_type} {w.element_value ?? 0}</span
-            >
+            <span class="text-[11px] {elementColor(w.element_type)} shrink-0 hidden sm:inline">
+              {w.element_type}
+              {w.element_value ?? 0}
+            </span>
           {/if}
         </div>
       </button>

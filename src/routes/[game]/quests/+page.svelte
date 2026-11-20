@@ -477,9 +477,9 @@
           alt={meta.label}
         />
         <h2 class="text-sm font-semibold text-gray-200">{meta.label}</h2>
-        <span class="text-[11px] text-[var(--theme-text-muted)]"
-          >{meta.sub} · {filtered.length}</span
-        >
+        <span class="text-[11px] text-[var(--theme-text-muted)]">
+          {meta.sub} · {filtered.length}
+        </span>
         <div class="flex-1 h-px bg-[var(--theme-border)] ml-2"></div>
       </div>
       {#if filtered.length === 0}
@@ -508,9 +508,9 @@
                   aria-hidden="true"
                 />
                 <span class="text-sm font-semibold text-gray-100">{group.label}</span>
-                <span class="text-[10px] text-[var(--theme-text-muted)]"
-                  >({group.items.length})</span
-                >
+                <span class="text-[10px] text-[var(--theme-text-muted)]">
+                  ({group.items.length})
+                </span>
                 <div class="flex-1 h-px bg-[var(--theme-border)] ml-1"></div>
               </button>
               {#if isSiegeOpen(group.stars, group.rank)}
@@ -547,9 +547,9 @@
                 />
                 <span class="text-sm font-semibold text-gray-100">{catGroup.label}</span>
                 <span class="text-[11px] text-[var(--theme-text-muted)]">{catGroup.sub}</span>
-                <span class="text-[10px] text-[var(--theme-text-muted)]"
-                  >({catGroup.items.length})</span
-                >
+                <span class="text-[10px] text-[var(--theme-text-muted)]">
+                  ({catGroup.items.length})
+                </span>
                 <div class="flex-1 h-px bg-[var(--theme-border)] ml-1"></div>
               </button>
               {#if isCategoryOpen(catGroup.category)}
@@ -578,9 +578,9 @@
                           aria-hidden="true"
                         />
                         <span class="text-xs font-medium text-gray-200">{group.label}</span>
-                        <span class="text-[10px] text-[var(--theme-text-muted)]"
-                          >({group.items.length})</span
-                        >
+                        <span class="text-[10px] text-[var(--theme-text-muted)]">
+                          ({group.items.length})
+                        </span>
                       </button>
                       {#if isStarsOpen(catGroup.category, group.stars, group.rank)}
                         <div

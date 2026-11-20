@@ -30,9 +30,9 @@
       class="flex items-center gap-2 rounded-md px-1 py-2 min-h-[44px] shrink-0 focus-visible:outline-none focus-visible:ring-2"
       aria-label="MH-AIO home"
     >
-      <span class="text-lg sm:text-xl font-bold truncate" style="color: var(--theme-accent);"
-        >MH-AIO</span
-      >
+      <span class="text-lg sm:text-xl font-bold truncate" style="color: var(--theme-accent);">
+        MH-AIO
+      </span>
     </a>
 
     {#if game}
@@ -56,9 +56,12 @@
             aria-hidden="true"
           ></span>
         {/if}
-        <span class="text-sm font-medium whitespace-nowrap" style="color: var(--theme-text-accent);"
-          >{game.shortName}</span
+        <span
+          class="text-sm font-medium whitespace-nowrap"
+          style="color: var(--theme-text-accent);"
         >
+          {game.shortName}
+        </span>
         <span class="text-xs text-[var(--theme-text-muted)]" aria-hidden="true">·</span>
         <span class="text-xs text-[var(--theme-text-muted)] whitespace-nowrap">{game.year}</span>
       </div>
@@ -87,9 +90,9 @@
     </div>
 
     {#if game}
-      <span class="text-xs text-[var(--theme-text-muted)] hidden lg:block shrink-0"
-        >{game.platform}</span
-      >
+      <span class="text-xs text-[var(--theme-text-muted)] hidden lg:block shrink-0">
+        {game.platform}
+      </span>
     {/if}
   </div>
 

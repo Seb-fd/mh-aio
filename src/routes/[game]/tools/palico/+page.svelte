@@ -91,8 +91,9 @@
       'gadget'
         ? 'bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)] border-transparent'
         : 'bg-[var(--theme-bg-surface)] text-gray-400 border-[var(--theme-border)] hover:text-gray-200'}"
-      >Gadgets (6)</button
     >
+      Gadgets (6)
+    </button>
     <button
       onclick={() => (subtab = 'tailraider')}
       aria-pressed={subtab === 'tailraider'}
@@ -100,8 +101,9 @@
       'tailraider'
         ? 'bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)] border-transparent'
         : 'bg-[var(--theme-bg-surface)] text-gray-400 border-[var(--theme-border)] hover:text-gray-200'}"
-      >Tailraider Signal</button
     >
+      Tailraider Signal
+    </button>
     <button
       onclick={() => (subtab = 'safari')}
       aria-pressed={subtab === 'safari'}
@@ -109,8 +111,9 @@
       'safari'
         ? 'bg-[var(--theme-primary)] text-[var(--theme-text-on-primary)] border-transparent'
         : 'bg-[var(--theme-bg-surface)] text-gray-400 border-[var(--theme-border)] hover:text-gray-200'}"
-      >Safari</button
     >
+      Safari
+    </button>
     <SearchField
       bind:value={search}
       placeholder="Search..."

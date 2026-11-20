@@ -55,9 +55,9 @@
       label="Search melder recipes"
       class="sm:w-64"
     />
-    <span class="text-xs text-gray-400" role="status"
-      >{filtered.length} / {recipes.length} recipes</span
-    >
+    <span class="text-xs text-gray-400" role="status">
+      {filtered.length} / {recipes.length} recipes
+    </span>
   </div>
   {#if loading}
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3" aria-busy="true">

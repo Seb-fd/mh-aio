@@ -182,13 +182,13 @@
         </div>
       </div>
       <div class="mt-3 flex flex-wrap gap-2">
-        <FilterChip active={hunterLevel == null} onclick={() => (hunterLevel = null)}
-          >All ranks</FilterChip
-        >
+        <FilterChip active={hunterLevel == null} onclick={() => (hunterLevel = null)}>
+          All ranks
+        </FilterChip>
         {#each [1, 2, 3, 4, 5] as lv}
-          <FilterChip active={hunterLevel === lv} onclick={() => (hunterLevel = lv)}
-            >{ROMAN[lv]}</FilterChip
-          >
+          <FilterChip active={hunterLevel === lv} onclick={() => (hunterLevel = lv)}>
+            {ROMAN[lv]}
+          </FilterChip>
         {/each}
       </div>
     </Card>
@@ -225,18 +225,16 @@
                     {/if}
                     <span class="ml-auto flex flex-wrap gap-2">
                       {#if c.skill1_name}
-                        <span class="text-xs text-gray-200"
-                          >{c.skill1_name}
-                          <span class="font-semibold text-emerald-400">+{c.skill1_level}</span
-                          ></span
-                        >
+                        <span class="text-xs text-gray-200">
+                          {c.skill1_name}
+                          <span class="font-semibold text-emerald-400">+{c.skill1_level}</span>
+                        </span>
                       {/if}
                       {#if c.skill2_name}
-                        <span class="text-xs text-gray-200"
-                          >{c.skill2_name}
-                          <span class="font-semibold text-emerald-400">+{c.skill2_level}</span
-                          ></span
-                        >
+                        <span class="text-xs text-gray-200">
+                          {c.skill2_name}
+                          <span class="font-semibold text-emerald-400">+{c.skill2_level}</span>
+                        </span>
                       {/if}
                     </span>
                   </div>
@@ -334,10 +332,10 @@
               <span class="text-xs text-gray-400">{c.slots} slot{c.slots === 1 ? '' : 's'}</span>
               <span class="ml-auto flex flex-wrap gap-2">
                 {#each c.skills as s}
-                  <span class="text-xs text-gray-200"
-                    >{s.skill_name}
-                    <span class="font-semibold text-emerald-400">+{s.points}</span></span
-                  >
+                  <span class="text-xs text-gray-200">
+                    {s.skill_name}
+                    <span class="font-semibold text-emerald-400">+{s.points}</span>
+                  </span>
                 {/each}
               </span>
             </div>

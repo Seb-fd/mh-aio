@@ -124,8 +124,9 @@
               class="text-xs font-bold px-1.5 py-0.5 rounded {(deco!.skill_points ?? 0) >= 0
                 ? 'bg-emerald-900/40 text-emerald-300 border border-emerald-800'
                 : 'bg-red-900/40 text-red-300 border border-red-800'}"
-              >{(deco!.skill_points ?? 0) > 0 ? '+' : ''}{deco!.skill_points}</span
             >
+              {(deco!.skill_points ?? 0) > 0 ? '+' : ''}{deco!.skill_points}
+            </span>
           </button>
         {/if}
         {#if deco && deco.secondary_skill_name}
@@ -139,8 +140,9 @@
               class="text-xs font-bold px-1.5 py-0.5 rounded {(deco!.secondary_points ?? 0) >= 0
                 ? 'bg-emerald-900/40 text-emerald-300 border border-emerald-800'
                 : 'bg-red-900/40 text-red-300 border border-red-800'}"
-              >{(deco!.secondary_points ?? 0) > 0 ? '+' : ''}{deco!.secondary_points}</span
             >
+              {(deco!.secondary_points ?? 0) > 0 ? '+' : ''}{deco!.secondary_points}
+            </span>
           </button>
         {/if}
       </div>
@@ -215,13 +217,14 @@
                 {#if mat.item_id}
                   <span
                     class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-900/20 text-emerald-300 border border-emerald-800 inline-flex items-center gap-0.5 shrink-0"
-                    >sources <ChevronRight class="h-3 w-3" aria-hidden="true" /></span
                   >
+                    sources <ChevronRight class="h-3 w-3" aria-hidden="true" />
+                  </span>
                 {/if}
               </div>
-              <span class="text-sm font-semibold text-[var(--theme-accent)] shrink-0 tabular-nums"
-                >x{mat.quantity}</span
-              >
+              <span class="text-sm font-semibold text-[var(--theme-accent)] shrink-0 tabular-nums">
+                x{mat.quantity}
+              </span>
             </button>
           {/each}
         </div>
@@ -229,9 +232,9 @@
           class="rounded-lg border border-dashed border-[var(--theme-border)] bg-[var(--theme-bg-surface)]/50 p-3 mt-3"
         >
           <p class="text-[11px] text-gray-400 leading-relaxed">
-            <span class="font-semibold text-gray-300"
-              >Faithful to Monster Hunter Freedom Unite (MHP2G)</span
-            >
+            <span class="font-semibold text-gray-300">
+              Faithful to Monster Hunter Freedom Unite (MHP2G)
+            </span>
             · Data sourced from <span class="text-gray-300">mhfu-db</span> &
             <span class="text-gray-300">mhfu-blacksmith</span> and verified in-game via PPSSPP. Each material
             links to its monster drop/gathering source — tap a material to see where to obtain it (carves,

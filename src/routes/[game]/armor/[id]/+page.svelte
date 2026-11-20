@@ -154,8 +154,10 @@
                 <span
                   class="text-xs font-semibold {Number(parts[1]) >= 0
                     ? 'text-emerald-300'
-                    : 'text-red-300'}">{parts[1]}</span
+                    : 'text-red-300'}"
                 >
+                  {parts[1]}
+                </span>
               {/if}
             </div>
           {/each}

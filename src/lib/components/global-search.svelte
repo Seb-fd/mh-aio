@@ -3,7 +3,7 @@
   import { selectedGame } from '$lib/stores/game'
   import { api, type SearchResult } from '$lib/api'
   import { createQuery } from '@tanstack/svelte-query'
-  import { browser } from '$app/environment'
+  import { BROWSER as browser } from 'esm-env'
   import type { Component } from 'svelte'
   import {
     Search,

@@ -116,8 +116,9 @@
             >
               <span
                 class="shrink-0 w-10 h-10 rounded-full bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] flex items-center justify-center text-xs font-bold text-[var(--theme-accent)]"
-                >{lv.proficiency}</span
               >
+                {lv.proficiency}
+              </span>
               <div class="min-w-0 flex-1">
                 <p class="text-sm font-medium text-gray-100">{lv.ability_name}</p>
                 {#if lv.description}<p class="text-xs text-gray-400 mt-0.5">

@@ -309,8 +309,10 @@
               : 'text-gray-400 hover:text-gray-200'}"
             style={viewMode === 'sets'
               ? 'background-color: var(--theme-primary);'
-              : 'background-color: var(--theme-bg-surface);'}>Sets ({armorSets.length})</button
+              : 'background-color: var(--theme-bg-surface);'}
           >
+            Sets ({armorSets.length})
+          </button>
           <button
             type="button"
             onclick={() => (viewMode = 'pieces')}
@@ -321,8 +323,10 @@
               : 'text-gray-400 hover:text-gray-200'}"
             style={viewMode === 'pieces'
               ? 'background-color: var(--theme-primary);'
-              : 'background-color: var(--theme-bg-surface);'}>Pieces ({filtered.length})</button
+              : 'background-color: var(--theme-bg-surface);'}
           >
+            Pieces ({filtered.length})
+          </button>
         </div>
         <SearchField
           bind:value={searchTerm}
@@ -455,21 +459,21 @@
                     {#each pieces as p}
                       <span
                         class="text-[10px] px-2 py-1 rounded bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] text-gray-300 inline-flex items-center gap-1"
-                        ><ItemIcon
+                      >
+                        <ItemIcon
                           iconUrl={p.icon_url}
                           iconName={p.icon_name}
                           iconColor={p.icon_color}
                           size={14}
                           alt=""
                         />{p.name}
-                        <span class="text-gray-400">[{slotLabel[p.slot_type] ?? p.slot_type}]</span
-                        ></span
-                      >
+                        <span class="text-gray-400">[{slotLabel[p.slot_type] ?? p.slot_type}]</span>
+                      </span>
                     {/each}
                     {#if set.piece_count > pieces.length}
-                      <span class="text-[10px] px-2 py-1 rounded bg-gray-800 text-gray-400"
-                        >+{set.piece_count - pieces.length} more</span
-                      >
+                      <span class="text-[10px] px-2 py-1 rounded bg-gray-800 text-gray-400">
+                        +{set.piece_count - pieces.length} more
+                      </span>
                     {/if}
                   </div>
                 </Card>
@@ -543,33 +547,33 @@
                     </div>
                     <div>
                       <span class="text-orange-400">Fire</span>
-                      <span class="text-gray-100 ml-1 tabular-nums"
-                        >{piece.resistance_fire ?? 0}</span
-                      >
+                      <span class="text-gray-100 ml-1 tabular-nums">
+                        {piece.resistance_fire ?? 0}
+                      </span>
                     </div>
                     <div>
                       <span class="text-blue-400">Water</span>
-                      <span class="text-gray-100 ml-1 tabular-nums"
-                        >{piece.resistance_water ?? 0}</span
-                      >
+                      <span class="text-gray-100 ml-1 tabular-nums">
+                        {piece.resistance_water ?? 0}
+                      </span>
                     </div>
                     <div>
                       <span class="text-yellow-400">Thunder</span>
-                      <span class="text-gray-100 ml-1 tabular-nums"
-                        >{piece.resistance_thunder ?? 0}</span
-                      >
+                      <span class="text-gray-100 ml-1 tabular-nums">
+                        {piece.resistance_thunder ?? 0}
+                      </span>
                     </div>
                     <div>
                       <span class="text-cyan-400">Ice</span>
-                      <span class="text-gray-100 ml-1 tabular-nums"
-                        >{piece.resistance_ice ?? 0}</span
-                      >
+                      <span class="text-gray-100 ml-1 tabular-nums">
+                        {piece.resistance_ice ?? 0}
+                      </span>
                     </div>
                     <div class="col-span-2">
                       <span class="text-purple-400">Dragon</span>
-                      <span class="text-gray-100 ml-1 tabular-nums"
-                        >{piece.resistance_dragon ?? 0}</span
-                      >
+                      <span class="text-gray-100 ml-1 tabular-nums">
+                        {piece.resistance_dragon ?? 0}
+                      </span>
                     </div>
                   </div>
                 </Card>

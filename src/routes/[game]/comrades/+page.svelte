@@ -157,15 +157,15 @@
   <div class="mb-4 flex flex-wrap items-center gap-2">
     {#if isBuddy}
       {#each ['palico', 'palamute'] as k}
-        <FilterChip active={buddyKind === k} onclick={() => (buddyKind = k as typeof buddyKind)}
-          >{k === 'palico' ? 'Palico (Felyne)' : 'Palamute (Canyne)'}</FilterChip
-        >
+        <FilterChip active={buddyKind === k} onclick={() => (buddyKind = k as typeof buddyKind)}>
+          {k === 'palico' ? 'Palico (Felyne)' : 'Palamute (Canyne)'}
+        </FilterChip>
       {/each}
     {/if}
     {#each isBuddy ? ['weapons', 'armor'] : ['weapons', 'armor', 'skills'] as k}
-      <FilterChip active={kind === k} onclick={() => (kind = k as typeof kind)}
-        >{k === 'weapons' ? 'Weapons' : k === 'armor' ? 'Armor' : 'Skills'}</FilterChip
-      >
+      <FilterChip active={kind === k} onclick={() => (kind = k as typeof kind)}>
+        {k === 'weapons' ? 'Weapons' : k === 'armor' ? 'Armor' : 'Skills'}
+      </FilterChip>
     {/each}
     <div class="min-w-48 flex-1"><SearchField bind:value={searchTerm} placeholder="Search…" /></div>
   </div>
@@ -235,15 +235,16 @@
           <Card class="p-3">
             <div class="flex flex-wrap items-center gap-2">
               <span class="font-semibold text-gray-100">{w.name_jp}</span>
-              {#if w.style}<Badge
-                  >{w.style === '斬' ? 'Slash' : w.style === '打' ? 'Impact' : w.style}</Badge
-                >{/if}
+              {#if w.style}<Badge>
+                  {w.style === '斬' ? 'Slash' : w.style === '打' ? 'Impact' : w.style}
+                </Badge>{/if}
               {#if w.rarity != null}<span class="text-xs text-gray-400">R{w.rarity}</span>{/if}
               {#if w.attack != null}<span class="text-xs text-gray-400">Atk {w.attack}</span>{/if}
               {#if w.element}<span class="text-xs text-gray-400">{w.element}</span>{/if}
               {#if w.affinity}<span class="text-xs text-gray-400">{w.affinity}</span>{/if}
-              {#if w.price != null}<span class="ml-auto text-xs text-gray-400">{w.price}z</span
-                >{/if}
+              {#if w.price != null}<span class="ml-auto text-xs text-gray-400">
+                  {w.price}z
+                </span>{/if}
             </div>
           </Card>
         {/each}
@@ -263,8 +264,9 @@
               {#if a.rarity != null}<span class="text-xs text-gray-400">R{a.rarity}</span>{/if}
               {#if a.defense != null}<span class="text-xs text-gray-400">Def {a.defense}</span>{/if}
               {#if a.materials_jp}<span class="text-xs text-gray-500">{a.materials_jp}</span>{/if}
-              {#if a.price != null}<span class="ml-auto text-xs text-gray-400">{a.price}z</span
-                >{/if}
+              {#if a.price != null}<span class="ml-auto text-xs text-gray-400">
+                  {a.price}z
+                </span>{/if}
             </div>
           </Card>
         {/each}
